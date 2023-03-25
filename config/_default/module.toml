@@ -15,6 +15,10 @@ source = "data"
 target = "data"
 
 [[mounts]]
+source = "content"
+target = "content"
+
+[[mounts]]
 source = "i18n"
 target = "i18n"
 
