@@ -13,3 +13,4 @@ Integrated:
 - hugo-icons
 - hugo-social
 - hugo-auditor
+- hugo-feeds
