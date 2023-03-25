@@ -14,3 +14,4 @@ Integrated:
 - hugo-social
 - hugo-auditor
 - hugo-feeds
+- hugo-giscus
