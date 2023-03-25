@@ -3,6 +3,14 @@ extended = false
 min = "0.84.4"
 
 [[mounts]]
+source = "assets/scss/_debugprint.scss"
+target = "assets/scss/_debugprint.scss"
+
+[[module.mounts]]
+source = "assets/js/debug.js"
+target = "assets/js/debug.js"
+
+[[mounts]]
 source = "data"
 target = "data"
 
@@ -13,15 +21,3 @@ target = "i18n"
 [[mounts]]
 source = "layouts"
 target = "layouts"
-
-[[imports]]
-disable = false
-ignoreConfig = false
-ignoreImports = false
-path = "github.com/davidsneighbour/hugo-hooks"
-
-[[imports]]
-disable = false
-ignoreConfig = false
-ignoreImports = false
-path = "github.com/davidsneighbour/hugo-debug"
