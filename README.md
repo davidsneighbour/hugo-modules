@@ -17,3 +17,4 @@ Integrated:
 - hugo-giscus
 - hugo-internals
 - hugo-opensearch
+- hugo-publisher
