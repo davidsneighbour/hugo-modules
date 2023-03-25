@@ -18,3 +18,4 @@ Integrated:
 - hugo-internals
 - hugo-opensearch
 - hugo-publisher
+- hugo-pictures
