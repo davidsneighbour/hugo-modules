@@ -273,3 +273,10 @@ policy = ""
 # A link to any security-related job openings in your organisation.
 # Remember to include "https://".
 hiring = ""
+
+################################################################################
+# hugo-auditor
+################################################################################
+[dnb]
+[dnb.auditor]
+ct = false

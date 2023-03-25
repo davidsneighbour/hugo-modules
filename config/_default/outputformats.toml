@@ -4,3 +4,10 @@ path = "/.well-known/"
 baseName = "security"
 isPlainText = true
 notAlternative = true
+
+[dnblinklist]
+baseName = 'links'
+isPlainText = true
+mediaType = 'application/json'
+permalinkable = false
+notAlternative = true

@@ -6,3 +6,9 @@ Integrated:
 - hugo-debug
 - hugo-hooks
 - hugo-functions
+- hugo-security
+- hugo-robots
+- hugo-shortcodes
+- hugo-sitemap
+- hugo-icons
+- hugo-social

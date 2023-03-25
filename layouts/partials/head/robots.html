@@ -1,14 +1,14 @@
-{{-/* get configuration  */-}}
+{{- /* get configuration  */ -}}
 {{- $config := .Params.config -}}
 {{- $global := site.Params.dnb.robots -}}
 
-{{-/* setup follow default */-}}
+{{- /* setup follow default */ -}}
 {{- $follow := "follow" -}}
 {{- if ne $global.follow true | default true -}}
   {{- $follow = "nofollow" -}}
 {{- end -}}
 
-{{-/* setup follow local */-}}
+{{- /* setup follow local */ -}}
 {{- with $config.follow -}}
   {{- if eq true . -}}
     {{- $follow = "follow" -}}
@@ -17,13 +17,13 @@
   {{- end -}}
 {{- end -}}
 
-{{-/* setup index global */-}}
+{{- /* setup index global */ -}}
 {{- $index := "index" -}}
 {{- if ne $global.index true | default true -}}
   {{- $index = "noindex" -}}
 {{- end -}}
 
-{{-/* setup index local */-}}
+{{- /* setup index local */ -}}
 {{- with $config.index -}}
   {{- if eq true . -}}
     {{- $index = "index" -}}
@@ -32,5 +32,5 @@
   {{- end -}}
 {{- end -}}
 
-{{-/* and finally printing the robots tag */-}}
+{{- /* and finally printing the robots tag */ -}}
 <meta name="robots" content="{{- $index -}},{{- $follow -}}">
