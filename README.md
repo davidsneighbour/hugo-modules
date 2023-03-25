@@ -15,3 +15,4 @@ Integrated:
 - hugo-auditor
 - hugo-feeds
 - hugo-giscus
+- hugo-internals
