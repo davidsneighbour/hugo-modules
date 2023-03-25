@@ -322,3 +322,11 @@ dataStrict="1"
 origins = []
 originsRegex = []
 defaultCommentOrder = "oldest" # "oldest" (oldest to newest) or "newest"
+
+################################################################################
+# hugo-opensearch
+################################################################################
+[dnb.opensearch]
+hookLink = "https://dnbql.netlify.app/opensearch"
+# title = ""
+# description = ""

@@ -42,3 +42,9 @@ baseName = "giscus"
 isPlainText = true
 mediatype = "application/json"
 notAlternative = true
+
+[OpenSearch]
+baseName = "opensearch"
+isPlainText = true
+mediatype = "application/opensearchdescription+xml"
+notAlternative = true

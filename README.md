@@ -16,3 +16,4 @@ Integrated:
 - hugo-feeds
 - hugo-giscus
 - hugo-internals
+- hugo-opensearch
