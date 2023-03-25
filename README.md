@@ -1,4 +1,4 @@
-Blockify is a work in progress. If you have ideas, join us in [Discussions](https://github.com/davidsneighbour/hugo-blocki. If you find bugs, use the [Issue Tracker](https://github.com/davidsneighbour/hugo-blockify/issues).
+Blockify is a work in progress. If you have ideas, join us in [Discussions](https://github.com/davidsneighbour/hugo-blockify). If you find bugs, use the [Issue Tracker](https://github.com/davidsneighbour/hugo-blockify/issues).
 
 Integrated:
 
@@ -12,3 +12,4 @@ Integrated:
 - hugo-sitemap
 - hugo-icons
 - hugo-social
+- hugo-auditor
