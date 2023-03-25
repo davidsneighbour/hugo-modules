@@ -19,3 +19,4 @@ Integrated:
 - hugo-opensearch
 - hugo-publisher
 - hugo-pictures
+- hugo-search(-algolia)
