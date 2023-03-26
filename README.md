@@ -20,3 +20,6 @@ Integrated:
 - hugo-publisher
 - hugo-pictures
 - hugo-search(-algolia)
+- hugo-youtube
+- hugo-pwa
+-
