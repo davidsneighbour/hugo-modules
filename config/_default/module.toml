@@ -92,3 +92,26 @@ target = "assets/libs/lazysizes/lazysizes.js"
 [[imports.mounts]]
 source = "plugins"
 target = "assets/libs/lazysizes/plugins"
+
+[[imports]]
+# https://github.com/paulirish/lite-youtube-embed
+path = "github.com/paulirish/lite-youtube-embed"
+disable = false
+ignoreConfig = true
+ignoreImports = false
+
+[[imports.mounts]]
+source = "src/lite-yt-embed.css"
+target = "assets/libs/liteyoutube/_lite-yt-embed.scss"
+
+[[imports.mounts]]
+source = "src/lite-yt-embed.css"
+target = "static/libs/liteyoutube/lite-yt-embed.css"
+
+[[imports.mounts]]
+source = "src/lite-yt-embed.js"
+target = "assets/libs/liteyoutube/lite-yt-embed.js"
+
+[[imports.mounts]]
+source = "src/lite-yt-embed.js"
+target = "static/libs/liteyoutube/lite-yt-embed.js"

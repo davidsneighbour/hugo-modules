@@ -8,32 +8,31 @@ see
       parameters that can be used with the youtube player)
 
 */ -}}
-{{- $paramScratch := newScratch -}}
-{{- $paramScratch.SetInMap "params" "modestbranding" 2 -}}
-{{- $paramScratch.SetInMap "params" "iv_load_policy" 3 -}}
-{{- $paramScratch.SetInMap "params" "controls" 0 -}}
-{{- $paramScratch.SetInMap "params" "rel" 0 -}}
-{{- $paramScratch.SetInMap "params" "hl" .Site.Language.Lang -}}
-{{- $params := $paramScratch.Get "params" -}}
+{{- $params := dict
+    "modestbranding" "2"
+    "iv_load_policy" "3"
+    "controls" "0"
+    "rel" "0"
+    "hl" site.Language.Lang -}}
 {{- $paramsCollected := "" -}}
 {{- range $key, $value := $params -}}
     {{- $paramsCollected = printf "%s&%s=%s" $paramsCollected $key $value -}}
 {{- end -}}
 {{- $pc := site.Config.Privacy.YouTube -}}
 {{- if not $pc.Disable -}}
-    {{- $id     := .Get "id"    | default (.Get 0) -}}
-    {{- $class  := .Get "class" | default (.Get 1) -}}
-    {{- $title  := .Get "title" | default (.Get 2) -}}
-    {{- $params := .Get "params" | default $paramsCollected -}}
-    {{- $thumbnailUrl := partialCached "getYoutubePreviewUrl.html" . -}}
+    {{- $id     := .id -}}
+    {{- $class  := .class | default "" -}}
+    {{- $title  := .title | default "" -}}
+    {{- $params := .params | default $paramsCollected -}}
+    {{- $thumbnailUrl := partialCached "getYoutubePreviewUrl.html" . $id -}}
     {{- $remoteThumbnailUrl := printf $thumbnailUrl $id -}}
-
+    {{- $remoteThumbnail := resources.GetRemote $remoteThumbnailUrl -}}
     <div class="shortcode--youtube {{ with $class -}}{{- . -}}{{- end -}}">
         <lite-youtube
             videoid="{{- $id -}}" {{ with $title -}}
             playlabel="{{- . -}}"{{- end -}}
             params="{{- $params -}}"
-            style="background-image: url('{{- $remoteThumbnailUrl -}}');">
+            style="background-image: url('{{- $remoteThumbnail.Permalink -}}');">
             <button type="button" class="lty-playbtn" aria-label="Play video">
                 {{- with $title -}}<span class="lyt-visually-hidden">{{- . -}}</span>{{- end -}}
             </button>
