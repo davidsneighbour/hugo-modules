@@ -21,10 +21,13 @@ if test -f "$FILE"; then
   git add $FILE
 fi
 
+# build static scripts
+npm run build
+git add static/sw-*
+
 # adding data directory for new build information
 git add data/dnb
 git add README.md
-git add CHANGELOG.md
 git commit --signoff --amend --no-edit
 
 # push release to GitHub
