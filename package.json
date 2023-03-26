@@ -8,8 +8,10 @@
     "@davidsneighbour/eslint-config": "^5.1.12",
     "@davidsneighbour/standard-version-config": "^5.0.16",
     "@davidsneighbour/tools": "^5.1.5",
+    "@davidsneighbour/webpack-config": "^5.1.12",
     "@slightlyoff/lite-vimeo": "0.1.2",
     "all-contributors-cli": "^6.24.0",
+    "prettier-plugin-go-template": "^0.0.13",
     "workbox-cacheable-response": "^6.5.4",
     "workbox-core": "^6.5.4",
     "workbox-expiration": "^6.5.4",
@@ -32,9 +34,5 @@
     "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "serve:webpack": "webpack --watch --config webpack.dev.js"
-  },
-  "devDependencies": {
-    "@davidsneighbour/webpack-config": "^5.1.12",
-    "prettier-plugin-go-template": "^0.0.13"
   }
 }
