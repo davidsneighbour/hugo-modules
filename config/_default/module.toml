@@ -3,12 +3,8 @@ extended = false
 min = "0.84.4"
 
 [[mounts]]
-source = "assets/scss/_debugprint.scss"
-target = "assets/scss/_debugprint.scss"
-
-[[module.mounts]]
-source = "assets/js/debug.js"
-target = "assets/js/debug.js"
+source = "assets"
+target = "assets"
 
 [[mounts]]
 source = "data"
@@ -97,7 +93,7 @@ target = "assets/libs/lazysizes/plugins"
 # https://github.com/paulirish/lite-youtube-embed
 path = "github.com/paulirish/lite-youtube-embed"
 disable = false
-ignoreConfig = true
+ignoreConfig = false
 ignoreImports = false
 
 [[imports.mounts]]
