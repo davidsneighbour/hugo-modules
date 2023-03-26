@@ -379,3 +379,28 @@ background_color = ""
 display = ""
 # https://developer.mozilla.org/en-US/docs/Web/Manifest/description
 description = ""
+
+################################################################################
+# hugo-netlification
+################################################################################
+[dnb.netlification]
+upgradeInsecureRequests = true
+# modes available
+# netlify = Netlify
+# github = Github Pages
+# gitlab = Gitlab Pages
+# cloudflare = Cloudflare Pages
+mode = "netlify"
+
+# netlify specific settings
+[dnb.netlification.netlify]
+#cms = true
+
+# github specific settings
+[dnb.netlification.github]
+
+# gitlab specific settings
+[dnb.netlification.gitlab]
+
+# cloudflare specific settings
+[dnb.netlification.cloudflare]

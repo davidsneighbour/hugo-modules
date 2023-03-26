@@ -3,3 +3,7 @@ suffixes = ['json']
 
 ["application/opensearchdescription+xml"]
 suffixes = ["xml"]
+
+["text/netlify"]
+delimiter = ""
+suffixes = [""]

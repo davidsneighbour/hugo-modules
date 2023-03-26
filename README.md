@@ -22,4 +22,4 @@ Integrated:
 - hugo-search(-algolia)
 - hugo-youtube
 - hugo-pwa
--
+- hugo-netlification
