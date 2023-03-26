@@ -75,7 +75,7 @@ source = 'ct.css'
 target = 'static/css/libs/ct.css'
 
 [[imports]]
-path = "github.com/aFarkas/lazysizes"
+path = "github.com/davidsneighbour/lazysizes"
 disable = false
 ignoreConfig = true
 ignoreImports = true
