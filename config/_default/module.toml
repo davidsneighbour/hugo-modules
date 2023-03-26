@@ -7,12 +7,12 @@ source = "assets"
 target = "assets"
 
 [[mounts]]
-source = "data"
-target = "data"
-
-[[mounts]]
 source = "content"
 target = "content"
+
+[[mounts]]
+source = "data"
+target = "data"
 
 [[mounts]]
 source = "i18n"
@@ -21,6 +21,10 @@ target = "i18n"
 [[mounts]]
 source = "layouts"
 target = "layouts"
+
+[[mounts]]
+source = "static"
+target = "static"
 
 [[imports]]
 path = "github.com/twbs/icons"
@@ -71,11 +75,10 @@ source = 'ct.css'
 target = 'static/css/libs/ct.css'
 
 [[imports]]
-# see https://github.com/aFarkas/lazysizes for details
 path = "github.com/aFarkas/lazysizes"
 disable = false
-ignoreConfig = false
-ignoreImports = false
+ignoreConfig = true
+ignoreImports = true
 
 [[imports.mounts]]
 source = "lazysizes-umd.js"

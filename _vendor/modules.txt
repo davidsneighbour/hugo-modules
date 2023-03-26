@@ -1,0 +1,6 @@
+# github.com/twbs/icons v1.10.3
+# github.com/tailwindlabs/heroicons v2.0.16+incompatible
+# github.com/tabler/tabler-icons v2.11.0+incompatible
+# github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff
+# github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579
+# github.com/paulirish/lite-youtube-embed v0.2.0
