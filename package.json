@@ -5,12 +5,12 @@
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/hugo-blockify/issues",
   "dependencies": {
+    "@davidsneighbour/eslint-config": "^5.1.12",
     "@davidsneighbour/standard-version-config": "^5.0.16",
     "@davidsneighbour/tools": "^5.1.5",
     "@slightlyoff/lite-vimeo": "0.1.2",
-    "all-contributors-cli": "^6.20.0",
-    "@davidsneighbour/eslint-config": "^4.1.7",
-		"workbox-cacheable-response": "^6.5.4",
+    "all-contributors-cli": "^6.24.0",
+    "workbox-cacheable-response": "^6.5.4",
     "workbox-core": "^6.5.4",
     "workbox-expiration": "^6.5.4",
     "workbox-precaching": "^6.5.4",
@@ -23,7 +23,7 @@
   "private": true,
   "repository": "davidsneighbour/hugo-blockify",
   "scripts": {
-		"build": "npm run build:dev && npm run build:prod",
+    "build": "npm run build:dev && npm run build:prod",
     "build:dev": "cross-env NODE_ENV=development webpack --config webpack.dev.js",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
     "clean": "run-p clean:**",
@@ -32,5 +32,8 @@
     "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "serve:webpack": "webpack --watch --config webpack.dev.js"
+  },
+  "devDependencies": {
+    "prettier-plugin-go-template": "^0.0.13"
   }
 }
