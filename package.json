@@ -11,6 +11,7 @@
     "@davidsneighbour/webpack-config": "^5.1.12",
     "@slightlyoff/lite-vimeo": "0.1.2",
     "all-contributors-cli": "^6.24.0",
+    "lite-youtube-embed": "^0.2.0",
     "prettier-plugin-go-template": "^0.0.13",
     "workbox-cacheable-response": "^6.5.4",
     "workbox-core": "^6.5.4",
@@ -26,13 +27,12 @@
   "repository": "davidsneighbour/hugo-blockify",
   "scripts": {
     "build": "run-p build:*",
-    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.dev.js",
-    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
+    "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.js",
     "clean": "run-p clean:**",
     "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
     "clean:node": "rimraf node_modules package-lock.json",
     "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "serve:webpack": "webpack --watch --config webpack.dev.js"
+    "serve:webpack": "webpack --watch --config webpack.js"
   }
 }
