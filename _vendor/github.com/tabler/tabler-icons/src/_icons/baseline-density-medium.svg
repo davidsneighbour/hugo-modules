@@ -1,9 +1,0 @@
----
-version: "2.11"
-unicode: "f9f1"
----
-<svg>
-  <path d="M4 20h16" />
-  <path d="M4 12h16" />
-  <path d="M4 4h16" />
-</svg>
