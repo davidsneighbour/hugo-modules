@@ -10,7 +10,7 @@
  *   https://github.com/Daugilas/lazyYT
  *   https://github.com/vb/lazyframe
  */
-class LiteYTEmbed extends HTMLElement {
+export default class LiteYTEmbed extends HTMLElement {
   connectedCallback() {
     this.videoId = this.getAttribute('videoid');
 
@@ -121,5 +121,3 @@ class LiteYTEmbed extends HTMLElement {
     this.querySelector('iframe').focus();
   }
 }
-
-export default LiteYTEmbed;
