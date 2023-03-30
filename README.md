@@ -13,7 +13,7 @@ Blockify is a work in progress. If you have ideas, join us in [Discussions](http
 | --------------------- | :----------------: | :----------------: | :----------------: | :----------------: |
 | hugo-head             | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | hugo-debug            | :white_check_mark: | :white_check_mark: | :heavy_check_mark: | :white_check_mark: |
-| hugo-hooks            | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| hugo-hooks            | :white_check_mark: | :white_check_mark: | :heavy_check_mark: | :white_check_mark: |
 | hugo-functions        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | hugo-security         | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | hugo-robots           | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
