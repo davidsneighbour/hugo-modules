@@ -2,32 +2,32 @@
 
 Blockify is a work in progress. If you have ideas, join us in [Discussions](https://github.com/davidsneighbour/hugo-blockify). If you find bugs, use the [Issue Tracker](https://github.com/davidsneighbour/hugo-blockify/issues).
 
-# Todo
+## Todo
 
-Integrated:
+- [ ] everything
 
-- hugo-head
-- hugo-debug
-- hugo-hooks
-- hugo-functions
-- hugo-security
-- hugo-robots
-- hugo-shortcodes
-- hugo-sitemap
-- hugo-icons
-- hugo-social
-- hugo-auditor
-- hugo-feeds
-- hugo-giscus
-- hugo-internals
-- hugo-opensearch
-- hugo-publisher
-- hugo-pictures
-- hugo-search(-algolia)
-- hugo-youtube
-- hugo-pwa
-- hugo-netlification
+## Integrated original Hugo Modules by @davidsneighbour:
 
-Updated documentation at original:
-
-- tbd
+| module | setup | documentation | issues |
+| --- | :---: | :---: | :---: |
+| hugo-head | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-debug | :white_check_mark: | :white_check_mark: | :heavy_check_mark: |
+| hugo-hooks | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-functions | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-security | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-robots | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-shortcodes | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-sitemap | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-icons | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-social | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-auditor | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-feeds | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-giscus | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-internals | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-opensearch | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-publisher | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-pictures | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-search(-algolia) | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-youtube | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-pwa | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| hugo-netlification | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
