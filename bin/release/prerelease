@@ -2,8 +2,6 @@
 
 # exit when any command fails
 set -e
-# debug
-set -x
 
 REQUIRED_TOOLS=(
   git
