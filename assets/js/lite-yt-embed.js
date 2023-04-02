@@ -12,6 +12,10 @@
  */
 export default class LiteYTEmbed extends HTMLElement {
   connectedCallback() {
+
+
+    console.log(this);
+
     this.videoId = this.getAttribute('videoid');
 
     let playBtnEl = this.querySelector('.lty-playbtn');
@@ -44,13 +48,15 @@ export default class LiteYTEmbed extends HTMLElement {
     }
     if (!playBtnEl.textContent) {
       const playBtnLabelEl = document.createElement('span');
-      playBtnLabelEl.className = 'lyt-visually-hidden';
+      playBtnLabelEl.className = 'visually-hidden-focusable;';
       playBtnLabelEl.textContent = this.playLabel;
       playBtnEl.append(playBtnLabelEl);
     }
 
     // On hover (or tap), warm up the TCP connections we're (likely) about to use.
-    this.addEventListener('pointerover', LiteYTEmbed.warmConnections, { once: true });
+    this.addEventListener('pointerover', LiteYTEmbed.warmConnections, {
+      once: true
+    });
 
     // Once the user clicks, add the real iframe and drop our play button
     // TODO: In the future we could be like amp-youtube and silently swap in the iframe during idle time

@@ -6,6 +6,7 @@ lite-youtube {
   background-position: center center;
   background-size: cover;
   cursor: pointer;
+  width: 100%;
   max-width: 720px;
 }
 
@@ -73,14 +74,4 @@ lite-youtube.lyt-activated::before,
 lite-youtube.lyt-activated > .lty-playbtn {
   opacity: 0;
   pointer-events: none;
-}
-
-.lyt-visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
 }
