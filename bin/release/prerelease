@@ -26,7 +26,3 @@ FILE="${CURPATH}"/go.sum
 if test -f "$FILE"; then
   git add go.sum
 fi
-
-# build static scripts
-npm run build
-git add static/sw-*
