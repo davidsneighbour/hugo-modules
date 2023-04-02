@@ -4,8 +4,10 @@
 
 {{- /* setup follow default */ -}}
 {{- $follow := "follow" -}}
-{{- if ne $global.follow true | default true -}}
-  {{- $follow = "nofollow" -}}
+{{- if isset $global "follow" -}}
+  {{- if ne $global.follow true -}}
+    {{- $follow = "nofollow" -}}
+  {{- end -}}
 {{- end -}}
 
 {{- /* setup follow local */ -}}
@@ -19,8 +21,10 @@
 
 {{- /* setup index global */ -}}
 {{- $index := "index" -}}
-{{- if ne $global.index true | default true -}}
-  {{- $index = "noindex" -}}
+{{- if isset $global "follow" -}}
+  {{- if ne $global.index true | default true -}}
+    {{- $index = "noindex" -}}
+  {{- end -}}
 {{- end -}}
 
 {{- /* setup index local */ -}}
@@ -33,4 +37,4 @@
 {{- end -}}
 
 {{- /* and finally printing the robots tag */ -}}
-<meta name="robots" content="{{- $index -}},{{- $follow -}}">
+<meta name="robots" content="{{- $index -}},{{- $follow -}}" />
