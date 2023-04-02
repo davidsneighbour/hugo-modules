@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# exit when any command fails
+set -e
+
 REQUIRED_TOOLS=(
   git
 )
@@ -20,10 +23,6 @@ if test -f "$FILE"; then
   sed -i "s/date-released: .*/date-released: ${DATE}/" $FILE
   git add $FILE
 fi
-
-# build static scripts
-npm run build
-git add static/sw-*
 
 # adding data directory for new build information
 git add data/dnb

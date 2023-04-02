@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# exit when any command fails
+set -e
+# debug
+set -x
+
 REQUIRED_TOOLS=(
   git
   hugo
@@ -13,10 +18,6 @@ for TOOL in "${REQUIRED_TOOLS[@]}"; do
   fi
 done
 
-SCRIPTPATH="$(
-   cd "$(dirname "$0")" >/dev/null 2>&1 || exit
-   pwd -P
-)"
 CURPATH="$(pwd -P)"
 
 hugo mod get -u ./...
@@ -25,5 +26,9 @@ hugo mod tidy
 git add "${CURPATH}"/go.mod
 FILE="${CURPATH}"/go.sum
 if test -f "$FILE"; then
-    git add go.sum
+  git add go.sum
 fi
+
+# build static scripts
+npm run build
+git add static/sw-*
