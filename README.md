@@ -6,24 +6,24 @@ Blockify is a work in progress. If you have ideas, join us in [Discussions](http
 
 | module                | setup | documentation | issues | file structure |
 | --------------------- | :---: | :-----------: | :----: | :------------: |
-| hugo-auditor          |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
+| hugo-auditor          |  [ ]  |      [ ]      |  [x]   |      [ ]       |
 | hugo-head             |  [ ]  |      [ ]      |  [x]   |      [ ]       |
 | hugo-debug            |  [ ]  |      [ ]      |  [x]   |      [ ]       |
-| hugo-feeds            |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
-| hugo-giscus           |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
+| hugo-feeds            |  [ ]  |      [ ]      |  [x]   |      [ ]       |
+| hugo-giscus           |  [ ]  |      [ ]      |  [x]   |      [ ]       |
 | hugo-hooks            |  [ ]  |      [ ]      |  [x]   |      [ ]       |
-| hugo-icons            |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
-| hugo-internals        |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
-| hugo-functions        |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
-| hugo-netlification    |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
-| hugo-opensearch       |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
+| hugo-icons            |  [ ]  |      [ ]      |  [x]   |      [ ]       |
+| hugo-internals        |  [ ]  |      [ ]      |  [x]   |      [ ]       |
+| hugo-functions        |  [ ]  |      [ ]      |  [x]   |      [ ]       |
+| hugo-netlification    |  [ ]  |      [ ]      |  [x]   |      [ ]       |
+| hugo-opensearch       |  [ ]  |      [ ]      |  [x]   |      [ ]       |
 | hugo-pictures         |  [ ]  |      [ ]      |  [x]   |      [ ]       |
-| hugo-publisher        |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
-| hugo-pwa              |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
-| hugo-robots           |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
-| hugo-search(-algolia) |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
-| hugo-security         |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
-| hugo-shortcodes       |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
-| hugo-sitemap          |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
-| hugo-social           |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
-| hugo-youtube          |  [ ]  |      [ ]      |  [ ]   |      [ ]       |
+| hugo-publisher        |  [ ]  |      [ ]      |  [x]   |      [ ]       |
+| hugo-pwa              |  [ ]  |      [ ]      |  [x]   |      [ ]       |
+| hugo-robots           |  [ ]  |      [ ]      |  [x]   |      [ ]       |
+| hugo-search(-algolia) |  [ ]  |      [ ]      |  [x]   |      [ ]       |
+| hugo-security         |  [ ]  |      [ ]      |  [x]   |      [ ]       |
+| hugo-shortcodes       |  [ ]  |      [ ]      |  [x]   |      [ ]       |
+| hugo-sitemap          |  [ ]  |      [ ]      |  [x]   |      [ ]       |
+| hugo-social           |  [ ]  |      [ ]      |  [x]   |      [ ]       |
+| hugo-youtube          |  [ ]  |      [ ]      |  [x]   |      [ ]       |
