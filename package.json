@@ -9,7 +9,7 @@
     "@davidsneighbour/markdownlint-config": "^5.1.14",
     "@davidsneighbour/standard-version-config": "^5.0.16",
     "@davidsneighbour/stylelint-config": "^5.1.21",
-    "@davidsneighbour/tools": "^5.1.13",
+    "@davidsneighbour/tools": "^5.1.20",
     "@davidsneighbour/webpack-config": "^5.1.13",
     "@slightlyoff/lite-vimeo": "0.1.2",
     "all-contributors-cli": "^6.25.0",
