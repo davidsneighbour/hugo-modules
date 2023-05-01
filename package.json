@@ -5,7 +5,7 @@
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/hugo-blockify/issues",
   "dependencies": {
-    "@davidsneighbour/eslint-config": "^5.1.13",
+    "@davidsneighbour/eslint-config": "^5.1.24",
     "@davidsneighbour/markdownlint-config": "^5.1.14",
     "@davidsneighbour/standard-version-config": "^5.0.16",
     "@davidsneighbour/stylelint-config": "^5.1.21",
