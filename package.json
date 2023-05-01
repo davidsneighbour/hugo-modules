@@ -12,7 +12,7 @@
     "@davidsneighbour/tools": "^5.1.13",
     "@davidsneighbour/webpack-config": "^5.1.13",
     "@slightlyoff/lite-vimeo": "0.1.2",
-    "all-contributors-cli": "^6.24.0",
+    "all-contributors-cli": "^6.25.0",
     "lite-youtube-embed": "^0.2.0",
     "prettier-plugin-go-template": "^0.0.13",
     "workbox-cacheable-response": "^6.5.4",
