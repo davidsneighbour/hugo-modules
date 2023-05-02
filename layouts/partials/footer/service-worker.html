@@ -1,7 +1,7 @@
-{{- $path := "sw-prod/" -}}
+{{- $path := "/sw-prod/" -}}
 {{- $dev := site.Params.dnb.pwa.dev -}}
 {{- with $dev }}
-  {{- $path = "sw-dev/" -}}
+  {{- $path = "/sw-dev/" -}}
 {{- end -}}
 
 <script nonce="dnb-components-sw">
