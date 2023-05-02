@@ -48,7 +48,7 @@ export default class LiteYTEmbed extends HTMLElement {
     }
     if (!playBtnEl.textContent) {
       const playBtnLabelEl = document.createElement('span');
-      playBtnLabelEl.className = 'visually-hidden-focusable;';
+      playBtnLabelEl.className = 'visually-hidden-focusable';
       playBtnLabelEl.textContent = this.playLabel;
       playBtnEl.append(playBtnLabelEl);
     }
@@ -119,6 +119,7 @@ export default class LiteYTEmbed extends HTMLElement {
     // AFAIK, the encoding here isn't necessary for XSS, but we'll do it only because this is a URL
     // https://stackoverflow.com/q/64959723/89484
     iframeEl.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${params.toString()}`;
+    iframeEl.classList.add('object-fit-cover');
     this.append(iframeEl);
 
     this.classList.add('lyt-activated');
