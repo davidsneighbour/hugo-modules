@@ -86,7 +86,7 @@
   {{- $image = resources.Get . -}}
   {{- with $image -}}
 
-    {{- $image = .Resize "1200x630" -}} }}
+    {{- $image = .Resize "1200x630" -}}
     {{- $metaProperties = $metaProperties | append (dict
         "property" "og:image"
         "content" $image.Permalink) -}}
