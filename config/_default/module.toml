@@ -6,9 +6,9 @@ min = "0.84.4"
 source = "assets"
 target = "assets"
 
-# [[mounts]]
-# source = "content"
-# target = "content"
+[[mounts]]
+source = "content"
+target = "content"
 
 [[mounts]]
 source = "data"

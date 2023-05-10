@@ -13,9 +13,6 @@
 export default class LiteYTEmbed extends HTMLElement {
   connectedCallback() {
 
-
-    console.log(this);
-
     this.videoId = this.getAttribute('videoid');
 
     let playBtnEl = this.querySelector('.lty-playbtn');
