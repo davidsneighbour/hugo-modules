@@ -1,7 +1,7 @@
 {
   "name": "hugo-blockify",
   "description": "@davidsneighbour's reusable gohugo components.",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/hugo-blockify/issues",
   "dependencies": {
