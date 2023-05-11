@@ -3,12 +3,14 @@
 {{- $networks := site.Params.dnb.social.sharebuttons.networks -}}
 {{- $setups := (where site.Data.dnb.social.shares.items "slug" "in" $networks) -}}
 {{- /* This here is an ugly workaround for Hugo's missing sortByArray feature.
-       Cache it so it does not take away too much time. */ -}}
+  Cache it so it does not take away too much time. */
+-}}
 {{- $setups = partialCached "func/sortNetworks.html" (dict "networks" $networks "setups" $setups) -}}
 
-<li class="list-inline-item">
-	{{ i18n "share_label" }}
-</li>
+
+<span>
+  {{ i18n "share_label" }}
+</span>
 {{- range $network, $setup := $setups -}}
   {{- $separator := "&" -}}
   {{ $icon := false }}
@@ -36,19 +38,19 @@
     {{- end -}}
   {{- end -}}
   {{- $sharetext := i18n (printf "share_on_%s" $setup.slug) -}}
-  <li class="list-inline-item">
-    <a href="{{- $link -}}"
-      target="_blank"
-      rel="noopener"
-      aria-label="{{- $sharetext -}}">
-      {{- with site.Params.dnb.social.sharebuttons.icons | default true -}}
-        <span aria-hidden="true" class="icon">
-          {{- partialCached "bsicon.html" $icon $icon -}}
-        </span>
-      {{- end -}}
-      {{- with site.Params.dnb.social.sharebuttons.sharetext | default true -}}
-        {{- $sharetext -}}
-      {{- end -}}
-    </a>
-  </li>
+  {{- with site.Params.dnb.social.sharebuttons.icons | default true -}}
+    <span aria-hidden="true" class="icon">
+      {{- partialCached "bsicon.html" $icon $icon -}}
+    </span>
+  {{- end -}}
+  <a
+    href="{{- $link -}}"
+    target="_blank"
+    rel="noopener"
+    aria-label="{{- $sharetext -}}"
+  >
+    {{- with site.Params.dnb.social.sharebuttons.sharetext | default true -}}
+      {{- $sharetext -}}
+    {{- end -}}
+  </a>
 {{- end -}}
