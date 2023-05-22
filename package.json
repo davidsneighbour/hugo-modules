@@ -5,7 +5,7 @@
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/hugo-blockify/issues",
   "dependencies": {
-    "@davidsneighbour/eslint-config": "^5.1.31",
+    "@davidsneighbour/eslint-config": "^5.1.34",
     "@davidsneighbour/markdownlint-config": "^5.1.29",
     "@davidsneighbour/standard-version-config": "^5.0.16",
     "@davidsneighbour/stylelint-config": "^5.1.31",
@@ -39,8 +39,8 @@
   "devDependencies": {
     "css-loader": "^6.7.4",
     "mini-css-extract-plugin": "^2.7.6",
-    "node-sass": "^8.0.0",
-    "sass-loader": "^13.2.2",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^13.3.0",
     "style-loader": "^3.3.3"
   }
 }
