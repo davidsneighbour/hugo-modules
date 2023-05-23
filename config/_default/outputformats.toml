@@ -49,12 +49,6 @@ isPlainText = true
 mediatype = "application/opensearchdescription+xml"
 notAlternative = true
 
-[Algolia]
-baseName = "algolia"
-isPlainText = true
-mediaType = "application/json"
-notAlternative = true
-
 [manifest]
 mediaType = "application/manifest+json"
 baseName = "manifest"

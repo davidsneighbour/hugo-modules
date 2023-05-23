@@ -331,25 +331,6 @@ hookLink = "https://dnbql.netlify.app/opensearch"
 # description = ""
 
 ################################################################################
-# hugo-search
-################################################################################
-[dnb.search]
-[dnb.search.algolia]
-appId = ""
-apiKey = ""
-indexName = ""
-numberLocale = ""
-
-[dnb.search.algolia.plugins]
-js = [
-  "js/instantsearch.js",
-  "js/search-algolia.js"
-]
-jsTemplates = [
-  "js/algolia-setup.js"
-]
-
-################################################################################
 # hugo-youtube
 ################################################################################
 [dnb.youtube]

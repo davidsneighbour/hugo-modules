@@ -21,7 +21,6 @@ Blockify is a work in progress. If you have ideas, join us in [Discussions](http
 | hugo-publisher        |  [ ]  |      [ ]      |  [x]   |      [ ]       |
 | hugo-pwa              |  [ ]  |      [ ]      |  [x]   |      [ ]       |
 | hugo-robots           |  [ ]  |      [ ]      |  [x]   |      [ ]       |
-| hugo-search(-algolia) |  [ ]  |      [ ]      |  [x]   |      [ ]       |
 | hugo-security         |  [ ]  |      [ ]      |  [x]   |      [ ]       |
 | hugo-shortcodes       |  [ ]  |      [ ]      |  [x]   |      [ ]       |
 | hugo-sitemap          |  [ ]  |      [ ]      |  [x]   |      [ ]       |
