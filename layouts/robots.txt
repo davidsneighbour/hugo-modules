@@ -29,10 +29,14 @@ Disallow: {{ . }}
 Allow: {{ . }}
 {{- end }}
 {{ end }}
+
+{{ $globaldisallow := where .Site.RegularPages "Params.robotsdisallow" true }}
+{{ with $globaldisallow -}}
 User-agent: *
-{{- range where .Site.RegularPages "Params.robotsdisallow" true }}
+{{- range . }}
 Disallow: {{ .RelPermalink }}
 {{- end }}
+{{ end -}}
 
 Sitemap: {{ "sitemap.xml" | absLangURL }}
 
