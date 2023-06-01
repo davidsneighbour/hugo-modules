@@ -15,7 +15,7 @@
     "all-contributors-cli": "^6.26.0",
     "prettier-plugin-go-template": "^0.0.13",
     "workbox-cacheable-response": "^6.6.0",
-    "workbox-core": "^6.6.0",
+    "workbox-core": "^7.0.0",
     "workbox-expiration": "^6.6.0",
     "workbox-precaching": "^6.6.0",
     "workbox-routing": "^6.6.0",
