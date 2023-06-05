@@ -1,0 +1,14 @@
+{
+  "files": [
+    "layouts/sitemap.xml",
+    "layouts/partials/func/isSitemapped.html",
+    "layouts/partials/func/partialExists.html",
+    "layouts/partials/sitemap.html",
+    "layouts/shortcodes/sitemap.html"
+  ],
+  "config": {
+    "required": {},
+    "optional": {},
+    "slug": "dnb.sitemap"
+  }
+}
