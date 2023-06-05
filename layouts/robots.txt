@@ -9,12 +9,6 @@ Add "robotsdisallow: true" to frontmatter of entries to be disallowed.
 
 */ -}}
 {{- $config := site.Params.dnb.robots -}}
-{{- $branding := true -}}
-{{- with $config.disableBranding -}}
-{{- if eq true . -}}
-{{- $branding = false -}}
-{{- end -}}
-{{- end -}}
 
 {{- with $config.initialComment -}}
 {{ . -}}
@@ -44,7 +38,13 @@ Sitemap: {{ "sitemap.xml" | absLangURL }}
 {{ . | safeHTML -}}
 {{ end -}}
 
-{{- if $branding }}
+{{- $branding := true -}}
+{{- with $config.disableBranding -}}
+{{- if eq true . -}}
+{{- $branding = false -}}
+{{- end -}}
+{{- end -}}
+{{- if eq $branding true }}
 # robots.txt is prepared by @davidsneighbour/hugo-robots
 # visit https://github.com/davidsneighbour/hugo-robots
 {{ end -}}

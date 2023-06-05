@@ -196,18 +196,9 @@ hooklink="https://dnbql.netlify.app/hooks"
 debug=true
 
 ################################################################################
-# hugo-robots
+# hugo-robots @see https://github.com/davidsneighbour/hugo-robots
 ################################################################################
 [dnb.robots]
-
-# initialComment = '''
-# # add some intial comments to the robots.txt
-# '''
-
-# concludingComment = '''
-# # You're still here? It's over.
-# '''
-
 disableBranding = false
 
 # [[dnb.robots.useragents]]

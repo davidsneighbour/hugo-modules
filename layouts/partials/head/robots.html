@@ -1,38 +1,33 @@
-{{- /* get configuration  */ -}}
 {{- $config := .Params.config -}}
 {{- $global := site.Params.dnb.robots -}}
 
-{{- /* setup follow default */ -}}
 {{- $follow := "follow" -}}
-{{- if isset $global "follow" -}}
-  {{- if ne $global.follow true -}}
-    {{- $follow = "nofollow" -}}
-  {{- end -}}
-{{- end -}}
-
-{{- /* setup follow local */ -}}
 {{- with $config.follow -}}
   {{- if eq true . -}}
     {{- $follow = "follow" -}}
   {{- else -}}
     {{- $follow = "nofollow" -}}
   {{- end -}}
-{{- end -}}
-
-{{- /* setup index global */ -}}
-{{- $index := "index" -}}
-{{- if isset $global "follow" -}}
-  {{- if ne $global.index true | default true -}}
-    {{- $index = "noindex" -}}
+{{- else -}}
+  {{- if isset $global "follow" -}}
+    {{- if ne $global.follow true | default true -}}
+      {{- $follow = "nofollow" -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 
-{{- /* setup index local */ -}}
+{{- $index := "index" -}}
 {{- with $config.index -}}
   {{- if eq true . -}}
     {{- $index = "index" -}}
   {{- else -}}
     {{- $index = "noindex" -}}
+  {{- end -}}
+{{- else -}}
+  {{- if isset $global "follow" -}}
+    {{- if ne $global.index true | default true -}}
+      {{- $index = "noindex" -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 
