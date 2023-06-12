@@ -5,12 +5,12 @@
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/hugo-blockify/issues",
   "dependencies": {
-    "@davidsneighbour/eslint-config": "^5.1.38",
-    "@davidsneighbour/markdownlint-config": "^5.1.39",
+    "@davidsneighbour/eslint-config": "^5.2.1",
+    "@davidsneighbour/markdownlint-config": "^5.2.2",
     "@davidsneighbour/standard-version-config": "^5.0.16",
-    "@davidsneighbour/stylelint-config": "^5.1.37",
+    "@davidsneighbour/stylelint-config": "^5.2.2",
     "@davidsneighbour/tools": "^5.1.35",
-    "@davidsneighbour/webpack-config": "^5.1.39",
+    "@davidsneighbour/webpack-config": "^5.2.2",
     "@slightlyoff/lite-vimeo": "0.1.2",
     "all-contributors-cli": "^6.26.0",
     "prettier-plugin-go-template": "^0.0.13",
@@ -40,7 +40,7 @@
     "css-loader": "^6.8.1",
     "mini-css-extract-plugin": "^2.7.6",
     "node-sass": "^9.0.0",
-    "sass-loader": "^13.3.1",
+    "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3"
   }
 }
