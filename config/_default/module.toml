@@ -60,19 +60,19 @@ target = "static"
 # source = "src/_icons"
 # target = "assets/icons/tabler-icons"
 
-# [[imports]]
-# disable = false
-# ignoreConfig = true
-# ignoreImports = true
-# path = "github.com/csswizardry/ct"
+[[imports]]
+disable = false
+ignoreConfig = true
+ignoreImports = true
+path = "github.com/csswizardry/ct"
 
-# [[imports.mounts]]
-# source = 'ct.css'
-# target = 'assets/css/libs/ct.css'
+[[imports.mounts]]
+source = 'ct.css'
+target = 'assets/css/libs/ct.css'
 
-# [[imports.mounts]]
-# source = 'ct.css'
-# target = 'static/css/libs/ct.css'
+[[imports.mounts]]
+source = 'ct.css'
+target = 'static/css/libs/ct.css'
 
 # [[imports]]
 # path = "github.com/davidsneighbour/lazysizes"
