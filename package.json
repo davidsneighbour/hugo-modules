@@ -1,7 +1,7 @@
 {
   "name": "hugo-blockify",
   "description": "@davidsneighbour's reusable gohugo components.",
-  "version": "0.0.80",
+  "version": "0.0.81",
   "license": "MIT",
   "private": true,
   "repository": "davidsneighbour/hugo-blockify",
@@ -9,7 +9,7 @@
   "bugs": "https://github.com/davidsneighbour/hugo-blockify/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-blockify#readme",
   "dependencies": {
-    "@davidsneighbour/configurations": "5.2.9",
+    "@davidsneighbour/configurations": "5.2.10",
     "@slightlyoff/lite-vimeo": "0.1.2",
     "all-contributors-cli": "6.26.0",
     "workbox-cacheable-response": "7.0.0",
