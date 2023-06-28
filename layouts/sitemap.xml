@@ -1,27 +1,31 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" ?>" | safeHTML -}}
 
 {{- $global := site.Params.dnb.sitemap -}}
+{{- $full := false -}}
+{{- with index $global "full" -}}
+  {{- $full = . -}}
+{{- end -}}
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {{- range where site.RegularPages "Draft" false -}}
-
-    {{- $include := $global.enabled -}}
-    {{- $config := .Params.config -}}
-
     {{- $isSitemapped := partialCached "func/isSitemapped.html" . . -}}
-
     {{- if eq true $isSitemapped -}}
       <url>
         <loc>{{- .Permalink -}}</loc>
+
         {{- if not .Lastmod.IsZero -}}
-          <lastmod>{{- safeHTML ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) -}}</lastmod>
+          <lastmod>{{- safeHTML ( .Lastmod.Format (printf "%s" $global.format) ) -}}</lastmod>
         {{- end -}}
-        {{- with .Sitemap.ChangeFreq -}}
-          <changefreq>{{- . -}}</changefreq>
-        {{- end -}}
-        {{- if ge .Sitemap.Priority 0.0 -}}
-          <priority>{{- .Sitemap.Priority -}}</priority>
-        {{- end -}}
+
+        {{ if (eq $global.full true) }}
+          {{- with .Sitemap.ChangeFreq -}}
+            <changefreq>{{- . -}}</changefreq>
+          {{- end -}}
+          {{- if ge .Sitemap.Priority 0.0 -}}
+            <priority>{{- .Sitemap.Priority -}}</priority>
+          {{- end -}}
+        {{ end }}
+
         {{- if .IsTranslated -}}
           {{- range .Translations -}}
             <xhtml:link rel="alternate" hreflang="{{- .Language.Lang -}}" href="{{- .Permalink -}}">
