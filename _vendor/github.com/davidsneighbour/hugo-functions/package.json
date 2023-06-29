@@ -12,7 +12,7 @@
   "repository": "davidsneighbour/hugo-functions",
   "bugs": "https://github.com/davidsneighbour/hugo-functions/issues",
   "devDependencies": {
-    "@davidsneighbour/config": "^1.0.22"
+    "@davidsneighbour/config": "^5.0.0"
   },
   "scripts": {
     "clean": "run-p clean:*",
