@@ -1,6 +1,6 @@
 {
   "name": "@davidsneighbour/hugo-sitemap",
-  "version": "1.1.6",
+  "version": "1.1.10",
   "license": "MIT",
   "description": "A sitemap for Hugo",
   "author": {
@@ -12,7 +12,7 @@
   "repository": "davidsneighbour/hugo-sitemap",
   "bugs": "https://github.com/davidsneighbour/hugo-sitemap/issues",
   "devDependencies": {
-    "@davidsneighbour/tools": "5.1.35",
+    "@davidsneighbour/tools": "5.2.9",
     "@davidsneighbour/remark-config": "5.1.38",
     "@davidsneighbour/standard-version-config": "5.0.16"
   },

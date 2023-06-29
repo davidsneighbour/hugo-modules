@@ -29,11 +29,13 @@
 {{- define "partials/range-through-pages.html" -}}
 <ul>
   {{- range . -}}
-    <li>
-      <a href="{{- .Permalink -}}" title="{{- .Description -}}">
-        {{- .Title -}}
-      </a>
-    </li>
+    {{- if (ne .Params.hasSitemap false) -}}
+      <li>
+        <a href="{{- .Permalink -}}" title="{{- .Description -}}">
+          {{- .Title -}}
+        </a>
+      </li>
+    {{- end -}}
   {{- end -}}
 </ul>
 {{- end -}}
