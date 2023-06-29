@@ -196,20 +196,6 @@ hooklink = "https://dnbql.netlify.app/hooks"
 debug = true
 
 ################################################################################
-# hugo-robots @see https://github.com/davidsneighbour/hugo-robots
-################################################################################
-[dnb.robots]
-disableBranding = false
-
-# [[dnb.robots.useragents]]
-# name = "Googlebot"
-# disallow = ["/nogooglebot/", "/anotherdirectory/"]
-
-# [[dnb.robots.useragents]]
-# name = "Googlebot2"
-# allow = ["/nogooglebot/", "/anotherdirectory/"]
-
-################################################################################
 # hugo-security
 ################################################################################
 [dnb.security.policy]

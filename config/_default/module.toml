@@ -91,3 +91,27 @@ target = 'static/css/libs/ct.css'
 # [[imports.mounts]]
 # source = "plugins"
 # target = "assets/libs/lazysizes/plugins"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-head"
+disable = false
+ignoreConfig = false
+ignoreImports = false
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-social"
+disable = false
+ignoreConfig = false
+ignoreImports = false
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-robots"
+disable = false
+ignoreConfig = false
+ignoreImports = false
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-sitemap"
+disable = false
+ignoreConfig = false
+ignoreImports = false
