@@ -52,3 +52,14 @@ git commit --signoff --amend --no-edit --no-verify
 # push release to GitHub
 git push origin main --follow-tags
 git push origin --tags
+
+# create a release on GitHub
+GITHUB_REPO=https://github.com/${GITHUB_REPOSLUG}
+URL="$GITHUB_REPO"/"releases/edit/v""$VERSION"
+curl \
+  -X POST \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: token ${GITHUB_SECRET}" \
+  https://api.github.com/repos/"${GITHUB_REPOSLUG}"/releases \
+  -d "{\"tag_name\":\"v${VERSION}\",\"name\":\"v${VERSION}\",\"draft\":false,\"prerelease\":false,\"generate_release_notes\":true}"
+xdg-open "${URL}" &>>/dev/null
