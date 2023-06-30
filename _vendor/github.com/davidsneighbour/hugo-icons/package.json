@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@davidsneighbour/standard-version-config": "^5.0.0",
-    "@davidsneighbour/tools": "^4.0.9"
+    "@davidsneighbour/tools": "^5.0.0"
   },
   "scripts": {
     "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",

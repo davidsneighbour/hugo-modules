@@ -10,7 +10,7 @@
     "@davidsneighbour/cypress-config": "^5.0.0",
     "@davidsneighbour/prettier-config": "^5.0.0",
     "@davidsneighbour/standard-version-config": "^5.0.0",
-    "@davidsneighbour/tools": "^4.0.2"
+    "@davidsneighbour/tools": "^5.0.0"
   },
   "scripts": {
     "clean": "run-p clean:*",
