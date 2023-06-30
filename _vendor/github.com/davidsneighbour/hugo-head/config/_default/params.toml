@@ -13,3 +13,5 @@ outputStyle = "compressed"
 targetPath = "assets/theme.css"
 enableSourceMap = true
 includePaths = ["node_modules/"]
+
+ignoreErrors = ["dnb-sample-error"]

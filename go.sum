@@ -4,6 +4,8 @@ github.com/davidsneighbour/hugo-functions v1.1.3 h1:9buogAnPwnRX2dWqljc9TkUDG38v
 github.com/davidsneighbour/hugo-functions v1.1.3/go.mod h1:vcxVzEHYhArEYMR0w+r6h6xwoV6Tkovl/d9fK2n3dQE=
 github.com/davidsneighbour/hugo-head v1.1.20 h1:tihHYiJDlEuBW84k56fCgnW64FEJ94UbztRuv18AaCQ=
 github.com/davidsneighbour/hugo-head v1.1.20/go.mod h1:R4fADhSOAP/qAhViEAqYy+rj29+DUWlYDwlc9mLiuoE=
+github.com/davidsneighbour/hugo-head v1.1.21 h1:TVwyXSNXNb17I8ukpMWDWxMLV8iZw7o2qUVL3JBjM9E=
+github.com/davidsneighbour/hugo-head v1.1.21/go.mod h1:R4fADhSOAP/qAhViEAqYy+rj29+DUWlYDwlc9mLiuoE=
 github.com/davidsneighbour/hugo-robots v1.2.15 h1:LjpqkDI+SUbzJJ+vdpZikzXrk+jVje1oxcZhsN9ABBU=
 github.com/davidsneighbour/hugo-robots v1.2.15/go.mod h1:k7n+kuHNDz4A3Gq729XPoTrH3dm+8hSJrC9IOe20ISw=
 github.com/davidsneighbour/hugo-sitemap v1.1.10 h1:nd/AOJ96x+rP2p65lxvsSYjFJIWaE+s+RSG6rG2tHUE=
