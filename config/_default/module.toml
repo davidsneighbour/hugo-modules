@@ -98,11 +98,11 @@ disable = false
 ignoreConfig = false
 ignoreImports = false
 
-# [[imports]]
-# path = "github.com/davidsneighbour/hugo-social"
-# disable = false
-# ignoreConfig = false
-# ignoreImports = false
+[[imports]]
+path = "github.com/davidsneighbour/hugo-social"
+disable = false
+ignoreConfig = false
+ignoreImports = false
 
 [[imports]]
 path = "github.com/davidsneighbour/hugo-robots"
