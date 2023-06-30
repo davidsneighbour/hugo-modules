@@ -1,7 +1,7 @@
 {
   "name": "hugo-blockify",
   "description": "@davidsneighbour's reusable gohugo components.",
-  "version": "0.0.90",
+  "version": "0.0.91",
   "license": "MIT",
   "private": true,
   "repository": "davidsneighbour/hugo-blockify",
