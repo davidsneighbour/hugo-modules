@@ -1,7 +1,7 @@
 {
   "name": "hugo-head",
   "description": "@davidsneighbour's answer to the question 'What tags belong into the <head> tag of my website?'",
-  "version": "1.1.21",
+  "version": "1.1.26",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/hugo-head/issues",
   "dependencies": {

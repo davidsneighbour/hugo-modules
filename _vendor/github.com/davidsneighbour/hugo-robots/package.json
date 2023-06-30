@@ -1,6 +1,6 @@
 {
   "name": "@davidsneighbour/hugo-robots",
-  "version": "1.2.15",
+  "version": "1.2.16",
   "license": "MIT",
   "description": "Configurable robots.txt for Hugo",
   "author": {
