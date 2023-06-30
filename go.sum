@@ -6,10 +6,16 @@ github.com/davidsneighbour/hugo-head v1.1.20 h1:tihHYiJDlEuBW84k56fCgnW64FEJ94Ub
 github.com/davidsneighbour/hugo-head v1.1.20/go.mod h1:R4fADhSOAP/qAhViEAqYy+rj29+DUWlYDwlc9mLiuoE=
 github.com/davidsneighbour/hugo-head v1.1.21 h1:TVwyXSNXNb17I8ukpMWDWxMLV8iZw7o2qUVL3JBjM9E=
 github.com/davidsneighbour/hugo-head v1.1.21/go.mod h1:R4fADhSOAP/qAhViEAqYy+rj29+DUWlYDwlc9mLiuoE=
+github.com/davidsneighbour/hugo-head v1.1.26 h1:kkUzMbiC/CssqAh11NhyCu/IrN80lf2Ffy98Q5IiONY=
+github.com/davidsneighbour/hugo-head v1.1.26/go.mod h1:R4fADhSOAP/qAhViEAqYy+rj29+DUWlYDwlc9mLiuoE=
 github.com/davidsneighbour/hugo-robots v1.2.15 h1:LjpqkDI+SUbzJJ+vdpZikzXrk+jVje1oxcZhsN9ABBU=
 github.com/davidsneighbour/hugo-robots v1.2.15/go.mod h1:k7n+kuHNDz4A3Gq729XPoTrH3dm+8hSJrC9IOe20ISw=
+github.com/davidsneighbour/hugo-robots v1.2.16 h1:DeGX8VlccZ8xI5GabqRsZk478uq0LzL2aIbisrX5tJg=
+github.com/davidsneighbour/hugo-robots v1.2.16/go.mod h1:k7n+kuHNDz4A3Gq729XPoTrH3dm+8hSJrC9IOe20ISw=
 github.com/davidsneighbour/hugo-sitemap v1.1.10 h1:nd/AOJ96x+rP2p65lxvsSYjFJIWaE+s+RSG6rG2tHUE=
 github.com/davidsneighbour/hugo-sitemap v1.1.10/go.mod h1:aLCVxZhnqXuZ7FkaxRr9g9nNQD9hN5erq9xGiK4kH6k=
+github.com/davidsneighbour/hugo-sitemap v1.1.11 h1:DWAQmwiidFiGXR9be6u4/bW63xiuFlmpjBzckge32vQ=
+github.com/davidsneighbour/hugo-sitemap v1.1.11/go.mod h1:aLCVxZhnqXuZ7FkaxRr9g9nNQD9hN5erq9xGiK4kH6k=
 github.com/davidsneighbour/hugo-social v0.1.9 h1:Qe/92X8bOac7ypPWk8lWsf74K20onId/TV6qmZ3jJ3s=
 github.com/davidsneighbour/hugo-social v0.1.9/go.mod h1:d+S7kYwvMiGflVH+PVKYJ5n5miFvgVB3q7zfpC0EaCE=
 github.com/tailwindlabs/heroicons v2.0.18+incompatible h1:9rm5lZcJ6mT4j9F/9LDaS/Roz6hgyKkaLVbm+b4l9YY=
