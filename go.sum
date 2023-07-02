@@ -8,6 +8,8 @@ github.com/davidsneighbour/hugo-head v1.1.21 h1:TVwyXSNXNb17I8ukpMWDWxMLV8iZw7o2
 github.com/davidsneighbour/hugo-head v1.1.21/go.mod h1:R4fADhSOAP/qAhViEAqYy+rj29+DUWlYDwlc9mLiuoE=
 github.com/davidsneighbour/hugo-head v1.1.26 h1:kkUzMbiC/CssqAh11NhyCu/IrN80lf2Ffy98Q5IiONY=
 github.com/davidsneighbour/hugo-head v1.1.26/go.mod h1:R4fADhSOAP/qAhViEAqYy+rj29+DUWlYDwlc9mLiuoE=
+github.com/davidsneighbour/hugo-head v1.1.27 h1:oxi6kpvCQL/TYSc3kS3swzTecLnpl4tb3h4skVK6ffk=
+github.com/davidsneighbour/hugo-head v1.1.27/go.mod h1:HAgdb48mG7+cChezeBGNQAXSg0u48o/qo3xSMThJBDg=
 github.com/davidsneighbour/hugo-robots v1.2.15 h1:LjpqkDI+SUbzJJ+vdpZikzXrk+jVje1oxcZhsN9ABBU=
 github.com/davidsneighbour/hugo-robots v1.2.15/go.mod h1:k7n+kuHNDz4A3Gq729XPoTrH3dm+8hSJrC9IOe20ISw=
 github.com/davidsneighbour/hugo-robots v1.2.16 h1:DeGX8VlccZ8xI5GabqRsZk478uq0LzL2aIbisrX5tJg=
@@ -20,6 +22,8 @@ github.com/davidsneighbour/hugo-social v0.1.9 h1:Qe/92X8bOac7ypPWk8lWsf74K20onId
 github.com/davidsneighbour/hugo-social v0.1.9/go.mod h1:d+S7kYwvMiGflVH+PVKYJ5n5miFvgVB3q7zfpC0EaCE=
 github.com/davidsneighbour/hugo-social v0.1.10 h1:g9RyhjQUmfAIKQWEM9aUXT7ZD1M2STexDvWSAp6EUqM=
 github.com/davidsneighbour/hugo-social v0.1.10/go.mod h1:zxqIAvm1Q/BTzZHnV5jlyiSbfhoE1SJ6qbgpt1H/ni0=
+github.com/davidsneighbour/hugo-social v0.1.12 h1:iPMoOCRQ74sdf2/7waRWzT/sz+m7/FbnoUlvVUJJ0eA=
+github.com/davidsneighbour/hugo-social v0.1.12/go.mod h1:zxqIAvm1Q/BTzZHnV5jlyiSbfhoE1SJ6qbgpt1H/ni0=
 github.com/tabler/tabler-icons v2.23.0+incompatible h1:nybfK5B2+mryBES0C2OMiYIAz3Ps9kxP3uYmn6R8SUg=
 github.com/tabler/tabler-icons v2.23.0+incompatible/go.mod h1:Ap75CRdhXxprnUnPlUCRLvJ2pIFNqwxIipj3GfD6XHE=
 github.com/tailwindlabs/heroicons v2.0.18+incompatible h1:9rm5lZcJ6mT4j9F/9LDaS/Roz6hgyKkaLVbm+b4l9YY=

@@ -1,15 +1,15 @@
-{{ $context := .context }}
-{{ $key := .key }}
-{{ $default := .default }}
+{{- $context := .context -}}
+{{- $key := .key -}}
+{{- $default := .default -}}
 
 {{/* retrieve global configuration */}}
-{{ $config := site.Params.dnb.social.network.twitter | default dict }}
+{{- $config := site.Params.dnb.social.network.twitter | default dict -}}
 
 {{/* compare against page config */}}
-{{ $localConfig := $context.Params.twitter | default dict }}
+{{- $localConfig := $context.Params.twitter | default dict -}}
 
 {{/* merge configs */}}
-{{ $config = $config | merge $localConfig }}
+{{- $config = $config | merge $localConfig -}}
 
 {{/* return final value */}}
-{{ return (index $config $key | default $default) }}
+{{- return (index $config $key | default $default) -}}

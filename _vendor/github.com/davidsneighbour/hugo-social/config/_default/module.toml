@@ -15,19 +15,19 @@ source = "layouts"
 target = "layouts"
 
 [[imports]]
-disable = false
-ignoreConfig = false
-ignoreImports = false
 path = "github.com/davidsneighbour/hugo-functions"
-
-[[imports]]
 disable = false
 ignoreConfig = false
 ignoreImports = false
+
+[[imports]]
 path = "github.com/davidsneighbour/hugo-debug"
-
-[[imports]]
 disable = false
 ignoreConfig = false
 ignoreImports = false
+
+[[imports]]
 path = "github.com/davidsneighbour/hugo-icons"
+disable = false
+ignoreConfig = false
+ignoreImports = false

@@ -25,3 +25,9 @@ disable = false
 ignoreConfig = false
 ignoreImports = false
 path = "github.com/davidsneighbour/hugo-debug"
+
+[[imports]]
+disable = false
+ignoreConfig = false
+ignoreImports = false
+path = "github.com/davidsneighbour/hugo-social"

@@ -1,6 +1,6 @@
 {
   "name": "@davidsneighbour/hugo-social",
-  "version": "0.1.10",
+  "version": "0.1.12",
   "license": "MIT",
   "description": "Social Media functions for Hugo",
   "author": {
@@ -12,8 +12,8 @@
   "repository": "davidsneighbour/hugo-sitemap",
   "bugs": "https://github.com/davidsneighbour/hugo-social/issues",
   "devDependencies": {
-    "@davidsneighbour/configurations": "^5.2.10",
-    "all-contributors-cli": "^6.26.0"
+    "@davidsneighbour/configurations": "5.2.10",
+    "all-contributors-cli": "6.26.0"
   },
   "scripts": {
     "clean": "run-p clean:*",
