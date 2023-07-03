@@ -12,7 +12,7 @@
   "repository": "davidsneighbour/hugo-sitemap",
   "bugs": "https://github.com/davidsneighbour/hugo-social/issues",
   "devDependencies": {
-    "@davidsneighbour/configurations": "5.2.10",
+    "@davidsneighbour/configurations": "5.2.12",
     "all-contributors-cli": "6.26.0"
   },
   "scripts": {
