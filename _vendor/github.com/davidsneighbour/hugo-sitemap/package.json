@@ -12,7 +12,7 @@
   "repository": "davidsneighbour/hugo-sitemap",
   "bugs": "https://github.com/davidsneighbour/hugo-sitemap/issues",
   "devDependencies": {
-    "@davidsneighbour/tools": "5.2.9",
+    "@davidsneighbour/tools": "5.2.12",
     "@davidsneighbour/remark-config": "5.1.38",
     "@davidsneighbour/standard-version-config": "5.0.16"
   },
