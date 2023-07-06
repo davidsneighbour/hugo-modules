@@ -31,7 +31,7 @@
     "serve:webpack": "webpack --watch --config webpack.js"
   },
   "devDependencies": {
-    "lerna": "^7.0.1"
+    "lerna": "^7.1.1"
   },
   "workspaces": [
     "modules/auditor",
@@ -55,6 +55,7 @@
     "modules/seo",
     "modules/shortcodes",
     "modules/sitemap",
-    "modules/social"
+    "modules/social",
+    "modules/youtube"
   ]
 }
