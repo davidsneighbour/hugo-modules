@@ -1,0 +1,33 @@
+[hugoVersion]
+extended = false
+min = "0.84.0"
+
+[[mounts]]
+source = "data"
+target = "data"
+
+[[mounts]]
+source = "i18n"
+target = "i18n"
+
+[[mounts]]
+source = "layouts"
+target = "layouts"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-functions"
+disable = false
+ignoreConfig = false
+ignoreImports = false
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-debug"
+disable = false
+ignoreConfig = false
+ignoreImports = false
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-icons"
+disable = false
+ignoreConfig = false
+ignoreImports = false

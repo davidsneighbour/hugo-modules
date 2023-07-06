@@ -1,0 +1,16 @@
+github.com/davidsneighbour/hugo-debug v1.5.20 h1:pFeFy+hgASGnuibe3Ey/tf+WYB9hxp6imXGllTMzHrk=
+github.com/davidsneighbour/hugo-debug v1.5.20/go.mod h1:CmaePQn6TcdiP269YMmB0ShEZI47ySDpeWkBV8T2qcU=
+github.com/davidsneighbour/hugo-hooks v1.3.5 h1:2MWcJlsmUMAWTMyb6nkYYhFOCA+yx6c1uGm6jHaGr6Y=
+github.com/davidsneighbour/hugo-hooks v1.3.5/go.mod h1:AM5v7lsVWD2tQFSzbDClu5Q0lwqxB7P1kpQGMMSaxXY=
+github.com/davidsneighbour/hugo-social v0.1.12 h1:iPMoOCRQ74sdf2/7waRWzT/sz+m7/FbnoUlvVUJJ0eA=
+github.com/davidsneighbour/hugo-social v0.1.12/go.mod h1:zxqIAvm1Q/BTzZHnV5jlyiSbfhoE1SJ6qbgpt1H/ni0=
+github.com/davidsneighbour/hugo-social v0.1.13 h1:r6+BbYQG4flm+LKlh9aliHvupe/Pr9kGFfexRzoYpPs=
+github.com/davidsneighbour/hugo-social v0.1.13/go.mod h1:zxqIAvm1Q/BTzZHnV5jlyiSbfhoE1SJ6qbgpt1H/ni0=
+github.com/davidsneighbour/hugo-social v0.1.14 h1:ECD/Q4w4A7F95FdGgJnMzp2A6CSbxcv37C3n6cA3hEs=
+github.com/davidsneighbour/hugo-social v0.1.14/go.mod h1:zxqIAvm1Q/BTzZHnV5jlyiSbfhoE1SJ6qbgpt1H/ni0=
+github.com/tabler/tabler-icons v2.23.0+incompatible h1:nybfK5B2+mryBES0C2OMiYIAz3Ps9kxP3uYmn6R8SUg=
+github.com/tabler/tabler-icons v2.23.0+incompatible/go.mod h1:Ap75CRdhXxprnUnPlUCRLvJ2pIFNqwxIipj3GfD6XHE=
+github.com/tailwindlabs/heroicons v2.0.18+incompatible h1:9rm5lZcJ6mT4j9F/9LDaS/Roz6hgyKkaLVbm+b4l9YY=
+github.com/tailwindlabs/heroicons v2.0.18+incompatible/go.mod h1:2SHGOdw86jviBkoeQINcTfkzAAao9dciip4RsMS9xIg=
+github.com/twbs/icons v1.10.5 h1:F9uvW7cGfDBAautw5aeCmnB3hw4vv3aEQGbHnzcQKaE=
+github.com/twbs/icons v1.10.5/go.mod h1:GnRlymgVWp5iVJCMa0Me5b6tFyGpVc2bSxPMRGIJmyA=

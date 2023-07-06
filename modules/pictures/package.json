@@ -1,0 +1,25 @@
+{
+  "name": "@davidsneighbour/hugo-pictures",
+  "description": "Image generation for Hugo",
+  "version": "0.1.7",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-pictures/issues"
+  },
+  "devDependencies": {
+    "@davidsneighbour/eslint-config": "^5.1.13",
+    "@davidsneighbour/standard-version-config": "^5.0.16",
+    "@davidsneighbour/tools": "^5.1.15"
+  },
+  "homepage": "https://github.com/davidsneighbour/hugo-pictures",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "clean": "run-p clean:**",
+    "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
+    "clean:node": "rimraf node_modules package-lock.json",
+    "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
+    "release-major": "standard-version --release-as major -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
+    "release-next": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
+  }
+}

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# update version in citation configuration
+FILE=CITATION.cff
+if test -f "$FILE"; then
+  VERSION=$(node -pe 'require("./package.json")["version"]')
+  sed -i "s/^version: .*/version: ${VERSION}/" $FILE
+  DATE=$(date +%F)
+  sed -i "s/date-released: .*/date-released: ${DATE}/" $FILE
+  git add $FILE
+fi
+
+git add CITATION.cdd
+git commit --signoff --amend --no-edit
+
+git push --follow-tags origin main

@@ -1,0 +1,95 @@
+{{- /* TODO: - og:audio = a URL to an audio file to accompany this object -
+og:determiner = The word that appears before this object's title in a sentence.
+An enum of (a, an, the, "", auto). If auto is chosen, the consumer of your data
+should chose between "a" or "an". Default is "" (blank). - og:locale:alternate =
+An array of other locales this page is available in. - og:video = A URL to a
+video file that complements this object */ -}} {{ if $.Params.images }} {{ range
+first 6 $.Params.images -}}
+<meta property="og:image" content="{{ . | absURL }}" />
+{{ end }} {{ else -}} {{- $images := $.Resources.ByType "image" -}} {{-
+$featured := $images.GetMatch "*feature*" -}} {{- if not $featured }} {{
+$featured = $images.GetMatch "{*cover*,*thumbnail*}" }} {{ end -}} {{- with
+$featured -}}
+<meta property="og:image" content="{{ $featured.Permalink }}" />
+{{ else -}} {{- with $.Site.Params.images -}}
+<meta property="og:image" content="{{ index . 0 | absURL }}" />
+{{ end }} {{ end }} {{ end }} {{ $permalink := .Permalink }} {{ $siteSeries :=
+.Site.Taxonomies.series }} {{ with .Params.series }} {{ range $name := . }} {{
+$series := index $siteSeries $name }} {{ range $page := first 6 $series.Pages }}
+{{ if ne $page.Permalink $permalink }}
+<meta property="og:see_also" content="{{ $page.Permalink }}" />
+{{ end }} {{ end }} {{ end }} {{ end }}
+
+<!--
+image/video/audio (audio does not have width or height, obviously)
+og:image:url - Identical to og:image.
+og:image:secure_url - An alternate url to use if the webpage requires HTTPS.
+og:image:type - A MIME type for this image.
+og:image:width - The number of pixels wide.
+og:image:height - The number of pixels high.
+og:image:alt - A description of what is in the image (not a caption). If the page specifies an og:image it should specify og:image:alt.
+
+article:published_time - datetime - When the article was first published.
+article:modified_time - datetime - When the article was last changed.
+article:expiration_time - datetime - When the article is out of date after.
+article:author - profile array - Writers of the article.
+article:section - string - A high-level section name. E.g. Technology
+
+//-->
+
+{{/* {{- if $page }} {{- if not .PublishDate.IsZero }} <meta
+property="article:published_time" {{ .PublishDate.Format $iso8601 | printf
+"content=%q" | safeHTMLAttr }}> {{ else if not .Date.IsZero }} <meta
+property="article:published_time" {{ .Date.Format $iso8601 | printf "content=%q"
+| safeHTMLAttr }}> {{ end }} {{- if not .Lastmod.IsZero }} <meta
+property="article:modified_time" {{ .Lastmod.Format $iso8601 | printf
+"content=%q" | safeHTMLAttr }}> {{ end }} {{- else }} {{- if not .Date.IsZero }}
+<meta property="og:updated_time" {{ .Lastmod.Format $iso8601 | printf
+"content=%q" | safeHTMLAttr }}> {{- end }} {{- end }} */}} {{/* {{- with
+.Params.audio }} */}} {{/* <meta property="og:audio" content="{{ . }}" />
+{{ end }} {{- with .Params.locale }}
+<meta property="og:locale" content="{{ . }}" />
+{{ end }} {{- with .Params.videos }} {{- range . }}
+<meta property="og:video" content="{{ . | absURL }}" />
+{{ end }} {{ end }} */}} {{- /* If it is part of a series, link to related
+articles */}} {{/*{{- $permalink := .Permalink }} {{- $siteSeries :=
+.Site.Taxonomies.series }} {{ with .Params.series }} {{- range $name := . }} {{-
+$series := index $siteSeries ($name | urlize) }} {{- range $page := first 6
+$series.Pages }} {{- if ne $page.Permalink $permalink }}
+<meta property="og:see_also" content="{{ $page.Permalink }}" />
+{{ end }} {{- end }} {{ end }} {{ end }} */}} {{/* {{- if $page }} {{- range
+.Site.Authors }} {{ with .Social.facebook }}
+<meta property="article:author" content="https://www.facebook.com/{{ . }}" />
+{{ end }} {{ with .Site.Social.facebook }}
+<meta property="article:publisher" content="https://www.facebook.com/{{ . }}" />
+{{ end }}
+<meta property="article:section" content="{{ .Section }}" />
+{{- with .Params.tags }} {{ range first 6 . }}
+<meta property="article:tag" content="{{ . }}" />
+{{ end }} {{ end }} {{- end }} {{ end }} */}} {{- /* ```yaml twitter: site:
+"twittername" creator: "twittername" card: "summary_large_image" # or summary,
+app, player title: "override the title of the page" description: "override the
+description of the page" image: "https://example.com/image.jpg" image: src:
+"https://example.com/image.jpg" alt: "description of the image" ``` ```toml
+[dnb.social.twitter] site: "twittername" creator: "twittername" card:
+"summary_large_image" # or summary, app, player title: "override the title of
+the page" description: "override the description of the page" image:
+"https://example.com/image.jpg" image: src: "https://example.com/image.jpg" alt:
+"description of the image" */ -}} {{/* twitter:image */}} {{- $dict = $dict |
+merge ( dict "twitter:image" "" ) -}}{{/* URL of image to use in the card.
+Images must be less than 5MB in size. JPG, PNG, WEBP and GIF formats are
+supported. Only the first frame of an animated GIF will be used. SVG is not
+supported. */}} {{- $dict = $dict | merge ( dict "twitter:image:alt" "" )
+-}}{{/* A text description of the image conveying the essential nature of an
+image to users who are visually impaired. Maximum 420 characters. */}} {{/*<meta
+	name="twitter:image:src"
+	content="{{ .Params.og_image }}"
+/>*/}} {{ $resize := "876x438" }} {{- with $.Params.images -}}
+<meta name="twitter:image" content="{{ index . 0 | absURL }}" />
+{{ else -}} {{- $images := $.Resources.ByType "image" -}} {{- $featured :=
+$images.GetMatch "*feature*" -}} {{- if not $featured }}{{ $featured =
+$images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}} {{- with $featured -}}
+<meta name="twitter:image" content="{{ $featured.Permalink }}" />
+{{- else -}} {{- with $.Site.Params.images -}}
+<meta name="twitter:image" content="{{ index . 0 | absURL }}" />
+{{- end -}} {{- end -}} {{- end }}

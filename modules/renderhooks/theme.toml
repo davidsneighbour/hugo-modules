@@ -1,0 +1,12 @@
+name = "DNB Hugo Robots.txt"
+license = "MIT"
+licenselink = "https://github.com/davidsneighbour/hugo-renderhooks/blob/main/LICENSE"
+description = "A robots.txt for Hugo."
+homepage = "https://github.com/davidsneighbour/hugo-renderhooks"
+tags = ["robots.txt"]
+features = ["robots.txt"]
+min_version = "0.71.0"
+
+[author]
+  name = "Patrick Kollitsch"
+  homepage = "https://davids-neighbour.com/"

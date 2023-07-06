@@ -1,0 +1,41 @@
+#!/bin/bash
+# shellcheck disable=SC2039
+
+REQUIRED_TOOLS=(
+  node
+  export
+)
+
+for TOOL in "${REQUIRED_TOOLS[@]}"; do
+  if ! command -v "${TOOL}" >/dev/null; then
+    echo "${TOOL} is required... "
+    exit 1
+  fi
+done
+
+FILE=.env
+if [ -f "${FILE}" ]; then
+  echo "exporting .env"
+  set -a
+  # shellcheck source=/dev/null
+  source "${FILE}"
+  set +a
+fi
+
+README_PARTICLES=(
+  COMPONENTS
+  CARD
+  INSTALLUPDATE
+  THINGSTOKNOW
+)
+
+# shellcheck disable=SC2154
+for PARTICLE in "${README_PARTICLES[@]}"; do
+  node ./node_modules/replace-between/bin/replace-between.js \
+    --source "${TEMPLATEPATH}"/readme/"${PARTICLE,,}".md \
+    --target README.md \
+    --token "${PARTICLE^^}"
+done
+
+# shellcheck disable=SC2154
+sed -i 's+##MODULENAME##+'"${MODULENAME}"'+g' README.md

@@ -1,0 +1,10 @@
+{
+  "name": "@davidsneighbour/hugo-renderhooks",
+  "version": "1.5.0",
+  "license": "MIT",
+  "description": "Render hooks for Hugo",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "homepage": "https://github.com/davidsneighbour/hugo-renderhooks",
+  "bugs": "https://github.com/davidsneighbour/hugo-renderhooks/issues",
+  "private": true
+}

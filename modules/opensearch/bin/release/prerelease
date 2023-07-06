@@ -1,0 +1,26 @@
+#!/bin/bash
+
+REQUIRED_TOOLS=(
+  git
+  hugo
+)
+
+for TOOL in "${REQUIRED_TOOLS[@]}"; do
+  if ! command -v "${TOOL}" >/dev/null; then
+    echo "${TOOL} is required... "
+    exit 1
+  fi
+done
+
+CURPATH="$(pwd -P)"
+
+"${CURPATH}"/bin/build/prepare-files
+
+hugo mod get -u ./...
+hugo mod tidy
+
+git add "${CURPATH}"/go.mod
+FILE="${CURPATH}"/go.sum
+if test -f "${FILE}"; then
+  git add go.sum
+fi
