@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.2](https://github.com/davidsneighbour/hugo-modules/compare/v1.2023.1...v1.2023.2) (2023-07-06)
+
+
+### Build System
+
+* **fix:** proper builds ([f051f1c](https://github.com/davidsneighbour/hugo-modules/commit/f051f1cf44d7548ba86b3b31bdd88b08d17b7189))
+
+
+### Chore
+
+* **config:** reconfigure core module setup ([622328b](https://github.com/davidsneighbour/hugo-modules/commit/622328b5396535157b6207ea0d5a0c9d4511635d))
+
 ## 1.2023.1 (2023-07-06)
 
 
