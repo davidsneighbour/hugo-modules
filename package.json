@@ -29,5 +29,8 @@
     "release": "commit-and-tag-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "serve:webpack": "webpack --watch --config webpack.js"
+  },
+  "devDependencies": {
+    "lerna": "^7.0.1"
   }
 }
