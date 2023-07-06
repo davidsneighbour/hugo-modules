@@ -3,18 +3,25 @@
   "description": "@davidsneighbour's answer to the question 'What tags belong into the <head> tag of my website?'",
   "version": "1.1.29",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
-  "bugs": "https://github.com/davidsneighbour/hugo-head/issues",
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-head/issues"
+  },
   "dependencies": {
     "@davidsneighbour/standard-version-config": "^5.0.16"
   },
   "homepage": "https://github.com/davidsneighbour/hugo-head#readme",
   "license": "MIT",
   "private": true,
-  "repository": "davidsneighbour/hugo-head",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-head.git"
+  },
   "scripts": {
     "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:major": "standard-version --release-as major -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
   },
-  "slug": "hugo-head"
+  "slug": "hugo-head",
+  "main": "index.js",
+  "devDependencies": {}
 }

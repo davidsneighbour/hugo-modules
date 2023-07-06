@@ -3,14 +3,15 @@
   "version": "1.2.4",
   "license": "MIT",
   "description": "A Hugo theme component to add the Giscus comment system to static websites.",
-  "author": {
-    "name": "Patrick Kollitsch",
-    "email": "patrick@davids-neighbour.com",
-    "web": "https://davids-neighbour.com"
-  },
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "homepage": "https://github.com/davidsneighbour/hugo-giscus",
-  "repository": "davidsneighbour/hugo-giscus",
-  "bugs": "https://github.com/davidsneighbour/hugo-giscus/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-giscus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-giscus/issues"
+  },
   "devDependencies": {
     "@davidsneighbour/config": "^1.0.18"
   },
@@ -27,5 +28,6 @@
     "plugins": [
       "@davidsneighbour/config/remark"
     ]
-  }
+  },
+  "main": "index.js"
 }

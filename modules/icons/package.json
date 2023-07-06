@@ -17,5 +17,6 @@
     "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add go.* package* && npm run release"
   },
-  "private": true
+  "private": true,
+  "main": "index.js"
 }

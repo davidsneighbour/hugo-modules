@@ -5,6 +5,13 @@
   "description": "Render hooks for Hugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/davidsneighbour/hugo-renderhooks",
-  "bugs": "https://github.com/davidsneighbour/hugo-renderhooks/issues",
-  "private": true
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-renderhooks/issues"
+  },
+  "private": true,
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

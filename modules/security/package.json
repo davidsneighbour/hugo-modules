@@ -3,14 +3,15 @@
   "version": "1.1.4",
   "license": "MIT",
   "description": "Security related features for Hugo.",
-  "author": {
-    "name": "Patrick Kollitsch",
-    "email": "patrick@davids-neighbour.com",
-    "web": "https://davids-neighbour.com"
-  },
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "homepage": "https://github.com/davidsneighbour/hugo-security",
-  "repository": "davidsneighbour/hugo-security",
-  "bugs": "https://github.com/davidsneighbour/hugo-security/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-security.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-security/issues"
+  },
   "devDependencies": {
     "@davidsneighbour/config": "^1.0.22"
   },
@@ -20,5 +21,6 @@
     "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
   },
   "private": true,
-  "slug": "hugo-security"
+  "slug": "hugo-security",
+  "main": "index.js"
 }

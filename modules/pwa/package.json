@@ -3,14 +3,15 @@
   "version": "1.0.10",
   "license": "MIT",
   "description": "PWA for Hugo",
-  "author": {
-    "name": "Patrick Kollitsch",
-    "email": "patrick@davids-neighbour.com",
-    "web": "https://davids-neighbour.com"
-  },
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "homepage": "https://github.com/davidsneighbour/hugo-pwa",
-  "repository": "davidsneighbour/hugo-pwa",
-  "bugs": "https://github.com/davidsneighbour/hugo-pwa/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-pwa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-pwa/issues"
+  },
   "dependencies": {
     "ansi-regex": ">=6.0.1",
     "mem": ">=9.0.2",
@@ -48,5 +49,6 @@
       "@davidsneighbour/config/remark"
     ]
   },
-  "slug": "hugo-pwa"
+  "slug": "hugo-pwa",
+  "main": "webpack.common.js"
 }

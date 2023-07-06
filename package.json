@@ -32,5 +32,29 @@
   },
   "devDependencies": {
     "lerna": "^7.0.1"
-  }
+  },
+  "workspaces": [
+    "modules/auditor",
+    "modules/debug",
+    "modules/feeds",
+    "modules/functions",
+    "modules/giscus",
+    "modules/head",
+    "modules/hooks",
+    "modules/humans",
+    "modules/icons",
+    "modules/netlification",
+    "modules/opensearch",
+    "modules/pictures",
+    "modules/publisher",
+    "modules/pwa",
+    "modules/renderhooks",
+    "modules/robots",
+    "modules/schema",
+    "modules/security",
+    "modules/seo",
+    "modules/shortcodes",
+    "modules/sitemap",
+    "modules/social"
+  ]
 }

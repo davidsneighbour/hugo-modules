@@ -3,14 +3,15 @@
   "version": "1.0.2",
   "license": "MIT",
   "description": "Opensearch configuration for Hugo",
-  "author": {
-    "name": "Patrick Kollitsch",
-    "email": "patrick@davids-neighbour.com",
-    "web": "https://davids-neighbour.com"
-  },
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "homepage": "https://github.com/davidsneighbour/hugo-opensearch",
-  "repository": "davidsneighbour/hugo-opensearch",
-  "bugs": "https://github.com/davidsneighbour/hugo-opensearch/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-opensearch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-opensearch/issues"
+  },
   "devDependencies": {
     "@davidsneighbour/standard-version-config": "^4.0.4",
     "@davidsneighbour/tools": "^4.0.4"
@@ -22,5 +23,6 @@
     "release:major": "standard-version --release-as major -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
   },
-  "private": true
+  "private": true,
+  "main": "index.js"
 }

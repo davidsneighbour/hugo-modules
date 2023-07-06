@@ -5,7 +5,9 @@
   "description": "Hooks for GoHugo layouts. An easy way for theme developers to let users add to their themes.",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "homepage": "https://github.com/davidsneighbour/hugo-hooks",
-  "bugs": "https://github.com/davidsneighbour/hugo-hooks/issues",
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-hooks/issues"
+  },
   "devDependencies": {
     "@davidsneighbour/standard-version-config": "^5.0.16",
     "@davidsneighbour/tools": "^5.1.5"
@@ -19,5 +21,6 @@
     "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:patch": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
   },
-  "private": true
+  "private": true,
+  "main": "index.js"
 }
