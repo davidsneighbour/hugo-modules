@@ -41,11 +41,10 @@ if test -f "$FILE"; then
 fi
 
 # build static scripts
-npm run build
-git add static/sw-*
+# npm run build
+# git add static/sw-*
 
 # adding data directory for new build information
-git add data/dnb
 git add README.md
 git commit --signoff --amend --no-edit --no-verify
 

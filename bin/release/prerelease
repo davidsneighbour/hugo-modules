@@ -34,8 +34,6 @@ CURPATH="$(pwd -P)"
 
 hugo mod get -u ./...
 hugo mod tidy
-hugo mod vendor
-git add "${CURPATH}"/_vendor
 
 git add "${CURPATH}"/go.mod
 FILE="${CURPATH}"/go.sum
