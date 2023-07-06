@@ -21,7 +21,7 @@ updates:
     labels:
       - "type:dependencies"
 
-  - package-ecosystem: "gomod"
+  - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "monthly"
@@ -39,8 +39,404 @@ updates:
     labels:
       - "type:dependencies"
 
-  - package-ecosystem: "github-actions"
+  - package-ecosystem: "gomod"
     directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/auditor/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/debug/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/feeds/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/functions/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/giscus/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/head/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/hooks/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/humans/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/icons/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/netlification/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/opensearch/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/pictures/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/publisher/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/pwa/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/renderhooks/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/robots/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/schema/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/security/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/seo/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/shortcodes/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/sitemap/"
+    schedule:
+      interval: "monthly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/social/"
     schedule:
       interval: "monthly"
       day: "friday"
