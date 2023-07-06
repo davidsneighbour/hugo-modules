@@ -1,4 +1,4 @@
-module github.com/davidsneighbour/hugo-pwa
+module github.com/davidsneighbour/hugo-modules/modules/pwa
 
 go 1.20
 

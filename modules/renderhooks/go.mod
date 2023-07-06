@@ -1,3 +1,3 @@
-module github.com/davidsneighbour/hugo-renderhooks
+module github.com/davidsneighbour/hugo-modules/modules/renderhooks
 
 go 1.20

@@ -1,3 +1,3 @@
-module github.com/davidsneighbour/hugo-robots
+module github.com/davidsneighbour/hugo-modules/modules/robots
 
 go 1.20

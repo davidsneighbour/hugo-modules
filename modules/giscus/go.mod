@@ -1,3 +1,3 @@
-module github.com/davidsneighbour/hugo-giscus
+module github.com/davidsneighbour/hugo-modules/modules/giscus
 
 go 1.20

@@ -1,7 +1,7 @@
 {
   "name": "hugo-modules",
   "description": "@davidsneighbour's reusable gohugo components.",
-  "version": "0.0.93",
+  "version": "1.2023.0",
   "license": "MIT",
   "private": true,
   "repository": "davidsneighbour/hugo-modules",
@@ -9,7 +9,7 @@
   "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules#readme",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.2.12",
+    "@davidsneighbour/configurations": "^5.2.13",
     "@slightlyoff/lite-vimeo": "0.1.2",
     "all-contributors-cli": "6.26.0",
     "workbox-cacheable-response": "7.0.0",
@@ -26,8 +26,8 @@
     "clean": "run-p clean:**",
     "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
     "clean:node": "rimraf node_modules package-lock.json",
-    "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
+    "release": "commit-and-tag-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "serve:webpack": "webpack --watch --config webpack.js"
   }
 }

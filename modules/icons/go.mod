@@ -1,4 +1,4 @@
-module github.com/davidsneighbour/hugo-icons
+module github.com/davidsneighbour/hugo-modules/modules/icons
 
 go 1.20
 

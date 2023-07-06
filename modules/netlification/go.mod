@@ -1,3 +1,3 @@
-module github.com/davidsneighbour/hugo-netlification
+module github.com/davidsneighbour/hugo-modules/modules/netlification
 
 go 1.18

@@ -1,3 +1,3 @@
-module github.com/davidsneighbour/hugo-schema
+module github.com/davidsneighbour/hugo-modules/modules/schema
 
 go 1.20
