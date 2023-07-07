@@ -1,18 +1,17 @@
 {
   "name": "@davidsneighbour/hugo-youtube",
+  "description": "A better YouTube shortcode (and partial) for GoHugo",
   "version": "1.2023.0",
   "license": "MIT",
-  "description": "A better YouTube shortcode (and partial) for GoHugo",
+  "private": true,
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/davidsneighbour/hugo-youtube",
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-youtube/issues"
   },
+  "homepage": "https://github.com/davidsneighbour/hugo-youtube",
   "scripts": {
-    "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:major": "standard-version --release-as major -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
-  },
-  "private": true,
-  "main": "index.js"
+    "release": "standard-version --release-as patch -a -t \"modules/youtube/v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:major": "standard-version --release-as major -a -t \"modules/youtube/v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "standard-version --release-as minor -a -t \"modules/youtube/v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
+  }
 }
