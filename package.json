@@ -45,6 +45,7 @@
     "modules/hooks",
     "modules/humans",
     "modules/icons",
+    "modules/modder",
     "modules/netlification",
     "modules/opensearch",
     "modules/pictures",
