@@ -2,6 +2,8 @@
 
 > :warning: I am reworking my modules (once again) into a mono repo. This will take some days, bear with me.
 
+![](documentation/structure.png)
+
 ## ToDo
 
 - [ ] some initial documentation of how the repo works and how to add modules to your GoHugo site
