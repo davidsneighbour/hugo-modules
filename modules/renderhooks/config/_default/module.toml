@@ -6,6 +6,6 @@ min = "0.71.0"
 source = "data"
 target = "data"
 
-[mounts]]
+[[mounts]]
 source = "layouts"
 target = "layouts"
