@@ -9,7 +9,7 @@ min = "0.84.4"
 disable = false
 ignoreConfig = false
 ignoreImports = false
-path = "-github.com/davidsneighbour/hugo-modules/modules/head"
+path = "github.com/davidsneighbour/hugo-modules/modules/head"
 
 [[imports]]
 disable = false
