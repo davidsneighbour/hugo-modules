@@ -9,16 +9,16 @@ min = "0.84.4"
 disable = false
 ignoreConfig = false
 ignoreImports = false
-path = "github.com/davidsneighbour/hugo-head"
+path = "-github.com/davidsneighbour/hugo-modules/modules/head"
 
 [[imports]]
 disable = false
 ignoreConfig = false
 ignoreImports = false
-path = "github.com/davidsneighbour/hugo-robots"
+path = "github.com/davidsneighbour/hugo-modules/modules/robots"
 
 [[imports]]
 disable = false
 ignoreConfig = false
 ignoreImports = false
-path = "github.com/davidsneighbour/hugo-sitemap"
+path = "github.com/davidsneighbour/hugo-modules/modules/sitemap"

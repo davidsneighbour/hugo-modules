@@ -22,4 +22,4 @@ target = "static"
 disable = false
 ignoreConfig = false
 ignoreImports = false
-path = "github.com/davidsneighbour/hugo-debug"
+path = "github.com/davidsneighbour/hugo-modules/modules/debug"

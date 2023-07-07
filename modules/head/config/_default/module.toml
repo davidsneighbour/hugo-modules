@@ -18,16 +18,16 @@ target = "layouts"
 disable = false
 ignoreConfig = false
 ignoreImports = false
-path = "github.com/davidsneighbour/hugo-hooks"
+path = "github.com/davidsneighbour/hugo-modules/modules/hooks"
 
 [[imports]]
 disable = false
 ignoreConfig = false
 ignoreImports = false
-path = "github.com/davidsneighbour/hugo-debug"
+path = "github.com/davidsneighbour/hugo-modules/modules/debug"
 
 [[imports]]
 disable = false
 ignoreConfig = false
 ignoreImports = false
-path = "github.com/davidsneighbour/hugo-social"
+path = "github.com/davidsneighbour/hugo-modules/modules/social"

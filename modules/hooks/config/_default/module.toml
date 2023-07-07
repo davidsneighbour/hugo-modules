@@ -11,13 +11,13 @@ source = "data"
 target = "data"
 
 [[imports]]
-path = "github.com/davidsneighbour/hugo-functions"
+path = "github.com/davidsneighbour/hugo-modules/modules/functions"
 disable = false
 ignoreConfig = false
 ignoreImports = false
 
 [[imports]]
-path = "github.com/davidsneighbour/hugo-debug"
+path = "github.com/davidsneighbour/hugo-modules/modules/debug"
 disable = false
 ignoreConfig = false
 ignoreImports = false
