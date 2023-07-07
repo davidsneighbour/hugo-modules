@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.1...modules/youtube/v1.2023.3) (2023-07-07)
+
+
+### Build System
+
+* **fix:** remove unused particles of post release hook ([74547a5](https://github.com/davidsneighbour/hugo-modules/commit/74547a58d5f0c8d327bbc9fed0fd5bb192588b4b))
+
+
+### Chore
+
+* **release:** v1.2023.2 ([a0e11ec](https://github.com/davidsneighbour/hugo-modules/commit/a0e11ecac25cee1252956ec54239b1f1c7ec52a3))
+
 ## [1.2023.2](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.1...modules/youtube/v1.2023.2) (2023-07-07)
 
 
