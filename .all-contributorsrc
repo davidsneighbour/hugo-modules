@@ -27,6 +27,15 @@
 			"contributions": [
 				"code"
 			]
+		},
+		{
+			"login": "ringods",
+			"name": "Ringo De Smet",
+			"avatar_url": "https://avatars.githubusercontent.com/u/77923?v=4",
+			"profile": "https://github.com/ringods",
+			"contributions": [
+				"maintenance"
+			]
 		}
 	],
 	"contributorsPerLine": 7,
