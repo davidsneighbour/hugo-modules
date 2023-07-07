@@ -12,11 +12,6 @@
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-sitemap/issues"
   },
-  "devDependencies": {
-    "@davidsneighbour/tools": "5.2.9",
-    "@davidsneighbour/remark-config": "5.1.38",
-    "@davidsneighbour/standard-version-config": "5.0.16"
-  },
   "scripts": {
     "clean": "run-p clean:*",
     "clean:npm": "rimraf node_modules package-lock.json",

@@ -12,22 +12,6 @@
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-pwa/issues"
   },
-  "dependencies": {
-    "ansi-regex": ">=6.0.1",
-    "mem": ">=9.0.2",
-    "trim": ">=1.0.1",
-    "yargs-parser": ">=21.1.1"
-  },
-  "devDependencies": {
-    "@davidsneighbour/config": "^1.0.27",
-    "workbox-cacheable-response": "^6.5.4",
-    "workbox-core": "^6.5.4",
-    "workbox-expiration": "^6.5.4",
-    "workbox-precaching": "^6.5.4",
-    "workbox-routing": "^6.5.4",
-    "workbox-strategies": "^6.5.4",
-    "workbox-webpack-plugin": "^6.5.4"
-  },
   "scripts": {
     "build": "npm run build:dev && npm run build:prod",
     "build:dev": "cross-env NODE_ENV=development webpack --config webpack.dev.js",
@@ -49,6 +33,5 @@
       "@davidsneighbour/config/remark"
     ]
   },
-  "slug": "hugo-pwa",
   "main": "webpack.common.js"
 }

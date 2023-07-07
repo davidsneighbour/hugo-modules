@@ -12,10 +12,6 @@
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-opensearch/issues"
   },
-  "devDependencies": {
-    "@davidsneighbour/standard-version-config": "^4.0.4",
-    "@davidsneighbour/tools": "^4.0.4"
-  },
   "scripts": {
     "clean": "run-p clean:*",
     "clean:npm": "rimraf node_modules package-lock.json",
@@ -23,6 +19,5 @@
     "release:major": "standard-version --release-as major -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
   },
-  "private": true,
-  "main": "index.js"
+  "private": true
 }

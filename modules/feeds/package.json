@@ -12,9 +12,6 @@
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-feeds/issues"
   },
-  "devDependencies": {
-    "@davidsneighbour/config": "^5.0.1"
-  },
   "scripts": {
     "clean": "run-p clean:**",
     "clean:cypress": "rimraf tests/cypress/screenshots tests/cypress/videos",
@@ -32,6 +29,5 @@
     "test:ide": "run-p test:server test:cypress:ide",
     "test:server": "./bin/dnb-hugo-test-server.sh"
   },
-  "private": true,
-  "main": "index.js"
+  "private": true
 }

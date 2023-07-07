@@ -8,9 +8,6 @@
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-youtube/issues"
   },
-  "devDependencies": {
-    "@davidsneighbour/config": "^5.0.1"
-  },
   "scripts": {
     "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:major": "standard-version --release-as major -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",

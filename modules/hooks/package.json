@@ -8,10 +8,6 @@
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-hooks/issues"
   },
-  "devDependencies": {
-    "@davidsneighbour/standard-version-config": "^5.0.16",
-    "@davidsneighbour/tools": "^5.1.5"
-  },
   "scripts": {
     "clean": "run-p clean:*",
     "clean:hugo": "resources public",
@@ -21,6 +17,5 @@
     "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:patch": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
   },
-  "private": true,
-  "main": "index.js"
+  "private": true
 }

@@ -12,15 +12,6 @@
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-schema/issues"
   },
-  "dependencies": {
-    "mem": "^9.0.1",
-    "trim": "^1.0.1"
-  },
-  "devDependencies": {
-    "@davidsneighbour/remark-config": "^4.0.1",
-    "@davidsneighbour/standard-version-config": "^4.0.1",
-    "@davidsneighbour/tools": "^4.0.1"
-  },
   "scripts": {
     "clean": "run-p clean:*",
     "clean:npm": "rimraf node_modules package-lock.json",
@@ -34,6 +25,5 @@
       "@davidsneighbour/remark-config"
     ]
   },
-  "slug": "hugo-schema",
   "main": ".versionrc.js"
 }

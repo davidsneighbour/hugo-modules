@@ -9,7 +9,6 @@
     "url": "https://github.com/davidsneighbour/hugo-renderhooks/issues"
   },
   "private": true,
-  "main": "index.js",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -17,12 +17,6 @@
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-debug/issues"
   },
-  "dependencies": {
-    "mem": "^9.0.2"
-  },
-  "devDependencies": {
-    "@davidsneighbour/configurations": "^5.0.1"
-  },
   "scripts": {
     "clean": "run-p clean:**",
     "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
@@ -30,6 +24,5 @@
     "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
   },
-  "private": true,
-  "main": "index.js"
+  "private": true
 }

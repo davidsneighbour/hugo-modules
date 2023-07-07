@@ -1,5 +1,8 @@
 {
     "recommendations": [
-        "pomdtr.excalidraw-editor"
+        "pomdtr.excalidraw-editor",
+        "github.copilot",
+        "github.copilot-labs",
+        "github.copilot-chat"
     ]
 }
