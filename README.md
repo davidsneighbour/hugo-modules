@@ -14,32 +14,32 @@
 
 ## Module status (unchecked box means review/action required):
 
-| module             | setup | documentation | files |
-| ------------------ | :---: | :-----------: | :---: |
-| hugo-auditor       |  [ ]  |     [ ]       | [ ]   |
-| hugo-debug         |  [ ]  |     [ ]       | [ ]   |
-| hugo-feeds         |  [ ]  |     [ ]       | [ ]   |
-| hugo-functions     |  [ ]  |     [ ]       | [ ]   |
-| hugo-giscus        |  [ ]  |     [ ]       | [ ]   |
-| hugo-head          |  [ ]  |     [ ]       | [ ]   |
-| hugo-hooks         |  [ ]  |     [ ]       | [ ]   |
-| hugo-humans        |  [ ]  |     [ ]       | [ ]   |
-| hugo-icons         |  [ ]  |     [ ]       | [ ]   |
-| hugo-modder        |  [ ]  |     [ ]       | [ ]   |
-| hugo-netlification |  [ ]  |     [ ]       | [ ]   |
-| hugo-opensearch    |  [ ]  |     [ ]       | [ ]   |
-| hugo-pictures      |  [ ]  |     [ ]       | [ ]   |
-| hugo-publisher     |  [ ]  |     [ ]       | [ ]   |
-| hugo-pwa           |  [ ]  |     [ ]       | [ ]   |
-| hugo-renderhooks   |  [ ]  |     [ ]       | [ ]   |
-| hugo-robots        |  [ ]  |     [ ]       | [ ]   |
-| hugo-schema        |  [ ]  |     [ ]       | [ ]   |
-| hugo-security      |  [ ]  |     [ ]       | [ ]   |
-| hugo-seo           |  [ ]  |     [ ]       | [ ]   |
-| hugo-shortcodes    |  [ ]  |     [ ]       | [ ]   |
-| hugo-sitemap       |  [ ]  |     [ ]       | [ ]   |
-| hugo-social        |  [ ]  |     [ ]       | [ ]   |
-| hugo-youtube       |  [ ]  |     [ ]       | [ ]   |
+| module             | setup | documentation | files | build |
+| ------------------ | :---: | :-----------: | :---: | :---: |
+| hugo-auditor       |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-debug         |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-feeds         |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-functions     |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-giscus        |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-head          |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-hooks         |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-humans        |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-icons         |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-modder        |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-netlification |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-opensearch    |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-pictures      |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-publisher     |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-pwa           |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-renderhooks   |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-robots        |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-schema        |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-security      |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-seo           |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-shortcodes    |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-sitemap       |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-social        |  [ ]  |     [ ]       | [ ]   |  [ ]  |
+| hugo-youtube       |  [ ]  |     [ ]       | [ ]   |  [x]  |
 
 ## Contributors
 
