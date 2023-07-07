@@ -3,9 +3,10 @@
     {
       "files": ["*.html"],
       "options": {
-        "parser": "go-template"
+        "parser": "go-template",
+        "goTemplateBracketSpacing": true,
+        "bracketSameLine": true
       }
     }
-  ],
-	"goTemplateBracketSpacing": true
+  ]
 }

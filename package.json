@@ -18,7 +18,8 @@
     "workbox-precaching": "7.0.0",
     "workbox-routing": "7.0.0",
     "workbox-strategies": "7.0.0",
-    "workbox-webpack-plugin": "7.0.0"
+    "workbox-webpack-plugin": "7.0.0",
+    "lerna": "^7.1.1"
   },
   "scripts": {
     "build": "run-p build:*",
@@ -26,12 +27,14 @@
     "clean": "run-p clean:**",
     "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
     "clean:node": "rimraf node_modules package-lock.json",
-    "release": "commit-and-tag-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
+    "release": "lerna publish --no-private --message 'chore(release): publish %s' --signoff-git-commit --sign-git-commit --sign-git-tag",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "serve:webpack": "webpack --watch --config webpack.js"
-  },
-  "devDependencies": {
-    "lerna": "^7.1.1"
+    "serve:webpack": "webpack --watch --config webpack.js",
+    "lint:lockfiles": "lockfile-lint --path package-lock.json --type=npm --validate-https --allowed-hosts=npm --empty-hostname=false --validate-package-names --validate-checksum --validate-integrity",
+    "repair": "lerna repair",
+    "reset": "lerna clean && npm run repair",
+    "update": "npm-check-updates --deep --upgrade --target=minor && npm run reset && npm install && git add -A && git commit -m 'chore(deps): update dependencies' && npm run release",
+    "update:major": "npm-check-updates --deep --upgrade --target=major && npm run reset && npm install && git add -A && git commit -m 'chore(deps): update dependencies' && npm run release"
   },
   "workspaces": [
     "modules/auditor",
