@@ -1,20 +1,26 @@
-.debugprint table, table.debugprint {
-  td, th {
-    @extend .align-top;
+.debugprint table,
+table.debugprint {
+
+  width: 100%;
+  border: 1px solid #ccc;
+
+  td,
+  th {
+    padding: 0.125rem;
+    vertical-align: top;
+    border: 1px solid #ccc;
   }
+
+  th {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
   .true {
-    @extend .text-success;
+    color: green;
   }
 
   .false {
-    @extend .text-danger;
+    color: red;
   }
-  @extend .table;
-  @extend .table-light;
-  @extend .table-bordered;
-  @extend .table-sm;
-  @extend .table-hover;
-
-  @extend .w-100;
-  @extend .overflow-auto;
 }
