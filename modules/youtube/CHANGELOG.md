@@ -2,6 +2,53 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.1...modules/youtube/v1.2023.4) (2023-07-08)
+
+
+### Build System
+
+* **fix:** remove unused particles of post release hook ([74547a5](https://github.com/davidsneighbour/hugo-modules/commit/74547a58d5f0c8d327bbc9fed0fd5bb192588b4b))
+
+
+### Chore
+
+* **release:** modules/auditor/v1.2023.1 ([085da96](https://github.com/davidsneighbour/hugo-modules/commit/085da965be8a37b7120da92a89c4e58354280330))
+* **release:** modules/debug/v1.2023.1 ([9b0331b](https://github.com/davidsneighbour/hugo-modules/commit/9b0331b2041c8b862c7b1b61c237bd94049ee63b))
+* **release:** modules/feeds/v1.2023.1 ([b3f6d83](https://github.com/davidsneighbour/hugo-modules/commit/b3f6d83d9ce72ed3fdd835e867d6300f85c8151a))
+* **release:** modules/functions/v1.2023.1 ([3653285](https://github.com/davidsneighbour/hugo-modules/commit/3653285679fe09e77627ca3a2b3fb3c36446f570))
+* **release:** modules/giscus/v1.2023.1 ([cf4cb3c](https://github.com/davidsneighbour/hugo-modules/commit/cf4cb3c69e6acfe4272f3befeaf29f1ef30c978c))
+* **release:** modules/head/v1.2023.1 ([af8b264](https://github.com/davidsneighbour/hugo-modules/commit/af8b26493c8243dba69933d02187859b15f3be2b))
+* **release:** modules/hooks/v1.2023.1 ([bd36548](https://github.com/davidsneighbour/hugo-modules/commit/bd365488ab522694d80ddcb56026804acd8884a1))
+* **release:** modules/humans/v0.0.2 ([e073698](https://github.com/davidsneighbour/hugo-modules/commit/e073698fb1332c2f04d216fe1179908dac56e9a8))
+* **release:** modules/icons/v1.2023.1 ([498f418](https://github.com/davidsneighbour/hugo-modules/commit/498f418d775cc1fea8acc480415c7e8b05639e67))
+* **release:** modules/modder/v1.2023.1 ([d7b8b06](https://github.com/davidsneighbour/hugo-modules/commit/d7b8b0619126c207ac80838cc938bf9436bec683))
+* **release:** modules/netlification/v1.2023.1 ([3026b67](https://github.com/davidsneighbour/hugo-modules/commit/3026b67c56d2bf6d0a656e0da669588bc3991c07))
+* **release:** modules/opensearch/v1.2023.1 ([4bcf7fa](https://github.com/davidsneighbour/hugo-modules/commit/4bcf7fafb590180f738c3f27ddfc7f74846bce28))
+* **release:** modules/pictures/v0.1.8 ([c3d481b](https://github.com/davidsneighbour/hugo-modules/commit/c3d481b284395e9da47e2b05a38995ed666b5fed))
+* **release:** modules/publisher/v0.0.2 ([5558d3b](https://github.com/davidsneighbour/hugo-modules/commit/5558d3bb716c82719000c5fec567b3f2a7c351b2))
+* **release:** modules/pwa/v1.2023.1 ([0b86adf](https://github.com/davidsneighbour/hugo-modules/commit/0b86adf01e7f16e8988f8a07651a5de33e115b0d))
+* **release:** modules/renderhooks/v1.2023.1 ([176fd60](https://github.com/davidsneighbour/hugo-modules/commit/176fd605c7f3b1bc25373e0445c053f7b988d6cc))
+* **release:** modules/robots/v1.2023.1 ([3ba941c](https://github.com/davidsneighbour/hugo-modules/commit/3ba941cdab4e7d56c6c283807716877446e108c7))
+* **release:** modules/schema/v0.0.4 ([6cdf172](https://github.com/davidsneighbour/hugo-modules/commit/6cdf1726ec7c88cd147303fa50a13aa0ae019f23))
+* **release:** modules/security/v1.2023.1 ([4dab4eb](https://github.com/davidsneighbour/hugo-modules/commit/4dab4eb9092d78e2a788607b6028c17bcff5ac75))
+* **release:** modules/seo/v0.0.2 ([dd915df](https://github.com/davidsneighbour/hugo-modules/commit/dd915df25e6369332e52edfe6927087430b21344))
+* **release:** modules/shortcodes/v1.2023.1 ([59123c7](https://github.com/davidsneighbour/hugo-modules/commit/59123c7623d4fd28b76146e8e286089e54e06344))
+* **release:** modules/sitemap/v1.2023.1 ([b7f818c](https://github.com/davidsneighbour/hugo-modules/commit/b7f818cb1379187b72fd1990b66ec4b253d309c3))
+* **release:** modules/social/v0.1.15 ([1034260](https://github.com/davidsneighbour/hugo-modules/commit/10342604de90b1d5fcf660fd89bee817cc26d22a))
+* **release:** v1.2023.2 ([a0e11ec](https://github.com/davidsneighbour/hugo-modules/commit/a0e11ecac25cee1252956ec54239b1f1c7ec52a3))
+* **release:** v1.2023.3 ([63e8155](https://github.com/davidsneighbour/hugo-modules/commit/63e8155ec3f19edeb42e35c07d08e966efcb8660))
+* update package and repo file maintenance ([d9e4838](https://github.com/davidsneighbour/hugo-modules/commit/d9e48384b46e3dbe020813063768b51aa8b8e879))
+
+
+### Documentation
+
+* add build column to todo table ([043149c](https://github.com/davidsneighbour/hugo-modules/commit/043149c5123af279a13a78a19c41585ac6a85a2e))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.16 ([#164](https://github.com/davidsneighbour/hugo-modules/issues/164)) ([f9ece19](https://github.com/davidsneighbour/hugo-modules/commit/f9ece190b87a4e2625bd902263294492a164e764))
+
 ## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.1...modules/youtube/v1.2023.3) (2023-07-07)
 
 
