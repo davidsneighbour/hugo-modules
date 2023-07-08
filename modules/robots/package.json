@@ -1,22 +1,26 @@
 {
   "name": "@davidsneighbour/hugo-robots",
+  "description": "Configurable robots.txt for Hugo",
   "version": "1.2023.0",
   "license": "MIT",
-  "description": "Configurable robots.txt for Hugo",
-  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
-  "homepage": "https://github.com/davidsneighbour/hugo-robots",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidsneighbour/hugo-robots.git"
+    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
   },
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "bugs": {
-    "url": "https://github.com/davidsneighbour/hugo-robots/issues"
+    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/robots",
+  "dependencies": {
+    "@davidsneighbour/configurations": "^5.2.13"
   },
   "scripts": {
     "clean": "run-p clean:*",
     "clean:npm": "rimraf node_modules package-lock.json",
-    "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
-  },
-  "private": true
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/robots/v\" --releaseCommitMessageFormat \"chore(release): modules/robots/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/robots/v\" --releaseCommitMessageFormat \"chore(release): modules/robots/v{{currentTag}}\" && ./bin/release/postrelease",
+    "update": "npm-check-updates -u && npm install && git add package*"
+  }
 }

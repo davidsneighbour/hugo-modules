@@ -1,10 +1,25 @@
 {
   "name": "seo",
-  "version": "0.0.1",
   "description": "This is work in progress. Intention is to combine a bunch of individual modules that work together and optimise various aspects of SEO in a website. Right now, I am pretty sure, you have no use for this module. Once all submodules are feature ready and working fine it might make sense to install this \"collecting\" module instead of each individual module.",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
   },
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "license": "MIT"
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/seo",
+  "dependencies": {
+    "@davidsneighbour/configurations": "^5.2.13"
+  },
+  "scripts": {
+    "clean": "run-p clean:*",
+    "clean:npm": "rimraf node_modules package-lock.json",
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/seo/v\" --releaseCommitMessageFormat \"chore(release): modules/seo/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/seo/v\" --releaseCommitMessageFormat \"chore(release): modules/seo/v{{currentTag}}\" && ./bin/release/postrelease",
+    "update": "npm-check-updates -u && npm install && git add package*"
+  }
 }

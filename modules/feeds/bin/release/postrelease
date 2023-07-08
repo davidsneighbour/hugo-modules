@@ -1,4 +1,7 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+# exit when any command fails
+set -e
 
 REQUIRED_TOOLS=(
   git
@@ -11,8 +14,6 @@ for TOOL in "${REQUIRED_TOOLS[@]}"; do
   fi
 done
 
-git add data/dnb/build/
-git commit --amend --no-edit
-
-git push --follow-tags origin main
-git push --tags
+# push release to GitHub
+git push origin main --follow-tags
+git push origin --tags

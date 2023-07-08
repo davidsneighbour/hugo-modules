@@ -14,10 +14,6 @@ for TOOL in "${REQUIRED_TOOLS[@]}"; do
   fi
 done
 
-# adding data directory for new build information
-git add README.md
-git commit --signoff --amend --no-edit --no-verify
-
 # push release to GitHub
 git push origin main --follow-tags
 git push origin --tags

@@ -4,7 +4,7 @@ authors:
   - family-names: "Kollitsch"
     given-names: "Patrick"
     orcid: "https://orcid.org/0000-0001-6250-2135"
-title: "Hugo Components / Schema"
-version: 1.4.0
-date-released: 2021-12-03
-url: "https://github.com/davidsneighbour/hugo-schema"
+title: "Hugo Modules / Schema"
+version: 1.2023.3
+date-released: 2023-07-06
+url: "https://github.com/davidsneighbour/hugo-modules"

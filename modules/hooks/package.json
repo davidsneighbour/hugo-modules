@@ -1,21 +1,27 @@
 {
   "name": "@davidsneighbour/hugo-hooks",
+  "description": "Hooks for GoHugo layouts. An easy way for theme developers to let users add to their themes.",
   "version": "1.2023.0",
   "license": "MIT",
-  "description": "Hooks for GoHugo layouts. An easy way for theme developers to let users add to their themes.",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
+  },
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/davidsneighbour/hugo-hooks",
   "bugs": {
-    "url": "https://github.com/davidsneighbour/hugo-hooks/issues"
+    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/hooks",
+  "dependencies": {
+    "@davidsneighbour/configurations": "^5.2.13"
   },
   "scripts": {
     "clean": "run-p clean:*",
     "clean:hugo": "resources public",
-    "clean:node": "rimraf node_modules",
-    "release": "npm run release:patch",
-    "release:major": "standard-version --release-as major -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:patch": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
-  },
-  "private": true
+    "clean:npm": "rimraf node_modules package-lock.json",
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/hooks/v\" --releaseCommitMessageFormat \"chore(release): modules/hooks/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/hooks/v\" --releaseCommitMessageFormat \"chore(release): modules/hooks/v{{currentTag}}\" && ./bin/release/postrelease",
+    "update": "npm-check-updates -u && npm install && git add package*"
+  }
 }

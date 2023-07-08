@@ -1,16 +1,27 @@
 {
   "name": "@davidsneighbour/hugo-renderhooks",
+  "description": "Render hooks for Hugo",
   "version": "1.2023.0",
   "license": "MIT",
-  "description": "Render hooks for Hugo",
-  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/davidsneighbour/hugo-renderhooks",
-  "bugs": {
-    "url": "https://github.com/davidsneighbour/hugo-renderhooks/issues"
-  },
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
+  },
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/renderhooks",
+  "dependencies": {
+    "@davidsneighbour/configurations": "^5.2.13"
+  },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "run-p clean:*",
+    "clean:npm": "rimraf node_modules package-lock.json",
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/renderhooks/v\" --releaseCommitMessageFormat \"chore(release): modules/renderhooks/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/renderhooks/v\" --releaseCommitMessageFormat \"chore(release): modules/renderhooks/v{{currentTag}}\" && ./bin/release/postrelease",
+    "update": "npm-check-updates -u && npm install && git add package*"
   }
 }

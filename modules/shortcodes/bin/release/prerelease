@@ -1,1 +1,42 @@
 #!/bin/bash
+
+# exit when any command fails
+set -e
+
+REQUIRED_TOOLS=(
+  git
+  hugo
+  typos
+)
+
+for TOOL in "${REQUIRED_TOOLS[@]}"; do
+  if ! command -v "${TOOL}" >/dev/null; then
+    echo "${TOOL} is required... "
+    exit 1
+  fi
+done
+
+FILE=.env
+if [ -f "$FILE" ]; then
+  echo "exporting .env"
+  set -a # export all variables created next
+  # this routine ranges through a folder of files that we don't explicitly know (@davidsneighbour)
+  # see https://github.com/koalaman/shellcheck/wiki/SC1090
+  # shellcheck source=/dev/null
+  source "${FILE}"
+  set +a # stop exporting
+else
+  echo "no .env file found"
+  exit 0
+fi
+
+CURPATH="$(pwd -P)"
+
+hugo mod get -u ./...
+hugo mod tidy
+
+git add "${CURPATH}"/go.mod
+FILE="${CURPATH}"/go.sum
+if test -f "$FILE"; then
+  git add go.sum
+fi

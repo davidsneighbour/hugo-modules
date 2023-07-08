@@ -1,23 +1,26 @@
 {
   "name": "hugo-auditor",
+  "description": "SEO, technical audit and performance checks for Hugo",
   "version": "1.2023.0",
   "license": "MIT",
-  "description": "SEO, technical audit and performance checks for Hugo",
-  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
-  "homepage": "https://github.com/davidsneighbour/hugo-auditor",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidsneighbour/hugo-sitemap.git"
+    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
   },
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "bugs": {
-    "url": "https://github.com/davidsneighbour/hugo-auditor/issues"
+    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/auditor",
+  "dependencies": {
+    "@davidsneighbour/configurations": "^5.2.13"
   },
   "scripts": {
     "clean": "run-p clean:*",
     "clean:npm": "rimraf node_modules package-lock.json",
-    "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:major": "standard-version --release-as major -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
-  },
-  "private": true
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/auditor/v\" --releaseCommitMessageFormat \"chore(release): modules/auditor/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/auditor/v\" --releaseCommitMessageFormat \"chore(release): modules/auditor/v{{currentTag}}\" && ./bin/release/postrelease",
+    "update": "npm-check-updates -u && npm install && git add package*"
+  }
 }

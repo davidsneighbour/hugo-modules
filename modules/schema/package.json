@@ -1,29 +1,32 @@
 {
   "name": "@davidsneighbour/hugo-schema",
+  "description": "Schema markup for GoHugo",
   "version": "0.0.3",
   "license": "MIT",
-  "description": "Schema markup for GoHugo",
-  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
-  "homepage": "https://github.com/davidsneighbour/hugo-schema",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidsneighbour/hugo-schema.git"
+    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
   },
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "bugs": {
-    "url": "https://github.com/davidsneighbour/hugo-schema/issues"
+    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/schema",
+  "dependencies": {
+    "@davidsneighbour/configurations": "^5.2.13"
   },
   "scripts": {
     "clean": "run-p clean:*",
     "clean:npm": "rimraf node_modules package-lock.json",
-    "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:major": "standard-version --release-as major -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/schema/v\" --releaseCommitMessageFormat \"chore(release): modules/schema/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/schema/v\" --releaseCommitMessageFormat \"chore(release): modules/schema/v{{currentTag}}\" && ./bin/release/postrelease",
+    "update": "npm-check-updates -u && npm install && git add package*"
   },
-  "private": true,
+  "main": ".versionrc.js",
   "remarkConfig": {
     "plugins": [
       "@davidsneighbour/remark-config"
     ]
-  },
-  "main": ".versionrc.js"
+  }
 }

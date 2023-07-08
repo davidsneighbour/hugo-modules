@@ -1,10 +1,24 @@
 {
   "name": "publisher",
   "version": "0.0.1",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
   },
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "license": "MIT"
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/publisher",
+  "dependencies": {
+    "@davidsneighbour/configurations": "^5.2.13"
+  },
+  "scripts": {
+    "clean": "run-p clean:*",
+    "clean:npm": "rimraf node_modules package-lock.json",
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/publisher/v\" --releaseCommitMessageFormat \"chore(release): modules/publisher/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/publisher/v\" --releaseCommitMessageFormat \"chore(release): modules/publisher/v{{currentTag}}\" && ./bin/release/postrelease",
+    "update": "npm-check-updates -u && npm install && git add package*"
+  }
 }

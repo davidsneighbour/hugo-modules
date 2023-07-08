@@ -1,18 +1,26 @@
 {
   "name": "@davidsneighbour/hugo-icons",
+  "description": "Icons for Hugo",
   "version": "1.2023.0",
   "license": "MIT",
-  "description": "Icons for Hugo",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
+  },
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "homepage": "https://github.com/davidsneighbour/hugo-icons",
   "bugs": {
-    "url": "https://github.com/davidsneighbour/hugo-icons/issues"
+    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/icons",
+  "dependencies": {
+    "@davidsneighbour/configurations": "^5.2.13"
   },
   "scripts": {
-    "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:major": "standard-version --release-as major -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "update": "npm-check-updates -u && npm install && git add go.* package* && npm run release"
-  },
-  "private": true
+    "clean": "run-p clean:*",
+    "clean:npm": "rimraf node_modules package-lock.json",
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/icons/v\" --releaseCommitMessageFormat \"chore(release): modules/icons/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/icons/v\" --releaseCommitMessageFormat \"chore(release): modules/icons/v{{currentTag}}\" && ./bin/release/postrelease",
+    "update": "npm-check-updates -u && npm install && git add package*"
+  }
 }

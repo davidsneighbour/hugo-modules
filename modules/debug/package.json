@@ -1,28 +1,32 @@
 {
   "name": "@davidsneigihbour/hugo-debug",
+  "description": "GoHugo's missing debugging partials.",
   "version": "1.2023.0",
   "license": "GPL-3.0-only",
-  "description": "GoHugo's missing debugging partials.",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
+  },
   "author": "Kaushal Modi (https://github.com/kaushalmodi)",
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/debug",
+  "dependencies": {
+    "@davidsneighbour/configurations": "^5.2.13"
+  },
+  "scripts": {
+    "clean": "run-p clean:*",
+    "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
+    "clean:npm": "rimraf node_modules package-lock.json",
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/release/postrelease",
+    "update": "npm-check-updates -u && npm install && git add package*"
+  },
   "maintainer": {
     "name": "Patrick Kollitsch",
     "email": "patrick@davids-neighbour.com",
     "web": "https://davids-neighbour.com"
-  },
-  "homepage": "https://github.com/davidsneighbour/hugo-debug#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidsneighbour/hugo-debug.git"
-  },
-  "bugs": {
-    "url": "https://github.com/davidsneighbour/hugo-debug/issues"
-  },
-  "scripts": {
-    "clean": "run-p clean:**",
-    "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
-    "clean:node": "rimraf node_modules package-lock.json",
-    "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
-  },
-  "private": true
+  }
 }

@@ -4,7 +4,7 @@ authors:
   - family-names: "Kollitsch"
     given-names: "Patrick"
     orcid: "https://orcid.org/0000-0001-6250-2135"
-title: "Hugo Components / Auditor"
-version: 1.0.0
-date-released: 2022-11-15
-url: "https://github.com/davidsneighbour/hugo-auditor"
+title: "Hugo Modules / Auditor"
+version: 1.2023.3
+date-released: 2023-07-06
+url: "https://github.com/davidsneighbour/hugo-modules"
