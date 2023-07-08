@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/debug/v1.2023.3...modules/debug/v1.2023.4) (2023-07-08)
+
+
+### Chore
+
+* **release:** v1.2023.4 ([77405d4](https://github.com/davidsneighbour/hugo-modules/commit/77405d4e2a9eda1f17e6d09eabc2ecc2f48c61db))
+
 ## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/debug/v1.2023.2...modules/debug/v1.2023.3) (2023-07-08)
 
 
