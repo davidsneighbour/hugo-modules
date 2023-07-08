@@ -1,0 +1,3 @@
+[[mounts]]
+source = "documentation/"
+target = "content/components"
