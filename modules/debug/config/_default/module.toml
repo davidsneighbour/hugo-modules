@@ -3,13 +3,17 @@ extended = false
 min = "0.92.0"
 
 [[mounts]]
+source = "assets"
+target = "assets"
+
+[[mounts]]
 source = "assets/scss/_debugprint.scss"
 target = "assets/scss/_debugprint.scss"
 
 [[mounts]]
-source = "layouts"
-target = "layouts"
-
-[[mounts]]
 source = "data"
 target = "data"
+
+[[mounts]]
+source = "layouts"
+target = "layouts"
