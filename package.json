@@ -11,7 +11,6 @@
   "dependencies": {
     "@davidsneighbour/configurations": "^5.2.16",
     "@slightlyoff/lite-vimeo": "0.1.2",
-    "all-contributors-cli": "6.26.0",
     "workbox-cacheable-response": "7.0.0",
     "workbox-core": "7.0.0",
     "workbox-expiration": "7.0.0",
