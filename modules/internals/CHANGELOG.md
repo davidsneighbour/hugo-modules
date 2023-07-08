@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.1](https://github.com/davidsneighbour/hugo-modules/compare/modules/internals/v1.0.5...modules/internals/v1.2023.1) (2023-07-08)
+
 ## 1.0.5 (2023-07-08)
 
 
