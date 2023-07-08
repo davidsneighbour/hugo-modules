@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/debug/v1.2023.2...modules/debug/v1.2023.3) (2023-07-08)
+
+
+### Features
+
+* add styling to debugging tables via head-post-css hook ([3378503](https://github.com/davidsneighbour/hugo-modules/commit/3378503eae98bd7ed53dfe033f2304e33f1e77d1))
+
+
+### Bug Fixes
+
+* remove test error disabling ([e209f0e](https://github.com/davidsneighbour/hugo-modules/commit/e209f0e88768c86969076a66efe845da9347f926))
+
 ## [1.2023.2](https://github.com/davidsneighbour/hugo-modules/compare/modules/debug/v1.2023.1...modules/debug/v1.2023.2) (2023-07-08)
 
 
