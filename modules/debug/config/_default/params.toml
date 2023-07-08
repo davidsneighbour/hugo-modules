@@ -1,5 +1,3 @@
-ignoreErrors = ["dnb-sample-error"]
-
 [dnb.debug]
 loglink = "https://dnbql.netlify.app/log"
 namespace = "dnb"
