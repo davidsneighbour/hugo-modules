@@ -1,14 +1,18 @@
+{{/*
+see
+- https://web.dev/iframe-lazy-loading/ (not used in this shortcode, just for
+      learning purposes)
+- https://github.com/justinribeiro/lite-youtube
+*/}}
 {{- $pc := .Page.Site.Config.Privacy.Vimeo -}}
 {{- if not $pc.Disable -}}
-{{- if $pc.Simple -}}
-{{ template "_internal/shortcodes/vimeo_simple.html" . }}
-{{- else -}}
-{{ if .IsNamedParams }}<div {{ if .Get "class" }}class="{{ .Get "class" }}"{{ else }}style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"{{ end }}>
-  <iframe src="https://player.vimeo.com/video/{{ .Get "id" }}{{- if $pc.EnableDNT -}}?dnt=1{{- end -}}" {{ if not (.Get "class") }}style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" {{ end }}{{ if .Get "title"}}title="{{ .Get "title" }}"{{ else }}title="vimeo video"{{ end }} webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>{{ else }}
-<div {{ if gt (len .Params) 1 }}class="{{ .Get 1 }}"{{ else }}style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"{{ end }}>
-  <iframe src="https://player.vimeo.com/video/{{ .Get 0 }}{{- if $pc.EnableDNT -}}?dnt=1{{- end -}}" {{ if len .Params | eq 1 }}style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" {{ end }}{{ if len .Params | eq 3 }}title="{{ .Get 2 }}"{{ else }}title="vimeo video"{{ end }} webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>
-{{ end }}
+  {{- $id     := .Get "id"    | default (.Get 0) -}}
+  {{- $class  := .Get "class" | default (.Get 1 | default "w-100 ratio ratio-16x9") -}}
+  {{- $title  := .Get "title" | default (.Get 2) -}}
+  <div class="{{ with $class }}{{ . }}{{ end }} mb-3">
+    <lite-vimeo videoid="{{ $id }}" videotitle="{{ $title }}"></lite-vimeo>
+  </div>
+
 {{- end -}}
-{{- end -}}
+
+<!-- https://player.vimeo.com/video/522265992?title=0&byline=0&portrait=0 //-->

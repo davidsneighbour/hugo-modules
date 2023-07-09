@@ -1,10 +1,51 @@
-{{- $pc := .Page.Site.Config.Privacy.YouTube -}}
+{{- /*
+
+  see
+  - https://web.dev/iframe-lazy-loading/ (not used in this shortcode, just for
+  learning purposes)
+  - https://github.com/paulirish/lite-youtube-embed
+  - https://developers.google.com/youtube/player_parameters#Parameters (check for
+  parameters that can be used with the youtube player)
+
+  */
+-}}
+{{- $paramScratch := newScratch -}}
+{{- $paramScratch.SetInMap "params" "modestbranding" 2 -}}
+{{- $paramScratch.SetInMap "params" "iv_load_policy" 3 -}}
+{{- $paramScratch.SetInMap "params" "controls" 0 -}}
+{{- $paramScratch.SetInMap "params" "rel" 0 -}}
+{{- $paramScratch.SetInMap "params" "hl" .Site.Language.Lang -}}
+{{- $params := $paramScratch.Get "params" -}}
+{{- $paramsCollected := "" -}}
+{{- range $key, $value := $params -}}
+  {{- $paramsCollected = printf "%s&%s=%s" $paramsCollected $key $value -}}
+{{- end -}}
+{{- $pc := site.Config.Privacy.YouTube -}}
 {{- if not $pc.Disable -}}
-{{- $ytHost := cond $pc.PrivacyEnhanced  "www.youtube-nocookie.com" "www.youtube.com" -}}
-{{- $id := .Get "id" | default (.Get 0) -}}
-{{- $class := .Get "class" | default (.Get 1) -}}
-{{- $title := .Get "title" | default "YouTube Video" }}
-<div {{ with $class }}class="{{ . }}"{{ else }}style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"{{ end }}>
-  <iframe src="https://{{ $ytHost }}/embed/{{ $id }}{{ with .Get "autoplay" }}{{ if eq . "true" }}?autoplay=1{{ end }}{{ end }}" {{ if not $class }}style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" {{ end }}allowfullscreen title="{{ $title }}"></iframe>
-</div>
-{{ end -}}
+  {{- $id     := .Get "id"    | default (.Get 0) -}}
+  {{- $class  := .Get "class" | default (.Get 1) -}}
+  {{- $title  := .Get "title" | default (.Get 2) -}}
+  {{- $params := .Get "params" | default $paramsCollected -}}
+  {{- $thumbnailUrl := "https://i.ytimg.com/vi/%s/maxresdefault.jpg" -}}
+  {{- /* $thumbnailUrl := partialCached "func/hugo-shortcodes/getYoutubePreviewUrl.html" $id $id */ -}}
+  {{- $remoteThumbnailUrl := printf $thumbnailUrl $id -}}
+
+
+  <div class="shortcode--youtube {{ with $class -}}{{- . -}}{{- end -}}">
+    <lite-youtube
+      videoid="{{- $id -}}"
+      {{ with $title -}}
+        playlabel="{{- . -}}"
+      {{- end -}}
+      params="{{- $params -}}"
+      style="background-image: url('{{- $remoteThumbnailUrl -}}');"
+      class="object-fit-cover"
+    >
+      <button type="button" class="lty-playbtn" aria-label="Play video">
+        {{- with $title -}}
+          <span class="lyt-visually-hidden">{{- . -}}</span>
+        {{- end -}}
+      </button>
+    </lite-youtube>
+  </div>
+{{- end -}}
