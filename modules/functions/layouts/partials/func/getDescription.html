@@ -1,0 +1,9 @@
+{{- $description := "" -}}
+{{- with .Description -}}
+  {{- . -}}
+{{- else -}}
+  {{- with site.Params.description -}}
+    {{- $description = . -}}
+  {{- end -}}
+{{- end -}}
+{{- return $description -}}
