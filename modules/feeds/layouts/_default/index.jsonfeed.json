@@ -1,5 +1,5 @@
-{{- $drafts := partialCached "dnb-feeds/getDrafts.html" "json" . -}}
-{{- $items := partialCached "dnb-feeds/getItemsToShow.html" "json" . -}}
+{{- $drafts := partialCached "func/feeds/getDrafts.html" "json" . -}}
+{{- $items := partialCached "func/feeds/getItemsToShow.html" "json" . -}}
 
 {{- $context := . -}}
 {{- if .IsHome -}}
@@ -15,7 +15,7 @@
   {{- $pages = where $pages "Draft" "==" . -}}
 {{ end }}
 
-{{- $limit := partialCached "dnb-feeds/getLimit.html" "json" . -}}
+{{- $limit := partialCached "func/feeds/getLimit.html" "json" . -}}
 {{- $pages = $pages | first $limit -}}
 
 {{- $feed := dict "version" "https://jsonfeed.org/version/1.1" -}}
@@ -24,8 +24,6 @@
 {{- with .OutputFormats.Get "jsonfeed" -}}
   {{- $feed = merge $feed ( dict "feed_url" .Permalink ) -}}
 {{- end -}}
-
-{{- $feed = merge $feed ( dict "_generator" ( printf "GoHugo %s (%s/%s)" hugo.Version hugo.CommitHash hugo.BuildDate )) -}}
 
 {{- with .Site.LanguageCode -}}
   {{- $feed = merge $feed ( dict "language" . ) -}}
@@ -40,13 +38,14 @@
 {{- $items := slice -}}
 {{- range $index, $element := $pages -}}
   {{- /* content_text */ -}}
+  {{- $description := partialCached "func/getDescription.html" . . -}}
   {{- $items = $items | append (dict
         "title" .Title
         "date_published" ( .Date.Format "2006-01-02T15:04:05Z07:00" )
         "date_modified" ( .Lastmod.Format "2006-01-02T15:04:05Z07:00" )
         "id" .File.UniqueID
         "url" .Permalink
-        "content_text" .Description
+        "content_text" $description
   ) -}}
 {{- end -}}
 {{- $feed = merge $feed ( dict "items" $items ) -}}

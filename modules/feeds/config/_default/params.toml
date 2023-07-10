@@ -1,12 +1,19 @@
-[dnb]
 [dnb.feeds]
 limit = 10
+summary = true
+drafts = false
 
 [dnb.feeds.atom]
 limit = 10
+summary = true
+drafts = false
 
 [dnb.feeds.rss]
 limit = 10
+summary = true
+drafts = false
 
 [dnb.feeds.json]
 limit = 10
+summary = true
+drafts = false

@@ -13,17 +13,11 @@
 
   Sample:
 
-  `{{- $value := partialCached "dnb-feeds/getLimit.html" "json" . -}}`
-
-  The format can be one of the following strings:
-  - rss
-  - atom
-  - json
-
-  TODO sanitization of format variable
-
-*/ -}}
-
+  `{{- $value := partialCached "func/feeds/getLimit.html" "json" .
+-}}
+`
+The format can be one of the following strings: - rss - atom - json TODO
+sanitization of format variable */ -}}
 {{- $limit := int 10 -}}
 {{- with site.Config.Services.RSS.Limit -}}
   {{- $limit = int . -}}

@@ -10,24 +10,18 @@
   - `[dnb.feeds.drafts]` in the params section of the config
   - `false` - does not show drafts in all feeds
 
-  Sample:
+  example:
 
-  `{{- $value := partialCached "dnb-feeds/getDrafts.html" "json" . -}}`
-
-The format can be one of the following strings:
-- rss
-- atom
-- json
-
-TODO sanitization of format variable
-
-*/ -}}
-
+  ```
+  {{- $value := partialCached "func/feeds/getDrafts.html" "json" .
+-}}
+``` The format can be one of the following strings: - rss - atom - json TODO
+sanitization of format variable */ -}}
 {{- $drafts := false -}}
 {{- with site.Params.dnb.feeds.drafts -}}
   {{- $drafts = . -}}
 {{- end -}}
-{{- with (index site.Params.dnb.feeds . "drafts") -}}
+{{- with (index site.Params.dnb.feeds (trim . "\n") "drafts") -}}
   {{- $drafts = . -}}
 {{- end -}}
 {{- return $drafts -}}
