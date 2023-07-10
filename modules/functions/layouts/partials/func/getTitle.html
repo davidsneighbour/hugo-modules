@@ -3,24 +3,23 @@
 {{- $sitetitle := false -}}
 
 {{- if ne .Title site.Title -}}
-{{- $sitetitle = true -}}
+  {{- $sitetitle = true -}}
 {{- end -}}
 
 {{- if .IsHome -}}
-{{- $title = site.Title -}}
+  {{- $title = site.Title -}}
 {{- else -}}
-{{- $title = .Title -}}
+  {{- $title = .Title -}}
 {{- end -}}
 
 {{- if .IsNode -}}
-{{- $paginator := .Scratch.Get "paginator" -}}
-{{- with $paginator -}}
-{{- if gt .PageNumber 1 -}}
-
-{{- $pagenumber := printf (i18n "page-n") .PageNumber -}}
-{{- $title = printf "%s %s" $title $pagenumber -}}
-{{- end -}}
-{{- end -}}
+  {{- $paginator := .Scratch.Get "paginator" -}}
+  {{- with $paginator -}}
+    {{- if gt .PageNumber 1 -}}
+      {{- $pagenumber := printf (i18n "page-n") .PageNumber -}}
+      {{- $title = printf "%s %s" $title $pagenumber -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
 
 {{- if isset .Params "sectiontitle" -}}
@@ -30,7 +29,7 @@
 {{- end -}}
 
 {{- if eq $sitetitle true -}}
-{{- $title = printf "%s %s %s" $title $separator site.Title -}}
+  {{- $title = printf "%s %s %s" $title $separator site.Title -}}
 {{- end -}}
 
 {{ return $title }}
