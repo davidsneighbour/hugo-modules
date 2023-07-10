@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/feeds/v1.2023.2...modules/feeds/v1.2023.3) (2023-07-10)
+
+
+### Chore
+
+* **deps:** update dependencies ([50199a7](https://github.com/davidsneighbour/hugo-modules/commit/50199a73978d596a7192b5f1e1f3a52de9b97dc2))
+
 ## [1.2023.2](https://github.com/davidsneighbour/hugo-modules/compare/modules/feeds/v1.2023.1...modules/feeds/v1.2023.2) (2023-07-10)
 
 
