@@ -4,8 +4,7 @@
 <meta charset="{{- site.Params.dnb.head.charset | default "utf-8" -}}" />
 <meta
   name="viewport"
-  content="{{- site.Params.dnb.head.viewport | default "width=device-width, initial-scale=1" -}}"
-/>
+  content="{{- site.Params.dnb.head.viewport | default "width=device-width, initial-scale=1" -}}" />
 {{- partial "head/title.html" . -}}
 {{- partial "func/hook.html" ( dict "hook" "head-start" "context" . ) -}}
 {{- partialCached "head/speed-optimisation.html" . -}}

@@ -3,10 +3,6 @@ extended = false
 min = "0.84.4"
 
 [[mounts]]
-source = "data"
-target = "data"
-
-[[mounts]]
 source = "i18n"
 target = "i18n"
 
@@ -15,19 +11,10 @@ source = "layouts"
 target = "layouts"
 
 [[imports]]
-disable = false
-ignoreConfig = false
-ignoreImports = false
+path = "github.com/davidsneighbour/hugo-modules/modules/functions"
+
+[[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/hooks"
 
 [[imports]]
-disable = false
-ignoreConfig = false
-ignoreImports = false
 path = "github.com/davidsneighbour/hugo-modules/modules/debug"
-
-[[imports]]
-disable = false
-ignoreConfig = false
-ignoreImports = false
-path = "github.com/davidsneighbour/hugo-modules/modules/social"
