@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/functions/v1.2023.2...modules/functions/v1.2023.3) (2023-07-10)
+
+
+### Chore
+
+* **cleanup:** remove unused particles from feeds modules ([ae2f8fa](https://github.com/davidsneighbour/hugo-modules/commit/ae2f8fa3c174b72cd418fe23102e95b1f2d77a8e))
+* **cleanup:** update README.md and packages ([212cf03](https://github.com/davidsneighbour/hugo-modules/commit/212cf03e720a0dc55af7e0be53bdd58c7b5c19cf))
+* **config:** add tool modules as dependencies ([06abe9a](https://github.com/davidsneighbour/hugo-modules/commit/06abe9a8d3e904d6fe48365a91e2f5f3b31328fb))
+
+
+### Bug Fixes
+
+* getDescription returns description, or summary, or site description ([7d0064c](https://github.com/davidsneighbour/hugo-modules/commit/7d0064cf948c8d0863726c4cc43247c444405cf6))
+* show proper summaries in feeds instead of full content ([37ae726](https://github.com/davidsneighbour/hugo-modules/commit/37ae726c07bd9fcae76df8a4e3d40c053394ab3b))
+
 ## [1.2023.2](https://github.com/davidsneighbour/hugo-modules/compare/modules/functions/v1.2023.1...modules/functions/v1.2023.2) (2023-07-10)
 
 
