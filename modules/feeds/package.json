@@ -1,36 +1,26 @@
 {
-  "name": "@davidsneighbour/hugo-feeds",
-  "description": "Feeds for GoHugo websites",
-  "version": "1.2023.1",
-  "license": "MIT",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
-  },
-  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
-  "bugs": {
-    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
-  },
-  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/feeds",
-  "dependencies": {
-    "@davidsneighbour/configurations": "^5.2.16"
-  },
-  "scripts": {
-    "clean": "run-p clean:*",
-    "clean:cypress": "rimraf tests/cypress/screenshots tests/cypress/videos",
-    "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
-    "clean:npm": "rimraf node_modules package-lock.json",
-    "release": "commit-and-tag-version --release-as patch -a -t \"modules/feeds/v\" --releaseCommitMessageFormat \"chore(release): modules/feeds/v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/feeds/v\" --releaseCommitMessageFormat \"chore(release): modules/feeds/v{{currentTag}}\" && ./bin/release/postrelease",
-    "serve": "run-p serve:hugo",
-    "serve:hugo": "bin/dnb-hugo-dev-server.sh",
-    "server": "npm run serve",
-    "test": "run-p test:server test:cypress",
-    "test:cypress": "cypress run",
-    "test:cypress:ide": "cypress open",
-    "test:ide": "run-p test:server test:cypress:ide",
-    "test:server": "./bin/dnb-hugo-test-server.sh",
-    "update": "npm-check-updates -u && npm install && git add package*"
-  }
+	"name": "@davidsneighbour/hugo-feeds",
+	"description": "Feeds for GoHugo websites",
+	"version": "1.2023.1",
+	"license": "MIT",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/davidsneighbour/hugo-modules.git"
+	},
+	"author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
+	"bugs": {
+		"url": "https://github.com/davidsneighbour/hugo-modules/issues"
+	},
+	"homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/feeds",
+	"dependencies": {
+		"@davidsneighbour/configurations": "^5.2.16"
+	},
+	"scripts": {
+		"clean": "run-p clean:*",
+		"clean:npm": "rimraf node_modules package-lock.json",
+		"release": "commit-and-tag-version --release-as patch -a -t \"modules/feeds/v\" --releaseCommitMessageFormat \"chore(release): modules/feeds/v{{currentTag}}\" && ./bin/release/postrelease",
+		"release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/feeds/v\" --releaseCommitMessageFormat \"chore(release): modules/feeds/v{{currentTag}}\" && ./bin/release/postrelease",
+		"update": "npm-check-updates -u && npm install && git add package*"
+	}
 }
