@@ -1,6 +1,6 @@
 {
   "files.associations": {
-    "**/layouts/**.html": "go"
+    "**/layouts/**.*": "go"
   },
   "editor.linkedEditing": true
 }
