@@ -1,6 +1,4 @@
-![DNB-Hugo/HEAD](.github/github-card-dark.png#gh-dark-mode-only)
-![DNB-Hugo/HEAD](.github/github-card-light.png#gh-light-mode-only)
-[![Code Quality](https://img.shields.io/codacy/grade/0f2bf7d3ddb74372b5ac0285fe8a9c7f?style=for-the-badge)](https://app.codacy.com/gh/davidsneighbour/hugo-head/dashboard)[![Issues](https://img.shields.io/github/issues-raw/davidsneighbour/hugo-head?color=%23ff6600&logo=github&style=for-the-badge)](https://github.com/davidsneighbour/hugo-head/issues)[![Pull Requests](https://img.shields.io/github/issues-pr-raw/davidsneighbour/hugo-head?logo=github&style=for-the-badge)](https://github.com/davidsneighbour/hugo-head/pulls)
+![](header-card.png)
 
 # GoHugo Component / Head
 

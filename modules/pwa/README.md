@@ -1,8 +1,4 @@
-<!--- CARD BEGIN --->
-
-![DNB-Hugo/github.com/davidsneighbour/hugo-pwa](.github/github-card-dark.png#gh-dark-mode-only)
-![DNB-Hugo/github.com/davidsneighbour/hugo-pwa](.github/github-card-light.png#gh-light-mode-only)
-<!--- CARD END --->
+![](header-card.png)
 
 # DNB GoHugo Component / PWA
 

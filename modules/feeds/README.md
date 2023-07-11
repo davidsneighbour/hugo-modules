@@ -1,3 +1,5 @@
+![](header-card.png)
+
 # GoHugo Module / Feeds
 
 This is a GoHugo theme component that implements various configurable feed formats. Currently implemented formats are RSS, Atom and JSONfeed.

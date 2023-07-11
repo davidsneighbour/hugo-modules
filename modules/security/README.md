@@ -1,9 +1,4 @@
-<!--- CARD BEGIN --->
-
-![DNB-Hugo/SECURITY](.github/github-card-dark.png#gh-dark-mode-only)
-![DNB-Hugo/SECURITY](.github/github-card-light.png#gh-light-mode-only)
-
-<!--- CARD END --->
+![](header-card.png)
 
 # David's Neighbour GoHugo Component / Security
 

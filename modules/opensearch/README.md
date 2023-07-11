@@ -1,8 +1,4 @@
-<!--- CARD BEGIN --->
-
-![DNB-Hugo/hugo-opensearch](.github/github-card-dark.png#gh-dark-mode-only)
-![DNB-Hugo/hugo-opensearch](.github/github-card-light.png#gh-light-mode-only)
-<!--- CARD END --->
+![](header-card.png)
 
 # Hugo Component / Opensearch
 

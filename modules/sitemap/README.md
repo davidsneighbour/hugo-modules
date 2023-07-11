@@ -1,5 +1,4 @@
-![DNB-Hugo/HEAD](.github/github-card-dark.png#gh-dark-mode-only)
-![DNB-Hugo/HEAD](.github/github-card-light.png#gh-light-mode-only)
+![](header-card.png)
 
 # GoHugo Component / Sitemap
 

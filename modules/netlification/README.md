@@ -1,9 +1,4 @@
-<!--- CARD BEGIN --->
-
-![DNB-Hugo/HEAD](.github/github-card-dark.png#gh-dark-mode-only)
-![DNB-Hugo/HEAD](.github/github-card-light.png#gh-light-mode-only)
-
-<!--- CARD END --->
+![](header-card.png)
 
 This is a Hugo theme component with helpers to host your [GoHugo](https://gohugo.io/) generated static website on [Netlify](https://www.netlify.com/). If you don't use Netlify, you DO NOT need this module.
 
@@ -90,7 +85,7 @@ aliases:
 
   You can add a status property, if you wish to output any other code than 301 for the redirect. The status property is optional and is explicitly intended for redirect cases.
 
-  The format of these redirect tables is identical to redirects format used in the [Netlify configuration file format](https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file). 
+  The format of these redirect tables is identical to redirects format used in the [Netlify configuration file format](https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file).
 
 ### Disable internal alias creation in Hugo
 

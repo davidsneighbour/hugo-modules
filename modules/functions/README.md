@@ -1,9 +1,4 @@
-<!--- CARD BEGIN --->
-
-![@davidsneighbour/hugo-functions](.github/github-card-dark.png#gh-dark-mode-only)
-![@davidsneighbour/hugo-functions](.github/github-card-light.png#gh-light-mode-only)
-
-<!--- CARD END --->
+![](header-card.png)
 
 # GoHugo Component / Functions
 
