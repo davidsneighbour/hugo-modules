@@ -3,6 +3,8 @@
         "github.copilot",
         "github.copilot-labs",
         "github.copilot-chat",
-        "pomdtr.excalidraw-editor"
+        "pomdtr.excalidraw-editor",
+        "davidanson.vscode-markdownlint",
+        "yzhang.markdown-all-in-one"
     ]
 }

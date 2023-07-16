@@ -5,3 +5,9 @@
 thumbnail_source = 1
 # disabled = false
 # verbose = true
+
+[dnb.youtube.config.plugins.js]
+imports = ["import LiteYTEmbed from './lite-yt-embed';"] # es6, in flux
+calls = [
+  "customElements.define('lite-youtube', LiteYTEmbed);",
+] # custom element call

@@ -28,8 +28,7 @@ class FileListPlugin {
   }
 }
 
-common = {
-  target: 'webworker',
+const common = {
   entry: {
     main: path.join(__dirname, 'assets/js', 'service-worker.js'),
   },
@@ -54,6 +53,7 @@ common = {
 };
 
 const webworkerDevConfig = {
+  target: 'webworker',
   mode: "development",
   "devtool": "inline-source-map",
   output: {
@@ -64,6 +64,7 @@ const webworkerDevConfig = {
 };
 
 const webworkerDistConfig = {
+  target: 'webworker',
   mode: "production",
   output: {
     path: path.resolve(__dirname, 'static/sw-prod'),
