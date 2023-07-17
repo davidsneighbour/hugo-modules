@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/feeds/v1.2023.3...modules/feeds/v1.2023.4) (2023-07-17)
+
+
+### Build System
+
+* **deps:** bump semver from 5.7.1 to 5.7.2 ([#172](https://github.com/davidsneighbour/hugo-modules/issues/172)) ([a6b26a2](https://github.com/davidsneighbour/hugo-modules/commit/a6b26a2eb222e5e49591099d96b93ab5ea90bfbe)), closes [#585](https://github.com/davidsneighbour/hugo-modules/issues/585) [#585](https://github.com/davidsneighbour/hugo-modules/issues/585) [#585](https://github.com/davidsneighbour/hugo-modules/issues/585) [#585](https://github.com/davidsneighbour/hugo-modules/issues/585) [#585](https://github.com/davidsneighbour/hugo-modules/issues/585)
+
+
+### Chore
+
+* **config:** update workspace configuration ([3262354](https://github.com/davidsneighbour/hugo-modules/commit/326235461f253992b011247f3be91150bdc86b66))
+* recent changes ([bebad39](https://github.com/davidsneighbour/hugo-modules/commit/bebad39f444283168201f2b2ebbdb5090f79c6a7))
+* **release:** modules/head/v1.2023.3 ([2d57b90](https://github.com/davidsneighbour/hugo-modules/commit/2d57b902798312b280a23943c7539ab3bab0d711))
+* **release:** modules/head/v1.2023.4 ([66adf53](https://github.com/davidsneighbour/hugo-modules/commit/66adf53daba69a472c79a3f9acee6bf18c41d43e))
+* **release:** v1.2023.5 ([de822ae](https://github.com/davidsneighbour/hugo-modules/commit/de822aefa224f3943e2a9a3362c97d348e635542))
+* **release:** v1.2023.6 ([65c1022](https://github.com/davidsneighbour/hugo-modules/commit/65c102261593f787239bfc338124cc5cb0820f23))
+* **release:** v1.2023.7 ([aef7bdf](https://github.com/davidsneighbour/hugo-modules/commit/aef7bdf9a4212bb193faa118b40086b94d11ab12))
+
+
+### Features
+
+* component header images ([5e3ed44](https://github.com/davidsneighbour/hugo-modules/commit/5e3ed44a740b57a6019f18c1cbea65912f7d700e))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.17 ([#170](https://github.com/davidsneighbour/hugo-modules/issues/170)) ([f0a140c](https://github.com/davidsneighbour/hugo-modules/commit/f0a140c466ce01f9f78b8cd48c87396a216e1d3c))
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.24 ([#174](https://github.com/davidsneighbour/hugo-modules/issues/174)) ([6d46bde](https://github.com/davidsneighbour/hugo-modules/commit/6d46bdecb2f811b04910754878a701e06b1a8b8f))
+* remove self closing tag endings in head module ([bd7b1eb](https://github.com/davidsneighbour/hugo-modules/commit/bd7b1eb8b44ca5380e2be3840ae06cef27e286c3))
+* remove self-closing from header tags ([475713e](https://github.com/davidsneighbour/hugo-modules/commit/475713e089d44fdfd989b6a9c05714e694f76329))
+* remove unsupported meta tag ([cd9906c](https://github.com/davidsneighbour/hugo-modules/commit/cd9906c94cc70941b419709c7e92e259acd5cd0f)), closes [#175](https://github.com/davidsneighbour/hugo-modules/issues/175)
+
 ## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/feeds/v1.2023.2...modules/feeds/v1.2023.3) (2023-07-10)
 
 
