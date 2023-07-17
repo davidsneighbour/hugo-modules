@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/head/v1.2023.3...modules/head/v1.2023.4) (2023-07-17)
+
+
+### Chore
+
+* **release:** v1.2023.7 ([aef7bdf](https://github.com/davidsneighbour/hugo-modules/commit/aef7bdf9a4212bb193faa118b40086b94d11ab12))
+
+
+### Bug Fixes
+
+* remove unsupported meta tag ([cd9906c](https://github.com/davidsneighbour/hugo-modules/commit/cd9906c94cc70941b419709c7e92e259acd5cd0f)), closes [#175](https://github.com/davidsneighbour/hugo-modules/issues/175)
+
 ## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/head/v1.2023.2...modules/head/v1.2023.3) (2023-07-17)
 
 
