@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/head/v1.2023.2...modules/head/v1.2023.3) (2023-07-17)
+
+
+### Build System
+
+* **deps:** bump semver from 5.7.1 to 5.7.2 ([#172](https://github.com/davidsneighbour/hugo-modules/issues/172)) ([a6b26a2](https://github.com/davidsneighbour/hugo-modules/commit/a6b26a2eb222e5e49591099d96b93ab5ea90bfbe)), closes [#585](https://github.com/davidsneighbour/hugo-modules/issues/585) [#585](https://github.com/davidsneighbour/hugo-modules/issues/585) [#585](https://github.com/davidsneighbour/hugo-modules/issues/585) [#585](https://github.com/davidsneighbour/hugo-modules/issues/585) [#585](https://github.com/davidsneighbour/hugo-modules/issues/585)
+
+
+### Chore
+
+* **cleanup:** remove unused particles from feeds modules ([ae2f8fa](https://github.com/davidsneighbour/hugo-modules/commit/ae2f8fa3c174b72cd418fe23102e95b1f2d77a8e))
+* **cleanup:** update README.md and packages ([212cf03](https://github.com/davidsneighbour/hugo-modules/commit/212cf03e720a0dc55af7e0be53bdd58c7b5c19cf))
+* code cleanup ([05aa084](https://github.com/davidsneighbour/hugo-modules/commit/05aa0841bdda2702a0e9d6160be8d4cbc7e36cc3))
+* **config:** add tool modules as dependencies ([06abe9a](https://github.com/davidsneighbour/hugo-modules/commit/06abe9a8d3e904d6fe48365a91e2f5f3b31328fb))
+* **config:** update workspace configuration ([3262354](https://github.com/davidsneighbour/hugo-modules/commit/326235461f253992b011247f3be91150bdc86b66))
+* **deps:** update dependencies ([50199a7](https://github.com/davidsneighbour/hugo-modules/commit/50199a73978d596a7192b5f1e1f3a52de9b97dc2))
+* recent changes ([bebad39](https://github.com/davidsneighbour/hugo-modules/commit/bebad39f444283168201f2b2ebbdb5090f79c6a7))
+* **release:** modules/feeds/v1.2023.2 ([251f00b](https://github.com/davidsneighbour/hugo-modules/commit/251f00bbf6fa8d4c8d5a46f855233f9508433090))
+* **release:** modules/feeds/v1.2023.3 ([03c3ce4](https://github.com/davidsneighbour/hugo-modules/commit/03c3ce4e13bad0b2b7955e50699bd7440afd9766))
+* **release:** modules/functions/v1.2023.2 ([0615875](https://github.com/davidsneighbour/hugo-modules/commit/0615875bb313553b2aa2ecc4a99527e8f44907da))
+* **release:** modules/functions/v1.2023.3 ([fa29262](https://github.com/davidsneighbour/hugo-modules/commit/fa2926200af7f37531f4198d864bc29f23e83976))
+* **release:** v1.2023.5 ([de822ae](https://github.com/davidsneighbour/hugo-modules/commit/de822aefa224f3943e2a9a3362c97d348e635542))
+* **release:** v1.2023.6 ([65c1022](https://github.com/davidsneighbour/hugo-modules/commit/65c102261593f787239bfc338124cc5cb0820f23))
+
+
+### Features
+
+* component header images ([5e3ed44](https://github.com/davidsneighbour/hugo-modules/commit/5e3ed44a740b57a6019f18c1cbea65912f7d700e))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.17 ([#170](https://github.com/davidsneighbour/hugo-modules/issues/170)) ([f0a140c](https://github.com/davidsneighbour/hugo-modules/commit/f0a140c466ce01f9f78b8cd48c87396a216e1d3c))
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.24 ([#174](https://github.com/davidsneighbour/hugo-modules/issues/174)) ([6d46bde](https://github.com/davidsneighbour/hugo-modules/commit/6d46bdecb2f811b04910754878a701e06b1a8b8f))
+* getDescription returns description, or summary, or site description ([7d0064c](https://github.com/davidsneighbour/hugo-modules/commit/7d0064cf948c8d0863726c4cc43247c444405cf6))
+* remove self closing tag endings in head module ([bd7b1eb](https://github.com/davidsneighbour/hugo-modules/commit/bd7b1eb8b44ca5380e2be3840ae06cef27e286c3))
+* show proper summaries in feeds instead of full content ([37ae726](https://github.com/davidsneighbour/hugo-modules/commit/37ae726c07bd9fcae76df8a4e3d40c053394ab3b))
+
 ## [1.2023.2](https://github.com/davidsneighbour/hugo-modules/compare/modules/head/v1.2023.1...modules/head/v1.2023.2) (2023-07-10)
 
 
