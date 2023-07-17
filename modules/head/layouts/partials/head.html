@@ -1,16 +1,16 @@
 {{- $page := . -}}
 {{- $config := site.Params.dnb.head -}}
 {{- partial "func/hook.html" ( dict "hook" "head-init" "context" . ) -}}
-<meta charset="{{- site.Params.dnb.head.charset | default "utf-8" -}}" />
+<meta charset="{{- site.Params.dnb.head.charset | default "utf-8" -}}">
 <meta
   name="viewport"
-  content="{{- site.Params.dnb.head.viewport | default "width=device-width, initial-scale=1" -}}" />
+  content="{{- site.Params.dnb.head.viewport | default "width=device-width, initial-scale=1" -}}">
 {{- partial "head/title.html" . -}}
 {{- partial "func/hook.html" ( dict "hook" "head-start" "context" . ) -}}
 {{- partialCached "head/speed-optimisation.html" . -}}
 {{- partial "func/hook.html" ( dict "hook" "head-post-speed-optimisation" "context" . ) -}}
 {{- if and (isset $config "nobase") (eq false $config.nobase) -}}
-  <base href="{{- site.BaseURL -}}" />
+  <base href="{{- site.BaseURL -}}">
 {{- end -}}
 {{- partial "head/description.html" . -}}
 {{- partial "func/hook.html" ( dict "hook" "head-post-description" "context" . ) -}}
