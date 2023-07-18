@@ -27,7 +27,6 @@ see
     {{- $params := .Get "params" | default $paramsCollected -}}
     {{- $thumbnailUrl := partialCached "getYoutubePreviewUrl.html" . -}}
     {{- $remoteThumbnailUrl := printf $thumbnailUrl $id -}}
-
     <div class="shortcode--youtube {{ with $class -}}{{- . -}}{{- end -}}">
         <lite-youtube
             videoid="{{- $id -}}" {{ with $title -}}

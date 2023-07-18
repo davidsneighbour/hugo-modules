@@ -3,40 +3,32 @@ extended = true
 min = "0.56.0"
 
 [[mounts]]
-source = "data"
-target = "data"
+source = "layouts"
+target = "layouts"
 
 [[mounts]]
 source = "assets"
 target = "assets"
 
-# [[mounts]]
-# source = "assets/js/lite-yt-embed.js"
-# target = "assets/js/lite-yt-embed.js"
+# see https://github.com/paulirish/lite-youtube-embed for details
+[[imports]]
+path = "github.com/paulirish/lite-youtube-embed"
+disable = false
+ignoreConfig = true
+ignoreImports = false
 
-[[mounts]]
-source = "layouts"
-target = "layouts"
+[[imports.mounts]]
+source = "src/lite-yt-embed.css"
+target = "assets/libs/liteyoutube/_lite-yt-embed.scss"
 
-# # see https://github.com/paulirish/lite-youtube-embed for details
-# [[imports]]
-# path = "github.com/paulirish/lite-youtube-embed"
-# disable = false
-# ignoreConfig = true
-# ignoreImports = false
+[[imports.mounts]]
+source = "src/lite-yt-embed.css"
+target = "static/libs/liteyoutube/lite-yt-embed.css"
 
-# [[imports.mounts]]
-# source = "src/lite-yt-embed.css"
-# target = "assets/libs/liteyoutube/_lite-yt-embed.scss"
+[[imports.mounts]]
+source = "src/lite-yt-embed.js"
+target = "assets/libs/liteyoutube/lite-yt-embed.js"
 
-# [[imports.mounts]]
-# source = "src/lite-yt-embed.css"
-# target = "static/libs/liteyoutube/lite-yt-embed.css"
-
-# [[imports.mounts]]
-# source = "src/lite-yt-embed.js"
-# target = "assets/libs/liteyoutube/lite-yt-embed.js"
-
-# [[imports.mounts]]
-# source = "src/lite-yt-embed.js"
-# target = "static/libs/liteyoutube/lite-yt-embed.js"
+[[imports.mounts]]
+source = "src/lite-yt-embed.js"
+target = "static/libs/liteyoutube/lite-yt-embed.js"
