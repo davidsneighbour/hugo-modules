@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-youtube",
   "description": "A better YouTube shortcode (and partial) for GoHugo",
-  "version": "1.2023.4",
+  "version": "1.2023.5",
   "license": "MIT",
   "private": true,
   "repository": {
