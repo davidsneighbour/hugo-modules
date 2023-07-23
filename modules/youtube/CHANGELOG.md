@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.6](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.5...modules/youtube/v1.2023.6) (2023-07-23)
+
+
+### Chore
+
+* **config:** update workspace configuration ([3c36cf4](https://github.com/davidsneighbour/hugo-modules/commit/3c36cf4d39cb9ad665b8f8c2268720dc8bbaccc6))
+* **deps:** update dependencies ([6accf19](https://github.com/davidsneighbour/hugo-modules/commit/6accf197db5966c5ec77bea9741291b20db1f725))
+* **release:** modules/modder/v1.2023.2 ([cecf725](https://github.com/davidsneighbour/hugo-modules/commit/cecf72534e65af62b8145c9a9d90c40c0891a9d8))
+
 ## [1.2023.5](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.4...modules/youtube/v1.2023.5) (2023-07-18)
 
 
