@@ -5,6 +5,8 @@
         "github.copilot-chat",
         "pomdtr.excalidraw-editor",
         "davidanson.vscode-markdownlint",
-        "yzhang.markdown-all-in-one"
+        "yzhang.markdown-all-in-one",
+        "golang.go",
+        "casualjim.gotemplate"
     ]
 }
