@@ -7,8 +7,12 @@ source = "layouts"
 target = "layouts"
 
 [[mounts]]
-source = "assets"
-target = "assets"
+source = "assets/js/lite-yt-embed.js"
+target = "assets/js/lite-yt-embed.js"
+
+[[mounts]]
+source = "assets/scss/_lite-yt-embed.scss"
+target = "assets/scss/_lite-yt-embed.scss"
 
 # see https://github.com/paulirish/lite-youtube-embed for details
 [[imports]]
@@ -19,7 +23,7 @@ ignoreImports = false
 
 [[imports.mounts]]
 source = "src/lite-yt-embed.css"
-target = "assets/libs/liteyoutube/_lite-yt-embed.scss"
+target = "assets/scss/liteyoutube/_lite-yt-embed.scss"
 
 [[imports.mounts]]
 source = "src/lite-yt-embed.css"
@@ -27,7 +31,7 @@ target = "static/libs/liteyoutube/lite-yt-embed.css"
 
 [[imports.mounts]]
 source = "src/lite-yt-embed.js"
-target = "assets/libs/liteyoutube/lite-yt-embed.js"
+target = "assets/js/liteyoutube/lite-yt-embed.js"
 
 [[imports.mounts]]
 source = "src/lite-yt-embed.js"
