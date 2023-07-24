@@ -6,6 +6,26 @@ upgradeInsecureRequests = true
 # gitlab = Gitlab Pages
 # cloudflare = Cloudflare Pages
 mode = "netlify"
+# extensions = ["youtube", "cloudflare.insights"]
+
+[dnb.netlification.defaults]
+# default value of "Accept-Encoding: gzip, deflate, br"
+acceptEncoding = "gzip, deflate, br"
+
+[dnb.netlification.csp]
+defaultSrc = ["'self'"]
+
+[dnb.netlification.cache.duration]
+years = 1
+months = 0
+days = 0
+
+#[headers]
+#for = "/pwa/reset"
+#[headers.rules]
+## https://developer.chrome.com/docs/workbox/remove-buggy-service-workers/
+## https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data
+#Clear-Site-Data = ["cache", "cookies", "storage", "executionContexts"]
 
 # netlify specific settings
 [dnb.netlification.netlify]

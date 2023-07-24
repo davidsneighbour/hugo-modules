@@ -1,95 +1,108 @@
-{{- /*
-Paths can contain * or :placeholders. A :placeholder matches anything except / while a * matches anything.
-*/ -}}
+{{/* notify of deprecation */}}
+{{- $deprecatedConf := $.Site.Data.dnb.netlification.config -}}
+{{- with $deprecatedConf -}}
+  {{- partial "debug.html"
+    (dict
+    "message" "netlification: configuration via data file is being deprecated. Move your config into params.toml"
+    "context" .
+    "severity" "warn"
+    "level" 8
+    )
+  -}}
+{{- end -}}
+
+{{/* Paths can contain * or :placeholders. A :placeholder matches anything except / while a * matches anything. */}}
 {{- $day := 60 -}}
 {{- $month := 2628000 -}}
 {{- $year := 31536000 -}}
-{{- $configuration := $.Site.Data.dnb.netlification.config -}}
-{{- $cacheYears := int $configuration.cache.duration.years | default 1 -}}
-{{- $cacheMonths := int $configuration.cache.duration.months | default 0 -}}
-{{- $cacheDays := int $configuration.cache.duration.days | default 0 -}}
+{{- $config := site.Params.dnb.netlification -}}
+{{- $cacheYears := int $config.cache.duration.years | default 1 -}}
+{{- $cacheMonths := int $config.cache.duration.months | default 0 -}}
+{{- $cacheDays := int $config.cache.duration.days | default 0 -}}
 {{- $cacheSeconds := add (mul $cacheDays $day) (add (mul $cacheMonths $month) (mul $cacheYears $year)) -}}
+
 {{- /* header rules for root page */ -}}
 /
-  Accept-Encoding: gzip, deflate, br
+  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
   Permissions-Policy: geolocation=(self), camera=(), fullscreen=*, interest-cohort=()
 
+{{- /* header rules for all pages */ -}}
 /*
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
-  {{ with $configuration.csp -}}
+  {{ with $config.csp -}}
       {{ if (eq .reportOnly true) -}}
       Content-Security-Policy-Report-Only: {{ else -}}
       Content-Security-Policy: {{ end -}}
       {{- $nonrules := slice "upgradeInsecureRequests" "reportUri" "reportOnly" -}}
-      {{- range $key, $values := $configuration.csp -}}
+      {{- range $key, $values := $config.csp -}}
           {{- if not (in $nonrules $key) -}}
               {{ replace ($key | humanize | lower) " " "-" -}}
-              {{- range (index $configuration.csp $key) }} {{ . }}{{ end }};
+              {{- range (index $config.csp $key) }} {{ . }}{{ end }};
           {{- end -}}
       {{- end }}
-      {{- with $configuration.csp.upgradeInsecureRequests -}}
-          {{- if (eq $configuration.csp.upgradeInsecureRequests true) -}}
+      {{- with $config.csp.upgradeInsecureRequests -}}
+          {{- if (eq $config.csp.upgradeInsecureRequests true) -}}
               upgrade-insecure-requests;
           {{- end -}}
       {{- end -}}
-      {{- with $configuration.csp.reportUri }} report-uri {{ . }};{{- end -}}
+      {{- with $config.csp.reportUri }} report-uri {{ . }};{{- end -}}
   {{- end }}
-  {{- range $configuration.headers }}
+  {{- range $config.headers }}
   {{ . }}
   {{- end }}
 
 /*.html
-  Accept-Encoding: gzip, deflate, br
+  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.manifest
   Content-Type: application/manifest+json; charset=utf-8
   Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
-  Accept-Encoding: gzip, deflate, br
+  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.js
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Content-Type: text/javascript; charset=utf-8
   Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
-  Accept-Encoding: gzip, deflate, br
+  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.ico
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
-  Accept-Encoding: gzip, deflate, br
+  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.css
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
-  Accept-Encoding: gzip, deflate, br
+  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.jpg
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
-  Accept-Encoding: gzip, deflate, br
+  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.jpeg
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
-  Accept-Encoding: gzip, deflate, br
+  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.png
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
-  Accept-Encoding: gzip, deflate, br
+  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.gif
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
   Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable
-  Accept-Encoding: gzip, deflate, br
+  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.eot
-  Accept-Encoding: gzip, deflate, br
+  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.ttf
-  Accept-Encoding: gzip, deflate, br
+  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /assets/*
   Expires: {{ now.AddDate $cacheYears $cacheMonths $cacheDays | dateFormat "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
