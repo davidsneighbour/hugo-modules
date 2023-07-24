@@ -1,9 +1,11 @@
 {
   "files.associations": {
     "**/layouts/**.html": "gohtml",
-    "**/layouts/**.xml": "goxml",
+    "**/layouts/**.xml": "gotemplate",
     "**/layouts/**.json": "gojson",
     "**/layouts/**.txt": "gotemplate",
+    "**/layouts/**.headers": "gotemplate",
+    "**/layouts/**.redir": "gotemplate",
   },
   "editor.linkedEditing": true
 }
