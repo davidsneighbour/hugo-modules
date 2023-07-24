@@ -12,7 +12,7 @@ mode = "netlify"
 # default value of "Accept-Encoding: gzip, deflate, br"
 acceptEncoding = "gzip, deflate, br"
 # default value of "Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable"
-cacheControl = "public, max-age=%s, immutable"
+cacheControl = "public, max-age=%d, immutable"
 
 # the default minimal CSP
 [dnb.netlification.csp]
