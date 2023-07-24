@@ -12,7 +12,7 @@
 {{- end -}}
 
 {{/* Paths can contain * or :placeholders. A :placeholder matches anything except / while a * matches anything. */}}
-{{- $day := 60 -}}
+{{- $day := 86400 -}}
 {{- $month := 2628000 -}}
 {{- $year := 31536000 -}}
 {{- $config := site.Params.dnb.netlification -}}
