@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.9](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.8...modules/youtube/v1.2023.9) (2023-07-25)
+
+
+### Build System
+
+* **fix:** add and commit citation configuration properly ([8d9475c](https://github.com/davidsneighbour/hugo-modules/commit/8d9475c9c349210ee0e4752a4f2f51924195d098))
+
 ## [1.2023.8](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.7...modules/youtube/v1.2023.8) (2023-07-25)
 
 
