@@ -26,6 +26,8 @@ if test -f "$FILE"; then
   git add $FILE
 fi
 
+git commit -m "chore(release): update citation configuration"
+
 # push release to GitHub
 git push origin main --follow-tags
 git push origin --tags
