@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.7](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.6...modules/youtube/v1.2023.7) (2023-07-25)
+
+
+### Chore
+
+* **cleanup:** remove unused particles ([b05d9f2](https://github.com/davidsneighbour/hugo-modules/commit/b05d9f277afa0c09a9c0c987adf6d307b1738164))
+* **config:** update workspace configuration ([72486b9](https://github.com/davidsneighbour/hugo-modules/commit/72486b95f28fde55d29a9c1252521272d48c465b))
+* **release:** modules/netlification/v1.2023.2 ([375593c](https://github.com/davidsneighbour/hugo-modules/commit/375593c75effd9954b8b8f400fbc937eac9fc9f8))
+
+
+### Features
+
+* **wip:** move config options around and fix default values ([340526e](https://github.com/davidsneighbour/hugo-modules/commit/340526ef5316463d5dea1cc38d87425bfeff4a91))
+* **wip:** moving data config to params config ([371bad3](https://github.com/davidsneighbour/hugo-modules/commit/371bad30d489711723868a7e39f2c8e8033c8789))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.25 ([#176](https://github.com/davidsneighbour/hugo-modules/issues/176)) ([906ed3b](https://github.com/davidsneighbour/hugo-modules/commit/906ed3b8463725b4c05c3f71192bc14418123e08))
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.26 ([#177](https://github.com/davidsneighbour/hugo-modules/issues/177)) ([8938434](https://github.com/davidsneighbour/hugo-modules/commit/893843443bd50975d762f33b43b5f897cb590e89))
+* proper format for integers in cache-control default ([112932b](https://github.com/davidsneighbour/hugo-modules/commit/112932b01ae5ccdcbb006f30574a77ad2d7d00e9))
+* proper seconds in a day for  variable ([d898f75](https://github.com/davidsneighbour/hugo-modules/commit/d898f751c07846a59240b33d4de420d4e00315e9))
+
 ## [1.2023.6](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.5...modules/youtube/v1.2023.6) (2023-07-23)
 
 
