@@ -1,7 +1,8 @@
 #!/bin/bash
+# v2023.07.25.2
 
-# exit when any command fails
-set -e
+# exit verbose when any command fails
+set -euxo pipefail
 
 REQUIRED_TOOLS=(
   git
@@ -27,7 +28,7 @@ if [ -f "$FILE" ]; then
   set +a # stop exporting
 else
   echo "no .env file found"
-  exit 0
+  exit 1
 fi
 
 CURPATH="$(pwd -P)"
