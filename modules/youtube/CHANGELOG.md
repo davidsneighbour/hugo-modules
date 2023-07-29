@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.11](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.9...modules/youtube/v1.2023.11) (2023-07-29)
+
+
+### Build System
+
+* **fix:** open proper URL ([23662eb](https://github.com/davidsneighbour/hugo-modules/commit/23662eb16c365e8e6da5d9b00462c74ae384e836))
+* update build hooks ([4ef9566](https://github.com/davidsneighbour/hugo-modules/commit/4ef95668821eef93e691fc918c4e3c02c7ec3d5d))
+
+
+### Chore
+
+* **release:** modules/auditor/v1.2023.2 ([314d663](https://github.com/davidsneighbour/hugo-modules/commit/314d66386e5f00409973738fbb9b4ece510f80d6))
+* **release:** modules/auditor/v1.2023.3 ([5601c5e](https://github.com/davidsneighbour/hugo-modules/commit/5601c5e2a9088c2d0d648cf8a9cbfa2f772ca03e))
+* **release:** modules/youtube/v1.2023.10 ([42f0991](https://github.com/davidsneighbour/hugo-modules/commit/42f0991488a8a3ac44eea938ae07ec53add831d6))
+* **release:** update citation configuration ([b3cbbde](https://github.com/davidsneighbour/hugo-modules/commit/b3cbbde3474de943c74f45dccf763103826a3586))
+* **release:** update citation configuration ([0dadfaf](https://github.com/davidsneighbour/hugo-modules/commit/0dadfaf316a59342131b0409536ce1146732692f))
+* **release:** update citation configuration ([76d81d9](https://github.com/davidsneighbour/hugo-modules/commit/76d81d96abc318aca4f3ad09202a85eecd227836))
+* **release:** update citation configuration ([a75295c](https://github.com/davidsneighbour/hugo-modules/commit/a75295c77f185eeb064355dba80626598cb74fb3))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.27 ([#178](https://github.com/davidsneighbour/hugo-modules/issues/178)) ([5556972](https://github.com/davidsneighbour/hugo-modules/commit/55569726b15aa55ce3c58cef376d16efbfd4e692))
+* remove blur in scss file ([e7ac16e](https://github.com/davidsneighbour/hugo-modules/commit/e7ac16ef7e76c658414bfa02f7ed55b298bd2810))
+
 ## [1.2023.10](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.9...modules/youtube/v1.2023.10) (2023-07-29)
 
 
