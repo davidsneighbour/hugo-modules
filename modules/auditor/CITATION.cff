@@ -5,6 +5,6 @@ authors:
     given-names: "Patrick"
     orcid: "https://orcid.org/0000-0001-6250-2135"
 title: "Hugo Modules / Auditor"
-version: 1.2023.4
+version: 1.2023.5
 date-released: 2023-07-29
 url: "https://github.com/davidsneighbour/hugo-modules"
