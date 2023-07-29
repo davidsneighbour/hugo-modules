@@ -8,6 +8,11 @@
         "yzhang.markdown-all-in-one",
         "golang.go",
         "casualjim.gotemplate",
-        "tamasfe.even-better-toml"
+        "tamasfe.even-better-toml",
+        "stylelint.vscode-stylelint",
+        "foxundermoon.shell-format",
+        "timonwong.shellcheck",
+        "remisa.shellman",
+        "mkhl.shfmt"
     ]
 }

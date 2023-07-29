@@ -9,8 +9,9 @@
   "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules#readme",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.2.25",
+    "@davidsneighbour/configurations": "^5.2.27",
     "@slightlyoff/lite-vimeo": "0.1.2",
+    "dotenv": "^16.3.1",
     "workbox-cacheable-response": "7.0.0",
     "workbox-core": "7.0.0",
     "workbox-expiration": "7.0.0",
@@ -57,5 +58,8 @@
     "modules/sitemap",
     "modules/social",
     "modules/youtube"
-  ]
+  ],
+  "stylelint": {
+    "extends": "@davidsneighbour/stylelint-config"
+  }
 }
