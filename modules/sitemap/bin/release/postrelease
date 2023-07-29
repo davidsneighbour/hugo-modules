@@ -1,12 +1,15 @@
 #!/bin/bash
+# v2023.07.29.01
 
-# exit when any command fails
-set -e
+# exit verbose when any command fails
+set -euxo pipefail
 
+# check for required tools
 REQUIRED_TOOLS=(
+  curl
+  sed
   git
 )
-
 for TOOL in "${REQUIRED_TOOLS[@]}"; do
   if ! command -v "${TOOL}" >/dev/null; then
     echo "${TOOL} is required... "
@@ -14,6 +17,60 @@ for TOOL in "${REQUIRED_TOOLS[@]}"; do
   fi
 done
 
+# extracting environment variables
+FILE=.env
+if [ -f "$FILE" ]; then
+  echo "exporting .env"
+  set -a # export all variables created next
+  # this routine ranges through a folder of files that we don't explicitly know (@davidsneighbour)
+  # see https://github.com/koalaman/shellcheck/wiki/SC1090
+  # shellcheck source=/dev/null
+  source "${FILE}"
+  set +a # stop exporting
+else
+  echo "no .env file found"
+  exit 1
+fi
+
+VERSION=$(node -pe 'require("./package.json")["version"]')
+
+# update version in citation configuration
+FILE=CITATION.cff
+if test -f "$FILE"; then
+  VERSION=$(node -pe 'require("./package.json")["version"]')
+  sed -i "s/^version: .*/version: ${VERSION}/" $FILE
+  DATE=$(date +%F)
+  sed -i "s/date-released: .*/date-released: ${DATE}/" $FILE
+  git add $FILE
+else
+  echo "no CITATION.cff found"
+  exit 1
+fi
+
+# create a release on GitHub
+GITHUB_REPO=https://github.com/${GITHUB_REPOSLUG}
+TAGNAME=${TAGSLUG}v${VERSION}
+curl \
+  -o release.json \
+  -X POST \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: token ${GITHUB_SECRET}" https://api.github.com/repos/"${GITHUB_REPOSLUG}"/releases \
+  -d "{ \
+      \"tag_name\":\"${TAGNAME}\", \
+      \"name\":\"${TAGNAME}\", \
+      \"draft\":false, \
+      \"prerelease\":false, \
+      \"generate_release_notes\":false \
+  }"
+
+# update release file
+git add release.json
+git commit -m "chore(release): update repo data files" --signoff --no-verify
+
 # push release to GitHub
 git push origin main --follow-tags
 git push origin --tags
+
+# open release for editing
+RELEASEURL="$GITHUB_REPO"/"releases/edit/""$TAGNAME"
+xdg-open "${RELEASEURL}" &>>/dev/null

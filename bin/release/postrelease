@@ -1,12 +1,15 @@
 #!/bin/bash
+# v2023.07.29.01
 
-# exit when any command fails
-set -e
+# exit verbose when any command fails
+set -euxo pipefail
 
+# check for required tools
 REQUIRED_TOOLS=(
+  curl
+  sed
   git
 )
-
 for TOOL in "${REQUIRED_TOOLS[@]}"; do
   if ! command -v "${TOOL}" >/dev/null; then
     echo "${TOOL} is required... "
@@ -14,6 +17,7 @@ for TOOL in "${REQUIRED_TOOLS[@]}"; do
   fi
 done
 
+# extracting environment variables
 FILE=.env
 if [ -f "$FILE" ]; then
   echo "exporting .env"
@@ -25,7 +29,7 @@ if [ -f "$FILE" ]; then
   set +a # stop exporting
 else
   echo "no .env file found"
-  exit 0
+  exit 1
 fi
 
 VERSION=$(node -pe 'require("./package.json")["version"]')
@@ -38,27 +42,35 @@ if test -f "$FILE"; then
   DATE=$(date +%F)
   sed -i "s/date-released: .*/date-released: ${DATE}/" $FILE
   git add $FILE
+else
+  echo "no CITATION.cff found"
+  exit 1
 fi
 
-# build static scripts
-# npm run build
-# git add static/sw-*
+# create a release on GitHub
+GITHUB_REPO=https://github.com/${GITHUB_REPOSLUG}
+TAGNAME=${TAGSLUG}v${VERSION}
+curl \
+  -o release.json \
+  -X POST \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: token ${GITHUB_SECRET}" https://api.github.com/repos/"${GITHUB_REPOSLUG}"/releases \
+  -d "{ \
+      \"tag_name\":\"${TAGNAME}\", \
+      \"name\":\"${TAGNAME}\", \
+      \"draft\":false, \
+      \"prerelease\":false, \
+      \"generate_release_notes\":false \
+  }"
 
-# adding data directory for new build information
-git add README.md
-git commit --signoff --amend --no-edit --no-verify
+# update release file
+git add release.json
+git commit -m "chore(release): update repo data files" --signoff --no-verify
 
 # push release to GitHub
 git push origin main --follow-tags
 git push origin --tags
 
-# create a release on GitHub
-GITHUB_REPO=https://github.com/${GITHUB_REPOSLUG}
-URL="$GITHUB_REPO"/"releases/edit/v""$VERSION"
-curl \
-  -X POST \
-  -H "Accept: application/vnd.github+json" \
-  -H "Authorization: token ${GITHUB_SECRET}" \
-  https://api.github.com/repos/"${GITHUB_REPOSLUG}"/releases \
-  -d "{\"tag_name\":\"v${VERSION}\",\"name\":\"v${VERSION}\",\"draft\":false,\"prerelease\":false,\"generate_release_notes\":true}"
-xdg-open "${URL}" &>>/dev/null
+# open release for editing
+RELEASEURL="$GITHUB_REPO"/"releases/edit/""$TAGNAME"
+xdg-open "${RELEASEURL}" &>>/dev/null

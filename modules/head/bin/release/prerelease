@@ -1,14 +1,15 @@
 #!/bin/bash
+# v2023.07.29.01
 
-# exit when any command fails
-set -e
+# exit verbose when any command fails
+set -euxo pipefail
 
+# check for required tools
 REQUIRED_TOOLS=(
+  curl
+  sed
   git
-  hugo
-  typos
 )
-
 for TOOL in "${REQUIRED_TOOLS[@]}"; do
   if ! command -v "${TOOL}" >/dev/null; then
     echo "${TOOL} is required... "
@@ -16,6 +17,7 @@ for TOOL in "${REQUIRED_TOOLS[@]}"; do
   fi
 done
 
+# extracting environment variables
 FILE=.env
 if [ -f "$FILE" ]; then
   echo "exporting .env"
@@ -27,14 +29,14 @@ if [ -f "$FILE" ]; then
   set +a # stop exporting
 else
   echo "no .env file found"
-  exit 0
+  exit 1
 fi
 
 CURPATH="$(pwd -P)"
 
+# update modules and add to repo
 hugo mod get -u ./...
 hugo mod tidy
-
 git add "${CURPATH}"/go.mod
 FILE="${CURPATH}"/go.sum
 if test -f "$FILE"; then
