@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2023.3...modules/auditor/v1.2023.4) (2023-07-29)
+
+
+### Chore
+
+* **release:** modules/youtube/v1.2023.10 ([42f0991](https://github.com/davidsneighbour/hugo-modules/commit/42f0991488a8a3ac44eea938ae07ec53add831d6))
+* **release:** modules/youtube/v1.2023.11 ([fd15e73](https://github.com/davidsneighbour/hugo-modules/commit/fd15e73cc1091a2a1e12afd9c72e5178b20da2a5))
+* **release:** update citation configuration ([a77444f](https://github.com/davidsneighbour/hugo-modules/commit/a77444f4d7ae584d1ed6d78ddd771e3f411f52d8))
+* **release:** update citation configuration ([b3cbbde](https://github.com/davidsneighbour/hugo-modules/commit/b3cbbde3474de943c74f45dccf763103826a3586))
+* **release:** update citation configuration ([0dadfaf](https://github.com/davidsneighbour/hugo-modules/commit/0dadfaf316a59342131b0409536ce1146732692f))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.27 ([#178](https://github.com/davidsneighbour/hugo-modules/issues/178)) ([5556972](https://github.com/davidsneighbour/hugo-modules/commit/55569726b15aa55ce3c58cef376d16efbfd4e692))
+* remove blur in scss file ([e7ac16e](https://github.com/davidsneighbour/hugo-modules/commit/e7ac16ef7e76c658414bfa02f7ed55b298bd2810))
+
 ## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2023.2...modules/auditor/v1.2023.3) (2023-07-25)
 
 
