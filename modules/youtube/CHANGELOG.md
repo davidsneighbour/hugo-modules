@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.10](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.9...modules/youtube/v1.2023.10) (2023-07-29)
+
+
+### Build System
+
+* **fix:** open proper URL ([23662eb](https://github.com/davidsneighbour/hugo-modules/commit/23662eb16c365e8e6da5d9b00462c74ae384e836))
+* update build hooks ([4ef9566](https://github.com/davidsneighbour/hugo-modules/commit/4ef95668821eef93e691fc918c4e3c02c7ec3d5d))
+
+
+### Chore
+
+* **release:** modules/auditor/v1.2023.2 ([314d663](https://github.com/davidsneighbour/hugo-modules/commit/314d66386e5f00409973738fbb9b4ece510f80d6))
+* **release:** modules/auditor/v1.2023.3 ([5601c5e](https://github.com/davidsneighbour/hugo-modules/commit/5601c5e2a9088c2d0d648cf8a9cbfa2f772ca03e))
+* **release:** update citation configuration ([0dadfaf](https://github.com/davidsneighbour/hugo-modules/commit/0dadfaf316a59342131b0409536ce1146732692f))
+* **release:** update citation configuration ([76d81d9](https://github.com/davidsneighbour/hugo-modules/commit/76d81d96abc318aca4f3ad09202a85eecd227836))
+* **release:** update citation configuration ([a75295c](https://github.com/davidsneighbour/hugo-modules/commit/a75295c77f185eeb064355dba80626598cb74fb3))
+
+
+### Bug Fixes
+
+* remove blur in scss file ([5b6db8d](https://github.com/davidsneighbour/hugo-modules/commit/5b6db8da2125e3202fad6b413dce0065060221e6))
+
 ## [1.2023.9](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.8...modules/youtube/v1.2023.9) (2023-07-25)
 
 
