@@ -59,12 +59,11 @@ for DIRNAME in "${COMPONENTPATH}"/*/; do
   echo "for ${DIR}"
 
   URL="https://api.github.com/repos/davidsneighbour/${DIR}/releases/latest"
-  echo "${URL}"
   curl "${URL}" "${AUTH}" -s --output ${COMPONENTPATH}/"${DIR}"/data.json
 
   TERM=${DIR/hugo\-/}
   find_string='id="componentname">NAME<'
-  replace_string=">${TERM^^}<"
+  replace_string=">${TERM^^} <"
   sed -E "s/${find_string}/${replace_string}/" "${IMAGEPATH}"/components-header.svg >"${IMAGEPATH}"/temp2.svg
 
   version=($(jq -r '.tag_name' ${COMPONENTPATH}/"${DIR}"/data.json))
@@ -81,7 +80,7 @@ done
 rm -f "${CURPATH}/assets/images/temp.svg"
 rm -f "${CURPATH}/assets/images/temp2.svg"
 
-git add content/components
+git add documentation
 git commit -m "chore: update component header images and release data" --no-verify
 git push origin main
 
