@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.8](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2023.7...modules/auditor/v1.2023.8) (2023-07-30)
+
+
+### Build System
+
+* update release hooks system ([e4cceb2](https://github.com/davidsneighbour/hugo-modules/commit/e4cceb2d6246d54f864677c4407065ddac190ef3))
+
+
+### Chore
+
+* **release:** update repo data files ([11db140](https://github.com/davidsneighbour/hugo-modules/commit/11db1406c2533ef476d365487eb13fa69247ad5f))
+* remove erroneous stylelint config ([7e7deb8](https://github.com/davidsneighbour/hugo-modules/commit/7e7deb89d1298f262a6e0c524ccb06b05d1f0bea))
+
+
+### Refactors
+
+* code beautification ([0b0c6ac](https://github.com/davidsneighbour/hugo-modules/commit/0b0c6acfe0264b339c6a584372afe0120ad06248))
+
+
+### Theme
+
+* remove shadow on video preview ([edb36dd](https://github.com/davidsneighbour/hugo-modules/commit/edb36ddf253e9e58ff307b16478bd903d9a1cd47))
+
 ## [1.2023.7](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2023.6...modules/auditor/v1.2023.7) (2023-07-30)
 
 
