@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.11](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2023.10...modules/auditor/v1.2023.11) (2023-07-30)
+
+
+### Build System
+
+* **fix:** remove temp files ([3939f43](https://github.com/davidsneighbour/hugo-modules/commit/3939f43de4bcd49a4e0e09d542eda729450a2d60))
+* **fix:** update build system ([9d6febf](https://github.com/davidsneighbour/hugo-modules/commit/9d6febfb5157887e81de015f60c5bc6b6cabf4f6))
+* update component header image script ([2bab1f4](https://github.com/davidsneighbour/hugo-modules/commit/2bab1f44e3725de76c7852a35df52779828d667a))
+
+
+### Chore
+
+* **release:** update repo data files ([b2a5106](https://github.com/davidsneighbour/hugo-modules/commit/b2a510682f260067d4b4b6266e337305735c4ae6))
+* **release:** update repo data files ([b210bb8](https://github.com/davidsneighbour/hugo-modules/commit/b210bb84f803d52458e085e9f999bd4dda2a1821))
+* **release:** update repo data files ([c095d91](https://github.com/davidsneighbour/hugo-modules/commit/c095d91277c8793ae527fb89067053b1150d4bb7))
+* **release:** v1.2023.10 ([a7a131b](https://github.com/davidsneighbour/hugo-modules/commit/a7a131b7c65f79340a87bdac1bfc2f8b29786271))
+* **release:** v1.2023.8 ([ec54c53](https://github.com/davidsneighbour/hugo-modules/commit/ec54c534fc011c796c9edf73e6d742efc73631e7))
+* **release:** v1.2023.9 ([129b783](https://github.com/davidsneighbour/hugo-modules/commit/129b783920fadeb79cd5a7cf97344f197e901c00))
+* update component header images and release data ([ca38561](https://github.com/davidsneighbour/hugo-modules/commit/ca3856163b137d1a7089152794812d58f5bd07a3))
+
 ## [1.2023.10](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2023.9...modules/auditor/v1.2023.10) (2023-07-30)
 
 
