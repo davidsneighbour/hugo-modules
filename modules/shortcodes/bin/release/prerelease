@@ -2,7 +2,7 @@
 # v2023.07.30.01
 
 # exit verbose when any command fails
-set -euxo pipefail
+set -e
 
 # check for required tools
 REQUIRED_TOOLS=(

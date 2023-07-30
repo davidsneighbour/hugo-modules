@@ -2,7 +2,7 @@
 # v2023.07.30.01
 
 # exit verbose when any command fails
-set -euxo pipefail
+set -e
 
 # check for required tools
 REQUIRED_TOOLS=(
@@ -69,7 +69,6 @@ git commit -m "chore(release): update repo data files" --signoff --no-verify
 
 # push release to GitHub
 git push origin main --follow-tags
-git push origin --tags
 
 # open release for editing
 RELEASEURL="$GITHUB_REPO"/"releases/edit/""$TAGNAME"
