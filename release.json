@@ -1,0 +1,4 @@
+{
+  "message": "Resource not accessible by personal access token",
+  "documentation_url": "https://docs.github.com/rest/releases/releases#create-a-release"
+}
