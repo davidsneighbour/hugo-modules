@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.11](https://github.com/davidsneighbour/hugo-modules/compare/v1.2023.10...v1.2023.11) (2023-07-30)
+
+
+### Chore
+
+* **release:** modules/auditor/v1.2023.11 ([d4c6e1c](https://github.com/davidsneighbour/hugo-modules/commit/d4c6e1c5275e3c9f1751670e9b9644c2477004cb))
+* **release:** update repo data files ([bba3cdf](https://github.com/davidsneighbour/hugo-modules/commit/bba3cdfbb9d88d05d986a00c5aabc845ac756ea2))
+* **release:** update repo data files ([b2a5106](https://github.com/davidsneighbour/hugo-modules/commit/b2a510682f260067d4b4b6266e337305735c4ae6))
+
 ## [1.2023.10](https://github.com/davidsneighbour/hugo-modules/compare/v1.2023.9...v1.2023.10) (2023-07-30)
 
 
