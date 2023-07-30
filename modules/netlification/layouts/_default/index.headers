@@ -120,14 +120,15 @@
 
 # headers created via data configuration from other modules
 {{ with site.Data.dnb -}}
-{{- range $index, $item := . -}}
-{{- if (index $item "netlification") -}}
+  {{- range $index, $item := . -}}
+    {{- if (index $item "netlification") -}}
 # from {{ $index }}
 {{- range (index $item "netlification" "headers") }}
-{{ .for }}{{- range $key, $text := .values }}
-  {{ $key -}}: {{ $text }}
+  {{- .for }}
+  {{- range $key, $text := .values }}
+{{ $key -}}: {{ $text }}
+  {{- end -}}
 {{- end -}}
-{{- end -}}
-{{- end -}}
-{{- end -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
