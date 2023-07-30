@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.7](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2023.6...modules/auditor/v1.2023.7) (2023-07-30)
+
+
+### Build System
+
+* release script updates ([36aad41](https://github.com/davidsneighbour/hugo-modules/commit/36aad414c88dcd303adfbf1f0f70b863ccf23bed))
+
+
+### Chore
+
+* cleanup and fix release.json creation ([42ce6c3](https://github.com/davidsneighbour/hugo-modules/commit/42ce6c34b887bb3308bdea56b5bfb82260fc0b50))
+* **release:** update citation configuration ([9db2b80](https://github.com/davidsneighbour/hugo-modules/commit/9db2b80074b37d842797b592cbb0d18aa85cfb89))
+* **release:** update repo data files ([585bcdb](https://github.com/davidsneighbour/hugo-modules/commit/585bcdb1ad672cd48b8bf59fe46613d9721570d6))
+* update workspace setup ([3ef3f3e](https://github.com/davidsneighbour/hugo-modules/commit/3ef3f3ed7b754165e8f1768255dfe6aa1354869e))
+
+
+### Documentation
+
+* update documentation ([d6100f8](https://github.com/davidsneighbour/hugo-modules/commit/d6100f8a700e55820eb13762a3f759dede983099))
+
 ## [1.2023.6](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2023.5...modules/auditor/v1.2023.6) (2023-07-29)
 
 
