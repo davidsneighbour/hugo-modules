@@ -1,5 +1,5 @@
 #!/bin/bash
-# v2023.07.29.01
+# v2023.07.30.01
 
 # exit verbose when any command fails
 set -euxo pipefail
@@ -74,3 +74,4 @@ git push origin --tags
 # open release for editing
 RELEASEURL="$GITHUB_REPO"/"releases/edit/""$TAGNAME"
 xdg-open "${RELEASEURL}" &>>/dev/null
+
