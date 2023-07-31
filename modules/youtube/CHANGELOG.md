@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.13](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.12...modules/youtube/v1.2023.13) (2023-07-31)
+
+
+### Chore
+
+* **release:** update repo data files ([3a593ca](https://github.com/davidsneighbour/hugo-modules/commit/3a593ca4bfb7f9cf6c72ee58b3cc2e4a8a767156))
+
+
+### Documentation
+
+* update youtube documentation ([258e893](https://github.com/davidsneighbour/hugo-modules/commit/258e8930c9499955e6f9b0b92e7bf11dd271c9f7))
+
 ## [1.2023.12](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.11...modules/youtube/v1.2023.12) (2023-07-30)
 
 
