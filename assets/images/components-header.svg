@@ -67,14 +67,12 @@
        y="601.56543"
        fill="#dc322f"
        font-family="'Tomkin Condense'"
-       font-size="170.96px"
        font-weight="bold"
        stroke-width="1.6028"
        id="tspan1"><tspan
          style="font-size:140px"
-         id="componentname">NAME</tspan>
-         <tspan
+         id="componentname">NAME<tspan
          style="font-size:85px"
-         id="componentversion">NAME</tspan>
+         id="componentversion">NAME</tspan></tspan>
         </tspan></text>
 </svg>

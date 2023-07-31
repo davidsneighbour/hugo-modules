@@ -62,13 +62,13 @@ for DIRNAME in "${COMPONENTPATH}"/*/; do
   curl "${URL}" "${AUTH}" -s --output ${COMPONENTPATH}/"${DIR}"/data.json
 
   TERM=${DIR/hugo\-/}
-  find_string='id="componentname">NAME<'
-  replace_string=">${TERM^^} <"
+  find_string='id="componentname">NAME'
+  replace_string=">${TERM^^}"
   sed -E "s/${find_string}/${replace_string}/" "${IMAGEPATH}"/components-header.svg >"${IMAGEPATH}"/temp2.svg
 
   version=($(jq -r '.tag_name' ${COMPONENTPATH}/"${DIR}"/data.json))
   find_string='id="componentversion">NAME<'
-  replace_string=">${version}<"
+  replace_string="> ${version}<"
   sed -E "s/${find_string}/${replace_string}/" "${IMAGEPATH}"/temp2.svg >"${IMAGEPATH}"/temp.svg
 
   inkscape "${TEMPIMAGEPATH}" --export-filename="${COMPONENTPATH}"/"${DIR}"/header-card.png &>/dev/null
