@@ -54,21 +54,23 @@ This shortcode replaces the internal `youtube` shortcode and adds an unobtrusive
 
 You need to add the following files to your pipelines:
 
-- `libs/liteyoutube/lite-yt-embed.js`
-- `libs/liteyoutube/lite-yt-embed.scss`
+- `assets/js/lite-yt-embed.js`
+- `assets/scss/_lite-yt-embed.scss`
 
 These files are mounted into the `assets` directory. Using `js.Build` in Hugo for instance you can import the script this way:
 
 ```js
-import 'libs/liteyoutube/lite-yt-embed';
+import LiteYTEmbed from './lite-yt-embed';
+customElements.define('lite-youtube', LiteYTEmbed);
 ```
 
-If you are not using any Hugo pipelines then add the Javascript at the end of the page before the `</body>` tag and CSS in the header before the `</head>` tag. These files are available via mount into the `static` folder.
+and import the styles into your SASS pipeline with
 
-```html
-<link href="/libs/liteyoutube/lite-yt-embed.css" rel="stylesheet">
-<script src="/libs/liteyoutube/lite-yt-embed.js" async defer></script>
+```sass
+@import 'lite-yt-embed';
 ```
+
+If you have your own templating going on you can use the parmeters in `site.params.dnb.youtube.config.plugins` to add to your pipelines.
 
 ## Content Security Policy (CSP) rules for this plugin
 
