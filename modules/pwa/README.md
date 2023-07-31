@@ -1,4 +1,4 @@
-![](header-card.png)
+![](../../documentation/hugo-pwa/header-card.png)
 
 # DNB GoHugo Component / PWA
 

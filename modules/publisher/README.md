@@ -1,4 +1,4 @@
-![](header-card.png)
+![](../../documentation/hugo-publisher/header-card.png)
 
 # DNB GoHugo Component / Publisher
 
@@ -20,11 +20,14 @@ There are many ways to demark authorship in GoHugo.
 
 Publisher accepts several methods to denote authorship. The component will look for author information in the following order:
 
-- [Multiple authors of a content piece via frontmatter](#multiple-authors-of-a-content-piece-via-frontmatter)
-- [Single author of a content piece via frontmatter](#single-author-of-a-content-piece-via-frontmatter)
-- [Single author of the whole site via configuration](#single-author-of-the-whole-site-via-configuration)
-- [Multiple authors of the whole site via configuration](#multiple-authors-of-the-whole-site-via-configuration)
-- [Single or multiple authors via data-configuration](#single-or-multiple-authors-via-data-configuration)
+- [DNB GoHugo Component / Publisher](#dnb-gohugo-component--publisher)
+  - [Authorship](#authorship)
+    - [Denote authorship](#denote-authorship)
+      - [Multiple authors of a content piece via frontmatter](#multiple-authors-of-a-content-piece-via-frontmatter)
+      - [Single author of a content piece via frontmatter](#single-author-of-a-content-piece-via-frontmatter)
+      - [Single author of the whole site via configuration](#single-author-of-the-whole-site-via-configuration)
+      - [Multiple authors of the whole site via configuration](#multiple-authors-of-the-whole-site-via-configuration)
+      - [Single or multiple authors via data-configuration](#single-or-multiple-authors-via-data-configuration)
 
 #### Multiple authors of a content piece via frontmatter
 

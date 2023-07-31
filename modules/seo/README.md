@@ -1,4 +1,4 @@
-![](header-card.png)
+![](../../documentation/hugo-seo/header-card.png)
 
 This is work in progress. Intention is to combine a bunch of individual modules that work together and optimise various aspects of SEO in a website. Right now, I am pretty sure, you have no use for this module. Once all submodules are feature ready and working fine it might make sense to install this "collecting" module instead of each individual module.
 

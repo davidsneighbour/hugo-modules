@@ -1,7 +1,7 @@
 #!/bin/bash
 # shellcheck disable=SC1091
 
-set -eo pipefail # http://redsymbol.net/articles/unofficial-bash-strict-mode
+#set -eo pipefail # http://redsymbol.net/articles/unofficial-bash-strict-mode
 
 REQUIRED_TOOLS=(
   inkscape
@@ -30,7 +30,8 @@ fi
 CURPATH="$(pwd -P)"
 IMAGEPATH="${CURPATH}/assets/images"
 TEMPIMAGEPATH="${CURPATH}/assets/images/temp.svg"
-COMPONENTPATH="./documentation"
+COMPONENTPATH="./modules"
+DOCUMENTATIONPATH="./documentation"
 AUTH="-u ${GITHUB_USERNAME}:${GITHUB_SECRET}"
 
 # load libraries
@@ -58,21 +59,19 @@ for DIRNAME in "${COMPONENTPATH}"/*/; do
   DIR=$(basename "$DIRNAME")
   echo "for ${DIR}"
 
-  URL="https://api.github.com/repos/davidsneighbour/${DIR}/releases/latest"
-  curl "${URL}" "${AUTH}" -s --output ${COMPONENTPATH}/"${DIR}"/data.json
-
   TERM=${DIR/hugo\-/}
   find_string='id="componentname">NAME'
-  replace_string=">${TERM^^}"
+  replace_string=">${TERM^^} "
   sed -E "s/${find_string}/${replace_string}/" "${IMAGEPATH}"/components-header.svg >"${IMAGEPATH}"/temp2.svg
 
-  version=($(jq -r '.tag_name' ${COMPONENTPATH}/"${DIR}"/data.json))
-  find_string='id="componentversion">NAME<'
-  replace_string="> ${version}<"
+  version=($(jq -r '.tag_name' ${COMPONENTPATH}/"${DIR}"/release.json))
+  arrIN=(${version//\// })
+  find_string='id="componentversion">NAME'
+  replace_string=">${arrIN[2]}"
   sed -E "s/${find_string}/${replace_string}/" "${IMAGEPATH}"/temp2.svg >"${IMAGEPATH}"/temp.svg
 
-  inkscape "${TEMPIMAGEPATH}" --export-filename="${COMPONENTPATH}"/"${DIR}"/header-card.png &>/dev/null
-  optipng -strip all -quiet -o7 "${COMPONENTPATH}"/"${DIR}"/header-card.png
+  inkscape "${TEMPIMAGEPATH}" --export-filename="${DOCUMENTATIONPATH}"/hugo-"${DIR}"/header-card.png &>/dev/null
+  optipng -strip all -quiet -o7 "${DOCUMENTATIONPATH}"/hugo-"${DIR}"/header-card.png
   rm -f "${TEMPIMAGEPATH}"
 
 done

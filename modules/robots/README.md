@@ -1,4 +1,4 @@
-![](header-card.png)
+![](../../documentation/hugo-robots/header-card.png)
 
 # GoHugo Component / Robots
 

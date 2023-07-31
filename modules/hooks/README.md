@@ -1,4 +1,4 @@
-![](header-card.png)
+![](../../documentation/hugo-hooks/header-card.png)
 
 # DNB GoHugo Component / Hooks
 

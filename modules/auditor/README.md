@@ -1,4 +1,4 @@
-![](header-card.png)
+![](../../documentation/hugo-auditor/header-card.png)
 
 # GoHugo Component / Auditor
 

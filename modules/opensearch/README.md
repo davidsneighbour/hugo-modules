@@ -1,4 +1,4 @@
-![](header-card.png)
+![](../../documentation/hugo-opensearch/header-card.png)
 
 # Hugo Component / Opensearch
 

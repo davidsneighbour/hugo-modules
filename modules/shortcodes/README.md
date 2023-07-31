@@ -1,4 +1,4 @@
-![](header-card.png)
+![](../../documentation/hugo-shortcodes/header-card.png)
 
 # David's Neighbour GoHugo Component / Shortcodes
 
