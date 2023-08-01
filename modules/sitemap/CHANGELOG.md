@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/sitemap/v1.2023.3...modules/sitemap/v1.2023.4) (2023-08-01)
+
+
+### Chore
+
+* **release:** update repo data files ([a984ba6](https://github.com/davidsneighbour/hugo-modules/commit/a984ba65ae82d40385c82af4d0d700cc08abb360))
+
+
+### Bug Fixes
+
+* proper tag closures for link tags ([5f1876d](https://github.com/davidsneighbour/hugo-modules/commit/5f1876d961bc71cb04243c306b56ae9797418970))
+
 ## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/sitemap/v1.2023.2...modules/sitemap/v1.2023.3) (2023-08-01)
 
 
