@@ -28,9 +28,9 @@
 
         {{- if .IsTranslated -}}
           {{- range .Translations -}}
-            <xhtml:link rel="alternate" hreflang="{{- .Language.Lang -}}" href="{{- .Permalink -}}"/>
+            <xhtml:link rel="alternate" hreflang="{{- .Language.Lang -}}" href="{{- .Permalink -}}"></xhtml:link>
           {{- end -}}
-          <xhtml:link rel="alternate" hreflang="{{- .Language.Lang -}}" href="{{- .Permalink -}}"/>
+          <xhtml:link rel="alternate" hreflang="{{- .Language.Lang -}}" href="{{- .Permalink -}}"></xhtml:link>
         {{- end -}}
       </url>
     {{- end -}}
