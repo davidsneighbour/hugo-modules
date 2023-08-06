@@ -24,6 +24,9 @@
     {{- $index = "noindex" -}}
   {{- end -}}
 {{- else -}}
+  {{- if in (slice "section" "home" "taxonomy") page.Kind -}}
+    {{- $index = "noindex" -}}
+  {{- end -}}
   {{- if isset $global "follow" -}}
     {{- if ne $global.index true | default true -}}
       {{- $index = "noindex" -}}
