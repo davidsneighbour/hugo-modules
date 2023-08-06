@@ -6,8 +6,8 @@ extended = false
 min = "0.84.4"
 
 [[mounts]]
-source = "layouts/robots.txt"
-target = "layouts/robots.txt"
+source = "layouts"
+target = "layouts"
 
 [[mounts]]
 source = "data"
