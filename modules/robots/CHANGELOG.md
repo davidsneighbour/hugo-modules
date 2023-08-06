@@ -2,6 +2,61 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/robots/v1.2023.2...modules/robots/v1.2023.3) (2023-08-06)
+
+
+### Chore
+
+* **release:** modules/pictures/v1.2023.0 ([d56f92f](https://github.com/davidsneighbour/hugo-modules/commit/d56f92f5dc9c402c383e7cc579131bdc44f137bb))
+* **release:** modules/schema/v0.0.5 ([fa05d6b](https://github.com/davidsneighbour/hugo-modules/commit/fa05d6b038c94f65992687ff836ea971128ba5e7))
+* **release:** modules/security/v1.2023.2 ([3b7ac10](https://github.com/davidsneighbour/hugo-modules/commit/3b7ac104eab35c79e35f4384e3d41b8cba546639))
+* **release:** modules/seo/v0.0.3 ([e1c7808](https://github.com/davidsneighbour/hugo-modules/commit/e1c7808a59516555a1c23f319d4ed76be36dac8a))
+* **release:** modules/shortcodes/v1.2023.2 ([8a32e42](https://github.com/davidsneighbour/hugo-modules/commit/8a32e42ce5c6fb80b5b774f459058fa9f51337a7))
+* **release:** modules/sitemap/v1.2023.2 ([57707da](https://github.com/davidsneighbour/hugo-modules/commit/57707da96c10f0049dcdf3a6f7a0ef770839ecb3))
+* **release:** modules/sitemap/v1.2023.3 ([d370767](https://github.com/davidsneighbour/hugo-modules/commit/d37076714da119f6a974f97959f7580b5bfbf894))
+* **release:** modules/sitemap/v1.2023.4 ([7c64777](https://github.com/davidsneighbour/hugo-modules/commit/7c64777c145b791f2c6513957a100b63c47951cb))
+* **release:** modules/social/v0.1.16 ([7323b70](https://github.com/davidsneighbour/hugo-modules/commit/7323b70181ab36c867eeb596e9784a0a3b9c7ff8))
+* **release:** modules/youtube/v1.2023.12 ([e942f79](https://github.com/davidsneighbour/hugo-modules/commit/e942f79932cb7661cd36da005f43f99f4515d1ba))
+* **release:** modules/youtube/v1.2023.13 ([ecb2f19](https://github.com/davidsneighbour/hugo-modules/commit/ecb2f194795ffff3c2f3c712994ba5ad30189e61))
+* **release:** update repo data files ([02a2653](https://github.com/davidsneighbour/hugo-modules/commit/02a265335e0b5a9ad6531dae28a980a3cd8e48bf))
+* **release:** update repo data files ([a984ba6](https://github.com/davidsneighbour/hugo-modules/commit/a984ba65ae82d40385c82af4d0d700cc08abb360))
+* **release:** update repo data files ([fe6001e](https://github.com/davidsneighbour/hugo-modules/commit/fe6001ed80e658c14e7009c384379e8110feb8a4))
+* **release:** update repo data files ([3820390](https://github.com/davidsneighbour/hugo-modules/commit/3820390a146f43f6f8b404236b647222acd57779))
+* **release:** update repo data files ([08d5ff1](https://github.com/davidsneighbour/hugo-modules/commit/08d5ff15530409953fa88f0880841e14f9849bca))
+* **release:** update repo data files ([3a593ca](https://github.com/davidsneighbour/hugo-modules/commit/3a593ca4bfb7f9cf6c72ee58b3cc2e4a8a767156))
+* **release:** update repo data files ([e3ad57e](https://github.com/davidsneighbour/hugo-modules/commit/e3ad57efa62c67af4d0e01ce0233dca847eb192c))
+* **release:** update repo data files ([e2db6c0](https://github.com/davidsneighbour/hugo-modules/commit/e2db6c023d4bd45a8076bf20edf54b52ce724795))
+* **release:** update repo data files ([3e8a393](https://github.com/davidsneighbour/hugo-modules/commit/3e8a3930111bb0d56796eee532440f38a7bb2c7d))
+* **release:** update repo data files ([7506747](https://github.com/davidsneighbour/hugo-modules/commit/750674713d641356f9da5f6e41a9539a2bd9e83e))
+* **release:** update repo data files ([ff84779](https://github.com/davidsneighbour/hugo-modules/commit/ff84779905426558e0c38db254a4081576887609))
+* **release:** update repo data files ([b189275](https://github.com/davidsneighbour/hugo-modules/commit/b189275a76dbd7f7a5ccb676d605a193a9260b50))
+* **release:** update repo data files ([0e0d46e](https://github.com/davidsneighbour/hugo-modules/commit/0e0d46e529050908ac5becdbb4beefbeee29cf89))
+* **release:** v1.2023.12 ([2d9dcc4](https://github.com/davidsneighbour/hugo-modules/commit/2d9dcc4baecc71a438c9583a85c70fe9214c5719))
+* update component header images and release data ([64d5584](https://github.com/davidsneighbour/hugo-modules/commit/64d558407c47acdb4681e5512802c5df856c584e))
+* update component header images and release data ([7d5e5cc](https://github.com/davidsneighbour/hugo-modules/commit/7d5e5ccb6bd04e1f8ea871ef5072d5b05f0da6d3))
+* update component header images and release data ([6974c31](https://github.com/davidsneighbour/hugo-modules/commit/6974c3182386d9b9ea3b858c938ddf66942bfdae))
+* update component header images and release data ([5470e67](https://github.com/davidsneighbour/hugo-modules/commit/5470e6765cc50b81598d5c22d818659bae0846d5))
+
+
+### Documentation
+
+* update youtube documentation ([258e893](https://github.com/davidsneighbour/hugo-modules/commit/258e8930c9499955e6f9b0b92e7bf11dd271c9f7))
+
+
+### Features
+
+* **breaking:** section pages are not indexed ([1fd05ce](https://github.com/davidsneighbour/hugo-modules/commit/1fd05ce84e1988983dbf75ab7dbba16795f57857))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.28 ([#179](https://github.com/davidsneighbour/hugo-modules/issues/179)) ([9a7c565](https://github.com/davidsneighbour/hugo-modules/commit/9a7c5654bb2bc7b173e77f7aa29ef7c9f71a06c5))
+* proper header cards for all modules ([e12994a](https://github.com/davidsneighbour/hugo-modules/commit/e12994ab9809736f522ccff302c2278f52bae827))
+* proper tag closures for link tags ([5f1876d](https://github.com/davidsneighbour/hugo-modules/commit/5f1876d961bc71cb04243c306b56ae9797418970))
+* proper tag closures for link tags ([f65dbf6](https://github.com/davidsneighbour/hugo-modules/commit/f65dbf664cd597538e39b0523f5fdaaf3bcbd713))
+* **robots:** proper mounting of all layout files ([80b9f8a](https://github.com/davidsneighbour/hugo-modules/commit/80b9f8aeb37ffe977b2711bd89e4fbd72044e48f))
+* update version number in header images ([0b9ae9a](https://github.com/davidsneighbour/hugo-modules/commit/0b9ae9ac4f05d00086d9fa7555e16ba3388f34c5))
+
 ## [1.2023.2](https://github.com/davidsneighbour/hugo-modules/compare/modules/robots/v1.2023.1...modules/robots/v1.2023.2) (2023-07-30)
 
 
