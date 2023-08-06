@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/robots/v1.2023.3...modules/robots/v1.2023.4) (2023-08-06)
+
+
+### Chore
+
+* **release:** update repo data files ([8effb73](https://github.com/davidsneighbour/hugo-modules/commit/8effb73f74fde01b0c7487f5e55ad1438e2ba11d))
+
+
+### Bug Fixes
+
+* re-add home page to indexed pages ([fc12376](https://github.com/davidsneighbour/hugo-modules/commit/fc123769c8e8a7d4eba863cbd6e23c2ea99de931))
+
 ## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/robots/v1.2023.2...modules/robots/v1.2023.3) (2023-08-06)
 
 
