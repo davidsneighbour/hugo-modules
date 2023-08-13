@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/netlification",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.2.16"
+    "@davidsneighbour/configurations": "^5.2.32"
   },
   "scripts": {
     "clean": "run-p clean:*",
