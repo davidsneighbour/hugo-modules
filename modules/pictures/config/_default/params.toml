@@ -1,2 +1,21 @@
-[dnb]
+################################################################################
+# hugo-pictures
+# @see https://kollitsch.dev/components/hugo-pictures
+################################################################################
 [dnb.pictures]
+default_image = "images/og_sitewide.png"
+# 16:9, 4:3, 1:1 or which ever ratio you will use for thumbnails and preview
+# images. this needs to be a string and needs to be two floats separated by a
+# colon, for instance: aspect_ratio = "16:9"
+# changing this requires changes in assets/scss/components/_figure.scss if used
+aspect_ratio = "2:1"
+[dnb.pictures.responsive]
+# collection of image sizes for responsive image sizes. this takes the
+# aspect_ratio above into account, so only the long side length (mostly width)
+# is required.
+[dnb.pictures.responsive.fullwidth]
+image_sizes = ["494", "517", "674", "914"]
+break_points = ["520", "540", "720", "960"]
+[dnb.pictures.responsive.halfwidth]
+image_sizes = ["494", "517"]
+break_points = ["520", "540"]

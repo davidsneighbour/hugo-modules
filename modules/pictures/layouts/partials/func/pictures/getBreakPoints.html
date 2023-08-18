@@ -1,0 +1,3 @@
+{{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
+{{- $break_points := $config.responsive.break_points | default (slice "520" "540" "720" "960") -}}
+{{- return $break_points -}}

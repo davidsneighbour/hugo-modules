@@ -1,0 +1,10 @@
+{{- $image_sizes := .image_sizes -}}
+{{- $aspect_ratio := .aspect_ratio -}}
+{{- $image_sizes2 := slice -}}
+
+{{- range $image_sizes -}}
+	{{- $image_sizes2 = $image_sizes2 | append
+		(math.Ceil (div (mul (float .) (float (index $aspect_ratio 1))) (float (index $aspect_ratio 0)))) -}}
+{{- end -}}
+
+{{- return $image_sizes2 -}}

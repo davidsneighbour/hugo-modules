@@ -1,0 +1,4 @@
+{{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
+{{- $aspect_ratio := $config.aspect_ratio | default "false" -}}
+{{- $aspect_ratio = (split $aspect_ratio ":") -}}
+{{- return $aspect_ratio -}}
