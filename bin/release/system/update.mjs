@@ -16,17 +16,19 @@ fetch(RELEASE_GIST_URL)
     // create release hooks
     for (const fileName in gist.files) {
       const fileContent = gist.files[fileName].content;
-      const fileNameFull = 'bin/release/' + fileName;
-      fs.writeFileSync(fileNameFull, fileContent);
-      console.log(`Updated ${fileNameFull}`);
+      // const fileNameFull = 'bin/release/' + fileName;
+      // fs.writeFileSync(fileNameFull, fileContent);
+      // console.log(`Updated ${fileNameFull}`);
 
       // create the hook in each module
       const dir = fs.opendirSync('modules');
       let dirent;
       while ((dirent = dir.readSync()) !== null) {
-        const fileNameFull1 = 'modules/' + dirent.name + '/bin/release/' + fileName;
-        fs.writeFileSync(fileNameFull1, fileContent);
-        console.log(`Updated ${fileNameFull1}`);
+        if (dirent.name !== '.gitignore') {
+          const fileNameFull1 = 'modules/' + dirent.name + '/bin/release/' + fileName;
+          fs.writeFileSync(fileNameFull1, fileContent);
+          console.log(`Updated ${fileNameFull1}`);
+        }
       }
     }
   });
