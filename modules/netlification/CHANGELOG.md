@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.7](https://github.com/davidsneighbour/hugo-modules/compare/modules/netlification/v1.2023.6...modules/netlification/v1.2023.7) (2023-08-20)
+
+
+### Build System
+
+* **fix:** proper tagslug ([3af377d](https://github.com/davidsneighbour/hugo-modules/commit/3af377db0e63c83aa1a819915709a0c7a9c1623e))
+
+
+### Chore
+
+* **release:** update repo data files ([65e0c61](https://github.com/davidsneighbour/hugo-modules/commit/65e0c61c8f1ce801f9029f0244663ca994fd86b4))
+
 ## [1.2023.6](https://github.com/davidsneighbour/hugo-modules/compare/modules/netlification/v1.2023.5...modules/netlification/v1.2023.6) (2023-08-20)
 
 
