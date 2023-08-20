@@ -14,16 +14,9 @@
 {{- $image_sizes2 := partialCached "func/pictures/getAspectRatioImagesizes.html" $arOptions $arOptions -}}
 
 {{/* retrieve the article image */}}
-{{- $articleimage := dict -}}
+{{- warnf "image loaded: %s" $localimage -}}
+
 {{- with $localimage -}}
-  {{- $articleimage = . -}}
-{{- else -}}
-  {{- $articleimage = resources.Get $src -}}
-{{- end -}}
-
-{{- warnf "image loaded: %s" $articleimage -}}
-
-{{- with $articleimage -}}
 
   {{- $image := . -}}
 
@@ -37,10 +30,10 @@
 
   {{- $images := slice -}}
   {{- if eq .MediaType.SubType "svg" -}}{{/* no image processing for non-raster images */}}
-    {{- $images = $images | append $articleimage -}}
+    {{- $images = $images | append $localimage -}}
   {{- else -}}
     {{- range $index, $value := $image_sizes -}}
-      {{- if ge $articleimage.Width $value -}}
+      {{- if ge $localimage.Width $value -}}
         {{- $imagesize := printf "%sx" (string $value) -}}
         {{- $images = $images | append ($image.Resize $imagesize) -}}
       {{- end -}}

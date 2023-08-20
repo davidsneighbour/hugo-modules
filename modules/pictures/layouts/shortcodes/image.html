@@ -1,0 +1,61 @@
+{{/*
+
+Parameters:
+
+- src: path to the image. Required. Either relative to the content file or within the static folder.
+- alt: alt text for the image. (optional, deprecated)
+- label: alt text for the image. (optional)
+- style: deprecated, unused
+
+*/}}
+
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $label := .Get "label" | default $alt }}
+{{ $link := .Get "link" | default false }}
+{{ $style := .Get "style" }}
+
+{{/* SETUP */}}
+{{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
+{{- $aspect_ratio := $config.aspect_ratio | default "false" -}}
+{{- $aspect_ratio = (split $aspect_ratio ":") -}}
+{{- $image_sizes := $config.responsive.image_sizes | default (slice "494" "517" "674" "914") -}}
+{{- $break_points := $config.responsive.break_points | default (slice "520" "540" "720" "960") -}}
+
+{{/* preparing aspect_ratio image sizes - once sitewide */}}
+{{- $arOptions := dict "image_sizes" $image_sizes "aspect_ratio" $aspect_ratio }}
+{{- $image_sizes2 := partialCached "func/pictures/getARImagesizes.html" $arOptions $arOptions -}}
+
+{{/* retrieve the image */}}
+{{- $articleimage := resources.Get $src -}}
+
+{{- with $articleimage -}}
+{{ $image := . }}
+
+{{ warnf "processing image: %s" $image.Permalink }}
+
+{{- $title := "" -}}
+{{/* if a title is set via frontmatter then use it as caption */}}
+{{- if ne $image.Title $image.Name -}}
+{{- $title = $image.Title | markdownify -}}
+{{- end -}}
+
+{{- $images := slice -}}
+{{- range $index, $value := $image_sizes -}}
+{{- if ge $articleimage.Width $value -}}
+{{- $imagesize := printf "%sx" (string $value) -}}
+{{- $images = $images | append ($image.Resize $imagesize) -}}
+{{- end -}}
+{{- end -}}
+
+{{ $imageOptions := dict "images" $images "link" $link "break_points" $break_points "title" $title "context" page }}
+
+{{- with $style -}}
+<div {{ printf "style=%q" . | safeHTMLAttr }}>
+    {{- end -}}
+    {{- partial "images/markup-image.html" $imageOptions -}}
+    {{- with $style -}}
+</div>
+{{- end -}}
+
+{{- end -}}

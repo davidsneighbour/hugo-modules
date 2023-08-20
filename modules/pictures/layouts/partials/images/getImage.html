@@ -1,0 +1,24 @@
+{{/* Returns the given src as a resource object or an empty dict */}}
+{{/*
+
+Path of checking
+
+- resource named `*header*`
+- resource on a path `**\/header.*`
+- if resources exist then return the first image
+- placeholder image
+
+*/}}
+
+{{- $articleimage := dict -}}
+{{- with page.Resources.GetMatch . -}}
+{{- $articleimage = . -}}
+{{- end -}}
+
+{{- with $articleimage -}}{{- else -}}
+{{- $config := partialCached "get/pictures/getConfiguration.html" . -}}
+{{- $default_image := $config.default_image | default "images/default.png" -}}
+{{- $articleimage = resources.Get $default_image -}}
+{{- end -}}
+
+{{- return $articleimage -}}
