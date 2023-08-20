@@ -23,3 +23,7 @@ target = 'data'
 [[mounts]]
 source = 'layouts'
 target = 'layouts'
+
+[[mounts]]
+source = 'assets'
+target = 'assets'

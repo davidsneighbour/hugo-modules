@@ -1,0 +1,24 @@
+img:not([alt]),
+img[alt="Alt Text"],
+img[alt=""]:not([role="none presentation"]):not([role="presentation"]) {
+  outline: 8px dashed red !important;
+  outline-offset: 8px !important;
+}
+
+img[alt^="image of" i],
+img[alt^="picture of" i] {
+  outline: 8px dotted darkorange !important;
+  outline-offset: 8px !important;
+}
+
+
+img:not([width]),
+img:not([height]) {
+  outline: 8px dotted darkorange !important;
+  outline-offset: 8px !important;
+}
+
+img:not[longdesc] {
+  outline: 8px dotted darkorange !important;
+  outline-offset: 8px !important;
+}
