@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.2...modules/pictures/v1.2023.3) (2023-08-20)
+
+
+### Build System
+
+* **fix:** proper tag name in post release script ([1651252](https://github.com/davidsneighbour/hugo-modules/commit/1651252496f61309624735cf4dd85d95b36fbef7))
+
+
+### Chore
+
+* **release:** update repo data files ([a3b109b](https://github.com/davidsneighbour/hugo-modules/commit/a3b109bf5bdc0acd6f959fe0403010f811f4f18f))
+
 ## [1.2023.2](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.1...modules/pictures/v1.2023.2) (2023-08-20)
 
 
