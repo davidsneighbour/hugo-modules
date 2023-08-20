@@ -7,6 +7,10 @@ publishDate: 2022-08-24T19:47:25+07:00
 lastmod: 2023-05-09T19:15:58+07:00
 resources:
   - src: header-card.png
+    name: aheader
+  - src: dog-1.jpg
+  - src: dog-2.jpg
+  - src: dog-3.jpg
 categories:
   - components
 tags:
@@ -27,7 +31,7 @@ This component for [GoHugo](https://gohugo.io/) adds partials and shortcodes to 
 Check back for better documentation and more features. The following documentation is, as long as this note is here, only partial and might be missing important points. If you have any questions, or ideas, please [add an issue to the issue tracker](https://github.com/davidsneighbour/hugo-blockify/issues).
 {{< / b5/notice >}}
 
-# Notes
+## Notes
 
 - Image processing (aka. resizing, filters, cropping etc) is only available in Global and Page Resources. Global Resources are located in the `assets` folder of your repository, Page Resources are located within the `content` directory with your content files in so called Page Bundles. The images in your `static` directory are loaded as they are, not processed (other than evaluation of content type and sizing) and will not result in responsive image tags. All other features or options will work.
 - Lookup of images:
@@ -37,11 +41,11 @@ Check back for better documentation and more features. The following documentati
   - warning about image not found on CLI
 - using `name` implies page resource and no further lookup will be done after image is not found
 
-# Shortcodes
+## Shortcodes
 
 Available shortcodes currently are `figure` and `gallery`. Those shortcodes are served by partials that you can use in your own layout files with more extensive configurability. `figure` overrides the GoHugo internal `figure` shortcode.
 
-## Figure Shortcode
+### Figure Shortcode
 
 Possible call scenarios:
 
@@ -62,7 +66,7 @@ With named parameters:
 
 For now we think about device pixel ratios up to 4. (<-- NOTE: what did we mean by that? Probably a 4xdpi thingy?)
 
-### Parameters
+#### Parameters
 
 | option | type | notes |
 | --- | --- | --- |
@@ -85,15 +89,15 @@ Tagvariants:
 {{</* figure */>}}
 ```
 
-## Gallery Shortcode
+### Gallery Shortcode
 
 to be written.
 
 Notes: right now it expects a galleryid parameter for a folder inside of pagebundle/gallery/galleryid and a type for bootstrap4 or bootstrap5. All images in that directory are parsed and shown. No sorting (todo), no gallery selection by frontmatter (todo).
 
-# Partials
+## Partials
 
-## Figure Partial
+### Figure Partial
 
 The figure partial executes the end of the shortcode (wording?) and can be called with an options dictionary of the following format:
 
@@ -112,19 +116,19 @@ The figure partial executes the end of the shortcode (wording?) and can be calle
 }
 ```
 
-## Gallery Partial
+### Gallery Partial
 
-# Configuration
+## Configuration
 
-## global Configuration
+### global Configuration
 
 To be written.
 
-## configuration per shortcode/partial
+### configuration per shortcode/partial
 
 Should be explained in their own chapters above.
 
-# Optimisation
+## Optimisation
 
 To be written.
 
@@ -135,6 +139,32 @@ Notes about:
 - preloading (needs implementation)
 - maybe a walkthrough how this module implements current features?
 
-# Further Readings
+## Further Readings
 
 - [A list of up to date best practices for web images by nucliweb](https://github.com/nucliweb/image-element) (those practices are all implemented in this module)
+
+## Samples
+
+### Markdown Render Hook
+
+```markdown
+![Dog 1](dog-1.jpg)
+```
+
+![Dog 1](dog-1.jpg)
+
+```markdown
+![Dog 2](dog-2.jpg)
+```
+
+![Dog 2](dog-2.jpg)
+
+```markdown
+![Dog 3](dog-3.jpg)
+```
+
+![Dog 3](dog-3.jpg)
+
+## Sample Photo Sources
+
+- [Dog 1](https://unsplash.com/photos/PjgeDNHhg_8), [Dog 2](https://unsplash.com/photos/itru42lAV6E), [Dog 3](https://unsplash.com/photos/ah63B7-mo3w) --- License: [Unsplash+ License](https://unsplash.com/plus/license)
