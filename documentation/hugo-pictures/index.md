@@ -2,9 +2,9 @@
 title: Pictures
 linkTitle: hugo-pictures
 description: This component for GoHugo adds partials and shortcodes to handle images on your website. It offers responsive image formats and optimisgit ed loading based on current browser abilities.
-date: 2022-08-24T19:47:25+07:00
-publishDate: 2022-08-24T19:47:25+07:00
-lastmod: 2023-05-09T19:15:58+07:00
+date: 2023-08-21T19:03:35+07:00
+publishDate: 2023-08-21T19:03:35+07:00
+lastmod: 2023-08-21T19:08:05+07:00
 resources:
   - src: header-card.png
     name: aheader
