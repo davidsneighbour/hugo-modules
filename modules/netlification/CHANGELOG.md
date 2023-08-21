@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.8](https://github.com/davidsneighbour/hugo-modules/compare/modules/netlification/v1.2023.7...modules/netlification/v1.2023.8) (2023-08-21)
+
+
+### Build System
+
+* **config:** proper env templates for all modules ([142c138](https://github.com/davidsneighbour/hugo-modules/commit/142c138c0f55e5820b149a8beed1ec5ef41031e0))
+* **fix:** proper env template file ([45bf679](https://github.com/davidsneighbour/hugo-modules/commit/45bf67990a826bdbb9908f75b7ca311b01b0e61f))
+* **fix:** proper tag name in post release script ([1651252](https://github.com/davidsneighbour/hugo-modules/commit/1651252496f61309624735cf4dd85d95b36fbef7))
+* **fix:** proper tagslugs for env files ([0847465](https://github.com/davidsneighbour/hugo-modules/commit/084746511c659966d2a0ba15e05b0fc7fdee576e))
+* **fix:** update release hooks and build system for hooks ([6e86a9c](https://github.com/davidsneighbour/hugo-modules/commit/6e86a9c9be27eb70d3b7a9dd68848502ef04a16f))
+
+
+### Chore
+
+* **release:** modules/pictures/v1.2023.2 ([f237d81](https://github.com/davidsneighbour/hugo-modules/commit/f237d81d5a1e5ceddbea26f9a4b11906d07e53a7))
+* **release:** modules/pictures/v1.2023.3 ([819ce8c](https://github.com/davidsneighbour/hugo-modules/commit/819ce8c31485d31fa4680e5e82f0c8dc81735ba5))
+* **release:** update repo data files ([572fffb](https://github.com/davidsneighbour/hugo-modules/commit/572fffbb6abe5c5429cf93409b356b141c4e947f))
+* **release:** update repo data files ([a3b109b](https://github.com/davidsneighbour/hugo-modules/commit/a3b109bf5bdc0acd6f959fe0403010f811f4f18f))
+* **release:** update repo data files ([9f9a85e](https://github.com/davidsneighbour/hugo-modules/commit/9f9a85e61bb00a79a8c530ba89c6df472594588e))
+
+
+### Features
+
+* **auditor:** add stylesheets for images with missing alt text ([6c74720](https://github.com/davidsneighbour/hugo-modules/commit/6c74720b97451b06b29107bb21996c0abe52ecbb))
+* image markdown render hook (wip) ([29789f8](https://github.com/davidsneighbour/hugo-modules/commit/29789f812b9e95067bf3b4526aaceafbfecab13b))
+* **publisher:** indizes (wip) ([295510e](https://github.com/davidsneighbour/hugo-modules/commit/295510e83ba3e6cdb3a0e35ef8b4b8d6a6dba2ce))
+
+
+### Bug Fixes
+
+* remove git tag slug after deletion ([fdcc846](https://github.com/davidsneighbour/hugo-modules/commit/fdcc846ae5941e7dfa8c1824144f169dd865a5bd))
+* remove hugo-humans (unused) ([6ffda68](https://github.com/davidsneighbour/hugo-modules/commit/6ffda68cb4d14b6048d845173179ba304c52cafb))
+
 ## [1.2023.7](https://github.com/davidsneighbour/hugo-modules/compare/modules/netlification/v1.2023.6...modules/netlification/v1.2023.7) (2023-08-20)
 
 
