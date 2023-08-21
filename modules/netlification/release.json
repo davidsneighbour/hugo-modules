@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/117989730",
-  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/117989730/assets",
-  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/117989730/assets{?name,label}",
-  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/netlification/v1.2023.8",
-  "id": 117989730,
+  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/117989856",
+  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/117989856/assets",
+  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/117989856/assets{?name,label}",
+  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/netlification/v1.2023.9",
+  "id": 117989856,
   "author": {
     "login": "davidsneighbour",
     "id": 83281,
@@ -24,18 +24,18 @@
     "type": "User",
     "site_admin": false
   },
-  "node_id": "RE_kwDOJOG8Gs4HCGFi",
-  "tag_name": "modules/netlification/v1.2023.8",
+  "node_id": "RE_kwDOJOG8Gs4HCGHg",
+  "tag_name": "modules/netlification/v1.2023.9",
   "target_commitish": "main",
-  "name": "modules/netlification/v1.2023.8",
+  "name": "modules/netlification/v1.2023.9",
   "draft": false,
   "prerelease": false,
   "created_at": "2023-08-20T21:36:03Z",
-  "published_at": "2023-08-21T11:52:59Z",
+  "published_at": "2023-08-21T11:54:09Z",
   "assets": [
 
   ],
-  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/netlification/v1.2023.8",
-  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/netlification/v1.2023.8",
+  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/netlification/v1.2023.9",
+  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/netlification/v1.2023.9",
   "body": null
 }
