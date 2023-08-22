@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.5](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.4...modules/pictures/v1.2023.5) (2023-08-22)
+
+
+### Chore
+
+* **release:** modules/robots/v1.2023.5 ([dd464cc](https://github.com/davidsneighbour/hugo-modules/commit/dd464ccebaa6c8168307c8903ee53da363085c9f))
+* **release:** update repo data files ([767c081](https://github.com/davidsneighbour/hugo-modules/commit/767c081eda23de7d35371de38f297663501cac6b))
+* **release:** update repo data files ([fa45d50](https://github.com/davidsneighbour/hugo-modules/commit/fa45d5043c1d4ec05e1b37875b77d36fd12c90b3))
+
 ## [1.2023.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.3...modules/pictures/v1.2023.4) (2023-08-22)
 
 
