@@ -1,5 +1,5 @@
 #!/bin/bash
-# v2023.08.22.01
+# v2023.08.22.02
 
 # exit verbose when any command fails
 set -e
@@ -53,14 +53,14 @@ TAGNAME=${TAGSLUG}/v${VERSION}
 curl \
   -X POST \
   -H "Accept: application/vnd.github+json" \
-  -H "Authorization: token ${GITHUB_SECRET}" https://api.github.com/repos/"${GITHUB_REPOSLUG}"/releases \
+  -H "Authorization: token ${GITHUB_SECRET}" \
+  https://api.github.com/repos/"${GITHUB_REPOSLUG}"/releases \
   -d "{ \
       \"tag_name\":\"${TAGNAME}\", \
       \"name\":\"${TAGNAME}\", \
       \"body\":\"${TAGNAME}\", \
-      \"draft\":false, \
-      \"prerelease\":false, \
-      \"generate_release_notes\":false \
+      \"generate_release_notes\":true \
+      \"discussion_category_name\":\"Releases\" \
   }" \
   >release.json
 
@@ -74,3 +74,4 @@ git push origin main --follow-tags
 # open release for editing
 RELEASEURL="$GITHUB_REPO"/"releases/edit/""$TAGNAME"
 xdg-open "${RELEASEURL}" &>>/dev/null
+
