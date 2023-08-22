@@ -1,5 +1,5 @@
 #!/bin/bash
-# v2023.08.22.02
+# v2023.08.22.03
 
 # exit verbose when any command fails
 set -e
@@ -59,7 +59,7 @@ curl \
       \"tag_name\":\"${TAGNAME}\", \
       \"name\":\"${TAGNAME}\", \
       \"body\":\"${TAGNAME}\", \
-      \"generate_release_notes\":true \
+      \"generate_release_notes\":true, \
       \"discussion_category_name\":\"Releases\" \
   }" \
   >release.json
@@ -74,4 +74,3 @@ git push origin main --follow-tags
 # open release for editing
 RELEASEURL="$GITHUB_REPO"/"releases/edit/""$TAGNAME"
 xdg-open "${RELEASEURL}" &>>/dev/null
-
