@@ -4,7 +4,7 @@ linktitle: hugo-robots
 description: This component for GoHugo adds a customizable robots.txt to your website.
 date: 2023-06-29T19:21:43+07:00
 publishDate: 2022-07-19T17:40:35+07:00
-lastmod: 2023-06-29T19:22:28+07:00
+lastmod: 2023-08-21T22:40:45+07:00
 resources:
   - src: header-card.png
 categories:
@@ -62,8 +62,9 @@ Configure the robots tag with the following individual configuration parameters 
 
 ```yaml
 config:
-  follow: true
-  index: false
+  robots:
+    follow: true
+    index: false
 ```
 
 Add or edit global defaults in the `[params]` section of `config.toml` or in `config/_defaults/params.toml`:

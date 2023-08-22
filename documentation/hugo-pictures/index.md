@@ -4,7 +4,7 @@ linkTitle: hugo-pictures
 description: This component for GoHugo adds partials and shortcodes to handle images on your website. It offers responsive image formats and optimisgit ed loading based on current browser abilities.
 date: 2023-08-21T19:03:35+07:00
 publishDate: 2023-08-21T19:03:35+07:00
-lastmod: 2023-08-21T19:08:05+07:00
+lastmod: 2023-08-22T19:33:50+07:00
 resources:
   - src: header-card.png
     name: aheader
@@ -23,6 +23,8 @@ component:
   list: true
   host: github.com
   user: davidsneighbour
+config:
+  band: gohugo
 ---
 
 This component for [GoHugo](https://gohugo.io/) adds partials and shortcodes to handle images on your website. It offers responsive image formats and optimised loading based on current browser abilities.

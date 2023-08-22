@@ -3,7 +3,6 @@
 Template for robots.txt
 
 - https://gohugo.io/templates/robots/
-- https://discourse.gohugo.io/t/custom-robots-txt-and-sitemap-xml-templates/11869/2
 
 Add "robotsdisallow: true" to frontmatter of entries to be disallowed.
 
@@ -45,6 +44,5 @@ Sitemap: {{ "sitemap.xml" | absLangURL }}
 {{- end -}}
 {{- end -}}
 {{- if eq $branding true }}
-# robots.txt is prepared by @davidsneighbour/hugo-robots
-# visit https://github.com/davidsneighbour/hugo-robots
+# robots.txt is prepared by https://github.com/davidsneighbour/hugo-modules/tree/main/modules/robots#readme
 {{ end -}}

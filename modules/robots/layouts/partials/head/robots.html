@@ -1,5 +1,14 @@
+{{/* @see https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag */}}
 {{- $config := .Params.config -}}
+{{- $configNew := .Params.options.robots -}}
+
 {{- $global := site.Params.dnb.robots -}}
+
+{{/*
+
+Check if $config is used, then warnf about it being deprecated
+
+*/}}
 
 {{- $follow := "follow" -}}
 {{- with $config.follow -}}
