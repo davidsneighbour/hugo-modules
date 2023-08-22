@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.3...modules/pictures/v1.2023.4) (2023-08-22)
+
+
+### Build System
+
+* **fix:** create component cards properly ([19b7e6e](https://github.com/davidsneighbour/hugo-modules/commit/19b7e6e97dc28806a5cf6ac28871ba8d6bccfa80))
+* **fix:** proper env template file ([45bf679](https://github.com/davidsneighbour/hugo-modules/commit/45bf67990a826bdbb9908f75b7ca311b01b0e61f))
+* **fix:** update release hooks and build system for hooks ([6e86a9c](https://github.com/davidsneighbour/hugo-modules/commit/6e86a9c9be27eb70d3b7a9dd68848502ef04a16f))
+
+
+### Chore
+
+* **release:** modules/netlification/v1.2023.8 ([05f5970](https://github.com/davidsneighbour/hugo-modules/commit/05f59702135f9c16a90b4a0910902004046406aa))
+* **release:** modules/netlification/v1.2023.9 ([63a1fbc](https://github.com/davidsneighbour/hugo-modules/commit/63a1fbc13d192ff74b65fa049639a8c88d592acb))
+* **release:** update repo data files ([a620bbf](https://github.com/davidsneighbour/hugo-modules/commit/a620bbf4b4712d5244c8c83e13f741fdcf33b446))
+* **release:** update repo data files ([c79593f](https://github.com/davidsneighbour/hugo-modules/commit/c79593fc0dde76d1b8e4f56aaa0d813aa0c77f74))
+* **release:** update repo data files ([572fffb](https://github.com/davidsneighbour/hugo-modules/commit/572fffbb6abe5c5429cf93409b356b141c4e947f))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.33 ([#183](https://github.com/davidsneighbour/hugo-modules/issues/183)) ([93b75f9](https://github.com/davidsneighbour/hugo-modules/commit/93b75f93d52863b72f45f0f94b7a781501d5827f))
+* remove hugo-humans (unused) ([f90994f](https://github.com/davidsneighbour/hugo-modules/commit/f90994f37609ba905da33fecbdd7fdae6f978bb8))
+* various fixes in robots and pictures ([7df146d](https://github.com/davidsneighbour/hugo-modules/commit/7df146d8e1166ec8f9f3c2af146e277af5d7879f))
+
 ## [1.2023.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.2...modules/pictures/v1.2023.3) (2023-08-20)
 
 
