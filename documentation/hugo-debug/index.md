@@ -5,7 +5,7 @@ description: Debug everything in Hugo!
 summary: This module for GoHugo adds debugging partials for many use cases.
 date: 2022-07-27T21:17:03+07:00
 publishDate: 2022-07-27T21:17:03+07:00
-lastmod: 2023-05-09T19:15:22+07:00
+lastmod: 2023-08-22T20:13:33+07:00
 resources:
   - src: header-card.png
 categories:
@@ -20,6 +20,8 @@ component:
   user: davidsneighbour
   status: release
   list: true
+config:
+  band: gohugo
 ---
 
 This module for GoHugo adds debugging partials for everything you need to debug.

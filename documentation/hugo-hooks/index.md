@@ -1,11 +1,11 @@
 ---
 title: Hooks
 linktitle: hugo-hooks
-description: ''
-summary: ''
+description: ""
+summary: ""
 date: 2022-07-27T21:23:50+07:00
 publishDate: 2022-07-27T21:23:50+07:00
-lastmod: 2023-05-09T19:18:43+07:00
+lastmod: 2023-08-22T20:13:52+07:00
 resources:
   - src: header-card.png
 categories:
@@ -20,6 +20,8 @@ component:
   user: davidsneighbour
   status: release
   list: true
+config:
+  band: gohugo
 ---
 
 Hooks for GoHugo layouts. An easy way for theme developers to let users add partials and blocks at pre-defined safe places to their themes.

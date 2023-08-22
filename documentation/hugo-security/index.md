@@ -1,11 +1,11 @@
 ---
 title: Security
 linkTitle: hugo-security
-description: ''
-summary: ''
+description: ""
+summary: ""
 date: 2022-07-28T20:51:08+07:00
 publishDate: 2022-07-28T20:51:08+07:00
-lastmod: 2023-05-09T19:16:01+07:00
+lastmod: 2023-08-22T20:14:27+07:00
 resources:
   - src: header-card.png
 categories:
@@ -20,6 +20,8 @@ component:
   user: davidsneighbour
   status: release
   list: true
+config:
+  band: gohugo
 ---
 
 This module adds a security.txt file to your Hugo website with information about your preferred procedures to notify the developer team of your website about security issues on your website. Read more about [security.txt](https://securitytxt.org/), a proposed standard which allows websites to define security policies.

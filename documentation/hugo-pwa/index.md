@@ -3,28 +3,25 @@ title: PWA
 linkTitle: hugo-pwa
 description: ""
 summary: ""
-
 date: 2022-07-28T20:50:54+07:00
 publishDate: 2022-07-28T20:50:54+07:00
-lastmod: 2022-08-03T21:46:37+07:00
-
+lastmod: 2023-08-22T20:14:15+07:00
 resources:
   - src: header-card.png
-
 categories:
   - components
-
 tags:
   - gohugo
   - component
   - seo
-
 component:
   slug: hugo-pwa
   host: github.com
   user: davidsneighbour
   status: release
   list: true
+config:
+  band: gohugo
 ---
 
 This is a Hugo theme component with helpers to convert your static [GoHugo](https://gohugo.io/) website into a [PWA](https://web.dev/progressive-web-apps/).

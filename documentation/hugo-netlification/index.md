@@ -3,28 +3,25 @@ title: Netlification
 linkTitle: hugo-netlification
 description: ""
 summary: ""
-
 date: 2022-07-28T20:48:52+07:00
 publishDate: 2022-07-28T20:48:52+07:00
-lastmod: 2022-08-07T20:10:51+07:00
-
+lastmod: 2023-08-22T20:14:04+07:00
 resources:
   - src: header-card.png
-
 categories:
   - components
-
 tags:
   - gohugo
   - component
   - seo
-
 component:
   slug: hugo-netlification
   host: github.com
   user: davidsneighbour
   status: release
   list: true
+config:
+  band: gohugo
 ---
 
 This is a Hugo theme component with helpers to host your [GoHugo](https://gohugo.io/) generated static website on [Netlify](https://www.netlify.com/). If you don't use Netlify, you DO NOT need this module.

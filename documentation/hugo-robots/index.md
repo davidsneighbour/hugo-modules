@@ -4,7 +4,7 @@ linktitle: hugo-robots
 description: This component for GoHugo adds a customizable robots.txt to your website.
 date: 2023-06-29T19:21:43+07:00
 publishDate: 2022-07-19T17:40:35+07:00
-lastmod: 2023-08-21T22:40:45+07:00
+lastmod: 2023-08-22T20:14:22+07:00
 resources:
   - src: header-card.png
 categories:
@@ -20,6 +20,8 @@ component:
   user: davidsneighbour
   status: release
   list: true
+config:
+  band: gohugo
 ---
 
 This component for [GoHugo](https://gohugo.io/) adds a customizable robots.txt to your website. This module overrides the internal robots.txt generation of Hugo and lets you configure what robots.txt in your public folder will contain. It also offers a meta-robots tag for your head section.

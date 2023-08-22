@@ -4,7 +4,7 @@ linktitle: hugo-head
 summary: ""
 date: 2023-06-30T17:31:25+07:00
 publishDate: 2022-07-27T21:25:17+07:00
-lastmod: 2023-06-30T17:31:32+07:00
+lastmod: 2023-08-22T20:13:48+07:00
 resources:
   - src: header-card.png
 categories:
@@ -19,6 +19,8 @@ component:
   user: davidsneighbour
   status: release
   list: true
+config:
+  band: gohugo
 ---
 
 This is a GoHugo theme component that solves the old question "What tags belong into the `<head>` tag of my website?" Set it up, configure it, forget it's there. This component adds a multitude of tags and is extensively configurable.

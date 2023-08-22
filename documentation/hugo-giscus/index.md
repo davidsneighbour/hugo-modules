@@ -5,7 +5,7 @@ description: ""
 summary: ""
 date: 2022-08-16T20:28:30+07:00
 publishDate: 2022-08-16T20:28:30+07:00
-lastmod: 2023-04-14T23:57:12+07:00
+lastmod: 2023-08-22T20:13:43+07:00
 resources:
   - src: header-card.png
 categories:
@@ -20,6 +20,8 @@ component:
   list: true
   host: github.com
   user: davidsneighbour
+config:
+  band: gohugo
 ---
 
 This is a Hugo theme component to add the [Giscus comment system](https://giscus.app/), powered by GitHub Discussions, to static websites.

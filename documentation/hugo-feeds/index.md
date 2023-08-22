@@ -2,28 +2,25 @@
 title: Feeds
 linktitle: hugo-feeds
 summary: ""
-
 date: 2022-07-27T18:34:57+07:00
 publishDate: 2022-07-27T18:34:57+07:00
-lastmod: 2022-08-03T21:47:05+07:00
-
+lastmod: 2023-08-22T20:13:36+07:00
 resources:
   - src: header-card.png
-
 categories:
   - components
-
 tags:
   - gohugo
   - component
   - design
-
 component:
   slug: hugo-feeds
   host: github.com
   user: davidsneighbour
   status: release
   list: true
+config:
+  band: gohugo
 ---
 
 This is a GoHugo theme component that implements various configurable feed formats. Currently implemented formats are RSS, Atom and JSONfeed.
