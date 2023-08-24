@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/114402809",
-  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/114402809/assets",
-  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/114402809/assets{?name,label}",
-  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/auditor/v1.2023.11",
-  "id": 114402809,
+  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/118572088",
+  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/118572088/assets",
+  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/118572088/assets{?name,label}",
+  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/auditor/v1.2023.12",
+  "id": 118572088,
   "author": {
     "login": "davidsneighbour",
     "id": 83281,
@@ -24,18 +24,19 @@
     "type": "User",
     "site_admin": false
   },
-  "node_id": "RE_kwDOJOG8Gs4G0aX5",
-  "tag_name": "modules/auditor/v1.2023.11",
+  "node_id": "RE_kwDOJOG8Gs4HEUQ4",
+  "tag_name": "modules/auditor/v1.2023.12",
   "target_commitish": "main",
-  "name": "modules/auditor/v1.2023.11",
+  "name": "modules/auditor/v1.2023.12",
   "draft": false,
   "prerelease": false,
-  "created_at": "2023-07-30T15:05:21Z",
-  "published_at": "2023-07-30T15:09:46Z",
+  "created_at": "2023-08-22T14:53:03Z",
+  "published_at": "2023-08-24T14:37:39Z",
   "assets": [
 
   ],
-  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/auditor/v1.2023.11",
-  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/auditor/v1.2023.11",
-  "body": null
+  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/auditor/v1.2023.12",
+  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/auditor/v1.2023.12",
+  "body": "modules/auditor/v1.2023.12\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.7...modules/auditor/v1.2023.12",
+  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/186"
 }
