@@ -1,10 +1,10 @@
 ---
 title: Pictures
 linkTitle: hugo-pictures
-description: This component for GoHugo adds partials and shortcodes to handle images on your website. It offers responsive image formats and optimisgit ed loading based on current browser abilities.
+description: This component for GoHugo adds partials and shortcodes to resolve and process images on your website. It offers responsive image formats and optimisgit ed loading based on current browser abilities.
 date: 2023-08-21T19:03:35+07:00
 publishDate: 2023-08-21T19:03:35+07:00
-lastmod: 2023-08-22T19:33:50+07:00
+lastmod: 2023-08-24T19:54:45+07:00
 resources:
   - src: header-card.png
     name: aheader
@@ -17,6 +17,8 @@ tags:
   - gohugo
   - component
   - seo
+  - markdown
+  - media
 component:
   slug: hugo-pictures
   status: prerelease
@@ -27,7 +29,7 @@ config:
   band: gohugo
 ---
 
-This component for [GoHugo](https://gohugo.io/) adds partials and shortcodes to handle images on your website. It offers responsive image formats and optimised loading based on current browser abilities.
+This component for [GoHugo](https://gohugo.io/) adds partials and shortcodes to resolve and process images on your website. It offers responsive image formats and optimised loading based on current browser abilities.
 
 {{< b5/notice type="danger" heading="Work in progress!" >}}
 Check back for better documentation and more features. The following documentation is, as long as this note is here, only partial and might be missing important points. If you have any questions, or ideas, please [add an issue to the issue tracker](https://github.com/davidsneighbour/hugo-blockify/issues).
@@ -145,7 +147,7 @@ Notes about:
 
 - [A list of up to date best practices for web images by nucliweb](https://github.com/nucliweb/image-element) (those practices are all implemented in this module)
 
-## Samples
+## Usage Examples
 
 ### Markdown Render Hook
 
@@ -156,13 +158,13 @@ Notes about:
 ![Dog 1](dog-1.jpg)
 
 ```markdown
-![Dog 2](dog-2.jpg)
+![Dog 2](dog-2.jpg "with a title text")
 ```
 
 ![Dog 2](dog-2.jpg)
 
 ```markdown
-![Dog 3](dog-3.jpg)
+![Dog 3](dog-3.jpg?size=wide "with css-processed instructions")
 ```
 
 ![Dog 3](dog-3.jpg)
