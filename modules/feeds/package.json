@@ -1,7 +1,7 @@
 {
 	"name": "@davidsneighbour/hugo-feeds",
 	"description": "Feeds for GoHugo websites",
-	"version": "1.2023.5",
+	"version": "1.2023.6",
 	"license": "MIT",
 	"private": true,
 	"repository": {
