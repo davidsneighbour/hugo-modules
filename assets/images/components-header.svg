@@ -2,38 +2,12 @@
 <svg
   version="1.1"
   viewBox="0 0 1280 640"
-  id="svg14"
-  sodipodi:docname="components-header.svg"
-  inkscape:version="1.3 (1:1.3+202307231459+0e150ed6c4)"
-  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-    id="namedview1"
-    pagecolor="#ffffff"
-    bordercolor="#000000"
-    borderopacity="0.25"
-    inkscape:showpageshadow="2"
-    inkscape:pageopacity="0.0"
-    inkscape:pagecheckerboard="0"
-    inkscape:deskcolor="#d1d1d1"
-    inkscape:zoom="0.51640625"
-    inkscape:cx="640"
-    inkscape:cy="319.51589"
-    inkscape:window-width="1866"
-    inkscape:window-height="1021"
-    inkscape:window-x="54"
-    inkscape:window-y="22"
-    inkscape:window-maximized="1"
-    inkscape:current-layer="svg14" />
-  <defs
-    id="defs13" />
   <rect
     width="1280"
     height="640"
-    fill="#fdf6e3"
-    id="rect4" />
+    fill="#0a1922" />
   <text
     transform="scale(1.0371969,0.96413709)"
     x="54.857788"
@@ -43,15 +17,13 @@
     font-size="42.7401px"
     stroke-width="1.6028"
     style="line-height:1.25"
-    xml:space="preserve"
-    id="text8"><tspan
+    xml:space="preserve"><tspan
        x="54.857788"
        y="472.20642"
        fill="#ff4088"
        font-family="'Tomkin Narrow'"
        font-size="42.7401px"
-       stroke-width="1.6028"
-       id="tspan6">GoHugo Components by DNB</tspan></text>
+       stroke-width="1.6028">GOHUGO COMPONENTS by DNB</tspan></text>
   <text
     transform="scale(1.0372,0.96414)"
     x="45.881981"
@@ -61,18 +33,15 @@
     font-size="170.96px"
     stroke-width="1.6028"
     style="line-height:1.25;display:inline"
-    xml:space="preserve"
-    id="text12"><tspan
+    xml:space="preserve"><tspan
        x="45.881981"
        y="601.56543"
        fill="#ff4088"
        font-family="'Tomkin Condense'"
        font-weight="bold"
-       stroke-width="1.6028"
-       id="tspan1"><tspan
-         style="font-size:140px"
-         id="componentname">NAME<tspan
-         style="font-size:70px"
-         id="componentversion">NAME</tspan></tspan>
-        </tspan></text>
+       stroke-width="1.6028"><tspan
+   style="font-size:140px"
+   id="componentname">NAME<tspan
+   style="font-size:70px"
+   id="componentversion">NAME</tspan></tspan>&#10;        </tspan></text>
 </svg>
