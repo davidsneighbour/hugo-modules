@@ -1,0 +1,7 @@
+{{- $path := . -}}
+{{- $localimage := dict -}}
+{{- $localimage := page.Resources.GetMatch $path -}}
+{{- with $localimage -}}{{- else -}}
+  {{- $localimage := resources.Get $path -}}
+{{- end -}}
+{{- return $localimage -}}

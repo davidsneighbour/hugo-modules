@@ -4,7 +4,7 @@ linkTitle: hugo-pictures
 description: This component for GoHugo adds partials and shortcodes to resolve and process images on your website. It offers responsive image formats and optimisgit ed loading based on current browser abilities.
 date: 2023-08-21T19:03:35+07:00
 publishDate: 2023-08-21T19:03:35+07:00
-lastmod: 2023-08-24T19:54:45+07:00
+lastmod: 2023-09-02T17:46:11+07:00
 resources:
   - src: header-card.png
     name: aheader
@@ -33,6 +33,10 @@ This component for [GoHugo](https://gohugo.io/) adds partials and shortcodes to 
 
 {{< b5/notice type="danger" heading="Work in progress!" >}}
 Check back for better documentation and more features. The following documentation is, as long as this note is here, only partial and might be missing important points. If you have any questions, or ideas, please [add an issue to the issue tracker](https://github.com/davidsneighbour/hugo-blockify/issues).
+
+Known Issues:
+
+- currently only works with page bundle images
 {{< / b5/notice >}}
 
 ## Notes
@@ -169,6 +173,18 @@ Notes about:
 
 ![Dog 3](dog-3.jpg)
 
+```markdown
+![Assets Cat](images/pictures/assets-cat.jpg "cat picture from the assets directory")
+```
+
+![Assets Cat](images/pictures/assets-cat.jpg "cat picture from the assets directory")
+
+```markdown
+![Static Cat](/dnb/modules/pictures/static-cat.jpg "cat picture from the static directory")
+```
+
+![Static Cat](/dnb/modules/pictures/static-cat.jpg "cat picture from the static directory")
+
 ## Sample Photo Sources
 
-- [Dog 1](https://unsplash.com/photos/PjgeDNHhg_8), [Dog 2](https://unsplash.com/photos/itru42lAV6E), [Dog 3](https://unsplash.com/photos/ah63B7-mo3w) --- License: [Unsplash+ License](https://unsplash.com/plus/license)
+- [Dog 1](https://unsplash.com/photos/PjgeDNHhg_8), [Dog 2](https://unsplash.com/photos/itru42lAV6E), [Dog 3](https://unsplash.com/photos/ah63B7-mo3w), [Static Cat](https://unsplash.com/photos/YQlNLVYckRk), [Assets Cat](https://unsplash.com/photos/67HBaxCvA8M) --- License: [Unsplash+ License](https://unsplash.com/plus/license)

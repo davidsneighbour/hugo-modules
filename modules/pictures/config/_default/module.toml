@@ -3,12 +3,20 @@ extended = true
 min = "0.95.0"
 
 [[mounts]]
+source = 'assets'
+target = 'assets'
+
+[[mounts]]
 source = 'data'
 target = 'data'
 
 [[mounts]]
 source = 'layouts'
 target = 'layouts'
+
+[[mounts]]
+source = 'static'
+target = 'static'
 
 [[imports]]
 # see https://github.com/aFarkas/lazysizes for details

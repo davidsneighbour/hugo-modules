@@ -1,3 +1,10 @@
 [[mounts]]
 source = "documentation/"
 target = "content/components"
+
+[[mounts]]
+source = "assets"
+target = "assets"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/pictures"

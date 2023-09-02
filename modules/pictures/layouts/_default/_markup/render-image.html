@@ -1,7 +1,12 @@
 {{- $context := page -}}
 {{- $label := .Text -}}
 {{- $src := .Destination -}}
-{{- $localimage := $context.Resources.GetMatch $src -}}
+
+{{- warnf "%s" $src -}}
+
+{{- $localimage := partial "func/pictures/getImageResource.html" $src $src -}}
+
+{{- warnf "image: %s" $localimage -}}
 
 {{/* setup */}}
 {{- $link := false -}}
