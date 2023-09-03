@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.20](https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.19...modules/social/v0.1.20) (2023-09-03)
+
+
+### Chore
+
+* **release:** modules/pictures/v1.2023.9 ([1d6d084](https://github.com/davidsneighbour/hugo-modules/commit/1d6d084b53af09623eceab09c9ada57a6bfda7c5))
+* **release:** update repo data files ([2eef3c8](https://github.com/davidsneighbour/hugo-modules/commit/2eef3c856c7610b014dbdf215b3333e5591bc13c))
+* **release:** update repo data files ([437f01c](https://github.com/davidsneighbour/hugo-modules/commit/437f01ce9deb1670819ac5e4a13a111e10e865e2))
+
+
+### Bug Fixes
+
+* proper image handling for open graph preview ([a3d4498](https://github.com/davidsneighbour/hugo-modules/commit/a3d449803418366e40e752d5f6ea935018e26e76))
+
 ## [0.1.19](https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.18...modules/social/v0.1.19) (2023-09-03)
 
 

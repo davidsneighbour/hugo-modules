@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-social",
   "description": "Social Media functions for Hugo",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "license": "MIT",
   "private": true,
   "repository": {
