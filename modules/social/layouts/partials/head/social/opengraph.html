@@ -84,7 +84,8 @@
 {{- $images := .Resources.ByType "image" -}}
 {{- with $images -}}
 {{- range first 1 . -}}
-{{- $image := .Resize "1200x630" -}}
+{{- $image = .Resize "1200x" -}}
+{{- $image = $image | .Crop "1200x630" -}}
 {{- $metaProperty = (dict
 				"property" "og:image"
 				"content" $image.Permalink) -}}
