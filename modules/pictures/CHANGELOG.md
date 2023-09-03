@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.10](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.9...modules/pictures/v1.2023.10) (2023-09-03)
+
+
+### Chore
+
+* **release:** modules/social/v0.1.20 ([e30f86c](https://github.com/davidsneighbour/hugo-modules/commit/e30f86cda2ccccafd9f29a5ea73af54c7dd467cb))
+* **release:** modules/social/v0.1.21 ([dbd9e3b](https://github.com/davidsneighbour/hugo-modules/commit/dbd9e3bed7b2325479601018e252e0d3834b216b))
+* **release:** update repo data files ([a405095](https://github.com/davidsneighbour/hugo-modules/commit/a4050950677994c0f20ee902a246a9ec68bb27a5))
+* **release:** update repo data files ([bb1fa8c](https://github.com/davidsneighbour/hugo-modules/commit/bb1fa8c33121d115b2ccf4bb543b626646ce6cd2))
+* **release:** update repo data files ([2eef3c8](https://github.com/davidsneighbour/hugo-modules/commit/2eef3c856c7610b014dbdf215b3333e5591bc13c))
+
+
+### Documentation
+
+* update documentation for pictures module ([195b8b4](https://github.com/davidsneighbour/hugo-modules/commit/195b8b4b58b66aec71c0162dfd99db4b98d7f803))
+
+
+### Bug Fixes
+
+* not enough pixel data on processing ([d0c6508](https://github.com/davidsneighbour/hugo-modules/commit/d0c6508b51a5f79916f9ffa725a25d657d9c308b))
+
 ## [1.2023.9](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.8...modules/pictures/v1.2023.9) (2023-09-03)
 
 
