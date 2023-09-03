@@ -4,7 +4,7 @@ linkTitle: hugo-pictures
 description: This component for GoHugo adds partials and shortcodes to resolve and process images on your website. It offers responsive image formats and optimisgit ed loading based on current browser abilities.
 date: 2023-08-21T19:03:35+07:00
 publishDate: 2023-08-21T19:03:35+07:00
-lastmod: 2023-09-02T17:46:11+07:00
+lastmod: 2023-09-03T21:41:54+07:00
 resources:
   - src: header-card.png
     name: aheader
@@ -31,6 +31,8 @@ config:
 
 This component for [GoHugo](https://gohugo.io/) adds partials and shortcodes to resolve and process images on your website. It offers responsive image formats and optimised loading based on current browser abilities.
 
+The simplest way is to use this module as a drop-in. Just install it and forget you ever did. It will work out of the box with the default settings and replace the internal handling of image markdown (`![alt text](image path)`) and the `{{</* figure */>}}` shortcode. You can adapt it's features to your needs by using the partials and global configuration options.
+
 {{< b5/notice type="danger" heading="Work in progress!" >}}
 Check back for better documentation and more features. The following documentation is, as long as this note is here, only partial and might be missing important points. If you have any questions, or ideas, please [add an issue to the issue tracker](https://github.com/davidsneighbour/hugo-blockify/issues).
 
@@ -39,19 +41,36 @@ Known Issues:
 - currently only works with page bundle images
 {{< / b5/notice >}}
 
+- [Notes](#notes)
+- [Shortcodes](#shortcodes)
+  - [Figure Shortcode](#figure-shortcode)
+    - [Parameters](#parameters)
+    - [Notes](#notes-1)
+  - [Gallery Shortcode](#gallery-shortcode)
+    - [Parameters](#parameters-1)
+- [Partials](#partials)
+  - [Figure Partial](#figure-partial)
+  - [Gallery Partial](#gallery-partial)
+- [Global Configuration](#global-configuration)
+- [Optimisation](#optimisation)
+- [Further Readings](#further-readings)
+- [Usage Examples](#usage-examples)
+  - [Markdown Render Hook](#markdown-render-hook)
+- [Sample Photo Sources](#sample-photo-sources)
+
 ## Notes
 
 - Image processing (aka. resizing, filters, cropping etc) is only available in Global and Page Resources. Global Resources are located in the `assets` folder of your repository, Page Resources are located within the `content` directory with your content files in so called Page Bundles. The images in your `static` directory are loaded as they are, not processed (other than evaluation of content type and sizing) and will not result in responsive image tags. All other features or options will work.
-- Lookup of images:
+- Lookup order of images:
   - page bundle
-  - global resources
+  - global resources (`assets`` folder)
   - static folder
-  - warning about image not found on CLI
-- using `name` implies page resource and no further lookup will be done after image is not found
+  - after that, a warning about the image not being found is issued on CLI and on the page itself it fails silently
+- Using the `name` attribute implies that page resources are used, and no further lookup will be done if the image is not found in the page bundle.
 
 ## Shortcodes
 
-Available shortcodes currently are `figure` and `gallery`. Those shortcodes are served by partials that you can use in your own layout files with more extensive configurability. `figure` overrides the GoHugo internal `figure` shortcode.
+Available shortcodes currently are `image`, `figure` and `gallery`. Those shortcodes are served by partials that you can use in your own layout files with more extensive configurability. `figure` overrides the GoHugo internal `figure` shortcode. All shortcodes add responsive image processing and markup to your website.
 
 ### Figure Shortcode
 
@@ -72,30 +91,40 @@ With named parameters:
 {{</* figure name="resource name" title="" alt="" */>}}caption{{</* /figure */>}}
 ```
 
-For now we think about device pixel ratios up to 4. (<-- NOTE: what did we mean by that? Probably a 4xdpi thingy?)
-
 #### Parameters
 
-| option | type | notes |
+| Option | Type | Notes |
 | --- | --- | --- |
-| `name` | string | resource name to show (resources are defined in frontmatter or it's the filename of the image in a page bundle |
-| `src` | string | image to show (optional). must be relative to the static folder |
-| `link` | string | link the image to something |
-| `linktarget` | string | target of the link (typically you would want `_blank` as value for a new window, but anything goes here) |
-| `class` | string | additional classes for the image (Note: not sure if image or figure tag) |
-| `alt` | string | alt attribute for the image (optional, suggested) |
-| `title` | string | title attribute for the image (optional) |
-| `command` | string | command for image processing (optional, required with `options`) |
-| `options` | string | options for image processing (optional, required with `command`) |
-| `width` | number | width of the image (optional, could be evaluated from the resulting image) |
-| `height` | number | height of the image (optional, could be evaluated from the resulting image) |
+| `name` | string | Resource name to show (*required*, if no `src` parameter is used, resources are defined in frontmatter or it's the filename of the image in a page bundle) |
+| `src` | string | Image to show (*required*, if no `name` parameter is used). must be relative to the static folder |
+| `link` | string | Links the image to an URL |
+| `linktarget` | string | Target of the link (*optional*, default is to open the link in the same tab. Typically you would want `_blank` as value for a new window, but anything goes here) |
+| `class` | string | Additional classes for the image (*optional*) |
+| `alt` | string | `alt` attribute for the image (*optional*, suggested) |
+| `title` | string | `title` attribute for the image (*optional*) |
+| `command` | string | Command for image processing (*optional*, required with `options`) |
+| `options` | string | Options for image processing (*optional*, required with `command`) |
+| `width` | number | Width of the image (*optional*, could be evaluated from the resulting image) |
+| `height` | number | Height of the image (*optional*, could be evaluated from the resulting image) |
 
-Tagvariants:
+#### Notes
+
+**Tagvariants:**
 
 ```go-html-template
 {{</* figure */>}}Something{{</* /figure */>}}
-{{</* figure */>}}
+{{</* figure title="Something" */>}}
 ```
+
+The two samples above have the same output. Using the `title`-attribute removes the requirement to add a closing tag. But you can add as much markdown/formatting to your caption by using an opening and closing tag for the shortcode. While the title tag is "markdownified", this might be an easier way to add more complex content to your caption.
+
+**Commands:**
+
+TODO: Currently this allows for only one `command`/`options` combination. The future way will be to add an "array" of commands and options that are executed successively.
+
+**Image Shortcode:**
+
+The `{{</* image */>}}` shortcode is a synonym for the `{{</* figure */>}}` shortcode and has the same features/options. It is added for compatibility with older implementations and themes.
 
 ### Gallery Shortcode
 
@@ -103,11 +132,17 @@ to be written.
 
 Notes: right now it expects a galleryid parameter for a folder inside of pagebundle/gallery/galleryid and a type for bootstrap4 or bootstrap5. All images in that directory are parsed and shown. No sorting (todo), no gallery selection by frontmatter (todo).
 
+#### Parameters
+
+| Option | Type | Notes |
+| --- | --- | --- |
+| | | |
+
 ## Partials
 
 ### Figure Partial
 
-The figure partial executes the end of the shortcode (wording?) and can be called with an options dictionary of the following format:
+The figure partial executes the markdown creation of single images and can be called with an options dictionary of the following content:
 
 ```json { single=true }
 {
@@ -126,15 +161,33 @@ The figure partial executes the end of the shortcode (wording?) and can be calle
 
 ### Gallery Partial
 
-## Configuration
+To be written.
 
-### global Configuration
+## Global Configuration
 
 To be written.
 
-### configuration per shortcode/partial
-
-Should be explained in their own chapters above.
+```toml
+################################################################################
+# hugo-pictures
+################################################################################
+[dnb.pictures]
+default_image = "images/og_sitewide.png"
+# 16:9, 4:3, 1:1 or whatever ratio you want for thumbnails
+# this needs to be a string and needs to be two floats separated by a colon
+# aspect_ratio = "16:9"
+# changing this requires changes in assets/scss/components/_figure.scss
+aspect_ratio = "2:1"
+[dnb.pictures.responsive]
+# collection of image sizes for responsive image sizes. this takes the aspect_ratio
+# above into account, so only the long side length is required here.
+[dnb.pictures.responsive.fullwidth]
+image_sizes = ["494", "517", "674", "914"]
+break_points = ["520", "540", "720", "960"]
+[dnb.pictures.responsive.halfwidth]
+image_sizes = ["494", "517"]
+break_points = ["520", "540"]
+```
 
 ## Optimisation
 
