@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.12](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.10...modules/pictures/v1.2023.12) (2023-09-04)
+
+
+### Chore
+
+* **release:** modules/pictures/v1.2023.11 ([9abd2c2](https://github.com/davidsneighbour/hugo-modules/commit/9abd2c22e1e3c9f6b9a50c3ce6053aebb021f647))
+* **release:** update repo data files ([92cc1d3](https://github.com/davidsneighbour/hugo-modules/commit/92cc1d3c66e57d2eea29741d98fee41483c5c4f6))
+* **release:** update repo data files ([d70b639](https://github.com/davidsneighbour/hugo-modules/commit/d70b639d8b7afe1f910fca4e9dd34b7826b0bb42))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.37 ([#203](https://github.com/davidsneighbour/hugo-modules/issues/203)) ([97c2818](https://github.com/davidsneighbour/hugo-modules/commit/97c2818add1eac88337d024381cafd4198ef239d))
+* several fixes to image processing and locating the image ([e314dfb](https://github.com/davidsneighbour/hugo-modules/commit/e314dfbae87a02c75b7c0ab0a7eedfc5bd833dd4))
+
 ## [1.2023.11](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.10...modules/pictures/v1.2023.11) (2023-09-04)
 
 
