@@ -2,55 +2,60 @@
 {{- $label := .Text -}}
 {{- $src := .Destination -}}
 
-{{- warnf "%s" $src -}}
-
-{{- $localimage := partial "func/pictures/getImageResource.html" $src $src -}}
-
-{{- warnf "image: %s" $localimage -}}
-
-{{/* setup */}}
-{{- $link := false -}}
-{{- $aspect_ratio := partialCached "func/pictures/getAspectRatio.html" . -}}
-{{- $image_sizes := partialCached "func/pictures/getImageSizes.html" . -}}
-{{- $break_points := partialCached "func/pictures/getBreakPoints.html" . -}}
-
-{{/* preparing aspect_ratio image sizes - once sitewide */}}
-{{- $arOptions := dict "image_sizes" $image_sizes "aspect_ratio" $aspect_ratio -}}
-{{- $image_sizes2 := partialCached "func/pictures/getAspectRatioImagesizes.html" $arOptions $arOptions -}}
-
 {{/* retrieve the article image */}}
-{{- warnf "image loaded: %s" $localimage -}}
-
-{{- with $localimage -}}
-
-  {{- $image := . -}}
-
-  {{- warnf "processing image: %s" $image.Permalink -}}
-
-  {{- $title := "" -}}
-  {{/* if a title is set via frontmatter then use it as caption */}}
-  {{- if ne $image.Title $image.Name -}}
-    {{- $title = $image.Title | markdownify -}}
-  {{- end -}}
-
-  {{- $images := slice -}}
-  {{- if eq .MediaType.SubType "svg" -}}{{/* no image processing for non-raster images */}}
-    {{- $images = $images | append $localimage -}}
-  {{- else -}}
-    {{- range $index, $value := $image_sizes -}}
-      {{- if ge $localimage.Width $value -}}
-        {{- $imagesize := printf "%sx" (string $value) -}}
-        {{- $images = $images | append ($image.Resize $imagesize) -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
+{{ warnf "image: %s" $src}}
+{{- $localimage := partial "func/pictures/getImageResource.html" $src $src -}}
+{{- if eq false $localimage -}}
 
   {{- $imageOptions := dict
-      "images" $images
-      "link" $link
-      "break_points" $break_points
-      "title" $title
-      "context" $context -}}
-  {{- partial "images/markup-image.html" $imageOptions -}}
+      "image" $src
+      "title" $label -}}
+  {{- partial "images/markup-image-simple.html" $imageOptions -}}
+
+{{- else -}}
+
+  {{/* setup */}}
+  {{- $link := false -}}
+  {{- $aspect_ratio := partialCached "func/pictures/getAspectRatio.html" . -}}
+  {{- $image_sizes := partialCached "func/pictures/getImageSizes.html" . -}}
+  {{- $break_points := partialCached "func/pictures/getBreakPoints.html" . -}}
+
+  {{/* preparing aspect_ratio image sizes - once sitewide */}}
+  {{- $arOptions := dict "image_sizes" $image_sizes "aspect_ratio" $aspect_ratio -}}
+  {{- $image_sizes2 := partialCached "func/pictures/getAspectRatioImagesizes.html" $arOptions $arOptions -}}
+
+  {{- with $localimage -}}
+
+    {{- $image := . -}}
+
+    {{- warnf "processing image: %s" $image.Permalink -}}
+
+    {{- $title := "" -}}
+    {{/* if a title is set via frontmatter then use it as caption */}}
+    {{- if ne $image.Title $image.Name -}}
+      {{- $title = $image.Title | markdownify -}}
+    {{- end -}}
+
+    {{- $images := slice -}}
+    {{- if eq .MediaType.SubType "svg" -}}{{/* no image processing for non-raster images */}}
+      {{- $images = $images | append $localimage -}}
+    {{- else -}}
+      {{- range $index, $value := $image_sizes -}}
+        {{- if ge $localimage.Width $value -}}
+          {{- $imagesize := printf "%sx" (string $value) -}}
+          {{- $images = $images | append ($image.Resize $imagesize) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- $imageOptions := dict
+        "images" $images
+        "link" $link
+        "break_points" $break_points
+        "title" $title
+        "context" $context -}}
+    {{- partial "images/markup-image.html" $imageOptions -}}
+
+  {{- end -}}
 
 {{- end -}}

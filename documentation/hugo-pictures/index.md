@@ -4,7 +4,7 @@ linkTitle: hugo-pictures
 description: This component for GoHugo adds partials and shortcodes to resolve and process images on your website. It offers responsive image formats and optimisgit ed loading based on current browser abilities.
 date: 2023-08-21T19:03:35+07:00
 publishDate: 2023-08-21T19:03:35+07:00
-lastmod: 2023-09-03T21:41:54+07:00
+lastmod: 2023-09-04T21:35:53+07:00
 resources:
   - src: header-card.png
     name: aheader
@@ -38,7 +38,7 @@ Check back for better documentation and more features. The following documentati
 
 Known Issues:
 
-- currently only works with page bundle images
+- currently only works with page bundle and asset images
 {{< / b5/notice >}}
 
 - [Notes](#notes)
@@ -63,7 +63,7 @@ Known Issues:
 - Image processing (aka. resizing, filters, cropping etc) is only available in Global and Page Resources. Global Resources are located in the `assets` folder of your repository, Page Resources are located within the `content` directory with your content files in so called Page Bundles. The images in your `static` directory are loaded as they are, not processed (other than evaluation of content type and sizing) and will not result in responsive image tags. All other features or options will work.
 - Lookup order of images:
   - page bundle
-  - global resources (`assets`` folder)
+  - global resources (`assets` folder)
   - static folder
   - after that, a warning about the image not being found is issued on CLI and on the page itself it fails silently
 - Using the `name` attribute implies that page resources are used, and no further lookup will be done if the image is not found in the page bundle.
@@ -230,13 +230,13 @@ Notes about:
 ![Assets Cat](images/pictures/assets-cat.jpg "cat picture from the assets directory")
 ```
 
-![Assets Cat](images/pictures/assets-cat.jpg "cat picture from the assets directory")
+![Assets Cat](images/pictures/assets-cat.jpg)
 
 ```markdown
-![Static Cat](/dnb/modules/pictures/static-cat.jpg "cat picture from the static directory")
+![Static Cat](/dnb/pictures/static-cat.jpg "cat picture from the static directory")
 ```
 
-![Static Cat](/dnb/modules/pictures/static-cat.jpg "cat picture from the static directory")
+![Static Cat](/dnb/pictures/static-cat.jpg)
 
 ## Sample Photo Sources
 

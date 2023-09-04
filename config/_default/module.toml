@@ -6,5 +6,13 @@ target = "content/components"
 source = "assets"
 target = "assets"
 
+[[mounts]]
+source = "static"
+target = "static"
+
 [[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/pictures"
+
+[[imports.mounts]]
+source = "assets"
+target = "assets"

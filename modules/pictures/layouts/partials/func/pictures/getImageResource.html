@@ -1,7 +1,22 @@
 {{- $path := . -}}
-{{- $localimage := dict -}}
-{{- $localimage := page.Resources.GetMatch $path -}}
-{{- with $localimage -}}{{- else -}}
-  {{- $localimage := resources.Get $path -}}
+{{- $localimage := false -}}
+
+{{- with page.Resources.GetMatch $path -}}
+  {{- with .Err -}}
+    {{- warnf "%s" . -}}
+  {{- else -}}
+    {{- $localimage = . -}}
+  {{- end -}}
 {{- end -}}
+
+{{- with $localimage -}}{{- else -}}
+  {{- with resources.Get $path -}}
+    {{- with .Err -}}
+      {{- warnf "%s" . -}}
+    {{- else -}}
+      {{- $localimage = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
 {{- return $localimage -}}
