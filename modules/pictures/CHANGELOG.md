@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.11](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.10...modules/pictures/v1.2023.11) (2023-09-04)
+
+
+### Chore
+
+* **release:** update repo data files ([d70b639](https://github.com/davidsneighbour/hugo-modules/commit/d70b639d8b7afe1f910fca4e9dd34b7826b0bb42))
+
+
+### Bug Fixes
+
+* several fixes to image processing and locating the image ([e3b4e29](https://github.com/davidsneighbour/hugo-modules/commit/e3b4e2912fe86dd816acf14799bdcd6d3f010bac))
+
 ## [1.2023.10](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.9...modules/pictures/v1.2023.10) (2023-09-03)
 
 
