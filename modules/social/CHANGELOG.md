@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.22](https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.21...modules/social/v0.1.22) (2023-09-05)
+
+
+### Chore
+
+* **release:** modules/pictures/v1.2023.10 ([0000859](https://github.com/davidsneighbour/hugo-modules/commit/000085901bc77e765058255031598ba3c569ed96))
+* **release:** modules/pictures/v1.2023.11 ([9abd2c2](https://github.com/davidsneighbour/hugo-modules/commit/9abd2c22e1e3c9f6b9a50c3ce6053aebb021f647))
+* **release:** modules/pictures/v1.2023.12 ([59c82ba](https://github.com/davidsneighbour/hugo-modules/commit/59c82baaec2033a08ab0fba0c215e53abb9a69c5))
+* **release:** update repo data files ([7385fa2](https://github.com/davidsneighbour/hugo-modules/commit/7385fa2cecd69f08fc296c659f65723739f55398))
+* **release:** update repo data files ([92cc1d3](https://github.com/davidsneighbour/hugo-modules/commit/92cc1d3c66e57d2eea29741d98fee41483c5c4f6))
+* **release:** update repo data files ([d70b639](https://github.com/davidsneighbour/hugo-modules/commit/d70b639d8b7afe1f910fca4e9dd34b7826b0bb42))
+* **release:** update repo data files ([a405095](https://github.com/davidsneighbour/hugo-modules/commit/a4050950677994c0f20ee902a246a9ec68bb27a5))
+
+
+### Documentation
+
+* update documentation for pictures module ([195b8b4](https://github.com/davidsneighbour/hugo-modules/commit/195b8b4b58b66aec71c0162dfd99db4b98d7f803))
+* update pictures documentation ([4baef97](https://github.com/davidsneighbour/hugo-modules/commit/4baef9760e48122a3b1356257042397a9d23c4ac))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.37 ([#203](https://github.com/davidsneighbour/hugo-modules/issues/203)) ([97c2818](https://github.com/davidsneighbour/hugo-modules/commit/97c2818add1eac88337d024381cafd4198ef239d))
+* lowering the complexity of open graph image creation ([3c1977e](https://github.com/davidsneighbour/hugo-modules/commit/3c1977e3ec466bebedf7b5a35780c920712de86d))
+* several fixes to image processing and locating the image ([e314dfb](https://github.com/davidsneighbour/hugo-modules/commit/e314dfbae87a02c75b7c0ab0a7eedfc5bd833dd4))
+
 ## [0.1.21](https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.20...modules/social/v0.1.21) (2023-09-03)
 
 
