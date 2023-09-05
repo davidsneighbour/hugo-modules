@@ -4,7 +4,7 @@ linkTitle: hugo-pictures
 description: This component for GoHugo adds partials and shortcodes to resolve and process images on your website. It offers responsive image formats and optimisgit ed loading based on current browser abilities.
 date: 2023-08-21T19:03:35+07:00
 publishDate: 2023-08-21T19:03:35+07:00
-lastmod: 2023-09-04T21:35:53+07:00
+lastmod: 2023-09-04T21:55:56+07:00
 resources:
   - src: header-card.png
     name: aheader
@@ -36,9 +36,12 @@ The simplest way is to use this module as a drop-in. Just install it and forget 
 {{< b5/notice type="danger" heading="Work in progress!" >}}
 Check back for better documentation and more features. The following documentation is, as long as this note is here, only partial and might be missing important points. If you have any questions, or ideas, please [add an issue to the issue tracker](https://github.com/davidsneighbour/hugo-blockify/issues).
 
-Known Issues:
+ToDo:
 
-- currently only works with page bundle and asset images
+- [x] markdown render hook for images
+- [ ] image shortcode
+- [ ] gallery shortcode
+- [ ] testing framework
 {{< / b5/notice >}}
 
 - [Notes](#notes)
@@ -209,22 +212,22 @@ Notes about:
 ### Markdown Render Hook
 
 ```markdown
-![Dog 1](dog-1.jpg)
+![Good Dog 1](dog-1.jpg)
 ```
 
-![Dog 1](dog-1.jpg)
+![Good Dog 1](dog-1.jpg)
 
 ```markdown
-![Dog 2](dog-2.jpg "with a title text")
+![Good Dog 2](dog-2.jpg "with a title text")
 ```
 
-![Dog 2](dog-2.jpg)
+![Good Dog 2](dog-2.jpg)
 
 ```markdown
-![Dog 3](dog-3.jpg?size=wide "with css-processed instructions")
+![Good Dog 3](dog-3.jpg?size=wide "with css-processed instructions")
 ```
 
-![Dog 3](dog-3.jpg)
+![Good Dog 3](dog-3.jpg)
 
 ```markdown
 ![Assets Cat](images/pictures/assets-cat.jpg "cat picture from the assets directory")
@@ -240,4 +243,4 @@ Notes about:
 
 ## Sample Photo Sources
 
-- [Dog 1](https://unsplash.com/photos/PjgeDNHhg_8), [Dog 2](https://unsplash.com/photos/itru42lAV6E), [Dog 3](https://unsplash.com/photos/ah63B7-mo3w), [Static Cat](https://unsplash.com/photos/YQlNLVYckRk), [Assets Cat](https://unsplash.com/photos/67HBaxCvA8M) --- License: [Unsplash+ License](https://unsplash.com/plus/license)
+- [Good Dog 1](https://unsplash.com/photos/PjgeDNHhg_8), [Good Dog 2](https://unsplash.com/photos/itru42lAV6E), [Good Dog 3](https://unsplash.com/photos/ah63B7-mo3w), [Static Cat](https://unsplash.com/photos/YQlNLVYckRk), [Assets Cat](https://unsplash.com/photos/67HBaxCvA8M) --- License: [Unsplash+ License](https://unsplash.com/plus/license)
