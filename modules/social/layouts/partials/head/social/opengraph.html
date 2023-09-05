@@ -84,33 +84,26 @@
 {{- $images := .Resources.ByType "image" -}}
 {{- with $images -}}
   {{- range first 1 . -}}
-    {{- $image := . -}}
-    {{- $image2 := .Resize "1200x" -}}
-    {{- $image3 := dict }}
-    {{- with $image2 }}
-      {{- $image3 = .Crop "1200x630" -}}
-    {{- else -}}
-      {{- $image3 = $image -}}
+    {{- $image := .Resize "1200x" -}}
+    {{- with $image }}
+      {{- $image = .Crop "1200x630" -}}
     {{- end -}}
     {{- $metaProperty = (dict
           "property" "og:image"
-          "content" $image3.Permalink) -}}
+          "content" $image.Permalink) -}}
   {{- end -}}
 {{- else -}}
   {{- if and (isset $config "pictures") (isset $config.pictures "default_image") -}}
     {{- with $config.pictures.default_image -}}
       {{- $image := resources.Get . -}}
       {{- with $image -}}
-        {{- $image2 := .Resize "1200x" -}}
-        {{- $image3 := dict }}
-        {{- with $image2 }}
-          {{- $image3 = .Crop "1200x630" -}}
-        {{- else -}}
-          {{- $image3 = $image -}}
+        {{- $image := .Resize "1200x" -}}
+        {{- with $image }}
+          {{- $image = .Crop "1200x630" -}}
         {{- end -}}
         {{- $metaProperty = (dict
               "property" "og:image"
-              "content" $image3.Permalink) -}}
+              "content" $image.Permalink) -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
