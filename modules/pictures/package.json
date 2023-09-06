@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/pictures",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.2.34"
+    "@davidsneighbour/configurations": "^5.2.37"
   },
   "scripts": {
     "clean": "run-p clean:*",

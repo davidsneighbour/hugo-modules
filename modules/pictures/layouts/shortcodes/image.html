@@ -13,7 +13,7 @@ Parameters:
 {{ $alt := .Get "alt" | default "" }}
 {{ $label := .Get "label" | default $alt }}
 {{ $link := .Get "link" | default false }}
-{{ $style := .Get "style" }}
+{{ $style := .Get "style" | default "" }}
 
 {{/* SETUP */}}
 {{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
@@ -24,38 +24,38 @@ Parameters:
 
 {{/* preparing aspect_ratio image sizes - once sitewide */}}
 {{- $arOptions := dict "image_sizes" $image_sizes "aspect_ratio" $aspect_ratio }}
-{{- $image_sizes2 := partialCached "func/pictures/getARImagesizes.html" $arOptions $arOptions -}}
+{{- $image_sizes2 := partialCached "func/pictures/getAspectRatioImagesizes.html" $arOptions $arOptions -}}
 
 {{/* retrieve the image */}}
 {{- $articleimage := resources.Get $src -}}
 
 {{- with $articleimage -}}
-{{ $image := . }}
+  {{ $image := . }}
 
-{{ warnf "processing image: %s" $image.Permalink }}
+  {{ warnf "processing image: %s" $image.Permalink }}
 
-{{- $title := "" -}}
-{{/* if a title is set via frontmatter then use it as caption */}}
-{{- if ne $image.Title $image.Name -}}
-{{- $title = $image.Title | markdownify -}}
-{{- end -}}
+  {{- $title := "" -}}
+  {{/* if a title is set via frontmatter then use it as caption */}}
+  {{- if ne $image.Title $image.Name -}}
+    {{- $title = $image.Title | markdownify -}}
+  {{- end -}}
 
-{{- $images := slice -}}
-{{- range $index, $value := $image_sizes -}}
-{{- if ge $articleimage.Width $value -}}
-{{- $imagesize := printf "%sx" (string $value) -}}
-{{- $images = $images | append ($image.Resize $imagesize) -}}
-{{- end -}}
-{{- end -}}
-
-{{ $imageOptions := dict "images" $images "link" $link "break_points" $break_points "title" $title "context" page }}
-
-{{- with $style -}}
-<div {{ printf "style=%q" . | safeHTMLAttr }}>
+  {{- $images := slice -}}
+  {{- range $index, $value := $image_sizes -}}
+    {{- if ge $articleimage.Width $value -}}
+      {{- $imagesize := printf "%sx" (string $value) -}}
+      {{- $images = $images | append ($image.Resize $imagesize) -}}
     {{- end -}}
-    {{- partial "images/markup-image.html" $imageOptions -}}
-    {{- with $style -}}
-</div>
-{{- end -}}
+  {{- end -}}
+
+  {{ $imageOptions := dict "images" $images "link" $link "break_points" $break_points "title" $title "context" page }}
+
+  {{- with $style -}}
+    <div {{ printf "style=%q" . | safeHTMLAttr }}>
+  {{- end -}}
+  {{- partial "images/markup-image.html" $imageOptions -}}
+  {{- with $style -}}
+    </div>
+  {{- end -}}
 
 {{- end -}}

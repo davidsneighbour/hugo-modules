@@ -14,8 +14,6 @@ aspect_ratio = "2:1"
 # aspect_ratio above into account, so only the long side length (mostly width)
 # is required.
 [dnb.pictures.responsive.fullwidth]
+# @todo why are these image sizes not parallel to the breakpoints?
 image_sizes = ["494", "517", "674", "914"]
 break_points = ["520", "540", "720", "960"]
-[dnb.pictures.responsive.halfwidth]
-image_sizes = ["494", "517"]
-break_points = ["520", "540"]

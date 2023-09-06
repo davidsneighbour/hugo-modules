@@ -14,18 +14,18 @@ Path of checking
 
 {{- $articleimage := dict -}}
 {{- with $context.Resources.GetMatch "**/header*" -}}
-{{- $articleimage = . -}}
+  {{- $articleimage = . -}}
 {{- else -}}
-{{- $articleimages := $context.Resources.ByType "image" -}}
-{{- range first 1 $articleimages -}}
-{{- $articleimage = . -}}
-{{- end -}}
+  {{- $articleimages := $context.Resources.ByType "image" -}}
+  {{- range first 1 $articleimages -}}
+    {{- $articleimage = . -}}
+  {{- end -}}
 {{- end -}}
 
 {{- with $articleimage -}}{{- else -}}
-{{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
-{{- $default_image := $config.default_image | default "images/default.png" -}}
-{{- $articleimage = resources.Get $default_image -}}
+  {{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
+  {{- $default_image := $config.default_image | default "images/default.png" -}}
+  {{- $articleimage = resources.Get $default_image -}}
 {{- end -}}
 
 {{- return $articleimage -}}

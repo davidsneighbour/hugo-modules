@@ -12,13 +12,13 @@ Path of checking
 
 {{- $articleimage := dict -}}
 {{- with page.Resources.GetMatch . -}}
-{{- $articleimage = . -}}
+  {{- $articleimage = . -}}
 {{- end -}}
 
 {{- with $articleimage -}}{{- else -}}
-{{- $config := partialCached "get/pictures/getConfiguration.html" . -}}
-{{- $default_image := $config.default_image | default "images/default.png" -}}
-{{- $articleimage = resources.Get $default_image -}}
+  {{- $config := partialCached "get/pictures/getConfiguration.html" . -}}
+  {{- $default_image := $config.default_image | default "images/default.png" -}}
+  {{- $articleimage = resources.Get $default_image -}}
 {{- end -}}
 
 {{- return $articleimage -}}

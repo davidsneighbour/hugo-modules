@@ -21,24 +21,24 @@
 {{- $articleimage := partial "images/getArticleImage.html" $context -}}
 
 {{- with $articleimage -}}
-{{ $image := . }}
+  {{ $image := . }}
 
-{{ warnf "processing image: %s" $image.Permalink }}
+  {{ warnf "processing image: %s" $image.Permalink }}
 
-{{- $title := "" -}}
-{{/* if a title is set via frontmatter then use it as caption */}}
-{{- if ne $image.Title $image.Name -}}
-{{- $title = $image.Title | markdownify -}}
-{{- end -}}
+  {{- $title := "" -}}
+  {{/* if a title is set via frontmatter then use it as caption */}}
+  {{- if ne $image.Title $image.Name -}}
+    {{- $title = $image.Title | markdownify -}}
+  {{- end -}}
 
-{{- $images := slice -}}
-{{- range $index, $value := $image_sizes -}}
-{{- $imagesize := printf "%sx%s Center" (string $value) (string (index $image_sizes2 $index)) -}}
-{{- $images = $images | append ($image.Fill $imagesize) -}}
-{{- end -}}
+  {{- $images := slice -}}
+  {{- range $index, $value := $image_sizes -}}
+    {{- $imagesize := printf "%sx%s Center" (string $value) (string (index $image_sizes2 $index)) -}}
+    {{- $images = $images | append ($image.Fill $imagesize) -}}
+  {{- end -}}
 
-{{ $imageOptions := dict "images" $images "link" $link
-        "break_points" $break_points "title" $title "context" $context }}
-{{ partial "images/markup-image.html" $imageOptions }}
+  {{ $imageOptions := dict "images" $images "link" $link
+          "break_points" $break_points "title" $title "context" $context }}
+  {{ partial "images/markup-image.html" $imageOptions }}
 
 {{- end -}}

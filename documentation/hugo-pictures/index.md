@@ -4,7 +4,7 @@ linkTitle: hugo-pictures
 description: This component for GoHugo adds partials and shortcodes to resolve and process images on your website. It offers responsive image formats and optimisgit ed loading based on current browser abilities.
 date: 2023-08-21T19:03:35+07:00
 publishDate: 2023-08-21T19:03:35+07:00
-lastmod: 2023-09-04T21:55:56+07:00
+lastmod: 2023-09-05T23:28:14+07:00
 resources:
   - src: header-card.png
     name: aheader
@@ -46,19 +46,21 @@ ToDo:
 
 - [Notes](#notes)
 - [Shortcodes](#shortcodes)
-  - [Figure Shortcode](#figure-shortcode)
+  - [Figure](#figure)
     - [Parameters](#parameters)
     - [Notes](#notes-1)
-  - [Gallery Shortcode](#gallery-shortcode)
+  - [Gallery](#gallery)
     - [Parameters](#parameters-1)
 - [Partials](#partials)
-  - [Figure Partial](#figure-partial)
-  - [Gallery Partial](#gallery-partial)
+  - [Figure](#figure-1)
+  - [Gallery](#gallery-1)
 - [Global Configuration](#global-configuration)
 - [Optimisation](#optimisation)
 - [Further Readings](#further-readings)
 - [Usage Examples](#usage-examples)
   - [Markdown Render Hook](#markdown-render-hook)
+  - [Gallery Shortcode](#gallery-shortcode)
+  - [Image Shortcode](#image-shortcode)
 - [Sample Photo Sources](#sample-photo-sources)
 
 ## Notes
@@ -71,11 +73,15 @@ ToDo:
   - after that, a warning about the image not being found is issued on CLI and on the page itself it fails silently
 - Using the `name` attribute implies that page resources are used, and no further lookup will be done if the image is not found in the page bundle.
 
+## Markdown
+
+This module implements a markdown render hook for GoHugo that resizes and prepares HTML for responsive images. It is the simplest way to use this module. Just install it and forget you ever did. It will work out of the box with the default settings and replace the internal handling of image markdown (`![alt text](image path)`).
+
 ## Shortcodes
 
 Available shortcodes currently are `image`, `figure` and `gallery`. Those shortcodes are served by partials that you can use in your own layout files with more extensive configurability. `figure` overrides the GoHugo internal `figure` shortcode. All shortcodes add responsive image processing and markup to your website.
 
-### Figure Shortcode
+### Figure
 
 Possible call scenarios:
 
@@ -129,7 +135,7 @@ TODO: Currently this allows for only one `command`/`options` combination. The fu
 
 The `{{</* image */>}}` shortcode is a synonym for the `{{</* figure */>}}` shortcode and has the same features/options. It is added for compatibility with older implementations and themes.
 
-### Gallery Shortcode
+### Gallery
 
 to be written.
 
@@ -143,7 +149,7 @@ Notes: right now it expects a galleryid parameter for a folder inside of pagebun
 
 ## Partials
 
-### Figure Partial
+### Figure
 
 The figure partial executes the markdown creation of single images and can be called with an options dictionary of the following content:
 
@@ -162,7 +168,7 @@ The figure partial executes the markdown creation of single images and can be ca
 }
 ```
 
-### Gallery Partial
+### Gallery
 
 To be written.
 
@@ -240,6 +246,28 @@ Notes about:
 ```
 
 ![Static Cat](/dnb/pictures/static-cat.jpg)
+
+### Gallery Shortcode
+
+```markdown
+{{</* gallery gallery="gallery1" */>}}
+```
+
+{{< gallery id="gallery1" gallery="gallery1" type="bootstrap5" >}}
+
+### Image Shortcode
+
+```markdown
+{{</* image src="dog-1.jpg" */>}}
+```
+
+{{< image src="dog-1.jpg" >}}
+
+```markdown
+{{</* image src="dog-2.jpg" */>}}
+```
+
+{{< image src="dog-2.jpg" >}}
 
 ## Sample Photo Sources
 
