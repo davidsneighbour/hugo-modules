@@ -5,6 +5,6 @@ authors:
     given-names: "Patrick"
     orcid: "https://orcid.org/0000-0001-6250-2135"
 title: "Hugo Modules / Functions"
-version: 1.2023.6
+version: 1.2023.7
 date-released: 2023-09-10
 url: "https://github.com/davidsneighbour/hugo-modules"
