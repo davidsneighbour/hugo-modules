@@ -2,6 +2,70 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.6](https://github.com/davidsneighbour/hugo-modules/compare/modules/functions/v1.2023.5...modules/functions/v1.2023.6) (2023-09-10)
+
+
+### Build System
+
+* **assets:** update header image design ([0444f2f](https://github.com/davidsneighbour/hugo-modules/commit/0444f2f50f2d462808fd4a3f78c59cf1b7012d83))
+
+
+### Chore
+
+* **deps:** update dependencies ([13c8b5e](https://github.com/davidsneighbour/hugo-modules/commit/13c8b5e340bb2a1675af6fcdcdac5b22c50d5e23))
+* **deps:** update dependencies ([3794e6f](https://github.com/davidsneighbour/hugo-modules/commit/3794e6fdb2505960bf81eeb01c7fc13a1685fe1d))
+* **deps:** update dependencies ([2227ca4](https://github.com/davidsneighbour/hugo-modules/commit/2227ca4d1549387041d254ee08d82cbaac09f5c6))
+* **deps:** update dependencies ([cad08d7](https://github.com/davidsneighbour/hugo-modules/commit/cad08d78cbbb22020ea3b732c7dcd2169251482c))
+* **release:** modules/pictures/v1.2023.10 ([0000859](https://github.com/davidsneighbour/hugo-modules/commit/000085901bc77e765058255031598ba3c569ed96))
+* **release:** modules/pictures/v1.2023.11 ([9abd2c2](https://github.com/davidsneighbour/hugo-modules/commit/9abd2c22e1e3c9f6b9a50c3ce6053aebb021f647))
+* **release:** modules/pictures/v1.2023.12 ([59c82ba](https://github.com/davidsneighbour/hugo-modules/commit/59c82baaec2033a08ab0fba0c215e53abb9a69c5))
+* **release:** modules/pictures/v1.2023.8 ([903a883](https://github.com/davidsneighbour/hugo-modules/commit/903a88367308f71cd020906e71b474d1bcf7e53f))
+* **release:** modules/pictures/v1.2023.9 ([1d6d084](https://github.com/davidsneighbour/hugo-modules/commit/1d6d084b53af09623eceab09c9ada57a6bfda7c5))
+* **release:** modules/social/v0.1.18 ([786a73d](https://github.com/davidsneighbour/hugo-modules/commit/786a73d81c60bf273b30ab2e6508b2c5d0c16cf5))
+* **release:** modules/social/v0.1.19 ([17a7085](https://github.com/davidsneighbour/hugo-modules/commit/17a7085f2db1d4320a566c35e6b5b0bc336dc86f))
+* **release:** modules/social/v0.1.20 ([e30f86c](https://github.com/davidsneighbour/hugo-modules/commit/e30f86cda2ccccafd9f29a5ea73af54c7dd467cb))
+* **release:** modules/social/v0.1.21 ([dbd9e3b](https://github.com/davidsneighbour/hugo-modules/commit/dbd9e3bed7b2325479601018e252e0d3834b216b))
+* **release:** modules/social/v0.1.22 ([72ef10d](https://github.com/davidsneighbour/hugo-modules/commit/72ef10d841eba322c54892eb09020ede0cf4b6d0))
+* **release:** update repo data files ([7851ed9](https://github.com/davidsneighbour/hugo-modules/commit/7851ed919b446a80d7c0ff5b344b40ae17bd8c89))
+* **release:** update repo data files ([7385fa2](https://github.com/davidsneighbour/hugo-modules/commit/7385fa2cecd69f08fc296c659f65723739f55398))
+* **release:** update repo data files ([92cc1d3](https://github.com/davidsneighbour/hugo-modules/commit/92cc1d3c66e57d2eea29741d98fee41483c5c4f6))
+* **release:** update repo data files ([d70b639](https://github.com/davidsneighbour/hugo-modules/commit/d70b639d8b7afe1f910fca4e9dd34b7826b0bb42))
+* **release:** update repo data files ([a405095](https://github.com/davidsneighbour/hugo-modules/commit/a4050950677994c0f20ee902a246a9ec68bb27a5))
+* **release:** update repo data files ([bb1fa8c](https://github.com/davidsneighbour/hugo-modules/commit/bb1fa8c33121d115b2ccf4bb543b626646ce6cd2))
+* **release:** update repo data files ([2eef3c8](https://github.com/davidsneighbour/hugo-modules/commit/2eef3c856c7610b014dbdf215b3333e5591bc13c))
+* **release:** update repo data files ([437f01c](https://github.com/davidsneighbour/hugo-modules/commit/437f01ce9deb1670819ac5e4a13a111e10e865e2))
+* **release:** update repo data files ([38e707f](https://github.com/davidsneighbour/hugo-modules/commit/38e707fd681746d2428bf0e966973b3c0fa5c921))
+* **release:** update repo data files ([093b8f4](https://github.com/davidsneighbour/hugo-modules/commit/093b8f416f3b166624da20621150220aad878135))
+* **release:** update repo data files ([2da50ad](https://github.com/davidsneighbour/hugo-modules/commit/2da50adaa88e4adea0e5b09d008d2641c8877e4a))
+* update component header images and release data ([97e77d7](https://github.com/davidsneighbour/hugo-modules/commit/97e77d7cfb496ab9aa16722490af521d3eb0cb36))
+* update component header images and release data ([71f9967](https://github.com/davidsneighbour/hugo-modules/commit/71f99674aa3d60862c4fa9994121e886b8ae155e))
+* update component header images and release data ([d689767](https://github.com/davidsneighbour/hugo-modules/commit/d689767e298ef036b2be4d3ef0807047d28a4496))
+* update component header images and release data ([f624af7](https://github.com/davidsneighbour/hugo-modules/commit/f624af7d050db3b9c4482999de3898459dea9818))
+
+
+### Documentation
+
+* update documentation for pictures module ([195b8b4](https://github.com/davidsneighbour/hugo-modules/commit/195b8b4b58b66aec71c0162dfd99db4b98d7f803))
+* update pictures documentation ([4baef97](https://github.com/davidsneighbour/hugo-modules/commit/4baef9760e48122a3b1356257042397a9d23c4ac))
+
+
+### Features
+
+* fixes and rework of image markdown code ([2721551](https://github.com/davidsneighbour/hugo-modules/commit/2721551f0acaab98f87656ff62b8d1647bfea025))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.37 ([#203](https://github.com/davidsneighbour/hugo-modules/issues/203)) ([97c2818](https://github.com/davidsneighbour/hugo-modules/commit/97c2818add1eac88337d024381cafd4198ef239d))
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.38 ([#208](https://github.com/davidsneighbour/hugo-modules/issues/208)) ([958abd2](https://github.com/davidsneighbour/hugo-modules/commit/958abd2c3032ab463c1ebaf68026ce1e34c63897))
+* gallery id limit fix ([f8ccd43](https://github.com/davidsneighbour/hugo-modules/commit/f8ccd4380643ad1cafafedba590dcc7901d0d775))
+* lowering the complexity of open graph image creation ([3c1977e](https://github.com/davidsneighbour/hugo-modules/commit/3c1977e3ec466bebedf7b5a35780c920712de86d))
+* not enough pixel data on processing ([d0c6508](https://github.com/davidsneighbour/hugo-modules/commit/d0c6508b51a5f79916f9ffa725a25d657d9c308b))
+* proper image handling for open graph preview ([a3d4498](https://github.com/davidsneighbour/hugo-modules/commit/a3d449803418366e40e752d5f6ea935018e26e76))
+* proper resizing for all OG image types ([d2306bb](https://github.com/davidsneighbour/hugo-modules/commit/d2306bb9fbbd86be5c509e8a830c852271d2d1d9))
+* proper resizing of social preview card ([c8132e4](https://github.com/davidsneighbour/hugo-modules/commit/c8132e47356c74130e7a3ae95d964715f520ffc4))
+* several fixes to image processing and locating the image ([e314dfb](https://github.com/davidsneighbour/hugo-modules/commit/e314dfbae87a02c75b7c0ab0a7eedfc5bd833dd4))
+
 ## 1.2023.5 (2023-08-27)
 
 
