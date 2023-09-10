@@ -1,4 +1,5 @@
-{{- $galleryid := .Get "id" | default (partial "func/getRandomString" . ) -}}
+{{- $defaultid := partial "func/getRandomString" (dict "limit" "12") -}}
+{{- $galleryid := .Get "id" | default $defaultid -}}
 {{- $gallery := .Get "gallery" | default "gallery" -}}
 {{- $type := .Get "type" | default "bootstrap5" -}}
 {{- $storage := .Get "storage" | default "gallery" -}}
@@ -6,9 +7,9 @@
 {{- $images := dict -}}
 
 {{- if eq "gallery" $storage -}}
-  {{- $images = $.Page.Resources.Match (printf "%s/*" $gallery) -}}
+{{- $images = $.Page.Resources.Match (printf "%s/*" $gallery) -}}
 {{- else if eq "subgallery" $storage -}}
-  {{- $images = $.Page.Resources.Match (printf "gallery/%s/*" $gallery) -}}
+{{- $images = $.Page.Resources.Match (printf "gallery/%s/*" $gallery) -}}
 {{- else if eq "static" $storage -}}
 {{- end -}}
 
