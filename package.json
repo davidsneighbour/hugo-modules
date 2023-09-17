@@ -9,7 +9,7 @@
   "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules#readme",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.2.38",
+    "@davidsneighbour/configurations": "^5.2.40",
     "@slightlyoff/lite-vimeo": "0.1.2",
     "dotenv": "^16.3.1",
     "workbox-cacheable-response": "7.0.0",
