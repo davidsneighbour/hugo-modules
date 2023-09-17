@@ -1,8 +1,4 @@
-{{- partial "func/hook.html" ( dict
-  "hook" "head-styles-before"
-  "context" .
-  )
--}}
+{{- partial "func/hook.html" ( dict "hook" "head-styles-before" "context" . ) -}}
 {{- $config := site.Params.dnb.head.styles -}}
 {{- if eq "postcss" ($config.method | default "postcss") -}}
   {{- $entrypoint := $config.entrypoint | default "scss/style.scss" -}}
@@ -12,14 +8,6 @@
   {{- $styles = $styles | minify -}}
   {{- $styles = $styles | fingerprint "sha512" -}}
   {{- $styles = $styles | resources.PostProcess -}}
-  <link
-    rel="stylesheet"
-    media="all"
-    integrity="{{- $styles.Data.Integrity -}}"
-    href="{{- $styles.Permalink -}}">
+  <link rel="stylesheet" media="all" integrity="{{- $styles.Data.Integrity -}}" href="{{- $styles.Permalink -}}">
 {{- end -}}
-{{- partial "func/hook.html" ( dict
-  "hook" "head-styles-after"
-  "context" .
-  )
--}}
+{{- partial "func/hook.html" ( dict "hook" "head-styles-after" "context" . ) -}}
