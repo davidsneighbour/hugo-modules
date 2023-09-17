@@ -2,9 +2,9 @@
 title: Youtube
 linkTitle: hugo-youtube
 description: A shortcode to replace the internal youtube shortcode and add an unobtrusive, privacy conscious and unbloated custom element for YouTube videos using lite-youtube-embed.
-date: 2022-08-03T21:21:58+07:00
+date: 2023-09-17T18:23:07+07:00
 publishDate: 2022-08-03T21:21:58+07:00
-lastmod: 2023-08-22T20:14:46+07:00
+lastmod: 2023-09-17T18:24:31+07:00
 resources:
   - src: header-card.png
 categories:
@@ -15,7 +15,7 @@ tags:
   - shortcode
   - media
 component:
-  slug: hugo-youtube
+  slug: hugo-modules/modules/youtube
   host: github.com
   user: davidsneighbour
   status: release
