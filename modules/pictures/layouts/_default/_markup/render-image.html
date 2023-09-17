@@ -1,6 +1,8 @@
 {{- $context := page -}}
 {{- $label := .Text -}}
 {{- $src := .Destination -}}
+{{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
+{{- $default_format := $config.default_format | default "webp" -}}
 
 {{/* retrieve the article image */}}
 {{ warnf "image: %s" $src}}
@@ -42,7 +44,7 @@
     {{- else -}}
       {{- range $index, $value := $image_sizes -}}
         {{- if ge $localimage.Width $value -}}
-          {{- $imagesize := printf "%sx" (string $value) -}}
+          {{- $imagesize := printf "%sx %s" (string $value) $default_format -}}
           {{- $images = $images | append ($image.Resize $imagesize) -}}
         {{- end -}}
       {{- end -}}

@@ -34,6 +34,8 @@ Tagvariants:
 {{ $position := .Position }}
 {{ $paramSrc := false }}
 {{ $paramTitle := false }}
+{{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
+{{- $default_format := $config.default_format | default "webp" -}}
 {{ if .IsNamedParams }}
 	{{ $paramSrc = .Get 0 }}
 	{{ $paramTitle = .Get 1 }}
@@ -111,7 +113,7 @@ Tagvariants:
 		{{ $imgFallback := false }}
 		{{ $imgSrcSet := slice }}
 		{{ range $idx, $size := $imagesizes }}
-			{{ $resizedImage := (printf "%dx" $size | $image.Resize)}}
+			{{ $resizedImage := (printf "%dx %s" $size $default_format | $image.Resize)}}
 			{{ $srcUrl := $resizedImage.RelPermalink }}
 			{{ if $idx }}
 				{{ $finalImage = merge $finalImage (dict "width" $resizedImage.Width) }}

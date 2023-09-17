@@ -17,6 +17,7 @@ Parameters:
 
 {{/* SETUP */}}
 {{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
+{{- $default_format := $config.default_format | default "webp" -}}
 {{- $aspect_ratio := $config.aspect_ratio | default "false" -}}
 {{- $aspect_ratio = (split $aspect_ratio ":") -}}
 {{- $image_sizes := $config.responsive.image_sizes | default (slice "494" "517" "674" "914") -}}
@@ -43,7 +44,7 @@ Parameters:
   {{- $images := slice -}}
   {{- range $index, $value := $image_sizes -}}
     {{- if ge $articleimage.Width $value -}}
-      {{- $imagesize := printf "%sx" (string $value) -}}
+      {{- $imagesize := printf "%sx %s" (string $value) $default_format -}}
       {{- $images = $images | append ($image.Resize $imagesize) -}}
     {{- end -}}
   {{- end -}}
