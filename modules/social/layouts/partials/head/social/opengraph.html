@@ -1,6 +1,7 @@
 {{/* Open Graph meta data generation. see https://ogp.me/ for details */}}
 {{- warnf "calculating open graph data" -}}
 {{- $config := site.Params.dnb -}}
+{{- $default_format := $config.pictures.default_format | default "webp" -}}
 {{- /*$#
 
 @var $page [boolean] - is this a page or a content-list?
@@ -24,7 +25,7 @@
 {{- if ne .IsHome true -}}
   {{- $content = printf "%s - " (partialCached "func/getTitle.html" page page) -}}
 {{- end -}}
-{{- $content = printf "%s%s" $content site.Title -}}
+{{- $content = printf "%s%s %s" $content site.Title $default_format -}}
 {{- $metaProperties = $metaProperties | append (dict
   "property" "og:title"
   "content" $content) -}}
@@ -84,9 +85,9 @@
 {{- $images := .Resources.ByType "image" -}}
 {{- with $images -}}
   {{- range first 1 . -}}
-    {{- $image := .Resize "1200x" -}}
+    {{- $image := .Resize "1200x webp" -}}
     {{- with $image }}
-      {{- $image = .Crop "1200x630" -}}
+      {{- $image = .Crop "1200x630 webp" -}}
     {{- end -}}
     {{- $metaProperty = (dict
           "property" "og:image"
@@ -97,9 +98,9 @@
     {{- with $config.pictures.default_image -}}
       {{- $image := resources.Get . -}}
       {{- with $image -}}
-        {{- $image := .Resize "1200x" -}}
+        {{- $image := .Resize "1200x webp" -}}
         {{- with $image }}
-          {{- $image = .Crop "1200x630" -}}
+          {{- $image = .Crop "1200x630 webp" -}}
         {{- end -}}
         {{- $metaProperty = (dict
               "property" "og:image"
