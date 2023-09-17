@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.14](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.13...modules/pictures/v1.2023.14) (2023-09-17)
+
+
+### Build System
+
+* **fix:** update build script and remove unused layout particles ([7a36fd4](https://github.com/davidsneighbour/hugo-modules/commit/7a36fd4963c88ea4d01dd3aaedb1849a2ba37233))
+
+
+### Chore
+
+* **deps:** update dependencies ([e815075](https://github.com/davidsneighbour/hugo-modules/commit/e81507540371982df0869f295a42f0e9b57b2093))
+* **deps:** update dependencies ([f81d9a9](https://github.com/davidsneighbour/hugo-modules/commit/f81d9a969be5c4e84fe6f106d18add05c1ce89cb))
+* **release:** modules/head/v1.2023.7 ([5d71100](https://github.com/davidsneighbour/hugo-modules/commit/5d7110013fe19b5de783ba841e36716efd7de22c))
+* **release:** modules/head/v1.2023.8 ([ebcfca0](https://github.com/davidsneighbour/hugo-modules/commit/ebcfca0f5d8fabb4708d7c26fd6760aaae54ce91))
+* **release:** modules/shortcodes/v1.2023.3 ([2799545](https://github.com/davidsneighbour/hugo-modules/commit/27995458c4f629cba24195e7cdf83fcaf99b8a22))
+* **release:** modules/social/v0.1.23 ([02e8922](https://github.com/davidsneighbour/hugo-modules/commit/02e89221e5c56af92c227655d4326e3516e6cd2b))
+* **release:** modules/youtube/v1.2023.14 ([52deca2](https://github.com/davidsneighbour/hugo-modules/commit/52deca2137355b3d279a6b41c874fb7ff0de08ad))
+* **release:** update repo data files ([ccccf45](https://github.com/davidsneighbour/hugo-modules/commit/ccccf45eaa55cb2d9bf2deaaaa5d3c3c08b74455))
+* **release:** update repo data files ([a4aebe5](https://github.com/davidsneighbour/hugo-modules/commit/a4aebe50645f2e389da1d6eb81a5ee95f173224d))
+* **release:** update repo data files ([57331ee](https://github.com/davidsneighbour/hugo-modules/commit/57331ee6eefab538ff79af0aba74fe4ac8e25c32))
+* **release:** update repo data files ([230cc86](https://github.com/davidsneighbour/hugo-modules/commit/230cc86f4340ed0c46a44afcdd6f196a9e71a967))
+* **release:** update repo data files ([4a70163](https://github.com/davidsneighbour/hugo-modules/commit/4a7016355ac26db7aea6e606d8c2586e141075d5))
+* **release:** update repo data files ([644ec53](https://github.com/davidsneighbour/hugo-modules/commit/644ec5350a115e28057c4d849f798983cc26ae11))
+
+
+### Features
+
+* default output format (webp) ([a54e8cf](https://github.com/davidsneighbour/hugo-modules/commit/a54e8cfe418fdc8688984eab02623c7c72555bd3))
+
+
+### Bug Fixes
+
+* better path to saved video preview image and release script update ([c69727b](https://github.com/davidsneighbour/hugo-modules/commit/c69727bde4818bf9899c6061136704b6f8660dca))
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.40 ([#214](https://github.com/davidsneighbour/hugo-modules/issues/214)) ([4f09d94](https://github.com/davidsneighbour/hugo-modules/commit/4f09d9409c7ca201464a381862bed3dc8ad91afd))
+* force default format webp for open graph images ([699f378](https://github.com/davidsneighbour/hugo-modules/commit/699f378bc4df03f6a2b7f5328ec5c9c3dcffe617))
+* style beautification ([346855e](https://github.com/davidsneighbour/hugo-modules/commit/346855e70f5d7eb2ed197001caafede981a3b126))
+
 ## [1.2023.13](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.12...modules/pictures/v1.2023.13) (2023-09-10)
 
 
