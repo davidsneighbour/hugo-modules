@@ -26,10 +26,17 @@
   {{- $class  := .class | default "" -}}
   {{- $title  := .title | default "" -}}
   {{- $params := .params | default $paramsCollected -}}
+  {{- $config := site.Params.dnb.youtube -}}
   {{- $thumbnailUrl := "https://i.ytimg.com/vi/%s/maxresdefault.jpg" -}}
-  {{- /* $thumbnailUrl := partialCached "func/hugo-shortcodes/getYoutubePreviewUrl.html" $id $id */ -}}
+  {{- if eq (index $config "thumbnail_source" | default 1) 2 -}}
+    {{- $thumbnailUrl = "https://ytimg.googleusercontent.com/vi/%s/maxresdefault.jpg" -}}
+  {{- end -}}
   {{- $remoteThumbnailUrl := printf $thumbnailUrl $id -}}
-  {{- $remoteThumbnail := resources.GetRemote $remoteThumbnailUrl -}}
+  {{- $remoteThumb := resources.GetRemote $remoteThumbnailUrl -}}
+  {{- $remoteThumbnail := $remoteThumb -}}
+  {{- with resources.Copy (printf "assets/img/%s.jpg" $id) $remoteThumb -}}
+    {{- $remoteThumbnail = . -}}
+  {{ end -}}
   <div class="shortcode--youtube {{ with $class -}}{{- . -}}{{- end -}}">
     <lite-youtube
       videoid="{{- $id -}}"
