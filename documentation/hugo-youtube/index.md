@@ -4,7 +4,7 @@ linkTitle: hugo-youtube
 description: A shortcode to replace the internal youtube shortcode and add an unobtrusive, privacy conscious and unbloated custom element for YouTube videos using lite-youtube-embed.
 date: 2023-09-17T18:23:07+07:00
 publishDate: 2022-08-03T21:21:58+07:00
-lastmod: 2023-09-17T20:31:58+07:00
+lastmod: 2023-09-18T18:28:39+07:00
 resources:
   - src: header-card.png
 categories:
@@ -68,7 +68,7 @@ and import the styles into your SASS pipeline with
 @import 'lite-yt-embed';
 ```
 
-If you have your own templating going on you can use the parmeters in `site.params.dnb.youtube.config.plugins` to add to your pipelines.
+If you have your own templating going on you can use the parmeters in `site.params.­dnb.­youtube.­config.­plugins` to add to your pipelines.
 
 ## Content Security Policy (CSP) rules for this plugin
 
