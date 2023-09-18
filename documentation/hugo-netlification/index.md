@@ -5,7 +5,7 @@ description: ""
 summary: ""
 date: 2022-07-28T20:48:52+07:00
 publishDate: 2022-07-28T20:48:52+07:00
-lastmod: 2023-08-22T20:14:04+07:00
+lastmod: 2023-09-18T19:05:33+07:00
 resources:
   - src: header-card.png
 categories:
@@ -15,7 +15,7 @@ tags:
   - component
   - seo
 component:
-  slug: hugo-netlification
+  slug: hugo-modules/modules/netlification
   host: github.com
   user: davidsneighbour
   status: release
