@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/121446154",
-  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/121446154/assets",
-  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/121446154/assets{?name,label}",
-  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/youtube/v1.2023.14",
-  "id": 121446154,
+  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/121526581",
+  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/121526581/assets",
+  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/121526581/assets{?name,label}",
+  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/youtube/v1.2023.15",
+  "id": 121526581,
   "author": {
     "login": "davidsneighbour",
     "id": 83281,
@@ -24,19 +24,19 @@
     "type": "User",
     "site_admin": false
   },
-  "node_id": "RE_kwDOJOG8Gs4HPR8K",
-  "tag_name": "modules/youtube/v1.2023.14",
+  "node_id": "RE_kwDOJOG8Gs4HPlk1",
+  "tag_name": "modules/youtube/v1.2023.15",
   "target_commitish": "main",
-  "name": "modules/youtube/v1.2023.14",
+  "name": "modules/youtube/v1.2023.15",
   "draft": false,
   "prerelease": false,
-  "created_at": "2023-09-17T09:28:15Z",
-  "published_at": "2023-09-17T11:59:55Z",
+  "created_at": "2023-09-18T12:26:25Z",
+  "published_at": "2023-09-18T12:26:43Z",
   "assets": [
 
   ],
-  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/youtube/v1.2023.14",
-  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/youtube/v1.2023.14",
-  "body": "modules/youtube/v1.2023.14\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/head/v1.2023.7...modules/youtube/v1.2023.14",
-  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/217"
+  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/youtube/v1.2023.15",
+  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/youtube/v1.2023.15",
+  "body": "modules/youtube/v1.2023.15\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/modules/netlification/v1.2023.10...modules/youtube/v1.2023.15",
+  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/224"
 }
