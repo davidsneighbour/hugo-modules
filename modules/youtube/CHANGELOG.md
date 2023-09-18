@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.15](https://github.com/davidsneighbour/hugo-modules/compare/modules/youtube/v1.2023.14...modules/youtube/v1.2023.15) (2023-09-18)
+
+
+### Build System
+
+* fix env setup for tagslug ([b2e301f](https://github.com/davidsneighbour/hugo-modules/commit/b2e301f8a65661b86ec78d24c2f57a5a79009087))
+* **fix:** update build script and remove unused layout particles ([7a36fd4](https://github.com/davidsneighbour/hugo-modules/commit/7a36fd4963c88ea4d01dd3aaedb1849a2ba37233))
+
+
+### Chore
+
+* add release scripts ([2bd0b03](https://github.com/davidsneighbour/hugo-modules/commit/2bd0b03172b38008b33e0a4d26f535199cc4635e))
+* **release:** modules/netlification/v1.2023.10 ([8baf47d](https://github.com/davidsneighbour/hugo-modules/commit/8baf47db448cdf6aff2726b3dfab416af8dd11c7))
+* **release:** modules/netlification/v1.2023.11 ([88dd00b](https://github.com/davidsneighbour/hugo-modules/commit/88dd00bd5302ad2a9b6f2b5a59d2ff2fcc983111))
+* **release:** modules/netlification/v1.2023.12 ([39d4db8](https://github.com/davidsneighbour/hugo-modules/commit/39d4db8f910c7deca5896f015ec85cded6acdef5))
+* **release:** modules/pictures/v1.2023.14 ([d397f10](https://github.com/davidsneighbour/hugo-modules/commit/d397f10e7923d56e526ecf325d49741644718d24))
+* **release:** modules/social/v0.1.23 ([02e8922](https://github.com/davidsneighbour/hugo-modules/commit/02e89221e5c56af92c227655d4326e3516e6cd2b))
+* **release:** update repo data files ([2ced3ef](https://github.com/davidsneighbour/hugo-modules/commit/2ced3efe368db296436d3fd79c4b3e1ece44839a))
+* **release:** update repo data files ([9f98d24](https://github.com/davidsneighbour/hugo-modules/commit/9f98d2450318a857254f43328b54796b3546f7b8))
+* **release:** update repo data files ([ccccf45](https://github.com/davidsneighbour/hugo-modules/commit/ccccf45eaa55cb2d9bf2deaaaa5d3c3c08b74455))
+* **release:** update repo data files ([a4aebe5](https://github.com/davidsneighbour/hugo-modules/commit/a4aebe50645f2e389da1d6eb81a5ee95f173224d))
+
+
+### Documentation
+
+* **fix:** proper slug for netlification ([c5e8eef](https://github.com/davidsneighbour/hugo-modules/commit/c5e8eef1cce06d49b63f3bd28f5f18e4bfc8e741))
+* update documentation ([5e78de4](https://github.com/davidsneighbour/hugo-modules/commit/5e78de41cfbd95ddbe0cafcd7c86847391073574))
+
+
+### Features
+
+* default output format (webp) ([a54e8cf](https://github.com/davidsneighbour/hugo-modules/commit/a54e8cfe418fdc8688984eab02623c7c72555bd3))
+
+
+### Bug Fixes
+
+* force default format webp for open graph images ([699f378](https://github.com/davidsneighbour/hugo-modules/commit/699f378bc4df03f6a2b7f5328ec5c9c3dcffe617))
+
 ## 1.2023.14 (2023-09-17)
 
 
