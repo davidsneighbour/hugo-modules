@@ -109,13 +109,13 @@ Tagvariants:
   {{- if and $isPageBundle (eq $image.MediaType.SubType "gif") -}}
     {{- $isPageBundle = false -}}
     {{- $isStaticFile = true -}}
-    {{- warnf "GIFs are not supported, yet. Use static file strategy instead: %s : %s" $paramSrc $position -}}
+    {{- warnf "GIFs are not supported, yet. Use static file strategy instead: %s" $paramSrc -}}
     {{- warnf "see https://dnbhub.xyz/issue-225 for details" -}}
   {{- end -}}
   {{- if and $isPageBundle (eq $image.MediaType.SubType "svg") -}}
     {{- $isPageBundle = false -}}
     {{- $isStaticFile = true -}}
-    {{- warnf "SVGs are not supported, yet. Use static file strategy instead: %s : %s" $paramSrc $position -}}
+    {{- warnf "SVGs are not supported, yet. Use static file strategy instead: %s" $paramSrc -}}
     {{- warnf "see https://dnbhub.xyz/issue-225 for details" -}}
   {{- end -}}
 

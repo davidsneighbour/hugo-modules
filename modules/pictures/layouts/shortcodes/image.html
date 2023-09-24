@@ -37,11 +37,11 @@ Parameters:
 
   {{/* BUG #225 - svg and gif processing issues, see https://dnbhub.xyz/issue-225 */}}
   {{- if eq $image.MediaType.SubType "gif" -}}
-    {{- warnf "GIFs are not supported, yet. Use static file strategy instead: %s : %s" $image.Permalink $position -}}
+    {{- warnf "GIFs are not supported, yet. Use static file strategy instead: %s" $image.Permalink -}}
     {{- warnf "see https://dnbhub.xyz/issue-225 for details" -}}
   {{- end -}}
   {{- if eq $image.MediaType.SubType "svg" -}}
-    {{- warnf "SVGs are not supported, yet. Use static file strategy instead: %s : %s" $image.Permalink $position -}}
+    {{- warnf "SVGs are not supported, yet. Use static file strategy instead: %s" $image.Permalink -}}
     {{- warnf "see https://dnbhub.xyz/issue-225 for details" -}}
   {{- end -}}
 
