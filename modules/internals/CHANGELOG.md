@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.5](https://github.com/davidsneighbour/hugo-modules/compare/modules/internals/v1.2023.4...modules/internals/v1.2023.5) (2023-09-24)
+
+
+### Chore
+
+* **release:** modules/head/v1.2023.9 ([59741a2](https://github.com/davidsneighbour/hugo-modules/commit/59741a27d47e447b35dadfb8454aa54ff29604e9))
+* **release:** modules/hooks/v1.2023.4 ([6bc2eff](https://github.com/davidsneighbour/hugo-modules/commit/6bc2effd609113aab87c78c06c77bcbbbe09cf2f))
+* **release:** modules/hooks/v1.2023.5 ([65f80b3](https://github.com/davidsneighbour/hugo-modules/commit/65f80b32113f2f93d0cdbb8f7a5852819b636651))
+* **release:** modules/pictures/v1.2023.15 ([cb151f7](https://github.com/davidsneighbour/hugo-modules/commit/cb151f7b22d313757bfa2699c4b2199ecd130e18))
+* **release:** modules/shortcodes/v1.2023.4 ([29580ad](https://github.com/davidsneighbour/hugo-modules/commit/29580ad38a12f88687251126478e45f0855b8f06))
+* **release:** update repo data files ([3f1edeb](https://github.com/davidsneighbour/hugo-modules/commit/3f1edebc5d20b619903af3f0b41c13b7eb3fb9e9))
+* **release:** update repo data files ([e0cbc47](https://github.com/davidsneighbour/hugo-modules/commit/e0cbc47c4d3bec24613a69dd1520d610fa0543df))
+* **release:** update repo data files ([62dcf8a](https://github.com/davidsneighbour/hugo-modules/commit/62dcf8ad51204f6cddf66d9c696cc7846714ba1e))
+* **release:** update repo data files ([7de3249](https://github.com/davidsneighbour/hugo-modules/commit/7de3249ae7443ad848dbd394605eab22c8f610c2))
+* **release:** update repo data files ([baee3c4](https://github.com/davidsneighbour/hugo-modules/commit/baee3c4432994c7d8e18e52e88d36110a56461ef))
+* **release:** update repo data files ([ca8bb04](https://github.com/davidsneighbour/hugo-modules/commit/ca8bb045d53551b3caa649724e21ee7b0155a42e))
+
 ## [1.2023.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/internals/v1.2023.3...modules/internals/v1.2023.4) (2023-09-24)
 
 
