@@ -121,7 +121,7 @@ Tagvariants:
 
 	{{ $finalImage := dict }}
 	{{ if $isPageBundle }}
-    {{ $lowQualityPreviewImage := $image.Resize "100x %s" $default_format |
+    {{ $lowQualityPreviewImage := $image.Resize (printf "100x %s" $default_format) |
             images.Filter (images.Pixelate 8) (images.GaussianBlur 10) }}
     {{ $finalImage = merge $finalImage (dict "lqp" $lowQualityPreviewImage) }}
 		{{/******************************************************************/}}
