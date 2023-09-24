@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.17](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.16...modules/pictures/v1.2023.17) (2023-09-24)
+
+
+### Chore
+
+* **release:** modules/shortcodes/v1.2023.5 ([f7543c3](https://github.com/davidsneighbour/hugo-modules/commit/f7543c398362464267d3672126774ad554463b20))
+* **release:** modules/social/v0.1.24 ([fb33b94](https://github.com/davidsneighbour/hugo-modules/commit/fb33b94a809f467f716af32586af642a45ee1ac8))
+* **release:** update repo data files ([04c71b3](https://github.com/davidsneighbour/hugo-modules/commit/04c71b31719e35c59b9efa6672a823d9de7921a7))
+* **release:** update repo data files ([ce24071](https://github.com/davidsneighbour/hugo-modules/commit/ce240718003b7d495011ca042963b187fca871b0))
+* **release:** update repo data files ([c81345a](https://github.com/davidsneighbour/hugo-modules/commit/c81345a14e23440b3afc57aad9990d66fa4bc340))
+* update component header images and release data ([19ab307](https://github.com/davidsneighbour/hugo-modules/commit/19ab3076d31699516ed17a0f3103db0810aab7c2))
+
+
+### Bug Fixes
+
+* remove line numbers from files that have none ([5c348b8](https://github.com/davidsneighbour/hugo-modules/commit/5c348b8660a77f7cae72c83700c350a6e90306e6))
+
 ## [1.2023.16](https://github.com/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2023.15...modules/pictures/v1.2023.16) (2023-09-24)
 
 
