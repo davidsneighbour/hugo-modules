@@ -2,6 +2,70 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/shortcodes/v1.2023.3...modules/shortcodes/v1.2023.4) (2023-09-24)
+
+
+### Build System
+
+* fix env setup for tagslug ([b2e301f](https://github.com/davidsneighbour/hugo-modules/commit/b2e301f8a65661b86ec78d24c2f57a5a79009087))
+* **fix:** update build script and remove unused layout particles ([7a36fd4](https://github.com/davidsneighbour/hugo-modules/commit/7a36fd4963c88ea4d01dd3aaedb1849a2ba37233))
+
+
+### Chore
+
+* add release scripts ([2bd0b03](https://github.com/davidsneighbour/hugo-modules/commit/2bd0b03172b38008b33e0a4d26f535199cc4635e))
+* **config:** add renovate configuration ([a8491a4](https://github.com/davidsneighbour/hugo-modules/commit/a8491a47376d32a7bd7d47dac2e0b03b3164e813))
+* **deps:** update dependencies ([e815075](https://github.com/davidsneighbour/hugo-modules/commit/e81507540371982df0869f295a42f0e9b57b2093))
+* **deps:** update dependencies ([f81d9a9](https://github.com/davidsneighbour/hugo-modules/commit/f81d9a969be5c4e84fe6f106d18add05c1ce89cb))
+* **release:** modules/head/v1.2023.7 ([5d71100](https://github.com/davidsneighbour/hugo-modules/commit/5d7110013fe19b5de783ba841e36716efd7de22c))
+* **release:** modules/head/v1.2023.8 ([ebcfca0](https://github.com/davidsneighbour/hugo-modules/commit/ebcfca0f5d8fabb4708d7c26fd6760aaae54ce91))
+* **release:** modules/hooks/v1.2023.4 ([6bc2eff](https://github.com/davidsneighbour/hugo-modules/commit/6bc2effd609113aab87c78c06c77bcbbbe09cf2f))
+* **release:** modules/internals/v1.2023.3 ([2f79f5d](https://github.com/davidsneighbour/hugo-modules/commit/2f79f5dde345be0ed1091067f3f067e8cdcfaebc))
+* **release:** modules/internals/v1.2023.4 ([b4b0f75](https://github.com/davidsneighbour/hugo-modules/commit/b4b0f75d6186de2b47afbe05212673f231728e33))
+* **release:** modules/netlification/v1.2023.10 ([8baf47d](https://github.com/davidsneighbour/hugo-modules/commit/8baf47db448cdf6aff2726b3dfab416af8dd11c7))
+* **release:** modules/netlification/v1.2023.11 ([88dd00b](https://github.com/davidsneighbour/hugo-modules/commit/88dd00bd5302ad2a9b6f2b5a59d2ff2fcc983111))
+* **release:** modules/netlification/v1.2023.12 ([39d4db8](https://github.com/davidsneighbour/hugo-modules/commit/39d4db8f910c7deca5896f015ec85cded6acdef5))
+* **release:** modules/pictures/v1.2023.14 ([d397f10](https://github.com/davidsneighbour/hugo-modules/commit/d397f10e7923d56e526ecf325d49741644718d24))
+* **release:** modules/shortcodes/v1.2023.3 ([2799545](https://github.com/davidsneighbour/hugo-modules/commit/27995458c4f629cba24195e7cdf83fcaf99b8a22))
+* **release:** modules/social/v0.1.23 ([02e8922](https://github.com/davidsneighbour/hugo-modules/commit/02e89221e5c56af92c227655d4326e3516e6cd2b))
+* **release:** modules/youtube/v1.2023.14 ([52deca2](https://github.com/davidsneighbour/hugo-modules/commit/52deca2137355b3d279a6b41c874fb7ff0de08ad))
+* **release:** modules/youtube/v1.2023.15 ([7f9ac83](https://github.com/davidsneighbour/hugo-modules/commit/7f9ac83f39e8e3e5e3f8bc84bf78eef079d195a7))
+* **release:** update repo data files ([baee3c4](https://github.com/davidsneighbour/hugo-modules/commit/baee3c4432994c7d8e18e52e88d36110a56461ef))
+* **release:** update repo data files ([ca8bb04](https://github.com/davidsneighbour/hugo-modules/commit/ca8bb045d53551b3caa649724e21ee7b0155a42e))
+* **release:** update repo data files ([f2b29f2](https://github.com/davidsneighbour/hugo-modules/commit/f2b29f2824322bb16c0039c3a159b45750091176))
+* **release:** update repo data files ([e9e9c7b](https://github.com/davidsneighbour/hugo-modules/commit/e9e9c7bd226bd882edf021227cce800fd708aae6))
+* **release:** update repo data files ([2ced3ef](https://github.com/davidsneighbour/hugo-modules/commit/2ced3efe368db296436d3fd79c4b3e1ece44839a))
+* **release:** update repo data files ([9f98d24](https://github.com/davidsneighbour/hugo-modules/commit/9f98d2450318a857254f43328b54796b3546f7b8))
+* **release:** update repo data files ([ccccf45](https://github.com/davidsneighbour/hugo-modules/commit/ccccf45eaa55cb2d9bf2deaaaa5d3c3c08b74455))
+* **release:** update repo data files ([a4aebe5](https://github.com/davidsneighbour/hugo-modules/commit/a4aebe50645f2e389da1d6eb81a5ee95f173224d))
+* **release:** update repo data files ([57331ee](https://github.com/davidsneighbour/hugo-modules/commit/57331ee6eefab538ff79af0aba74fe4ac8e25c32))
+* **release:** update repo data files ([230cc86](https://github.com/davidsneighbour/hugo-modules/commit/230cc86f4340ed0c46a44afcdd6f196a9e71a967))
+* **release:** update repo data files ([4a70163](https://github.com/davidsneighbour/hugo-modules/commit/4a7016355ac26db7aea6e606d8c2586e141075d5))
+
+
+### Documentation
+
+* **fix:** proper slug for netlification ([c5e8eef](https://github.com/davidsneighbour/hugo-modules/commit/c5e8eef1cce06d49b63f3bd28f5f18e4bfc8e741))
+* update documentation ([5e78de4](https://github.com/davidsneighbour/hugo-modules/commit/5e78de41cfbd95ddbe0cafcd7c86847391073574))
+
+
+### Features
+
+* default output format (webp) ([a54e8cf](https://github.com/davidsneighbour/hugo-modules/commit/a54e8cfe418fdc8688984eab02623c7c72555bd3))
+* various fixes/features ([6d0c749](https://github.com/davidsneighbour/hugo-modules/commit/6d0c7499e2f2d928651bd261a6d737f57de22f93))
+
+
+### Bug Fixes
+
+* adding notices about processing issues for svg and gif pictures ([9c83904](https://github.com/davidsneighbour/hugo-modules/commit/9c8390446abd4360a2453343d2818a5c1faaceb1))
+* better path to saved video preview image and release script update ([c69727b](https://github.com/davidsneighbour/hugo-modules/commit/c69727bde4818bf9899c6061136704b6f8660dca))
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.40 ([#214](https://github.com/davidsneighbour/hugo-modules/issues/214)) ([4f09d94](https://github.com/davidsneighbour/hugo-modules/commit/4f09d9409c7ca201464a381862bed3dc8ad91afd))
+* **deps:** update dependency @davidsneighbour/configurations to v5.2.41 ([#222](https://github.com/davidsneighbour/hugo-modules/issues/222)) ([8a9b8da](https://github.com/davidsneighbour/hugo-modules/commit/8a9b8da6021be91170e152be866d1df8f80be40f))
+* force default format webp for open graph images ([699f378](https://github.com/davidsneighbour/hugo-modules/commit/699f378bc4df03f6a2b7f5328ec5c9c3dcffe617))
+* proper path for svg/gif notice ([faa494c](https://github.com/davidsneighbour/hugo-modules/commit/faa494ce0b52cc8709cc3b2f3ce8abf452eee658))
+* style beautification ([346855e](https://github.com/davidsneighbour/hugo-modules/commit/346855e70f5d7eb2ed197001caafede981a3b126))
+* use pictures module for the figure shortcode ([629355e](https://github.com/davidsneighbour/hugo-modules/commit/629355e6e7d4be7b209fa0a589bfdb05ea31fde4))
+
 ## 1.2023.3 (2023-09-10)
 
 
