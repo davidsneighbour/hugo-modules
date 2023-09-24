@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/122347200",
-  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/122347200/assets",
-  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/122347200/assets{?name,label}",
-  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/pictures/v1.2023.16",
-  "id": 122347200,
+  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/122347342",
+  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/122347342/assets",
+  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/122347342/assets{?name,label}",
+  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/pictures/v1.2023.17",
+  "id": 122347342,
   "author": {
     "login": "davidsneighbour",
     "id": 83281,
@@ -24,19 +24,19 @@
     "type": "User",
     "site_admin": false
   },
-  "node_id": "RE_kwDOJOG8Gs4HSt7A",
-  "tag_name": "modules/pictures/v1.2023.16",
+  "node_id": "RE_kwDOJOG8Gs4HSt9O",
+  "tag_name": "modules/pictures/v1.2023.17",
   "target_commitish": "main",
-  "name": "modules/pictures/v1.2023.16",
+  "name": "modules/pictures/v1.2023.17",
   "draft": false,
   "prerelease": false,
-  "created_at": "2023-09-24T12:53:29Z",
-  "published_at": "2023-09-24T12:53:52Z",
+  "created_at": "2023-09-24T12:56:58Z",
+  "published_at": "2023-09-24T12:57:37Z",
   "assets": [
 
   ],
-  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/pictures/v1.2023.16",
-  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/pictures/v1.2023.16",
-  "body": "modules/pictures/v1.2023.16\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/internals/v1.2023.5...modules/pictures/v1.2023.16",
-  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/234"
+  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/pictures/v1.2023.17",
+  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/pictures/v1.2023.17",
+  "body": "modules/pictures/v1.2023.17\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.24...modules/pictures/v1.2023.17",
+  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/237"
 }
