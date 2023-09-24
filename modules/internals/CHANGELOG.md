@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/internals/v1.2023.3...modules/internals/v1.2023.4) (2023-09-24)
+
+
+### Chore
+
+* **release:** update repo data files ([f2b29f2](https://github.com/davidsneighbour/hugo-modules/commit/f2b29f2824322bb16c0039c3a159b45750091176))
+
+
+### Bug Fixes
+
+* proper path for svg/gif notice ([faa494c](https://github.com/davidsneighbour/hugo-modules/commit/faa494ce0b52cc8709cc3b2f3ce8abf452eee658))
+
 ## 1.2023.3 (2023-09-24)
 
 
