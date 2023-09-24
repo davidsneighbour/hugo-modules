@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.5](https://github.com/davidsneighbour/hugo-modules/compare/modules/hooks/v1.2023.4...modules/hooks/v1.2023.5) (2023-09-24)
+
+
+### Chore
+
+* **release:** modules/head/v1.2023.9 ([59741a2](https://github.com/davidsneighbour/hugo-modules/commit/59741a27d47e447b35dadfb8454aa54ff29604e9))
+* **release:** modules/pictures/v1.2023.15 ([cb151f7](https://github.com/davidsneighbour/hugo-modules/commit/cb151f7b22d313757bfa2699c4b2199ecd130e18))
+* **release:** modules/shortcodes/v1.2023.4 ([29580ad](https://github.com/davidsneighbour/hugo-modules/commit/29580ad38a12f88687251126478e45f0855b8f06))
+* **release:** update repo data files ([e0cbc47](https://github.com/davidsneighbour/hugo-modules/commit/e0cbc47c4d3bec24613a69dd1520d610fa0543df))
+* **release:** update repo data files ([62dcf8a](https://github.com/davidsneighbour/hugo-modules/commit/62dcf8ad51204f6cddf66d9c696cc7846714ba1e))
+* **release:** update repo data files ([7de3249](https://github.com/davidsneighbour/hugo-modules/commit/7de3249ae7443ad848dbd394605eab22c8f610c2))
+* **release:** update repo data files ([baee3c4](https://github.com/davidsneighbour/hugo-modules/commit/baee3c4432994c7d8e18e52e88d36110a56461ef))
+
 ## [1.2023.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/hooks/v1.2023.3...modules/hooks/v1.2023.4) (2023-09-24)
 
 
