@@ -21,14 +21,9 @@
   "content" site.Title ) -}}
 
 <!-- og:title = the title of your object as it should appear within the graph -->
-{{- $content := "" -}}
-{{- if ne .IsHome true -}}
-  {{- $content = printf "%s - " (partialCached "func/getTitle.html" page page) -}}
-{{- end -}}
-{{- $content = printf "%s%s %s" $content site.Title $default_format -}}
 {{- $metaProperties = $metaProperties | append (dict
   "property" "og:title"
-  "content" $content) -}}
+  "content" (partialCached "func/getTitle.html" page page)) -}}
 
 <!-- og:url = canonical URL, will be used as its permanent ID in the graph -->
 {{- $metaProperties = $metaProperties | append (dict
