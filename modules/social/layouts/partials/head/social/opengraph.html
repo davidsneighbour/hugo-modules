@@ -77,32 +77,15 @@
 
 <!-- og:image = an image URL which should represent the object within the graph -->
 {{- $metaProperty := dict -}}
-{{- $images := .Resources.ByType "image" -}}
-{{- with $images -}}
-  {{- range first 1 . -}}
-    {{- $image := .Resize "1200x webp" -}}
-    {{- with $image }}
-      {{- $image = .Crop "1200x630 webp" -}}
-    {{- end -}}
-    {{- $metaProperty = (dict
-          "property" "og:image"
-          "content" $image.Permalink) -}}
+{{- $image := (partialCached "func/getArticleImage.html" page page) -}}
+{{- with $image -}}
+  {{- $image := .Resize "1200x webp" -}}
+  {{- with $image }}
+    {{- $image = .Crop "1200x630 webp" -}}
   {{- end -}}
-{{- else -}}
-  {{- if and (isset $config "pictures") (isset $config.pictures "default_image") -}}
-    {{- with $config.pictures.default_image -}}
-      {{- $image := resources.Get . -}}
-      {{- with $image -}}
-        {{- $image := .Resize "1200x webp" -}}
-        {{- with $image }}
-          {{- $image = .Crop "1200x630 webp" -}}
-        {{- end -}}
-        {{- $metaProperty = (dict
-              "property" "og:image"
-              "content" $image.Permalink) -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
+  {{- $metaProperty = (dict
+        "property" "og:image"
+        "content" $image.Permalink) -}}
 {{- end -}}
 {{- $metaProperties = $metaProperties | append $metaProperty -}}
 
