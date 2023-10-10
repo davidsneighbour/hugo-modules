@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.26](https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.25...modules/social/v0.1.26) (2023-10-10)
+
+
+### Chore
+
+* **release:** update repo data files ([ad86b16](https://github.com/davidsneighbour/hugo-modules/commit/ad86b16e26c63882ad95fb656f9a79122b8185e4))
+
+
+### Bug Fixes
+
+* proper getArticleImage partial ([0c84647](https://github.com/davidsneighbour/hugo-modules/commit/0c846477deae32fcd96d0375a9534eac1f913f02))
+
 ## [0.1.25](https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.24...modules/social/v0.1.25) (2023-10-10)
 
 
