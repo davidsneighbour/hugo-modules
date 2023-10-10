@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/120555350",
-  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/120555350/assets",
-  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/120555350/assets{?name,label}",
-  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/functions/v1.2023.7",
-  "id": 120555350,
+  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/124379852",
+  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/124379852/assets",
+  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/124379852/assets{?name,label}",
+  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/functions/v1.2023.8",
+  "id": 124379852,
   "author": {
     "login": "davidsneighbour",
     "id": 83281,
@@ -24,20 +24,19 @@
     "type": "User",
     "site_admin": false
   },
-  "node_id": "RE_kwDOJOG8Gs4HL4dW",
-  "tag_name": "modules/functions/v1.2023.7",
+  "node_id": "RE_kwDOJOG8Gs4HaeLM",
+  "tag_name": "modules/functions/v1.2023.8",
   "target_commitish": "main",
-  "name": "modules/functions/v1.2023.7",
+  "name": "modules/functions/v1.2023.8",
   "draft": false,
   "prerelease": false,
-  "created_at": "2023-09-09T16:32:08Z",
-  "published_at": "2023-09-10T15:35:09Z",
+  "created_at": "2023-10-10T07:19:08Z",
+  "published_at": "2023-10-10T08:12:02Z",
   "assets": [
 
   ],
-  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/functions/v1.2023.7",
-  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/functions/v1.2023.7",
-  "body": "modules/functions/v1.2023.7\n\n## What's Changed\n* fix(deps): update dependency @davidsneighbour/configurations to v5.2.38 by @renovate in https://github.com/davidsneighbour/hugo-modules/pull/208\n* fix(deps): update dependency @davidsneighbour/configurations to v5.2.39 by @renovate in https://github.com/davidsneighbour/hugo-modules/pull/209\n\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.22...modules/functions/v1.2023.7",
-  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/211",
-  "mentions_count": 1
+  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/functions/v1.2023.8",
+  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/functions/v1.2023.8",
+  "body": "modules/functions/v1.2023.8\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.26...modules/functions/v1.2023.8",
+  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/246"
 }
