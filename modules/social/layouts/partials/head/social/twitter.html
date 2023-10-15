@@ -6,15 +6,16 @@
 
 {{- $dict := dict -}}
 
-{{/* twitter:card */}}
-{{- $card := partialCached "head/social/twitter/get.html" (dict
-																						"context" .
-																						"key" "card"
-																						"default" "summary_large_image") . -}}
+{{- /* twitter:card */ -}}
+{{- $card := partialCached "head/social/twitter/get.html"
+              (dict
+                "context" .
+                "key" "card"
+                "default" "summary_large_image") . -}}
 {{- $cards := slice "summary" "summary_large_image" -}}
 {{- if not (in $cards $card) -}}
 	{{- $card = "summary" -}}
-	{{/* TODO: notice about this card type not being supported */}}
+	{{- /* TODO: notice about this card type not being supported */ -}}
 {{- end -}}
 {{- $dict = $dict | merge ( dict "twitter:card" $card ) -}}
 
@@ -42,7 +43,6 @@
 	{{- $dict = $dict | merge ( dict "twitter:image" $image.Permalink ) -}}
 {{- end -}}
 
-{{- partial "func/printCommentHeader.html" "@davidsneighbour/hugo-social > twitter" -}}
 {{- range $key, $value := $dict -}}
 	<meta name="{{$key}}" content="{{$value}}">
 {{ end -}}
