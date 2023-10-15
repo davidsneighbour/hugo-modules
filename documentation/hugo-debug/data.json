@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/davidsneighbour/hugo-debug/releases/77897940",
-  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-debug/releases/77897940/assets",
-  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-debug/releases/77897940/assets{?name,label}",
-  "html_url": "https://github.com/davidsneighbour/hugo-debug/releases/tag/v1.5.20",
-  "id": 77897940,
+  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/125135541",
+  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/125135541/assets",
+  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/125135541/assets{?name,label}",
+  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/debug/v1.2023.8",
+  "id": 125135541,
   "author": {
     "login": "davidsneighbour",
     "id": 83281,
@@ -24,30 +24,19 @@
     "type": "User",
     "site_admin": false
   },
-  "node_id": "RE_kwDOExcvIM4EpKDU",
-  "tag_name": "v1.5.20",
+  "node_id": "RE_kwDOJOG8Gs4HdWq1",
+  "tag_name": "modules/debug/v1.2023.8",
   "target_commitish": "main",
-  "name": "v1.5.20",
+  "name": "modules/debug/v1.2023.8",
   "draft": false,
   "prerelease": false,
-  "created_at": "2022-09-22T15:27:26Z",
-  "published_at": "2022-09-22T15:28:04Z",
+  "created_at": "2023-10-15T12:21:20Z",
+  "published_at": "2023-10-15T17:17:23Z",
   "assets": [
 
   ],
-  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-debug/tarball/v1.5.20",
-  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-debug/zipball/v1.5.20",
-  "body": "",
-  "reactions": {
-    "url": "https://api.github.com/repos/davidsneighbour/hugo-debug/releases/77897940/reactions",
-    "total_count": 1,
-    "+1": 1,
-    "-1": 0,
-    "laugh": 0,
-    "hooray": 0,
-    "confused": 0,
-    "heart": 0,
-    "rocket": 0,
-    "eyes": 0
-  }
+  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/debug/v1.2023.8",
+  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/debug/v1.2023.8",
+  "body": "modules/debug/v1.2023.8\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/seo/v0.0.4...modules/debug/v1.2023.8",
+  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/265"
 }
