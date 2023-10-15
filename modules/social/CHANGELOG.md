@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.29](https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.28...modules/social/v0.1.29) (2023-10-15)
+
+
+### Chore
+
+* **deps:** update dependencies ([2cd93a4](https://github.com/davidsneighbour/hugo-modules/commit/2cd93a4d965fe85b0d46cc1d8cef81a1eac84aa0))
+* **release:** modules/functions/v1.2023.11 ([979e0bd](https://github.com/davidsneighbour/hugo-modules/commit/979e0bdb421ba80866ab285462a574e63faa4130))
+* **release:** modules/head/v1.2023.10 ([c24c1a7](https://github.com/davidsneighbour/hugo-modules/commit/c24c1a7aa86eb6bc6243acfc1ccc15d74cb5f77a))
+* **release:** update repo data files ([cb6f350](https://github.com/davidsneighbour/hugo-modules/commit/cb6f350ea9ffbd2798a6f04821a090e40d25991d))
+* **release:** update repo data files ([7611908](https://github.com/davidsneighbour/hugo-modules/commit/7611908ff353410399edcb5b10756ee19108b1c8))
+* **release:** update repo data files ([7f530a7](https://github.com/davidsneighbour/hugo-modules/commit/7f530a7e41a94ea4912d2fec2e58a7d43206fee1))
+
+
+### Features
+
+* add functions from module social ([bc89c9c](https://github.com/davidsneighbour/hugo-modules/commit/bc89c9c9d3c2fd55313a7ac7644fd6d8bb694417))
+
+
+### Bug Fixes
+
+* move functions to module functions ([1505360](https://github.com/davidsneighbour/hugo-modules/commit/1505360f1fa937c7f4f8c22e64994fe221133b7e))
+
 ## [0.1.28](https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.27...modules/social/v0.1.28) (2023-10-15)
 
 
