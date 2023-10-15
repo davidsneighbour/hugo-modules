@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.27](https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.26...modules/social/v0.1.27) (2023-10-15)
+
+
+### Chore
+
+* **release:** modules/functions/v1.2023.8 ([fe2b116](https://github.com/davidsneighbour/hugo-modules/commit/fe2b116a4ec145534412ef9857278a86df041e5e))
+* **release:** update repo data files ([a842edf](https://github.com/davidsneighbour/hugo-modules/commit/a842edf9d696ed9ef8cc06bb93de7e8a792d1b6f))
+* **release:** update repo data files ([d95ff00](https://github.com/davidsneighbour/hugo-modules/commit/d95ff00786fd92ae8ce329f6c5e1cc544e474fe7))
+
+
+### Bug Fixes
+
+* default image generation via config path ([2b86ea7](https://github.com/davidsneighbour/hugo-modules/commit/2b86ea7a0c56ad962e3d9ef33df280723b1805a6))
+* not printing empty meta tags ([69f4ca2](https://github.com/davidsneighbour/hugo-modules/commit/69f4ca2c1eba0b00a4c17c9640143fd5ff27936b))
+* remove spaces from default separator ([6a94ca3](https://github.com/davidsneighbour/hugo-modules/commit/6a94ca31cbb5613c7f3c0397eb290af691420809))
+
 ## [0.1.26](https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.25...modules/social/v0.1.26) (2023-10-10)
 
 
