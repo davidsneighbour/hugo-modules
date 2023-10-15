@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.28](https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.27...modules/social/v0.1.28) (2023-10-15)
+
+
+### Chore
+
+* **release:** modules/functions/v1.2023.10 ([0fc18fa](https://github.com/davidsneighbour/hugo-modules/commit/0fc18faa19776d86725ddb82609d32f8a7c9a450))
+* **release:** modules/functions/v1.2023.9 ([7d1dd8f](https://github.com/davidsneighbour/hugo-modules/commit/7d1dd8fa7ce903a3bdc1f05dbcd4484d0baec25c))
+* **release:** update repo data files ([d52bef3](https://github.com/davidsneighbour/hugo-modules/commit/d52bef33d1cd61220e513e4735f83a784884ed67))
+* **release:** update repo data files ([7364317](https://github.com/davidsneighbour/hugo-modules/commit/736431776e4562a67052393d513b63c314fc4ab8))
+* **release:** update repo data files ([4958519](https://github.com/davidsneighbour/hugo-modules/commit/4958519ccb35a9d0a29b86cd5901b6b47403f97e))
+
+
+### Bug Fixes
+
+* cleanup title string ([7c77286](https://github.com/davidsneighbour/hugo-modules/commit/7c772862b8b243234a51cbf5fb76a19e40658feb))
+* proper line breaks in functions ([c916695](https://github.com/davidsneighbour/hugo-modules/commit/c916695dd995d9b43bff9003cb577c9cebbcf96a))
+
 ## [0.1.27](https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.26...modules/social/v0.1.27) (2023-10-15)
 
 
