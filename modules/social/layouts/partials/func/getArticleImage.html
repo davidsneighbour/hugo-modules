@@ -25,7 +25,7 @@ Path of checking
 {{- end -}}
 
 {{- with $articleimage -}}{{- else -}}
-  {{- $config := site.Params.pictures -}}
+  {{- $config := site.Params.dnb.pictures -}}
   {{- $default_image := $config.default_image | default "images/default.png" -}}
   {{- $articleimage = resources.Get $default_image -}}
 {{- end -}}
