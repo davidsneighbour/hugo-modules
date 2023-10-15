@@ -1,7 +1,7 @@
 {
   "name": "@davidsneigihbour/hugo-debug",
   "description": "GoHugo's missing debugging partials.",
-  "version": "1.2023.7",
+  "version": "1.2023.8",
   "license": "GPL-3.0-only",
   "private": true,
   "repository": {
