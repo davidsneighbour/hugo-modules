@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/davidsneighbour/hugo-pwa/releases/83084065",
-  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-pwa/releases/83084065/assets",
-  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-pwa/releases/83084065/assets{?name,label}",
-  "html_url": "https://github.com/davidsneighbour/hugo-pwa/releases/tag/v1.0.10",
-  "id": 83084065,
+  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/125123268",
+  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/125123268/assets",
+  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/125123268/assets{?name,label}",
+  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/pwa/v1.2023.3",
+  "id": 125123268,
   "author": {
     "login": "davidsneighbour",
     "id": 83281,
@@ -24,18 +24,19 @@
     "type": "User",
     "site_admin": false
   },
-  "node_id": "RE_kwDOGdkmhs4E88Mh",
-  "tag_name": "v1.0.10",
+  "node_id": "RE_kwDOJOG8Gs4HdTrE",
+  "tag_name": "modules/pwa/v1.2023.3",
   "target_commitish": "main",
-  "name": "v1.0.10",
+  "name": "modules/pwa/v1.2023.3",
   "draft": false,
   "prerelease": false,
-  "created_at": "2022-11-15T05:30:59Z",
-  "published_at": "2022-11-15T05:31:13Z",
+  "created_at": "2023-10-15T09:43:27Z",
+  "published_at": "2023-10-15T09:44:10Z",
   "assets": [
 
   ],
-  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-pwa/tarball/v1.0.10",
-  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-pwa/zipball/v1.0.10",
-  "body": "chore(release): v1.0.10"
+  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/pwa/v1.2023.3",
+  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/pwa/v1.2023.3",
+  "body": "modules/pwa/v1.2023.3\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/publisher/v0.0.4...modules/pwa/v1.2023.3",
+  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/260"
 }
