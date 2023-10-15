@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/124372829",
-  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/124372829/assets",
-  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/124372829/assets{?name,label}",
-  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/social/v0.1.26",
-  "id": 124372829,
+  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/125120479",
+  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/125120479/assets",
+  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/125120479/assets{?name,label}",
+  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/social/v0.1.27",
+  "id": 125120479,
   "author": {
     "login": "davidsneighbour",
     "id": 83281,
@@ -24,19 +24,19 @@
     "type": "User",
     "site_admin": false
   },
-  "node_id": "RE_kwDOJOG8Gs4Hacdd",
-  "tag_name": "modules/social/v0.1.26",
+  "node_id": "RE_kwDOJOG8Gs4HdS_f",
+  "tag_name": "modules/social/v0.1.27",
   "target_commitish": "main",
-  "name": "modules/social/v0.1.26",
+  "name": "modules/social/v0.1.27",
   "draft": false,
   "prerelease": false,
-  "created_at": "2023-10-10T07:04:30Z",
-  "published_at": "2023-10-10T07:19:08Z",
+  "created_at": "2023-10-10T08:12:03Z",
+  "published_at": "2023-10-15T07:52:24Z",
   "assets": [
 
   ],
-  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/social/v0.1.26",
-  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/social/v0.1.26",
-  "body": "modules/social/v0.1.26\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.25...modules/social/v0.1.26",
-  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/245"
+  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/social/v0.1.27",
+  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/social/v0.1.27",
+  "body": "modules/social/v0.1.27\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/functions/v1.2023.8...modules/social/v0.1.27",
+  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/247"
 }
