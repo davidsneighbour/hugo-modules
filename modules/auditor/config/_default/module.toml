@@ -2,6 +2,14 @@
 extended = true
 min = "0.84.4"
 
+[[mounts]]
+source = 'assets'
+target = 'assets'
+
+[[mounts]]
+source = 'layouts'
+target = 'layouts'
+
 [[imports]]
 disable = false
 ignoreConfig = true
@@ -15,15 +23,3 @@ target = 'assets/css/libs/ct.css'
 [[imports.mounts]]
 source = 'ct.css'
 target = 'static/css/libs/ct.css'
-
-[[mounts]]
-source = 'data'
-target = 'data'
-
-[[mounts]]
-source = 'layouts'
-target = 'layouts'
-
-[[mounts]]
-source = 'assets'
-target = 'assets'

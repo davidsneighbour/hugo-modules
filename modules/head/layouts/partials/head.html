@@ -1,9 +1,10 @@
+{{- partial "func/printCommentHeader.html" "@davidsneighbour/hugo-head" -}}
 {{- $page := . -}}
 {{- $config := site.Params.dnb.head -}}
 {{- partial "func/hook.html" ( dict "hook" "head-init" "context" . ) -}}
 <meta charset="{{- site.Params.dnb.head.charset | default "utf-8" -}}">
 <meta name="viewport" content="{{- site.Params.dnb.head.viewport | default "width=device-width, initial-scale=1" -}}">
-{{- partial "head/title.html" . -}}
+{{ partial "head/title.html" . -}}
 {{- partial "func/hook.html" ( dict "hook" "head-start" "context" . ) -}}
 {{- partialCached "head/speed-optimisation.html" . -}}
 {{- partial "func/hook.html" ( dict "hook" "head-post-speed-optimisation" "context" . ) -}}
@@ -43,6 +44,7 @@
     {{- partial "func/hook.html" ( dict "hook" (printf "head-post-module-%s" .) "context" . ) -}}
   {{- end -}}
 {{- end -}}
+{{- partial "func/printCommentHeader.html" "@davidsneighbour/hugo-head - the rest" -}}
 {{- partialCached "head/verification.html" . -}}
 {{- partial "func/hook.html" ( dict "hook" "head-post-verification" "context" . ) -}}
 {{- partial "head/others.html" . -}}
