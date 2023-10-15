@@ -1,0 +1,6 @@
+github.com/davidsneighbour/hugo-modules/modules/head v1.2023.10 h1:dRmaYQWrXXwCPjRC/ci0t16sE7jsgRAX7F5QprTQPog=
+github.com/davidsneighbour/hugo-modules/modules/head v1.2023.10/go.mod h1:6/jasl2AXURzzzUXCuAWfkt6ccJmtWAFecfgRy7ApDQ=
+github.com/davidsneighbour/hugo-modules/modules/robots v1.2023.6 h1:eysfvV3kjN+kHfXMAmG9WDh9SxPnw/J8xPyWrapVW0o=
+github.com/davidsneighbour/hugo-modules/modules/robots v1.2023.6/go.mod h1:b9sTyM727ZlKujiXbppysnFycDtuwanV70lh0Tuo56Y=
+github.com/davidsneighbour/hugo-modules/modules/sitemap v1.2023.5 h1:C/Tx3SGOSKEU7VBlVZ5tjfDZKXj4YHFWRWm1YmDit8E=
+github.com/davidsneighbour/hugo-modules/modules/sitemap v1.2023.5/go.mod h1:wUEXIa5iihN/L/81O4jaDnRA5hBYrtjvmVFZLIZAMJo=
