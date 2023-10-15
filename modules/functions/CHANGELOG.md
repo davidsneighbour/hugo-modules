@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.10](https://github.com/davidsneighbour/hugo-modules/compare/modules/functions/v1.2023.9...modules/functions/v1.2023.10) (2023-10-15)
+
+
+### Chore
+
+* **release:** update repo data files ([7364317](https://github.com/davidsneighbour/hugo-modules/commit/736431776e4562a67052393d513b63c314fc4ab8))
+
+
+### Bug Fixes
+
+* proper line breaks in functions ([c916695](https://github.com/davidsneighbour/hugo-modules/commit/c916695dd995d9b43bff9003cb577c9cebbcf96a))
+
 ## [1.2023.9](https://github.com/davidsneighbour/hugo-modules/compare/modules/functions/v1.2023.8...modules/functions/v1.2023.9) (2023-10-15)
 
 
