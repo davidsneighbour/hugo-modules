@@ -2,5 +2,9 @@ github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.7 h1:uVYY3uAMMLrHY
 github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.7/go.mod h1:b81QGiJxOSpjhjpPY2gK3FBHVPkvicxG9huq+qRLR70=
 github.com/davidsneighbour/hugo-modules/modules/functions v1.2023.7 h1:t2vmQQCq+CZUCAc7phNsMBtDAzYBiaPRRTQ3nNZZPjg=
 github.com/davidsneighbour/hugo-modules/modules/functions v1.2023.7/go.mod h1:mMpTa/CPuBifHgzsHWORFM32ICKhDKjREQ1hKPk3oeU=
+github.com/davidsneighbour/hugo-modules/modules/functions v1.2023.10 h1:qLt1SSGJsD9ewWNZG+tR8FlE9NjOSP0w+/lZC+thRe4=
+github.com/davidsneighbour/hugo-modules/modules/functions v1.2023.10/go.mod h1:mMpTa/CPuBifHgzsHWORFM32ICKhDKjREQ1hKPk3oeU=
 github.com/davidsneighbour/hugo-modules/modules/hooks v1.2023.4 h1:AuWzIdLiozreG2rryiEM83DrKnPtlaToL1xDeffKgVM=
 github.com/davidsneighbour/hugo-modules/modules/hooks v1.2023.4/go.mod h1:q7g5R7a94dkij1NBgHGWxcA0ya/Kicmp6GxB87zEipg=
+github.com/davidsneighbour/hugo-modules/modules/hooks v1.2023.5 h1:gYZvMrl74Y35mK1OVoYx75x8G5sNBfEO7eqhefIiJ04=
+github.com/davidsneighbour/hugo-modules/modules/hooks v1.2023.5/go.mod h1:xJrU8I3WPdEzc4Bqyi/lZ3Keax5ujVA0v7CGB9f8ffs=
