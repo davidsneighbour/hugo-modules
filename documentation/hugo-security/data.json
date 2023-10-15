@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/davidsneighbour/hugo-security/releases/75331885",
-  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-security/releases/75331885/assets",
-  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-security/releases/75331885/assets{?name,label}",
-  "html_url": "https://github.com/davidsneighbour/hugo-security/releases/tag/v1.1.3",
-  "id": 75331885,
+  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/125123298",
+  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/125123298/assets",
+  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/125123298/assets{?name,label}",
+  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/security/v1.2023.3",
+  "id": 125123298,
   "author": {
     "login": "davidsneighbour",
     "id": 83281,
@@ -24,18 +24,19 @@
     "type": "User",
     "site_admin": false
   },
-  "node_id": "RE_kwDOGdkn5M4EfXkt",
-  "tag_name": "v1.1.3",
+  "node_id": "RE_kwDOJOG8Gs4HdTri",
+  "tag_name": "modules/security/v1.2023.3",
   "target_commitish": "main",
-  "name": "Latest release",
+  "name": "modules/security/v1.2023.3",
   "draft": false,
   "prerelease": false,
-  "created_at": "2022-07-24T12:25:20Z",
-  "published_at": "2022-08-25T11:17:03Z",
+  "created_at": "2023-10-15T09:45:10Z",
+  "published_at": "2023-10-15T09:45:35Z",
   "assets": [
 
   ],
-  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-security/tarball/v1.1.3",
-  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-security/zipball/v1.1.3",
-  "body": ""
+  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/security/v1.2023.3",
+  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/security/v1.2023.3",
+  "body": "modules/security/v1.2023.3\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/schema/v0.0.6...modules/security/v1.2023.3",
+  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/263"
 }
