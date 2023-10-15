@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.30](https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.29...modules/social/v0.1.30) (2023-10-15)
+
+
+### Chore
+
+* **release:** update repo data files ([9395721](https://github.com/davidsneighbour/hugo-modules/commit/93957219545da6a59ac8ac40d55a88e3289f1cd6))
+
+
+### Features
+
+* add twitter dnt tag ([6e5ff7f](https://github.com/davidsneighbour/hugo-modules/commit/6e5ff7f510ac71200e314ba51ec12a81af07dee9))
+
 ## [0.1.29](https://github.com/davidsneighbour/hugo-modules/compare/modules/social/v0.1.28...modules/social/v0.1.29) (2023-10-15)
 
 
