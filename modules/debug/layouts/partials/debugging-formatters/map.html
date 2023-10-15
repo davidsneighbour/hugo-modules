@@ -1,9 +1,9 @@
 {{ if (gt (len .value) 0) }}
   <table class="debugprint">
     <tr>
-        <th class="align-top" class="key">Key</th>
-        <th class="align-top" class="type">Type</th>
-        <th class="align-top" class="value">Value</th>
+        <th class="align-top key">Key</th>
+        <th class="align-top type">Type</th>
+        <th class="align-top value">Value</th>
     </tr>
     {{ range $key1, $value1 := .value }}
       {{ $type1       := (printf "%T" $value1) }}
@@ -11,12 +11,12 @@
       {{ if $type1IsTime }}
         <!-- Print the date only if it is not at its initial value of Jan 1, 0001 -->
         {{ if (ne "0001-01-01" ($value1.Format "2006-01-02")) }}
-          {{ printf `<tr> <td class="align-top" class="key">%s</td> <td class="align-top" class="type">%s</td> <td class="align-top" class="value">` $key1 $type1 | safeHTML }}
+          {{ printf `<tr> <td class="align-top key">%s</td> <td class="align-top type">%s</td> <td class="align-top value">` $key1 $type1 | safeHTML }}
           {{ partial "debugprint.html" $value1 }}
           {{ printf "</td></tr>" | safeHTML }}
         {{ end }}
       {{ else }}
-        {{ printf `<tr> <td class="align-top" class="key">%s</td> <td class="align-top" class="type">%s</td> <td class="align-top" class="value">` $key1 $type1 | safeHTML }}
+        {{ printf `<tr> <td class="align-top key">%s</td> <td class="align-top type">%s</td> <td class="align-top value">` $key1 $type1 | safeHTML }}
         {{ partial "debugprint.html" $value1 }}
         {{ printf "</td></tr>" | safeHTML }}
       {{ end }}

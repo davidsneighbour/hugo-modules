@@ -3,32 +3,32 @@
                               .value.Layout  .value.Permalink  .value.RelPermalink  .value.Data ) }}
 <table class="debugprint">
   <tr>
-      <th class="align-top" class="key">Page Variable</th>
-      <th class="align-top" class="value">Value</th>
+      <th class="align-top key">Page Variable</th>
+      <th class="align-top value">Value</th>
   </tr>
   {{ range $idx, $elem := $PageVarNames }}
-    {{ printf `<tr> <td class="align-top" class="key">%s</td> <td class="align-top" class="value">` $elem | safeHTML }}
+    {{ printf `<tr> <td class="align-top key">%s</td> <td class="align-top value">` $elem | safeHTML }}
     {{ partial "debugprint.html" (index $PageVarSymbols $idx) }}
     {{ printf "</td></tr>" | safeHTML }}
   {{ end }}
   {{ with .value.NextPage }}
-    {{ printf `<tr> <td class="align-top" class="key">NextPage</td> <td class="align-top" class="value"><a href="%s">%s</a></td></tr>` .Permalink .Title | safeHTML }}
+    {{ printf `<tr> <td class="align-top key">NextPage</td> <td class="align-top value"><a href="%s">%s</a></td></tr>` .Permalink .Title | safeHTML }}
   {{ else }}
-    {{ printf `<tr> <td class="align-top" class="key">NextPage</td> <td class="align-top" class="value">None</td></tr>` | safeHTML }}
+    {{ printf `<tr> <td class="align-top key">NextPage</td> <td class="align-top value">None</td></tr>` | safeHTML }}
   {{ end }}
   {{ with .value.PrevPage }}
-    {{ printf `<tr> <td class="align-top" class="key">PrevPage</td> <td class="align-top" class="value"><a href="%s">%s</a></td></tr>` .Permalink .Title | safeHTML }}
+    {{ printf `<tr> <td class="align-top key">PrevPage</td> <td class="align-top value"><a href="%s">%s</a></td></tr>` .Permalink .Title | safeHTML }}
   {{ else }}
-    {{ printf `<tr> <td class="align-top" class="key">PrevPage</td> <td class="align-top" class="value">None</td></tr>` | safeHTML }}
+    {{ printf `<tr> <td class="align-top key">PrevPage</td> <td class="align-top value">None</td></tr>` | safeHTML }}
   {{ end }}
   {{ with .value.NextInSection }}
-    {{ printf `<tr> <td class="align-top" class="key">NextInSection</td> <td class="align-top" class="value"><a href="%s">%s</a></td></tr>` .Permalink .Title | safeHTML }}
+    {{ printf `<tr> <td class="align-top key">NextInSection</td> <td class="align-top value"><a href="%s">%s</a></td></tr>` .Permalink .Title | safeHTML }}
   {{ else }}
-    {{ printf `<tr> <td class="align-top" class="key">NextInSection</td> <td class="align-top" class="value">None</td></tr>` | safeHTML }}
+    {{ printf `<tr> <td class="align-top key">NextInSection</td> <td class="align-top value">None</td></tr>` | safeHTML }}
   {{ end }}
   {{ with .value.PrevInSection }}
-    {{ printf `<tr> <td class="align-top" class="key">PrevInSection</td> <td class="align-top" class="value"><a href="%s">%s</a></td></tr>` .Permalink .Title | safeHTML }}
+    {{ printf `<tr> <td class="align-top key">PrevInSection</td> <td class="align-top value"><a href="%s">%s</a></td></tr>` .Permalink .Title | safeHTML }}
   {{ else }}
-    {{ printf `<tr> <td class="align-top" class="key">PrevInSection</td> <td class="align-top" class="value">None</td></tr>` | safeHTML }}
+    {{ printf `<tr> <td class="align-top key">PrevInSection</td> <td class="align-top value">None</td></tr>` | safeHTML }}
   {{ end }}
 </table>

@@ -1,4 +1,19 @@
-<!-- Use %#v for strings so that their values always get double-quoted.
-      That is helpful to tell if a space char is within a string. -->
-{{/* {{ printf "%#v" .value | htmlUnescape }} */}}
-{{ printf "%s" .value | htmlUnescape }}
+{{- $value := printf "%s" .value | htmlUnescape }}
+{{- $short := substr $value 0 300 -}}
+{{- $length := len $value -}}
+{{- if (eq $value $short) -}}
+  {{- printf "%s" .value | htmlUnescape -}}
+{{- else -}}
+  <strong>Abridged: ({{ $length }} chars): </strong> {{- $short -}} &hellip;<br />
+  {{- $id := partial "func/getRandomString.html" . -}}
+  <a href="#" data-bs-toggle="collapse" data-bs-target="#a{{- $id -}}"
+      aria-expanded="false" aria-controls="a{{- $id -}}">
+      <span class="if-collapsed">Show full value</span>
+      <span class="if-not-collapsed">Hide full value</span>
+  </a>
+  <div class="collapse" id="a{{- $id -}}">
+    <div class="card card-body">
+      {{- printf "%s" .value | htmlUnescape -}}
+    </div>
+  </div>
+{{- end -}}

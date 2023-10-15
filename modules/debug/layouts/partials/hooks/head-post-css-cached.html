@@ -1,15 +1,15 @@
 {{- if site.IsServer -}}
 
-{{- $config := site.Params.dnb.head.styles -}}
-{{- $entrypoint := "scss/debugprint.scss" -}}
-{{- $debugprintstyles := resources.Get $entrypoint -}}
-{{- $debugprintstyles = $debugprintstyles | resources.ToCSS $config.options -}}
-{{- $debugprintstyles = $debugprintstyles | resources.PostCSS -}}
-{{- $debugprintstyles = $debugprintstyles | minify -}}
-{{- $debugprintstyles = $debugprintstyles | fingerprint "sha512" -}}
-{{- $debugprintstyles = $debugprintstyles | resources.PostProcess -}}
+  {{- $config := site.Params.dnb.head.styles -}}
+  {{- $entrypoint := "scss/debugprint.scss" -}}
+  {{- $debugprintstyles := resources.Get $entrypoint -}}
+  {{- $debugprintstyles = $debugprintstyles | resources.ToCSS $config.options -}}
+  {{- $debugprintstyles = $debugprintstyles | resources.PostCSS -}}
+  {{- $debugprintstyles = $debugprintstyles | minify -}}
+  {{- $debugprintstyles = $debugprintstyles | fingerprint "sha512" -}}
+  {{- $debugprintstyles = $debugprintstyles | resources.PostProcess -}}
 
-<link rel="stylesheet" media="all" integrity="{{- $debugprintstyles.Data.Integrity -}}"
-    href="{{- $debugprintstyles.Permalink -}}" />
+  <link rel="stylesheet" media="all" integrity="{{- $debugprintstyles.Data.Integrity -}}"
+      href="{{- $debugprintstyles.Permalink -}}" />
 
 {{- end -}}

@@ -1,26 +1,42 @@
 .debugprint table,
 table.debugprint {
 
-  width: 100%;
-  border: 1px solid #ccc;
+  @extend .table;
+  @extend .table-sm;
+  @extend .table-dark;
+  @extend .table-striped;
+  @extend .table-bordered;
+  @extend .table-hover;
+  @extend .mb-0;
+
+  @extend .w-100;
+
+  max-width: 100%;
+  font-size: 0.85rem;
 
   td,
   th {
-    padding: 0.125rem;
-    vertical-align: top;
-    border: 1px solid #ccc;
+    @extend .align-top;
+    @extend .p-2;
   }
 
   th {
-    font-weight: bold;
-    text-transform: uppercase;
+    @extend .fw-bold;
   }
 
   .true {
-    color: green;
+    @extend .text-success;
   }
 
   .false {
-    color: red;
+    @extend .text-danger;
+  }
+
+  [data-bs-toggle="collapse"] {
+
+    &.collapsed .if-not-collapsed,
+    &:not(.collapsed) .if-collapsed {
+      @extend .d-none;
+    }
   }
 }

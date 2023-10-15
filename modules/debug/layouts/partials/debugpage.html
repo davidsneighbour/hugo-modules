@@ -1,5 +1,5 @@
-<p class="mt-5">
-  <button class="btn btn-info" type="button"
+<p class="mt-5 d-flex justify-content-center">
+  <button class="btn btn-link" type="button"
           data-bs-toggle="collapse" data-bs-target="#debug--pageinfo"
           aria-expanded="false" aria-controls="debug--pageinfo">
     {{ partialCached "bsicon.html" "gear-wide-connected" "gear-wide-connected" }}
@@ -7,61 +7,63 @@
   </button>
 </p>
 <div class="collapse" id="debug--pageinfo">
-  {{- partial "debugprint" . -}}
-  <table class="debugprint">
-    <tr> <th class="align-top">AlternativeOutputFormats</th> <td class="align-top">{{ partial "debugprint.html" .AlternativeOutputFormats }}</td></tr>
-    <tr> <th class="align-top">Aliases</th> <td class="align-top">{{ partial "debugprint.html" .Aliases }}</td></tr>
-    <tr> <th class="align-top">Content</th> <td class="align-top">{{ partial "debugprint.html" .Content }}</td></tr>
-    <tr> <th class="align-top">Data</th> <td class="align-top">{{ partial "debugprint.html" .Data }}</td></tr>
-    <tr> <th class="align-top">Date</th> <td class="align-top">{{ partial "debugprint.html" .Date }}</td></tr>
-    <tr> <th class="align-top">Description</th> <td class="align-top">{{ partial "debugprint.html" .Description }}</td></tr>
-    <tr> <th class="align-top">Dir (deprecated)</th> <td class="align-top">{{ partial "debugprint.html" .Dir }}</td></tr>
-    <tr> <th class="align-top">Draft</th> <td class="align-top">{{ partial "debugprint.html" .Draft }}</td></tr>
-    <tr> <th class="align-top">ExpiryDate</th> <td class="align-top">{{ partial "debugprint.html" .ExpiryDate }}</td></tr>
-    <tr> <th class="align-top">File</th> <td class="align-top">{{ partial "debugprint.html" .File }}</td></tr>
-    <tr> <th class="align-top">FuzzyWordCount</th> <td class="align-top">{{ partial "debugprint.html" .FuzzyWordCount }}</td></tr>
-    <tr> <th class="align-top">IsHome</th> <td class="align-top">{{ partial "debugprint.html" .IsHome }}</td></tr>
-    <tr> <th class="align-top">IsNode</th> <td class="align-top">{{ partial "debugprint.html" .IsNode }}</td></tr>
-    <tr> <th class="align-top">IsPage</th> <td class="align-top">{{ partial "debugprint.html" .IsPage }}</td></tr>
-    <tr> <th class="align-top">IsSection</th> <td class="align-top">{{ partial "debugprint.html" .IsSection }}</td></tr>
-    <tr> <th class="align-top">Keywords</th> <td class="align-top">{{ partial "debugprint.html" .IsTranslated }}</td></tr>
-    <tr> <th class="align-top">Kind</th> <td class="align-top">{{ partial "debugprint.html" .Kind }}</td></tr>
-    <tr> <th class="align-top">Language</th> <td class="align-top">{{ partial "debugprint.html" .Language }}</td></tr>
-    <tr> <th class="align-top">Lastmod</th> <td class="align-top">{{ partial "debugprint.html" .Lastmod }}</td></tr>
-    <tr> <th class="align-top">Layout</th> <td class="align-top">{{ partial "debugprint.html" .Layout }}</td></tr>
-    <tr> <th class="align-top">Name</th> <td class="align-top">{{ partial "debugprint.html" .Name }}</td></tr>
-    <tr> <th class="align-top">LinkTitle</th> <td class="align-top">{{ partial "debugprint.html" .LinkTitle }}</td></tr>
-    <tr> <th class="align-top">Next</th> <td class="align-top">{{ partial "debugprint.html" .Next }}</td></tr>
-    <tr> <th class="align-top">NextInSection</th> <td class="align-top">{{ partial "debugprint.html" .NextInSection }}</td></tr>
-    <tr> <th class="align-top">NextPage</th> <td class="align-top">{{ partial "debugprint.html" .NextPage }}</td></tr>
-    <tr> <th class="align-top">OutputFormats</th> <td class="align-top">{{ partial "debugprint.html" .OutputFormats }}</td></tr>
-    <tr> <th class="align-top">Pages</th> <td class="align-top">{{ partial "debugprint.html" .Pages }}</td></tr>
-    <tr> <th class="align-top">Permalink</th> <td class="align-top">{{ partial "debugprint.html" .Permalink }}</td></tr>
-    <tr> <th class="align-top">Plain</th> <td class="align-top">{{ partial "debugprint.html" .Plain }}</td></tr>
-    <tr> <th class="align-top">PlainWords</th> <td class="align-top">{{ partial "debugprint.html" .PlainWords }}</td></tr>
-    <tr> <th class="align-top">Prev <td class="align-top">{{ partial "debugprint.html" .Prev }}</td></tr>
-    <tr> <th class="align-top">PrevInSection</th> <td class="align-top">{{ partial "debugprint.html" .PrevInSection }}</td></tr>
-    <tr> <th class="align-top">PrevPage</th> <td class="align-top">{{ partial "debugprint.html" .PrevPage }}</td></tr>
-    <tr> <th class="align-top">PublishDate</th> <td class="align-top">{{ partial "debugprint.html" .PublishDate }}</td></tr>
-    <tr> <th class="align-top">RawContent</th> <td class="align-top">{{ partial "debugprint.html" .RawContent }}</td></tr>
-    <tr> <th class="align-top">ReadingTime</th> <td class="align-top">{{ partial "debugprint.html" .ReadingTime }}</td></tr>
-    <tr> <th class="align-top">Resources</th> <td class="align-top">{{ partial "debugprint.html" .Resources }}</td></tr>
-    <tr> <th class="align-top">ResourceType</th> <td class="align-top">{{ partial "debugprint.html" .ResourceType }}</td></tr>
-    <tr> <th class="align-top">Ref</th> <td class="align-top">NOT A VARIABLE</td></tr>
-    <tr> <th class="align-top">RelPermalink</th> <td class="align-top">{{ partial "debugprint.html" .RelPermalink }}</td></tr>
-    <tr> <th class="align-top">RelRef</th> <td class="align-top">NOT A VARIABLE</td></tr>
-    <tr> <th class="align-top">Section</th> <td class="align-top">{{ partial "debugprint.html" .Section }}</td></tr>
-    <tr> <th class="align-top">Site</th> <td class="align-top">{{ partial "debugprint.html" .Site }}</td></tr>
-    <tr> <th class="align-top">Sites</th> <td class="align-top">{{ partial "debugprint.html" .Sites }}</td></tr>
-    <tr> <th class="align-top">Sites.First</th> <td class="align-top">{{ partial "debugprint.html" .Sites.First }}</td></tr>
-    <tr> <th class="align-top">Summary</th> <td class="align-top">{{ partial "debugprint.html" .Summary }}</td></tr>
-    <tr> <th class="align-top">TableOfContents</th> <td class="align-top">{{ partial "debugprint.html" .TableOfContents }}</td></tr>
-    <tr> <th class="align-top">Title</th> <td class="align-top">{{ partial "debugprint.html" .Title }}</td></tr>
-    <tr> <th class="align-top">Translations</th> <td class="align-top">{{ partial "debugprint.html" .Translations }}</td></tr>
-    <tr> <th class="align-top">TranslationKey</th> <td class="align-top">{{ partial "debugprint.html" .TranslationKey }}</td></tr>
-    <tr> <th class="align-top">Truncated</th> <td class="align-top">{{ partial "debugprint.html" .Truncated }}</td></tr>
-    <tr> <th class="align-top">Type</th> <td class="align-top">{{ partial "debugprint.html" .Type }}</td></tr>
-    <tr> <th class="align-top">Weight</th> <td class="align-top">{{ partial "debugprint.html" .Weight }}</td></tr>
-    <tr> <th class="align-top">WordCount</th> <td class="align-top">{{ partial "debugprint.html" .WordCount }}</td></tr>
-  </table>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <table class="debugprint">
+          <tr><th>.AlternativeOutputFormats</th><td>{{ partial "debugprint.html" .AlternativeOutputFormats }}</td></tr>
+          <tr><th>.Aliases</th><td>{{ partial "debugprint.html" .Aliases }}</td></tr>
+          <tr><th>.Content</th><td>{{ partial "debugprint.html" .Content }}</td></tr>
+          <tr><th>.Data</th><td>{{ partial "debugprint.html" .Data }}</td></tr>
+          <tr><th>.Date</th><td>{{ partial "debugprint.html" .Date }}</td></tr>
+          <tr><th>.Description</th><td>{{ partial "debugprint.html" .Description }}</td></tr>
+          <tr><th>.Draft</th><td>{{ partial "debugprint.html" .Draft }}</td></tr>
+          <tr><th>.ExpiryDate</th><td>{{ partial "debugprint.html" .ExpiryDate }}</td></tr>
+          <tr><th>.File</th><td>{{ partial "debugprint.html" .File }}</td></tr>
+          <tr><th>.FuzzyWordCount</th><td>{{ partial "debugprint.html" .FuzzyWordCount }}</td></tr>
+          <tr><th>.IsHome</th><td>{{ partial "debugprint.html" .IsHome }}</td></tr>
+          <tr><th>.IsNode</th><td>{{ partial "debugprint.html" .IsNode }}</td></tr>
+          <tr><th>.IsPage</th><td>{{ partial "debugprint.html" .IsPage }}</td></tr>
+          <tr><th>.IsSection</th><td>{{ partial "debugprint.html" .IsSection }}</td></tr>
+          <tr><th>.Keywords</th><td>{{ partial "debugprint.html" .IsTranslated }}</td></tr>
+          <tr><th>.Kind</th><td>{{ partial "debugprint.html" .Kind }}</td></tr>
+          <tr><th>.Language</th><td>{{ partial "debugprint.html" .Language }}</td></tr>
+          <tr><th>.Lastmod</th><td>{{ partial "debugprint.html" .Lastmod }}</td></tr>
+          <tr><th>.Layout</th><td>{{ partial "debugprint.html" .Layout }}</td></tr>
+          <tr><th>.Name</th><td>{{ partial "debugprint.html" .Name }}</td></tr>
+          <tr><th>.LinkTitle</th><td>{{ partial "debugprint.html" .LinkTitle }}</td></tr>
+          <tr><th>.Next</th><td>{{ partial "debugprint.html" .Next }}</td></tr>
+          <tr><th>.NextInSection</th><td>{{ partial "debugprint.html" .NextInSection }}</td></tr>
+          <tr><th>.NextPage</th><td>{{ partial "debugprint.html" .NextPage }}</td></tr>
+          <tr><th>.OutputFormats</th><td>{{ partial "debugprint.html" .OutputFormats }}</td></tr>
+          <tr><th>.Pages</th><td>{{ partial "debugprint.html" .Pages }}</td></tr>
+          <tr><th>.Permalink</th><td>{{ partial "debugprint.html" .Permalink }}</td></tr>
+          <tr><th>.Plain</th><td>{{ partial "debugprint.html" .Plain }}</td></tr>
+          <tr><th>.PlainWords</th><td>{{ partial "debugprint.html" .PlainWords }}</td></tr>
+          <tr><th>.Prev <td>{{ partial "debugprint.html" .Prev }}</td></tr>
+          <tr><th>.PrevInSection</th><td>{{ partial "debugprint.html" .PrevInSection }}</td></tr>
+          <tr><th>.PrevPage</th><td>{{ partial "debugprint.html" .PrevPage }}</td></tr>
+          <tr><th>.PublishDate</th><td>{{ partial "debugprint.html" .PublishDate }}</td></tr>
+          <tr><th>.RawContent</th><td>{{ partial "debugprint.html" .RawContent }}</td></tr>
+          <tr><th>.ReadingTime</th><td>{{ partial "debugprint.html" .ReadingTime }}</td></tr>
+          <tr><th>.Resources</th><td>{{ partial "debugprint.html" .Resources }}</td></tr>
+          <tr><th>.ResourceType</th><td>{{ partial "debugprint.html" .ResourceType }}</td></tr>
+          <tr><th>.RelPermalink</th><td>{{ partial "debugprint.html" .RelPermalink }}</td></tr>
+          <tr><th>.Section</th><td>{{ partial "debugprint.html" .Section }}</td></tr>
+          <tr><th>.Site</th><td>{{ partial "debugprint.html" .Site }}</td></tr>
+          <tr><th>.Sites</th><td>{{ partial "debugprint.html" .Sites }}</td></tr>
+          <tr><th>.Sites.First</th><td>{{ partial "debugprint.html" .Sites.First }}</td></tr>
+          <tr><th>.Summary</th><td>{{ partial "debugprint.html" .Summary }}</td></tr>
+          <tr><th>.TableOfContents</th><td>{{ partial "debugprint.html" .TableOfContents }}</td></tr>
+          <tr><th>.Title</th><td>{{ partial "debugprint.html" .Title }}</td></tr>
+          <tr><th>.Translations</th><td>{{ partial "debugprint.html" .Translations }}</td></tr>
+          <tr><th>.TranslationKey</th><td>{{ partial "debugprint.html" .TranslationKey }}</td></tr>
+          <tr><th>.Truncated</th><td>{{ partial "debugprint.html" .Truncated }}</td></tr>
+          <tr><th>.Type</th><td>{{ partial "debugprint.html" .Type }}</td></tr>
+          <tr><th>.Weight</th><td>{{ partial "debugprint.html" .Weight }}</td></tr>
+          <tr><th>.WordCount</th><td>{{ partial "debugprint.html" .WordCount }}</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>

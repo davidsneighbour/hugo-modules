@@ -11,9 +11,18 @@ source = "assets/scss/_debugprint.scss"
 target = "assets/scss/_debugprint.scss"
 
 [[mounts]]
-source = "data"
-target = "data"
+source = "content"
+target = "content"
 
 [[mounts]]
 source = "layouts"
 target = "layouts"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/functions"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/hooks"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/debug"

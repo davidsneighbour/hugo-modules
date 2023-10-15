@@ -3,11 +3,11 @@
                                 .value.Rel  .value.Protocol  .value.IsPlainText  .value.IsHTML  .NoUgly  .NotAlternative ) }}
 <table class="debugprint">
   <tr>
-      <th class="align-top" class="key">OutputFormat Variable</th>
-      <th class="align-top" class="value">Value</th>
+      <th class="align-top key">OutputFormat Variable</th>
+      <th class="align-top value">Value</th>
   </tr>
   {{ range $idx, $elem := $OutputFormatVarNames }}
-    {{ printf `<tr> <td class="align-top" class="key">%s</td> <td class="align-top" class="value">` $elem | safeHTML }}
+    {{ printf `<tr> <td class="align-top key">%s</td> <td class="align-top value">` $elem | safeHTML }}
     {{ partial "debugprint.html" (index $OutputFormatVarSymbols $idx) }}
     {{ printf "</td></tr>" | safeHTML }}
   {{ end }}

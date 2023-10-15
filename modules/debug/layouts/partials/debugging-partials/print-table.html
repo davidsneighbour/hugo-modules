@@ -1,9 +1,9 @@
 {{- $structure := .structure | default slice -}}
 <table class="debugprint">
   <tr>
-      <th class="align-top" class="key"><span class="font-weight-normal text-uppercase">Dependency</span></th>
-      <th class="align-top" class="type">Type</th>
-      <th class="align-top" class="value">Value</th>
+      <th class="align-top key"><span class="font-weight-normal text-uppercase">Dependency</span></th>
+      <th class="align-top type">Type</th>
+      <th class="align-top value">Value</th>
   </tr>
   {{- range $structure -}}
     <tr>
@@ -13,7 +13,7 @@
       {{- with .value -}}
         {{- partial "debugprint.html" . -}}
       {{- else -}}
-        {{- partial "debugging-partials/nil.html" . -}}
+        {{- partialCached "debugging-partials/nil.html" . -}}
       {{- end -}}
       </td>
     </tr>
