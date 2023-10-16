@@ -9,18 +9,22 @@ table.debugprint {
   @extend .table-hover;
   @extend .mb-0;
 
-  @extend .w-100;
+  // @extend .w-100;
 
-  max-width: 100%;
+  // max-width: 100%;
   font-size: 0.85rem;
 
-  td,
-  th {
+  td {
     @extend .align-top;
     @extend .p-2;
+    @extend .text-wrap;
+    @extend .text-break;
+    @extend .text-start;
   }
 
   th {
+    @extend .align-top;
+    @extend .p-2;
     @extend .fw-bold;
   }
 
