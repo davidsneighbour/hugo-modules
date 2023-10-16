@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.9](https://github.com/davidsneighbour/hugo-modules/compare/modules/debug/v1.2023.8...modules/debug/v1.2023.9) (2023-10-16)
+
+
+### Chore
+
+* **release:** modules/functions/v1.2023.12 ([bcf63f9](https://github.com/davidsneighbour/hugo-modules/commit/bcf63f961e73f774859236a50f1f432c108aaf16))
+* **release:** update repo data files ([a8cd8d0](https://github.com/davidsneighbour/hugo-modules/commit/a8cd8d0f7e26ad7c1eb494e41ca85ddd86f27932))
+* **release:** update repo data files ([4688f7c](https://github.com/davidsneighbour/hugo-modules/commit/4688f7ca30bfce92324d60a9c849d4dd2c4ccb6f))
+
+
+### Bug Fixes
+
+* better styles for debugprint.scss ([0d1d67d](https://github.com/davidsneighbour/hugo-modules/commit/0d1d67d7b891e4ea11c932e036a5f51610848333))
+* remove html entities in gettitle output ([f6a2297](https://github.com/davidsneighbour/hugo-modules/commit/f6a2297732645d9680a18878cfa01643b1bd139b))
+
 ## [1.2023.8](https://github.com/davidsneighbour/hugo-modules/compare/modules/debug/v1.2023.7...modules/debug/v1.2023.8) (2023-10-15)
 
 
