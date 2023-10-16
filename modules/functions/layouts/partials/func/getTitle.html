@@ -32,5 +32,5 @@
   {{- $title = printf "%s %s %s" $title $separator site.Title -}}
 {{- end -}}
 
-{{ $title = $title | markdownify | plainify }}
+{{ $title = $title | markdownify | plainify | htmlUnescape }}
 {{ return $title }}
