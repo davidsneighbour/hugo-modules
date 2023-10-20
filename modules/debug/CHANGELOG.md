@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.11](https://github.com/davidsneighbour/hugo-modules/compare/modules/debug/v1.2023.9...modules/debug/v1.2023.11) (2023-10-20)
+
+
+### Chore
+
+* **release:** modules/debug/v1.2023.10 ([c33b2e1](https://github.com/davidsneighbour/hugo-modules/commit/c33b2e115a46b9037293734e763a2a4ebf0facc3))
+* **release:** update repo data files ([152e7b8](https://github.com/davidsneighbour/hugo-modules/commit/152e7b80100bfe81807d261a8b7a99f7eac10833))
+* **release:** update repo data files ([f23d0e0](https://github.com/davidsneighbour/hugo-modules/commit/f23d0e03c3ff5ac92b4ab830e1a575e472767061))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @davidsneighbour/configurations to v5.5.3 ([#268](https://github.com/davidsneighbour/hugo-modules/issues/268)) ([568eb7d](https://github.com/davidsneighbour/hugo-modules/commit/568eb7db2c4d94386398dc0ee85998618f7fdf43))
+* smaller fixes to info buttons ([408817f](https://github.com/davidsneighbour/hugo-modules/commit/408817f2e680574e081a3d2fefa5dd990a8066ad))
+
 ## [1.2023.10](https://github.com/davidsneighbour/hugo-modules/compare/modules/debug/v1.2023.9...modules/debug/v1.2023.10) (2023-10-20)
 
 
