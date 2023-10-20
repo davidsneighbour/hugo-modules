@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/125229819",
-  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/125229819/assets",
-  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/125229819/assets{?name,label}",
-  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/debug/v1.2023.9",
-  "id": 125229819,
+  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/126024615",
+  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/126024615/assets",
+  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/126024615/assets{?name,label}",
+  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/debug/v1.2023.10",
+  "id": 126024615,
   "author": {
     "login": "davidsneighbour",
     "id": 83281,
@@ -24,19 +24,20 @@
     "type": "User",
     "site_admin": false
   },
-  "node_id": "RE_kwDOJOG8Gs4Hdtr7",
-  "tag_name": "modules/debug/v1.2023.9",
+  "node_id": "RE_kwDOJOG8Gs4Hgvun",
+  "tag_name": "modules/debug/v1.2023.10",
   "target_commitish": "main",
-  "name": "modules/debug/v1.2023.9",
+  "name": "modules/debug/v1.2023.10",
   "draft": false,
   "prerelease": false,
-  "created_at": "2023-10-16T12:37:21Z",
-  "published_at": "2023-10-16T12:55:16Z",
+  "created_at": "2023-10-18T20:09:49Z",
+  "published_at": "2023-10-20T15:59:33Z",
   "assets": [
 
   ],
-  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/debug/v1.2023.9",
-  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/debug/v1.2023.9",
-  "body": "modules/debug/v1.2023.9\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/functions/v1.2023.12...modules/debug/v1.2023.9",
-  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/267"
+  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/debug/v1.2023.10",
+  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/debug/v1.2023.10",
+  "body": "modules/debug/v1.2023.10\n\n## What's Changed\n* fix(deps): update dependency @davidsneighbour/configurations to v5.5.3 by @renovate in https://github.com/davidsneighbour/hugo-modules/pull/268\n\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/debug/v1.2023.9...modules/debug/v1.2023.10",
+  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/269",
+  "mentions_count": 1
 }
