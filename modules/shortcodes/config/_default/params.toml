@@ -1,0 +1,50 @@
+[dnb.forms.contactform]
+id = "contactform"
+labelling = "i18n"  # either inline or i18n
+groups = true       # fields will have multiple groups that will result in groupstyle
+groupstyle = "grid" # single, tabs, grid, fieldsets
+
+[dnb.forms.contactform.attributes]
+data-netlify = "true"
+netlify-honeypot = "%random%"
+class = "mb-6"
+
+[[dnb.forms.contactform.fields.1]]
+name = "shortcodes.contactform.fieldnames.name"
+label = "shortcodes.contactform.name"
+type = "text"
+required = true
+
+[[dnb.forms.contactform.fields.1]]
+name = "shortcodes.contactform.fieldnames.subject"
+label = "shortcodes.contactform.subject"
+type = "text"
+required = true
+
+[[dnb.forms.contactform.fields.1]]
+name = "shortcodes.contactform.fieldnames.email"
+label = "shortcodes.contactform.email"
+type = "email"
+required = true
+
+[[dnb.forms.contactform.fields.1]]
+type = "special"
+html = "<div data-netlify-recaptcha=\"true\"></div>"
+
+[[dnb.forms.contactform.fields.1]]
+type = "invisible"
+name = "%random%"
+
+[[dnb.forms.contactform.fields.2]]
+name = "shortcodes.contactform.fieldnames.message"
+label = "shortcodes.contactform.message"
+type = "textarea"
+required = true
+
+[dnb.forms.contactform.fields.2.options]
+rows = 11
+
+[[dnb.forms.contactform.buttons]]
+type = "submit"
+label = "shortcodes.contactform.send_message"
+class = "btn btn-primary"

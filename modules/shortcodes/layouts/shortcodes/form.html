@@ -1,0 +1,123 @@
+{{- $ID := .Get "id" | default "form" -}}
+{{- $formConfig := index site.Params.dnb.forms $ID -}}
+{{- $formAttributes := "" }}
+{{- range $name, $value := $formConfig.attributes -}}
+  {{- if eq $value "%random%" -}}
+    {{- $value = partial "func/getRandomString.html" (dict "limit" 10) -}}
+  {{- end -}}
+  {{- $formAttributes = printf "%s %s=\"%s\"" $formAttributes $name $value -}}
+{{- end -}}
+{{ $formMethod := $formConfig.method | default "post" }}
+{{ $formAction := $formConfig.action | default "" }}
+{{ $formID := $formConfig.id | default "contact" }}
+{{ $formAttributes = printf "%s method=\"%s\" name=\"%s\" id=\"%s\"" $formAttributes $formMethod $formID $formID -}}
+
+<form {{ $formAttributes | safe.HTMLAttr }} class="{{ $formConfig.classes | safeHTMLAttr }}">
+  {{- $groups := $formConfig.groups | default "false" -}}
+  {{- if eq $groups "false" -}}
+
+  {{- else -}}
+
+    <div class="row g-3">
+      {{ range $formConfig.fields }}
+        <div class="col-sm-6">
+          <div class="mb-3">
+          {{ range . }}
+            {{ partial "dnb-forms-inlinetemplate-formfield" . }}
+          {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+
+    <div class="row">
+      {{ range $formConfig.buttons -}}
+        <div class="col-sm-6">
+          {{ range $formConfig.buttons }}
+            {{ partial "dnb-forms-inlinetemplate-button" . }}
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  {{- end -}}
+</form>
+
+{{ define "partials/dnb-forms-inlinetemplate-formfield" }}
+{{/*****************************************************************************
+   * a partial for every fieldtype we have
+   * - invisible: a field that is now visible, honeypot for antispam measures
+   * - hidden: a field that is hidden, but not invisible
+   * - special: a field whose content is defined in the config via `html`
+   * - textarea: a textarea field
+   * - all others: by default text, but all other field types are supported
+   **************************************************************************/}}
+  {{- $fieldRequired := .required | default "false" -}}
+  {{- if eq $fieldRequired "true" -}}
+    {{- $fieldRequired = "required" -}}
+  {{- else -}}
+    {{- $fieldRequired = "" -}}
+  {{- end -}}
+  {{- $fieldId := i18n .name | lower -}}
+  {{- $fieldType := .type | default "text" -}}
+
+  {{- if eq "invisible" $fieldType -}}
+
+    {{- $random := partial "func/getRandomString.html" (dict "limit" 10) -}}
+    <label class="invisible" for="{{- $random -}}">{{- $random -}}</label>
+    <input type="text" name="{{- $random -}}" id="{{- $random -}}" class="invisible">
+
+  {{- else if eq "special" $fieldType -}}
+
+    {{- .html | safeHTML -}}
+
+  {{- else if eq "textarea" $fieldType -}}
+
+      <div class="mb-3">
+        <label class="form-label"
+                for="{{- $fieldId -}}">
+          {{ i18n .label }}
+        </label>
+        <textarea class="form-control"
+                  id="{{- $fieldId -}}"
+                  name="{{- $fieldId -}}"
+                  rows="{{- .options.rows | default 5 -}}"
+                  {{ $fieldRequired | safe.HTMLAttr }}></textarea>
+      </div>
+
+  {{- else -}}
+
+    <div class="mb-3">
+      <label class="form-label"
+              for="{{ $fieldId }}">
+        {{ i18n .label }}
+      </label>
+      <input class="form-control"
+              name="{{- $fieldId -}}"
+              id="{{- $fieldId -}}"
+              type="{{- .type -}}"
+              {{ $fieldRequired | safe.HTMLAttr }}>
+    </div>
+
+  {{- end -}}
+{{ end }}
+
+{{- define "partials/dnb-forms-inlinetemplate-button" -}}
+{{/*****************************************************************************
+   * a partial for buttons
+   * - class: the class(es) of the button
+   * - type: the type (typically submit) of the button
+   * - label: the label of the button
+   **************************************************************************/}}
+  {{- $buttonAttributes := printf "class=\"%s\" type=\"%s\" value=\"%s\""
+      .class
+      (.type | default "submit")
+      (i18n .label) -}}
+  <div class="mb-3">
+    <input {{ $buttonAttributes | safeHTMLAttr  -}}>
+  </div>
+{{- end -}}
+
+
+{{ define "partials/dnb-forms-inlinetemplate-formfield" }}
+
+{{- end -}}
