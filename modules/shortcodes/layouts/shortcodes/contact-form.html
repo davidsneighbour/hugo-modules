@@ -52,7 +52,8 @@
         />
       </div>
       <div data-netlify-recaptcha="true"></div>
-      <input type="text" name="{{- $random -}}" class="invisible" />
+      <label class="invisible" for="{{- $random -}}">{{- $random -}}</label>
+      <input type="text" name="{{- $random -}}" id="{{- $random -}}" class="invisible">
     </div>
     <div class="col-sm-6">
       <div class="mb-3">
