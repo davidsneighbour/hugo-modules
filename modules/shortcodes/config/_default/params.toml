@@ -42,7 +42,7 @@ type = "textarea"
 required = true
 
 [dnb.forms.contactform.fields.2.options]
-rows = 11
+rows = 8
 
 [[dnb.forms.contactform.buttons]]
 type = "submit"

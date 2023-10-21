@@ -20,12 +20,10 @@
 
     <div class="row g-3">
       {{ range $formConfig.fields }}
-        <div class="col-sm-6">
-          <div class="mb-3">
+        <div class="col col-sm-6">
           {{ range . }}
             {{ partial "dnb-forms-inlinetemplate-formfield" . }}
           {{ end }}
-          </div>
         </div>
       {{ end }}
     </div>
@@ -63,8 +61,8 @@
   {{- if eq "invisible" $fieldType -}}
 
     {{- $random := partial "func/getRandomString.html" (dict "limit" 10) -}}
-    <label class="invisible" for="{{- $random -}}">{{- $random -}}</label>
-    <input type="text" name="{{- $random -}}" id="{{- $random -}}" class="invisible">
+    <label class="d-none invisible" for="{{- $random -}}">{{- $random -}}</label>
+    <input type="text" name="{{- $random -}}" id="{{- $random -}}" class="d-none invisible">
 
   {{- else if eq "special" $fieldType -}}
 
@@ -115,9 +113,4 @@
   <div class="mb-3">
     <input {{ $buttonAttributes | safeHTMLAttr  -}}>
   </div>
-{{- end -}}
-
-
-{{ define "partials/dnb-forms-inlinetemplate-formfield" }}
-
 {{- end -}}
