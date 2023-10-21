@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.8](https://github.com/davidsneighbour/hugo-modules/compare/modules/shortcodes/v1.2023.7...modules/shortcodes/v1.2023.8) (2023-10-21)
+
+
+### Chore
+
+* **release:** update repo data files ([6f4dc82](https://github.com/davidsneighbour/hugo-modules/commit/6f4dc82c62d7e2fee61207076085a58e5918dbb7))
+
+
+### Features
+
+* contact form default setup ([d53c4bd](https://github.com/davidsneighbour/hugo-modules/commit/d53c4bd7e868969785e02779a3881a5e11a342bc))
+
 ## [1.2023.7](https://github.com/davidsneighbour/hugo-modules/compare/modules/shortcodes/v1.2023.6...modules/shortcodes/v1.2023.7) (2023-10-21)
 
 
