@@ -10,20 +10,20 @@ netlify-honeypot = "%random%"
 class = "mb-6"
 
 [[dnb.forms.contactform.fields.1]]
-name = "shortcodes.contactform.fieldnames.name"
-label = "shortcodes.contactform.name"
+name = "shortcodes.form.fieldnames.name"
+label = "shortcodes.form.name"
 type = "text"
 required = true
 
 [[dnb.forms.contactform.fields.1]]
-name = "shortcodes.contactform.fieldnames.subject"
-label = "shortcodes.contactform.subject"
+name = "shortcodes.form.fieldnames.subject"
+label = "shortcodes.form.subject"
 type = "text"
 required = true
 
 [[dnb.forms.contactform.fields.1]]
-name = "shortcodes.contactform.fieldnames.email"
-label = "shortcodes.contactform.email"
+name = "shortcodes.form.fieldnames.email"
+label = "shortcodes.form.email"
 type = "email"
 required = true
 
@@ -36,8 +36,8 @@ type = "invisible"
 name = "%random%"
 
 [[dnb.forms.contactform.fields.2]]
-name = "shortcodes.contactform.fieldnames.message"
-label = "shortcodes.contactform.message"
+name = "shortcodes.form.fieldnames.message"
+label = "shortcodes.form.message"
 type = "textarea"
 required = true
 
@@ -46,5 +46,6 @@ rows = 8
 
 [[dnb.forms.contactform.buttons]]
 type = "submit"
-label = "shortcodes.contactform.send_message"
+name = "shortcodes.form.fieldnames.submit"
+label = "shortcodes.form.submit"
 class = "btn btn-primary"

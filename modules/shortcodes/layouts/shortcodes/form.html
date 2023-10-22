@@ -15,7 +15,7 @@
 <form {{ $formAttributes | safe.HTMLAttr }} class="{{ $formConfig.classes | safeHTMLAttr }}">
   {{- $groups := $formConfig.groups | default "false" -}}
   {{- if eq $groups "false" -}}
-
+    {{- /* @todo ungrouped forms */ -}}
   {{- else -}}
 
     <div class="row g-3">
@@ -28,16 +28,18 @@
       {{ end }}
     </div>
 
-    <div class="row">
-      {{ range $formConfig.buttons -}}
-        <div class="col-sm-6">
-          {{ range $formConfig.buttons }}
-            {{ partial "dnb-forms-inlinetemplate-button" . }}
-          {{ end }}
-        </div>
-      {{ end }}
-    </div>
   {{- end -}}
+
+  <div class="row">
+    {{ range $formConfig.buttons -}}
+      <div class="col-sm-6">
+        {{ range $formConfig.buttons }}
+          {{ partial "dnb-forms-inlinetemplate-button" . }}
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+
 </form>
 
 {{ define "partials/dnb-forms-inlinetemplate-formfield" }}
