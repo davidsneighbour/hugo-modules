@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2023.9](https://github.com/davidsneighbour/hugo-modules/compare/modules/shortcodes/v1.2023.8...modules/shortcodes/v1.2023.9) (2023-10-22)
+
+
+### Chore
+
+* **release:** update repo data files ([baa4660](https://github.com/davidsneighbour/hugo-modules/commit/baa4660677562ce1c98f97f08066cb9738a854fc))
+
+
+### Features
+
+* form generator and changes ([4d7d943](https://github.com/davidsneighbour/hugo-modules/commit/4d7d94314c38f990b625bd0aac2c2d7d030c4927))
+
+
+### Bug Fixes
+
+* adding class attributes and smaller fixes ([415e437](https://github.com/davidsneighbour/hugo-modules/commit/415e437399351667a81ce03581cf2cd3374b36b2))
+
 ## [1.2023.8](https://github.com/davidsneighbour/hugo-modules/compare/modules/shortcodes/v1.2023.7...modules/shortcodes/v1.2023.8) (2023-10-21)
 
 
