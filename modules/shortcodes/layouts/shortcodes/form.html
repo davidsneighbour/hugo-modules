@@ -32,7 +32,7 @@
 
   <div class="row">
     {{ range $formConfig.buttons -}}
-      <div class="col-sm-6">
+      <div class="col-12">
         {{ range $formConfig.buttons }}
           {{ partial "dnb-forms-inlinetemplate-button" . }}
         {{ end }}
@@ -59,6 +59,7 @@
   {{- end -}}
   {{- $fieldId := i18n .name | lower -}}
   {{- $fieldType := .type | default "text" -}}
+  {{- $fieldClass := .class | default "" -}}
 
   {{- if eq "invisible" $fieldType -}}
 
@@ -91,7 +92,7 @@
               for="{{ $fieldId }}">
         {{ i18n .label }}
       </label>
-      <input class="form-control"
+      <input class="{{- $fieldClass }} form-control"
               name="{{- $fieldId -}}"
               id="{{- $fieldId -}}"
               type="{{- .type -}}"
