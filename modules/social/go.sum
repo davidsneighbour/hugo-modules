@@ -1,9 +1,9 @@
-github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.7 h1:uVYY3uAMMLrHY6Izr4kaZdk8/O+vXwbfUcbFZHP3N/g=
-github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.7/go.mod h1:b81QGiJxOSpjhjpPY2gK3FBHVPkvicxG9huq+qRLR70=
-github.com/davidsneighbour/hugo-modules/modules/functions v1.2023.11 h1:k3TS59NW0RIKOoalpdPaqhBHP2wVqGlUs9OrN7KkMrg=
-github.com/davidsneighbour/hugo-modules/modules/functions v1.2023.11/go.mod h1:mMpTa/CPuBifHgzsHWORFM32ICKhDKjREQ1hKPk3oeU=
-github.com/davidsneighbour/hugo-modules/modules/icons v0.0.0-20231015091718-93957219545d h1:v4L5KzR9eSs2Q1S+cVdylIT3e1J5unj6swBS1Wnvy2Q=
-github.com/davidsneighbour/hugo-modules/modules/icons v0.0.0-20231015091718-93957219545d/go.mod h1:bOqsJdpxzt+N1E88uFQGuuQ/p9lLnkn8Ptzw6pTmOPU=
+github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.11 h1:7Ofcz4qga0QN5+8fXhU8Mf85T3H4mvpsFC5p1s1NJz0=
+github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.11/go.mod h1:clOvjbG0oeByJUS5PiJetnWHlddECf/POvTVcEIk8D4=
+github.com/davidsneighbour/hugo-modules/modules/functions v1.2023.12 h1:haQMBFfCiIQqhlWdj1zwEOHoYtyyURx8lnEYP/uEZ+M=
+github.com/davidsneighbour/hugo-modules/modules/functions v1.2023.12/go.mod h1:mMpTa/CPuBifHgzsHWORFM32ICKhDKjREQ1hKPk3oeU=
+github.com/davidsneighbour/hugo-modules/modules/icons v1.2023.3 h1:21u0zuXG2ji7EnEpKAwwzb8MV27OnPQr8SFdu7rmSFk=
+github.com/davidsneighbour/hugo-modules/modules/icons v1.2023.3/go.mod h1:bOqsJdpxzt+N1E88uFQGuuQ/p9lLnkn8Ptzw6pTmOPU=
 github.com/tabler/tabler-icons v2.32.0+incompatible h1:dyCld/NvDljRNj/rFvmfcR5Yxp9GLtXALNenP/rHpcY=
 github.com/tabler/tabler-icons v2.32.0+incompatible/go.mod h1:Ap75CRdhXxprnUnPlUCRLvJ2pIFNqwxIipj3GfD6XHE=
 github.com/tailwindlabs/heroicons v2.0.18+incompatible h1:9rm5lZcJ6mT4j9F/9LDaS/Roz6hgyKkaLVbm+b4l9YY=
