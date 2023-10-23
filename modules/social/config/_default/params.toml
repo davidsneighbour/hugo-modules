@@ -19,3 +19,8 @@ networks = [
   "vkontakte",
   "telegram",
 ]
+
+
+[dnb.social.twitter]
+profile = "username"
+domain = "domain.ext"
