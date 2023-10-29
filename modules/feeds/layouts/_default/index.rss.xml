@@ -3,7 +3,7 @@
 
 {{- $context := . -}}
 {{- if .IsHome -}}
-{{- $context = .Site -}}
+  {{- $context = site -}}
 {{- end -}}
 
 {{- $pages := $context.RegularPages -}}
@@ -20,7 +20,8 @@
 
 {{ printf "<?xml version='1.0' encoding='utf-8' standalone='yes'?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
-  xmlns:webfeeds="http://webfeeds.org/rss/1.0">
+  xmlns:webfeeds="http://webfeeds.org/rss/1.0"
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>
       {{- if eq .Title site.Title -}}
@@ -55,7 +56,9 @@
     -}} {{- with site.Copyright -}} <copyright>{{- . -}}</copyright> {{- end -}} {{- if not
     .Date.IsZero -}} <lastBuildDate>{{- .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML
       -}}</lastBuildDate> {{- end -}} <atom:link href="{{.Permalink}}" rel="self"
-      type="application/rss+xml" /> {{- range $pages }} <item>
+      type="application/rss+xml" />
+
+      {{- range $pages }} <item>
       <title>{{- .Title -}}</title>
       <link>{{- .Permalink -}}</link>
       <pubDate>
@@ -69,6 +72,22 @@
         {{- $description := partialCached "func/getDescription.html" . . -}}
         {{- $description | html -}}
       </description>
+
+    {{- $metaProperty := dict -}}
+    {{- $image := (partialCached "func/getArticleImage.html" page page) -}}
+    {{- with $image -}}
+      {{- $image := .Resize "1200x webp" -}}
+      {{- with $image }}
+        {{- $image = .Crop "1200x630 webp" -}}
+      {{- end -}}
+      <media:content
+        url="{{- $image.Permalink -}}"
+        type="{{- $image.MediaType -}}"
+        medium="image"
+        height="{{ .Height }}"
+        width="{{ .Width }}"/>
+    {{- end -}}
     </item>
-    {{- end -}} </channel>
+    {{- end -}}
+    </channel>
 </rss>
