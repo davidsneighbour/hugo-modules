@@ -84,8 +84,8 @@
         url="{{- $image.Permalink -}}"
         type="{{- $image.MediaType -}}"
         medium="image"
-        height="{{ .Height }}"
-        width="{{ .Width }}"/>
+        height="{{ $image.Height }}"
+        width="{{ $image.Width }}"/>
     {{- end -}}
     </item>
     {{- end -}}
