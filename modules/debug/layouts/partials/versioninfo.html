@@ -1,46 +1,70 @@
 {{- /* see https://gohugo.io/functions/hugo.html */ -}}
-{{- $names := slice
-      ".Generator"
-      ".Version"
-      ".GoVersion"
-      ".Environment"
-      ".CommitHash"
-      ".BuildDate"
-      ".IsExtended"
-      ".IsProduction" -}}
-{{- $items := slice
-      hugo.Generator
-      hugo.Version
-      hugo.GoVersion
-      hugo.Environment
-      hugo.CommitHash
-      hugo.BuildDate
-      hugo.IsExtended
-      hugo.IsProduction -}}
+<div>
+  <button class="btn btn-link btn-dnb-debug" type="button"
+          data-bs-toggle="collapse" data-bs-target="#debug-versioninfo"
+          aria-expanded="false" aria-controls="debug-versioninfo">
+    {{- partialCached "bsicon.html" "gear-wide-connected" "gear-wide-connected" -}}&nbsp;
+    Version Info
+  </button>
+  <div class="collapse" id="debug-versioninfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          {{- $names := slice
+                ".BuildDate"
+                ".CommitHash"
+                ".Environment"
+                ".Generator"
+                ".GoVersion"
+                ".IsExtended"
+                ".IsProduction"
+                ".Version"
+                ".WorkingDir" -}}
+          {{- $items := slice
+                hugo.BuildDate
+                hugo.CommitHash
+                hugo.Environment
+                hugo.Generator
+                hugo.GoVersion
+                hugo.IsExtended
+                hugo.IsProduction
+                hugo.Version
+                hugo.WorkingDir -}}
+          <table class="debugprint">
+            <thead>
+              <tr>
+                <th class="key">
+                  <span title="Hugo version information">hugo</span>
+                </th>
+                <th class="type">Type</th>
+                <th class="value">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{- range $index, $item := $items -}}
+                {{- $slices := slice
+                    (index $names $index)
+                    (partial "debugtype.html" $item)
+                    (partial "debugprint.html" $item) -}}
+                <tr>{{- range $index, $item := $slices -}}
+                  {{- if (eq $index 0) -}}
+                    <th>{{- . -}}</th>
+                  {{- else -}}
+                    <td>{{- . -}}</td>
+                  {{- end -}}
+                {{- end -}}</tr>
+              {{- end -}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<table class="debugprint">
-  <thead>
-    <tr>
-      <th class="key">
-        <span title="Hugo version information">Hugo</span>
-      </th>
-      <th class="type">Type</th>
-      <th class="value">Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{- range $index, $item := $items -}}
-      {{- $slices := slice
-          (index $names $index)
-          (partial "debugtype.html" $item)
-          (partial "debugprint.html" $item) -}}
-      <tr>{{- range $index, $item := $slices -}}
-        {{- if (eq $index 0) -}}
-          <th>{{- . -}}</th>
-        {{- else -}}
-          <td>{{- . -}}</td>
-        {{- end -}}
-      {{- end -}}</tr>
-    {{- end -}}
-  </tbody>
-</table>
+
+
+
+
+
+
