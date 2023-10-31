@@ -39,10 +39,9 @@
   {{ end }}
 {{- end -}}
 
-
 <div class="component--highlight">
-  {{- if eq $type "single" -}}
-    <ul class="nav nav-tabs" role="tablist">
+  <ul class="nav nav-tabs" role="tablist">
+    {{- if eq $type "single" -}}
       <li class="nav-item" role="presentation">
         <button
           class="nav-link active"
@@ -57,9 +56,7 @@
           {{- .Type -}}
         </button>
       </li>
-    </ul>
-  {{- else -}}
-    <ul class="nav nav-tabs" role="tablist">
+    {{- else -}}
       {{- range $configTypes -}}
         <li class="nav-item" role="presentation">
           <button
@@ -79,8 +76,16 @@
       <li class="nav-item">
         <a class="nav-link disabled">(click to select config format)</a>
       </li>
-    </ul>
-  {{- end -}}
+    {{- end -}}
+  </ul>
+
+  <button class="btn btn-secondary btn-clipboard invisible"
+    data-clipboard-target="#{{- $slug -}}"
+    data-bs-toggle="tooltip" data-bs-placement="top"
+    data-bs-title="Copy code to clipboard"
+  >
+    {{- partialCached "bsicon.html" "clipboard" "clipboard" -}}
+  </button>
 
   {{- if eq $type "single" }}
     <div class="tab-content">
@@ -116,3 +121,4 @@
   {{ end }}
 
 </div>
+

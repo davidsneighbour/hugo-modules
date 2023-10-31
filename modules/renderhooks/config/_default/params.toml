@@ -1,0 +1,2 @@
+[dnb.renderhooks.config.plugins.js]
+imports = ["import './plugins/clipboard.js';"]

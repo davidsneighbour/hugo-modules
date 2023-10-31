@@ -3,9 +3,27 @@ extended = false
 min = "0.71.0"
 
 [[mounts]]
+source = "assets"
+target = "assets"
+
+[[mounts]]
+source = "assets/scss/plugins/_clipboard.scss"
+target = "assets/scss/plugins/_clipboard.scss"
+
+[[mounts]]
 source = "data"
 target = "data"
 
 [[mounts]]
 source = "layouts"
 target = "layouts"
+
+[[imports]]
+path = "github.com/zenorocha/clipboard.js"
+disable = false
+ignoreConfig = true
+ignoreImports = true
+
+[[imports.mounts]]
+source = 'dist/'
+target = 'assets/js/libs/clipboard'
