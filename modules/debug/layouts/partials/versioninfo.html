@@ -3,7 +3,7 @@
   <button class="btn btn-link btn-dnb-debug" type="button"
           data-bs-toggle="collapse" data-bs-target="#debug-versioninfo"
           aria-expanded="false" aria-controls="debug-versioninfo">
-    {{- partialCached "bsicon.html" "gear-wide-connected" "gear-wide-connected" -}}&nbsp;
+    {{- partialCached "bsicon.html" "gear-wide-connected" "gear-wide-connected" -}}
     Version Info
   </button>
   <div class="collapse" id="debug-versioninfo">
@@ -16,8 +16,10 @@
                 ".Environment"
                 ".Generator"
                 ".GoVersion"
+                ".IsDevelopment"
                 ".IsExtended"
                 ".IsProduction"
+                ".IsServer"
                 ".Version"
                 ".WorkingDir" -}}
           {{- $items := slice
@@ -26,8 +28,10 @@
                 hugo.Environment
                 hugo.Generator
                 hugo.GoVersion
+                hugo.IsDevelopment
                 hugo.IsExtended
                 hugo.IsProduction
+                hugo.IsServer
                 hugo.Version
                 hugo.WorkingDir -}}
           <table class="debugprint">
