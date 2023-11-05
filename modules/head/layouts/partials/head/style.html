@@ -8,6 +8,15 @@
   {{- $styles = $styles | minify -}}
   {{- $styles = $styles | fingerprint "sha512" -}}
   {{- $styles = $styles | resources.PostProcess -}}
+
+  {{/* <link rel="preload" href="{{- $styles.Permalink -}}" as="style"
+        media="all" integrity="{{- $styles.Data.Integrity -}}"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="{{- $styles.Permalink -}}"
+          media="all" integrity="{{- $styles.Data.Integrity -}}">
+  </noscript> */}}
+
   <link rel="stylesheet" media="all" integrity="{{- $styles.Data.Integrity -}}" href="{{- $styles.Permalink -}}">
 {{- end -}}
 {{- partial "func/hook.html" ( dict "hook" "head-styles-after" "context" . ) -}}
