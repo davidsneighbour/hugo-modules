@@ -23,18 +23,21 @@
 {{- $cacheControl := printf $config.defaults.cacheControl $cacheSeconds }}
 {{- $expiryAge := now.AddDate $cacheYears $cacheMonths $cacheDays -}}
 
-{{- /* header rules for root page */ -}}
+{{/* header rules for root page */}}
 /
   Accept-Encoding: {{ $config.defaults.acceptEncoding }}
-  Permissions-Policy: geolocation=(self), camera=(), fullscreen=*, interest-cohort=()
+  Permissions-Policy: geolocation=(self)
+  Permissions-Policy: camera=()
+  Permissions-Policy: fullscreen=*
+  Permissions-Policy: interest-cohort=()
 
-{{- /* header rules for all pages */ -}}
+{{/* header rules for all pages */}}
 /*
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
-  {{- /* note: site.Params does a lot of lower casing ;) */ -}}
+  {{/* note: site.Params does a lot of lower casing ;) */}}
   {{- $nonrules := slice "upgradeinsecurerequests" "reporturi" "reportonly" -}}
   {{ with $config.csp -}}
       {{ if (eq .reportOnly true) -}}
