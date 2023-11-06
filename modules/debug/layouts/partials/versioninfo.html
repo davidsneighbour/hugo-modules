@@ -1,15 +1,6 @@
-{{- /* see https://gohugo.io/functions/hugo.html */ -}}
-<div>
-  <button class="btn btn-link btn-dnb-debug" type="button"
-          data-bs-toggle="collapse" data-bs-target="#debug-versioninfo"
-          aria-expanded="false" aria-controls="debug-versioninfo">
-    {{- partialCached "bsicon.html" "gear-wide-connected" "gear-wide-connected" -}}
-    Version Info
-  </button>
-  <div class="collapse" id="debug-versioninfo">
-    <div class="container">
+<div class="container">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 px-0">
           {{- $names := slice
                 ".BuildDate"
                 ".CommitHash"
@@ -63,12 +54,3 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-
-
-
-
-
-

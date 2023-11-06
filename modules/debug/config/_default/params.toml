@@ -8,8 +8,11 @@ development = true
 datetime = ""
 datetime_extended = ""
 
-[dnb.debug.plugins]
-scss = ["scss/_debugprint.scss"]
+[dnb.debug.config.plugins.js]
+imports = ["import './debug';"] # es6, in flux
+
+[dnb.debug.config.plugins.scss]
+imports = ["scss/_debugprint.scss"]
 
 # formatters setup
 # TODO this will move into the data directory as soon as some issues

@@ -1,0 +1,19 @@
+{{- /* see https://gohugo.io/functions/hugo.html */ -}}
+<div>
+  <button class="btn btn-link btn-dnb-debug" type="button"
+          data-bs-toggle="collapse" data-bs-target="#debug-versioninfo"
+          aria-expanded="false" aria-controls="debug-versioninfo">
+    {{- partialCached "bsicon.html" "gear-wide-connected" "gear-wide-connected" -}}
+    Version Info
+  </button>
+  <div class="collapse" id="debug-versioninfo">
+    {{- partialCached "versioninfo.html" . -}}
+  </div>
+</div>
+
+
+
+
+
+
+

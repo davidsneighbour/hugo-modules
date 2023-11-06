@@ -11,6 +11,10 @@ source = "assets/scss/_debugprint.scss"
 target = "assets/scss/_debugprint.scss"
 
 [[mounts]]
+source = "assets/js/debug.js"
+target = "assets/js/debug.js"
+
+[[mounts]]
 source = "content"
 target = "content"
 
