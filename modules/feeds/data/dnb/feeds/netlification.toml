@@ -1,4 +1,5 @@
 # see https://docs.netlify.com/routing/headers/ for details on formatting headers
+# (yes, netlification accepts header formatting in Netlify format)
 
 [[headers]]
 for = "/feed.json"
