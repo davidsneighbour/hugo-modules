@@ -42,26 +42,24 @@ upgradeInsecureRequests = true
 ################################################################################
 # Rulesets
 #
-# Each CSP ruleset (also future rules that are not in this sample yet) can be
-# added by camelcasing the rule (default-src > defaultSrc etc.). Then add the
-# hosts as an array. Keywords like self, eval-inline etc. need to be set in
-# additional hyphens ("'self'").
+# Add the hosts as an array. Keywords like self, eval-inline etc. need to be set
+# in additional hyphens ("'self'").
 #
 # You can add every CSP rule type by using camel case names instead of dashed
 # names. iframeSrc instead of iframe-src, scriptSrc instead of script-src etc.
 #
 # The default setting is to accept only local scripts/sources
 ################################################################################
-defaultSrc = ["'self'"]
-connectSrc = ["'self'"]
-fontSrc = ["'self'"]
-frameAncestors = ["'none'"]
-frameSrc = ["'self'"]
-imgSrc = ["'self'"]
-manifestSrc = ["'self'"]
-objectSrc = ["'self'"]
-scriptSrc = ["'self'"]
-styleSrc = ["'self'"]
+default-src = ["'self'"]
+connect-src = ["'self'"]
+font-src = ["'self'"]
+frame-ancestors = ["'none'"]
+frame-src = ["'self'"]
+img-src = ["'self'"]
+manifest-src = ["'self'"]
+object-src = ["'self'"]
+script-src = ["'self'"]
+style-src = ["'self'"]
 
 ################################################################################
 # Redirects

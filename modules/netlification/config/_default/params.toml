@@ -16,7 +16,7 @@ cacheControl = "public, max-age=%d, immutable"
 
 # the default minimal CSP
 [dnb.netlification.csp]
-defaultSrc = ["'self'"]
+default-src = ["'self'"]
 
 # set caching duration, default is 1 year
 [dnb.netlification.cache.duration]
