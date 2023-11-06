@@ -126,10 +126,10 @@
   {{- range $index, $item := . -}}
     {{- if (index $item "netlification") -}}
 # from {{ $index }}
-{{- range (index $item "netlification" "headers") }}
+{{ range (index $item "netlification" "headers") }}
   {{- .for }}
   {{- range $key, $text := .values }}
-{{ $key -}}: {{ $text }}
+  {{ $key -}}: {{ $text }}
   {{- end -}}
 {{- end -}}
     {{- end -}}
