@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/128136234",
-  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/128136234/assets",
-  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/128136234/assets{?name,label}",
-  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/netlification/v1.2023.15",
-  "id": 128136234,
+  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/128143258",
+  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/128143258/assets",
+  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/128143258/assets{?name,label}",
+  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/netlification/v1.2023.16",
+  "id": 128143258,
   "author": {
     "login": "davidsneighbour",
     "id": 83281,
@@ -24,19 +24,19 @@
     "type": "User",
     "site_admin": false
   },
-  "node_id": "RE_kwDOJOG8Gs4HozQq",
-  "tag_name": "modules/netlification/v1.2023.15",
+  "node_id": "RE_kwDOJOG8Gs4Ho0-a",
+  "tag_name": "modules/netlification/v1.2023.16",
   "target_commitish": "main",
-  "name": "modules/netlification/v1.2023.15",
+  "name": "modules/netlification/v1.2023.16",
   "draft": false,
   "prerelease": false,
-  "created_at": "2023-11-06T13:30:22Z",
-  "published_at": "2023-11-06T13:32:48Z",
+  "created_at": "2023-11-06T14:03:17Z",
+  "published_at": "2023-11-06T14:16:02Z",
   "assets": [
 
   ],
-  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/netlification/v1.2023.15",
-  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/netlification/v1.2023.15",
-  "body": "modules/netlification/v1.2023.15\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/netlification/v1.2023.14...modules/netlification/v1.2023.15",
-  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/290"
+  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/netlification/v1.2023.16",
+  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/netlification/v1.2023.16",
+  "body": "modules/netlification/v1.2023.16\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/netlification/v1.2023.15...modules/netlification/v1.2023.16",
+  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/291"
 }
