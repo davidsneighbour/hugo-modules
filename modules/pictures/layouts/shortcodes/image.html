@@ -33,8 +33,6 @@ Parameters:
 {{- with $articleimage -}}
   {{ $image := . }}
 
-  {{ warnf "processing image: %s" $image.Permalink }}
-
   {{/* BUG #225 - svg and gif processing issues, see https://dnbhub.xyz/issue-225 */}}
   {{- if eq $image.MediaType.SubType "gif" -}}
     {{- warnf "GIFs are not supported, yet. Use static file strategy instead: %s" $image.Permalink -}}

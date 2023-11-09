@@ -23,8 +23,6 @@
 {{- with $articleimage -}}
   {{ $image := . }}
 
-  {{ warnf "processing image: %s" $image.Permalink }}
-
   {{- $title := "" -}}
   {{/* if a title is set via frontmatter then use it as caption */}}
   {{- if ne $image.Title $image.Name -}}

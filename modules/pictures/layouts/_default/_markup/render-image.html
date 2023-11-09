@@ -5,7 +5,6 @@
 {{- $default_format := $config.default_format | default "webp" -}}
 
 {{/* retrieve the article image */}}
-{{ warnf "image: %s" $src}}
 {{- $localimage := partial "func/pictures/getImageResource.html" $src $src -}}
 {{- if eq false $localimage -}}
 
@@ -29,8 +28,6 @@
   {{- with $localimage -}}
 
     {{- $image := . -}}
-
-    {{- warnf "processing image: %s" $image.Permalink -}}
 
     {{/* BUG #225 - svg and gif processing issues, see https://dnbhub.xyz/issue-225 */}}
     {{- if eq $image.MediaType.SubType "gif" -}}
