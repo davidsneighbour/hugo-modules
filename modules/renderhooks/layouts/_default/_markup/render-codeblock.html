@@ -79,11 +79,10 @@
     {{- end -}}
   </ul>
 
-  <button class="btn btn-secondary btn-clipboard invisible"
+  <button class="btn btn-link btn-clipboard invisible"
     data-clipboard-target="#{{- $slug -}}"
     data-bs-toggle="tooltip" data-bs-placement="top"
-    data-bs-title="Copy code to clipboard"
-  >
+    data-bs-title="Copy code to clipboard">
     {{- partialCached "bsicon.html" "clipboard" "clipboard" -}}
   </button>
 
