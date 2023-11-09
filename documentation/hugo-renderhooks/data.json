@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/127367939",
-  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/127367939/assets",
-  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/127367939/assets{?name,label}",
-  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/renderhooks/v1.2023.4",
-  "id": 127367939,
+  "url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/128704799",
+  "assets_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/releases/128704799/assets",
+  "upload_url": "https://uploads.github.com/repos/davidsneighbour/hugo-modules/releases/128704799/assets{?name,label}",
+  "html_url": "https://github.com/davidsneighbour/hugo-modules/releases/tag/modules/renderhooks/v1.2023.5",
+  "id": 128704799,
   "author": {
     "login": "davidsneighbour",
     "id": 83281,
@@ -24,20 +24,19 @@
     "type": "User",
     "site_admin": false
   },
-  "node_id": "RE_kwDOJOG8Gs4Hl3sD",
-  "tag_name": "modules/renderhooks/v1.2023.4",
+  "node_id": "RE_kwDOJOG8Gs4Hq-Ef",
+  "tag_name": "modules/renderhooks/v1.2023.5",
   "target_commitish": "main",
-  "name": "modules/renderhooks/v1.2023.4",
+  "name": "modules/renderhooks/v1.2023.5",
   "draft": false,
   "prerelease": false,
-  "created_at": "2023-10-30T19:03:21Z",
-  "published_at": "2023-10-31T14:19:45Z",
+  "created_at": "2023-11-06T14:16:03Z",
+  "published_at": "2023-11-09T12:20:39Z",
   "assets": [
 
   ],
-  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/renderhooks/v1.2023.4",
-  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/renderhooks/v1.2023.4",
-  "body": "modules/renderhooks/v1.2023.4\n\n## What's Changed\n* fix(deps): update dependency @davidsneighbour/configurations to v5.5.12 by @renovate in https://github.com/davidsneighbour/hugo-modules/pull/283\n\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/feeds/v1.2023.9...modules/renderhooks/v1.2023.4",
-  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/284",
-  "mentions_count": 1
+  "tarball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/tarball/modules/renderhooks/v1.2023.5",
+  "zipball_url": "https://api.github.com/repos/davidsneighbour/hugo-modules/zipball/modules/renderhooks/v1.2023.5",
+  "body": "modules/renderhooks/v1.2023.5\n\n**Full Changelog**: https://github.com/davidsneighbour/hugo-modules/compare/modules/netlification/v1.2023.16...modules/renderhooks/v1.2023.5",
+  "discussion_url": "https://github.com/davidsneighbour/hugo-modules/discussions/292"
 }
