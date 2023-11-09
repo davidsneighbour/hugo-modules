@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-renderhooks",
   "description": "Render hooks for Hugo",
-  "version": "1.2023.4",
+  "version": "1.2023.5",
   "license": "MIT",
   "private": true,
   "repository": {
