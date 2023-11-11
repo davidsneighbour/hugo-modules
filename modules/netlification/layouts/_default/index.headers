@@ -1,12 +1,14 @@
+{{ $t := debug.Timer "netlification-index.headers" }}
+
 {{/* notify of deprecation */}}
 {{- $deprecatedConf := $.Site.Data.dnb.netlification.config -}}
 {{- with $deprecatedConf -}}
   {{- partial "debug.html"
     (dict
-    "message" "netlification: you are configuring the netlification module via data/dnb/netlification.toml. this is being deprecated. move your config into params.toml. you will need to change the prefix of `[variable]` to `[dnb.netlification.variable]` and add `[dnb.netlification]` before any un-prefixed variable. after that the module will start working out-of-the-box again."
-    "context" .
-    "severity" "warn"
-    "level" 8
+      "message" "netlification: you are configuring the netlification module via data/dnb/netlification.toml. this is being deprecated. move your config into params.toml. you will need to change the prefix of `[variable]` to `[dnb.netlification.variable]` and add `[dnb.netlification]` before any un-prefixed variable. after that the module will start working out-of-the-box again."
+      "context" .
+      "severity" "warn"
+      "level" 8
     )
   -}}
 {{- end -}}
@@ -135,3 +137,5 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
+
+{{ $t.Stop }}
