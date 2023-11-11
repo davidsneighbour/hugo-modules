@@ -15,6 +15,10 @@ source = "assets/js/debug.js"
 target = "assets/js/debug.js"
 
 [[mounts]]
+source = "static/assets/js/"
+target = "assets/dnb/debug/files/"
+
+[[mounts]]
 source = "content"
 target = "content"
 

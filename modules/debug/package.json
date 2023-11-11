@@ -9,30 +9,32 @@
     "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
   },
   "author": "Kaushal Modi (https://github.com/kaushalmodi)",
+  "maintainer": {
+    "name": "Patrick Kollitsch",
+    "email": "patrick@davids-neighbour.com",
+    "web": "https://davids-neighbour.com"
+  },
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-modules/issues"
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/debug",
-  "dependencies": {
+  "devDependencies": {
     "@davidsneighbour/bootstrap-config": "^5.5.12",
-    "@davidsneighbour/webpack-config": "^5.5.12"
+    "@davidsneighbour/webpack-config": "^5.5.12",
+    "@types/node": "^20.9.0",
+    "@types/webpack": "^5.28.5",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^13.3.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --config webpack.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.ts",
     "clean": "run-p clean:*",
     "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
     "clean:npm": "rimraf node_modules package-lock.json",
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
-  },
-  "maintainer": {
-    "name": "Patrick Kollitsch",
-    "email": "patrick@davids-neighbour.com",
-    "web": "https://davids-neighbour.com"
-  },
-  "devDependencies": {
-    "node-sass": "^9.0.0",
-    "sass-loader": "^13.3.2"
   }
 }

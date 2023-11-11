@@ -1,30 +1,37 @@
-const path = require('path');
+import * as path from 'path';
+import { Compilation, Configuration } from 'webpack';
 
 class FileListPlugin {
-  apply(compiler) {
-    compiler.hooks.emit.tapAsync('FileListPlugin', (compilation, callback) => {
-      let a = { files: [] };
+  apply(compiler: any) {
+    compiler.hooks.emit.tapAsync('FileListPlugin', (compilation: any, callback: () => void) => {
+      let a: {
+        files: string[];
+        [key: string]: any;
+      } = { files: [] as string[] };
+
       for (let filename in compilation.assets) {
         a.files.push(filename);
         let f = filename.split('.');
         let filetype = f[f.length - 1];
-        if (filetype === 'css' || filetype === 'js')
+        if (filetype === 'css' || filetype === 'js') {
           a[filetype] = {
             filename: filename,
             hash: f[f.length - 2]
           };
+        }
       }
+
       const a2 = JSON.stringify(a);
       compilation.assets['filelist.json'] = {
-        source: () => { return a2 },
-        size: () => { return a2.length }
+        source: () => a2,
+        size: () => a2.length
       };
       callback();
     });
   }
 }
 
-module.exports = {
+const config: Configuration = {
   target: 'web',
   entry: {
     main: path.join(__dirname, 'assets', 'main.js'),
@@ -52,4 +59,13 @@ module.exports = {
     filename: '[name].[fullhash].js',
     clean: true,
   },
+  optimization: {
+    nodeEnv: 'production',
+    minimize: true,
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
 };
+
+export default config;
