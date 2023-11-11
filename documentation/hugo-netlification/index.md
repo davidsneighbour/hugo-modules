@@ -5,15 +5,15 @@ description: ""
 summary: ""
 date: 2022-07-28T20:48:52+07:00
 publishDate: 2022-07-28T20:48:52+07:00
-lastmod: 2023-09-18T19:05:33+07:00
+lastmod: 2023-11-06T21:28:44+07:00
 resources:
-  - src: header-card.png
+- src: header-card.png
 categories:
-  - components
+- components
 tags:
-  - gohugo
-  - component
-  - seo
+- gohugo
+- component
+- seo
 component:
   slug: hugo-modules/modules/netlification
   host: github.com
@@ -27,6 +27,22 @@ config:
 This is a Hugo theme component with helpers to host your [GoHugo](https://gohugo.io/) generated static website on [Netlify](https://www.netlify.com/). If you don't use Netlify, you DO NOT need this module.
 
 {{< component-box >}}
+
+- [Features](#features)
+- [Installation and setup](#installation-and-setup)
+- [Configuration](#configuration)
+  - [Redirects](#redirects)
+    - [Per post](#per-post)
+    - [Additional Redirects](#additional-redirects)
+    - [Disable internal alias creation in Hugo](#disable-internal-alias-creation-in-hugo)
+  - [Headers](#headers)
+    - [Content Security Policy](#content-security-policy)
+- [Sample Configuration](#sample-configuration)
+- [Updating](#updating)
+- [Extend netlification headers from other modules](#extend-netlification-headers-from-other-modules)
+- [Notes](#notes)
+- [Testing output](#testing-output)
+- [Troubleshooting](#troubleshooting)
 
 # Features
 
@@ -158,3 +174,7 @@ hugo mod get -u
 # Testing output
 
 - [Netlify Playground for redirects](https://play.netlify.com/redirects)
+
+# Troubleshooting
+
+On the development server you can load <https://localhost:1313/_headers> and <https://localhost:1313/_redirects> and can inspect the output of this module.
