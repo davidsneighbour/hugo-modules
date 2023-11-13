@@ -68,7 +68,7 @@ Tagvariants:
 
 {{ if (or $paramSrc $paramName) }}
 
-	{{- /* determine the type of the image */ -}}
+	{{/* determine the image type */}}
 	{{- $isPageBundle := false -}}{{- /* bool for static image file */ -}}
 	{{- $isStaticFile := false -}}{{- /* bool for resource image file */ -}}
 	{{- $resources := .Page.Resources -}}
@@ -105,18 +105,12 @@ Tagvariants:
 		{{- end -}}
 	{{- end -}}
 
-  {{/* BUG #225 - svg and gif processing issues, see https://dnbhub.xyz/issue-225 */}}
-  {{- if and $isPageBundle (eq $image.MediaType.SubType "gif") -}}
+  {{/* evaluate, if the image is in a format that can be processed */}}
+  {{- $opt := dict "isPageBundle" $isPageBundle "image" $image -}}
+  {{- $isProcessable := partialCached "func/pictures/isProcessable.html" $opt $opt -}}
+  {{- if eq "false" $isProcessable -}}
     {{- $isPageBundle = false -}}
     {{- $isStaticFile = true -}}
-    {{- warnf "GIFs are not supported, yet. Use static file strategy instead: %s" $paramSrc -}}
-    {{- warnf "see https://dnbhub.xyz/issue-225 for details" -}}
-  {{- end -}}
-  {{- if and $isPageBundle (eq $image.MediaType.SubType "svg") -}}
-    {{- $isPageBundle = false -}}
-    {{- $isStaticFile = true -}}
-    {{- warnf "SVGs are not supported, yet. Use static file strategy instead: %s" $paramSrc -}}
-    {{- warnf "see https://dnbhub.xyz/issue-225 for details" -}}
   {{- end -}}
 
 	{{ $finalImage := dict }}
