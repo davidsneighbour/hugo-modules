@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/social",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.2.37"
+    "@davidsneighbour/configurations": "^5.5.16"
   },
   "scripts": {
     "clean": "run-p clean:*",

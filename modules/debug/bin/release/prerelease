@@ -34,9 +34,6 @@ fi
 
 CURPATH="$(pwd -P)"
 
-npm run build
-git add static
-
 # update modules and add to repo
 hugo mod get -u ./...
 hugo mod tidy
