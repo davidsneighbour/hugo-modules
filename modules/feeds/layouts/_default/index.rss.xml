@@ -3,7 +3,7 @@
 
 {{- $context := . -}}
 {{- if .IsHome -}}
-  {{- $context = site -}}
+{{- $context = site -}}
 {{- end -}}
 
 {{- $pages := $context.RegularPages -}}
@@ -20,74 +20,79 @@
 
 {{ printf "<?xml version='1.0' encoding='utf-8' standalone='yes'?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
-  xmlns:webfeeds="http://webfeeds.org/rss/1.0"
-  xmlns:media="http://search.yahoo.com/mrss/">
+      xmlns:webfeeds="http://webfeeds.org/rss/1.0"
+      xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>
       {{- if eq .Title site.Title -}}
-      {{- site.Title -}}
+        {{- site.Title -}}
       {{- else -}}
-      {{- with .Title -}}
-      {{- . -}} on
-      {{- end -}}
-      {{- site.Title -}}
+        {{- with .Title -}}
+          {{- . -}} on
+        {{- end -}}
+        {{- site.Title -}}
       {{- end -}}
     </title>
     <!-- <webfeeds:related
-      layout="card" target="browser" />
-  <webfeeds:logo>http://yoursite.com/logo-30px-height.svg</webfeeds:logo>
-  <webfeeds:accentColor>
-    00FF00</webfeeds:accentColor>
-  <webfeeds:cover image="http://yoursite.com/a-large-cover-image.png" />
-  <webfeeds:icon>
+    layout="card" target="browser" />
+    <webfeeds:logo>http://yoursite.com/logo-30px-height.svg</webfeeds:logo>
+    <webfeeds:accentColor>00FF00</webfeeds:accentColor>
+    <webfeeds:cover image="http://yoursite.com/a-large-cover-image.png" />
+    <webfeeds:icon>
     http://feedly.com/icon.svg</webfeeds:icon> -->
-    <link>{{-
-    .Permalink -}}</link>
+    <link>{{- .Permalink -}}</link>
     <description>
       Recent content
       {{ if ne .Title site.Title -}}
-      {{- with .Title }} in {{ . }} {{ end -}}
+        {{- with .Title }} in {{ . }} {{ end -}}
       {{- end }}
       on {{ site.Title -}}
     </description>
-    {{- with site.LanguageCode -}} <language>{{- . -}}</language> {{- end -}} {{- with
-    site.Author.name -}} <managingEditor>{{.}}</managingEditor>
-      <webMaster>{{.}}</webMaster> {{- end
-    -}} {{- with site.Copyright -}} <copyright>{{- . -}}</copyright> {{- end -}} {{- if not
-    .Date.IsZero -}} <lastBuildDate>{{- .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML
-      -}}</lastBuildDate> {{- end -}} <atom:link href="{{.Permalink}}" rel="self"
-      type="application/rss+xml" />
-
-      {{- range $pages }} <item>
-      <title>{{- .Title -}}</title>
-      <link>{{- .Permalink -}}</link>
-      <pubDate>
+    {{- with site.LanguageCode -}}
+      <language>{{- . -}}</language>
+    {{- end -}}
+    {{- with site.Author.name -}}
+      <managingEditor>{{.}}</managingEditor>
+      <webMaster>{{.}}</webMaster>
+    {{- end -}}
+    {{- with site.Copyright -}}
+      <copyright>{{- . -}}</copyright>
+    {{- end -}}
+    {{- if not .Date.IsZero -}}
+      <lastBuildDate>
         {{- .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML -}}
-      </pubDate>
-    {{- with site.Author.name -}} <author>{{- .
-        -}}</author> {{- end -}} <guid>
-        {{- .Permalink -}}
-      </guid>
-      <description>
-        {{- $description := partialCached "func/getDescription.html" . . -}}
-        {{- $description | html -}}
-      </description>
-
-    {{- $metaProperty := dict -}}
-    {{- $image := (partialCached "func/getArticleImage.html" . .) -}}
-    {{- with $image -}}
-      {{- $image := .Resize "1200x webp" -}}
-      {{- with $image }}
-        {{- $image = .Crop "1200x630 webp" -}}
-      {{- end -}}
-      <media:content
-        url="{{- $image.Permalink -}}"
-        type="{{- $image.MediaType -}}"
-        medium="image"
-        height="{{ $image.Height }}"
-        width="{{ $image.Width }}"/>
+      </lastBuildDate>
     {{- end -}}
-    </item>
+    <atom:link href="{{.Permalink}}" rel="self" type="application/rss+xml" />
+    {{- range $pages }}
+      <item>
+        <title>{{- .Title -}}</title>
+        <link>{{- .Permalink -}}</link>
+        <pubDate>
+          {{- .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML -}}
+        </pubDate>
+        {{- with site.Author.name -}}
+          <author>{{- . -}}</author>
+        {{- end -}}
+        <guid>{{- .Permalink -}}</guid>
+        <description>
+          {{- $description := partialCached "func/getDescription.html" . . -}}
+          {{- $description | html -}}
+        </description>
+        {{- $image := partialCached "func/getArticleImage.html" . . -}}
+        {{- with $image -}}
+          {{- $image := .Resize "1200x webp" -}}
+          {{- with $image }}
+            {{- $image = .Crop "1200x630 webp" -}}
+          {{- end -}}
+          <media:content
+            url="{{- $image.Permalink -}}"
+            type="{{- $image.MediaType -}}"
+            medium="image"
+            height="{{- $image.Height -}}"
+            width="{{- $image.Width -}}" />
+        {{- end -}}
+      </item>
     {{- end -}}
-    </channel>
+  </channel>
 </rss>

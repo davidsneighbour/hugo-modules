@@ -1,6 +1,6 @@
 module github.com/davidsneighbour/hugo-modules/modules/feeds
 
-go 1.20
+go 1.21
 
 require (
 	github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.11 // indirect
