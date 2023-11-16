@@ -1,44 +1,27 @@
 #!/bin/bash
-# v2023.08.20.01
+# v2023.11.16.02
 
-# exit verbose when any command fails
+source ./common
+
 set -e
 
-# check for required tools
-REQUIRED_TOOLS=(
-  curl
-  sed
-  git
-)
-for TOOL in "${REQUIRED_TOOLS[@]}"; do
-  if ! command -v "${TOOL}" >/dev/null; then
-    echo "${TOOL} is required... "
-    exit 1
-  fi
-done
+check_required_tools curl sed git
+load_env_vars .env
 
-# extracting environment variables
-FILE=.env
-if [ -f "$FILE" ]; then
-  echo "exporting .env"
-  set -a # export all variables created next
-  # this routine ranges through a folder of files that we don't explicitly know (@davidsneighbour)
-  # see https://github.com/koalaman/shellcheck/wiki/SC1090
-  # shellcheck source=/dev/null
-  source "${FILE}"
-  set +a # stop exporting
-else
-  echo "no .env file found"
-  exit 1
-fi
-
+# Get the current path
 CURPATH="$(pwd -P)"
 
-# update modules and add to repo
+# Build assets in static folder and add to commit if it exists
+if [ -d "static" ]; then
+  npm run build
+  git add static
+fi
+
+# Update Hugo modules and add changes to repository
 hugo mod get -u ./...
 hugo mod tidy
-git add "${CURPATH}"/go.mod
-FILE="${CURPATH}"/go.sum
-if test -f "$FILE"; then
-  git add go.sum
+git add "${CURPATH}/go.mod"
+FILE="${CURPATH}/go.sum"
+if [ -f "$FILE" ]; then
+  git add "$FILE"
 fi
