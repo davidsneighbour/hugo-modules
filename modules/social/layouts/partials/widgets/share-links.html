@@ -7,11 +7,11 @@
 -}}
 {{- $setups = partialCached "func/sortNetworks.html" (dict "networks" $networks "setups" $setups) -}}
 
-
 <span>
   {{ i18n "share_label" }}
 </span>
 {{- range $network, $setup := $setups -}}
+
   {{- $separator := "&" -}}
   {{ $icon := false }}
   {{ with $setup.icon }}
@@ -24,9 +24,10 @@
     {{- $separator = . -}}
   {{- end -}}
   {{- $link := printf "%s%s" $setup.link "?" -}}
+
   {{- range $key, $value := $setup.particles -}}
     {{- if eq $key "params" -}}
-      {{- $link = printf "%s%s%s" $permalink $separator $value -}}
+      {{- $link = printf "%s%s%s" $link $separator $value -}}
     {{- else -}}
       {{- if eq $value "description" -}}
         {{- $link = printf "%s%s%s" $link $separator (querify $key $description) -}}
@@ -37,7 +38,9 @@
       {{- end -}}
     {{- end -}}
   {{- end -}}
+
   {{- $sharetext := i18n (printf "share_on_%s" $setup.slug) -}}
+
   {{- with site.Params.dnb.social.sharebuttons.icons | default true -}}
     <span aria-hidden="true" class="icon">
       {{- partialCached "bsicon.html" $icon $icon -}}
