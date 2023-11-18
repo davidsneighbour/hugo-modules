@@ -5,15 +5,15 @@ description: Debug everything in Hugo!
 summary: This module for GoHugo adds debugging partials for many use cases.
 date: 2022-07-27T21:17:03+07:00
 publishDate: 2022-07-27T21:17:03+07:00
-lastmod: 2023-08-22T20:13:33+07:00
+lastmod: 2023-11-18T15:18:03+07:00
 resources:
-  - src: header-card.png
+- src: header-card.png
 categories:
-  - components
+- components
 tags:
-  - gohugo
-  - component
-  - development
+- gohugo
+- component
+- development
 component:
   slug: hugo-debug
   host: github.com
@@ -35,12 +35,12 @@ This module for GoHugo adds debugging partials for everything you need to debug.
 
 ## Usage
 
-Either add `disabled = true` to your live server configuration or check, if you are on a development server by using `{{- if site.IsServer -}}` around your calls to the partials.
+Either add `disabled = true` to your live server configuration or check, if you are on a development server by using `{{- if hugo.IsServer -}}` around your calls to the partials.
 
 A quick sample for its usage is the following debugging of a pages data:
 
 ```go-html-template
-{{- if site.IsServer -}}
+{{- if hugo.IsServer -}}
   <footer id="debugging">
     <div class="container">
       <div class="row">
