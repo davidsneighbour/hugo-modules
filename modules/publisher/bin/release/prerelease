@@ -1,15 +1,15 @@
 #!/bin/bash
-# v2023.11.16.02
+# v2023.11.18.01
 
-source ./common
+# Get the current path
+CURPATH="$(pwd -P)"
+
+source "${CURPATH}/bin/release/common"
 
 set -e
 
 check_required_tools curl sed git
 load_env_vars .env
-
-# Get the current path
-CURPATH="$(pwd -P)"
 
 # Build assets in static folder and add to commit if it exists
 if [ -d "static" ]; then
