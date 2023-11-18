@@ -1,7 +1,10 @@
 #!/bin/bash
-# v2023.11.16.02
+# v2023.11.18.01
 
-source ./common
+# Get the current path
+CURPATH="$(pwd -P)"
+
+source "${CURPATH}/bin/release/common"
 
 set -e
 
