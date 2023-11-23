@@ -140,6 +140,25 @@ Implementing the hooks system in your theme or module is easy. There are several
 
 ### File based
 
+### Module based hooks (plugin hooks)
+
+In params.toml (or under the [params] section of the configuration) add a table array as such:
+
+```toml
+[[dnb.hooks.hookname]]
+partial = "partial path"
+weight = "integer"
+cached = "boolean/string"
+```
+
+Notes:
+
+- hookname without cached at the end. The hook must exist and be called by the calling template so that this hook is added. If the hookname does not exist, this hook will be ignored.
+- weight is used for sorting hooks. Please leave this out to have the hook run in the order it is added. the default weight is 0. Use this only if you want a hook run before or after others.
+- cached is either a boolean defining if the result of the hook is cached per page or run every time it's called or a string. in that case, it is cached with this string as an identifier. This string might be a simple string, which will cache the result globally (NOT per page), or it might contain a %random%, which will be replaced with a random string.
+
+Note that the cached option is a work in progress. I'll need to find ways to cache, for instance, according to section. This might change over time.-
+
 ## Best Practices
 
 ### "Global" Reusable Hooks

@@ -77,6 +77,29 @@
   {{- end -}}
 {{- end -}}
 
+{{/* find plugin hooks */}}
+{{/* @todo fix weighting of hooks */}}
+{{- with index site.Params.dnb.hooks $context.hook -}}
+  {{- warnf "plugin hooks are experimental" -}}
+  {{- range . -}}
+    {{- /* execute hook if it exists */ -}}
+    {{- if templates.Exists .partial -}}
+        {{- partial "debug.html" (dict
+            "message" (printf "running hook `%s` from `%s`" (printf "%s" $context.hook) .partial)
+            "context" .
+            "severity" "info"
+            "level" 9
+        ) -}}
+        {{ if .cached }}
+          {{- partialCached .partial $context . -}}
+        {{ else }}
+          {{- partial .partial $context -}}
+        {{ end }}
+        {{- $loaded = true -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
 {{- /* send out a note if the hook is not used */ -}}
 {{- if eq $loaded false -}}
   {{- if not (in site.Params.dnb.hooks.disable_messages "unused_hooks") -}}
