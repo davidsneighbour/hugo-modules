@@ -5,7 +5,7 @@ description: ""
 summary: ""
 date: 2022-07-27T21:23:50+07:00
 publishDate: 2022-07-27T21:23:50+07:00
-lastmod: 2023-11-23T20:39:14+07:00
+lastmod: 2023-11-23T20:49:35+07:00
 resources:
 - src: header-card.png
 categories:
@@ -225,4 +225,4 @@ For specific modules we advise to use a namespaced hook name (like `dnb-netlific
 
 Have a look a the following projects to see usage of the hook system:
 
-- [Hooks in the theme of kollitsch.dev](https://github.com/davidsneighbour/kollitsch.dev/search?q=func%2Fhook)
+- [Hooks in the theme of kollitsch.dev](https://github.com/davidsneighbour/hugo-theme/search?q=func%2Fhook)
