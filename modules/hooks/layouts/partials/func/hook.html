@@ -34,9 +34,9 @@
         "severity" "info"
         "level" 9
     ) -}}
-    {{- partial $partialHook $context -}}
-    {{- $loaded = true -}}
   {{- end -}}
+  {{- partial $partialHook $context -}}
+  {{- $loaded = true -}}
 {{- end -}}
 
 {{- /* execute cached hook if it exists */ -}}
@@ -52,9 +52,9 @@
         "severity" "info"
         "level" 9
       ) -}}
+  {{- end -}}
   {{- partialCached $partialHookCached $context $context.hook -}}
   {{- $loaded = true -}}
-  {{- end -}}
 {{- end -}}
 
 {{- /* if no file based hooks ran then check for folder based hooks */ -}}
