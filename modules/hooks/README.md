@@ -10,6 +10,13 @@ You name it. `hugo-hooks` is what you need. This module adds these hooks to your
 
 **You as the end-user** can add simple layout files to "hook" into these locations and add whatever pizzazz, panache, flair or sparkle your website needs.
 
+## Key Features
+
+- **Customization:** Users can add custom layout files to predefined locations in their themes, allowing for personalized enhancements and modifications.
+- **Flexibility:** Suitable for a wide range of additions, from simple text blocks to complex scripts, making it adaptable to various needs and purposes.
+- **Caching:** Hooks can be cached for improved performance, reducing load times and enhancing user experience.
+- **Ease of Integration:** Hooks can be easily added to other plugins or themes through configuration settings, facilitating seamless integration and expansion of functionality. This feature allows for greater interoperability and adaptability within the Hugo ecosystem, enabling developers to enhance their themes or plugins with additional capabilities without extensive coding.
+
 <!--- THINGSTOKNOW BEGIN --->
 
 ## Some things you need to know
@@ -29,7 +36,7 @@ The following documentation will refer to all configuration parameters in TOML f
 
 ## Installing
 
-First enable modules in your own repository if you did not already have done so:
+First, enable modules in your own repository if you have not already done so:
 
 ```bash
 hugo mod init github.com/username/reponame
@@ -41,7 +48,7 @@ Then add this module to your required modules in `config.toml`.
 [module]
 
 [[module.imports]]
-path = "github.com/davidsneighbour/hugo-hooks"
+path = "github.com/davidsneighbour/hugo-modules/modules/hooks"
 disable = false
 ignoreConfig = false
 ignoreImports = false
@@ -54,9 +61,9 @@ The next time you run `hugo` it will download the latest version of the module.
 
 ```bash
 # update this module
-hugo mod get -u github.com/davidsneighbour/hugo-hooks
+hugo mod get -u github.com/davidsneighbour/hugo-modules/modules/hooks
 # update to a specific version
-hugo mod get -u github.com/davidsneighbour/hugo-hooks@v1.0.0
+hugo mod get -u github.com/davidsneighbour/hugo-modules/modules/hooks@v1.0.0
 # update all modules recursively over the whole project
 hugo mod get -u ./...
 ```
@@ -64,9 +71,9 @@ hugo mod get -u ./...
 
 ## Hook principle
 
-Theme users save hooks to the `layouts/partials/hooks` directory. There are no errors if a hook is not found (some themes or modules might provide a feedback if their hook is unused and usage of them is required to get important features working).
+Theme users save hooks to the `layouts/partials/hooks` directory. There are no errors if a hook is not found (some themes or modules might provide feedback if their hook is unused and usage of them is required to get important features working).
 
-If a hook has an added `-cached` to it's name then it will be cached and on re-calls be re-used. Check the documentation of the module or theme that introduces the hook to see if it makes sense to cache that specific hook.
+If a hook has an added `-`cached` to its name then it will be cached and on re-calls be re-used. Check the documentation of the module or theme that introduces the hook to see if it makes sense to cache that specific hook.
 
 For example:
 
