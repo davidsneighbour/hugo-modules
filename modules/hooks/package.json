@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/hooks",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.5.17"
+    "@davidsneighbour/standard-version-config": "^5.5.17",
+    "@davidsneighbour/tools": "^5.5.17"
   },
   "scripts": {
     "clean": "run-p clean:*",
