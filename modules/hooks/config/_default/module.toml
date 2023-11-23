@@ -6,10 +6,6 @@ min = "0.56.0"
 source = "layouts"
 target = "layouts"
 
-[[mounts]]
-source = "data"
-target = "data"
-
 [[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/functions"
 disable = false
