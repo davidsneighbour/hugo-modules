@@ -5,7 +5,7 @@ description: ""
 summary: ""
 date: 2022-07-27T21:23:50+07:00
 publishDate: 2022-07-27T21:23:50+07:00
-lastmod: 2023-11-23T20:49:35+07:00
+lastmod: 2023-11-23T22:16:08+07:00
 resources:
 - src: header-card.png
 categories:
@@ -23,6 +23,24 @@ component:
 config:
   band: gohugo
 ---
+
+- [Key Features](#key-features)
+- [Some things you need to know](#some-things-you-need-to-know)
+- [Installing](#installing)
+- [Updating](#updating)
+- [Hook principle](#hook-principle)
+- [Call hooks in layouts](#call-hooks-in-layouts)
+  - [Simple Calls](#simple-calls)
+  - [Extended Use (adding parameters to the call)](#extended-use-adding-parameters-to-the-call)
+- [Configuration](#configuration)
+- [Hooks for developers](#hooks-for-developers)
+  - [Directory based](#directory-based)
+  - [File based](#file-based)
+  - [Module based hooks (plugin hooks)](#module-based-hooks-plugin-hooks)
+- [Best Practices](#best-practices)
+  - [RFC: "Global" Reusable Hooks](#rfc-global-reusable-hooks)
+  - [Namespaced Hooks](#namespaced-hooks)
+  - [Sample hook usage](#sample-hook-usage)
 
 Hooks for GoHugo layouts. An easy way for theme developers to let users add partials and blocks at pre-defined safe places to their themes.
 
@@ -67,14 +85,11 @@ hugo mod init github.com/username/reponame
 Then add this module to your required modules in `config.toml`.
 
 ```toml
-[module]
-
 [[module.imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/hooks"
 disable = false
 ignoreConfig = false
 ignoreImports = false
-
 ```
 
 The next time you run `hugo` it will download the latest version of the module.
@@ -190,36 +205,38 @@ Note that the cached option is a work in progress. I'll need to find ways to cac
 
 ## Best Practices
 
-### "Global" Reusable Hooks
+### RFC: "Global" Reusable Hooks
 
-To be very portable between themes the following hooks should be used at the appropriate locations in implementing themes and modules. All of @davidsneighbours GoHugo themes and modules will do so and to support the overall portable format of the underlying idea of the hook system we hope others will too:
+The "Global" Reusable Hooks in the GoHugo Hooks module are designed to ensure high portability and consistency across different themes and modules. These hooks, adopted by all of @davidsneighbour's GoHugo themes and modules, are recommended for widespread use to maintain a uniform approach in the Hugo community. The table below outlines each hook, its execution count, and its intended location within the layout:
 
 | Hookname | Runs | Location |
 | :--- | :---: | :--- |
-| **setup** | 1 | Runs before anything is put out. Use this hook to set up and configure your scripts. |
-| **head-init** | 1 | Runs right after the `<head>` tag. Layouts using this hook should not print anything out so that the three initial head-tags are printed first. Use `head-start` for things you want in the beginning of the page head. |
-| **head-start** | 1 | Runs after the three initial head-tags. |
-| **head-pre-css** | 1 | Runs inside the head before the stylesheets are added. |
-| **head-post-css** | 1 | Runs inside the head after the stylesheets are added. |
-| **head-end** | 1 | Runs at the end of the head, before the `</head>` tag. |
-| **body-start** | 1 | |
-| **container-start** | 1 | |
-| **content-start** | 1 | |
-| **content-end** | 1 | |
-| **container-end** | 1 | |
-| **footer-start** | 1 | |
-| **footer-inside-start** | 1+ | |
-| **footer-widget-start** | 1+ | |
-| **footer-widget-end** | 1+ | |
-| **footer-inside-end** | 1+ | |
-| **footer-end** | 1 | |
-| **body-end-pre-script** | 1 | Runs at the end of the body BEFORE the deferred theme javascripts are added. |
-| **body-end** | 1 | Runs at the end of the body AFTER the deferred theme javascripts are added and right before the `</body>` tag. |
-| **teardown** | 1 | Runs after everything is printed to output. Use this hook to cleanup for your scripts. |
+| **setup** | 1 | Before any output. Ideal for script setup and configuration. |
+| **head-init** | 1 | Immediately after the `<head>` tag. Shouldn't print anything to allow initial head-tags to load first. |
+| **head-start** | 1 | After the initial head-tags, for early head content. |
+| **head-pre-css** | 1 | Inside the head, before adding stylesheets. |
+| **head-post-css** | 1 | Inside the head, after adding stylesheets. |
+| **head-end** | 1 | At the end of the head, just before `</head>`. |
+| **body-start** | 1 | At the start of the body. |
+| **container-start** | 1 | At the start of the main container. |
+| **content-start** | 1 | At the beginning of the main content area. |
+| **content-end** | 1 | At the end of the main content area. |
+| **container-end** | 1 | At the end of the main container. |
+| **footer-start** | 1 | At the start of the footer. |
+| **footer-inside-start** | 1+ | At the beginning of the inner footer area. |
+| **footer-widget-start** | 1+ | Before footer widgets. |
+| **footer-widget-end** | 1+ | After footer widgets. |
+| **footer-inside-end** | 1+ | At the end of the inner footer area. |
+| **footer-end** | 1 | At the end of the footer. |
+| **body-end-pre-script** | 1 | At the end of the body, before deferred theme JavaScripts. |
+| **body-end** | 1 | At the very end of the body, after deferred JavaScripts, before `</body>`. |
+| **teardown** | 1 | After all output, for script cleanup. |
+
+These hooks are strategically placed to enhance the functionality and customization of themes, ensuring a smooth and consistent user experience across various implementations.
 
 ### Namespaced Hooks
 
-For specific modules we advise to use a namespaced hook name (like `dnb-netlification-headers`) to avoid collisions with other modules and hooks. Please document your hooks and refer back to this README so users can dive into the details of the system if required.
+For specific modules we advise to use a namespaced hook name (like `dnb-netlification-headers`, `dnb-netlification-redirects`, etc.) to avoid collisions with other modules and hooks. Please document your hooks and refer back to this README so users can dive into the details of the system if required.
 
 ### Sample hook usage
 
