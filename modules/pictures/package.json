@@ -17,6 +17,7 @@
     "@davidsneighbour/configurations": "^5.5.17"
   },
   "scripts": {
+    "build": "",
     "clean": "run-p clean:*",
     "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
     "clean:npm": "rimraf node_modules package-lock.json",
