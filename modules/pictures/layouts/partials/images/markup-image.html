@@ -5,7 +5,10 @@
 {{- $context := .context -}}
 {{- $class := .class | default "img-fluid" -}}
 
-<figure class="aspect-auto">
+{{- $largest := (sub (len $images) 1) -}}
+{{ $largestImage := (index $images $largest) }}
+
+<figure class="aspect-auto" style="max-width: {{ $largestImage.Width }}px;">
   {{- with $link -}}<a href="{{- . -}}">{{- end -}}
   <picture>
     {{- range $index, $image := $images -}}
