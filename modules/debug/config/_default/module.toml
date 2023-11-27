@@ -23,6 +23,10 @@ source = "content"
 target = "content"
 
 [[mounts]]
+source = "data"
+target = "data"
+
+[[mounts]]
 source = "layouts"
 target = "layouts"
 

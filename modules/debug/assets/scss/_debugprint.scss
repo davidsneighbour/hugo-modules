@@ -17,8 +17,6 @@ table.debugprint {
   td {
     @extend .align-top;
     @extend .p-2;
-    @extend .text-wrap;
-    @extend .text-break;
     @extend .text-start;
   }
 
@@ -42,5 +40,18 @@ table.debugprint {
     &:not(.collapsed) .if-collapsed {
       @extend .d-none;
     }
+  }
+
+  .nowrap {
+    white-space: nowrap;
+  }
+
+  .wrap {
+    @extend .text-wrap;
+    @extend .text-break;
+  }
+
+  .type {
+    font-style: italic;
   }
 }

@@ -1,17 +1,20 @@
-<!-- https://github.com/gohugoio/hugo/blob/master/hugolib/fileInfo.go (*hugolib.fileInfo - used by regular pages)  -->
-<!-- https://github.com/gohugoio/hugo/blob/master/source/fileInfo.go (*source.FileInfo - used by term pages) -->
-{{ $FileInfoVarNames   := (slice "UniqueID" "Filename" "BaseFileName" "TranslationBaseName" "Lang" "Section" "LogicalName" "Dir" "Ext" "Path") }}
-{{ $FileInfoVarSymbols := (slice .value.UniqueID .value.Filename .value.BaseFileName .value.TranslationBaseName
-  .value.Lang .value.Section .value.LogicalName .value.Dir .value.Ext .value.Path )
-}}
 <table class="debugprint">
   <tr>
     <th class="align-top key">FileInfo Variable</th>
+    <th class="align-top type">Type</th>
     <th class="align-top value">Value</th>
   </tr>
-  {{ range $idx, $elem := $FileInfoVarNames }}
-    {{ printf `<tr> <td class="align-top key">%s</td> <td class="align-top value">` $elem | safeHTML }}
-    {{ partial "debugprint.html" (index $FileInfoVarSymbols $idx) }}
-    {{ printf "</td></tr>" | safeHTML }}
+  {{ $value := .value }}
+  {{ range site.Data.dnb.debug.types.fileinfo.fields }}
+  {{ $valuePrinted := partial "func/eval.html" (dict "context" $value "cmd" (printf ".%s" .variable)) }}
+    <tr>
+    <td class="align-top key nowrap" title="{{ .description }}">.{{ .title }}</td>
+    <td class="align-top type nowrap">
+      {{ partial "debugtype.html" $valuePrinted }}
+    </td>
+    <td class="align-top value">
+      {{ partial "debugprint.html" $valuePrinted }}
+   </td>
+   </tr>
   {{ end }}
 </table>
