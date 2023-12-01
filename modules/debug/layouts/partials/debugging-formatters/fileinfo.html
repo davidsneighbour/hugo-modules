@@ -10,7 +10,9 @@
     <tr>
     <td class="align-top key nowrap" title="{{ .description }}">.{{ .title }}</td>
     <td class="align-top type nowrap">
-      {{ partial "debugtype.html" $valuePrinted }}
+      <span class="badge text-bg-info uppercase">
+        {{ partial "debugtype.html" $valuePrinted }}
+      </span>
     </td>
     <td class="align-top value">
       {{ partial "debugprint.html" $valuePrinted }}
