@@ -24,14 +24,20 @@ table.debugprint {
     @extend .align-top;
     @extend .p-2;
     @extend .fw-bold;
+
+    &.type {
+      font-style: normal;
+    }
   }
 
   .true {
     @extend .text-success;
+    @extend .fst-italic;
   }
 
   .false {
     @extend .text-danger;
+    @extend .fst-italic;
   }
 
   [data-bs-toggle="collapse"] {
@@ -44,6 +50,9 @@ table.debugprint {
 
   .nowrap {
     white-space: nowrap;
+    word-break: unset;
+    word-wrap: unset;
+    overflow-wrap: unset;
   }
 
   .wrap {
@@ -53,10 +62,12 @@ table.debugprint {
 
   .type {
     font-style: italic;
+
+
   }
 
   td:has(+ table) {
-    padding: 0 !important;
+    @extend .fst-italic;
   }
 
 }

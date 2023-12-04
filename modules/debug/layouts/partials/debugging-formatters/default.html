@@ -1,5 +1,20 @@
-<table class="debugprint">
+{{- $errorLabel := i18n "error.no-formatter-configured" -}}
+{{- warnf "[hugo-debug] %T - %s" .value $errorLabel -}}
+
+{{- $issuePath := "https://github.com/davidsneighbour/hugo-modules/issues/new" -}}
+{{- $parameters := collections.Slice
+  (collections.Querify "title" (printf "debug: create type formatter for %T" .value))
+  (collections.Querify "body" (printf (i18n "issue.body") hugo.Version))
+  (collections.Querify "labels" "enhancement")
+  (collections.Querify "assignees" "davidsneighbour")
+-}}
+{{- $issueUrl := printf "%s?%s" $issuePath (collections.Delimit $parameters "&") -}}
+
+<table class="debugprint border border-warning-subtle"
+       title='{{- $errorLabel -}}'>
   <tr>
-    <td class="align-top">{{ printf "%#v (<i>type:%s</i>)" .value .type | safeHTML }}</td>
+    <td class="align-top" onclick="window.open('{{ $issueUrl -}}', '_blank')">
+      {{ printf "%#v" .value | safeHTML }}
+    </td>
   </tr>
 </table>

@@ -108,9 +108,7 @@
       <table class="debugprint">
         <thead>
           <tr>
-            <th class="key">
-              Key
-            </th>
+            <th class="key">Key</th>
             <th class="type">Type</th>
             <th class="value">Value</th>
           </tr>
@@ -121,13 +119,11 @@
                 (index $names $index)
                 (partial "debugtype.html" $item)
                 (partial "debugprint.html" $item) -}}
-            <tr>{{- range $index, $item := $slices -}}
-              {{- if (eq $index 0) -}}
-                <th>{{- . -}}</th>
-              {{- else -}}
-                <td>{{- . -}}</td>
-              {{- end -}}
-            {{- end -}}</tr>
+            <tr>
+                <th>{{- collections.Index $slices 0 -}}</th>
+                <td>{{- collections.Index $slices 1 -}}</td>
+                <td>{{- collections.Index $slices 2 -}}</td>
+            </tr>
           {{- end -}}
         </tbody>
       </table>
