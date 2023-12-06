@@ -10,11 +10,11 @@
       <th>{{ .slug }}</th>
       <td>{{ .type }}</td>
       <td>
-      {{- with .value -}}
-        {{- partial "debugprint.html" . -}}
-      {{- else -}}
-        {{- partialCached "debugging-partials/nil.html" . -}}
-      {{- end -}}
+        {{- with .value -}}
+          {{- partial "debugprint.html" . -}}
+        {{- else -}}
+          {{- partialCached "debugging-partials/nil.html" . -}}
+        {{- end -}}
       </td>
     </tr>
   {{- end -}}
