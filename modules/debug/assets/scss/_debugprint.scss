@@ -1,6 +1,6 @@
+/* stylelint-disable plugin/no-unsupported-browser-features */
 .debugprint table,
 table.debugprint {
-
   @extend .table;
   @extend .table-sm;
   @extend .table-dark;
@@ -8,10 +8,8 @@ table.debugprint {
   @extend .table-bordered;
   @extend .table-hover;
   @extend .mb-0;
+  @extend .overflow-x-scroll;
 
-  // @extend .w-100;
-
-  // max-width: 100%;
   font-size: 0.85rem;
 
   td {
@@ -26,7 +24,7 @@ table.debugprint {
     @extend .fw-bold;
 
     &.type {
-      font-style: normal;
+      @extend .fst-normal;
     }
   }
 
@@ -42,6 +40,8 @@ table.debugprint {
 
   [data-bs-toggle="collapse"] {
 
+    /* stylelint-disable-next-line rule-empty-line-before */
+    /* stylelint-disable-next-line selector-max-compound-selectors */
     &.collapsed .if-not-collapsed,
     &:not(.collapsed) .if-collapsed {
       @extend .d-none;
@@ -62,8 +62,6 @@ table.debugprint {
 
   .type {
     font-style: italic;
-
-
   }
 
   td:has(+ table) {
