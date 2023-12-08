@@ -30,6 +30,13 @@ label = "Integer"
 description = "A positive or negative number with a floating point"
 
 [[formatters]]
+type = "hugo.VersionString"
+class = "flat"
+slug = "string"
+label = "hugo.VersionString"
+description = "A semver version string denoting the Hugo Version"
+
+[[formatters]]
 catch = "^(string|template\\.(CSS|HTML|HTMLAttr|JS|JSStr|URL))$"
 class = "flat"
 slug = "string"
