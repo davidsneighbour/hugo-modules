@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-debug",
   "description": "GoHugo's missing debugging partials.",
-  "version": "1.2023.23",
+  "version": "1.2023.24",
   "license": "MIT",
   "private": true,
   "repository": {
