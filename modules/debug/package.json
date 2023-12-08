@@ -1,23 +1,23 @@
 {
-  "name": "@davidsneighbour/hugo-debug",
-  "description": "GoHugo's missing debugging partials.",
-  "version": "1.2023.19",
-  "license": "MIT",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
-  },
   "author": "Kaushal Modi (https://github.com/kaushalmodi)",
-  "maintainer": {
-    "name": "Patrick Kollitsch",
-    "email": "patrick@davids-neighbour.com",
-    "web": "https://davids-neighbour.com"
-  },
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-modules/issues"
   },
-  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/debug",
+  "comments": {
+    "dependencies": {},
+    "devDependencies": {
+      "@davidsneighbour/bootstrap-config": "project",
+      "@davidsneighbour/webpack-config": "project",
+      "@types/node": "project",
+      "@types/webpack": "project",
+      "node-sass": "project",
+      "sass-loader": "project",
+      "ts-node": "project",
+      "typescript": "project"
+    }
+  },
+  "dependencies": {},
+  "description": "GoHugo's missing debugging partials.",
   "devDependencies": {
     "@davidsneighbour/bootstrap-config": "^5.5.20",
     "@davidsneighbour/webpack-config": "^5.5.20",
@@ -28,6 +28,19 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.3.3"
   },
+  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/debug",
+  "license": "MIT",
+  "maintainer": {
+    "email": "patrick@davids-neighbour.com",
+    "name": "Patrick Kollitsch",
+    "web": "https://davids-neighbour.com"
+  },
+  "name": "@davidsneighbour/hugo-debug",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
+  },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.ts",
     "clean": "run-p clean:*",
@@ -36,5 +49,6 @@
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
-  }
+  },
+  "version": "1.2023.19"
 }
