@@ -6,6 +6,8 @@ This module for GoHugo adds debugging partials for many use cases.
 
 Read more about it [in the documentation](https://kollitsch.dev/components/hugo-debug).
 
+![](.github/sample.jpg)
+
 ## Install version based
 
 The latest releases of this module will always be based on and work with the latest release of GoHugo. To install the latest release of this module, run:
