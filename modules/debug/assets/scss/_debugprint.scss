@@ -60,29 +60,29 @@ table.debugprint {
     @extend .text-break;
   }
 
-  .type {
-    font-style: italic;
-  }
-
   td:has(+ table) {
     @extend .fst-italic;
   }
 
-  .string {
+  .type {
+    font-style: italic;
 
-    &::before,
-    &::after {
-      color: #6c757d;
-    }
+    &-string {
 
-    &::before {
-      content: '<';
-    }
+      &::before,
+      &::after {
+        color: #6c757d;
+      }
 
-    &::after {
-      content: '>';
+      &::before {
+        content: '<';
+      }
+
+      &::after {
+        content: '>';
+      }
+
     }
 
   }
-
 }

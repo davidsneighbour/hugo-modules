@@ -2,7 +2,7 @@
 {{- $short := substr $value 0 300 -}}
 {{- $length := len $value -}}
 {{- if (eq $value $short) -}}
-  <span class="string">{{- printf "%s" .value | htmlUnescape -}}</span>
+  <span class="type-string">{{- printf "%s" .value | htmlUnescape -}}</span>
 {{- else -}}
   <strong>Abridged: ({{ $length }} chars): </strong> {{- $short -}} &hellip;<br />
   {{- $id := partial "func/getRandomString.html" . -}}
