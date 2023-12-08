@@ -68,4 +68,23 @@ table.debugprint {
     @extend .fst-italic;
   }
 
+
+
+  .string {
+
+    &::before,
+    &::after {
+      color: #6c757d;
+    }
+
+    &::before {
+      content: '<';
+    }
+
+    &::after {
+      content: '>';
+    }
+
+  }
+
 }
