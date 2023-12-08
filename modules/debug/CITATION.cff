@@ -5,6 +5,6 @@ authors:
     given-names: "Patrick"
     orcid: "https://orcid.org/0000-0001-6250-2135"
 title: "Hugo Modules / Debug"
-version: 1.2023.22
+version: 1.2023.23
 date-released: 2023-12-08
 url: "https://github.com/davidsneighbour/hugo-modules"
