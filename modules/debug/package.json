@@ -20,13 +20,13 @@
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/debug",
   "dependencies": {},
   "devDependencies": {
-    "@davidsneighbour/bootstrap-config": "^5.5.20",
-    "@davidsneighbour/webpack-config": "^5.5.20",
+    "@davidsneighbour/bootstrap-config": "^5.5.22",
+    "@davidsneighbour/webpack-config": "^5.5.22",
     "@types/node": "^20.10.4",
     "@types/webpack": "^5.28.5",
     "node-sass": "^9.0.0",
     "sass-loader": "^13.3.2",
-    "ts-node": "^10.9.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
   "scripts": {

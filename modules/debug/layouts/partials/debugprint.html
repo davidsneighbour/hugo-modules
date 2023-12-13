@@ -39,11 +39,13 @@ else type is checked against type
       {{- end -}}
     {{ end }}
     {{ end }}
+    <div class="mx-auto">
     {{- if $print -}}
       {{- $formatterPath := printf "debugging-formatters/%s.html" .slug -}}
       {{- partial $formatterPath (dict "value" $value "config" $item) -}}
       {{- $printed = true -}}
     {{- end -}}
+    </div>
   {{- end -}}
 {{- end -}}
 {{ if not $printed }}
