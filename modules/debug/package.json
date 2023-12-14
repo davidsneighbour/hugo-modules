@@ -51,5 +51,5 @@
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
   },
-  "version": "1.2023.28"
+  "version": "1.2023.29"
 }
