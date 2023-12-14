@@ -1,6 +1,6 @@
 [error.no-formatter-configured]
 description = ""
-other = "This type has no debugging formatter in dnb-hugo configured."
+other = "This type has no debugging formatter in dnb-debug configured."
 
 [issue.body]
 description = "template for issue report of unconfigured types"
