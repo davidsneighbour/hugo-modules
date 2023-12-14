@@ -18,7 +18,6 @@ if [ -d "static" ]; then
 fi
 
 # Update Hugo modules and add changes to repository
-hugo mod npm pack
 git add package*
 hugo mod get -u ./...
 hugo mod tidy
