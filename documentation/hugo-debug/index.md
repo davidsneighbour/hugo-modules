@@ -5,7 +5,7 @@ description: Debug everything in Hugo!
 summary: This module for GoHugo adds debugging partials for many use cases.
 date: 2022-07-27T21:17:03+07:00
 publishDate: 2022-07-27T21:17:03+07:00
-lastmod: 2023-11-18T15:18:03+07:00
+lastmod: 2023-12-14T22:32:04+07:00
 resources:
 - src: header-card.png
 categories:
@@ -45,12 +45,12 @@ A quick sample for its usage is the following debugging of a pages data:
     <div class="container">
       <div class="row">
         <div class="col-12">
-          {{- partial "debugprint.html" . -}}
-          {{- partial "debugprint.html" .Params -}}
-          {{- partial "debugprint.html" .Site -}}
-          {{- partial "debugprint.html" .Site.Menus -}}
-          {{- partial "debugprint.html" .Resources -}}
-          {{- partial "debugprint.html" .File -}}
+          {{- partial "debug-print.html" . -}}
+          {{- partial "debug-print.html" .Params -}}
+          {{- partial "debug-print.html" .Site -}}
+          {{- partial "debug-print.html" .Site.Menus -}}
+          {{- partial "debug-print.html" .Resources -}}
+          {{- partial "debug-print.html" .File -}}
         </div>
       </div>
     </div>
@@ -63,17 +63,17 @@ A quick sample for its usage is the following debugging of a pages data:
 To print a variable in one of your layouts:
 
 ```go-html-template
-{{ partial "debugprint" . }}
-{{ partial "debugprint" .Params }}
-{{ partial "debugprint" site }}
-{{ partial "debugprint" site.Menus }}
-{{ partial "debugprint" .GitInfo }}
-{{ partial "debugprint" .Resources }}
-{{ partial "debugprint" .File }}
+{{ partial "debug-print" . }}
+{{ partial "debug-print" .Params }}
+{{ partial "debug-print" site }}
+{{ partial "debug-print" site.Menus }}
+{{ partial "debug-print" .GitInfo }}
+{{ partial "debug-print" .Resources }}
+{{ partial "debug-print" .File }}
 
 {{/* in shortcodes */}}
-{{ partial "debugprint" . }} <!-- this will debug the internals of the shortcode -->
-{{ partial "debugprint" .Position }} <!-- this will show where the shortcode was called -->
+{{ partial "debug-print" . }} <!-- this will debug the internals of the shortcode -->
+{{ partial "debug-print" .Position }} <!-- this will show where the shortcode was called -->
 ```
 
 Exchange the context `.` with whatever variable you want to debug. Sub-collections or sub-slices might require extra setup to be debugged, depending on the structure and the type of the values.
@@ -83,11 +83,11 @@ Exchange the context `.` with whatever variable you want to debug. Sub-collectio
 To debug page data from within a Markdown file:
 
 ```markdown
-{{</* debugprint */>}} <!-- the same as -->
-{{</* debugprint "page" */>}} <!-- debugs page variable -->
-{{</* debugprint "params" */>}} <!-- debugs page params -->
-{{</* debugprint "site" */>}} <!-- debug sites params -->
-{{</* debugprint param="bla" */>}} <!-- debugs .Params.bla -->
+{{</* debug-print */>}} <!-- the same as -->
+{{</* debug-print "page" */>}} <!-- debugs page variable -->
+{{</* debug-print "params" */>}} <!-- debugs page params -->
+{{</* debug-print "site" */>}} <!-- debug sites params -->
+{{</* debug-print param="bla" */>}} <!-- debugs .Params.bla -->
 ```
 
 Debugging from within Markdown requires explicit configuration in the shortcode template. [Open a new issue](https://github.com/davidsneighbour/hugo-blockify/issues) if you require a specific debugging subject.
@@ -97,7 +97,7 @@ Debugging from within Markdown requires explicit configuration in the shortcode 
 Some times we developers want to inform and warn our users, or even throw an error. The debug partial is your connection to the CLI with some more options than GoHugo's internal error functionality.
 
 ```go-html-template
-{{- partial "debug.html"
+{{- partial "debug-cli.html"
       (dict
         "message" "going into PostProcessing"
         "context" .
@@ -154,7 +154,6 @@ The debug component is configurable via the `params` section in your configurati
 namespace = "dnb"
 debuglevel = 8
 disablenote = false
-
 ```
 
 - **namespace:** (string) namespace slug for your plugin/theme. keep it short. three characters are enough. There is no restriction on this, but think about the look of the loglines with longer namespaces.
@@ -163,7 +162,7 @@ disablenote = false
 
 ## Styling
 
-A quick Bootstrap 5 based SASS style is mounted into `assets/scss/_debugprint.scss` to be used via `@import "debugprint";`. Depending on your own styles you can add your own styles based on the following structure:
+A quick Bootstrap 5 based SASS style is mounted into `assets/scss/_debugprint.scss` to be used via `@import "debug-print";`. Depending on your own styles you can add your own styles based on the following structure:
 
 ```scss
 .debugprint table,
@@ -194,7 +193,6 @@ weight = 100
 slug = "menuentry"
 label = "Menu Entry"
 description = ""
-
 ```
 
 - **internal** (required, if no `catch` or `type` is used) - Set to `map` or `slice` to give a general indicator of the variable type.
