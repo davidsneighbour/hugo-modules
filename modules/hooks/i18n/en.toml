@@ -1,0 +1,3 @@
+[page-n]
+other = " (Page %d)"
+description = "Page %d of %d"

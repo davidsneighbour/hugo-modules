@@ -3,6 +3,10 @@ extended = true
 min = "0.56.0"
 
 [[mounts]]
+source = "i18n"
+target = "i18n"
+
+[[mounts]]
 source = "layouts"
 target = "layouts"
 
