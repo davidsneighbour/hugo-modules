@@ -14,3 +14,6 @@ that this type is not already requested in the issue tracker.
 
 Hugo Version: %s
 '''
+
+[deprecation.debug]
+other = "The partial `debug.html` is deprecated. Please use `debug-cli.html` instead for CLI debugging and `debug-print.html` for printing in the generated outputs."

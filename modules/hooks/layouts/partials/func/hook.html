@@ -10,7 +10,7 @@
 
 {{- /* a quick note */ -}}
 {{- partial "debug.html" (dict
-    "message" (printf "dnb-hugo-hooks - see %s for details - %s" (printf "%s" $context.hook) site.Params.dnb.hooks.hooklink)
+    "message" (printf "dnb-hooks - see %s for details" site.Params.dnb.hooks.hooklink)
     "context" .
     "severity" "info"
     "level" 9
