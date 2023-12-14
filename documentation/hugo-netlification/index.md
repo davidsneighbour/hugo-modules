@@ -5,7 +5,7 @@ description: ""
 summary: ""
 date: 2022-07-28T20:48:52+07:00
 publishDate: 2022-07-28T20:48:52+07:00
-lastmod: 2023-11-06T21:28:44+07:00
+lastmod: 2023-12-14T22:50:16+07:00
 resources:
 - src: header-card.png
 categories:
@@ -25,8 +25,6 @@ config:
 ---
 
 This is a Hugo theme component with helpers to host your [GoHugo](https://gohugo.io/) generated static website on [Netlify](https://www.netlify.com/). If you don't use Netlify, you DO NOT need this module.
-
-{{< component-box >}}
 
 - [Features](#features)
 - [Installation and setup](#installation-and-setup)

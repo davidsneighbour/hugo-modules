@@ -4,15 +4,15 @@ linktitle: hugo-feeds
 summary: ""
 date: 2022-07-27T18:34:57+07:00
 publishDate: 2022-07-27T18:34:57+07:00
-lastmod: 2023-08-22T20:13:36+07:00
+lastmod: 2023-12-14T22:49:55+07:00
 resources:
-  - src: header-card.png
+- src: header-card.png
 categories:
-  - components
+- components
 tags:
-  - gohugo
-  - component
-  - design
+- gohugo
+- component
+- design
 component:
   slug: hugo-feeds
   host: github.com
@@ -26,8 +26,6 @@ config:
 This is a GoHugo theme component that implements various configurable feed formats. Currently implemented formats are RSS, Atom and JSONfeed.
 
 Find out more about the [RSS](https://cyber.harvard.edu/rss/rss.html), [Atom](https://datatracker.ietf.org/doc/html/rfc4287) and [JSON feed](https://www.jsonfeed.org/version/1.1/) formats
-
-{{< component-box >}}
 
 ## ToDo
 

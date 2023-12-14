@@ -4,15 +4,15 @@ linkTitle: hugo-internals
 description: This module attempts to replace internal templates used by Hugo with custom ones and other modules and plugins that add identical features more sophisticated or up-to-date. Internal templates of Hugo are highly opiniated, often out of time and not suitable for use in the production environment of a website. The layouts in this repo and it's modules replace them with our own better setup.
 date: 2022-07-31T20:50:06+07:00
 publishDate: 2022-07-31T20:50:06+07:00
-lastmod: 2023-08-22T20:13:59+07:00
+lastmod: 2023-12-14T22:50:12+07:00
 resources:
-  - src: header-card.png
+- src: header-card.png
 categories:
-  - components
+- components
 tags:
-  - gohugo
-  - component
-  - seo
+- gohugo
+- component
+- seo
 component:
   slug: hugo-internals
   host: github.com
@@ -24,8 +24,6 @@ config:
 ---
 
 This module attempts to replace internal templates used by Hugo with custom ones and other modules and plugins that add identical features more sophisticated or up-to-date. Internal templates of Hugo are highly opiniated, often out of time and not suitable for use in the production environment of a website. The layouts in this repo and it's modules replace them with our own better setup.
-
-{{< component-box >}}
 
 # Replacements
 

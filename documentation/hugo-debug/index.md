@@ -5,7 +5,7 @@ description: Debug everything in Hugo!
 summary: This module for GoHugo adds debugging partials for many use cases.
 date: 2022-07-27T21:17:03+07:00
 publishDate: 2022-07-27T21:17:03+07:00
-lastmod: 2023-12-14T22:32:04+07:00
+lastmod: 2023-12-14T22:56:30+07:00
 resources:
 - src: header-card.png
 categories:
@@ -26,12 +26,10 @@ config:
 
 This module for GoHugo adds debugging partials for everything you need to debug.
 
-{{< component-box >}}
-
 ## Notes
 
-- This is a GoHugo module to use while you are developing your theme or website. It slows down the build process. Knowledge about variables in our template and NOT speed is our main priority. It is advised to add the module only the development configuration or check if the layout is processed by the development server to minimise its impact.
-- This module is based on the work in [kaushalmodi/hugo-debugprint](https://github.com/kaushalmodi/hugo-debugprint).
+- This is a GoHugo module to use while you are developing your theme or website. It slows down the build process. Knowledge about variables in our template is our main priority, NOT speed. It is advised to add the module only the development configuration or check if the layout is processed by the development server to minimise its impact.
+- This module is based on the work of [kaushalmodi/hugo-debugprint](https://github.com/kaushalmodi/hugo-debugprint).
 
 ## Usage
 

@@ -5,15 +5,15 @@ description: ""
 summary: ""
 date: 2022-07-22T19:10:17+07:00
 publishDate: 2022-07-22T19:10:17+07:00
-lastmod: 2023-08-22T20:13:55+07:00
+lastmod: 2023-12-14T22:50:04+07:00
 resources:
-  - src: header-card.png
+- src: header-card.png
 categories:
-  - components
+- components
 tags:
-  - gohugo
-  - component
-  - design
+- gohugo
+- component
+- design
 component:
   slug: hugo-icons
   host: github.com
@@ -25,8 +25,6 @@ config:
 ---
 
 This is a Hugo theme component that adds several icon sets to your Hugo website.
-
-{{< component-box >}}
 
 ## Available Icon Fonts
 

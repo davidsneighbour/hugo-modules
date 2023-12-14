@@ -5,15 +5,15 @@ description: ""
 summary: ""
 date: 2022-07-28T20:51:08+07:00
 publishDate: 2022-07-28T20:51:08+07:00
-lastmod: 2023-08-22T20:14:27+07:00
+lastmod: 2023-12-14T22:50:22+07:00
 resources:
-  - src: header-card.png
+- src: header-card.png
 categories:
-  - components
+- components
 tags:
-  - gohugo
-  - component
-  - seo
+- gohugo
+- component
+- seo
 component:
   slug: hugo-security
   host: github.com
@@ -29,8 +29,6 @@ This module adds a security.txt file to your Hugo website with information about
 Please note, that `security.txt` is still in the early stages of development and changes might occur. This module will implement all changes and notify you in the hugo.log about (possibly future) missing configuration steps, if they occur.
 
 This module DOES NOT make your website more secure. Just in case you were assuming that 😸
-
-{{< component-box >}}
 
 ### Usage
 
