@@ -21,3 +21,11 @@ To install version for older Hugo versions, run the command with the following v
 | Hugo Version | Installation Path |
 | --- | --- |
 | 0.120.0 | `hugo mod get -u github.com/davidsneighbour/hugo-modules/modules/debug@v1.2023.19` |
+
+## Breaking Changes
+
+- **v1.2023.26:**
+  - The partial `debugprint.html` has been renamed to `debug-print.html`. Please update your templates.
+  - The partial `debug.html` has been renamed to `debug-cli.html`. Please update your templates.
+  - Both deprecated partials will be removed after 2024-03-14.
+  - The functionality of the partials remains the same after renaming.
