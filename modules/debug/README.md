@@ -18,9 +18,9 @@ hugo mod get -u github.com/davidsneighbour/hugo-modules/modules/debug
 
 To install version for older Hugo versions, run the command with the following version tags:
 
-| Hugo Version | Installation Path |
-| --- | --- |
-| 0.120.0 | `hugo mod get -u github.com/davidsneighbour/hugo-modules/modules/debug@v1.2023.19` |
+| Hugo Version | Debug Version | Installation Path |
+| --- | --- | --- |
+| 0.120.0 | v1.2023.19 | `hugo mod get -u github.com/davidsneighbour/hugo-modules/modules/debug@v1.2023.19` |
 
 ## Breaking Changes
 
