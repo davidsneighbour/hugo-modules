@@ -9,7 +9,7 @@ datetime = ""
 datetime_extended = ""
 
 [dnb.debug.config.plugins.js]
-imports = ["import './debug';"] # es6, in flux
+imports = ["import 'debug';"] # es6, in flux
 
 [dnb.debug.config.plugins.scss]
 imports = ["scss/_debugprint.scss"]
