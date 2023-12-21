@@ -19,9 +19,9 @@
   "dependencies": {},
   "description": "GoHugo's missing debugging partials.",
   "devDependencies": {
-    "@davidsneighbour/bootstrap-config": "^5.5.22",
-    "@davidsneighbour/webpack-config": "^5.5.22",
-    "@types/node": "^20.10.4",
+    "@davidsneighbour/bootstrap-config": "^5.5.23",
+    "@davidsneighbour/webpack-config": "^5.5.23",
+    "@types/node": "^20.10.5",
     "@types/webpack": "^5.28.5",
     "node-sass": "^9.0.0",
     "sass-loader": "^13.3.2",
