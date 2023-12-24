@@ -11,6 +11,24 @@ source = "layouts"
 target = "layouts"
 
 [[imports]]
+disable = false
+ignoreConfig = false
+ignoreImports = false
+path = 'github.com/davidsneighbour/hugo-modules/modules/hooks'
+
+[[imports]]
+disable = false
+ignoreConfig = false
+ignoreImports = false
+path = 'github.com/davidsneighbour/hugo-modules/modules/debug'
+
+[[imports]]
+disable = false
+ignoreConfig = false
+ignoreImports = false
+path = 'github.com/davidsneighbour/hugo-modules/modules/functions'
+
+[[imports]]
 path = "github.com/twbs/icons"
 disable = false
 ignoreConfig = true
