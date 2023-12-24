@@ -1,0 +1,26 @@
+{
+  "name": "@davidsneighbour/hugo-devtools",
+  "version": "1.2023.5",
+  "license": "MIT",
+  "description": "Loading all of David's Neighbour's development tools for GoHugo at once",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/devtools",
+  "devDependencies": {
+    "@davidsneighbour/configurations": "^5.5.23"
+  },
+  "scripts": {
+    "clean": "run-p clean:*",
+    "clean:npm": "rimraf node_modules package-lock.json",
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/devtools/v\" --releaseCommitMessageFormat \"chore(release): modules/devtools/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/devtools/v\" --releaseCommitMessageFormat \"chore(release): modules/devtools/v{{currentTag}}\" && ./bin/release/postrelease",
+    "update": "npm-check-updates -u && npm install && git add package*"
+  },
+  "private": true
+}
