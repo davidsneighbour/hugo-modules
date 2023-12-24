@@ -1,0 +1,12 @@
+[hugoVersion]
+extended = false
+min = "0.120.1"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/debug"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/functions"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/hooks"
