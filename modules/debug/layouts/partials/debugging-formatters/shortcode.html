@@ -14,40 +14,44 @@
     } (type:*hugolib.ShortcodeWithPage)
   */}}
 <table class="debugprint">
-  <tr>
-      <th class="align-top key">Shortcode Variable</th>
-      <th class="align-top value">Value</th>
-  </tr>
-  <tr>
-      <td class="align-top key">Name</td>
-      <td class="align-top value">{{ .value.Name }}</td>
-  </tr>
-  <tr>
-      <td class="align-top key">Ordinal</td>
-      <td class="align-top value">{{ .value.Ordinal }}</td>
-  </tr>
-  <tr>
-      <td class="align-top key">Parent</td>
-      <td class="align-top value">{{ .value.Parent }}</td>
-  </tr>
-  <tr>
-      <td class="align-top key">Page</td>
-      <td class="align-top value">{{ partial "debugprint" .value.Page }}</td>
-  </tr>
-  <tr>
-      <td class="align-top key">Position</td>
-      <td class="align-top value">{{ partial "debugprint" .value.Position }}</td>
-  </tr>
-  <tr>
-      <td class="align-top key">IsNamedParams</td>
-      <td class="align-top value">{{ partial "debugprint" .value.IsNamedParams }}</td>
-  </tr>
-  <tr>
-      <td class="align-top key">Params</td>
-      <td class="align-top value">{{ partial "debugprint" .value.Params }}</td>
-  </tr>
-  <tr>
-      <td class="align-top key">Inner</td>
-      <td class="align-top value">{{ partial "debugprint" .value.Inner }}</td>
-  </tr>
+  <thead>
+    <tr>
+      <th scope="col" class="align-top key">Shortcode Variable</th>
+      <th scope="col" class="align-top value">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td class="align-top key">Name</td>
+        <td class="align-top value">{{ .value.Name }}</td>
+    </tr>
+    <tr>
+        <td class="align-top key">Ordinal</td>
+        <td class="align-top value">{{ .value.Ordinal }}</td>
+    </tr>
+    <tr>
+        <td class="align-top key">Parent</td>
+        <td class="align-top value">{{ .value.Parent }}</td>
+    </tr>
+    <tr>
+        <td class="align-top key">Page</td>
+        <td class="align-top value">{{ partial "debugprint" .value.Page }}</td>
+    </tr>
+    <tr>
+        <td class="align-top key">Position</td>
+        <td class="align-top value">{{ partial "debugprint" .value.Position }}</td>
+    </tr>
+    <tr>
+        <td class="align-top key">IsNamedParams</td>
+        <td class="align-top value">{{ partial "debugprint" .value.IsNamedParams }}</td>
+    </tr>
+    <tr>
+        <td class="align-top key">Params</td>
+        <td class="align-top value">{{ partial "debugprint" .value.Params }}</td>
+    </tr>
+    <tr>
+        <td class="align-top key">Inner</td>
+        <td class="align-top value">{{ partial "debugprint" .value.Inner }}</td>
+    </tr>
+  </tbody>
 </table>

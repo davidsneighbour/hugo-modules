@@ -1,9 +1,9 @@
 {{- $structure := .structure | default slice -}}
 <table class="debugprint">
   <tr>
-      <th class="align-top key"><span class="font-weight-normal text-uppercase">Dependency</span></th>
-      <th class="align-top type">Type</th>
-      <th class="align-top value">Value</th>
+      <th scope="col" class="align-top key"><span class="font-weight-normal text-uppercase">Dependency</span></th>
+      <th scope="col" class="align-top type">Type</th>
+      <th scope="col" class="align-top value">Value</th>
   </tr>
   {{- range $structure -}}
     <tr>

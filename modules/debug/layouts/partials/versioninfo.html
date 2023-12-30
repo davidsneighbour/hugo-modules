@@ -28,11 +28,11 @@
           <table class="debugprint">
             <thead>
               <tr>
-                <th class="key">
+                <th scope="col" class="key">
                   <span title="Hugo version information">hugo</span>
                 </th>
-                <th class="type">Type</th>
-                <th class="value">Value</th>
+                <th scope="col" class="type">Type</th>
+                <th scope="col" class="value">Value</th>
               </tr>
             </thead>
             <tbody>
@@ -43,7 +43,7 @@
                     (partial "debugprint.html" $item) -}}
                 <tr>{{- range $index, $item := $slices -}}
                   {{- if (eq $index 0) -}}
-                    <th>{{- . -}}</th>
+                    <th scope="row">{{- . -}}</th>
                   {{- else -}}
                     <td>{{- . -}}</td>
                   {{- end -}}

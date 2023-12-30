@@ -11,22 +11,7 @@ source = "layouts"
 target = "layouts"
 
 [[imports]]
-disable = false
-ignoreConfig = false
-ignoreImports = false
-path = 'github.com/davidsneighbour/hugo-modules/modules/hooks'
-
-[[imports]]
-disable = false
-ignoreConfig = false
-ignoreImports = false
-path = 'github.com/davidsneighbour/hugo-modules/modules/debug'
-
-[[imports]]
-disable = false
-ignoreConfig = false
-ignoreImports = false
-path = 'github.com/davidsneighbour/hugo-modules/modules/functions'
+path = 'github.com/davidsneighbour/hugo-modules/modules/devtools'
 
 [[imports]]
 path = "github.com/twbs/icons"
@@ -61,3 +46,6 @@ ignoreImports = true
 [[imports.mounts]]
 source = "src/_icons"
 target = "assets/icons/tabler-icons"
+disable = false
+ignoreConfig = false
+ignoreImports = false

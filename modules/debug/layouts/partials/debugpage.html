@@ -108,9 +108,9 @@
       <table class="debugprint">
         <thead>
           <tr>
-            <th class="key">Key</th>
-            <th class="type">Type</th>
-            <th class="value">Value</th>
+            <th scope="col" class="key">Key</th>
+            <th scope="col" class="type">Type</th>
+            <th scope="col" class="value">Value</th>
           </tr>
         </thead>
         <tbody>
@@ -120,7 +120,7 @@
                 (partial "debugtype.html" $item)
                 (partial "debugprint.html" $item) -}}
             <tr>
-                <th>{{- collections.Index $slices 0 -}}</th>
+                <th scope="row">{{- collections.Index $slices 0 -}}</th>
                 <td>{{- collections.Index $slices 1 -}}</td>
                 <td>{{- collections.Index $slices 2 -}}</td>
             </tr>

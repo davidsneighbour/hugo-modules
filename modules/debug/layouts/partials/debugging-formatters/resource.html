@@ -3,8 +3,8 @@
 <!-- There's .AbsSourceFilename too, but it's not very useful. -->
 <table class="debugprint">
   <tr>
-      <th class="align-top key">Resource Variable</th>
-      <th class="align-top value">Value</th>
+      <th scope="col" class="align-top key">Resource Variable</th>
+      <th scope="col" class="align-top value">Value</th>
   </tr>
   {{ range $idx, $elem := $ResourceVarNames }}
     {{ printf `<tr> <td class="align-top key">%s</td> <td class="align-top value">` $elem | safeHTML }}

@@ -1,7 +1,7 @@
 <tr>
   {{- range $index, $item := . -}}
     {{- if (eq $index 0) -}}
-      <th>{{- . -}}</th>
+      <th scope="row">{{- . -}}</th>
     {{- else -}}
       <td>{{- . -}}</td>
     {{- end -}}
