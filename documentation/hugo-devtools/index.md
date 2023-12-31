@@ -5,7 +5,7 @@ description: This is a GoHugo theme component that loads all of DNB's GoHugo dev
 summary: This is a GoHugo theme component loading all of David's Neighbour's GoHugo development modules at once. It will currently load hugo-debug, hugo-functions, and hugo-hooks.
 date: 2023-12-24T19:33:06+07:00
 publishDate: 2023-12-24T19:33:06+07:00
-lastmod: 2023-12-30T14:40:42+07:00
+lastmod: 2023-12-31T16:20:24+07:00
 resources:
 - src: header-card.png
 categories:
@@ -14,12 +14,6 @@ tags:
 - gohugo
 - component
 - development
-component:
-  slug: hugo-devtools
-  host: github.com
-  user: davidsneighbour
-  status: release
-  list: true
 config:
   band: gohugo
 ---

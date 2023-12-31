@@ -5,7 +5,7 @@ description: ""
 summary: ""
 date: 2022-07-27T21:23:50+07:00
 publishDate: 2022-07-27T21:23:50+07:00
-lastmod: 2023-11-23T22:16:08+07:00
+lastmod: 2023-12-31T16:20:40+07:00
 resources:
 - src: header-card.png
 categories:
@@ -14,12 +14,6 @@ tags:
 - gohugo
 - component
 - seo
-component:
-  slug: hugo-hooks
-  host: github.com
-  user: davidsneighbour
-  status: release
-  list: true
 config:
   band: gohugo
 ---

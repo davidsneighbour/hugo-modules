@@ -4,7 +4,7 @@ linktitle: hugo-head
 summary: ""
 date: 2023-06-30T17:31:25+07:00
 publishDate: 2022-07-27T21:25:17+07:00
-lastmod: 2023-12-14T22:49:59+07:00
+lastmod: 2023-12-31T16:20:37+07:00
 resources:
 - src: header-card.png
 categories:
@@ -13,12 +13,6 @@ tags:
 - gohugo
 - component
 - seo
-component:
-  slug: hugo-head
-  host: github.com
-  user: davidsneighbour
-  status: release
-  list: true
 config:
   band: gohugo
 ---

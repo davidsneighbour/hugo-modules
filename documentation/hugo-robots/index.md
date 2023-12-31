@@ -4,7 +4,7 @@ linktitle: hugo-robots
 description: This component for GoHugo adds a customizable robots.txt to your website.
 date: 2023-06-29T19:21:43+07:00
 publishDate: 2022-07-19T17:40:35+07:00
-lastmod: 2023-12-14T22:50:26+07:00
+lastmod: 2023-12-31T16:21:07+07:00
 resources:
 - src: header-card.png
 categories:
@@ -14,12 +14,6 @@ tags:
 - component
 - seo
 - robots.txt
-component:
-  slug: hugo-robots
-  host: github.com
-  user: davidsneighbour
-  status: release
-  list: true
 config:
   band: gohugo
 ---

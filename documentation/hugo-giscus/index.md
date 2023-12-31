@@ -5,21 +5,15 @@ description: ""
 summary: ""
 date: 2022-08-16T20:28:30+07:00
 publishDate: 2022-08-16T20:28:30+07:00
-lastmod: 2023-08-22T20:13:43+07:00
+lastmod: 2023-12-31T16:20:33+07:00
 resources:
-  - src: header-card.png
+- src: header-card.png
 categories:
-  - components
+- components
 tags:
-  - gohugo
-  - component
-  - content
-component:
-  slug: hugo-giscus
-  status: release
-  list: true
-  host: github.com
-  user: davidsneighbour
+- gohugo
+- component
+- content
 config:
   band: gohugo
 ---

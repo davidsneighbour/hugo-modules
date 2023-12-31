@@ -5,7 +5,7 @@ description: ""
 summary: ""
 date: 2022-07-28T20:51:08+07:00
 publishDate: 2022-07-28T20:51:08+07:00
-lastmod: 2023-12-14T22:50:22+07:00
+lastmod: 2023-12-31T16:21:10+07:00
 resources:
 - src: header-card.png
 categories:
@@ -14,12 +14,6 @@ tags:
 - gohugo
 - component
 - seo
-component:
-  slug: hugo-security
-  host: github.com
-  user: davidsneighbour
-  status: release
-  list: true
 config:
   band: gohugo
 ---

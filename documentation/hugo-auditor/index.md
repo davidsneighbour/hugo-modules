@@ -5,7 +5,7 @@ description: Improve your GoHugo website's development with this auditing compon
 summary: Improve your GoHugo website's development with this auditing component. These auditing tools ensure you to find hidden performance boosts.
 date: 2022-11-15T15:04:51+07:00
 publishDate: 2022-11-15T15:04:51+07:00
-lastmod: 2023-12-14T22:49:51+07:00
+lastmod: 2023-12-31T16:19:54+07:00
 resources:
 - src: header-card.png
 categories:
@@ -14,12 +14,6 @@ tags:
 - gohugo
 - component
 - development
-component:
-  slug: hugo-auditor
-  host: github.com
-  user: davidsneighbour
-  status: release
-  list: true
 config:
   band: gohugo
 ---

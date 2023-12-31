@@ -4,7 +4,7 @@ linktitle: hugo-feeds
 summary: ""
 date: 2022-07-27T18:34:57+07:00
 publishDate: 2022-07-27T18:34:57+07:00
-lastmod: 2023-12-14T22:49:55+07:00
+lastmod: 2023-12-31T16:20:28+07:00
 resources:
 - src: header-card.png
 categories:
@@ -13,12 +13,6 @@ tags:
 - gohugo
 - component
 - design
-component:
-  slug: hugo-feeds
-  host: github.com
-  user: davidsneighbour
-  status: release
-  list: true
 config:
   band: gohugo
 ---

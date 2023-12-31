@@ -1,6 +1,6 @@
 {{ $pos_arg_0 := .Get 0 }}
 {{ $param_arg := .Get "param" }}
-{{ $p := $.Page }}
+{{ $p := page }}
 {{ if $pos_arg_0 }}
     {{ if (eq "params" $pos_arg_0) }}
         <h3>.Page.Params ::</h3>

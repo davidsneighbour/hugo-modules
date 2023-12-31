@@ -4,7 +4,7 @@ linktitle: hugo-sitemap
 description: Elevate your website's sitemap with a versatile Hugo theme component. Customizable setup options per page. Discover more!
 date: 2023-06-29T21:44:47+07:00
 publishDate: 2022-07-19T17:40:35+07:00
-lastmod: 2023-12-14T22:50:30+07:00
+lastmod: 2023-12-31T16:21:14+07:00
 resources:
 - src: header-card.png
 categories:
@@ -13,12 +13,6 @@ tags:
 - gohugo
 - component
 - seo
-component:
-  slug: hugo-sitemap
-  host: github.com
-  user: davidsneighbour
-  status: release
-  list: true
 config:
   band: gohugo
 ---
