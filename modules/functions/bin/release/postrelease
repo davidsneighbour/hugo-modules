@@ -1,9 +1,10 @@
 #!/bin/bash
-# v2023.11.18.01
+# v2023.12.31.001
 
 # Get the current path
 CURPATH="$(pwd -P)"
 
+# shellcheck disable=SC1091
 source "${CURPATH}/bin/release/common"
 
 set -e
