@@ -4,7 +4,7 @@
 @todo add "translator": ""
 
 */ -}}
-<script type="application/ld+json">
+
 {
   "@context": "http://schema.org",
   "@type": "WebSite",
@@ -14,7 +14,7 @@
   "description": "{{ .Site.Params.description }}",
   "image": [ {{ range $i, $e := .Site.Params.images }}{{ if $i }}, {{ end }}"{{ $e }}"{{ end }} ],
   "url": "{{ .Site.BaseURL }}",
-  "author": "{{ $.Param "author.name" }}",
+  "author": "{{ index $.Params "author.name" }}",
   {{ with .Site.Params.issn }}"issn": "{{ . }}",{{ end }}
   "copyrightHolder": {
     "givenName": "{{ .Site.Params.siteowner.given_name }}",
@@ -30,7 +30,7 @@
   "copyrightNotice": "{{ .Site.Params.copyrightnotice }}",
   "copyrightYear": "{{ .Site.Params.copyrightyear }}",
   "creativeWorkStatus": "Published",
-  "creditText": "{{ $.Param "author.name" }} {{ $.Param "author.homepage" }}",
+  "creditText": "{{ index $.Params  "author.name" }} {{ index $.Params  "author.homepage" }}",
   "datePublished": "{{ .Site.Params.copyrightyear }}",
   "acquireLicensePage": "{{ .Site.Params.license }}",
   "license": "{{ .Site.Params.license }}",
@@ -49,4 +49,3 @@
     "@type": "Organization"
   }
 }
-</script>
