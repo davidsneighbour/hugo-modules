@@ -12,7 +12,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/publisher",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.5.23"
+    "@davidsneighbour/configurations": "^5.6.0"
   },
   "scripts": {
     "clean": "run-p clean:*",
