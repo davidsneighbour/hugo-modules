@@ -16,7 +16,7 @@ Path of checking
 {{- end -}}
 
 {{- with $articleimage -}}{{- else -}}
-  {{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
+  {{- $config := partials.IncludeCached "func/pictures/getConfiguration.html" . -}}
   {{- $default_image := $config.default_image | default "images/default.png" -}}
   {{- $articleimage = resources.Get $default_image -}}
 {{- end -}}

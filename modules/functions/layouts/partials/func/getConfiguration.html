@@ -11,7 +11,7 @@ Usage:
 
 ```gohtml
 {{- $key := slice "dnb" "modulename" -}}
-{{- with (partial "func/getConfiguration.html" $key $key -}}
+{{- with (partials.Include "func/getConfiguration.html" $key $key -}}
   {{ . }} -> content of (data|params).dnb.modulename
 {{- end -}}
 ```

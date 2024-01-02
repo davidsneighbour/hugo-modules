@@ -1,4 +1,4 @@
-{{- $description := partialCached "func/getDescription.html" page page -}}
+{{- $description := partials.IncludeCached "func/getDescription.html" page page -}}
 {{ if gt (len $description) 170 }}
   {{ $description = printf "%s%s" (substr $description 0 169) "…" }}
 {{ end }}

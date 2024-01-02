@@ -1,4 +1,4 @@
-{{- partial "func/hook.html" ( dict "hook" "head-styles-before" "context" . ) -}}
+{{- partials.Include "func/hook.html" ( dict "hook" "head-styles-before" "context" . ) -}}
 {{- $config := site.Params.dnb.head.styles -}}
 {{- if eq "postcss" ($config.method | default "postcss") -}}
   {{- $entrypoint := $config.entrypoint | default "scss/style.scss" -}}
@@ -19,4 +19,4 @@
 
   <link rel="stylesheet" media="all" integrity="{{- $styles.Data.Integrity -}}" href="{{- $styles.Permalink -}}">
 {{- end -}}
-{{- partial "func/hook.html" ( dict "hook" "head-styles-after" "context" . ) -}}
+{{- partials.Include "func/hook.html" ( dict "hook" "head-styles-after" "context" . ) -}}

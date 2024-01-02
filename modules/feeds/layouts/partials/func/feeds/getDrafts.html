@@ -13,7 +13,7 @@
   example:
 
   ```
-  {{- $value := partialCached "func/feeds/getDrafts.html" "json" .
+  {{- $value := partials.IncludeCached "func/feeds/getDrafts.html" "json" .
 -}}
 ``` The format can be one of the following strings: - rss - atom - json TODO
 sanitization of format variable */ -}}

@@ -12,7 +12,7 @@
 {{- $replacement := (printf "%s%s" "code" (substr (md5 .Inner) 0 7)) -}}
 {{- $data.SetInMap "options" "lineanchors" $replacement -}}
 
-{{- $slug := printf "c%s" (partial "func/getRandomString" (dict "limit" 8)) -}}
+{{- $slug := printf "c%s" (partials.Include "func/getRandomString" (dict "limit" 8)) -}}
 
 {{- $fm :=  false -}}
 {{- $type := "config" -}}
@@ -83,7 +83,7 @@
     data-clipboard-target="#{{- $slug -}}"
     data-bs-toggle="tooltip" data-bs-placement="top"
     data-bs-title="Copy code to clipboard">
-    {{- partialCached "bsicon.html" "clipboard" "clipboard" -}}
+    {{- partials.IncludeCached "bsicon.html" "clipboard" "clipboard" -}}
   </button>
 
   {{- if eq $type "single" }}

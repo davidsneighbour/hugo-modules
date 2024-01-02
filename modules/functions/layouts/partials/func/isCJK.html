@@ -2,9 +2,9 @@
 
 @since 1.0.1
 
-{{ $isCJK := partialCached "func/isCJK.html" (dict "content" "丹为" "against" "cjk") "丹为" }}
+{{ $isCJK := partials.IncludeCached "func/isCJK.html" (dict "content" "丹为" "against" "cjk") "丹为" }}
 {{ $isCJK }} <-- true
-{{ $isCJK := partialCached "func/isCJK.html" "blafasel" "blafasel" }}
+{{ $isCJK := partials.IncludeCached "func/isCJK.html" "blafasel" "blafasel" }}
 {{ $isCJK }} <-- false
 
 */ -}}

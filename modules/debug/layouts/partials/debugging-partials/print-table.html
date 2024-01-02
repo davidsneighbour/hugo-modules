@@ -11,9 +11,9 @@
       <td>{{ .type }}</td>
       <td>
         {{- with .value -}}
-          {{- partial "debugprint.html" . -}}
+          {{- partials.Include "debugprint.html" . -}}
         {{- else -}}
-          {{- partialCached "debugging-partials/nil.html" . -}}
+          {{- partials.IncludeCached "debugging-partials/nil.html" . -}}
         {{- end -}}
       </td>
     </tr>

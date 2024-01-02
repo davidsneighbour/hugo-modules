@@ -39,8 +39,8 @@
               {{- range $index, $item := $items -}}
                 {{- $slices := slice
                     (index $names $index)
-                    (partial "debugtype.html" $item)
-                    (partial "debugprint.html" $item) -}}
+                    (partials.Include "debugtype.html" $item)
+                    (partials.Include "debugprint.html" $item) -}}
                 <tr>{{- range $index, $item := $slices -}}
                   {{- if (eq $index 0) -}}
                     <th scope="row">{{- . -}}</th>

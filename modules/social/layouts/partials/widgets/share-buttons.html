@@ -5,7 +5,7 @@
 {{- /* This here is an ugly workaround for Hugo's missing sortByArray feature.
   Cache it so it does not take away too much time. */
 -}}
-{{- $setups = partialCached "func/sortNetworks.html" (dict "networks" $networks "setups" $setups) -}}
+{{- $setups = partials.IncludeCached "func/sortNetworks.html" (dict "networks" $networks "setups" $setups) -}}
 
 
 <div class="is--sharebuttons">
@@ -15,7 +15,7 @@
     {{ with $setup.icon }}
       {{- $icon = . -}}
     {{ end }}
-    {{- $title := (partialCached "func/getTitle.html" page page) | htmlEscape -}}
+    {{- $title := (partials.IncludeCached "func/getTitle.html" page page) | htmlEscape -}}
     {{- $description := $context.Summary | htmlEscape -}}
     {{- $permalink := $context.Permalink | htmlEscape -}}
     {{- with $setup.separator -}}
@@ -45,9 +45,9 @@
     >
       {{- with site.Params.dnb.social.sharebuttons.icons -}}
         {{- if eq . true -}}
-          {{- partialCached "bsicon.html" $icon $icon -}}
+          {{- partials.IncludeCached "bsicon.html" $icon $icon -}}
           <span aria-hidden="true" class="icon">
-            {{- partialCached "bsicon.html" $icon $icon -}}
+            {{- partials.IncludeCached "bsicon.html" $icon $icon -}}
           </span>
         {{- end -}}
       {{- end -}}

@@ -5,7 +5,7 @@ Retrieves the value of `.Inner` or false if nothing is retrieved. This function 
 Usage:
 
 ```gohtml
-{{- with (partial "func/getInner.html" .) -}}
+{{- with (partials.Include "func/getInner.html" .) -}}
   The dot is the retrieved .Inner value.
 {{- end -}}
 ```

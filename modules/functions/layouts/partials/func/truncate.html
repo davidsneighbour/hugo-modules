@@ -4,7 +4,7 @@
 @see https://discourse.gohugo.io/t/create-description-from-summary/36676
 
 {{ range seq 1 200 }}
-  {{ $truncated := partial "func/truncate.html" (dict "content" $.Summary "maxLength" .) }}
+  {{ $truncated := partials.Include "func/truncate.html" (dict "content" $.Summary "maxLength" .) }}
   <pre>{{ $truncated }} (max = {{ . }} actual = {{ strings.RuneCount $truncated }} )</pre>
 {{ end }}
 

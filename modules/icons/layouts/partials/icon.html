@@ -2,8 +2,8 @@
 
 @example
 
-{{- partial "icon.html" (dict "type" "bs" "icon" "cash") -}}
-{{- partialCached "icon.html" (dict "type" "bs" "icon" "cash") "cash" -}}
+{{- partials.Include "icon.html" (dict "type" "bs" "icon" "cash") -}}
+{{- partials.IncludeCached "icon.html" (dict "type" "bs" "icon" "cash") "cash" -}}
 {{< icon type="bs" icon="cash" >}}
 
 */ -}}
@@ -18,7 +18,7 @@ TODO:
 
 {{/* @todo remove deprecation note on March 24th 2024 */}}
 {{- with site.Data.dnb.icons.config -}}
-  {{- partial "debug.html" (dict
+  {{- partials.Include "debug.html" (dict
         "message" "[dnb-icons] data configuration is deprecated. Move your config to site.Params.dnb.icons"
         "context" .
         "severity" "warn"

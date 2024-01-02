@@ -1,7 +1,7 @@
 {{- $tomlCode := .Inner -}}
 {{- $path := .Get "path" | default "config" -}}
 {{- $formats := (slice "toml" "yaml" "json") -}}
-{{- $random := partialCached "func/getRandomString" (dict "limit" 8) -}}
+{{- $random := partials.IncludeCached "func/getRandomString" (dict "limit" 8) -}}
 
 <div class="shortcode shortcode-config">
   <ul class="nav nav-tabs" id="config-{{ $random }}" role="tablist">

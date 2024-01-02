@@ -3,7 +3,7 @@
 {{- $formAttributes := "" }}
 {{- range $name, $value := $formConfig.attributes -}}
   {{- if eq $value "%random%" -}}
-    {{- $value = partial "func/getRandomString.html" (dict "limit" 10) -}}
+    {{- $value = partials.Include "func/getRandomString.html" (dict "limit" 10) -}}
   {{- end -}}
   {{- $formAttributes = printf "%s %s=\"%s\"" $formAttributes $name $value -}}
 {{- end -}}
@@ -22,7 +22,7 @@
       {{ range $formConfig.fields }}
         <div class="col col-sm-6">
           {{ range . }}
-            {{ partial "dnb-forms-inlinetemplate-formfield" . }}
+            {{ partials.Include "dnb-forms-inlinetemplate-formfield" . }}
           {{ end }}
         </div>
       {{ end }}
@@ -34,7 +34,7 @@
     {{ range $formConfig.buttons -}}
       <div class="col-12">
         {{ range $formConfig.buttons }}
-          {{ partial "dnb-forms-inlinetemplate-button" . }}
+          {{ partials.Include "dnb-forms-inlinetemplate-button" . }}
         {{ end }}
       </div>
     {{ end }}
@@ -44,7 +44,7 @@
 
 {{ define "partials/dnb-forms-inlinetemplate-formfield" }}
 {{/*****************************************************************************
-   * a partial for every fieldtype we have
+   * a partials.Include for every fieldtype we have
    * - invisible: a field that is now visible, honeypot for antispam measures
    * - hidden: a field that is hidden, but not invisible
    * - special: a field whose content is defined in the config via `html`
@@ -63,7 +63,7 @@
 
   {{- if eq "invisible" $fieldType -}}
 
-    {{- $random := partial "func/getRandomString.html" (dict "limit" 10) -}}
+    {{- $random := partials.Include "func/getRandomString.html" (dict "limit" 10) -}}
     <label class="d-none invisible" for="{{- $random -}}">{{- $random -}}</label>
     <input type="text" name="{{- $random -}}" id="{{- $random -}}" class="d-none invisible">
 
@@ -104,7 +104,7 @@
 
 {{- define "partials/dnb-forms-inlinetemplate-button" -}}
 {{/*****************************************************************************
-   * a partial for buttons
+   * a partials.Include for buttons
    * - class: the class(es) of the button
    * - type: the type (typically submit) of the button
    * - label: the label of the button

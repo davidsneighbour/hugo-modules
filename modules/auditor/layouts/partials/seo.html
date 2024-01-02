@@ -9,22 +9,22 @@
   <div class="card-body">
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
-        {{ partial "seo/ser-preview" . }}
+        {{ partials.Include "seo/ser-preview" . }}
       </li>
       <li class="list-group-item">
-        {{ partial "seo/title-length" . }}
+        {{ partials.Include "seo/title-length" . }}
       </li>
       <li class="list-group-item">
-        {{ partial "seo/meta-description" . }}
+        {{ partials.Include "seo/meta-description" . }}
       </li>
       <li class="list-group-item">
-        {{ partial "seo/featured-image" . }}
+        {{ partials.Include "seo/featured-image" . }}
       </li>
       <li class="list-group-item">
-        {{ partial "seo/content-length" . }}
+        {{ partials.Include "seo/content-length" . }}
       </li>
       <li class="list-group-item">
-        {{ partial "seo/keyphrase-checks" . }}
+        {{ partials.Include "seo/keyphrase-checks" . }}
       </li>
     </ul>
   </div>

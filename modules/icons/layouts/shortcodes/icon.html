@@ -1,3 +1,3 @@
 {{- $type := .Get "type" | default "bs" -}}
 {{- $value := .Get "icon" -}}
-{{- partialCached (printf "%sicon.html" $type) $value $value -}}
+{{- partials.IncludeCached (printf "%sicon.html" $type) $value $value -}}

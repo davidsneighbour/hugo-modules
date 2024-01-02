@@ -13,7 +13,7 @@
 
   Sample:
 
-  `{{- $value := partialCached "func/feeds/getLimit.html" "json" .
+  `{{- $value := partials.IncludeCached "func/feeds/getLimit.html" "json" .
 -}}
 `
 The format can be one of the following strings: - rss - atom - json TODO

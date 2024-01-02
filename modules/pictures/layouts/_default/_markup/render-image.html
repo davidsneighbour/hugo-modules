@@ -3,29 +3,29 @@
 {{- $src := .Destination -}}
 {{- $isPageBundle := true -}}
 {{- $isStaticFile := false -}}
-{{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
+{{- $config := partials.IncludeCached "func/pictures/getConfiguration.html" . -}}
 {{- $default_format := $config.default_format | default "webp" -}}
 
 {{/* retrieve the article image */}}
-{{- $localimage := partial "func/pictures/getImageResource.html" $src $src -}}
+{{- $localimage := partials.Include "func/pictures/getImageResource.html" $src $src -}}
 {{- if eq false $localimage -}}
 
   {{- $imageOptions := dict
       "image" $src
       "title" $label -}}
-  {{- partial "images/markup-image-simple.html" $imageOptions -}}
+  {{- partials.Include "images/markup-image-simple.html" $imageOptions -}}
 
 {{- else -}}
 
   {{/* setup */}}
   {{- $link := false -}}
-  {{- $aspect_ratio := partialCached "func/pictures/getAspectRatio.html" . -}}
-  {{- $image_sizes := partialCached "func/pictures/getImageSizes.html" . -}}
-  {{- $break_points := partialCached "func/pictures/getBreakPoints.html" . -}}
+  {{- $aspect_ratio := partials.IncludeCached "func/pictures/getAspectRatio.html" . -}}
+  {{- $image_sizes := partials.IncludeCached "func/pictures/getImageSizes.html" . -}}
+  {{- $break_points := partials.IncludeCached "func/pictures/getBreakPoints.html" . -}}
 
   {{/* preparing aspect_ratio image sizes - once sitewide */}}
   {{- $arOptions := dict "image_sizes" $image_sizes "aspect_ratio" $aspect_ratio -}}
-  {{- $image_sizes2 := partialCached "func/pictures/getAspectRatioImagesizes.html" $arOptions $arOptions -}}
+  {{- $image_sizes2 := partials.IncludeCached "func/pictures/getAspectRatioImagesizes.html" $arOptions $arOptions -}}
 
   {{- with $localimage -}}
 
@@ -33,7 +33,7 @@
 
     {{/* evaluate, if the image is in a format that can be processed */}}
     {{- $opt := dict "isPageBundle" $isPageBundle "image" $image -}}
-    {{- $isProcessable := partialCached "func/pictures/isProcessable.html" $opt $opt -}}
+    {{- $isProcessable := partials.IncludeCached "func/pictures/isProcessable.html" $opt $opt -}}
     {{- if eq "false" $isProcessable -}}
       {{- $isPageBundle := false -}}
       {{- $isStaticFile := true -}}
@@ -64,7 +64,7 @@
         "break_points" $break_points
         "title" $title
         "context" $context -}}
-    {{- partial "images/markup-image.html" $imageOptions -}}
+    {{- partials.Include "images/markup-image.html" $imageOptions -}}
 
   {{- end -}}
 

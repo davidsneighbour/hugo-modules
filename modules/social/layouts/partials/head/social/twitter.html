@@ -7,7 +7,7 @@
 {{- $dict := dict -}}
 
 {{- /* twitter:card */ -}}
-{{- $card := partialCached "head/social/twitter/get.html"
+{{- $card := partials.IncludeCached "head/social/twitter/get.html"
               (dict
                 "context" .
                 "key" "card"
@@ -20,11 +20,11 @@
 {{- $dict = $dict | merge ( dict "twitter:card" $card ) -}}
 
 {{/* twitter:title */}}
-{{- $dict = $dict | merge ( dict "twitter:title" (partialCached "func/getTitle.html" page page) ) -}}
-{{- $dict = $dict | merge ( dict "twitter:text:title" (partialCached "func/getTitle.html" page page) ) -}}{{/* Title of content (max 70 characters) */}}
+{{- $dict = $dict | merge ( dict "twitter:title" (partials.IncludeCached "func/getTitle.html" page page) ) -}}
+{{- $dict = $dict | merge ( dict "twitter:text:title" (partials.IncludeCached "func/getTitle.html" page page) ) -}}{{/* Title of content (max 70 characters) */}}
 
 {{/* twitter:description */}}
-{{- $dict = $dict | merge ( dict "twitter:description" (partialCached "func/getDescription.html" . .) ) -}}{{/* Description of content (maximum 200 characters) */}}
+{{- $dict = $dict | merge ( dict "twitter:description" (partials.IncludeCached "func/getDescription.html" . .) ) -}}{{/* Description of content (maximum 200 characters) */}}
 
 {{/* twitter:profile */}}
 {{- if isset $config "profile" -}}

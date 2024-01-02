@@ -16,7 +16,7 @@ Parameters:
 {{ $style := .Get "style" | default "" }}
 
 {{/* SETUP */}}
-{{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
+{{- $config := partials.IncludeCached "func/pictures/getConfiguration.html" . -}}
 {{- $default_format := $config.default_format | default "webp" -}}
 {{- $aspect_ratio := $config.aspect_ratio | default "false" -}}
 {{- $aspect_ratio = (split $aspect_ratio ":") -}}
@@ -25,7 +25,7 @@ Parameters:
 
 {{/* preparing aspect_ratio image sizes - once sitewide */}}
 {{- $arOptions := dict "image_sizes" $image_sizes "aspect_ratio" $aspect_ratio }}
-{{- $image_sizes2 := partialCached "func/pictures/getAspectRatioImagesizes.html" $arOptions $arOptions -}}
+{{- $image_sizes2 := partials.IncludeCached "func/pictures/getAspectRatioImagesizes.html" $arOptions $arOptions -}}
 
 {{/* retrieve the image */}}
 {{- $articleimage := resources.Get $src -}}
@@ -62,7 +62,7 @@ Parameters:
   {{- with $style -}}
     <div {{ printf "style=%q" . | safeHTMLAttr }}>
   {{- end -}}
-  {{- partial "images/markup-image.html" $imageOptions -}}
+  {{- partials.Include "images/markup-image.html" $imageOptions -}}
   {{- with $style -}}
     </div>
   {{- end -}}

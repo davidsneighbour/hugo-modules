@@ -1,4 +1,4 @@
-{{- $defaultid := partial "func/getRandomString" (dict "limit" "12") -}}
+{{- $defaultid := partials.Include "func/getRandomString" (dict "limit" "12") -}}
 {{- $galleryid := .Get "id" | default $defaultid -}}
 {{- $gallery := .Get "gallery" | default "gallery" -}}
 {{- $type := .Get "type" | default "bootstrap5" -}}
@@ -15,4 +15,4 @@
 
 {{- $options := (dict "images" $images "galleryid" $galleryid) -}}
 {{- $partialPath := printf "gallery-%s.html" $type -}}
-{{- partialCached $partialPath $options $options -}}
+{{- partials.IncludeCached $partialPath $options $options -}}

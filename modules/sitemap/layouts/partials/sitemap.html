@@ -22,7 +22,7 @@
     {{- $pages = sort $pages .sortvalue (.sortdirection | default "ASC") -}}
   {{- end -}}
 
-  {{- partial "range-through-pages.html" $pages -}}
+  {{- partials.Include "range-through-pages.html" $pages -}}
 
 {{- end -}}
 

@@ -34,7 +34,7 @@ Tagvariants:
 {{ $position := .Position }}
 {{ $paramSrc := false }}
 {{ $paramTitle := false }}
-{{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
+{{- $config := partials.IncludeCached "func/pictures/getConfiguration.html" . -}}
 {{- $default_format := $config.default_format | default "webp" -}}
 {{ if .IsNamedParams }}
 	{{ $paramSrc = .Get 0 }}
@@ -107,7 +107,7 @@ Tagvariants:
 
   {{/* evaluate, if the image is in a format that can be processed */}}
   {{- $opt := dict "isPageBundle" $isPageBundle "image" $image -}}
-  {{- $isProcessable := partialCached "func/pictures/isProcessable.html" $opt $opt -}}
+  {{- $isProcessable := partials.IncludeCached "func/pictures/isProcessable.html" $opt $opt -}}
   {{- if eq "false" $isProcessable -}}
     {{- $isPageBundle = false -}}
     {{- $isStaticFile = true -}}

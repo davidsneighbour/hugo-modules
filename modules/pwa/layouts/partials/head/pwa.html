@@ -1,4 +1,4 @@
-{{- partial "func/printCommentHeader.html" "@davidsneighbour/hugo-pwa" -}}
+{{- partials.Include "func/printCommentHeader.html" "@davidsneighbour/hugo-pwa" -}}
 <link rel="manifest" href="/manifest.webmanifest">
 {{ $icon := resources.Get "favicon/favicon.png" -}}
 {{- if ne nil $icon -}}

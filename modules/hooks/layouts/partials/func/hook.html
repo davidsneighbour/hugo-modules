@@ -9,7 +9,7 @@
 {{- end -}}
 
 {{- /* a quick note */ -}}
-{{- partial "debug.html" (dict
+{{- partials.Include "debug.html" (dict
     "message" (printf "dnb-hooks - see %s for details" site.Params.dnb.hooks.hooklink)
     "context" .
     "severity" "info"
@@ -28,14 +28,14 @@
             (in site.Params.dnb.hooks.disable_messages "running_hooks")
             (in site.Params.dnb.hooks.disable_messages "running_uncached_hooks")
   ) -}}
-    {{- partial "debug.html" (dict
+    {{- partials.Include "debug.html" (dict
         "message" (printf "running hook `%s`" (printf "%s" $context.hook))
         "context" .
         "severity" "info"
         "level" 9
     ) -}}
   {{- end -}}
-  {{- partial $partialHook $context -}}
+  {{- partials.Include $partialHook $context -}}
   {{- $loaded = true -}}
 {{- end -}}
 
@@ -46,14 +46,14 @@
             (in site.Params.dnb.hooks.disable_messages "running_hooks")
             (in site.Params.dnb.hooks.disable_messages "running_cached_hooks")
     ) -}}
-    {{- partial "debug.html" (dict
+    {{- partials.Include "debug.html" (dict
         "message" (printf "running cached hook `%s`" (printf "%s" $context.hook))
         "context" .
         "severity" "info"
         "level" 9
       ) -}}
   {{- end -}}
-  {{- partialCached $partialHookCached $context $context.hook -}}
+  {{- partials.IncludeCached $partialHookCached $context $context.hook -}}
   {{- $loaded = true -}}
 {{- end -}}
 
@@ -61,7 +61,7 @@
 {{- if eq $loaded false -}}
   {{- $partialHookFolder := printf "layouts/partials/hooks/%s/" $context.hook -}}
   {{- if fileExists $partialHookFolder -}}
-    {{- partial "debug.html" (dict
+    {{- partials.Include "debug.html" (dict
       "message" (printf "running folder hooks for `%s`" (printf "%s" $context.hook))
       "context" .
       "severity" "info"
@@ -70,7 +70,7 @@
     {{- range os.ReadDir $partialHookFolder -}}
       {{- if not .IsDir }}
         {{- $partialHook := printf "%s%s" $partialHookFolder .Name -}}
-        {{- partial $partialHook $context $context.hook -}}
+        {{- partials.Include $partialHook $context $context.hook -}}
         {{- $loaded = true -}}
       {{- end -}}
     {{- end -}}
@@ -83,17 +83,17 @@
   {{- warnf "plugin hooks are experimental" -}}
   {{- range . -}}
     {{- /* execute hook if it exists */ -}}
-    {{- if templates.Exists .partial -}}
-        {{- partial "debug.html" (dict
+    {{- if templates.Exists .partials.Include -}}
+        {{- partials.Include "debug.html" (dict
             "message" (printf "running hook `%s` from `%s`" (printf "%s" $context.hook) .partial)
             "context" .
             "severity" "info"
             "level" 9
         ) -}}
         {{ if .cached }}
-          {{- partialCached .partial $context . -}}
+          {{- partials.IncludeCached .partials.Include $context . -}}
         {{ else }}
-          {{- partial .partial $context -}}
+          {{- partials.Include .partials.Include $context -}}
         {{ end }}
         {{- $loaded = true -}}
     {{- end -}}
@@ -103,7 +103,7 @@
 {{- /* send out a note if the hook is not used */ -}}
 {{- if eq $loaded false -}}
   {{- if not (in site.Params.dnb.hooks.disable_messages "unused_hooks") -}}
-    {{- partial "debug.html" (dict
+    {{- partials.Include "debug.html" (dict
         "message" (printf "unused hook `%s`" (printf "%s" $context.hook))
         "context" .
         "severity" "info"

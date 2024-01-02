@@ -3,10 +3,10 @@
 evaluates template functionality
 
 call:
-{{ partial "func/eval.html" (dict "context" . "cmd" "command") }}
+{{ partials.Include "func/eval.html" (dict "context" . "cmd" "command") }}
 or
 {{ $setup := (dict "context" . "cmd" "command") }}
-{{ partialCached "func/eval.html" $setup $setup }}
+{{ partials.IncludeCached "func/eval.html" $setup $setup }}
 
 where the `command` is a template string to execute. No `{{` required.
 

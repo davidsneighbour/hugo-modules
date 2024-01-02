@@ -41,12 +41,12 @@ else type is checked against type
     {{ end }}
     {{- if $print -}}
       {{- $formatterPath := printf "debugging-formatters/%s.html" .slug -}}
-      {{- partial $formatterPath (dict "value" $value "config" $item) -}}
+      {{- partials.Include $formatterPath (dict "value" $value "config" $item) -}}
       {{- $printed = true -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
 {{ if not $printed }}
-  {{- partial "debug-cli.html" (dict "message" (printf "The type '%s' is unknown to dnb-debug." $type) "severity" "debug") -}}
-  {{- partial "debugging-formatters/default.html" (dict "value" $value) -}}
+  {{- partials.Include "debug-cli.html" (dict "message" (printf "The type '%s' is unknown to dnb-debug." $type) "severity" "debug") -}}
+  {{- partials.Include "debugging-formatters/default.html" (dict "value" $value) -}}
 {{ end }}

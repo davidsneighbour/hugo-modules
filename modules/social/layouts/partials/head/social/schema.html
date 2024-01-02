@@ -1,4 +1,4 @@
-<meta itemprop="name" content="{{ (partialCached "func/getTitle.html" page page) }}">
+<meta itemprop="name" content="{{ (partials.IncludeCached "func/getTitle.html" page page) }}">
 <meta itemprop="description"
       content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 {{- if .IsPage }}

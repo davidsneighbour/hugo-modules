@@ -35,23 +35,23 @@
     </tr>
     <tr>
         <td class="align-top key">Page</td>
-        <td class="align-top value">{{ partial "debugprint" .value.Page }}</td>
+        <td class="align-top value">{{ partials.Include "debugprint" .value.Page }}</td>
     </tr>
     <tr>
         <td class="align-top key">Position</td>
-        <td class="align-top value">{{ partial "debugprint" .value.Position }}</td>
+        <td class="align-top value">{{ partials.Include "debugprint" .value.Position }}</td>
     </tr>
     <tr>
         <td class="align-top key">IsNamedParams</td>
-        <td class="align-top value">{{ partial "debugprint" .value.IsNamedParams }}</td>
+        <td class="align-top value">{{ partials.Include "debugprint" .value.IsNamedParams }}</td>
     </tr>
     <tr>
         <td class="align-top key">Params</td>
-        <td class="align-top value">{{ partial "debugprint" .value.Params }}</td>
+        <td class="align-top value">{{ partials.Include "debugprint" .value.Params }}</td>
     </tr>
     <tr>
         <td class="align-top key">Inner</td>
-        <td class="align-top value">{{ partial "debugprint" .value.Inner }}</td>
+        <td class="align-top value">{{ partials.Include "debugprint" .value.Inner }}</td>
     </tr>
   </tbody>
 </table>

@@ -6,19 +6,19 @@
   </tr>
   {{- $value := .value -}}
   {{- range site.Data.dnb.debug.types.fileinfo.fields -}}
-    {{- $valuePrinted := partial "func/eval.html" (dict "context" $value "cmd" (printf ".%s" .variable)) -}}
+    {{- $valuePrinted := partials.Include "func/eval.html" (dict "context" $value "cmd" (printf ".%s" .variable)) -}}
     <tr>
       <td class="align-top key nowrap" title="{{ .description }}">
-        {{- partialCached "debugging-partials/field.html" . . -}}
+        {{- partials.IncludeCached "debugging-partials/field.html" . . -}}
       </td>
       <td class="align-top type nowrap">
-        {{- partial "debugtype.html" $valuePrinted -}}
+        {{- partials.Include "debugtype.html" $valuePrinted -}}
       </td>
       <td class="align-top value">
         {{- with $valuePrinted -}}
-          {{- partial "debugprint.html" . -}}
+          {{- partials.Include "debugprint.html" . -}}
         {{- else -}}
-          {{- partialCached "debugging-partials/empty.html" . -}}
+          {{- partials.IncludeCached "debugging-partials/empty.html" . -}}
         {{- end -}}
       </td>
     </tr>

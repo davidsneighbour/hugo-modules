@@ -1,2 +1,2 @@
-{{- $title := partialCached "func/getTitle.html" page page -}}
+{{- $title := partials.IncludeCached "func/getTitle.html" page page -}}
 <title>{{- $title -}}</title>

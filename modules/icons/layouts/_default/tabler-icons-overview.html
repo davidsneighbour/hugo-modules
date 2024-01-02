@@ -20,7 +20,7 @@ fill: currentColor;
       <div class="row">
           {{ range resources.Match "icons/tabler-icons/*.svg" }}
             {{ $name := substr .Name 19 -4 | lower }}
-            <div class="col-md-1 col-sm-2 col-xs-4">{{ partialCached "tablericon.html" $name $name }}</div>
+            <div class="col-md-1 col-sm-2 col-xs-4">{{ partials.IncludeCached "tablericon.html" $name $name }}</div>
             <div class="col-md-3 col-sm-4 col-xs-8" title="{{$name}}">{{$name}}</div>
           {{ end }}
       </div>

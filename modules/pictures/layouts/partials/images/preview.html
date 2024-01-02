@@ -1,7 +1,7 @@
 {{/* article image */}}
 
 {{/* SETUP */}}
-{{- $config := partialCached "func/getPiotureConfiguration.html" . -}}
+{{- $config := partials.IncludeCached "func/getPiotureConfiguration.html" . -}}
 {{- $context := . -}}
 {{- $link := $context.Permalink -}}
 
@@ -15,10 +15,10 @@
 
 {{/* preparing aspect_ratio image sizes - once sitewide */}}
 {{- $arOptions := dict "image_sizes" $image_sizes "aspect_ratio" $aspect_ratio }}
-{{- $image_sizes2 := partialCached "func/pictures/getARImagesizes.html" $arOptions $arOptions -}}
+{{- $image_sizes2 := partials.IncludeCached "func/pictures/getARImagesizes.html" $arOptions $arOptions -}}
 
 {{/* retrieve the article image */}}
-{{- $articleimage := partial "images/getArticleImage.html" $context -}}
+{{- $articleimage := partials.Include "images/getArticleImage.html" $context -}}
 
 {{- with $articleimage -}}
   {{ $image := . }}
@@ -37,6 +37,6 @@
 
   {{ $imageOptions := dict "images" $images "link" $link
           "break_points" $break_points "title" $title "context" $context }}
-  {{ partial "images/markup-image.html" $imageOptions }}
+  {{ partials.Include "images/markup-image.html" $imageOptions }}
 
 {{- end -}}

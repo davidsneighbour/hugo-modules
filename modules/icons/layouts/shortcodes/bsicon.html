@@ -1,2 +1,2 @@
 {{- $value := .Get 0 -}}
-{{- partialCached "bsicon.html" $value $value -}}
+{{- partials.IncludeCached "bsicon.html" $value $value -}}

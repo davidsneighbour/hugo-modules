@@ -27,7 +27,7 @@
   {{- $title  := .Get "title" | default (.Get 2) -}}
   {{- $params := .Get "params" | default $paramsCollected -}}
   {{- $thumbnailUrl := "https://i.ytimg.com/vi/%s/maxresdefault.jpg" -}}
-  {{- /* $thumbnailUrl := partialCached "func/hugo-shortcodes/getYoutubePreviewUrl.html" $id $id */ -}}
+  {{- /* $thumbnailUrl := partials.IncludeCached "func/hugo-shortcodes/getYoutubePreviewUrl.html" $id $id */ -}}
   {{- $remoteThumbnailUrl := printf $thumbnailUrl $id -}}
 
 

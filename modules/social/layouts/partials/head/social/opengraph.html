@@ -22,7 +22,7 @@
 <!-- og:title = the title of your object as it should appear within the graph -->
 {{- $metaProperties = $metaProperties | append (dict
   "property" "og:title"
-  "content" (partialCached "func/getTitle.html" page page)) -}}
+  "content" (partials.IncludeCached "func/getTitle.html" page page)) -}}
 
 <!-- og:url = canonical URL, will be used as its permanent ID in the graph -->
 {{- $metaProperties = $metaProperties | append (dict
@@ -76,7 +76,7 @@
 
 <!-- og:image = an image URL which should represent the object within the graph -->
 {{- $metaProperty := dict -}}
-{{- $image := (partialCached "func/getArticleImage.html" page page) -}}
+{{- $image := (partials.IncludeCached "func/getArticleImage.html" page page) -}}
 {{- with $image -}}
   {{- $image := .Resize "1200x webp" -}}
   {{- with $image }}
@@ -103,4 +103,4 @@
   {{- $metaProperties = $metaProperties | append (dict "property" "fb:admins" "content" .) -}}
 {{- end -}}
 
-{{- partial "func/printMeta.html" (dict "type" "property" "content" $metaProperties) -}}
+{{- partials.Include "func/printMeta.html" (dict "type" "property" "content" $metaProperties) -}}

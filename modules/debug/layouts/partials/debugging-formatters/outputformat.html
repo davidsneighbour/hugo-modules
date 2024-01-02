@@ -8,7 +8,7 @@
   </tr>
   {{ range $idx, $elem := $OutputFormatVarNames }}
     {{ printf `<tr> <td class="align-top key">%s</td> <td class="align-top value">` $elem | safeHTML }}
-    {{ partial "debugprint.html" (index $OutputFormatVarSymbols $idx) }}
+    {{ partials.Include "debugprint.html" (index $OutputFormatVarSymbols $idx) }}
     {{ printf "</td></tr>" | safeHTML }}
   {{ end }}
 </table>

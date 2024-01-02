@@ -5,7 +5,7 @@
   {{- printf "%s" .value | htmlUnescape -}}
 {{- else -}}
   <strong>Abridged: ({{ $length }} chars): </strong> {{- $short -}} &hellip;<br />
-  {{- $id := partial "func/getRandomString.html" . -}}
+  {{- $id := partials.Include "func/getRandomString.html" . -}}
   <a href="#" data-bs-toggle="collapse" data-bs-target="#a{{- $id -}}"
       aria-expanded="false" aria-controls="a{{- $id -}}">
       <span class="if-collapsed">Show full value</span>

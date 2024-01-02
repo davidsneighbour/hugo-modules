@@ -1,5 +1,5 @@
 {{- if templates.Exists "partials/head/robots.html" -}}
-  {{- partial "head/robots.html" . -}}
+  {{- partials.Include "head/robots.html" . -}}
 {{- else -}}
   {{- with .Params.robots -}}
   <meta name="robots" content="{{- . -}}">
