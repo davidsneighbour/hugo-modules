@@ -5,13 +5,14 @@ resources:
 - src: header-card.png
 categories:
 - components
+draft: true
 tags:
 - gohugo
 - component
 - development
 config:
   band: gohugo
-lastmod: 2023-12-31T16:20:21+07:00
+lastmod: 2024-01-02T19:25:47+07:00
 subcollection: true
 ---
 
