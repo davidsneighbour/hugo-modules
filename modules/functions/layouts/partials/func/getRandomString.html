@@ -1,24 +1,24 @@
 {{- /*
 
-@see https://discourse.gohugo.io/t/generate-a-random-string/26338
-@since 1.0.0
+@since 1.2024.0
 
 ```gotemplate
-{{- $random := partials.IncludeCached "func/getRandomString" (dict "limit" 8) -}}
 {{- $random := partials.IncludeCached "func/getRandomString" . -}}
 ```
 
-- calling without parameters returns 12 characters
-- call with a limit parameter to select the amount of characters returned
-- call with a seed parameter will use that string instead of the site.Title to
-  create the random string
 - call with `partials.IncludeCached` and a unique seed to reuse the random string
 
 */ -}}
-{{ $seed := printf "%s%s" site.Title now.Unix }}
-{{ if isset . "seed" }}
-  {{ $seed = .seed }}
-{{ end }}
-{{ $limit := .limit | default 12 }}
-{{ $random := delimit (shuffle (split (md5 $seed) "" )) "" }}
-{{ return substr $random 0 $limit }}
+{{- $limit := 12 -}}
+{{- $characters := slice "a" "b" "c" "d" "e" "f" "g"
+     "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s"
+     "t" "u" "v" "w" "x" "y" "z" "A" "B" "C" "D" "E"
+     "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q"
+     "R" "S" "T" "U" "V" "W" "X" "Y" "Z" -}}
+{{- $ranger := collections.Seq 1 $limit -}}
+
+{{- $output := "" -}}
+{{- range $ranger -}}
+  {{- $output = printf "%s%s" $output (index (collections.Shuffle $characters) 0) -}}
+{{- end -}}
+{{- return $output -}}
