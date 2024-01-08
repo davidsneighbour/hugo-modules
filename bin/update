@@ -29,8 +29,8 @@ for dir in "$base_directory"/*; do
     echo "Executing in $dir"
     pushd "$dir" || exit
     hugo mod get -u ./...
-    hugo mod tidy
-    hugo mod verify
+    hugo mod tidy --quiet
+    hugo mod verify --quiet
     popd || exit
   fi
 done
