@@ -1,24 +1,26 @@
 {{- /* create context from extended or simple hook */ -}}
-{{- $context := dict -}}
+{{- $context := collections.Dictionary -}}
 {{- if reflect.IsMap . -}}
   {{- /* extended use case */ -}}
-  {{- $context = merge $context . }}
+  {{- $context = collections.Merge $context . }}
 {{- else -}}
   {{- /* simple use case */ -}}
-  {{- $context = merge $context (dict "hook" . "context" dict) -}}
+  {{- $context = collections.Merge
+                  $context
+                  (collections.Dictionary "hook" . "context" collections.Dictionary) -}}
 {{- end -}}
 
 {{- /* a quick note */ -}}
-{{- partials.Include "debug.html" (dict
-    "message" (printf "dnb-hooks - see %s for details" site.Params.dnb.hooks.hooklink)
+{{- partials.Include "debug.html" (collections.Dictionary
+    "message" (fmt.Printf "dnb-hooks - see %s for details" site.Params.dnb.hooks.hooklink)
     "context" .
     "severity" "info"
     "level" 9
 ) -}}
 
 {{- /* create hook paths and variables */ -}}
-{{- $partialHook := printf "partials/hooks/%s.html" $context.hook -}}
-{{- $partialHookCached := printf "partials/hooks/%s-cached.html" $context.hook -}}
+{{- $partialHook := fmt.Printf "partials/hooks/%s.html" $context.hook -}}
+{{- $partialHookCached := fmt.Printf "partials/hooks/%s-cached.html" $context.hook -}}
 {{- $loaded := false -}}
 
 {{- /* execute hook if it exists */ -}}
@@ -28,8 +30,8 @@
             (in site.Params.dnb.hooks.disable_messages "running_hooks")
             (in site.Params.dnb.hooks.disable_messages "running_uncached_hooks")
   ) -}}
-    {{- partials.Include "debug.html" (dict
-        "message" (printf "running hook `%s`" (printf "%s" $context.hook))
+    {{- partials.Include "debug.html" (collections.Dictionary
+        "message" (fmt.Printf "running hook `%s`" (fmt.Printf "%s" $context.hook))
         "context" .
         "severity" "info"
         "level" 9
@@ -46,8 +48,8 @@
             (in site.Params.dnb.hooks.disable_messages "running_hooks")
             (in site.Params.dnb.hooks.disable_messages "running_cached_hooks")
     ) -}}
-    {{- partials.Include "debug.html" (dict
-        "message" (printf "running cached hook `%s`" (printf "%s" $context.hook))
+    {{- partials.Include "debug.html" (collections.Dictionary
+        "message" (fmt.Printf "running cached hook `%s`" (fmt.Printf "%s" $context.hook))
         "context" .
         "severity" "info"
         "level" 9
@@ -59,17 +61,17 @@
 
 {{- /* if no file based hooks ran then check for folder based hooks */ -}}
 {{- if eq $loaded false -}}
-  {{- $partialHookFolder := printf "layouts/partials/hooks/%s/" $context.hook -}}
+  {{- $partialHookFolder := fmt.Printf "layouts/partials/hooks/%s/" $context.hook -}}
   {{- if fileExists $partialHookFolder -}}
-    {{- partials.Include "debug.html" (dict
-      "message" (printf "running folder hooks for `%s`" (printf "%s" $context.hook))
+    {{- partials.Include "debug.html" (collections.Dictionary
+      "message" (fmt.Printf "running folder hooks for `%s`" (fmt.Printf "%s" $context.hook))
       "context" .
       "severity" "info"
       "level" 9
     ) -}}
     {{- range os.ReadDir $partialHookFolder -}}
       {{- if not .IsDir }}
-        {{- $partialHook := printf "%s%s" $partialHookFolder .Name -}}
+        {{- $partialHook := fmt.Printf "%s%s" $partialHookFolder .Name -}}
         {{- partials.Include $partialHook $context $context.hook -}}
         {{- $loaded = true -}}
       {{- end -}}
@@ -84,8 +86,11 @@
   {{- range . -}}
     {{- /* execute hook if it exists */ -}}
     {{- if templates.Exists .partials.Include -}}
-        {{- partials.Include "debug.html" (dict
-            "message" (printf "running hook `%s` from `%s`" (printf "%s" $context.hook) .partial)
+        {{- partials.Include "debug.html" (collections.Dictionary
+            "message" (fmt.Printf
+                        "running hook `%s` from `%s`"
+                        (fmt.Printf "%s" $context.hook)
+                        .partial)
             "context" .
             "severity" "info"
             "level" 9
@@ -103,8 +108,8 @@
 {{- /* send out a note if the hook is not used */ -}}
 {{- if eq $loaded false -}}
   {{- if not (in site.Params.dnb.hooks.disable_messages "unused_hooks") -}}
-    {{- partials.Include "debug.html" (dict
-        "message" (printf "unused hook `%s`" (printf "%s" $context.hook))
+    {{- partials.Include "debug.html" (collections.Dictionary
+        "message" (fmt.Printf "unused hook `%s`" (fmt.Printf "%s" $context.hook))
         "context" .
         "severity" "info"
         "level" 9
