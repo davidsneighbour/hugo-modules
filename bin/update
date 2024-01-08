@@ -30,6 +30,7 @@ for dir in "$base_directory"/*; do
     pushd "$dir" || exit
     hugo mod get -u ./...
     hugo mod tidy
+    hugo mod verify
     popd || exit
   fi
 done
