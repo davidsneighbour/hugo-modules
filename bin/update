@@ -1,0 +1,40 @@
+#!/bin/bash
+
+REQUIRED_TOOLS=(
+  pushd
+  popd
+  hugo
+)
+
+for TOOL in "${REQUIRED_TOOLS[@]}"; do
+  if ! command -v "${TOOL}" >/dev/null; then
+    echo "${TOOL} is required... "
+    exit 1
+  fi
+done
+
+FILE=.env
+if [ -f "$FILE" ]; then
+  set -a # export all variables created next
+  # shellcheck source=.env
+  source "${FILE}"
+  set +a # stop exporting
+fi
+
+base_directory="modules"
+hugo mod clean
+
+for dir in "$base_directory"/*; do
+  if [ -d "$dir" ]; then
+    echo "Executing in $dir"
+    pushd "$dir" || exit
+    hugo mod get -u ./...
+    hugo mod tidy
+    popd || exit
+  fi
+done
+
+hugo mod clean
+
+git add -A
+git commit -m "chore(deps): update dependencies"
