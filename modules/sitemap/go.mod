@@ -1,3 +1,3 @@
 module github.com/davidsneighbour/hugo-modules/modules/sitemap
 
-go 1.20
+go 1.21

@@ -1,2 +1,6 @@
-github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.7 h1:uVYY3uAMMLrHY6Izr4kaZdk8/O+vXwbfUcbFZHP3N/g=
-github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.7/go.mod h1:b81QGiJxOSpjhjpPY2gK3FBHVPkvicxG9huq+qRLR70=
+github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.31 h1:z9TDfRoZEyDy1R0OhgIU3jlLhxk6z1DIzFCGdz79Sio=
+github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.31/go.mod h1:V4vumiTgQkeNnLEz0FR8YcOEqZ+Vv1FZIrKiTGmjQ8A=
+github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.0 h1:4TZhXQQ3PCVqj8jIkEZ2Mkkh+I6est3XMVMmESJdXGs=
+github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.0/go.mod h1:mMpTa/CPuBifHgzsHWORFM32ICKhDKjREQ1hKPk3oeU=
+github.com/davidsneighbour/hugo-modules/modules/hooks v1.2024.1 h1:NiLbUFMJ/xk5gHw9rKm+pyjh7fcfb3Wsx8D7FFp811I=
+github.com/davidsneighbour/hugo-modules/modules/hooks v1.2024.1/go.mod h1:JXvDMNx+6XC22EoBq+4ttPBMZJZUd4r5oCS2IRS/J0s=

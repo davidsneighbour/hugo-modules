@@ -1,5 +1,5 @@
 module github.com/davidsneighbour/hugo-modules/modules/youtube
 
-go 1.17
+go 1.21
 
-require github.com/paulirish/lite-youtube-embed v0.2.0 // indirect
+require github.com/paulirish/lite-youtube-embed v0.3.0 // indirect
