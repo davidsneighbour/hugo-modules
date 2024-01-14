@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-sitemap",
   "description": "A sitemap for Hugo",
-  "version": "1.2023.5",
+  "version": "1.2024.0",
   "license": "MIT",
   "private": true,
   "repository": {
