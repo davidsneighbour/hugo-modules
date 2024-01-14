@@ -5,7 +5,7 @@ description: Elevate your website's sitemap with a versatile Hugo theme componen
 summary: This is a Hugo theme component with layouts to add a configurable sitemap to your website. Hugo itself has internal templates that add sitemaps, but this component extends this by providing setup options per page and keeping up-to-date with current SEO practices.
 date: 2024-01-14T18:11:57+07:00
 publishDate: 2022-07-19T17:40:35+07:00
-lastmod: 2024-01-14T19:10:04+07:00
+lastmod: 2024-01-14T20:50:06+07:00
 resources:
 - src: header-card.png
 categories:
@@ -57,9 +57,9 @@ config:
   sitemap: false
 ```
 
-| | | |
-| --- | --- | --- |
-| _sitemap_ | boolean | include this page in the sitemap |
+{{< optionstable >}}
+| sitemap | boolean | true | include this page in the sitemap |
+{{< /optionstable >}}
 
 Without any configuration the default is true, meaning to include any page into the sitemap.
 
