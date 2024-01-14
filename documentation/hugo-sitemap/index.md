@@ -2,48 +2,75 @@
 title: Sitemap
 linktitle: hugo-sitemap
 description: Elevate your website's sitemap with a versatile Hugo theme component. Customizable setup options per page. Discover more!
-date: 2023-06-29T21:44:47+07:00
+summary: This is a Hugo theme component with layouts to add a configurable sitemap to your website. Hugo itself has internal templates that add sitemaps, but this component extends this by providing setup options per page and keeping up-to-date with current SEO practices.
+date: 2024-01-14T18:11:57+07:00
 publishDate: 2022-07-19T17:40:35+07:00
-lastmod: 2023-12-31T16:21:14+07:00
+lastmod: 2024-01-14T19:10:04+07:00
 resources:
 - src: header-card.png
 categories:
-- components
+- gohugo
+- categories
 tags:
 - gohugo
 - component
 - seo
+keywords:
+- gohugo
+- hugo
+- component
+- module
+- sitemap
+- google
+- searchengine
+- layout
+- template
+- seo
+- optimization
 config:
   band: gohugo
 ---
 
-This is a Hugo theme component with layouts to add a configurable sitemap to your website. Hugo itself has internal templates that add sitemaps, but this component has additional setup options per page.
+This is a Hugo theme component with layouts to add a configurable sitemap to your website. Hugo itself has internal templates that add sitemaps, but this component extends this by providing setup options per page and keeping up-to-date with current SEO practices.
+
+## Installation
+
+Add the following lines to your `hugo.toml`:
+
+```toml
+[[module.imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/sitemap"
+```
 
 ## Usage
 
-There is no need to configure anything without having any special needs. Add the module to your repository structure and run it. Once you ran `hugo` you will find a file `sitemap.xml` in your `public` directory. This is the file you want to submit to search engines.
+This module works out of the box and there is no need for any configuration. Once you ran `hugo` you can find the file `sitemap.xml` in your `public` directory. This is the file you want to submit to search engines.
 
-If you are using the [Robots component](/components/hugo-robots/), then your resulting `robots.txt` will have a pointer to the sitemap file as well.
+If you are using the [Robots component](https://kollitsch.dev/components/hugo-robots/), then your resulting `robots.txt` includes [a pointer to the sitemap file](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap?hl=en#addsitemap) as well.
 
-## Exclude a page from sitemap
+### Exclude a page from sitemap
 
-Add frontmatter to individual pages with the following setup:
+To exclude a specific page from all sitemaps add it to the `config` variable in the frontmatter of that page:
 
 ```yaml
 config:
-  sitemap: true
+  sitemap: false
 ```
 
-_sitemap_ (boolean): include this page in the sitemap
-
-Add/edit global defaults in `config.toml > params` or `config/_defaults/params.toml`:
-
-```toml
-[dnb.sitemap]
-enabled = true
-```
+| | | |
+| --- | --- | --- |
+| _sitemap_ | boolean | include this page in the sitemap |
 
 Without any configuration the default is true, meaning to include any page into the sitemap.
+
+### Global sitemap configuration
+
+Add/edit global defaults in `hugo.toml`:
+
+```toml
+[params.dnb.sitemap]
+enabled = true
+```
 
 You can edit the following additional configuration parameters:
 
@@ -52,9 +79,9 @@ You can edit the following additional configuration parameters:
 
 __DEPRECATED__: Frontmatter `robotsdisallow` from earlier `hugo-robots` versions did result in the page being omitted from the sitemap. This is deprecated, but currently still supported. The module will echo a note on CLI about this.
 
-## HTML Sitemap
+### HTML Sitemap
 
-If you want to add an HTML sitemap you can do so via shortcode:
+This module also provides an HTML sitemap, that you can include via shortcode:
 
 ```go-html-template
 {{</* sitemap */>}}
@@ -65,19 +92,19 @@ Add the sitemap as shortcode `{{</* sitemap */>}}` anywhere you want.
 A sample implementation can be found on [kollitsch.dev](https://kollitsch.dev/sitemap/). The following configuration was used:
 
 ```toml
-[[dnb.sitemap.htmlmap.item]]
+[[params.dnb.sitemap.htmlmap.item]]
 type = ".Type"
 section = "blog"
 label = "Blog Posts"
 
-[[dnb.sitemap.htmlmap.item]]
+[[params.dnb.sitemap.htmlmap.item]]
 type = ".Type"
 section = "components"
 label = "GoHugo Components by DNB"
 sortvalue = ".Title"
 sortdirection = "ASC"
 
-[[dnb.sitemap.htmlmap.item]]
+[[params.dnb.sitemap.htmlmap.item]]
 type = ".Type"
 section = "tags"
 selection = "in-pages"
@@ -85,7 +112,7 @@ label = "Tags"
 sortvalue = ".Title"
 sortdirection = "ASC"
 
-[[dnb.sitemap.htmlmap.item]]
+[[params.dnb.sitemap.htmlmap.item]]
 type = ".Type"
 selection = "not-in"
 section = ["blog", "tags", "components"]
