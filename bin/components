@@ -32,7 +32,6 @@ IMAGEPATH="${CURPATH}/assets/images"
 TEMPIMAGEPATH="${CURPATH}/assets/images/temp.svg"
 COMPONENTPATH="./modules"
 DOCUMENTATIONPATH="./documentation"
-AUTH="-u ${GITHUB_USERNAME}:${GITHUB_SECRET}"
 
 # load libraries
 for FILE in bin/lib/*; do
@@ -64,10 +63,10 @@ for DIRNAME in "${COMPONENTPATH}"/*/; do
   replace_string=">${TERM^^} "
   sed -E "s/${find_string}/${replace_string}/" "${IMAGEPATH}"/components-header.svg >"${IMAGEPATH}"/temp2.svg
 
-  version=($(jq -r '.tag_name' ${COMPONENTPATH}/"${DIR}"/release.json))
-  arrIN=(${version//\// })
+  VERSION=$(node -pe "require(\"${DIRNAME}/package.json\")[\"version\"]")
   find_string='id="componentversion">NAME'
-  replace_string=">${arrIN[2]}"
+  replace_string=">${VERSION}"
+
   sed -E "s/${find_string}/${replace_string}/" "${IMAGEPATH}"/temp2.svg >"${IMAGEPATH}"/temp.svg
 
   inkscape "${TEMPIMAGEPATH}" --export-filename="${DOCUMENTATIONPATH}"/hugo-"${DIR}"/header-card.png &>/dev/null
@@ -80,7 +79,7 @@ rm -f "${CURPATH}/assets/images/temp.svg"
 rm -f "${CURPATH}/assets/images/temp2.svg"
 
 git add documentation
-git commit -m "chore: update component header images and release data" --no-verify
+git commit -m "chore: update component header images" --no-verify
 git push origin main
 
 echo -e "${COLOR_YELLOW}"
