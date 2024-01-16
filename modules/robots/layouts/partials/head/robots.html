@@ -1,14 +1,18 @@
 {{/* @see https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag */}}
 {{- $config := .Params.config -}}
 {{- $configNew := .Params.options.robots -}}
-
 {{- $global := site.Params.dnb.robots -}}
 
-{{/*
+{{/* check if $config is used, then warnf about it being deprecated */}}
 
-Check if $config is used, then warnf about it being deprecated
-
-*/}}
+{{/* {{- partials.Include "debug.html"
+      (dict
+        "message" "Note: `follow` as frontmatter is deprecated. Use options > robots > follow instead."
+        "severity" "warn"
+        "level" 4
+        "slug" "hugo-robots"
+      )
+-}} */}}
 
 {{- $follow := "follow" -}}
 {{- with $config.follow -}}
