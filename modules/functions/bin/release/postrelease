@@ -1,5 +1,5 @@
 #!/bin/bash
-# v2023.12.31.001
+# v2024.01.16.1
 
 # Get the current path
 CURPATH="$(pwd -P)"
@@ -30,25 +30,13 @@ fi
 # Create a release on GitHub
 GITHUB_REPO=https://github.com/${GITHUB_REPOSLUG}
 TAGNAME=modules/${TAGSLUG}/v${VERSION}
-curl -X POST \
-  -H "Accept: application/vnd.github+json" \
-  -H "Authorization: token ${GITHUB_SECRET}" \
-  https://api.github.com/repos/"${GITHUB_REPOSLUG}"/releases \
-  -d "{ \
-         \"tag_name\":\"${TAGNAME}\", \
-         \"name\":\"${TAGNAME}\", \
-         \"body\":\"${TAGNAME}\", \
-         \"generate_release_notes\":true, \
-         \"discussion_category_name\":\"Releases\" \
-     }" >release.json
 
 # Copy and add release data to documentation
-DOC_PATH="../../documentation/hugo-${TAGSLUG}/data.json"
-cp release.json "$DOC_PATH"
+DOC_PATH="../../documentation/hugo-${TAGSLUG}/version.json"
+echo "{ \"version\": \"${VERSION}\" }" >"$DOC_PATH"
 git add "$DOC_PATH"
 
 # Update release file
-git add release.json
 git commit -m "chore(release): update repo data files" --signoff --no-verify
 
 # Push release to GitHub
@@ -57,3 +45,4 @@ git push origin main --follow-tags
 # Open release for editing
 RELEASEURL="$GITHUB_REPO/releases/edit/$TAGNAME"
 xdg-open "${RELEASEURL}" &>/dev/null
+
