@@ -1,9 +1,9 @@
 {{ if (gt (len .value) 0) }}
   <table class="debugprint">
     <tr>
-        <th class="align-top key">Key</th>
-        <th class="align-top type">Type</th>
-        <th class="align-top value">Value</th>
+        <th scope="col" class="align-top key">Key</th>
+        <th scope="col" class="align-top type">Type</th>
+        <th scope="col" class="align-top value">Value</th>
     </tr>
     {{ range $key1, $value1 := .value }}
       {{ $type1       := (printf "%T" $value1) }}
