@@ -1,0 +1,27 @@
+{
+  "name": "hugo-auditor",
+  "description": "The Fables of Aesop, as content sample files for GoHugo",
+  "version": "1.2023.0",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
+  },
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/aesop",
+  "dependencies": {
+    "@davidsneighbour/standard-version-config": "^5.8.7",
+    "@davidsneighbour/tools": "^5.8.7"
+  },
+  "scripts": {
+    "clean": "run-p clean:*",
+    "clean:npm": "rimraf node_modules package-lock.json",
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/aesop/v\" --releaseCommitMessageFormat \"chore(release): modules/aesop/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/aesop/v\" --releaseCommitMessageFormat \"chore(release): modules/aesop/v{{currentTag}}\" && ./bin/release/postrelease",
+    "update": "npm-check-updates -u && npm install && git add package*"
+  }
+}
