@@ -1,0 +1,8 @@
+{{- $icons :=  page.Scratch.Get "icons" | default slice -}}
+<svg class="d-none" version="2.0" aria-hidden="true">
+  <defs>
+    {{- range $icons -}}
+      {{- . | safeHTML -}}
+    {{- end -}}
+  </defs>
+</svg>

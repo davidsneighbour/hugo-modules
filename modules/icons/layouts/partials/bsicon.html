@@ -1,7 +1,6 @@
 {{- $iconname := . -}}
-{{- $icon := (printf "node_modules/bootstrap-icons/icons/%s.svg" $iconname) -}}
-{{- with resources.Get $icon -}}
-  <span class="icon--bs icon--{{- $iconname -}}">
-    {{- .Content | safeHTML -}}
-  </span>
-{{- end -}}
+{{- $options := dict
+                  "icon" $iconname
+                  "width" 20
+                  "height" 20 -}}
+{{- partial "icons/use.html" $options $options }}
