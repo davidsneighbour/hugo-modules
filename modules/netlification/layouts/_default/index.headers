@@ -41,26 +41,26 @@
   X-Content-Type-Options: nosniff
   {{/* note: site.Params does a lot of lower casing ;) */}}
   {{- $nonrules := slice "upgradeinsecurerequests" "reporturi" "reportonly" -}}
-  {{ with $config.csp }}
-      {{ if (eq .reportOnly true) }}
-      Content-Security-Policy-Report-Only: {{ else }}
-      Content-Security-Policy: {{ end }}
-      {{- range $key, $values := $config.csp }}
+  {{ with $config.csp -}}
+      {{ if (eq .reportOnly true) -}}
+      Content-Security-Policy-Report-Only: {{ else -}}
+      Content-Security-Policy: {{ end -}}
+      {{- range $key, $values := $config.csp -}}
         {{/* {{ warnf "%s %s" $key $values }} */}}
-        {{- if not (in $nonrules $key) }}
-          {{- with (index $config.csp $key) }}
-            {{ replace ($key | humanize | lower) " " "-" }}
-            {{ range . }} {{ . }}{{ end }};
-          {{ end }}
-        {{ end }}
-      {{ end }}
-      {{ with $config.csp.upgradeInsecureRequests }}
-          {{ if (eq $config.csp.upgradeInsecureRequests true) }}
+        {{- if not (in $nonrules $key) -}}
+          {{- with (index $config.csp $key) -}}
+            {{ replace ($key | humanize | lower) " " "-" -}}
+            {{- range . }} {{ . }}{{ end }};
+          {{- end -}}
+        {{- end -}}
+      {{- end }}
+      {{- with $config.csp.upgradeInsecureRequests -}}
+          {{- if (eq $config.csp.upgradeInsecureRequests true) -}}
               upgrade-insecure-requests;
-          {{ end }}
-      {{ end }}
-      {{ with $config.csp.reportUri }} report-uri {{ . }};{{ end }}
-  {{ end }}
+          {{- end -}}
+      {{- end -}}
+      {{- with $config.csp.reportUri }} report-uri {{ . }};{{- end -}}
+  {{- end }}
   {{- range $config.headers }}
   {{ . }}
   {{- end }}
