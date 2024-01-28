@@ -1,7 +1,8 @@
+{{- $iconname := . -}}
 {{- $options := dict
                   "icon" $iconname
                   "width" 20
                   "height" 20 -}}
 <span class="icon--bs icon--{{- $iconname -}}">
-{{- partial "icons/use.html" $options }}
+  {{- partial "icons/use.html" $options -}}
 </span>
