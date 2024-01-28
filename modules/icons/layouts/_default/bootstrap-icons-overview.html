@@ -20,7 +20,7 @@ fill: currentColor;
       <div class="row">
           {{ range resources.Match "icons/bootstrap-icons/*.svg" }}
             {{ $name := substr .Name 22 -4 | lower }}
-            <div class="col-md-1 col-sm-2 col-xs-4">{{ partials.IncludeCached "bsicon.html" $name $name }}</div>
+            <div class="col-md-1 col-sm-2 col-xs-4">{{ partials.Include "bsicon.html" $name $name }}</div>
             <div class="col-md-3 col-sm-4 col-xs-8" title="{{$name}}">{{$name}}</div>
           {{ end }}
       </div>
