@@ -1,7 +1,7 @@
 {
   "name": "hugo-modules",
   "description": "@davidsneighbour's reusable gohugo components.",
-  "version": "1.2023.14",
+  "version": "1.2024.0",
   "license": "MIT",
   "private": true,
   "repository": "davidsneighbour/hugo-modules",
@@ -22,7 +22,7 @@
     "workbox-webpack-plugin": "7.0.0"
   },
   "scripts": {
-    "build": "run-p build:*",
+    "build": "",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.js",
     "clean": "run-p clean:**",
     "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
