@@ -1,0 +1,6 @@
+{{ $structure := collections.Dictionary
+    "name"  site.Title
+    "@type" "Organization"
+    "logo"  ( partial "schema/imageobject.html" . . )
+}}
+{{ return $structure }}

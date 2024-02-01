@@ -1,0 +1,27 @@
+{{/*
+{{/*
+{{ $knowsLanguage := [ {{ range $i, $e := site.Params.knowslanguages }}{{ if $i }}, {{ end }}"{{ $e }}"{{ end }} ]
+    "alternateName" [ {{ range $i, $e := site.Params.alternatenames }}{{ if $i }}, {{ end }}"{{ $e }}"{{ end }} ]
+ */}}
+
+{{- $structure := collections.Dictionary
+
+    "@type"          "Person"
+    "givenName"      site.Params.siteowner.given_name
+    "additionalName" site.Params.siteowner.middle_name
+    "familyName"     site.Params.siteowner.family_name
+    "gender"         site.Params.gender
+    "nationality"    site.Params.nationality
+    "url"            (site.Params.ownerhomepage | safeHTML)
+
+-}}
+{{- return $structure -}}
+
+
+
+
+
+
+
+ */}}
+
