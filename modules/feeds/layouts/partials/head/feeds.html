@@ -4,6 +4,6 @@
     {{- $type := printf " type=%q" $item.MediaType.Type | safeHTMLAttr -}}
     {{- $href := printf " href=%q" $item.Permalink | safeHTMLAttr -}}
     {{- $rel := printf " rel=%q" $item.Rel | safeHTMLAttr -}}
-    <link {{- $rel -}} {{- $type -}} {{- $href -}}>
-  {{ end -}}
+<link {{- $rel -}} {{- $type -}} {{- $href -}}>
+{{ end -}}
 {{- end -}}
