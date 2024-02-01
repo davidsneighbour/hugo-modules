@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/head",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.8.7"
+    "@davidsneighbour/configurations": "^5.8.8"
   },
   "scripts": {
     "clean": "run-p clean:*",

@@ -9,7 +9,7 @@
   "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules#readme",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.8.7",
+    "@davidsneighbour/configurations": "^5.8.8",
     "@davidsneighbour/remark-config": "^5.8.7",
     "@slightlyoff/lite-vimeo": "0.1.2",
     "dotenv": "^16.4.1",
