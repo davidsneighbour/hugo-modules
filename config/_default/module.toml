@@ -1,6 +1,6 @@
 [[mounts]]
 source = "documentation/"
-target = "content/components"
+target = "content/gohugo"
 
 [[mounts]]
 source = "assets"
