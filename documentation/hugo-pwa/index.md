@@ -5,7 +5,7 @@ description: ""
 summary: ""
 date: 2022-07-28T20:50:54+07:00
 publishDate: 2022-07-28T20:50:54+07:00
-lastmod: 2023-12-31T16:21:02+07:00
+lastmod: 2024-02-01T18:15:49+07:00
 resources:
 - src: header-card.png
 categories:
@@ -85,4 +85,19 @@ Hugo itself will check on a regular base for updates. To force an update of this
 ```shell
 hugo mod get -u github.com/davidsneighbour/hugo-pwa # or
 hugo mod get -u # update all modules
+```
+
+## Troubleshooting
+
+### Testing on local Firefox installations
+
+It appears that the service worker needs to be manually started on local test installations in Firefox. Go to "More Tools" > "Web Developer Tools" > "Applications" > "Serviceworker" and start the service worker for testing.
+
+### CORS requests (eg. Google Fonts)
+
+In order to explicitly trigger a cors request, and get back a non-opaque response, you need to explicitly opt-in to CORS mode by adding the crossorigin attribute to your HTML:
+
+```html
+<link crossorigin="anonymous" rel="stylesheet" href="https://example.com/path/to/style.css">
+<img crossorigin="anonymous" src="https://example.com/path/to/image.png">
 ```
