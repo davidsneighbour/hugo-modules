@@ -14,10 +14,18 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/pwa",
   "dependencies": {
-    "@davidsneighbour/standard-version-config": "^5.8.8",
-    "@davidsneighbour/eslint-config": "^5.8.8",
     "@davidsneighbour/browserslist-config": "^5.8.8",
-    "@davidsneighbour/webpack-config": "^5.8.8"
+    "@davidsneighbour/eslint-config": "^5.8.8",
+    "@davidsneighbour/standard-version-config": "^5.8.8",
+    "@davidsneighbour/tools": "^5.8.8",
+    "@davidsneighbour/webpack-config": "^5.8.8",
+    "workbox-cacheable-response": "^6.5.4",
+    "workbox-core": "^6.5.4",
+    "workbox-expiration": "^6.5.4",
+    "workbox-precaching": "^6.5.4",
+    "workbox-routing": "^6.5.4",
+    "workbox-strategies": "^6.5.4",
+    "workbox-webpack-plugin": "^6.5.4"
   },
   "scripts": {
     "build": "npm run build:dev && npm run build:prod",
