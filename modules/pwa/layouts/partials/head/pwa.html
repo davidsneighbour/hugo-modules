@@ -13,7 +13,7 @@
     {{- range $value -}}
       {{- $size := . -}}
       {{- $icon := $icon.Resize $size }}
-<link rel="{{- $key -}}" sizes="{{- $size -}}"
+<link rel="{{- $key -}}" sizes="{{- $size -}}" {{/* clear */ -}}
       type="{{- $icon.MediaType.Type -}}" href="{{- $icon.Permalink -}}">
     {{- end -}}
   {{- end -}}
@@ -22,9 +22,11 @@
   {{- with resources.Get "favicon/favicon.svg" }}
 <link rel="icon" href="{{- .Permalink -}}" type="image/svg+xml">
   {{- end }}
-{{- $maskicon := $icon.Resize "192x192" -}}
+{{- $maskicon := $icon.Resize "192x192" }}
 <link rel="mask-icon" href="{{- $maskicon.Permalink -}}" color="{{- $config.theme_color -}}">
 <meta name="theme-color" content="{{- $config.theme_color -}}">
 {{- else -}}
   {{- warnf "No favicon defined. " -}}
 {{- end -}}
+
+{{- /* clearup */ -}}
