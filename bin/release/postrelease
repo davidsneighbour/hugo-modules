@@ -29,12 +29,7 @@ fi
 
 # Create a release on GitHub
 GITHUB_REPO=https://github.com/${GITHUB_REPOSLUG}
-TAGNAME=modules/${TAGSLUG}/v${VERSION}
-
-# Copy and add release data to documentation
-DOC_PATH="../../documentation/hugo-${TAGSLUG}/version.json"
-echo "{ \"version\": \"${VERSION}\" }" >"$DOC_PATH"
-git add "$DOC_PATH"
+TAGNAME=v${VERSION}
 
 # Update release file
 git commit -m "chore(release): update repo data files" --signoff --no-verify
@@ -45,4 +40,3 @@ git push origin main --follow-tags
 # Open release for editing
 RELEASEURL="$GITHUB_REPO/releases/edit/$TAGNAME"
 xdg-open "${RELEASEURL}" &>/dev/null
-
