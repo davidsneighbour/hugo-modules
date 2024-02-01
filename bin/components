@@ -69,8 +69,8 @@ for DIRNAME in "${COMPONENTPATH}"/*/; do
 
   sed -E "s/${find_string}/${replace_string}/" "${IMAGEPATH}"/temp2.svg >"${IMAGEPATH}"/temp.svg
 
-  inkscape "${TEMPIMAGEPATH}" --export-filename="${DOCUMENTATIONPATH}"/hugo-"${DIR}"/header-card.png &>/dev/null
-  optipng -strip all -quiet -o7 "${DOCUMENTATIONPATH}"/hugo-"${DIR}"/header-card.png
+  inkscape "${TEMPIMAGEPATH}" --export-filename="${DOCUMENTATIONPATH}"/"${DIR}"/header-card.png &>/dev/null
+  optipng -strip all -quiet -o7 "${DOCUMENTATIONPATH}"/"${DIR}"/header-card.png
   rm -f "${TEMPIMAGEPATH}"
 
 done
