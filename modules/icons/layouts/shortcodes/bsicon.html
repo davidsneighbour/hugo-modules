@@ -1,2 +1,2 @@
-{{- $value := .Get 0 -}}
-{{- partials.Include "bsicon.html" $value $value -}}
+{{- $options := dict "icon" (.Get 0) -}}
+{{- partials.Include "bsicon.html" $options -}}

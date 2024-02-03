@@ -1,8 +1,9 @@
-{{- $icons :=  page.Scratch.Get "icons" | default slice -}}
+{{- $icons :=  page.Scratch.Get "icons" | default dict -}}
+{{- partial "debugprint.html" $icons -}}
 <svg class="d-none" version="2.0" aria-hidden="true">
   <defs>
-    {{- range $icons -}}
-      {{- . | safeHTML -}}
-    {{- end -}}
+    {{- range $key, $value := $icons }}
+{{- $value | safeHTML -}}
+    {{ end -}}
   </defs>
 </svg>

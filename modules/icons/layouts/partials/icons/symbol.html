@@ -6,4 +6,4 @@
 {{- $replacement := printf "<symbol %s " $replaceId -}}
 {{- $content = replace $content "<svg " $replacement 1 -}}
 {{- $content = replace $content "</svg>" "</symbol>" 1 -}}
-{{- page.Scratch.Add "icons" (slice $content) -}}
+{{- page.Scratch.SetInMap "icons" $iconname $content -}}

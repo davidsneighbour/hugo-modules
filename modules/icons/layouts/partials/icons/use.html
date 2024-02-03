@@ -1,5 +1,5 @@
 {{- $iconname := .icon -}}
-{{- partial "icons/symbol.html" . -}}
+{{- partial "icons/symbol.html" . . -}}
 <svg{{ with .width }} width="{{- . -}}"{{ end }}{{ with .height }} height="{{- . -}}"{{ end }}
   version="2.0" class="icon icon-{{- $iconname -}} {{ .class }}">
   <use href="#{{- $iconname -}}" />
