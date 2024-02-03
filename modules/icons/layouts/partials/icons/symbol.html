@@ -1,9 +1,0 @@
-{{- $iconname := .icon | default "dash-square-dotted" -}}
-{{- $iconpath := printf "node_modules/bootstrap-icons/icons/%s.svg" $iconname -}}
-{{- $content := "" -}}
-{{- $content = os.ReadFile $iconpath | safeHTML -}}
-{{- $replaceId := printf "id=%q" $iconname | safeHTMLAttr -}}
-{{- $replacement := printf "<symbol %s " $replaceId -}}
-{{- $content = replace $content "<svg " $replacement 1 -}}
-{{- $content = replace $content "</svg>" "</symbol>" 1 -}}
-{{- page.Scratch.SetInMap "icons" $iconname $content -}}

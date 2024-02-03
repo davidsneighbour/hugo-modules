@@ -3,6 +3,7 @@
 {{- $width := 20 -}}
 {{- $height := 20 -}}
 {{- $class := "" -}}
+{{- $type := "bs" -}}
 
 {{- if in $configtype "map" -}}
   {{- $iconname = .icon -}}
@@ -15,6 +16,6 @@
 
 {{- $options := dict "icon" $iconname "width" $width
                      "height" $height "class" $class -}}
-<span class="icon--bs icon--{{- $iconname -}}">
+<span class="icon--{{- $type }} icon--{{- $iconname -}}">
   {{- partial "icons/use.html" $options -}}
 </span>
