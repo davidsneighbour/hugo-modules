@@ -4,8 +4,8 @@ github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.0 h1:4TZhXQQ3P
 github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.0/go.mod h1:mMpTa/CPuBifHgzsHWORFM32ICKhDKjREQ1hKPk3oeU=
 github.com/davidsneighbour/hugo-modules/modules/hooks v1.2024.1 h1:NiLbUFMJ/xk5gHw9rKm+pyjh7fcfb3Wsx8D7FFp811I=
 github.com/davidsneighbour/hugo-modules/modules/hooks v1.2024.1/go.mod h1:JXvDMNx+6XC22EoBq+4ttPBMZJZUd4r5oCS2IRS/J0s=
-github.com/davidsneighbour/hugo-modules/modules/icons v1.2024.2 h1:mG7G2nts6l6T2ZBpdVpIfE3VjGcBOuYyKlPAQEcBi+o=
-github.com/davidsneighbour/hugo-modules/modules/icons v1.2024.2/go.mod h1:BQHz25uzhgvoMJyydRTLXp3vjjWTYZjk1vdWmEIxPKA=
+github.com/davidsneighbour/hugo-modules/modules/icons v1.2024.3 h1:MbO9fY3J0B/Kqj5XmNH8/Rd2ItKjRL0bPh7w7FXiNz8=
+github.com/davidsneighbour/hugo-modules/modules/icons v1.2024.3/go.mod h1:M74gRjYQzpaH8dXdpOUgdlMFbI+hQux55fJbdvhqFwU=
 github.com/tabler/tabler-icons v2.47.0+incompatible h1:Q1zk2ZQHXZK2vsfbMKeeee3vUypEpqVUCHmuz4XLdmY=
 github.com/tabler/tabler-icons v2.47.0+incompatible/go.mod h1:Ap75CRdhXxprnUnPlUCRLvJ2pIFNqwxIipj3GfD6XHE=
 github.com/tailwindlabs/heroicons v2.1.1+incompatible h1:lcZBlvCi4dkso6plabtqxXSZ55mULxnsmA/52tib7q8=
