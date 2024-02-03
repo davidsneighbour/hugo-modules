@@ -6,7 +6,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -24,7 +24,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -42,7 +42,7 @@ updates:
   - package-ecosystem: "gitsubmodule"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -60,7 +60,7 @@ updates:
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -78,7 +78,25 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/aesop/"
+    schedule:
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -96,7 +114,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/auditor/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -114,7 +132,43 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/debug/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/devtools/"
+    schedule:
+      interval: "daily"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/errors/"
+    schedule:
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -132,7 +186,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/feeds/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -150,7 +204,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/functions/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -168,7 +222,25 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/giscus/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/github/"
+    schedule:
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -186,7 +258,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/head/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -204,25 +276,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/hooks/"
     schedule:
-      interval: "weekly"
-      day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
-    assignees:
-      - "davidsneighbour"
-    reviewers:
-      - "davidsneighbour"
-    target-branch: "main"
-    open-pull-requests-limit: 999
-    pull-request-branch-name:
-      separator: "/"
-    labels:
-      - "type:dependencies"
-
-  - package-ecosystem: "gomod"
-    directory: "/modules/humans/"
-    schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -240,7 +294,61 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/icons/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/iliad/"
+    schedule:
+      interval: "daily"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/internals/"
+    schedule:
+      interval: "daily"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/modder/"
+    schedule:
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -258,7 +366,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/netlification/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -276,7 +384,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/opensearch/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -294,7 +402,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/pictures/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -312,7 +420,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/publisher/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -330,7 +438,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/pwa/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -348,7 +456,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/renderhooks/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -366,7 +474,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/robots/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -384,7 +492,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/schema/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -402,7 +510,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/security/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -420,7 +528,43 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/seo/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/shortcodes-browserwindow/"
+    schedule:
+      interval: "daily"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/shortcode-filtercontainer/"
+    schedule:
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -438,7 +582,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/shortcodes/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -456,7 +600,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/sitemap/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -474,7 +618,25 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/social/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+      day: "friday"
+      time: "18:00"
+      timezone: "Asia/Bangkok"
+    assignees:
+      - "davidsneighbour"
+    reviewers:
+      - "davidsneighbour"
+    target-branch: "main"
+    open-pull-requests-limit: 999
+    pull-request-branch-name:
+      separator: "/"
+    labels:
+      - "type:dependencies"
+
+  - package-ecosystem: "gomod"
+    directory: "/modules/youtube/"
+    schedule:
+      interval: "daily"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
