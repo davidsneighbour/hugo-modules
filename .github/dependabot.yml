@@ -6,7 +6,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -24,7 +24,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -42,7 +42,7 @@ updates:
   - package-ecosystem: "gitsubmodule"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -60,7 +60,7 @@ updates:
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -96,7 +96,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/auditor/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -114,7 +114,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/debug/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -132,7 +132,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/feeds/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -150,7 +150,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/functions/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -168,7 +168,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/giscus/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -186,7 +186,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/head/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -204,7 +204,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/hooks/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -222,7 +222,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/humans/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -240,7 +240,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/icons/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -258,7 +258,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/netlification/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -276,7 +276,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/opensearch/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -294,7 +294,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/pictures/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -312,7 +312,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/publisher/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -330,7 +330,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/pwa/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -348,7 +348,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/renderhooks/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -366,7 +366,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/robots/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -384,7 +384,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/schema/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -402,7 +402,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/security/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -420,7 +420,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/seo/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -438,7 +438,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/shortcodes/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -456,7 +456,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/sitemap/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
@@ -474,7 +474,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/social/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "18:00"
       timezone: "Asia/Bangkok"
