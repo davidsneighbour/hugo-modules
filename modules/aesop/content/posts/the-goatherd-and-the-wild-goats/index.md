@@ -1,11 +1,5 @@
 ---
-
-# This is the hugo-garuda frontmatter template.
-# Remove comments and items you won't need in your daily work with Hugo.
-# Copy a smaller version of this file to /archetypes/default.md in your
-# own repository to overwrite this version.
-
-# default front matter that you probably always need:
+todo: true
 title: "The Goatherd and the Wild Goats"
 description: ""
 draft: true
@@ -15,23 +9,17 @@ url: /2021/01/the-goatherd-and-the-wild-goats
 tags:
     - tag1
     - tag2
-# set to false to hide comments on this page
-# remove this if you want to show comments for less clutter
 hide_comments: false
 hide_sharebuttons: false
 hide_related: false
-# tbd.
 draft: true
-# tbd.
 todo: true
-# tbd.
 linktitle: "use for linking to this post"
-# tbd.
 resources:
     - src: "file"
       name: "name"
       title: "title"
 ---
-A GOATHERD, driving his flock from their pasture at eventide, found some Wild Goats mingled among them, and shut them up together with his own for the night. The next day it snowed very hard, so that he could not take the herd to their usual feeding places, but was obliged to keep them in the fold. He gave his own goats just sufficient food to keep them alive, but fed the strangers more abundantly in the hope of enticing them to stay with him and of making them his own. When the thaw set in, he led them all out to feed, and the Wild Goats scampered away as fast as they could to the mountains. The Goatherd scolded them for their ingratitude in leaving him, when during the storm he had taken more care of them than of his own herd. One of them, turning about, said to him: “That is the very reason why we are so cautious; for if you yesterday treated us better than the Goats you have had so long, it is plain also that if others came after us, you would in the same manner prefer them to ourselves.”
 
+A GOATHERD, driving his flock from their pasture at eventide, found some Wild Goats mingled among them, and shut them up together with his own for the night. The next day it snowed very hard, so that he could not take the herd to their usual feeding places, but was obliged to keep them in the fold. He gave his own goats just sufficient food to keep them alive, but fed the strangers more abundantly in the hope of enticing them to stay with him and of making them his own. When the thaw set in, he led them all out to feed, and the Wild Goats scampered away as fast as they could to the mountains. The Goatherd scolded them for their ingratitude in leaving him, when during the storm he had taken more care of them than of his own herd. One of them, turning about, said to him: “That is the very reason why we are so cautious; for if you yesterday treated us better than the Goats you have had so long, it is plain also that if others came after us, you would in the same manner prefer them to ourselves.”
 Old friends cannot with impunity be sacrificed for new ones.

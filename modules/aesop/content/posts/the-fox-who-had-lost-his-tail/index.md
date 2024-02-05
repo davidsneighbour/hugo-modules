@@ -1,11 +1,5 @@
 ---
-
-# This is the hugo-garuda frontmatter template.
-# Remove comments and items you won't need in your daily work with Hugo.
-# Copy a smaller version of this file to /archetypes/default.md in your
-# own repository to overwrite this version.
-
-# default front matter that you probably always need:
+todo: true
 title: "The Fox Who Had Lost His Tail"
 description: ""
 draft: true
@@ -15,21 +9,16 @@ url: /2021/01/the-fox-who-had-lost-his-tail
 tags:
     - tag1
     - tag2
-# set to false to hide comments on this page
-# remove this if you want to show comments for less clutter
 hide_comments: false
 hide_sharebuttons: false
 hide_related: false
-# tbd.
 draft: true
-# tbd.
 todo: true
-# tbd.
 linktitle: "use for linking to this post"
-# tbd.
 resources:
     - src: "file"
       name: "name"
       title: "title"
 ---
+
 A FOX caught in a trap escaped, but in so doing lost his tail. Thereafter, feeling his life a burden from the shame and ridicule to which he was exposed, he schemed to convince all the other Foxes that being tailless was much more attractive, thus making up for his own deprivation. He assembled a good many Foxes and publicly advised them to cut off their tails, saying that they would not only look much better without them, but that they would get rid of the weight of the brush, which was a very great inconvenience. One of them interrupting him said, “If you had not yourself lost your tail, my friend, you would not thus counsel us.”
