@@ -11,7 +11,7 @@
   "dependencies": {
     "@davidsneighbour/configurations": "^5.8.11",
     "@davidsneighbour/markdownlint-config": "^5.8.11",
-    "@davidsneighbour/remark-config": "^5.8.11",
+    "@davidsneighbour/remark-config": "^5.8.18",
     "@slightlyoff/lite-vimeo": "0.1.2",
     "dotenv": "^16.4.1",
     "workbox-cacheable-response": "7.0.0",
