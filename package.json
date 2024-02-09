@@ -37,8 +37,8 @@
   },
   "workspaces": [
     "modules/auditor",
-    "modules/content-aesop",
-    "modules/content-iliad",
+    "modules/aesop",
+    "modules/illiad",
     "modules/debug",
     "modules/errors",
     "modules/feeds",
@@ -67,5 +67,8 @@
   ],
   "stylelint": {
     "extends": "@davidsneighbour/stylelint-config"
+  },
+  "devDependencies": {
+    "lerna": "^8.1.2"
   }
 }
