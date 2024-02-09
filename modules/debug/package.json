@@ -22,7 +22,7 @@
   "devDependencies": {
     "@davidsneighbour/bootstrap-config": "^5.8.7",
     "@davidsneighbour/webpack-config": "^5.8.7",
-    "@types/node": "^20.11.6",
+    "@types/node": "^20.11.17",
     "@types/webpack": "^5.28.5",
     "node-sass": "^9.0.0",
     "sass-loader": "^14.0.0",
