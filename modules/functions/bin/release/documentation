@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Define the paths for Folder A and Folder B
+folderA="layouts/partials/func/"
+folderB="documentation/"
+
+# Iterate over each file in Folder A
+for file in "$folderA"*.html; do
+  # Extract the filename without the extension
+  filename=$(basename -- "$file")
+  baseName="${filename%.*}"
+  # Convert basename to lowercase for the markdown file
+  lowerCaseBaseName=$(echo "$baseName" | tr '[:upper:]' '[:lower:]')
+
+  # Check if the corresponding markdown file exists in Folder B
+  if [ ! -f "$folderB$lowerCaseBaseName.md" ]; then
+    # If the file does not exist, create a markdown file with the template
+    echo "Creating documentation for $baseName"
+
+    # Define the template with the placeholder for the function name
+    template="---
+title: $baseName
+summary: \"\"
+layout: documentation
+weight: 100
+---
+
+To be written.
+
+"
+
+    # Create the markdown file and insert the template
+    echo "$template" >"$folderB$lowerCaseBaseName.md"
+  else
+    echo "Documentation already exists for $baseName"
+  fi
+done
+
+echo "Documentation check complete."
