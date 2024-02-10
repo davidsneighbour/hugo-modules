@@ -1,0 +1,25 @@
+{{- $withSummary := false -}}
+{{- $section := "" -}}
+
+{{- if reflect.IsMap . -}}
+  {{- $section = .section -}}
+  {{- $withSummary = .summary | default false -}}
+{{- else -}}
+  {{- $section = . -}}
+{{- end -}}
+
+<ul>
+  {{ $sectionHref := printf "/%s/" $section -}}
+  <li><a href="{{- $sectionHref -}}">Overview</a></li>
+  {{- range (site.GetPage $section).Pages.ByWeight -}}
+  <li>
+    <a href="{{- .Permalink -}}">{{- .Title }}</a>
+    {{- if eq true $withSummary -}}
+      {{- with .Summary }}
+        &mdash;
+        {{ . | transform.Markdownify -}}
+      {{- end -}}
+    {{- end -}}
+  </li>
+  {{- end -}}
+</ul>
