@@ -1,10 +1,8 @@
 ---
-title: getConfiguration
+title: getJavascriptByBuild
 summary: ""
 layout: documentation
 weight: 100
 ---
-
-To be written.
 
 

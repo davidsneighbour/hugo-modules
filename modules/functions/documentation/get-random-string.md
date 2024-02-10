@@ -1,10 +1,8 @@
 ---
-title: getInner
+title: getRandomString
 summary: ""
 layout: documentation
 weight: 100
 ---
-
-To be written.
 
 

@@ -1,10 +1,8 @@
 ---
-title: getReadingTime
+title: getConfiguration
 summary: ""
 layout: documentation
 weight: 100
 ---
-
-To be written.
 
 

@@ -1,10 +1,8 @@
 ---
-title: getResource
+title: getAttributesFromTitle
 summary: ""
 layout: documentation
 weight: 100
 ---
-
-To be written.
 
 

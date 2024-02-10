@@ -4,16 +4,22 @@
 folderA="layouts/partials/func/"
 folderB="documentation/"
 
+# Function to convert camelCase to dash-separated
+convert_camel_to_dash() {
+  echo "$1" | sed -r 's/([A-Z])/-\L\1/g' | sed 's/^-//'
+}
+
 # Iterate over each file in Folder A
 for file in "$folderA"*.html; do
   # Extract the filename without the extension
   filename=$(basename -- "$file")
   baseName="${filename%.*}"
-  # Convert basename to lowercase for the markdown file
-  lowerCaseBaseName=$(echo "$baseName" | tr '[:upper:]' '[:lower:]')
+
+  # Convert camelCase baseName to dash-separated
+  dashSeparatedBaseName=$(convert_camel_to_dash "$baseName")
 
   # Check if the corresponding markdown file exists in Folder B
-  if [ ! -f "$folderB$lowerCaseBaseName.md" ]; then
+  if [ ! -f "$folderB$dashSeparatedBaseName.md" ]; then
     # If the file does not exist, create a markdown file with the template
     echo "Creating documentation for $baseName"
 
@@ -25,12 +31,10 @@ layout: documentation
 weight: 100
 ---
 
-To be written.
-
 "
 
     # Create the markdown file and insert the template
-    echo "$template" >"$folderB$lowerCaseBaseName.md"
+    echo "$template" >"$folderB$dashSeparatedBaseName.md"
   else
     echo "Documentation already exists for $baseName"
   fi
