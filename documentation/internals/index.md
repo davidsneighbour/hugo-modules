@@ -4,7 +4,7 @@ linkTitle: hugo-internals
 description: This module attempts to replace internal templates used by Hugo with custom ones and other modules and plugins that add identical features more sophisticated or up-to-date. Internal templates of Hugo are highly opiniated, often out of time and not suitable for use in the production environment of a website. The layouts in this repo and it's modules replace them with our own better setup.
 date: 2022-07-31T20:50:06+07:00
 publishDate: 2022-07-31T20:50:06+07:00
-lastmod: 2024-02-01T19:45:21+07:00
+lastmod: 2024-02-11T20:40:20+07:00
 resources:
 - src: header-card.png
 categories:
@@ -32,7 +32,7 @@ enableRobotsTXT = true
 
 ```
 
-Read more about detailed setup options at [the documentation](https://kollitsch.dev/components/hugo-robots/).
+Read more about detailed setup options at [the documentation](https://kollitsch.dev/gohugo/robots/).
 
 ## [hugo-sitemap](https://github.com/davidsneighbour/hugo-sitemap) --- Add a configurable sitemap
 

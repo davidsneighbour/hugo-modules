@@ -1,6 +1,6 @@
 ################################################################################
 # hugo-pictures
-# @see https://kollitsch.dev/components/hugo-pictures
+# @see https://kollitsch.dev/gohugo/pictures
 ################################################################################
 [dnb.pictures]
 default_image = "images/og_sitewide.png"

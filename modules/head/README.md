@@ -6,4 +6,4 @@ This [GoHugo](https://gohugo.io) theme component solves the old question, "What 
 
 If you want to independently of this module learn about all that is possible in the `<head>` tag, then have a look at [htmlhead.dev](https://htmlhead.dev/)
 
-Read more about it [in the documentation](https://kollitsch.dev/components/hugo-head/).
+Read more about it [in the documentation](https://kollitsch.dev/gohugo/head/).

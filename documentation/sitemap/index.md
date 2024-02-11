@@ -5,7 +5,7 @@ description: Elevate your website's sitemap with a versatile Hugo theme componen
 summary: This is a Hugo theme component with layouts to add a configurable sitemap to your website. Hugo itself has internal templates that add sitemaps, but this component extends this by providing setup options per page and keeping up-to-date with current SEO practices.
 date: 2024-01-14T18:11:57+07:00
 publishDate: 2022-07-19T17:40:35+07:00
-lastmod: 2024-02-01T19:48:46+07:00
+lastmod: 2024-02-11T20:40:20+07:00
 resources:
 - src: header-card.png
 categories:
@@ -48,7 +48,7 @@ path = "github.com/davidsneighbour/hugo-modules/modules/sitemap"
 
 This module works out of the box and there is no need for any configuration. Once you ran `hugo` you can find the file `sitemap.xml` in your `public` directory. This is the file you want to submit to search engines.
 
-If you are using the [Robots component](https://kollitsch.dev/components/hugo-robots/), then your resulting `robots.txt` includes [a pointer to the sitemap file](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap?hl=en#addsitemap) as well.
+If you are using the [Robots component](https://kollitsch.dev/gohugo/robots/), then your resulting `robots.txt` includes [a pointer to the sitemap file](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap?hl=en#addsitemap) as well.
 
 ### Exclude a page from sitemap
 

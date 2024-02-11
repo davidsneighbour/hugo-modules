@@ -8,4 +8,4 @@ This is a Hugo theme component to add the Giscus comment system to static websit
 
 **Note:** Giscus is still under active development. GitHub is also still actively developing Discussions and its API. Thus, some features of Giscus may break or change over time. We will keep an eye out for any updates and implement them here in time.
 
-Read more about it [in the documentation](https://kollitsch.dev/components/hugo-giscus/).
+Read more about it [in the documentation](https://kollitsch.dev/gohugo/giscus/).
