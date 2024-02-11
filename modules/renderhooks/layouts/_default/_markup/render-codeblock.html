@@ -83,7 +83,7 @@
     data-clipboard-target="#{{- $slug -}}"
     data-bs-toggle="tooltip" data-bs-placement="top"
     data-bs-title="Copy code to clipboard">
-    {{- partials.IncludeCached "bsicon.html" "clipboard" "clipboard" -}}
+    {{- partials.Include "icon.html" "clipboard" -}}
   </button>
 
   {{- if eq $type "single" }}

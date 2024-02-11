@@ -20,10 +20,10 @@ usage sample:
     {{ .Text | safeHTML }}
   	<span class="heading-tools">
       <a href="#{{ .Anchor | safeURL }}">
-        {{- partials.IncludeCached "bsicon.html" "bookmark" "bookmark" -}}
+        {{- partials.Include "icon.html" "bookmark" -}}
       </a>
       <a href="#" class="is--back-to-top">
-        {{- partials.IncludeCached "bsicon.html" "caret-up-fill" "caret-up-fill" -}}
+        {{- partials.Include "icon.html" "caret-up-fill" -}}
       </a>
     </span>
   </h{{ .Level }}>

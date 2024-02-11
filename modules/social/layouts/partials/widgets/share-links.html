@@ -43,7 +43,7 @@
 
   {{- with site.Params.dnb.social.sharebuttons.icons | default true -}}
     <span aria-hidden="true" class="icon">
-      {{- partials.IncludeCached "bsicon.html" $icon $icon -}}
+      {{- partials.Include "icon.html" $icon -}}
     </span>
   {{- end -}}
   <a

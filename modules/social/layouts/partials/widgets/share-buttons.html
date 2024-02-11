@@ -45,9 +45,9 @@
     >
       {{- with site.Params.dnb.social.sharebuttons.icons -}}
         {{- if eq . true -}}
-          {{- partials.IncludeCached "bsicon.html" $icon $icon -}}
+          {{- partials.Include "icon.html" $icon -}}
           <span aria-hidden="true" class="icon">
-            {{- partials.IncludeCached "bsicon.html" $icon $icon -}}
+            {{- partials.Include "icon.html" $icon -}}
           </span>
         {{- end -}}
       {{- end -}}
