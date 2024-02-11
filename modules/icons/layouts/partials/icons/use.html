@@ -1,4 +1,8 @@
-{{- $config := index site.Params.dnb.icons site.Params.dnb.icons.default -}}
+{{- $icontype := site.Params.dnb.icons.default -}}
+{{- with .type -}}
+  {{- $icontype = . -}}
+{{- end -}}
+{{- $config := index site.Params.dnb.icons $icontype -}}
 {{- $iconname := .icon | default "dash-square-dotted" -}}
 <svg{{ with .width }} width="{{- . -}}"{{ end }}{{ with .height }} height="{{- . -}}"{{ end }}
   version="2.0" class="icon icon-{{- $iconname }} {{ .class -}}">

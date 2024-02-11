@@ -2,29 +2,30 @@
 
 @example
 
-{{- partials.Include "icon.html" (dict "type" "bs" "icon" "cash") -}}
-{{< icon type="bs" icon="cash" >}}
+{{- partials.Include "icon.html" (dict "type" "bootstrap" "icon" "cash") -}}
+{{< icon type="bootstrap" icon="cash" >}}
 
 */ -}}
 
-{{- $configtype := printf "%T" . -}}
 {{- $iconname := "" -}}
 {{- $width := 20 -}}
 {{- $height := 20 -}}
 {{- $class := "" -}}
-{{- $type := "bs" -}}
+{{- $type := "bootstrap" -}}
 
-{{- if in $configtype "map" -}}
+{{- if reflect.IsMap . -}}
   {{- $iconname = .icon -}}
   {{- with .width -}}{{ $width = . }}{{- end -}}
   {{- with .height -}}{{ $height = . }}{{- end -}}
   {{- with .class -}}{{ $class = . }}{{- end -}}
+  {{- with .type -}}{{ $type = . }}{{- end -}}
 {{- else -}}
   {{- $iconname = . -}}
 {{- end -}}
 
 {{- $options := dict "icon" $iconname "width" $width
-                     "height" $height "class" $class -}}
+                     "height" $height "class" $class
+                     "type" $type -}}
 <span class="icon--{{- $type }} icon--{{- $iconname -}}">
-  {{- partial "icons/use.html" $options -}}
+  {{- partials.Include "icons/use.html" $options -}}
 </span>
