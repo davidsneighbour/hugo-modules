@@ -1,6 +1,6 @@
 {
   "name": "@davidsneighbour/hugo-devtools",
-  "version": "1.2023.2",
+  "version": "1.2024.0",
   "license": "MIT",
   "description": "Loading all of David's Neighbour's development tools for GoHugo at onces",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
