@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-giscus",
   "description": "A Hugo theme component to add the Giscus comment system to static websites.",
-  "version": "1.2023.3",
+  "version": "1.2024.0",
   "license": "MIT",
   "private": true,
   "repository": {
@@ -17,6 +17,7 @@
     "@davidsneighbour/configurations": "^5.8.18"
   },
   "scripts": {
+    "build": "",
     "clean": "run-p clean:*",
     "clean:hugo": "rimraf public resources",
     "clean:npm": "rimraf node_modules package-lock.json",
