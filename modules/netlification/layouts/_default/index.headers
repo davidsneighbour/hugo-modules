@@ -1,5 +1,3 @@
-{{ $t := debug.Timer "netlification-index.headers" }}
-
 {{/* notify of deprecation */}}
 {{- $deprecatedConf := $.Site.Data.dnb.netlification.config -}}
 {{- with $deprecatedConf -}}
@@ -137,5 +135,3 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
-
-{{ $t.Stop }}

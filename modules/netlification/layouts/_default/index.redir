@@ -1,4 +1,3 @@
-{{- $t := debug.Timer "netlification-index.redir" -}}
 ################################################################################
 # Netlification v{{ site.Data.dnb.netlification.build.version }}
 ################################################################################
@@ -21,4 +20,3 @@
 {{- /* add a 404 redirect to 404.html */ -}}
 {{ "/*" | printf "%-40s" }} {{ "/404" | printf "%-40s" }} 404
 
-{{ $t.Stop }}
