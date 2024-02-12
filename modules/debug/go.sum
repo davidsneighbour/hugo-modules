@@ -1,4 +1,4 @@
 github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.1 h1:1KvjWVXMTqyEls1m+1s05GgFRgfy9V1+Y1LUjcfd0tY=
 github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.1/go.mod h1:y7hfQJQUUQNeOtprPVvfLp82KhwsS1ZuxU7/bEE6u1w=
-github.com/davidsneighbour/hugo-modules/modules/hooks v1.2024.1 h1:NiLbUFMJ/xk5gHw9rKm+pyjh7fcfb3Wsx8D7FFp811I=
-github.com/davidsneighbour/hugo-modules/modules/hooks v1.2024.1/go.mod h1:JXvDMNx+6XC22EoBq+4ttPBMZJZUd4r5oCS2IRS/J0s=
+github.com/davidsneighbour/hugo-modules/modules/hooks v1.2024.2 h1:SWPLBNGnmC8uHY1Gjun+//V+qZmiVRDquC3OT8sfH2c=
+github.com/davidsneighbour/hugo-modules/modules/hooks v1.2024.2/go.mod h1:b8C+54FiLLxvcuZbLSK95LPDp5FdzPGn5F2Z0ofNEIA=
