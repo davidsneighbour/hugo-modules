@@ -43,3 +43,8 @@ days = 0
 
 # cloudflare specific settings
 [dnb.netlification.cloudflare]
+
+
+[[dnb.hooks.items.body-end]]
+file = "body-end"
+cached = false
