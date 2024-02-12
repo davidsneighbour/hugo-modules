@@ -5,7 +5,7 @@ description: ""
 summary: ""
 date: 2022-07-27T21:23:50+07:00
 publishDate: 2022-07-27T21:23:50+07:00
-lastmod: 2024-02-01T19:44:50+07:00
+lastmod: 2024-02-12T17:50:40+07:00
 resources:
 - src: header-card.png
 categories:
@@ -21,17 +21,11 @@ aliases:
 ---
 
 - [Key Features](#key-features)
-- [Some things you need to know](#some-things-you-need-to-know)
-- [Installing](#installing)
-- [Updating](#updating)
 - [Hook principle](#hook-principle)
 - [Call hooks in layouts](#call-hooks-in-layouts)
   - [Simple Calls](#simple-calls)
   - [Extended Use (adding parameters to the call)](#extended-use-adding-parameters-to-the-call)
 - [Configuration](#configuration)
-- [Hooks for developers](#hooks-for-developers)
-  - [Directory based](#directory-based)
-  - [File based](#file-based)
   - [Module based hooks (plugin hooks)](#module-based-hooks-plugin-hooks)
 - [Best Practices](#best-practices)
   - [RFC: "Global" Reusable Hooks](#rfc-global-reusable-hooks)
@@ -53,76 +47,21 @@ You name it. `hugo-hooks` is what you need. This module adds these hooks to your
 - **Caching:** Hooks can be cached for improved performance, reducing load times and enhancing user experience.
 - **Ease of Integration:** Hooks can be easily added to other plugins or themes through configuration settings, facilitating seamless integration and expansion of functionality. This feature allows for greater interoperability and adaptability within the Hugo ecosystem, enabling developers to enhance their themes or plugins with additional capabilities without extensive coding.
 
-<!--- THINGSTOKNOW BEGIN --->
-
-## Some things you need to know
-
-These are notes about conventions in this README.md. You might want to make yourself acquainted with them if this is your first visit.
-
-<details>
-
-<summary>:heavy_exclamation_mark: A note about proper configuration formatting. Click to expand!</summary>
-
-The following documentation will refer to all configuration parameters in TOML format and with the assumption of a configuration file for your project at `/config.toml`. There are various formats of configurations (TOML/YAML/JSON) and multiple locations your configuration can reside (config file or config directory). Note that in the case of a config directory the section headers of all samples need to have the respective section title removed. So `[params.dnb.something]` will become `[dnb.something]` if the configuration is done in the file `/config/$CONFIGNAME/params.toml`.
-
-</details>
-<!--- THINGSTOKNOW END --->
-
-<!--- INSTALLUPDATE BEGIN --->
-
-## Installing
-
-First, enable modules in your own repository if you have not already done so:
-
-```bash
-hugo mod init github.com/username/reponame
-```
-
-Then add this module to your required modules in `config.toml`.
-
-```toml
-[[module.imports]]
-path = "github.com/davidsneighbour/hugo-modules/modules/hooks"
-disable = false
-ignoreConfig = false
-ignoreImports = false
-```
-
-The next time you run `hugo` it will download the latest version of the module.
-
-## Updating
-
-```bash
-# update this module
-hugo mod get -u github.com/davidsneighbour/hugo-modules/modules/hooks
-# update to a specific version
-hugo mod get -u github.com/davidsneighbour/hugo-modules/modules/hooks@v1.0.0
-# update all modules recursively over the whole project
-hugo mod get -u ./...
-```
-<!--- INSTALLUPDATE END --->
-
 ## Hook principle
 
-Theme users save hooks to the `layouts/partials/hooks` directory. There are no errors if a hook is not found (some themes or modules might provide feedback if their hook is unused and usage of them is required to get important features working).
+Theme users save hooks to the `layouts/partials/hooks` directory. There are no errors if a hook is not found (some themes or modules might provide feedback if their hook is unused and usage of them is required or encouraged to get important features working).
 
-If a hook has an added `-`cached` to its name then it will be cached and on re-calls be re-used. Check the documentation of the module or theme that introduces the hook to see if it makes sense to cache that specific hook.
+Hooks need to be configured in the `params` section of the configuration:
 
-For example:
-
-```golang
-{{ partial "func/hook.html" "head-start" }}
+```toml
+[[dnb.hooks.items.hookname]]
+file = "filename without .html extension"
+cached = false
 ```
 
-will load `layouts/partials/hooks/head-start.html` and `layouts/partials/hooks/head-start-cached.html`. The non-cached variant will be loaded **BEFORE** the cached one.
+`hookname` is to be replaced with the hook name and `file` denotes the filename within the `layouts/partials/hooks` directory.
 
-You can force caching by loading the hook via `partialCached` instead.
-
-```golang
-{{ partialCached "func/hook.html" "head-start" "cachename"}}
-```
-
-These hooks currently **do not return any values**, they execute the layouts. To read more about ideas to extend the hooks to return values read [#2 RFC: Hooks that return values](https://github.com/davidsneighbour/hugo-hooks/issues/2).
+Hooks **do not return any values**, they execute the layouts. To read more about ideas to extend the hooks to return values read [#2 RFC: Hooks that return values](https://github.com/davidsneighbour/hugo-modules/issues/14).
 
 ## Call hooks in layouts
 
@@ -167,26 +106,13 @@ disable_messages = [
 
 The messages system also uses the methods implemented in `hugo-debug` to silence based on verbosity level.
 
-## Hooks for developers
-
-Implementing the hooks system in your theme or module is easy. There are several ways the system looks for hooks. The following main order is kept:
-
-- hooks in a folder (`layouts/partials/hooks/hook-name/*.html`)
-- cached hooks in a folder (`layouts/partials/hooks/hook-name/*-cached.html`)
-- hook in a file (`layouts/partials/hooks/hook-name.html`)
-- cached hook in a file (`layouts/partials/hooks/hook-name-cached.html`)
-
-### Directory based
-
-### File based
-
 ### Module based hooks (plugin hooks)
 
 In params.toml (or under the [params] section of the configuration) add a table array as such:
 
 ```toml
-[[dnb.hooks.hookname]]
-partial = "partial path"
+[[dnb.hooks.items.hookname]]
+file = "partial path"
 weight = "integer"
 cached = "boolean/string"
 ```
