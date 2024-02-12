@@ -24,16 +24,19 @@
 {{- with $config.items -}}
   {{/* @todo fix weighting of hooks */}}
   {{/* @todo fix logging output */}}
-  {{- with (index . $context.hook) -}}
-    {{- range . -}}
-      {{- $partialHook := fmt.Printf "partials/hooks/%s.html" .file -}}
-      {{- if templates.Exists $partialHook -}}
-        {{- if eq true (.cached | default false) -}}
-          {{- partials.IncludeCached $partialHook $context -}}
-          {{- $loaded = true -}}
-        {{- else -}}
-          {{- partials.Include $partialHook $context -}}
-          {{- $loaded = true -}}
+  {{/* @todo document this mess */}}
+  {{- range $key, $hooks := . -}}
+    {{- with (index $hooks $context.hook) -}}
+      {{- range . -}}
+        {{- $partialHook := fmt.Printf "partials/hooks/%s.html" .file -}}
+        {{- if templates.Exists $partialHook -}}
+          {{- if eq true (.cached | default false) -}}
+            {{- partials.IncludeCached $partialHook $context -}}
+            {{- $loaded = true -}}
+          {{- else -}}
+            {{- partials.Include $partialHook $context -}}
+            {{- $loaded = true -}}
+          {{- end -}}
         {{- end -}}
       {{- end -}}
     {{- end -}}

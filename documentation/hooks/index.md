@@ -5,7 +5,7 @@ description: ""
 summary: ""
 date: 2022-07-27T21:23:50+07:00
 publishDate: 2022-07-27T21:23:50+07:00
-lastmod: 2024-02-12T17:50:40+07:00
+lastmod: 2024-02-12T22:41:45+07:00
 resources:
 - src: header-card.png
 categories:
@@ -54,7 +54,7 @@ Theme users save hooks to the `layouts/partials/hooks` directory. There are no e
 Hooks need to be configured in the `params` section of the configuration:
 
 ```toml
-[[dnb.hooks.items.hookname]]
+[[dnb.hooks.items.namespace.hookname]]
 file = "filename without .html extension"
 cached = false
 ```
@@ -111,7 +111,7 @@ The messages system also uses the methods implemented in `hugo-debug` to silence
 In params.toml (or under the [params] section of the configuration) add a table array as such:
 
 ```toml
-[[dnb.hooks.items.hookname]]
+[[dnb.hooks.items.namespace.hookname]]
 file = "partial path"
 weight = "integer"
 cached = "boolean/string"
