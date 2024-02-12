@@ -15,9 +15,9 @@ imports = ["import 'debug';"] # es6, in flux
 imports = ["scss/_debugprint.scss"]
 
 [[dnb.hooks.items.head-post-css]]
-file = "head-post-css"
+file = "debugprint-head-post-css"
 cached = true
 
 [[dnb.hooks.items.footer-widgets-end]]
-file = "footer-widgets-end"
+file = "debugprint-footer-widgets-end"
 cached = false
