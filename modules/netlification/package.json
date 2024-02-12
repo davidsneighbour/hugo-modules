@@ -17,6 +17,7 @@
     "@davidsneighbour/configurations": "^5.8.18"
   },
   "scripts": {
+    "build": "",
     "clean": "run-p clean:*",
     "clean:npm": "rimraf node_modules package-lock.json",
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/netlification/v\" --releaseCommitMessageFormat \"chore(release): modules/netlification/v{{currentTag}}\" && ./bin/release/postrelease",
