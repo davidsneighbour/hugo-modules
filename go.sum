@@ -1,4 +1,4 @@
 github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579 h1:K8ukOfj0MOBEWWsL8Mzd8GXIbAf7/RHnX1hipqbjeto=
 github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579/go.mod h1:xl3heUINAn0oPowV1biDQ2Pyw1w3x66I7KEbWkaxox0=
-github.com/davidsneighbour/hugo-modules/modules/pictures v1.2023.20 h1:At+5uTj2Vz7puWUsZ79ekjPTaooXAEKlCmRScxs/o/g=
-github.com/davidsneighbour/hugo-modules/modules/pictures v1.2023.20/go.mod h1:7uMtGk3WBOPZ+oIeUPktjQES2QnbE43To7AH9rRDpRY=
+github.com/davidsneighbour/hugo-modules/modules/pictures v1.2024.0 h1:61HOIqWjYL9egX9Gw5wwE1UVWx6znNkiEQvMzoUS9VQ=
+github.com/davidsneighbour/hugo-modules/modules/pictures v1.2024.0/go.mod h1:wHveSSBmVY6BKY2fsBC+0S1rjDIa66CJh9tWkngvBhw=
