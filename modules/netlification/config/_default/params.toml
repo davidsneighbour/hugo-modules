@@ -45,6 +45,6 @@ days = 0
 [dnb.netlification.cloudflare]
 
 
-[[dnb.hooks.items.body-end]]
+[[dnb.hooks.items.netlification.body-end]]
 file = "body-end"
 cached = false
