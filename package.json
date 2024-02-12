@@ -23,7 +23,7 @@
     "workbox-webpack-plugin": "7.0.0"
   },
   "scripts": {
-    "build": "",
+    "build": "node bin/release/system/update.mjs && ./bin/components",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.js",
     "clean": "run-p clean:**",
     "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
