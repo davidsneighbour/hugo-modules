@@ -1,4 +1,4 @@
-![](../../documentation/hugo-social/header-card.png)
+![](../../documentation/social/header-card.png)
 
 # David's Neighbour GoHugo Component / Social
 
@@ -54,6 +54,7 @@ hugo mod get -u github.com/davidsneighbour/hugo-social@v1.0.0
 # update all modules recursively over the whole project
 hugo mod get -u ./...
 ```
+
 <!--- INSTALLUPDATE END --->
 
 ## Usage
@@ -65,10 +66,11 @@ hugo mod get -u ./...
 ## Other [GoHugo](https://gohugo.io/) components by [@davidsneighbour](https://github.com/davidsneighbour/)
 
 <!-- prettier-ignore -->
+
 | Component | Description |
 | :--- | :--- |
 | [hugo-auditor](https://github.com/davidsneighbour/hugo-auditor) | |
-| [hugo-debug](https://github.com/davidsneighbour/hugo-debug) :mage_man: | Debug EVERYTHING in GoHugo. |
+| [hugo-debug](https://github.com/davidsneighbour/hugo-debug) :mage\_man: | Debug EVERYTHING in GoHugo. |
 | [hugo-errors](https://github.com/davidsneighbour/hugo-errors) | A Hugo module that adds more versatile error pages to a site. |
 | [hugo-feeds](https://github.com/davidsneighbour/hugo-feeds) | Implements various configurable feed formats. |
 | [hugo-functions](https://github.com/davidsneighbour/hugo-functions) | A Hugo theme component with helper functions for other projects. |
@@ -93,6 +95,7 @@ hugo mod get -u ./...
 | [hugo-youtube](https://github.com/davidsneighbour/hugo-youtube) | A shortcode and partial for lite and speedy youtube embeds. |
 
 <!--lint disable no-missing-blank-lines -->
+
 <!--- COMPONENTS END --->
 
 ## Contributors ✨
@@ -100,8 +103,11 @@ hugo mod get -u ./...
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
 <!-- prettier-ignore-start -->
+
 <!-- markdownlint-disable -->
+
 <table>
   <tr>
     <td align="center"><a href="https://kollitsch.de"><img src="https://avatars.githubusercontent.com/u/83281?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Patrick Kollitsch</b></sub></a><br /><a href="https://github.com/davidsneighbour/hugo-social/commits?author=davidsneighbour" title="Code">💻</a> <a href="https://github.com/davidsneighbour/hugo-social/commits?author=davidsneighbour" title="Documentation">📖</a> <a href="#ideas-davidsneighbour" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-davidsneighbour" title="Maintenance">🚧</a> <a href="https://github.com/davidsneighbour/hugo-social/commits?author=davidsneighbour" title="Tests">⚠️</a></td>
@@ -110,6 +116,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 </table>
 
 <!-- markdownlint-restore -->
+
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->

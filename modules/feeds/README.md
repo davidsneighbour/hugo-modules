@@ -1,4 +1,4 @@
-![](../../documentation/hugo-feeds/header-card.png)
+![](../../documentation/feeds/header-card.png)
 
 # GoHugo Module / Feeds
 

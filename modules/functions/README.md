@@ -1,4 +1,4 @@
-![](../../documentation/hugo-functions/header-card.png)
+![](../../documentation/functions/header-card.png)
 
 # GoHugo Component / Functions
 
@@ -54,6 +54,7 @@ hugo mod get -u github.com/davidsneighbour/hugo-functions@v1.0.0
 # update all modules recursively over the whole project
 hugo mod get -u ./...
 ```
+
 <!--- INSTALLUPDATE END --->
 
 ### Working principle
@@ -62,32 +63,33 @@ While being named `functions` this component adds merely partials that return va
 
 ### Available Functions
 
-- [formatOrdinalDate](/davidsneighbour/hugo-functions/wiki/function-formatordinaldate)
-- [getAttributesFromTitle](/davidsneighbour/hugo-functions/wiki/function-getattributesfromtitle)
-- [getConfiguration](/davidsneighbour/hugo-functions/wiki/function-getconfiguration)
-- [getDescription](/davidsneighbour/hugo-functions/wiki/function-getdescription)
-- [getGitHash](/davidsneighbour/hugo-functions/wiki/function-getgithash)
-- [getInner](/davidsneighbour/hugo-functions/wiki/function-getinner)
-- [getJavscript](/davidsneighbour/hugo-functions/wiki/function-getjavascript)
-- [getJavascriptByBuild](/davidsneighbour/hugo-functions/wiki/function-getjavascriptbybuild)
-- [getRandomString](/davidsneighbour/hugo-functions/wiki/function-getrandomstring)
-- [getReadingTime](/davidsneighbour/hugo-functions/wiki/function-getreadingtime)
-- [getRemoteImage](/davidsneighbour/hugo-functions/wiki/function-getremoteimage)
-- [getStylesheet](/davidsneighbour/hugo-functions/wiki/function-getstylesheet)
-- [getYear](/davidsneighbour/hugo-functions/wiki/function-getyear)
-- [isCJK](/davidsneighbour/hugo-functions/wiki/function-iscjk)
-- [printCommentHeader](/davidsneighbour/hugo-functions/wiki/function-printcommentheader)
-- [truncate](/davidsneighbour/hugo-functions/wiki/function-truncate)
+* [formatOrdinalDate](/davidsneighbour/hugo-functions/wiki/function-formatordinaldate)
+* [getAttributesFromTitle](/davidsneighbour/hugo-functions/wiki/function-getattributesfromtitle)
+* [getConfiguration](/davidsneighbour/hugo-functions/wiki/function-getconfiguration)
+* [getDescription](/davidsneighbour/hugo-functions/wiki/function-getdescription)
+* [getGitHash](/davidsneighbour/hugo-functions/wiki/function-getgithash)
+* [getInner](/davidsneighbour/hugo-functions/wiki/function-getinner)
+* [getJavscript](/davidsneighbour/hugo-functions/wiki/function-getjavascript)
+* [getJavascriptByBuild](/davidsneighbour/hugo-functions/wiki/function-getjavascriptbybuild)
+* [getRandomString](/davidsneighbour/hugo-functions/wiki/function-getrandomstring)
+* [getReadingTime](/davidsneighbour/hugo-functions/wiki/function-getreadingtime)
+* [getRemoteImage](/davidsneighbour/hugo-functions/wiki/function-getremoteimage)
+* [getStylesheet](/davidsneighbour/hugo-functions/wiki/function-getstylesheet)
+* [getYear](/davidsneighbour/hugo-functions/wiki/function-getyear)
+* [isCJK](/davidsneighbour/hugo-functions/wiki/function-iscjk)
+* [printCommentHeader](/davidsneighbour/hugo-functions/wiki/function-printcommentheader)
+* [truncate](/davidsneighbour/hugo-functions/wiki/function-truncate)
 
 <!--- COMPONENTS BEGIN --->
 
 ## Other [GoHugo](https://gohugo.io/) components by [@davidsneighbour](https://github.com/davidsneighbour/)
 
 <!-- prettier-ignore -->
+
 | Component | Description |
 | :--- | :--- |
 | [hugo-auditor](https://github.com/davidsneighbour/hugo-auditor) | |
-| [hugo-debug](https://github.com/davidsneighbour/hugo-debug) :mage_man: | Debug EVERYTHING in GoHugo. |
+| [hugo-debug](https://github.com/davidsneighbour/hugo-debug) :mage\_man: | Debug EVERYTHING in GoHugo. |
 | [hugo-errors](https://github.com/davidsneighbour/hugo-errors) | A Hugo module that adds more versatile error pages to a site. |
 | [hugo-feeds](https://github.com/davidsneighbour/hugo-feeds) | Implements various configurable feed formats. |
 | [hugo-functions](https://github.com/davidsneighbour/hugo-functions) | A Hugo theme component with helper functions for other projects. |
@@ -112,4 +114,5 @@ While being named `functions` this component adds merely partials that return va
 | [hugo-youtube](https://github.com/davidsneighbour/hugo-youtube) | A shortcode and partial for lite and speedy youtube embeds. |
 
 <!--lint disable no-missing-blank-lines -->
+
 <!--- COMPONENTS END --->

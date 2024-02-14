@@ -1,4 +1,4 @@
-![](../../documentation/hugo-schema/header-card.png)
+![](../../documentation/schema/header-card.png)
 
 # David's Neighbour GoHugo Component / Schema
 

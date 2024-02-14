@@ -1,4 +1,4 @@
-![](../../documentation/hugo-pwa/header-card.png)
+![](../../documentation/pwa/header-card.png)
 
 This is a Hugo theme component with helpers to convert your static [GoHugo](https://gohugo.io/) website into a [PWA](https://web.dev/progressive-web-apps/).
 

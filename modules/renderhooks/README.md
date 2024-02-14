@@ -1,4 +1,4 @@
-![](../../documentation/hugo-renderhooks/header-card.png)
+![](../../documentation/renderhooks/header-card.png)
 
 # David's Neighbour GoHugo Component / Renderhooks
 

@@ -1,0 +1,18 @@
+; https://editorconfig.org
+; This configuration has opiniated settings for the following formats:
+; *.css *.html *.js *.json *.md *.scss *.sh
+; If a dedicated object is missing for a certain format then the root object is
+; the setup desired.
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false

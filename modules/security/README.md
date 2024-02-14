@@ -1,4 +1,4 @@
-![](../../documentation/hugo-security/header-card.png)
+![](../../documentation/security/header-card.png)
 
 # David's Neighbour GoHugo Component / Security
 
@@ -58,6 +58,7 @@ hugo mod get -u github.com/davidsneighbour/github.com/davidsneighbour/hugo-secur
 # update all modules recursively over the whole project
 hugo mod get -u ./...
 ```
+
 <!--- INSTALLUPDATE END --->
 
 ### Usage
@@ -90,23 +91,24 @@ The module will warn you in the CLI log if this parameter is missing.
 
 A few real-world implementation examples of `security.txt`
 
-- https://www.bbc.com/.well-known/security.txt
-- https://www.theguardian.com/.well-known/security.txt
-- https://www.google.com/.well-known/security.txt
+* https://www.bbc.com/.well-known/security.txt
+* https://www.theguardian.com/.well-known/security.txt
+* https://www.google.com/.well-known/security.txt
 
 ... and a few websites that are using `hugo-security`:
 
-- https://kollitsch.de/.well-known/security.txt
+* https://kollitsch.de/.well-known/security.txt
 
 <!--- COMPONENTS BEGIN --->
 
 ## Other [GoHugo](https://gohugo.io/) components by [@davidsneighbour](https://github.com/davidsneighbour/)
 
 <!-- prettier-ignore -->
+
 | Component | Description |
 | :--- | :--- |
 | [hugo-auditor](https://github.com/davidsneighbour/hugo-auditor) | |
-| [hugo-debug](https://github.com/davidsneighbour/hugo-debug) :mage_man: | Debug EVERYTHING in GoHugo. |
+| [hugo-debug](https://github.com/davidsneighbour/hugo-debug) :mage\_man: | Debug EVERYTHING in GoHugo. |
 | [hugo-errors](https://github.com/davidsneighbour/hugo-errors) | A Hugo module that adds more versatile error pages to a site. |
 | [hugo-feeds](https://github.com/davidsneighbour/hugo-feeds) | Implements various configurable feed formats. |
 | [hugo-functions](https://github.com/davidsneighbour/hugo-functions) | A Hugo theme component with helper functions for other projects. |
@@ -131,4 +133,5 @@ A few real-world implementation examples of `security.txt`
 | [hugo-youtube](https://github.com/davidsneighbour/hugo-youtube) | A shortcode and partial for lite and speedy youtube embeds. |
 
 <!--lint disable no-missing-blank-lines -->
+
 <!--- COMPONENTS END --->

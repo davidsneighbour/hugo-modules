@@ -1,4 +1,4 @@
-![](../../documentation/hugo-giscus/header-card.png)
+![](../../documentation/giscus/header-card.png)
 
 # GoHugo Component / Giscus
 

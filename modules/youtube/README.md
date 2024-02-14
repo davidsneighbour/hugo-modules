@@ -1,4 +1,4 @@
-![](../../documentation/hugo-youtube/header-card.png)
+![](../../documentation/youtube/header-card.png)
 
 A responsive and very fast shortcode to add youtube videos to your Hugo website.
 

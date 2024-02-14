@@ -1,4 +1,4 @@
-![](../../documentation/hugo-publisher/header-card.png)
+![](../../documentation/publisher/header-card.png)
 
 # DNB GoHugo Component / Publisher
 

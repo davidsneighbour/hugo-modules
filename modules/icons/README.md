@@ -1,4 +1,4 @@
-![](../../documentation/hugo-icons/header-card.png)
+![](../../documentation/icons/header-card.png)
 
 # GoHugo Component / Icons
 

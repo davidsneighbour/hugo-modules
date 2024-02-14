@@ -1,4 +1,4 @@
-![](../../documentation/hugo-debug/header-card.png)
+![](../../documentation/debug/header-card.png)
 
 # GoHugo Modules / Debug
 

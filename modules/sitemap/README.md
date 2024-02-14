@@ -1,4 +1,4 @@
-![](../../documentation/hugo-sitemap/header-card.png)
+![](../../documentation/sitemap/header-card.png)
 
 # GoHugo Component / Sitemap
 

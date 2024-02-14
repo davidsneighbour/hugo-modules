@@ -1,10 +1,11 @@
-![](../../documentation/hugo-opensearch/header-card.png)
+![](../../documentation/opensearch/header-card.png)
 
 # Hugo Component / Opensearch
 
 This is a Hugo theme component that adds an open search configuration file to your website.
 
 <!--- THINGSTOKNOW BEGIN --->
+
 ## Some things you need to know
 
 These are notes about conventions in this README.md. You might want to make yourself acquainted with them if this is your first visit.
@@ -51,6 +52,7 @@ hugo mod get -u github.com/davidsneighbour/hugo-opensearch@v1.0.0
 # update all modules recursively over the whole project
 hugo mod get -u ./...
 ```
+
 <!--- INSTALLUPDATE END --->
 
 ## Configuration
@@ -73,6 +75,7 @@ This will add a `opensearch.xml` to your Website. You should now add a meta tag 
 The following configuration parameters are available in `site.Params.dnb.opensearch`:
 
 <!-- prettier-ignore -->
+
 | Parameter | Description |
 | --- | --- |
 | `title` | Search title. MUST be shorter than 16 characters and MUST NOT contain markup. Default is `site.Title`. |
@@ -86,22 +89,23 @@ The following configuration parameters are available in `site.Params.dnb.opensea
 
 ## Notes
 
-- Remote favicons [must not be larger than 10kB](https://bugzilla.mozilla.org/show_bug.cgi?id=361923).
+* Remote favicons [must not be larger than 10kB](https://bugzilla.mozilla.org/show_bug.cgi?id=361923).
 
 ## Read more
 
-- [OpenSearch description format on MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/OpenSearch)
-- [Official Archive of the Specification](https://github.com/dewitt/opensearch)
+* [OpenSearch description format on MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/OpenSearch)
+* [Official Archive of the Specification](https://github.com/dewitt/opensearch)
 
 <!--- COMPONENTS BEGIN --->
 
 ## Other [GoHugo](https://gohugo.io/) components by [@davidsneighbour](https://github.com/davidsneighbour/)
 
 <!-- prettier-ignore -->
+
 | Component | Description |
 | :--- | :--- |
 | [hugo-auditor](https://github.com/davidsneighbour/hugo-auditor) | |
-| [hugo-debug](https://github.com/davidsneighbour/hugo-debug) :mage_man: | Debug EVERYTHING in GoHugo. |
+| [hugo-debug](https://github.com/davidsneighbour/hugo-debug) :mage\_man: | Debug EVERYTHING in GoHugo. |
 | [hugo-errors](https://github.com/davidsneighbour/hugo-errors) | A Hugo module that adds more versatile error pages to a site. |
 | [hugo-feeds](https://github.com/davidsneighbour/hugo-feeds) | Implements various configurable feed formats. |
 | [hugo-functions](https://github.com/davidsneighbour/hugo-functions) | A Hugo theme component with helper functions for other projects. |
@@ -126,4 +130,5 @@ The following configuration parameters are available in `site.Params.dnb.opensea
 | [hugo-youtube](https://github.com/davidsneighbour/hugo-youtube) | A shortcode and partial for lite and speedy youtube embeds. |
 
 <!--lint disable no-missing-blank-lines -->
+
 <!--- COMPONENTS END --->
