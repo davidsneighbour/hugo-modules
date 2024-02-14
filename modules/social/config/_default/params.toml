@@ -20,7 +20,109 @@ networks = [
   "telegram",
 ]
 
-
 [dnb.social.twitter]
 profile = "username"
 domain = "domain.ext"
+
+# social media network share link setups
+[[dnb.social.shares.items]]
+slug = "facebook"
+link = "https://facebook.com/sharer/sharer.php"
+icon = "facebook"
+[dnb.social.shares.items.particles]
+u = "permalink"
+
+[[dnb.social.shares.items]]
+slug = "twitter"
+link = "https://twitter.com/intent/tweet/"
+icon = "twitter"
+[dnb.social.shares.items.particles]
+text = "description"
+url = "permalink"
+
+[[dnb.social.shares.items]]
+slug = "tumblr"
+link = "https://www.tumblr.com/widgets/share/tool"
+[dnb.social.shares.items.particles]
+canonicalUrl = "permalink"
+shareSource = "source"
+title = "title"
+caption = "description"
+content = "description"
+params = "posttype=link"
+
+[[dnb.social.shares.items]]
+slug = "email"
+link = "mailto:"
+icon = "envelope"
+[dnb.social.shares.items.particles]
+body = "permalink"
+subject = "title"
+
+[[dnb.social.shares.items]]
+slug = "pinterest"
+link = "https://pinterest.com/pin/create/button/"
+icon = "pinterest"
+[dnb.social.shares.items.particles]
+url = "permalink"
+media = "permalink"
+description = "description"
+
+[[dnb.social.shares.items]]
+slug = "linkedin"
+link = "https://www.linkedin.com/shareArticle"
+icon = "linkedin"
+[dnb.social.shares.items.particles]
+url = "permalink"
+title = "title"
+summary = "description"
+source = "permalink"
+params = "mini=true"
+
+[[dnb.social.shares.items]]
+slug = "reddit"
+link = "https://reddit.com/submit/"
+icon = "reddit"
+[dnb.social.shares.items.particles]
+url = "permalink"
+title = "title"
+params = "resubmit=true"
+
+[[dnb.social.shares.items]]
+slug = "xing"
+link = "https://www.xing.com/app/user"
+separator = ";"
+[dnb.social.shares.items.particles]
+url = "permalink"
+title = "title"
+params = "op=share"
+
+[[dnb.social.shares.items]]
+slug = "whatsapp"
+link = "whatsapp://send"
+linkintext = true
+icon = "whatsapp"
+[dnb.social.shares.items.particles]
+text = "description"
+
+[[dnb.social.shares.items]]
+slug = "hackernews"
+link = "https://news.ycombinator.com/submitlink"
+[dnb.social.shares.items.particles]
+u = "permalink"
+t = "description"
+
+[[dnb.social.shares.items]]
+slug = "vkontakte"
+link = "http://vk.com/share.php"
+[dnb.social.shares.items.particles]
+title = "title"
+url = "permalink"
+
+[[dnb.social.shares.items]]
+slug = "telegram"
+link = "https://telegram.me/share/url"
+icon = "telegram"
+[dnb.social.shares.items.particles]
+text = "description"
+url = "permalink"

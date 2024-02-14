@@ -1,7 +1,7 @@
 {{- $context := . -}}
 
 {{- $networks := site.Params.dnb.social.sharebuttons.networks -}}
-{{- $setups := (where site.Data.dnb.social.shares.items "slug" "in" $networks) -}}
+{{- $setups := (where site.Params.dnb.social.shares.items "slug" "in" $networks) -}}
 {{- /* This here is an ugly workaround for Hugo's missing sortByArray feature.
   Cache it so it does not take away too much time. */
 -}}
