@@ -23,10 +23,5 @@
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/schema/v\" --releaseCommitMessageFormat \"chore(release): modules/schema/v{{currentTag}}\" && ./bin/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
   },
-  "main": ".versionrc.js",
-  "remarkConfig": {
-    "plugins": [
-      "@davidsneighbour/remark-config"
-    ]
-  }
+  "main": ".versionrc.js"
 }

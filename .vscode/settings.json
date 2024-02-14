@@ -7,5 +7,6 @@
     "**/layouts/**.headers": "gotemplate",
     "**/layouts/**.redir": "gotemplate",
   },
-  "editor.linkedEditing": true
+  "editor.linkedEditing": true,
+  "html.format.wrapLineLength": 100
 }
