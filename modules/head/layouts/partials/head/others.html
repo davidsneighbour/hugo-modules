@@ -1,28 +1,30 @@
-{{- if (in site.Params.dnb.head.disable "referrer") -}}
+{{- $config := site.Params.dnb.head -}}
+{{- if (in $config.disable "referrer") -}}
   <meta name="referrer" content="no-referrer">
 {{- end -}}
-{{- if (in site.Params.dnb.head.disable "phone_transcription") -}}
+{{- if (in $config.disable "phone_transcription") -}}
   <meta name="format-detection" content="telephone=no">
 {{- end -}}
-{{- with site.Params.dnb.head.notranslate -}}
+{{- with $config.notranslate -}}
   {{- if eq . true -}}
     <meta name="google" content="notranslate">
   {{- end -}}
 {{- end -}}
-{{- with site.Params.dnb.head.monetization -}}
+{{- with $config.monetization -}}
   <meta name="monetization" content="{{- . -}}">
 {{- end -}}
-{{- with (and site.Params.dnb.head.latitude site.Params.dnb.head.longitude) -}}
+{{- with (and $config.latitude $config.longitude) -}}
   <meta
     name="ICBM"
-    content="{{- site.Params.dnb.head.latitude -}},{{- site.Params.dnb.head.longitude -}}">
+    content="{{- $config.latitude -}},{{- $config.longitude -}}">
   <meta
     name="geo.position"
-    content="{{- site.Params.dnb.head.latitude -}};{{- site.Params.dnb.head.longitude -}}">
+    content="{{- $config.latitude -}};{{- $config.longitude -}}">
 {{- end -}}
-{{- with site.Params.dnb.head.region -}}
-  <meta name="geo.region" content="{{- site.Params.dnb.head.region -}}">
+{{- with $config.region -}}
+  <meta name="geo.region" content="{{- $config.region -}}">
 {{- end -}}
-{{- with site.Params.dnb.head.placename -}}
-  <meta name="geo.placename" content="{{- site.Params.dnb.head.placename -}}">
+{{- with $config.placename -}}
+  <meta name="geo.placename" content="{{- $config.placename -}}">
 {{- end -}}
+<meta name="color-scheme" content="{{- $config.colorschemeOrder -}}">
