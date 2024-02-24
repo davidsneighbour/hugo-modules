@@ -60,11 +60,20 @@
     <atom:link href="{{.Permalink}}" rel="self" type="application/rss+xml" />
 
     {{ with $config.webfeed }}
+      {{- /* see http://webfeeds.org/rss/1.0 */ -}}
+      {{ with .color }}<webfeeds:accentColor>{{ . }}</webfeeds:accentColor>{{ end }}
+      {{ with .analytics }}
+        {{ if eq .enable true }}
+          <webfeeds:analytics id="{{ .id }}" engine="{{ .engine }}" />
+        {{ end }}
+      {{ end }}
+      {{ with .cover }}<webfeeds:cover image="{{ . }}" />{{ end }}
+      {{ with .wordmark }}<webfeeds:wordmark image="{{ . }}" />{{ end }}
+      {{ with .icon }}<webfeeds:icon>{{ . }}</webfeeds:icon>{{ end }}
+      <webfeeds:partial>true</webfeeds:partial>
+      {{ with .promotion }}<webfeeds:promotion>{{ . }}</webfeeds:promotion>{{ end }}
       <webfeeds:related  layout="card" target="browser" />
       {{ with .logo }}<webfeeds:logo>{{ . }}</webfeeds:logo>{{ end }}
-      {{ with .color }}<webfeeds:accentColor>{{ . }}</webfeeds:accentColor>{{ end }}
-      {{ with .cover }}<webfeeds:cover image="{{ . }}" />{{ end }}
-      {{ with .icon }}<webfeeds:icon>{{ . }}</webfeeds:icon>{{ end }}
     {{ end }}
 
     {{- range $pages }}
