@@ -3,6 +3,13 @@ limit = 10
 summary = true
 drafts = false
 
+[dnb.feeds.webfeed]
+# webfeed protocol
+logo = ""
+accentColor = ""
+coverImage = ""
+icon = ""
+
 [dnb.feeds.atom]
 limit = 10
 summary = true

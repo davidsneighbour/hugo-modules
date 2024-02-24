@@ -1,5 +1,6 @@
 {{- $drafts := partialCached "func/feeds/getDrafts.html" "rss" . -}}
 {{- $items := partialCached "func/feeds/getItemsToShow.html" "rss" . -}}
+{{- $config := site.Params.dnb.feeds -}}
 
 {{- $context := . -}}
 {{- if .IsHome -}}
@@ -33,13 +34,6 @@
         {{- site.Title -}}
       {{- end -}}
     </title>
-    <!-- <webfeeds:related
-    layout="card" target="browser" />
-    <webfeeds:logo>http://yoursite.com/logo-30px-height.svg</webfeeds:logo>
-    <webfeeds:accentColor>00FF00</webfeeds:accentColor>
-    <webfeeds:cover image="http://yoursite.com/a-large-cover-image.png" />
-    <webfeeds:icon>
-    http://feedly.com/icon.svg</webfeeds:icon> -->
     <link>{{- .Permalink -}}</link>
     <description>
       Recent content
@@ -64,6 +58,15 @@
       </lastBuildDate>
     {{- end -}}
     <atom:link href="{{.Permalink}}" rel="self" type="application/rss+xml" />
+
+    {{ with $config.webfeed }}
+      <webfeeds:related  layout="card" target="browser" />
+      {{ with .logo }}<webfeeds:logo>{{ . }}</webfeeds:logo>{{ end }}
+      {{ with .color }}<webfeeds:accentColor>{{ . }}</webfeeds:accentColor>{{ end }}
+      {{ with .cover }}<webfeeds:cover image="{{ . }}" />{{ end }}
+      {{ with .icon }}<webfeeds:icon>{{ . }}</webfeeds:icon>{{ end }}
+    {{ end }}
+
     {{- range $pages }}
       <item>
         <title>{{- .Title -}}</title>
