@@ -73,6 +73,7 @@
       <webfeeds:partial>true</webfeeds:partial>
       {{ with .promotion }}<webfeeds:promotion>{{ . }}</webfeeds:promotion>{{ end }}
       <webfeeds:related  layout="card" target="browser" />
+      {{- /* svg small, not in xmlns, but used by feedly */ -}}
       {{ with .logo }}<webfeeds:logo>{{ . }}</webfeeds:logo>{{ end }}
     {{ end }}
 
