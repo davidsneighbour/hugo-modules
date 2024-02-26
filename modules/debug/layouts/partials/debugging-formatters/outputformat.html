@@ -1,7 +1,9 @@
 {{ $OutputFormatVarNames   := (slice "Name" "MediaType" "Path" "BaseName" "Rel" "Protocol" "IsPlainText" "IsHTML" "NoUgly" "NotAlternative") }}
 {{ $OutputFormatVarSymbols := (slice .value.Name  .value.MediaType  .value.Path  .value.BaseName
                                 .value.Rel  .value.Protocol  .value.IsPlainText  .value.IsHTML  .NoUgly  .NotAlternative ) }}
-<table class="debugprint">
+
+      <div class="table-responsive">
+      <table class="debugprint">
   <tr>
       <th scope="col" class="align-top key">OutputFormat Variable</th>
       <th scope="col" class="align-top value">Value</th>
@@ -12,3 +14,4 @@
     {{ printf "</td></tr>" | safeHTML }}
   {{ end }}
 </table>
+</div>

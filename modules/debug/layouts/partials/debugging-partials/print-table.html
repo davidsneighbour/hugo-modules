@@ -1,5 +1,7 @@
 {{- $structure := .structure | default slice -}}
-<table class="debugprint">
+
+      <div class="table-responsive">
+      <table class="debugprint">
   <tr>
       <th scope="col" class="align-top key"><span class="font-weight-normal text-uppercase">Dependency</span></th>
       <th scope="col" class="align-top type">Type</th>
@@ -19,3 +21,4 @@
     </tr>
   {{- end -}}
 </table>
+</div>

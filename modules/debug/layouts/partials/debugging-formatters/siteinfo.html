@@ -1,7 +1,9 @@
 {{ $siteVarNames   := (slice "Title" "Author" "Social" "LastChange" "GoogleAnalytics" "Copyright" "RSSLink" "LanguageCode" "BuildDrafts" "Params") }}
 {{ $siteVarSymbols := (slice .value.Title  .value.Author  .value.Social  .value.LastChange  .value.GoogleAnalytics
               .value.Copyright  .value.RSSLink  .value.LanguageCode  .value.BuildDrafts  .value.Params ) }}
-<table class="debugprint">
+
+      <div class="table-responsive">
+      <table class="debugprint">
   <tr>
       <th scope="col" class="align-top key">SiteInfo Variable</th>
       <th scope="col" class="align-top value">Value</th>
@@ -12,3 +14,4 @@
     {{ printf "</td></tr>" | safeHTML }}
   {{ end }}
 </table>
+</div>

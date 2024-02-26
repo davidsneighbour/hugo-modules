@@ -1,7 +1,9 @@
 {{ $MenuEntryVarNames   := (slice "ConfiguredURL" "Name" "Menu" "Identifier" "Title" "Pre" "Post" "Weight" "Parent" "Children") }}
 {{ $MenuEntryVarSymbols := (slice .value.ConfiguredURL  .value.Name  .value.Menu  .value.Identifier  .value.Title
                                   .value.Pre  .value.Post  .value.Weight  .value.Parent  .value.Children ) }}
-<table class="debugprint">
+
+      <div class="table-responsive">
+      <table class="debugprint">
   <tr>
       <th scope="col" class="align-top key">MenuEntry Variable</th>
       <th scope="col" class="align-top value">Value</th>
@@ -12,3 +14,4 @@
     {{ printf "</td></tr>" | safeHTML }}
   {{ end }}
 </table>
+</div>

@@ -1,6 +1,8 @@
 {{ $ResourceVarNames   := (slice "Name" "Title" "ResourceType" "Permalink" "RelPermalink" "Params" "MediaType") }}
 {{ $ResourceVarSymbols := (slice .value.Name  .value.Title  .value.ResourceType  .value.Permalink  .value.RelPermalink  .value.Params  .value.MediaType ) }}
 <!-- There's .AbsSourceFilename too, but it's not very useful. -->
+
+      <div class="table-responsive">
 <table class="debugprint">
   <tr>
       <th scope="col" class="align-top key">Resource Variable</th>
@@ -12,3 +14,4 @@
     {{ printf "</td></tr>" | safeHTML }}
   {{ end }}
 </table>
+</div>

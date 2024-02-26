@@ -1,6 +1,8 @@
 {{ $OrderedTaxonomyEntryVarNames   := (slice "Name" "Count" "Term" "WeightedPages") }}
 {{ $OrderedTaxonomyEntryVarSymbols := (slice .value.Name  .value.Count  .value.Term  .value.WeightedPages ) }}
-<table class="debugprint">
+
+      <div class="table-responsive">
+      <table class="debugprint">
   <tr>
       <th scope="col" class="align-top key">OrderedTaxonomyEntry Variable</th>
       <th scope="col" class="align-top value">Value</th>
@@ -11,3 +13,4 @@
     {{ printf "</td></tr>" | safeHTML }}
   {{ end }}
 </table>
+</div>

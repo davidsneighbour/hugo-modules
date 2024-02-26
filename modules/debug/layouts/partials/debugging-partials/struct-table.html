@@ -1,6 +1,8 @@
 {{ $names := .names }}
 {{ $items := .items }}
-<table class="debugprint">
+
+      <div class="table-responsive">
+      <table class="debugprint">
   {{- partials.IncludeCached "debugging-partials/struct-header.html" . -}}
   <tbody>
     {{- range $index, $item := $items -}}
@@ -12,3 +14,4 @@
     {{- end -}}
   </tbody>
 </table>
+</div>

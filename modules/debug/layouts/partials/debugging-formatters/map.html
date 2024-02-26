@@ -1,4 +1,5 @@
 {{ if (gt (len .value) 0) }}
+      <div class="table-responsive">
   <table class="debugprint">
     <tr>
         <th scope="col" class="align-top key">Key</th>
@@ -22,4 +23,5 @@
       {{ end }}
     {{ end }}
   </table>
+  </div>
 {{ end }}

@@ -1,5 +1,6 @@
 {{ $gitInfoVarNames   := (slice "Hash" "AbbreviatedHash" "Subject" "AuthorName" "AuthorEmail" "AuthorDate") }}
 {{ $gitInfoVarSymbols := (slice .value.Hash  .value.AbbreviatedHash  .value.Subject  .value.AuthorName  .value.AuthorEmail  .value.AuthorDate ) }}
+      <div class="table-responsive">
 <table class="debugprint">
   <tr>
       <th scope="col" class="align-top key">GitInfo Variable</th>
@@ -11,3 +12,4 @@
     {{ printf "</td></tr>" | safeHTML }}
   {{ end }}
 </table>
+</div>

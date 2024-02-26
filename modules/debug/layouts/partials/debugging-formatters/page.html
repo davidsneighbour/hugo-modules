@@ -1,7 +1,9 @@
 {{ $PageVarNames   := (slice "Name" "Title" "ResourceType" "Kind" "Section" "Draft" "Type" "Layout" "Permalink" "RelPermalink" "Data") }}
 {{ $PageVarSymbols := (slice .value.Name  .value.Title  .value.ResourceType  .value.Kind  .value.Section  .value.Draft  .value.Type
                               .value.Layout  .value.Permalink  .value.RelPermalink  .value.Data ) }}
-<table class="debugprint">
+
+      <div class="table-responsive">
+      <table class="debugprint">
   <tr>
       <th scope="col" class="align-top key">Page Variable</th>
       <th scope="col" class="align-top value">Value</th>
@@ -32,3 +34,4 @@
     {{ printf `<tr> <td class="align-top key">PrevInSection</td> <td class="align-top value">None</td></tr>` | safeHTML }}
   {{ end }}
 </table>
+</div>
