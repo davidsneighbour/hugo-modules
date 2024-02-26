@@ -1,5 +1,9 @@
+{{- $config := site.Params.dnb.debug -}}
+
 {{- $errorLabel := i18n "error.no-formatter-configured" -}}
-{{- warnf "[dnb-debug] %T - %s" .value $errorLabel -}}
+{{- if eq ($config.disablenote | default false) false -}}
+  {{- fmt.Warnf "[dnb-debug] %T - %s" .value $errorLabel -}}
+{{- end -}}
 
 {{- $issuePath := "https://github.com/davidsneighbour/hugo-modules/issues/new" -}}
 {{- $parameters := collections.Slice
