@@ -1,6 +1,4 @@
 # formatters setup
-# TODO this will move into the data directory as soon as some issues
-# with availability in partials are fixed
 [[formatters]]
 type = "bool"
 class = "flat"
