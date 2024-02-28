@@ -110,6 +110,13 @@ label = "GitInfo"
 description = ""
 
 [[formatters]]
+catch = "codeblocks.codeBlockContext"
+class = "struct"
+slug = "codeblock"
+label = "Codeblock"
+description = ""
+
+[[formatters]]
 type = "output.Format"
 class = "struct"
 slug = "outputformat"
