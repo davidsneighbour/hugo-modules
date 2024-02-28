@@ -1,24 +1,25 @@
 {{- $structure := .structure | default slice -}}
 
-      <div class="table-responsive">
-      <table class="debugprint">
-  <tr>
-      <th scope="col" class="align-top key"><span class="font-weight-normal text-uppercase">Dependency</span></th>
-      <th scope="col" class="align-top type">Type</th>
-      <th scope="col" class="align-top value">Value</th>
-  </tr>
-  {{- range $structure -}}
+<div class="table-responsive">
+  <table class="debugprint">
     <tr>
-      <th>{{ .slug }}</th>
-      <td>{{ .type }}</td>
-      <td>
-        {{- with .value -}}
-          {{- partials.Include "debugprint.html" . -}}
-        {{- else -}}
-          {{- partials.IncludeCached "debugging-partials/nil.html" . -}}
-        {{- end -}}
-      </td>
+        <th scope="col" class="align-top key"><span class="font-weight-normal text-uppercase">Dependency</span></th>
+        <th scope="col" class="align-top type">Type</th>
+        <th scope="col" class="align-top value">Value</th>
     </tr>
-  {{- end -}}
-</table>
+    {{- range $structure -}}
+      {{- $type := printf "%T" .value -}}
+      <tr>
+        <th>{{ .slug }}</th>
+        <td>{{ .type | default $type }}</td>
+        <td>
+          {{- with .value -}}
+            {{- partials.Include "debugprint.html" . -}}
+          {{- else -}}
+            {{- partials.IncludeCached "debugging-partials/nil.html" . -}}
+          {{- end -}}
+        </td>
+      </tr>
+    {{- end -}}
+  </table>
 </div>
