@@ -162,3 +162,10 @@ class = "struct"
 slug = "weightedpage"
 label = "Weighted Page"
 description = ""
+
+[[formatters]]
+catch = "^map[string](.*)$"
+class = "struct"
+slug = "map"
+label = "Map"
+description = ""
