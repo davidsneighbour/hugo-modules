@@ -3,8 +3,6 @@
 {{- $options := .Options -}}
 {{- $attributes := .Attributes -}}
 
-{{ partial "debugprint.html" . }}
-
 {{- $data := newScratch -}}
 {{- $data.Set "options" dict -}}
 {{- range $key, $value := $options -}}
