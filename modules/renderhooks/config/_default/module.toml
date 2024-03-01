@@ -11,6 +11,10 @@ source = "assets/scss/plugins/_clipboard.scss"
 target = "assets/scss/plugins/_clipboard.scss"
 
 [[mounts]]
+source = "content"
+target = "content/dnb/renderhooks"
+
+[[mounts]]
 source = "data"
 target = "data"
 

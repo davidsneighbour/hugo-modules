@@ -1,9 +1,10 @@
-{{- /*
-  @todo https://github.com/davidsneighbour/kollitsch.dev/issues/209
-  @todo add filename to tabs
-  */
--}}
+{{- /* https://github.com/davidsneighbour/hugo-modules/issues/464 */ -}}
+
 {{- $options := .Options -}}
+{{- $attributes := .Attributes -}}
+
+{{ partial "debugprint.html" . }}
+
 {{- $data := newScratch -}}
 {{- $data.Set "options" dict -}}
 {{- range $key, $value := $options -}}
@@ -25,18 +26,17 @@
 
 {{- $configTypes := slice "toml" "yaml" "json" -}}
 
-{{ $type := "single" }}
+{{- $type := "single" -}}
 {{- if in $configTypes .Type -}}
-  {{ with .Attributes.noconfig }}
-    {{ $type = "single" }}
+  {{- with .Attributes.noconfig -}}
+    {{- $type = "single" -}}
   {{- else -}}
     {{- if isset .Attributes "single" -}}
       {{- $type = "single" -}}
     {{- else -}}
       {{- $type = "config" -}}
     {{- end -}}
-
-  {{ end }}
+  {{- end -}}
 {{- end -}}
 
 <div class="component--highlight">
@@ -98,7 +98,7 @@
         {{ highlight  $.Inner .Type ($data.Get "options") | safeHTML }}
       </div>
     </div>
-  {{ else }}
+  {{- else -}}
     <div class="tab-content">
       {{- range $configTypes -}}
         <div
@@ -117,7 +117,7 @@
         </div>
       {{- end -}}
     </div>
-  {{ end }}
+  {{- end -}}
 
 </div>
 
