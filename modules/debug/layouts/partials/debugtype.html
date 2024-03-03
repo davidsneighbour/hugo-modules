@@ -2,5 +2,5 @@
 <span class="nowrap" title="{{ $typeLabel }}">
   <span class="badge text-bg-info uppercase rounded-1 me-2">T</span>
   {{/* {{- printf `<span class="debugtype %T">%T</span>` . . | safeHTML -}} */}}
-  {{- printf `<span class="debugtype">%T</span>` . . | safeHTML -}}
+  {{- printf `<span class="debugtype">%T</span>` . . | transform.HTMLEscape | safeHTML -}}
 </span>
