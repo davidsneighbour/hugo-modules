@@ -18,7 +18,7 @@
        title='{{- $errorLabel -}}'>
   <tr>
     <td class="align-top" onclick="window.open('{{ $issueUrl -}}', '_blank')">
-      {{ printf "%#v" .value | transform.HTMLEscape | safeHTML }}
+      {{ printf "%#v" .value | safeHTML }}
     </td>
   </tr>
 </table>
