@@ -71,7 +71,7 @@ table.debugprint {
 
       &::before,
       &::after {
-        color: #6c757d;
+        @extend .text-muted;
       }
 
       &::before {
