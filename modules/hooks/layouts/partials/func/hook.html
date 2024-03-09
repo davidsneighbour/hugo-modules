@@ -11,7 +11,7 @@
 {{- end -}}
 
 {{- /* a quick note */ -}}
-{{- partials.Include "debug.html" (collections.Dictionary
+{{- partials.Include "debug-cli.html" (collections.Dictionary
     "message" (fmt.Printf "dnb-hooks - see %s for details" site.Params.dnb.hooks.hooklink)
     "context" .
     "severity" "info"
@@ -44,7 +44,7 @@
 {{- else -}}
 
   {{- /* @todo remove after 2024-05-12 */ -}}
-  {{- partials.Include "debug.html" (collections.Dictionary
+  {{- partials.Include "debug-cli.html" (collections.Dictionary
     "message" "Please note, that the system of including hooks by filename is deprecated and will be removed in the future."
     "context" .
     "severity" "warning"
@@ -62,7 +62,7 @@
               (in site.Params.dnb.hooks.disable_messages "running_hooks")
               (in site.Params.dnb.hooks.disable_messages "running_uncached_hooks")
     ) -}}
-      {{- partials.Include "debug.html" (collections.Dictionary
+      {{- partials.Include "debug-cli.html" (collections.Dictionary
           "message" (fmt.Printf "running hook `%s`" (fmt.Printf "%s" $context.hook))
           "context" .
           "severity" "info"
@@ -80,7 +80,7 @@
               (in site.Params.dnb.hooks.disable_messages "running_hooks")
               (in site.Params.dnb.hooks.disable_messages "running_cached_hooks")
       ) -}}
-      {{- partials.Include "debug.html" (collections.Dictionary
+      {{- partials.Include "debug-cli.html" (collections.Dictionary
           "message" (fmt.Printf "running cached hook `%s`" (fmt.Printf "%s" $context.hook))
           "context" .
           "severity" "info"
@@ -95,7 +95,7 @@
   {{- if eq $loaded false -}}
     {{- $partialHookFolder := fmt.Printf "layouts/partials/hooks/%s/" $context.hook -}}
     {{- if fileExists $partialHookFolder -}}
-      {{- partials.Include "debug.html" (collections.Dictionary
+      {{- partials.Include "debug-cli.html" (collections.Dictionary
         "message" (fmt.Printf "running folder hooks for `%s`" (fmt.Printf "%s" $context.hook))
         "context" .
         "severity" "info"
@@ -118,7 +118,7 @@
     {{- range . -}}
       {{- /* execute hook if it exists */ -}}
       {{- if templates.Exists .partials.Include -}}
-          {{- partials.Include "debug.html" (collections.Dictionary
+          {{- partials.Include "debug-cli.html" (collections.Dictionary
               "message" (fmt.Printf
                           "running hook `%s` from `%s`"
                           (fmt.Printf "%s" $context.hook)
@@ -142,7 +142,7 @@
 {{- /* send out a note if the hook is not used */ -}}
 {{- if eq $loaded false -}}
   {{- if not (in site.Params.dnb.hooks.disable_messages "unused_hooks") -}}
-    {{- partials.Include "debug.html" (collections.Dictionary
+    {{- partials.Include "debug-cli.html" (collections.Dictionary
         "message" (fmt.Printf "unused hook `%s`" (fmt.Printf "%s" $context.hook))
         "context" .
         "severity" "info"
