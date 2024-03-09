@@ -10,7 +10,7 @@
   </tr>
   {{ range $idx, $elem := $ResourceVarNames }}
     {{ printf `<tr> <td class="align-top key">%s</td> <td class="align-top value">` $elem | safeHTML }}
-    {{ partials.Include "debugprint.html" (index $ResourceVarSymbols $idx) }}
+    {{ partials.Include "debug-print.html" (index $ResourceVarSymbols $idx) }}
     {{ printf "</td></tr>" | safeHTML }}
   {{ end }}
 </table>

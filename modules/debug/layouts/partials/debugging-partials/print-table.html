@@ -14,7 +14,7 @@
         <td>{{ .type | default $type }}</td>
         <td>
           {{- with .value -}}
-            {{- partials.Include "debugprint.html" . -}}
+            {{- partials.Include "debug-print.html" . -}}
           {{- else -}}
             {{- partials.IncludeCached "debugging-partials/nil.html" . -}}
           {{- end -}}

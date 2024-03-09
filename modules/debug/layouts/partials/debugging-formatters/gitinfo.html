@@ -8,7 +8,7 @@
   </tr>
   {{ range $idx, $elem := $gitInfoVarNames }}
     {{ printf `<tr> <td class="align-top key">%s</td> <td class="align-top value">` $elem | safeHTML }}
-    {{ partials.Include "debugprint.html" (index $gitInfoVarSymbols $idx) }}
+    {{ partials.Include "debug-print.html" (index $gitInfoVarSymbols $idx) }}
     {{ printf "</td></tr>" | safeHTML }}
   {{ end }}
 </table>

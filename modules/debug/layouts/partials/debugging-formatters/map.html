@@ -13,12 +13,12 @@
         <!-- Print the date only if it is not at its initial value of Jan 1, 0001 -->
         {{ if (ne "0001-01-01" ($value1.Format "2006-01-02")) }}
           {{ printf `<tr> <td class="align-top key">%s</td> <td class="align-top type">%s</td> <td class="align-top value">` $key1 $type1 | safeHTML }}
-          {{ partials.Include "debugprint.html" $value1 }}
+          {{ partials.Include "debug-print.html" $value1 }}
           {{ printf "</td></tr>" | safeHTML }}
         {{ end }}
       {{ else }}
         {{ printf `<tr> <td class="align-top key">%s</td> <td class="align-top type">%s</td> <td class="align-top value">` $key1 $type1 | safeHTML }}
-        {{ partials.Include "debugprint.html" $value1 }}
+        {{ partials.Include "debug-print.html" $value1 }}
         {{ printf "</td></tr>" | safeHTML }}
       {{ end }}
     {{ end }}
