@@ -2,7 +2,7 @@
 {{ $params := dict }}
 {{ range $key, $value := $.Site.Data.dnb }}
   {{ if (and (isset $value "config") (isset $value.config "plugins") (isset $value.config.plugins "esBuildParams")) }}
-    {{- partials.Include "debug.html" (dict "message" (printf "Loading esBuildParams configuration %s" $key) "severity" "debug") -}}
+    {{- partials.Include "debug-cli.html" (dict "message" (printf "Loading esBuildParams configuration %s" $key) "severity" "debug") -}}
     {{ range $esKey, $esValue := $value.config.plugins.esBuildParams }}
       {{ $params = $params | merge (dict $esKey $esValue) }}
     {{ end }}
