@@ -43,7 +43,7 @@ A quick sample for its usage is the following debugging of a pages data:
     <div class="container">
       <div class="row">
         <div class="col-12">
-          {{- partial "debugprint.html" . -}}
+          {{- partial "debug-print.html" . -}}
         </div>
       </div>
     </div>

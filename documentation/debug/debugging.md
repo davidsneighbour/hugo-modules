@@ -21,7 +21,7 @@ subcollection: true
 Some times we developers want to inform and warn our users, or even throw an error. The debug partial is your connection to the CLI with some more options than GoHugo's internal error functionality.
 
 ```go-html-template
-{{- partial "debug.html"
+{{- partial "debug-cli.html"
       (dict
         "message" "going into PostProcessing"
         "context" .
@@ -36,12 +36,12 @@ _Note:_ Multiline layout functions are supported since Hugo 0.81.0. In older ver
 
 The dictionary options are as follows:
 
-- **message:** The message to print. It will be prefixed with the datetime and the severity slug.
-- **context:** The context to debug, typically the dot. There is currently nothing else than the dot expected, we have explicit debugging on the todo list where the context can be something to debug to the CLI.
-- **severity:** Slug marking the severity level. one of debug, info (default), warn, error or fatal.
-- **level:** 1 to 10 for the severity level. Can be used to have a more fine grained control over severity levels.
-- **slug:** (not implemented, keep an eye on #71) an ID to use so users can silence errors (level 7 and up)
-- **namespace:** (not implemented as partial option, see configuration section) namespace slug to differentiate yourself from others (default dnb)
+* **message:** The message to print. It will be prefixed with the datetime and the severity slug.
+* **context:** The context to debug, typically the dot. There is currently nothing else than the dot expected, we have explicit debugging on the todo list where the context can be something to debug to the CLI.
+* **severity:** Slug marking the severity level. one of debug, info (default), warn, error or fatal.
+* **level:** 1 to 10 for the severity level. Can be used to have a more fine grained control over severity levels.
+* **slug:** (not implemented, keep an eye on #71) an ID to use so users can silence errors (level 7 and up)
+* **namespace:** (not implemented as partial option, see configuration section) namespace slug to differentiate yourself from others (default dnb)
 
 The resulting error message will look like this:
 
