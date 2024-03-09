@@ -2,7 +2,7 @@
 {{- $isSitemapped := $config.enabled | default true -}}
 
 {{- if isset .Params "robotsdisallow" -}}
-  {{- partials.Include "debug.html"
+  {{- partials.Include "debug-cli.html"
         (dict
           "message" "Note: .Params.robotsdisallow is deprecated. Check the docs for details."
           "severity" "warn"
