@@ -4,5 +4,7 @@ cascade:
     showdate: false
     comments: false
   sectiontitle: GoHugo Components
-lastmod: 2022-08-03T21:47:20+07:00
+lastmod: 2024-03-10T11:24:42+07:00
+aliases:
+- components/
 ---
