@@ -20,7 +20,7 @@
 
 {{- $config := site.Params.dnb.hooks -}}
 {{- $loaded := false -}}
-{{- $output := . -}}
+{{- $output := $context.context -}}
 
 {{- with $config.filters -}}
   {{/* @todo fix weighting of hooks */}}
