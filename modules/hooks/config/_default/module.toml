@@ -10,6 +10,10 @@ target = "i18n"
 source = "layouts"
 target = "layouts"
 
+[[mounts]]
+source = "documentation"
+target = "content/gohugo/hooks"
+
 [[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/functions"
 disable = false
