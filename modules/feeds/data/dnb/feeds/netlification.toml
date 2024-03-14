@@ -1,9 +1,7 @@
 # see https://docs.netlify.com/routing/headers/ for details on formatting headers
-# (yes, netlification accepts header formatting in Netlify format)
 
 [[headers]]
 for = "/feed.json"
 [headers.values]
 Content-Type = "text/javascript; charset=utf-8"
-Cache-Control = "public, max-age=86400, immutable"
 Accept-Encoding = "gzip, deflate, br"
