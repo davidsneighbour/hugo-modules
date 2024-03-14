@@ -1,11 +1,9 @@
 ---
 title: Hooks
 linktitle: hugo-hooks
-description: "This module provides hooks and filters as an easy way for theme developers to let users add partials and blocks at pre-defined safe places in their themes or modules."
-summary: "This module provides **Hooks and filters for GoHugo layouts** as an easy way for theme developers to let users add partials and blocks at pre-defined safe places in their themes or modules."
-date: 2022-07-27T21:23:50+07:00
-publishDate: 2022-07-27T21:23:50+07:00
-lastmod: 2024-02-12T22:41:45+07:00
+description: This module provides hooks and filters as an easy way for theme developers to let users add partials and blocks at pre-defined safe places in their themes or modules.
+summary: This module provides **Hooks and filters for GoHugo layouts** as an easy way for theme developers to let users add partials and blocks at pre-defined safe places in their themes or modules.
+lastmod: 2024-03-13T22:57:58+07:00
 resources:
 - src: header-card.png
 categories:
@@ -24,6 +22,7 @@ config:
   band: gohugo
 aliases:
 - /components/hugo-hooks/
+date: 2024-03-13T22:57:56+07:00
 ---
 
 * [Key features](#key-features)
@@ -217,7 +216,7 @@ Have a look a the following projects to see usage of this module:
 * [Hooks in the theme of kollitsch.dev][4]
 * [Filters in the theme of kollitsch.dev][5]
 
-[^1]: If you know about actions and filters in WordPress then you already have an idea how hooks and actions will work.
+[^1]: If you know about actions and filters in WordPress then you already have an idea how hooks and filters will work.
 
 [1]: https://github.com/davidsneighbour/hugo-modules/tree/main/modules/debug#readme
 
