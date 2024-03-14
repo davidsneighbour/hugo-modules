@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/icons",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.8.18"
+    "@davidsneighbour/configurations": "^5.10.1",
+    "@tabler/icons": "^3.0.3"
   },
   "scripts": {
     "clean": "run-p clean:*",
