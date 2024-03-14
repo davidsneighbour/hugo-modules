@@ -3,18 +3,6 @@ limit = 10
 summary = true
 drafts = false
 
-[dnb.feeds.webfeed]
-# webfeed protocol
-logo = ""
-# 6 digit hex color code
-accentColor = ""
-coverImage = ""
-icon = ""
-[dnb.feeds.webfeed.analytics]
-enable = false
-id = ""                    # if left empty the global GA id will be used
-engine = "GoogleAnalytics" # currently GA only
-
 [dnb.feeds.atom]
 limit = 10
 summary = true
@@ -24,6 +12,18 @@ drafts = false
 limit = 10
 summary = true
 drafts = false
+
+[dnb.feeds.rss.webfeed]
+# webfeed protocol
+logo = ""
+# 6 digit hex color code
+accentColor = ""
+coverImage = ""
+icon = ""
+[dnb.feeds.rss.webfeed.analytics]
+enable = false
+id = ""                    # if left empty the global GA id will be used
+engine = "GoogleAnalytics" # currently GA only
 
 [dnb.feeds.json]
 limit = 10
