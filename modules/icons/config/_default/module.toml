@@ -7,12 +7,12 @@ source = "data"
 target = "data"
 
 [[mounts]]
-source = "layouts"
-target = "layouts"
-
-[[mounts]]
 source = "documentation"
 target = "content/gohugo/icons"
+
+[[mounts]]
+source = "layouts"
+target = "layouts"
 
 [[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/debug"
