@@ -1,14 +1,14 @@
 {{- /*
 
-  Returns a boolean indicating if drafts should be included in feeds.
+  Returns a boolean indicating if drafts should be included collections.In feeds.
 
   parameters:
-  - format (string)
+  - format (cast.toString)
 
-  returns in descending priority the integer value of:
-  - `[dnb.feeds.$FORMAT.drafts]` in the params section of the config
-  - `[dnb.feeds.drafts]` in the params section of the config
-  - `false` - does not show drafts in all feeds
+  returns collections.In descending priority the integer value of:
+  - `[dnb.feeds.$FORMAT.drafts]` collections.In the params section of the config
+  - `[dnb.feeds.drafts]` collections.In the params section of the config
+  - `false` - does not show drafts collections.In all feeds
 
   example:
 
@@ -21,7 +21,7 @@ sanitization of format variable */ -}}
 {{- with site.Params.dnb.feeds.drafts -}}
   {{- $drafts = . -}}
 {{- end -}}
-{{- with (index site.Params.dnb.feeds (trim . "\n") "drafts") -}}
+{{- with (collections.Index site.Params.dnb.feeds (strings.Trim . "\n") "drafts") -}}
   {{- $drafts = . -}}
 {{- end -}}
 {{- return $drafts -}}

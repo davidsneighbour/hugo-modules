@@ -1,5 +1,5 @@
-{{- $drafts := partialCached "func/feeds/getDrafts.html" "atom" . -}}
-{{- $items := partialCached "func/feeds/getItemsToShow.html" "atom" . -}}
+{{- $drafts := partials.IncludeCached "func/feeds/getDrafts.html" "atom" . -}}
+{{- $items := partials.IncludeCached "func/feeds/getItemsToShow.html" "atom" . -}}
 
 {{- $context := . -}}
 {{- if .IsHome -}}
@@ -8,49 +8,49 @@
 
 {{- $pages := $context.RegularPages -}}
 {{- with site.Params.mainSections -}}
-  {{- $pages = where site.RegularPages "Type" "in" . -}}
+  {{- $pages = collections.Where site.RegularPages "Type" "in" . -}}
 {{- end -}}
 
 {{- with $drafts -}}
-  {{- $pages = where $pages "Draft" "==" . -}}
+  {{- $pages = collections.Where $pages "Draft" "==" . -}}
 {{- end -}}
 
-{{- $limit := partialCached "func/feeds/getLimit.html" "atom" . -}}
-{{- $pages = $pages | first $limit -}}
+{{- $limit := partials.IncludeCached "func/feeds/getLimit.html" "atom" . -}}
+{{- $pages = $pages | collections.First $limit -}}
 
-{{ printf "<?xml version= \"1.0\" encoding= \"utf-8\" standalone= \"yes\"?>" | safeHTML }}
+{{ fmt.Printf "<?xml version= \"1.0\" encoding= \"utf-8\" standalone= \"yes\"?>" | safe.HTML }}
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.LanguageCode }}">
   <title>{{ site.Title }}</title>
   {{- with site.Params.brand.tagline }}
     <subtitle>{{ . }}</subtitle>
   {{- end }}
-  <id>{{ "/" | absLangURL }}</id>
+  <id>{{ "/" | urls.AbsLangURL }}</id>
   <author>
     <name>{{ site.Title }}</name>
-    <uri>{{ "/" | absLangURL }}</uri>
+    <uri>{{ "/" | urls.AbsLangURL }}</uri>
   </author>
   <generator>Hugo gohugo.io</generator>
   {{- with site.Copyright }}
     <rights>{{ . }}</rights>
   {{- end }}
   {{- with site.Params.brand.icon }}
-    <icon>{{ . | absURL }}</icon>
+    <icon>{{ . | urls.AbsURL }}</icon>
   {{- end }}
   {{- with site.Params.brand.logo }}
-    <logo>{{ . | absURL }}</logo>
+    <logo>{{ . | urls.AbsURL }}</logo>
   {{- end }}
-  <updated>{{ dateFormat "2006-01-02T15:04:05Z" now.UTC | safeHTML }}</updated>
+  <updated>{{ time.Format "2006-01-02T15:04:05Z" now.UTC | safe.HTML }}</updated>
   {{- with .OutputFormats.Get "ATOM" }}
-    {{ printf `<link rel="self" type="%s" href="%s" hreflang="%s" />`
+    {{ fmt.Printf `<link rel="self" type="%s" href="%s" hreflang="%s" />`
               .MediaType.Type
               .Permalink
-              site.LanguageCode | safeHTML }}
+              site.LanguageCode | safe.HTML }}
   {{- end }}
   {{- range .AlternativeOutputFormats }}
-    {{ printf `<link rel="alternate" type="%s" href="%s" hreflang="%s" />`
+    {{ fmt.Printf `<link rel="alternate" type="%s" href="%s" hreflang="%s" />`
               .MediaType.Type
               .Permalink
-              site.LanguageCode | safeHTML }}
+              site.LanguageCode | safe.HTML }}
   {{- end }}
   {{- range $pages }}
     <entry>
@@ -92,10 +92,10 @@
           <link rel="alternate" href="{{ .Permalink }}" hreflang="{{ .Language.Lang }}" />
         {{- end -}}
       {{ end }}
-      <updated>{{ dateFormat "2006-01-02T15:04:05Z" .Lastmod.UTC | safeHTML }}</updated>
-      <published>{{ dateFormat "2006-01-02T15:04:05Z" .Date.UTC | safeHTML }}</published>
+      <updated>{{ time.Format "2006-01-02T15:04:05Z" .Lastmod.UTC | safe.HTML }}</updated>
+      <published>{{ time.Format "2006-01-02T15:04:05Z" .Date.UTC | safe.HTML }}</published>
       <content type="html">
-        {{- $description := partialCached "func/getDescription.html" . . -}}
+        {{- $description := partials.IncludeCached "func/getDescription.html" . . -}}
         {{- $description | html -}}
       </content>
     </entry>

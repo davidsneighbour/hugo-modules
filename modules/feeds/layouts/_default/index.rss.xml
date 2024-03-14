@@ -1,5 +1,5 @@
-{{- $drafts := partialCached "func/feeds/getDrafts.html" "rss" . -}}
-{{- $items := partialCached "func/feeds/getItemsToShow.html" "rss" . -}}
+{{- $drafts := partials.IncludeCached "func/feeds/getDrafts.html" "rss" . -}}
+{{- $items := partials.IncludeCached "func/feeds/getItemsToShow.html" "rss" . -}}
 {{- $config := site.Params.dnb.feeds -}}
 
 {{- $context := . -}}
@@ -9,24 +9,24 @@
 
 {{- $pages := $context.RegularPages -}}
 {{- with site.Params.mainSections -}}
-{{- $pages = where site.RegularPages "Type" "in" . -}}
+{{- $pages = collections.Where site.RegularPages "Type" "in" . -}}
 {{- end -}}
 
 {{ with $drafts }}
-{{- $pages = where $pages "Draft" "==" . -}}
+{{- $pages = collections.Where $pages "Draft" "==" . -}}
 {{ end }}
 
-{{- $limit := partialCached "func/feeds/getLimit.html" "rss" . -}}
-{{- $pages = $pages | first $limit -}}
+{{- $limit := partials.IncludeCached "func/feeds/getLimit.html" "rss" . -}}
+{{- $pages = $pages | collections.First $limit -}}
 
-{{ printf "<?xml version='1.0' encoding='utf-8' standalone='yes'?>" | safeHTML }}
+{{ fmt.Printf "<?xml version='1.0' encoding='utf-8' standalone='yes'?>" | safe.HTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
       xmlns:webfeeds="http://webfeeds.org/rss/1.0"
       xmlns:media="http://search.yahoo.com/mrss/"
       xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>
-      {{- if eq .Title site.Title -}}
+      {{- if compare.Eq .Title site.Title -}}
         {{- site.Title -}}
       {{- else -}}
         {{- with .Title -}}
@@ -38,8 +38,8 @@
     <link>{{- .Permalink -}}</link>
     <description>
       Recent content
-      {{ if ne .Title site.Title -}}
-        {{- with .Title }} in {{ . }} {{ end -}}
+      {{ if compare.Ne .Title site.Title -}}
+        {{- with .Title }} collections.In {{ . }} {{ end -}}
       {{- end }}
       on {{ site.Title -}}
     </description>
@@ -55,7 +55,7 @@
     {{- end -}}
     {{- if not .Date.IsZero -}}
       <lastBuildDate>
-        {{- .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML -}}
+        {{- .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safe.HTML -}}
       </lastBuildDate>
     {{- end -}}
     <atom:link href="{{.Permalink}}" rel="self" type="application/rss+xml" />
@@ -64,7 +64,7 @@
       {{- /* see http://webfeeds.org/rss/1.0 */ -}}
       {{ with .color }}<webfeeds:accentColor>{{ . }}</webfeeds:accentColor>{{ end }}
       {{ with .analytics }}
-        {{ if eq .enable true }}
+        {{ if compare.Eq .enable true }}
           <webfeeds:analytics id="{{ .id }}" engine="{{ .engine }}" />
         {{ end }}
       {{ end }}
@@ -74,7 +74,7 @@
       <webfeeds:partial>true</webfeeds:partial>
       {{ with .promotion }}<webfeeds:promotion>{{ . }}</webfeeds:promotion>{{ end }}
       <webfeeds:related  layout="card" target="browser" />
-      {{- /* svg small, not in xmlns, but used by feedly */ -}}
+      {{- /* svg small, not collections.In xmlns, but used by feedly */ -}}
       {{ with .logo }}<webfeeds:logo>{{ . }}</webfeeds:logo>{{ end }}
     {{ end }}
 
@@ -83,17 +83,17 @@
         <title>{{- .Title -}}</title>
         <link>{{- .Permalink -}}</link>
         <pubDate>
-          {{- .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML -}}
+          {{- .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safe.HTML -}}
         </pubDate>
         {{- with site.Author.name -}}
           <author>{{- . -}}</author>
         {{- end -}}
         <guid>{{- .Permalink -}}</guid>
         <description>
-          {{- $description := partialCached "func/getDescription.html" . . -}}
+          {{- $description := partials.IncludeCached "func/getDescription.html" . . -}}
           {{- $description | html -}}
         </description>
-        {{- $image := partialCached "func/getArticleImage.html" . . -}}
+        {{- $image := partials.IncludeCached "func/getArticleImage.html" . . -}}
         {{- with $image -}}
           {{- $image := .Resize "1200x webp" -}}
           {{- with $image }}

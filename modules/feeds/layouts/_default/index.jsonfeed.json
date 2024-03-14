@@ -1,5 +1,5 @@
-{{- $drafts := partialCached "func/feeds/getDrafts.html" "json" . -}}
-{{- $items := partialCached "func/feeds/getItemsToShow.html" "json" . -}}
+{{- $drafts := partials.IncludeCached "func/feeds/getDrafts.html" "json" . -}}
+{{- $items := partials.IncludeCached "func/feeds/getItemsToShow.html" "json" . -}}
 
 {{- $context := . -}}
 {{- if .IsHome -}}
@@ -8,38 +8,38 @@
 
 {{- $pages := $context.RegularPages -}}
 {{- with site.Params.mainSections -}}
-  {{- $pages = where site.RegularPages "Type" "in" . -}}
+  {{- $pages = collections.Where site.RegularPages "Type" "in" . -}}
 {{- end -}}
 
 {{ with $drafts }}
-  {{- $pages = where $pages "Draft" "==" . -}}
+  {{- $pages = collections.Where $pages "Draft" "==" . -}}
 {{ end }}
 
-{{- $limit := partialCached "func/feeds/getLimit.html" "json" . -}}
-{{- $pages = $pages | first $limit -}}
+{{- $limit := partials.IncludeCached "func/feeds/getLimit.html" "json" . -}}
+{{- $pages = $pages | collections.First $limit -}}
 
 {{- $feed := dict "version" "https://jsonfeed.org/version/1.1" -}}
-{{- $feed = merge $feed ( dict "home_page_url" .Site.BaseURL ) -}}
+{{- $feed = collections.Merge $feed ( dict "home_page_url" .Site.BaseURL ) -}}
 
 {{- with .OutputFormats.Get "jsonfeed" -}}
-  {{- $feed = merge $feed ( dict "feed_url" .Permalink ) -}}
+  {{- $feed = collections.Merge $feed ( dict "feed_url" .Permalink ) -}}
 {{- end -}}
 
 {{- with .Site.LanguageCode -}}
-  {{- $feed = merge $feed ( dict "language" . ) -}}
+  {{- $feed = collections.Merge $feed ( dict "language" . ) -}}
 {{- end -}}
 {{- with $.Param "icon" -}}
-  {{- $feed = merge $feed ( dict "icon" ( . | absURL ) ) -}}
+  {{- $feed = collections.Merge $feed ( dict "icon" ( . | urls.AbsURL ) ) -}}
 {{- end -}}
 {{- with $.Param "favicon" -}}
-  {{- $feed = merge $feed ( dict "favicon" ( . | absURL ) ) -}}
+  {{- $feed = collections.Merge $feed ( dict "favicon" ( . | urls.AbsURL ) ) -}}
 {{- end -}}
 
-{{- $items := slice -}}
+{{- $items := collections.Slice -}}
 {{- range $index, $element := $pages -}}
   {{- /* content_text */ -}}
-  {{- $description := partialCached "func/getDescription.html" . . -}}
-  {{- $items = $items | append (dict
+  {{- $description := partials.IncludeCached "func/getDescription.html" . . -}}
+  {{- $items = $items | collections.Append (dict
         "title" .Title
         "date_published" ( .Date.Format "2006-01-02T15:04:05Z07:00" )
         "date_modified" ( .Lastmod.Format "2006-01-02T15:04:05Z07:00" )
@@ -48,6 +48,6 @@
         "content_text" $description
   ) -}}
 {{- end -}}
-{{- $feed = merge $feed ( dict "items" $items ) -}}
+{{- $feed = collections.Merge $feed ( dict "items" $items ) -}}
 
-{{- $feed | jsonify -}}
+{{- $feed | encoding.Jsonify -}}

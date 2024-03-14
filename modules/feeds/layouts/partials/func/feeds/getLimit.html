@@ -1,14 +1,14 @@
 {{- /*
 
-  Returns the configured amount of items in feeds.
+  Returns the configured amount of items collections.In feeds.
 
   parameters:
-  - format (string)
+  - format (cast.toString)
 
-  returns in descending priority the integer value of:
-  - `[dnb.feeds.$FORMAT.limit]` in the params section of the config
-  - `[dnb.feeds.limit]` in the params section of the config
-  - `[rss.limit]` in the services section of the config
+  returns collections.In descending priority the integer value of:
+  - `[dnb.feeds.$FORMAT.limit]` collections.In the params section of the config
+  - `[dnb.feeds.limit]` collections.In the params section of the config
+  - `[rss.limit]` collections.In the services section of the config
   - 10
 
   Sample:
@@ -18,14 +18,14 @@
 `
 The format can be one of the following strings: - rss - atom - json TODO
 sanitization of format variable */ -}}
-{{- $limit := int 10 -}}
+{{- $limit := cast.ToInt 10 -}}
 {{- with site.Config.Services.RSS.Limit -}}
-  {{- $limit = int . -}}
+  {{- $limit = cast.ToInt . -}}
 {{- end -}}
 {{- with site.Params.dnb.feeds.limit -}}
-  {{- $limit = int . -}}
+  {{- $limit = cast.ToInt . -}}
 {{- end -}}
-{{- with (index site.Params.dnb.feeds . "limit") -}}
-  {{- $limit = int . -}}
+{{- with (collections.Index site.Params.dnb.feeds . "limit") -}}
+  {{- $limit = cast.ToInt . -}}
 {{- end -}}
 {{- return $limit -}}
