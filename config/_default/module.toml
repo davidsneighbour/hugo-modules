@@ -3,10 +3,6 @@ source = "documentation/"
 target = "content/gohugo"
 
 [[mounts]]
-source = "modules/hooks/documentation"
-target = "content/gohugo/hooks"
-
-[[mounts]]
 source = "assets"
 target = "assets"
 
@@ -20,7 +16,3 @@ target = "static"
 
 [[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/pictures"
-
-[[imports.mounts]]
-source = "assets"
-target = "assets"
