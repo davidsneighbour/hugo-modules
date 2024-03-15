@@ -9,17 +9,19 @@
 {{- end -}}
 
 <ul>
-  {{ $sectionHref := printf "/%s/" $section -}}
-  <li><a href="{{- $sectionHref -}}">Overview</a></li>
-  {{- range (site.GetPage $section).Pages.ByWeight -}}
-  <li>
-    <a href="{{- .Permalink -}}">{{- .Title }}</a>
-    {{- if eq true $withSummary -}}
-      {{- with .Summary }}
-        &mdash;
-        {{ . | transform.Markdownify -}}
-      {{- end -}}
+  {{- range $index, $item := (site.GetPage $section).Pages.ByWeight -}}
+    {{ if eq 0 $index}}
+      {{ $sectionHref := (site.GetPage $section).Permalink -}}
+      <li><a href="{{- $sectionHref -}}">Overview</a></li>
     {{- end -}}
-  </li>
+    <li>
+      <a href="{{- $item.Permalink -}}">{{- $item.Title }}</a>
+      {{- if eq true $withSummary -}}
+        {{- with $item.Summary }}
+          &mdash;
+          {{ . | transform.Markdownify -}}
+        {{- end -}}
+      {{- end -}}
+    </li>
   {{- end -}}
 </ul>
