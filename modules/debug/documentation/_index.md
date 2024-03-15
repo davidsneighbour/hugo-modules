@@ -3,7 +3,7 @@ title: Debug
 description: Debug everything in Hugo! This module for GoHugo adds debugging partials for everything you need to debug.
 date: 2022-07-27T21:17:03+07:00
 publishDate: 2022-07-27T21:17:03+07:00
-lastmod: 2024-02-01T19:41:39+07:00
+lastmod: 2024-03-15T18:25:02+07:00
 resources:
 - src: header-card.png
 categories:
@@ -22,6 +22,7 @@ config:
   band: gohugo
 aliases:
 - /components/hugo-debug/
+layout: documentation
 ---
 
 Debug everything in Hugo! This module for GoHugo adds debugging partials for everything you need to debug.
@@ -56,17 +57,17 @@ A quick sample for its usage is the following debugging of a pages data:
 To print a variable in one of your layouts:
 
 ```go-html-template
-{{ partial "debugprint" . }}
-{{ partial "debugprint" .Params }}
-{{ partial "debugprint" site }}
-{{ partial "debugprint" site.Menus }}
-{{ partial "debugprint" .GitInfo }}
-{{ partial "debugprint" .Resources }}
-{{ partial "debugprint" .File }}
+{{- partial "debug-print.html" . -}}
+{{- partial "debug-print.html" .Params -}}
+{{- partial "debug-print.html" site -}}
+{{- partial "debug-print.html" site.Menus -}}
+{{- partial "debug-print.html" .GitInfo -}}
+{{- partial "debug-print.html" .Resources -}}
+{{- partial "debug-print.html" .File -}}
 
 {{/* in shortcodes */}}
-{{ partial "debugprint" . }} <!-- this will debug the internals of the shortcode -->
-{{ partial "debugprint" .Position }} <!-- this will show where the shortcode was called -->
+{{- partial "debug-print.html" . -}} <!-- this will debug the internals of the shortcode -->
+{{- partial "debug-print.html" .Position -}} <!-- this will show where the shortcode was called -->
 ```
 
 Exchange the context `.` with whatever variable you want to debug. Sub-collections or sub-slices might require extra setup to be debugged, depending on the structure and the type of the values.
@@ -93,12 +94,12 @@ Some times we developers want to inform and warn our users, or even throw an err
 
 ### Debug pages in a comprehensive format
 
-While all other debugging options above are flexible options to debug any value, the `debugpage` partial opts to show a bunch of interesting information about the page object it is called on. It's quite specific and tries to cut out the noise.
+While all other debugging options above are flexible options to debug any value, the `debug-page.html` partial opts to show a bunch of interesting information about the page object it is called on. It's quite specific and tries to cut out the noise.
 
 You can add the following call to any layout file:
 
 ```go-html-template
-{{ partialCached "debugpage.html" . . }}
+{{ partialCached "debug-page.html" . . }}
 ```
 
 or by using the following shortcode in your Markdown:
@@ -120,8 +121,6 @@ debuglevel = 8
 disablenote = false
 ```
 
-* **namespace:** (string) namespace slug for your plugin/theme. keep it short. three characters are enough. There is no restriction on this, but think about the look of the loglines with longer namespaces.
-* **debuglevel:** (number, 0 to 10) set the severity level that should maximally be shown. The higher the more info/debug on your CLI. 10 is maximum and can be helpful to debug issues.
-* **disablenote:** (bool) disables the note at the beginning that the debug module is used.
-
-{{< debugprint "Resources" >}}
+* **`namespace`:** (string) namespace slug for your plugin/theme. keep it short. three characters are enough. There is no restriction on this, but think about the look of the loglines with longer namespaces.
+* **`debuglevel`:** (number, 0 to 10) set the severity level that should maximally be shown. The higher the more info/debug on your CLI. 10 is maximum and can be helpful to debug issues.
+* **`disablenote`:** (bool) disables the note at the beginning that the debug module is used.
