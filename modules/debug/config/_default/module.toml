@@ -11,16 +11,16 @@ source = "assets/scss/_debugprint.scss"
 target = "assets/scss/_debugprint.scss"
 
 [[mounts]]
+source = "package.json"
+target = "assets/dnb/modules/debug/package.json"
+
+[[mounts]]
 source = "assets/js/debug.js"
 target = "assets/js/debug.js"
 
 [[mounts]]
 source = "static/assets/js/"
 target = "assets/dnb/debug/files/"
-
-[[mounts]]
-source = "package.json"
-target = "assets/dnb/modules/debug/package.json"
 
 [[mounts]]
 source = "documentation"
