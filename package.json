@@ -9,9 +9,9 @@
   "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules#readme",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.9.3",
-    "@davidsneighbour/markdownlint-config": "^5.9.3",
-    "@davidsneighbour/remark-config": "^5.9.3",
+    "@davidsneighbour/configurations": "^5.10.1",
+    "@davidsneighbour/markdownlint-config": "^5.10.1",
+    "@davidsneighbour/remark-config": "^5.10.1",
     "@slightlyoff/lite-vimeo": "0.1.2",
     "dotenv": "^16.4.5",
     "workbox-cacheable-response": "7.0.0",
