@@ -1,1 +1,3 @@
-{{ partials.IncludeCached "debug-page.html" page page }}
+{{/* @todo remove after 2024-06-17 */}}
+{{- fmt.Erroridf "deprecation.debug" (i18n "deprecation.debug") -}}
+{{- partials.IncludeCached "debug-page.html" page page -}}
