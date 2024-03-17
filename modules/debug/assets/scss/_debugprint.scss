@@ -71,7 +71,7 @@ table.debugprint {
 
       &::before,
       &::after {
-        @extend .text-muted;
+        @extend .text-warning;
       }
 
       &::before {
