@@ -1,0 +1,3 @@
+{{- if ne hugo.Environment "production" }}
+  {{- printf "<!-- %s -->" . | safeHTML -}}
+{{- end -}}
