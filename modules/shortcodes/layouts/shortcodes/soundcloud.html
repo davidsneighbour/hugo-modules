@@ -1,7 +1,36 @@
-{{/*
+{{- /* https://developers.soundcloud.com/docs/api/html5-widget */ -}}
 
-Param 1: Track ID
+{{- $parameters := dict
+  "visual" (.Get "visual" | default true)
+  "auto_play" (.Get "auto_play" | default false)
+  "color"	((.Get "color" | urlquery) | default "%23ff7700")
+  "buying" (.Get "buying" | default false)
+  "sharing" (.Get "sharing" | default false)
+  "download" (.Get "download" | default false)
+  "show_artwork" (.Get "show_artwork" | default true)
+  "show_comments" (.Get "show_comments" | default true)
+  "show_reposts" (.Get "show_reposts" | default false)
+  "show_teaser" (.Get "show_teaser" | default false)
+  "show_playcount" (.Get "show_playcount" | default false)
+  "show_user" (.Get "show_user" | default false)
+  "start_track" (.Get "start_track" | default false)
+  "single_active" (.Get "single_active" | default true)
+  "hide_related" (.Get "hide_related" | default true)
+-}}
 
-*/}}
+{{- $id := .Get "id" | default "1775417439" -}}
 
-<div class="is--soundcloud" data-id="{{ index .Params 0 }}"></div>
+{{- $url := "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" -}}
+{{- $output := (printf "%s%s" $url $id) -}}
+{{- range $key, $value := $parameters -}}
+  {{- if or (eq $value true) (eq $value false) -}}
+    {{- $output = printf "%s&%s=%t" $output $key $value -}}
+  {{- else -}}
+    {{- $output = printf "%s&%s=%s" $output $key $value -}}
+  {{- end -}}
+{{- end -}}
+{{- $height := .Get "height" | default "600" -}}
+
+<iframe width="100%" height="{{- $height -}}"
+      scrolling="no" frameborder="no" allow="autoplay"
+      src="{{- $output | safeURL -}}"></iframe>
