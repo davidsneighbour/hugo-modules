@@ -11,7 +11,7 @@
 {{- end -}}
 
 {{- /* a quick note */ -}}
-{{- partials.Include "debug.html" (collections.Dictionary
+{{- partials.Include "debug-cli.html" (collections.Dictionary
     "message" (fmt.Printf "dnb-hooks - see %s for details" site.Params.dnb.hooks.hooklink)
     "context" .
     "severity" "info"

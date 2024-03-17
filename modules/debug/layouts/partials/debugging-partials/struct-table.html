@@ -8,7 +8,7 @@
     {{- range $index, $item := $items -}}
       {{- $slices := slice
           (index $names $index)
-          (partials.Include "debugtype" $item)
+          (partials.Include "debug-type.html" $item)
           ($item) -}}
       {{- partials.Include "debugging-partials/struct-row.html" $slices -}}
     {{- end -}}

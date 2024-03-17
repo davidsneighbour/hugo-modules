@@ -64,7 +64,7 @@
       {{ end }}
       <div class="tab-pane fade{{ $active }}" id="nav-versioninfo" role="tabpanel"
           aria-labelledby="nav-versioninfo-tab" tabindex="0">
-        {{ partials.IncludeCached "versioninfo.html" $page $page }}
+        {{ partials.IncludeCached "debug-version.html" $page $page }}
       </div>
     {{ end }}
 
@@ -76,7 +76,7 @@
       {{ end }}
       <div class="tab-pane fade{{ $active }}" id="nav-dependencies" role="tabpanel"
           aria-labelledby="nav-dependencies-tab" tabindex="0">
-        {{ partials.IncludeCached "dependencies.html" $page $page }}
+        {{ partials.IncludeCached "debug-dependencies.html" $page $page }}
       </div>
     {{ end }}
 
@@ -88,7 +88,7 @@
       {{ end }}
       <div class="tab-pane fade{{ $active }}" id="nav-pageinfo" role="tabpanel"
           aria-labelledby="nav-pageinfo-tab" tabindex="0">
-        {{ partials.IncludeCached "debugpage.html" $page $page }}
+        {{ partials.IncludeCached "debug-page.html" $page $page }}
       </div>
     {{ end }}
 

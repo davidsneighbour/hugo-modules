@@ -40,7 +40,7 @@
               {{- range $index, $item := $items -}}
                 {{- $slices := slice
                     (index $names $index)
-                    (partials.Include "debugtype.html" $item)
+                    (partials.Include "debug-type.html" $item)
                     (partials.Include "debug-print.html" $item) -}}
                 <tr>{{- range $index, $item := $slices -}}
                   {{- if (eq $index 0) -}}

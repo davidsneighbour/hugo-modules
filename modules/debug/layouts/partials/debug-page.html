@@ -118,7 +118,7 @@
           {{- range $index, $item := $items -}}
               {{- $slices := slice
                   (index $names $index)
-                  (partials.Include "debugtype.html" $item)
+                  (partials.Include "debug-type.html" $item)
                   (partials.Include "debug-print.html" $item) -}}
               <tr>
                   <th scope="row">{{- collections.Index $slices 0 -}}</th>
