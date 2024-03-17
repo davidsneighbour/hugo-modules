@@ -5,6 +5,6 @@ authors:
     given-names: "Patrick"
     orcid: "https://orcid.org/0000-0001-6250-2135"
 title: "Hugo Modules / Shortcodes"
-version: 1.2023.11
-date-released: 2024-03-03
+version: 1.2023.12
+date-released: 2024-03-17
 url: "https://github.com/davidsneighbour/hugo-modules"
