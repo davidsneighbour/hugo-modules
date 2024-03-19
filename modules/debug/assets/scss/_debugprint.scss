@@ -84,5 +84,31 @@ table.debugprint {
 
     }
 
+    &-slice {
+
+      &::before,
+      &::after {
+        @extend .text-warning;
+      }
+
+      &::before {
+        content: '[';
+      }
+
+      &::after {
+        content: ']';
+      }
+
+      &-item {
+        &::after {
+          content: ',';
+        }
+
+        &:last-child::after {
+          content: '';
+        }
+      }
+    }
+
   }
 }

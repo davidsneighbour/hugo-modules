@@ -6,16 +6,16 @@
 {{- if eq "print" $type -}}
   {{- $param := .Get "param" -}}
   {{- if (eq "params" $param) -}}
-    <h3>.Page.Params ::</h3>
+    <h3>.Page.Params:</h3>
     {{- partials.Include "debug-print.html" page.Params -}}
   {{- else if (eq "page" $param) -}}
-    <h3>.Page ::</h3>
+    <h3>.Page:</h3>
     {{- partials.Include "debug-print.html" page -}}
   {{- else if (eq "site" $param) -}}
-    <h3>.Site/site ::</h3>
+    <h3>.Site/site:</h3>
     {{- partials.Include "debug-print.html" site -}}
   {{- else -}}
-    {{- printf `<h3>.Page.Param "%s" ::</h3>` $param | safeHTML -}}
+    {{- printf `<h3>.Page.Param "%s":</h3>` $param | safeHTML -}}
     {{- partials.Include "debug-print.html" (page.Param $param) -}}
   {{- end -}}
 {{- else -}}
