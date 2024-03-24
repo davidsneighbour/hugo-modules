@@ -4,7 +4,7 @@ linktitle: hugo-debug
 description: Debug everything in Hugo! This module for GoHugo adds debugging partials for everything you need to debug.
 date: 2022-07-27T21:17:03+07:00
 publishDate: 2022-07-27T21:17:03+07:00
-lastmod: 2023-12-31T17:14:30+07:00
+lastmod: 2024-03-23T10:16:28+07:00
 resources:
 - src: hugo-debug.png
 categories:
@@ -17,7 +17,6 @@ config:
   band: gohugo
 outputs:
 - html
-- HEADERIMAGE
 headerimage:
   title: Debug
   version: v0.1.0
@@ -27,8 +26,8 @@ Debug everything in Hugo! This module for GoHugo adds debugging partials for eve
 
 ## Notes
 
-- This is a GoHugo module to use while you are developing your theme or website. It slows down the build process. Knowledge about variables in our template and NOT speed is our main priority. It is advised to add the module only the development configuration or check if the layout is processed by the development server to minimise its impact.
-- This module is based on the work in [kaushalmodi/hugo-debugprint](https://github.com/kaushalmodi/hugo-debugprint).
+* This is a GoHugo module to use while you are developing your theme or website. It slows down the build process. Knowledge about variables in our template and NOT speed is our main priority. It is advised to add the module only the development configuration or check if the layout is processed by the development server to minimise its impact.
+* This module is based on the work in [kaushalmodi/hugo-debugprint](https://github.com/kaushalmodi/hugo-debugprint).
 
 ## Usage
 
@@ -119,8 +118,8 @@ debuglevel = 8
 disablenote = false
 ```
 
-- **namespace:** (string) namespace slug for your plugin/theme. keep it short. three characters are enough. There is no restriction on this, but think about the look of the loglines with longer namespaces.
-- **debuglevel:** (number, 0 to 10) set the severity level that should maximally be shown. The higher the more info/debug on your CLI. 10 is maximum and can be helpful to debug issues.
-- **disablenote:** (bool) disables the note at the beginning that the debug module is used.
+* **namespace:** (string) namespace slug for your plugin/theme. keep it short. three characters are enough. There is no restriction on this, but think about the look of the loglines with longer namespaces.
+* **debuglevel:** (number, 0 to 10) set the severity level that should maximally be shown. The higher the more info/debug on your CLI. 10 is maximum and can be helpful to debug issues.
+* **disablenote:** (bool) disables the note at the beginning that the debug module is used.
 
 {{< debugprint "Resources" >}}
