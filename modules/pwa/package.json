@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/pwa",
   "dependencies": {
-    "@davidsneighbour/browserslist-config": "^5.10.2",
+    "@davidsneighbour/browserslist-config": "^2024.0.3",
     "@davidsneighbour/eslint-config": "^5.10.2",
     "@davidsneighbour/standard-version-config": "^5.10.2",
     "@davidsneighbour/tools": "^5.10.2",
