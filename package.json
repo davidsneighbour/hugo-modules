@@ -12,7 +12,7 @@
     "@davidsneighbour/configurations": "^5.10.1",
     "@davidsneighbour/markdownlint-config": "^5.10.1",
     "@davidsneighbour/prettier-config": "^5.11.0",
-    "@davidsneighbour/remark-config": "^5.10.1",
+    "@davidsneighbour/remark-config": "^2024.0.3",
     "@slightlyoff/lite-vimeo": "0.1.2",
     "dotenv": "^16.4.5",
     "workbox-cacheable-response": "7.0.0",
