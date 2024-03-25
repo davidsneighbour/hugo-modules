@@ -21,7 +21,7 @@
   "dependencies": {},
   "devDependencies": {
     "@davidsneighbour/bootstrap-config": "^5.10.1",
-    "@davidsneighbour/webpack-config": "^5.10.1",
+    "@davidsneighbour/webpack-config": "^2024.0.3",
     "@types/node": "^20.11.29",
     "@types/webpack": "^5.28.5",
     "node-sass": "^9.0.0",
