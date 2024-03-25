@@ -1,7 +1,7 @@
 {
   "name": "hugo-modules",
   "description": "@davidsneighbour's reusable gohugo components.",
-  "version": "1.2024.20",
+  "version": "1.2024.21",
   "license": "MIT",
   "private": true,
   "repository": "davidsneighbour/hugo-modules",
