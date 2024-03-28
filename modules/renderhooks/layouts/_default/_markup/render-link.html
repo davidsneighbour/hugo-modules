@@ -6,7 +6,7 @@
   available values:
   .Page - The Page being rendered.
   .Destination - The URL
-  .Title - The title attribute.
+  .Title - The strings.Title attribute.
   .Text - The rendered (HTML) link text.
   .PlainText - The plain variant of the above.
 
@@ -22,10 +22,10 @@
   {{- if $url.Path -}}
     {{- $fragment := "" -}}
     {{- with $url.Fragment -}}
-      {{- $fragment = printf "#%s" . -}}
+      {{- $fragment = fmt.Printf "#%s" . -}}
     {{- end -}}
     {{- with page.GetPage $url.Path -}}
-      {{- $link = printf "%s%s" .RelPermalink $fragment -}}
+      {{- $link = fmt.Printf "%s%s" .RelPermalink $fragment -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
@@ -34,16 +34,16 @@
   {{- $parsedTitle = partials.IncludeCached "functions/parse-title-attribute.html" . . -}}
 {{- end -}}
 <a
-  href="{{ $link | safeURL }}"
+  href="{{ $link | safe.URL }}"
   {{- with $parsedTitle.title }}
-    title="{{ . | safeHTMLAttr }}"
+    title="{{ . | safe.HTMLAttr }}"
   {{- end -}}{{ if $isRemote }}
     target="_blank" rel="noopener noreferrer"
   {{ end }}
   {{- with $parsedTitle.attributes -}}
     {{- range $k, $v := . -}}
-      {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+      {{- fmt.Printf " %s=%q" $k $v | safe.HTMLAttr -}}
     {{- end -}}
   {{- end -}}
-  >{{- .Text | safeHTML -}}</a
+  >{{- .Text | safe.HTML -}}</a
 >{{- /* done (dirty hack to remove newline from parsed render hook) */ -}}
