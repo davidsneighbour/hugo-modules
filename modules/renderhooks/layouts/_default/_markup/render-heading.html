@@ -15,11 +15,11 @@ usage sample:
 
 */ -}}
 {{- $config := site.Data.dnb.renderhooks.heading -}}
-{{ if eq $config.disabled false}}
-  <h{{ .Level }} id="{{ .Anchor | safeURL }}">
-    {{ .Text | safeHTML }}
+{{ if compare.Eq $config.disabled false}}
+  <h{{ .Level }} id="{{ .Anchor | safe.URL }}">
+    {{ .Text | safe.HTML }}
   	<span class="heading-tools">
-      <a href="#{{ .Anchor | safeURL }}">
+      <a href="#{{ .Anchor | safe.URL }}">
         {{- partials.Include "icon.html" "bookmark" -}}
       </a>
       <a href="#" class="is--back-to-top">
@@ -28,5 +28,5 @@ usage sample:
     </span>
   </h{{ .Level }}>
 {{ else }}
-  <h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }}</h{{ .Level }}>
+  <h{{ .Level }} id="{{ .Anchor | safe.URL }}">{{ .Text | safe.HTML }}</h{{ .Level }}>
 {{ end }}
