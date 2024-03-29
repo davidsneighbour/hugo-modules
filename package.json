@@ -9,10 +9,10 @@
   "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules#readme",
   "dependencies": {
-    "@davidsneighbour/configurations": "^2024.0.3",
-    "@davidsneighbour/markdownlint-config": "^2024.0.3",
-    "@davidsneighbour/prettier-config": "^2024.0.3",
-    "@davidsneighbour/remark-config": "^2024.0.3",
+    "@davidsneighbour/configurations": "^2024.1.0",
+    "@davidsneighbour/markdownlint-config": "^2024.1.0",
+    "@davidsneighbour/prettier-config": "^2024.1.0",
+    "@davidsneighbour/remark-config": "^2024.1.0",
     "@slightlyoff/lite-vimeo": "0.1.2",
     "dotenv": "^16.4.5",
     "workbox-cacheable-response": "7.0.0",
@@ -31,7 +31,7 @@
     "clean:node": "rimraf node_modules package-lock.json",
     "serve:webpack": "webpack --watch --config webpack.js",
     "lint:lockfiles": "lockfile-lint --path package-lock.json --type=npm --validate-https --allowed-hosts=npm --empty-hostname=false --validate-package-names --validate-checksum --validate-integrity",
-    "update": "npm-check-updates --deep --upgrade --target=minor & node bin/release/system/update.mjs & bin/components && npm install && git add -A && git commit -m 'chore(deps): update dependencies'",
+    "update": "npm-check-updates --deep --upgrade --target=minor && git add -A && git commit -m 'chore(deps): update dependencies'",
     "update:major": "npm-check-updates --deep --upgrade & node bin/release/system/update.mjs & bin/components && npm install && git add -A && git commit -m 'chore(deps): update dependencies'",
     "release": "commit-and-tag-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"

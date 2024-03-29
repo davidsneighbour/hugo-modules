@@ -13,7 +13,7 @@
   "bugs": "https://github.com/davidsneighbour/hugo-errors/issues",
   "devDependencies": {
     "@davidsneighbour/standard-version-config": "^5.8.18",
-    "@davidsneighbour/tools": "^2024.0.0"
+    "@davidsneighbour/tools": "^2024.1.0"
   },
   "scripts": {
     "clean": "run-p clean:*",
