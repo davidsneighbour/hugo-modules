@@ -11,6 +11,10 @@ source = "i18n"
 target = "i18n"
 
 [[mounts]]
+source = "documentation"
+target = "content/gohugo/social"
+
+[[mounts]]
 source = "layouts"
 target = "layouts"
 

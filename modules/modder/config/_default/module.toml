@@ -9,3 +9,7 @@ target = 'layouts'
 [[mounts]]
 source = 'assets'
 target = 'assets'
+
+[[mounts]]
+source = "documentation"
+target = "content/gohugo/modder"

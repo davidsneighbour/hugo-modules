@@ -13,6 +13,11 @@ target = "layouts/"
 source = "data/"
 target = "data/"
 
+[[mounts]]
+source = "documentation"
+target = "content/gohugo/security"
+
+
 # [[mounts]]
 # source = "content/dnb/privacy/"
 # target = "content/dnb/privacy/"

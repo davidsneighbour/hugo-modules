@@ -13,3 +13,7 @@ target = "layouts"
 [[mounts]]
 source = "static"
 target = "static"
+
+[[mounts]]
+source = "documentation"
+target = "content/gohugo/netlification"

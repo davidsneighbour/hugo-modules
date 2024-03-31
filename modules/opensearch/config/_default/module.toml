@@ -13,3 +13,7 @@ target = "i18n"
 [[mounts]]
 source = "layouts"
 target = "layouts"
+
+[[mounts]]
+source = "documentation"
+target = "content/gohugo/opensearch"

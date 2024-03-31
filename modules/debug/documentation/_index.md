@@ -22,6 +22,7 @@ config:
   band: gohugo
 aliases:
 - /components/hugo-debug/
+- /gohugo/hugo-debug/
 layout: documentation
 ---
 

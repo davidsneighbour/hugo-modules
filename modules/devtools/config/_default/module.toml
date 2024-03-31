@@ -2,6 +2,12 @@
 extended = false
 min = "0.120.1"
 
+
+[[mounts]]
+source = "documentation"
+target = "content/gohugo/devtools"
+
+
 [[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/debug"
 

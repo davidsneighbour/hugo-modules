@@ -15,6 +15,10 @@ source = "content"
 target = "content/dnb/renderhooks"
 
 [[mounts]]
+source = "documentation"
+target = "content/gohugo/renderhooks"
+
+[[mounts]]
 source = "data"
 target = "data"
 

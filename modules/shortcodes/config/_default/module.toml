@@ -11,6 +11,10 @@ source = "data"
 target = "data"
 
 [[mounts]]
+source = "documentation"
+target = "content/gohugo/shortcodes"
+
+[[mounts]]
 source = "i18n"
 target = "i18n"
 

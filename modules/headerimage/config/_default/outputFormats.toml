@@ -1,6 +1,6 @@
 [headerimage]
 mediaType = 'image/svg+xml'
-baseName = 'index'
+baseName = 'headerimage'
 isPlainText = true
 protocol = 'https://'
 ugly = false

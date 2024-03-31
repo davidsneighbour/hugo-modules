@@ -10,5 +10,9 @@ source = "data"
 target = "data"
 
 [[mounts]]
+source = "documentation"
+target = "content/gohugo/sitemap"
+
+[[mounts]]
 source = "layouts"
 target = "layouts"

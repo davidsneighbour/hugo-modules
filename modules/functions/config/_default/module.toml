@@ -1,21 +1,23 @@
-[module]
-
-[module.hugoVersion]
+[hugoVersion]
 extended = true
 min = "0.91.0"
 
-[[module.mounts]]
+[[mounts]]
 source = "assets/js/debug.js"
 target = "assets/js/debug.js"
 
-[[module.mounts]]
+[[mounts]]
 source = "data"
 target = "data"
 
-[[module.mounts]]
+[[mounts]]
+source = "documentation"
+target = "content/gohugo/functions"
+
+[[mounts]]
 source = "i18n"
 target = "i18n"
 
-[[module.mounts]]
+[[mounts]]
 source = "layouts"
 target = "layouts"

@@ -7,6 +7,10 @@ source = "layouts"
 target = "layouts"
 
 [[mounts]]
+source = "documentation"
+target = "content/gohugo/internals"
+
+
+[[mounts]]
 source = "data"
 target = "data"
-

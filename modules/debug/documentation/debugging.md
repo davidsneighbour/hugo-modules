@@ -20,7 +20,7 @@ aliases:
 layout: documentation
 ---
 
-### Debug from your layout file into the CLI/server log
+## Debug from your layout file into the CLI/server log
 
 Some times we developers want to inform and warn our users, or even throw an error. The debug partial is your connection to the CLI with some more options than GoHugo's internal error functionality.
 
@@ -36,7 +36,7 @@ Some times we developers want to inform and warn our users, or even throw an err
 -}}
 ```
 
-_Note:_ Multiline layout functions are supported since Hugo 0.81.0. In older versions remove the new lines in these samples.
+*Note:* Multiline layout functions are supported since Hugo 0.81.0. In older versions remove the new lines in these samples.
 
 The dictionary options are as follows:
 
@@ -51,6 +51,6 @@ The resulting error message will look like this:
 
 `SEVERITY TIMESTAMP [namespaceslug/severity-level] message`
 
-_Note:_ GoHugo will print all messages that occur more than once will printed only once. This applies to identical error messages. To work around this (if you wish to for instance notify the user about multiple image transformations not working) you should add an identifier (the image url? the resource id?) to the debugging message.
+*Note:* GoHugo will print all messages that occur more than once will printed only once. This applies to identical error messages. To work around this (if you wish to for instance notify the user about multiple image transformations not working) you should add an identifier (the image url? the resource id?) to the debugging message.
 
-_Note2:_ Hugo makes only ERROR and WARN levels available, so all `SEVERITY` stamps in the beginning of each log line will be either a red ERROR (from errors and fatals --- 1 to 4) or a yellow WARN for all others (debug to warn --- 5 to 10).
+*Note2:* Hugo makes only ERROR and WARN levels available, so all `SEVERITY` stamps in the beginning of each log line will be either a red ERROR (from errors and fatals --- 1 to 4) or a yellow WARN for all others (debug to warn --- 5 to 10).

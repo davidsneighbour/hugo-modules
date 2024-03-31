@@ -9,6 +9,11 @@ source = "content"
 target = "content"
 
 [[module.mounts]]
+source = "documentation"
+target = "content/gohugo/errors"
+
+
+[[module.mounts]]
 source = "data"
 target = "data"
 

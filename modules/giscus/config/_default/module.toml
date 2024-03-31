@@ -7,5 +7,10 @@ source = "data"
 target = "data"
 
 [[mounts]]
+source = "documentation"
+target = "content/gohugo/giscus"
+
+
+[[mounts]]
 source = "layouts"
 target = "layouts"

@@ -33,7 +33,6 @@ weight = 100
 slug = "menuentry"
 label = "Menu Entry"
 description = ""
-
 ```
 
 * **internal** (required, if no `catch` or `type` is used) - Set to `map` or `slice` to give a general indicator of the variable type.

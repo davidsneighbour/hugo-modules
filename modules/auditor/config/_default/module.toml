@@ -6,6 +6,10 @@ min = "0.84.4"
 source = 'assets'
 target = 'assets'
 
+[[module.mounts]]
+source = "documentation"
+target = "content/gohugo/auditor"
+
 [[mounts]]
 source = 'layouts'
 target = 'layouts'

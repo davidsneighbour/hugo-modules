@@ -23,12 +23,12 @@ source = "static/assets/js/"
 target = "assets/dnb/debug/files/"
 
 [[mounts]]
-source = "documentation"
-target = "content/gohugo/debug"
-
-[[mounts]]
 source = "data"
 target = "data"
+
+[[mounts]]
+source = "documentation"
+target = "content/gohugo/debug"
 
 [[mounts]]
 source = "i18n"

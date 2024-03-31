@@ -1,3 +1,8 @@
 [[module.mounts]]
 source = "content/posts"
 target = "content/posts"
+
+
+[[module.mounts]]
+source = "documentation"
+target = "content/gohugo/illiad"
