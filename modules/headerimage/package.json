@@ -21,8 +21,8 @@
   "scripts": {
     "clean": "run-p clean:*",
     "clean:npm": "rimraf node_modules package-lock.json",
-    "release": "commit-and-tag-version --release-as patch -a -t \"modules/head/v\" --releaseCommitMessageFormat \"chore(release): modules/head/v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/head/v\" --releaseCommitMessageFormat \"chore(release): modules/head/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/headerimage/v\" --releaseCommitMessageFormat \"chore(release): modules/headerimage/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/headerimage/v\" --releaseCommitMessageFormat \"chore(release): modules/headerimage/v{{currentTag}}\" && ./bin/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
   }
 }
