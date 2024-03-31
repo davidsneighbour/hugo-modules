@@ -41,6 +41,9 @@
 {{- range first 1 (.Resources.ByType "image") -}}
 	{{- $image := .Resize "1200x630" -}}
 	{{- $dict = $dict | merge ( dict "twitter:image" $image.Permalink ) -}}
+	{{- $dict = $dict | merge ( dict "twitter:image:width" $image.Width ) -}}
+	{{- $dict = $dict | merge ( dict "twitter:image:height" $image.Height ) -}}
+
 {{- end -}}
 
 {{- range $key, $value := $dict -}}

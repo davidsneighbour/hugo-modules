@@ -76,6 +76,8 @@
 
 <!-- og:image = an image URL which should represent the object within the graph -->
 {{- $metaProperty := dict -}}
+{{- $metaProperty2 := dict -}}
+{{- $metaProperty3 := dict -}}
 {{- $image := (partials.IncludeCached "func/getArticleImage.html" page page) -}}
 {{- with $image -}}
   {{- $image := .Resize "1200x webp" -}}
@@ -85,8 +87,16 @@
   {{- $metaProperty = (dict
         "property" "og:image"
         "content" $image.Permalink) -}}
+  {{- $metaProperty2 = (dict
+        "property" "og:image:width"
+        "content" $image.Width) -}}
+  {{- $metaProperty3 = (dict
+        "property" "og:image:height"
+        "content" $image.Height) -}}
 {{- end -}}
 {{- $metaProperties = $metaProperties | append $metaProperty -}}
+{{- $metaProperties = $metaProperties | append $metaProperty2 -}}
+{{- $metaProperties = $metaProperties | append $metaProperty3 -}}
 
 <!-- article:tag - string array - Tag words associated with this article. -->
 {{- with .Params.tags -}}
