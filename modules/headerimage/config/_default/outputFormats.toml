@@ -1,0 +1,6 @@
+[headerimage]
+mediaType = 'image/svg+xml'
+baseName = 'index'
+isPlainText = true
+protocol = 'https://'
+ugly = false

@@ -1,0 +1,28 @@
+{
+  "name": "@davidsneighbour/headerimage",
+  "description": "Create open graph images and header images for all pages.",
+  "version": "1.2023.0",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
+  },
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/headerimage",
+  "dependencies": {
+    "@davidsneighbour/markdownlint-config": "^2024.1.0",
+    "@davidsneighbour/release-config": "^2024.1.0",
+    "@davidsneighbour/tools": "^2024.1.0"
+  },
+  "scripts": {
+    "clean": "run-p clean:*",
+    "clean:npm": "rimraf node_modules package-lock.json",
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/head/v\" --releaseCommitMessageFormat \"chore(release): modules/head/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/head/v\" --releaseCommitMessageFormat \"chore(release): modules/head/v{{currentTag}}\" && ./bin/release/postrelease",
+    "update": "npm-check-updates -u && npm install && git add package*"
+  }
+}

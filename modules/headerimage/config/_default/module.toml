@@ -1,0 +1,28 @@
+[hugoVersion]
+extended = true
+min = "0.84.4"
+
+[[mounts]]
+source = "package.json"
+target = "assets/dnb/modules/headerimage/package.json"
+
+[[mounts]]
+source = "documentation"
+target = "content/gohugo/headerimage"
+
+[[mounts]]
+source = "i18n"
+target = "i18n"
+
+[[mounts]]
+source = "layouts"
+target = "layouts"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/debug"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/functions"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/hooks"
