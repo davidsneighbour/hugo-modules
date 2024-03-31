@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/headerimage",
   "description": "Create open graph images and header images for all pages.",
-  "version": "1.2023.1",
+  "version": "1.2024.0",
   "license": "MIT",
   "private": true,
   "repository": {
