@@ -9,6 +9,10 @@ min = "0.84.4"
 source = "layouts"
 target = "layouts"
 
-[[module.mounts]]
+[[mounts]]
+source = "package.json"
+target = "assets/dnb/schema.json"
+
+[[mounts]]
 source = "documentation"
 target = "content/gohugo/schema"

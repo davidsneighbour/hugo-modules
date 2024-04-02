@@ -6,9 +6,12 @@ extended = false
 min = "0.84.4"
 
 [[mounts]]
+source = "package.json"
+target = "assets/dnb/seo.json"
+
+[[mounts]]
 source = "documentation"
 target = "content/gohugo/seo"
-
 
 [[imports]]
 disable = false

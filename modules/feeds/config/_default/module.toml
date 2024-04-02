@@ -11,6 +11,10 @@ source = "layouts"
 target = "layouts"
 
 [[mounts]]
+source = "package.json"
+target = "assets/dnb/feeds.json"
+
+[[mounts]]
 source = "documentation"
 target = "content/gohugo/feeds"
 

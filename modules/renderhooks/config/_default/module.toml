@@ -15,6 +15,10 @@ source = "content"
 target = "content/dnb/renderhooks"
 
 [[mounts]]
+source = "package.json"
+target = "assets/dnb/renderhooks.json"
+
+[[mounts]]
 source = "documentation"
 target = "content/gohugo/renderhooks"
 

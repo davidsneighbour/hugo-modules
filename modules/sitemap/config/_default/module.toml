@@ -10,6 +10,10 @@ source = "data"
 target = "data"
 
 [[mounts]]
+source = "package.json"
+target = "assets/dnb/sitemap.json"
+
+[[mounts]]
 source = "documentation"
 target = "content/gohugo/sitemap"
 

@@ -4,7 +4,7 @@ min = "0.84.4"
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/modules/headerimage/package.json"
+target = "assets/dnb/headerimage.json"
 
 [[mounts]]
 source = "documentation"

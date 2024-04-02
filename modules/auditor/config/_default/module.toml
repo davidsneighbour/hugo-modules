@@ -6,7 +6,11 @@ min = "0.84.4"
 source = 'assets'
 target = 'assets'
 
-[[module.mounts]]
+[[mounts]]
+source = "package.json"
+target = "assets/dnb/auditor.json"
+
+[[mounts]]
 source = "documentation"
 target = "content/gohugo/auditor"
 

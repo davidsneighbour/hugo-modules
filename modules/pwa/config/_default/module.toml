@@ -11,9 +11,12 @@ source = "data"
 target = "data"
 
 [[mounts]]
+source = "package.json"
+target = "assets/dnb/pwa.json"
+
+[[mounts]]
 source = "documentation"
 target = "content/gohugo/pwa"
-
 
 [[mounts]]
 source = "layouts"

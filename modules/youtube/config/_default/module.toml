@@ -11,12 +11,12 @@ source = "assets"
 target = "assets"
 
 [[mounts]]
-source = "documentation"
-target = "content/gohugo/youtube"
+source = "package.json"
+target = "assets/dnb/youtube.json"
 
 [[mounts]]
-source = "package.json"
-target = "assets/dnb/modules/youtube/package.json"
+source = "documentation"
+target = "content/gohugo/youtube"
 
 [[mounts]]
 source = "assets/js/lite-yt-embed.js"

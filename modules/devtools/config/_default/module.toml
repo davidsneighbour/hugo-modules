@@ -4,6 +4,10 @@ min = "0.120.1"
 
 
 [[mounts]]
+source = "package.json"
+target = "assets/dnb/devtools.json"
+
+[[mounts]]
 source = "documentation"
 target = "content/gohugo/devtools"
 

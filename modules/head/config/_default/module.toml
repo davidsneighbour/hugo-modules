@@ -7,9 +7,12 @@ source = "i18n"
 target = "i18n"
 
 [[mounts]]
+source = "package.json"
+target = "assets/dnb/head.json"
+
+[[mounts]]
 source = "documentation"
 target = "content/gohugo/head"
-
 
 [[mounts]]
 source = "layouts"

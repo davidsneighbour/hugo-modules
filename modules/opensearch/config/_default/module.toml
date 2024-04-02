@@ -15,5 +15,9 @@ source = "layouts"
 target = "layouts"
 
 [[mounts]]
+source = "package.json"
+target = "assets/dnb/opensearch.json"
+
+[[mounts]]
 source = "documentation"
 target = "content/gohugo/opensearch"
