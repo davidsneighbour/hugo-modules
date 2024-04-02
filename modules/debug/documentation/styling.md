@@ -13,8 +13,6 @@ tags:
 config:
   band: gohugo
 lastmod: 2024-03-15T20:21:17+07:00
-subcollection: true
-layout: documentation
 ---
 
 ## Styling

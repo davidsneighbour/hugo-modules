@@ -5,7 +5,6 @@ resources:
 - src: header-card.png
 categories:
 - components
-draft: true
 tags:
 - gohugo
 - component
@@ -13,6 +12,4 @@ tags:
 config:
   band: gohugo
 lastmod: 2024-03-15T20:20:59+07:00
-subcollection: true
-layout: documentation
 ---

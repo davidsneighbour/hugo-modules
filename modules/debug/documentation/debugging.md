@@ -5,19 +5,14 @@ resources:
 - src: header-card.png
 categories:
 - components
-draft: true
 tags:
 - gohugo
 - component
 - development
-config:
-  band: gohugo
 lastmod: 2024-03-15T20:21:20+07:00
-subcollection: true
 aliases:
 - /components/hugo-debug/debugging
 - /gohugo/hugo-debug/debugging
-layout: documentation
 ---
 
 ## Debug from your layout file into the CLI/server log

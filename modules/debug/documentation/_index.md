@@ -18,12 +18,9 @@ component:
   user: davidsneighbour
   status: release
   list: true
-config:
-  band: gohugo
 aliases:
 - /components/hugo-debug/
 - /gohugo/hugo-debug/
-layout: documentation
 ---
 
 Debug everything in Hugo! This module for GoHugo adds debugging partials for everything you need to debug.

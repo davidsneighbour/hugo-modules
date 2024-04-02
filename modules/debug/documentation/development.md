@@ -6,15 +6,10 @@ resources:
 - src: header-card.png
 categories:
 - components
-draft: true
 tags:
 - gohugo
 - component
 - development
-config:
-  band: gohugo
-subcollection: true
-layout: documentation
 ---
 
 ## Formatters
