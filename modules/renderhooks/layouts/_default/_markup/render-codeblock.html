@@ -1,6 +1,7 @@
 {{- /*
 
-@see https://gohugo.io/content-management/syntax-highlighting/
+@see
+- https://gohugo.io/content-management/syntax-highlighting/
 
 @todo
 - https://github.com/davidsneighbour/hugo-modules/issues/464
@@ -45,7 +46,7 @@
 {{- end -}}
 
 <div class="component--highlight">
-  <ul class="nav nav-tabs" role="tablist">
+  <ul class="nav nav-tabs flex-row justify-content-start" role="tablist">
     {{- if compare.Eq $type "single" -}}
       <li class="nav-item" role="presentation">
         <button
@@ -82,14 +83,15 @@
         <a class="nav-link disabled">(click to select config format)</a>
       </li>
     {{- end -}}
+    <li class="nav-item ms-auto">
+      <a class="nav-link active btn-clipboard"
+          data-clipboard-target="#{{- $slug -}}"
+          data-bs-toggle="tooltip" data-bs-placement="top"
+          data-bs-title="Copy code to clipboard">
+        COPY
+      </a>
+    </li>
   </ul>
-
-  <button class="btn btn-link btn-clipboard invisible"
-    data-clipboard-target="#{{- $slug -}}"
-    data-bs-toggle="tooltip" data-bs-placement="top"
-    data-bs-title="Copy code to clipboard">
-    {{- partials.Include "icon.html" "clipboard" -}}
-  </button>
 
   {{- if compare.Eq $type "single" }}
     <div class="tab-content">
