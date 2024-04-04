@@ -5,6 +5,6 @@ authors:
     given-names: "Patrick"
     orcid: "https://orcid.org/0000-0001-6250-2135"
 title: "Hugo Modules / Renderhooks"
-version: 1.2024.5
-date-released: 2024-03-28
+version: 1.2024.6
+date-released: 2024-04-04
 url: "https://github.com/davidsneighbour/hugo-modules"
