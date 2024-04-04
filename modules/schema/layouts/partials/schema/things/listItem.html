@@ -1,0 +1,11 @@
+{{ range . }}
+
+{
+      "@type": "ListItem",
+      "name": "{{ .LinkTitle | default site.Title | safeJS}}",
+      "url": {{ .Permalink }},
+      "item": {{ .Permalink }}
+    },
+
+
+{{ end }}
