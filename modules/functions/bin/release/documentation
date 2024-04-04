@@ -27,7 +27,7 @@ for file in "$folderA"*.html; do
     template="---
 title: $baseName
 summary: \"\"
-layout: documentation
+
 weight: 100
 ---
 
