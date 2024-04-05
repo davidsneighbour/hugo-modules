@@ -1,6 +1,5 @@
 ---
 title: Netlification
-linkTitle: hugo-netlification
 description: ""
 summary: ""
 date: 2022-07-28T20:48:52+07:00

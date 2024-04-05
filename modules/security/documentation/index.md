@@ -1,6 +1,5 @@
 ---
 title: Security
-linkTitle: hugo-security
 description: ""
 summary: ""
 date: 2022-07-28T20:51:08+07:00

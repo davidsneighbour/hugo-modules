@@ -1,6 +1,5 @@
 ---
 title: Youtube
-linkTitle: hugo-youtube
 description: A shortcode to replace the internal youtube shortcode and add an unobtrusive, privacy conscious and unbloated custom element for YouTube videos using lite-youtube-embed.
 date: 2023-09-17T18:23:07+07:00
 publishDate: 2022-08-03T21:21:58+07:00

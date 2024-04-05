@@ -1,6 +1,5 @@
 ---
 title: Giscus
-linkTitle: hugo-giscus
 description: ""
 summary: ""
 date: 2022-08-16T20:28:30+07:00

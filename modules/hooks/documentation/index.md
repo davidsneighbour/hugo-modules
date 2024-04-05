@@ -1,6 +1,5 @@
 ---
 title: Hooks
-linktitle: hugo-hooks
 description: This module provides hooks and filters as an easy way for theme developers to let users add partials and blocks at pre-defined safe places in their themes or modules.
 summary: This module provides **Hooks and filters for GoHugo layouts** as an easy way for theme developers to let users add partials and blocks at pre-defined safe places in their themes or modules.
 lastmod: 2024-03-13T22:57:58+07:00

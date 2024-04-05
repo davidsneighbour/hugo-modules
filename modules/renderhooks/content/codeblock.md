@@ -2,7 +2,6 @@
 '$schema': /static/_schemata/blog.schema.yaml
 type: blog
 title: Code Highlighting
-linkTitle: Code Highlighting
 description: ""
 summary: ""
 

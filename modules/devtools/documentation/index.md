@@ -1,6 +1,5 @@
 ---
 title: Devtools
-linktitle: hugo-devtools
 description: This is a GoHugo theme component that loads all of DNB's GoHugo development modules at once. It will currently load hugo-debug, hugo-functions, and hugo-hooks.
 summary: This is a GoHugo theme component loading all of David's Neighbour's GoHugo development modules at once. It will currently load hugo-debug, hugo-functions, and hugo-hooks.
 date: 2023-12-24T19:33:06+07:00

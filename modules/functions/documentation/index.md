@@ -1,6 +1,5 @@
 ---
 title: Functions
-linkTitle: hugo-functions
 description: ""
 summary: ""
 date: 2022-08-16T20:28:30+07:00

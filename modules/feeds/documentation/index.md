@@ -1,6 +1,5 @@
 ---
 title: Feeds
-linktitle: hugo-feeds
 summary: ""
 date: 2022-07-27T18:34:57+07:00
 publishDate: 2022-07-27T18:34:57+07:00

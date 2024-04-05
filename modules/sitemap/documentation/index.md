@@ -1,6 +1,5 @@
 ---
 title: Sitemap
-linktitle: hugo-sitemap
 description: Elevate your website's sitemap with a versatile Hugo theme component. Customizable setup options per page. Discover more!
 summary: This is a Hugo theme component with layouts to add a configurable sitemap to your website. Hugo itself has internal templates that add sitemaps, but this component extends this by providing setup options per page and keeping up-to-date with current SEO practices.
 date: 2024-01-14T18:11:57+07:00
@@ -37,8 +36,6 @@ This is a Hugo theme component with layouts to add a configurable sitemap to you
 
 ## Installation
 
-Add the following lines to your `hugo.toml`:
-
 ```toml
 [[module.imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/sitemap"
@@ -59,7 +56,7 @@ config:
   sitemap: false
 ```
 
-{{< optionstable >}}
+{{< optionstable caption="Page Frontmatter">}}
 | sitemap | boolean | true | include this page in the sitemap |
 {{< /optionstable >}}
 
@@ -76,10 +73,10 @@ enabled = true
 
 You can edit the following additional configuration parameters:
 
-- full (boolean, default false) - show `priority` and `changefreq` tags (ignored by Google)
-- format (string, default "2006-01-02") - date format for `lastmod` tag
+* full (boolean, default false) - show `priority` and `changefreq` tags (ignored by Google)
+* format (string, default "2006-01-02") - date format for `lastmod` tag
 
-__DEPRECATED__: Frontmatter `robotsdisallow` from earlier `hugo-robots` versions did result in the page being omitted from the sitemap. This is deprecated, but currently still supported. The module will echo a note on CLI about this.
+**DEPRECATED**: Frontmatter `robotsdisallow` from earlier `hugo-robots` versions did result in the page being omitted from the sitemap. This is deprecated, but currently still supported. The module will echo a note on CLI about this.
 
 ### HTML Sitemap
 
@@ -125,15 +122,15 @@ sortdirection = "ASC"
 
 The parameters are as follows:
 
-- `selection` - Type of page selection.
-  - `in-regular` (default, just omit the parameter) - selects the pages from the `site.RegularPages` collection.
-  - `in-pages` - selects from `site.Pages`
-  - `not-in` - selects all pages NOT in `site.Pages`
-- `type` - field option for the page selection
-- `section` - value option for the page selection
-- `label` - Label for the section headline
-- `sortvalue` - if you wish to sort the selection set this to the field to sort by
-- `sortdirection` (default `ASC`) - direction to sort in, `ASC` or `DESC`
+* `selection` - Type of page selection.
+  * `in-regular` (default, just omit the parameter) - selects the pages from the `site.RegularPages` collection.
+  * `in-pages` - selects from `site.Pages`
+  * `not-in` - selects all pages NOT in `site.Pages`
+* `type` - field option for the page selection
+* `section` - value option for the page selection
+* `label` - Label for the section headline
+* `sortvalue` - if you wish to sort the selection set this to the field to sort by
+* `sortdirection` (default `ASC`) - direction to sort in, `ASC` or `DESC`
 
 Page selection:
 

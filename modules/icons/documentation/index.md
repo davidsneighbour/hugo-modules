@@ -1,6 +1,5 @@
 ---
 title: Icons
-linktitle: hugo-icons
 description: ""
 summary: ""
 date: 2022-07-22T19:10:17+07:00

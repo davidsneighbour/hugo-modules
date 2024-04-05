@@ -4,7 +4,7 @@
 {{- if isset .Params "robotsdisallow" -}}
   {{- partials.Include "debug-cli.html"
         (dict
-          "message" "Note: .Params.robotsdisallow is deprecated. Check the docs for details."
+          "message" (i18n "dnb.sitemap.deprecation")
           "severity" "warn"
           "level" 4
           "slug" "hugo-sitemap"
