@@ -15,7 +15,6 @@
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/iliad",
   "dependencies": {
     "@davidsneighbour/release-config": "^2024.2.2",
-    "@davidsneighbour/standard-version-config": "^5.8.18",
     "@davidsneighbour/tools": "^2024.2.2"
   },
   "scripts": {
