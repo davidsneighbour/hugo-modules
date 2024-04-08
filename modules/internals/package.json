@@ -22,5 +22,8 @@
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/internals/v\" --releaseCommitMessageFormat \"chore(release): modules/internals/v{{currentTag}}\" && ./bin/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@davidsneighbour/release-config": "^2024.2.2"
+  }
 }
