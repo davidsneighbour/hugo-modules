@@ -1,2 +1,2 @@
-const defaultStandardVersion = require("@davidsneighbour/release-config");
-module.exports = defaultStandardVersion;
+import defaultStandardVersion from "@davidsneighbour/release-config";
+export default defaultStandardVersion;
