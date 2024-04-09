@@ -4,27 +4,20 @@
   "version": "1.2024.19",
   "license": "MIT",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
-  },
+  "repository": "davidsneighbour/hugo-modules.git",
   "author": "Kaushal Modi (https://github.com/kaushalmodi)",
   "maintainer": {
     "email": "patrick@davids-neighbour.com",
     "name": "Patrick Kollitsch",
     "web": "https://davids-neighbour.com"
   },
-  "bugs": {
-    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
-  },
+  "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/debug",
-  "dependencies": {
-    "@davidsneighbour/release-config": "^2024.2.2"
-  },
   "devDependencies": {
-    "@davidsneighbour/bootstrap-config": "^2024.2.2",
-    "@davidsneighbour/webpack-config": "^2024.2.2",
-    "@types/node": "^20.12.5",
+    "@davidsneighbour/release-config": "^2024.2.4",
+    "@davidsneighbour/bootstrap-config": "^2024.2.4",
+    "@davidsneighbour/webpack-config": "^2024.2.4",
+    "@types/node": "^20.12.6",
     "@types/webpack": "^5.28.5",
     "node-sass": "^9.0.0",
     "sass-loader": "^14.1.1",
@@ -40,5 +33,6 @@
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
-  }
+  },
+  "type": "module"
 }
