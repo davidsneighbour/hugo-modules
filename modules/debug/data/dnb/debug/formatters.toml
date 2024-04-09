@@ -101,6 +101,13 @@ label = "Siteinfo"
 description = ""
 
 [[formatters]]
+type = "goldmark.imageLinkContext"
+class = "struct"
+slug = "renderhook-image"
+label = "Image Renderhook"
+description = ""
+
+[[formatters]]
 catch = "^.*gitmap\\.GitInfo"
 class = "struct"
 slug = "gitinfo"
