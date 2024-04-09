@@ -1,6 +1,4 @@
-![](../../documentation/pictures/header-card.png)
-
-# GoHugo Component / Pictures
+![](./documentation/header-card.png)
 
 This component for [GoHugo](https://gohugo.io/) adds partials and shortcodes to handle images on your website. It offers responsive image formats and optimized loading based on current browser abilities.
 
