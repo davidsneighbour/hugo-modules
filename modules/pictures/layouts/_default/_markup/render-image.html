@@ -1,3 +1,23 @@
+{{/*
+
+@see
+  - https://gohugo.io/render-hooks/images/
+
+  available values:
+
+  ![Description](Destination "Title")
+
+  - .Attributes (map) the Markdown attributes.
+  - .Destination (string) The image destination.
+  - .IsBlock (bool) Returns true if a standalone image is not wrapped within a paragraph element.
+  - .Ordinal (int) The zero-based ordinal of the image on the page.
+  - .Page (page) A reference to the page containing the image.
+  - .PlainText (string) The image description as plain text.
+  - .Text (string) The image description.
+  - .Title (string) The image title.
+
+*/}}
+
 {{- $context := page -}}
 {{- $label := .Text -}}
 {{- $src := .Destination -}}

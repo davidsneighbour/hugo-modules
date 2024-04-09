@@ -1,4 +1,4 @@
-{{- $path := . -}}
+{{- $path := (fmt.Printf "%s" (. | safe.URL)) -}}
 {{- $localimage := false -}}
 
 {{- with page.Resources.GetMatch $path -}}

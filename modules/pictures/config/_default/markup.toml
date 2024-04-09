@@ -1,0 +1,10 @@
+[goldmark]
+
+[goldmark.parser]
+wrapStandAloneImageWithinParagraph = false
+[goldmark.parser.attribute]
+block = true
+
+[goldmark.renderHooks]
+[goldmark.renderHooks.image]
+enableDefault = false
