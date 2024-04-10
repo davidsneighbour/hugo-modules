@@ -1,4 +1,30 @@
 Changelog
+## [1.2024.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2024.2...modules/auditor/v1.2024.3) (2024-04-10)
+
+
+### Chore
+
+* **deps:** bump @davidsneighbour/markdownlint-config from 2024.2.4 to 2024.2.5 ([#654](https://github.com/davidsneighbour/hugo-modules/issues/654)) ([d7a44e3](https://github.com/davidsneighbour/hugo-modules/commit/d7a44e326be7fbf3e6bb065a037f46d05d20eed3)), closes [#1283](https://github.com/davidsneighbour/hugo-modules/issues/1283) [#1280](https://github.com/davidsneighbour/hugo-modules/issues/1280)
+* **deps:** bump @davidsneighbour/prettier-config from 2024.2.4 to 2024.3.0 ([#664](https://github.com/davidsneighbour/hugo-modules/issues/664)) ([c0b84b0](https://github.com/davidsneighbour/hugo-modules/commit/c0b84b00c6e9066c69c5ecddeae4ad74a5d64af5)), closes [#1283](https://github.com/davidsneighbour/hugo-modules/issues/1283) [#1280](https://github.com/davidsneighbour/hugo-modules/issues/1280)
+* **deps:** bump @davidsneighbour/remark-config from 2024.2.4 to 2024.2.5 ([#655](https://github.com/davidsneighbour/hugo-modules/issues/655)) ([add18a4](https://github.com/davidsneighbour/hugo-modules/commit/add18a434570d6bc743226cfd674a1608f15a25c)), closes [#1283](https://github.com/davidsneighbour/hugo-modules/issues/1283) [#1280](https://github.com/davidsneighbour/hugo-modules/issues/1280)
+* **deps:** bump @davidsneighbour/tools from 2024.2.4 to 2024.3.0 ([#665](https://github.com/davidsneighbour/hugo-modules/issues/665)) ([1bbf2e4](https://github.com/davidsneighbour/hugo-modules/commit/1bbf2e456922538390a40e8ba2c6697483bd5b96)), closes [#1283](https://github.com/davidsneighbour/hugo-modules/issues/1283) [#1280](https://github.com/davidsneighbour/hugo-modules/issues/1280)
+* **deps:** bump tar from 6.2.0 to 6.2.1 in /modules/debug ([#649](https://github.com/davidsneighbour/hugo-modules/issues/649)) ([09ffd09](https://github.com/davidsneighbour/hugo-modules/commit/09ffd096d0aab969af33c953b754bf044dfdc903))
+* **deps:** bump tar from 6.2.0 to 6.2.1 in /modules/pwa ([#648](https://github.com/davidsneighbour/hugo-modules/issues/648)) ([5d1a798](https://github.com/davidsneighbour/hugo-modules/commit/5d1a79851b5b2a81dac3971e8bbac846c685e425))
+* **deps:** update davidsneighbour to v2024.3.0 ([#658](https://github.com/davidsneighbour/hugo-modules/issues/658)) ([699cd0a](https://github.com/davidsneighbour/hugo-modules/commit/699cd0a6803107d963c2fcd5a336623f62ce48c3))
+* **deps:** update davidsneighbour to v2024.3.0 ([#659](https://github.com/davidsneighbour/hugo-modules/issues/659)) ([9e220c5](https://github.com/davidsneighbour/hugo-modules/commit/9e220c5d9c32a9e0ef210d2fd6dbc0952c80897d))
+* **deps:** update davidsneighbour to v2024.3.0 ([#661](https://github.com/davidsneighbour/hugo-modules/issues/661)) ([d5134e8](https://github.com/davidsneighbour/hugo-modules/commit/d5134e8096d73114588bd1089caccd34f3a31b39))
+* **deps:** update davidsneighbour to v2024.3.0 ([#662](https://github.com/davidsneighbour/hugo-modules/issues/662)) ([2dfe742](https://github.com/davidsneighbour/hugo-modules/commit/2dfe742f78e82607199109b256df8a25dea69c76))
+* **deps:** update davidsneighbour to v2024.3.0 ([#663](https://github.com/davidsneighbour/hugo-modules/issues/663)) ([69edff6](https://github.com/davidsneighbour/hugo-modules/commit/69edff64b6bf74dbdf6bc90691d779b7f28e26b4))
+* **deps:** update davidsneighbour to v2024.3.0 ([#666](https://github.com/davidsneighbour/hugo-modules/issues/666)) ([da9f9d4](https://github.com/davidsneighbour/hugo-modules/commit/da9f9d4353beb0a6e539756448daafa53fb3282d))
+* **deps:** update dependency @types/node to v20.12.7 ([#660](https://github.com/davidsneighbour/hugo-modules/issues/660)) ([9eb0d9e](https://github.com/davidsneighbour/hugo-modules/commit/9eb0d9ed28e4d61764c6ed6dedd5c0cc08fe370f))
+* **release:** update repo data files ([b6ac8dc](https://github.com/davidsneighbour/hugo-modules/commit/b6ac8dcc3fec92717c6f2b4b7371663cc0c60f70))
+
+
+### Bug Fixes
+
+* proper evaluation of title and description ([8c66bb3](https://github.com/davidsneighbour/hugo-modules/commit/8c66bb3f1a78f9055ee9640108da5b20d8168226)), closes [davidsneighbour/kollitsch.dev#850](https://github.com/davidsneighbour/kollitsch.dev/issues/850)
+* remove debugging partial ([cb946d3](https://github.com/davidsneighbour/hugo-modules/commit/cb946d3ec4219f83ee61aea76b782b8ec51ba1bd))
+
 ## [1.2024.2](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2024.1...modules/auditor/v1.2024.2) (2024-04-10)
 
 
