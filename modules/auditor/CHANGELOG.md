@@ -1,4 +1,17 @@
 Changelog
+## [1.2024.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2024.3...modules/auditor/v1.2024.4) (2024-04-10)
+
+
+### Chore
+
+* **deps:** update dependencies ([4b74661](https://github.com/davidsneighbour/hugo-modules/commit/4b746613c9f4b5433993f7fcbf5185e808110aca))
+* **release:** update repo data files ([0b829f6](https://github.com/davidsneighbour/hugo-modules/commit/0b829f63c59705abe6584cdac98a10abd40b7bd2))
+
+
+### Bug Fixes
+
+* move length threshold evaluation into function ([f159439](https://github.com/davidsneighbour/hugo-modules/commit/f15943917c93fbae0c9bc31dcde2c611279d6d43))
+
 ## [1.2024.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2024.2...modules/auditor/v1.2024.3) (2024-04-10)
 
 
