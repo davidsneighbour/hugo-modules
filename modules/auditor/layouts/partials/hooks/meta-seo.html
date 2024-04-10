@@ -1,7 +1,6 @@
 {{- if hugo.IsServer -}}
   {{- $page := page -}}
   {{- $config := site.Params.dnb.auditor -}}
-  {{ partial "debug-print.html" $config }}
   <div class="d-flex flex-row gap-2">
     <div class="icon">
       {{- partials.Include "icon.html" "shield-check" -}}
