@@ -8,49 +8,21 @@
 
     {{/* title length evaluation */}}
     {{- $titleLength := len $page.Title -}}
-    {{- $titleClass := "danger" -}}
-    {{- $titleMinLength := $config.titleminlength -}}
-    {{- $titleMaxLength := $config.titlemaxlength -}}
-    {{- $titleThreshold := $config.titlethreshold -}}
+    {{- $options := dict
+                    "length" $titleLength
+                    "minlength" $config.titleminlength
+                    "maxlength" $config.titlemaxlength
+                    "threshold" $config.titlethreshold -}}
+    {{- $titleClass := partial "func/getLengthIndicator.html" $options $options -}}
 
-    {{- if gt $titleLength $titleMaxLength -}}
-      {{- if gt $titleLength (math.Add $titleMaxLength $titleThreshold) -}}
-        {{- $titleClass = "danger" -}}
-      {{- else -}}
-        {{- $titleClass = "warning" -}}
-      {{- end -}}
-    {{- else if lt $titleLength $titleMinLength}}
-      {{- if lt $titleLength (math.Sub $titleMinLength $titleThreshold) -}}
-        {{- $titleClass = "danger" -}}
-      {{- else -}}
-        {{- $titleClass = "warning" -}}
-      {{- end -}}
-    {{- else -}}
-      {{- $titleClass = "success" -}}
-    {{- end -}}
-
-    {{/* description length evaluation */}}
+    {{- /* description length evaluation */ -}}
     {{- $descriptionLength := len $page.Description -}}
-    {{- $descriptionClass := "danger" -}}
-    {{- $descriptionMinLength := $config.descriptionminlength -}}
-    {{- $descriptionMaxLength := $config.descriptionmaxlength -}}
-    {{- $descriptionThreshold := $config.descriptionthreshold -}}
-
-    {{- if gt $descriptionLength $descriptionMaxLength -}}
-      {{- if gt $descriptionLength (math.Add $descriptionMaxLength $descriptionThreshold) -}}
-        {{- $descriptionClass = "danger" -}}
-      {{- else -}}
-        {{- $descriptionClass = "warning" -}}
-      {{- end -}}
-    {{- else if lt $descriptionLength $descriptionMinLength}}
-      {{- if lt $descriptionLength (math.Sub $descriptionMinLength $descriptionThreshold) -}}
-        {{- $descriptionClass = "danger" -}}
-      {{- else -}}
-        {{- $descriptionClass = "warning" -}}
-      {{- end -}}
-    {{- else -}}
-      {{- $descriptionClass = "success" -}}
-    {{- end -}}
+    {{- $options := dict
+                    "length" $descriptionLength
+                    "minlength" $config.descriptionminlength
+                    "maxlength" $config.descriptionmaxlength
+                    "threshold" $config.descriptionthreshold -}}
+    {{- $descriptionClass := partial "func/getLengthIndicator.html" $options $options -}}
 
     <div class="d-flex flex-row gap-2">
       <span>
