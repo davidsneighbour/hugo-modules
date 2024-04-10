@@ -11,7 +11,7 @@
   "dependencies": {
     "@davidsneighbour/markdownlint-config": "^2024.2.4",
     "@davidsneighbour/prettier-config": "^2024.2.4",
-    "@davidsneighbour/remark-config": "^2024.2.4",
+    "@davidsneighbour/remark-config": "^2024.2.5",
     "@davidsneighbour/tools": "^2024.2.4",
     "workbox-cacheable-response": "7.0.0",
     "workbox-core": "7.0.0",
