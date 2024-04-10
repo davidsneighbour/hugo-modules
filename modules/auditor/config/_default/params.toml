@@ -3,8 +3,10 @@
 ct = false
 titleMinLength = 50
 titleMaxLength = 60
+titleThreshold = 10
 descriptionMinLength = 110
 descriptionMaxLength = 160
+descriptionThreshold = 10
 
 [[dnb.hooks.items.auditor.article-meta-end]]
 file = "meta-seo"
