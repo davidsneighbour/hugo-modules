@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-hooks",
   "description": "Hooks for GoHugo layouts. An easy way for theme developers to let users add to their themes.",
-  "version": "1.2024.8",
+  "version": "1.2024.9",
   "license": "MIT",
   "private": true,
   "repository": {
@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/hooks",
   "dependencies": {
-    "@davidsneighbour/release-config": "^2024.2.2",
+    "@davidsneighbour/release-config": "^2024.3.2",
     "@davidsneighbour/tools": "^2024.2.2"
   },
   "scripts": {
