@@ -1,19 +1,21 @@
-import ClipboardJS from '../libs/clipboard/clipboard';
+import ClipboardJS from '../libs/clipboard';
 
+// initiate clipboard.js on all buttons with class .btn-clipboard
 const clipboard = new ClipboardJS('.btn-clipboard');
 
-// window.addEventListener('load', () => {
-//   document.querySelectorAll('.btn-clipboard').forEach(btn => {
-//     btn.classList.remove('invisible');
-//   })
-// });
+// show all clipboard buttons when the copy plugin is loaded
+window.addEventListener('load', () => {
+  document.querySelectorAll('.btn-clipboard').forEach(btn => {
+    btn.classList.remove('invisible');
+  })
+});
 
-clipboard.on('success', event => {
-
+// a little timeout to remove the focus from the button after copying
+clipboard.on('success', (/** @type {{ clearSelection: () => void; }} */ event) => {
   setTimeout(() => {
     event.clearSelection()
   }, 500);
-
 });
 
-clipboard.on('error', event => { });
+// handling errors
+clipboard.on('error', (/** @type {any} */ event) => { });

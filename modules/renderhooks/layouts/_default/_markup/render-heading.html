@@ -14,7 +14,7 @@ usage sample:
 ### Section A
 
 */ -}}
-{{- $config := site.Data.dnb.renderhooks.heading -}}
+{{- $config := site.Params.dnb.renderhooks.heading -}}
 {{ if compare.Eq $config.disabled false}}
   <h{{ .Level }} id="{{ .Anchor | safe.URL }}">
     {{ .Text | safe.HTML }}

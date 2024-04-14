@@ -11,10 +11,6 @@ source = "assets/scss/plugins/_clipboard.scss"
 target = "assets/scss/plugins/_clipboard.scss"
 
 [[mounts]]
-source = "content"
-target = "content/dnb/renderhooks"
-
-[[mounts]]
 source = "package.json"
 target = "assets/dnb/renderhooks.json"
 
@@ -23,13 +19,11 @@ source = "documentation"
 target = "content/gohugo/renderhooks"
 
 [[mounts]]
-source = "data"
-target = "data"
-
-[[mounts]]
 source = "layouts"
 target = "layouts"
 
+# clipboard.js - handling copy button on code blocks
+# see https://github.com/zenorocha/clipboard.js
 [[imports]]
 path = "github.com/zenorocha/clipboard.js"
 disable = false
@@ -37,5 +31,5 @@ ignoreConfig = true
 ignoreImports = true
 
 [[imports.mounts]]
-source = 'dist/'
-target = 'assets/js/libs/clipboard'
+source = 'dist/clipboard.js'
+target = 'assets/js/libs/clipboard.js'
