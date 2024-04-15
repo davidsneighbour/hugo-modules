@@ -18,5 +18,6 @@
     "release:major": "commit-and-tag-version  --release-as major -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "commit-and-tag-version  --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
   },
-  "private": true
+  "private": true,
+  "type": "module"
 }

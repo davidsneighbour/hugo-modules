@@ -21,5 +21,6 @@
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/publisher/v\" --releaseCommitMessageFormat \"chore(release): modules/publisher/v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/publisher/v\" --releaseCommitMessageFormat \"chore(release): modules/publisher/v{{currentTag}}\" && ./bin/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
-  }
+  },
+  "type": "module"
 }

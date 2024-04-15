@@ -25,5 +25,5 @@
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/social/v\" --releaseCommitMessageFormat \"chore(release): modules/social/v{{currentTag}}\" && ./bin/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
   },
-  "main": "index.js"
+  "type": "module"
 }

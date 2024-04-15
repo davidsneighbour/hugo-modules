@@ -24,5 +24,6 @@
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/netlification/v\" --releaseCommitMessageFormat \"chore(release): modules/netlification/v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/netlification/v\" --releaseCommitMessageFormat \"chore(release): modules/netlification/v{{currentTag}}\" && ./bin/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
-  }
+  },
+  "type": "module"
 }

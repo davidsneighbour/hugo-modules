@@ -30,5 +30,6 @@
     "plugins": [
       "@davidsneighbour/config/remark"
     ]
-  }
+  },
+  "type": "module"
 }
