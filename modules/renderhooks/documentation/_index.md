@@ -12,4 +12,9 @@ tags:
 - gohugo
 - component
 - development
+
+cascade:
+  params:
+    config:
+      overviewLabel: "Available renderhooks"
 ---

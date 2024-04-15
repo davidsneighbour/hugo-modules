@@ -1,0 +1,20 @@
+{{- /* Given a list of colors, returns the lightest and darkest. */ -}}
+
+{{- $darkest_color  := "" -}}
+{{- $darkest_lum    := 1 -}}
+{{- $lightest_color := "" -}}
+{{- $lightest_lum   := 0 -}}
+
+{{- range . -}}
+  {{- $luminance := partial "func/getColorLuminance.html" . -}}
+  {{- if lt $luminance $darkest_lum -}}
+    {{- $darkest_color = . -}}
+    {{- $darkest_lum = $luminance -}}
+  {{- end -}}
+  {{- if gt $luminance $lightest_lum -}}
+    {{- $lightest_color = . -}}
+    {{- $lightest_lum = $luminance -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return dict "lightest" $lightest_color "darkest" $darkest_color -}}
