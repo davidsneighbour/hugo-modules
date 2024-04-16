@@ -1,6 +1,6 @@
 {{- $config := site.Params.dnb.documentation -}}
-{{- $packageFile := printf ($config.package_path | default "dnb/%s.json") (.Permalink | path.Base) -}}
-{{/* {{- $packageFile := printf "dnb/%s.json" (.CurrentSection.Path | path.Base) -}} */}}
+{{- $packageFile := fmt.Printf ($config.package_path | compare.Default "dnb/%s.json") (.Permalink | path.Base) -}}
+{{/* {{- $packageFile := fmt.Printf "dnb/%s.json" (.CurrentSection.Path | path.Base) -}} */}}
 {{- $package := resources.Get $packageFile -}}
 {{- with $package -}}
     {{- $package = . | transform.Unmarshal -}}

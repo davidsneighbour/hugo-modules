@@ -1,5 +1,5 @@
 {{- /*
-	Input is expected to be a CSS-style hex color string (e.g. #RRGGBB).
+	Input is expected to be a CSS-style hex color cast.ToString (e.g. #RRGGBB).
 	Output is the luminance from 0 to 1.
 
 	Luminance = sqrt( 0.299*R^2 + 0.587*G^2 + 0.114*B^2 )
@@ -9,16 +9,16 @@
 		   https://gohugo.io/methods/resource/colors/
 */ -}}
 
-{{- $r := (printf "0x%s" (substr . 1 2)) | int -}}
-{{- $g := (printf "0x%s" (substr . 3 2)) | int -}}
-{{- $b := (printf "0x%s" (substr . 5 2)) | int -}}
+{{- $r := (fmt.Printf "0x%s" (strings.Substr . 1 2)) | cast.ToInt -}}
+{{- $g := (fmt.Printf "0x%s" (strings.Substr . 3 2)) | cast.ToInt -}}
+{{- $b := (fmt.Printf "0x%s" (strings.Substr . 5 2)) | cast.ToInt -}}
 
-{{- $r_norm := div $r 255.0 -}}
-{{- $g_norm := div $g 255.0 -}}
-{{- $b_norm := div $b 255.0 -}}
+{{- $r_norm := math.Div $r 255.0 -}}
+{{- $g_norm := math.Div $g 255.0 -}}
+{{- $b_norm := math.Div $b 255.0 -}}
 
 {{- return (math.Sqrt (add
-          (pow $r_norm 2 | mul 0.299)
-          (pow $g_norm 2 | mul 0.587)
-          (pow $b_norm 2 | mul 0.114)
+          (math.Pow $r_norm 2 | math.Mul 0.299)
+          (math.Pow $g_norm 2 | math.Mul 0.587)
+          (math.Pow $b_norm 2 | math.Mul 0.114)
 )) -}}

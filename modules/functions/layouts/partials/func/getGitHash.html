@@ -1,6 +1,6 @@
 {{- /*
 
-expects page object in context
+expects page object collections.In context
 
 TODO:
 - configure length of substring
@@ -10,6 +10,6 @@ TODO:
 {{- $page := . -}}
 {{- $hash := "" -}}
 {{- with $page.GitInfo -}}
-  {{- $hash = substr .Hash 0 10 -}}
+  {{- $hash = strings.Substr .Hash 0 10 -}}
 {{- end -}}
 {{- return $hash -}}

@@ -11,24 +11,24 @@
 [Hugo Forum](https://discourse.gohugo.io/)
 
 */ -}}
-{{- /* Split .Title into two parts, title and attributes. */ -}}
-{{- $parts := split . "{" -}}
-{{- $parts = apply $parts "trim" "." " " -}}
-{{- $parts = apply $parts "trim" "." "}" -}}
+{{- /* Split .Title into two parts, strings.Title and attributes. */ -}}
+{{- $parts := strings.Split . "{" -}}
+{{- $parts = collections.Apply $parts "trim" "." " " -}}
+{{- $parts = collections.Apply $parts "trim" "." "}" -}}
 
-{{- /* Extract title into a string. */ -}}
-{{- $title := index $parts 0 -}}
+{{- /* Extract strings.Title into a string. */ -}}
+{{- $title := collections.Index $parts 0 -}}
 
 {{- /* Extract attributes into a dictionary. */ -}}
-{{- $temp := index $parts 1 -}}
-{{- $temp = split $temp "'" -}}
-{{- $temp = first (sub (len $temp) 1) $temp -}}
-{{- $temp = apply $temp "replace" "." "=" "" -}}
-{{- $temp = apply $temp "trim" "." " " -}}
+{{- $temp := collections.Index $parts 1 -}}
+{{- $temp = strings.Split $temp "'" -}}
+{{- $temp = collections.First (math.Sub (len $temp) 1) $temp -}}
+{{- $temp = collections.Apply $temp "replace" "." "=" "" -}}
+{{- $temp = collections.Apply $temp "trim" "." " " -}}
 {{- $attributes := dict -}}
 {{- if $temp -}}
-  {{- range (seq 0 2 (sub (len $temp) 1)) -}}
-    {{- $attributes = merge $attributes (dict (index $temp . ) (index $temp (add 1 .))) -}}
+  {{- range (collections.Seq 0 2 (math.Sub (len $temp) 1)) -}}
+    {{- $attributes = collections.Merge $attributes (dict (collections.Index $temp . ) (collections.Index $temp (math.Add 1 .))) -}}
   {{- end -}}
 {{- end -}}
 

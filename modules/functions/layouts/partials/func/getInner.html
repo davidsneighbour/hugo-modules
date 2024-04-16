@@ -12,8 +12,8 @@ Usage:
 
 */ -}}
 {{- $inner := (strings.Chomp .Inner) -}}
-{{- $inner = trim $inner " " -}}
-{{- if eq $inner "" -}}
+{{- $inner = strings.Trim $inner " " -}}
+{{- if compare.Eq $inner "" -}}
   {{- $inner = false -}}
 {{- end -}}
 {{- return $inner -}}

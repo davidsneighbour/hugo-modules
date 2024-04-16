@@ -1,4 +1,4 @@
-{{- $type := .type | default "name" -}}
+{{- $type := .type | compare.Default "name" -}}
 {{- $content := .content -}}
 
 {{- range $content -}}

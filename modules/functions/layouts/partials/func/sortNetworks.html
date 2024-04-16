@@ -1,12 +1,12 @@
 {{- $networks := .networks -}}
 {{- $setups := .setups -}}
 
-{{- $output := slice -}}
+{{- $output := collections.Slice -}}
 {{- range $networks -}}
   {{- $network := . -}}
   {{- range $setups -}}
-    {{- if eq .slug $network -}}
-      {{- $output = $output | append . -}}
+    {{- if compare.Eq .slug $network -}}
+      {{- $output = $output | collections.Append . -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}

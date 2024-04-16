@@ -1,8 +1,8 @@
 {{- $title := "" -}}
-{{- $separator := site.Params.dnb.head.separator | default "|" -}}
+{{- $separator := site.Params.dnb.head.separator | compare.Default "|" -}}
 {{- $sitetitle := false -}}
 
-{{- if ne .Title site.Title -}}
+{{- if compare.Ne .Title site.Title -}}
   {{- $sitetitle = true -}}
 {{- end -}}
 
@@ -15,22 +15,22 @@
 {{- if .IsNode -}}
   {{- $paginator := .Scratch.Get "paginator" -}}
   {{- with $paginator -}}
-    {{- if gt .PageNumber 1 -}}
-      {{- $pagenumber := printf (i18n "page-n") .PageNumber -}}
-      {{- $title = printf "%s %s" $title $pagenumber -}}
+    {{- if compare.Gt .PageNumber 1 -}}
+      {{- $pagenumber := fmt.Printf (lang.Translate "page-n") .PageNumber -}}
+      {{- $title = fmt.Printf "%s %s" $title $pagenumber -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
 
-{{- if isset .Params "sectiontitle" -}}
+{{- if collections.IsSet .Params "sectiontitle" -}}
   {{- with .Params.sectiontitle -}}
-    {{- $title = printf "%s %s %s" $title $separator . -}}
+    {{- $title = fmt.Printf "%s %s %s" $title $separator . -}}
   {{- end -}}
 {{- end -}}
 
-{{- if eq $sitetitle true -}}
-  {{- $title = printf "%s %s %s" $title $separator site.Title -}}
+{{- if compare.Eq $sitetitle true -}}
+  {{- $title = fmt.Printf "%s %s %s" $title $separator site.Title -}}
 {{- end -}}
 
-{{ $title = $title | markdownify | plainify | htmlUnescape }}
+{{ $title = $title | transform.Markdownify | transform.Plainify | transform.HTMLUnescape }}
 {{ return $title }}

@@ -4,4 +4,4 @@ From its documentation: the base is implied by the string’s prefix: base 16 fo
 “0x”, base 8 for “0”, and base 10 otherwise.
 
 */ -}}
-{{- return int (. | strings.TrimLeft "0") -}}
+{{- return cast.ToInt (. | strings.TrimLeft "0") -}}

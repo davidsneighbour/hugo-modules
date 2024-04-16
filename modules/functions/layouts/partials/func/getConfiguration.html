@@ -2,15 +2,15 @@
 
 Retrieves a namespaced configuration
 
-- checks in data/NAMESPACE/MODULENAME/config.toml
+- checks collections.In data/NAMESPACE/MODULENAME/config.toml
 - merges config/_defaults/params.toml > [NAMESPACE.MODULENAME] on top
 
-returns dictionary or value of the specified key
+returns collections.Dictionary or value of the specified key
 
 Usage:
 
 ```gohtml
-{{- $key := slice "dnb" "modulename" -}}
+{{- $key := collections.Slice "dnb" "modulename" -}}
 {{- with (partials.Include "func/getConfiguration.html" $key $key -}}
   {{ . }} -> content of (data|params).dnb.modulename
 {{- end -}}
@@ -18,5 +18,5 @@ Usage:
 
 */ -}}
 
-{{- $dataConfig := (index site.Data .) -}}
-{{- $paramsConfig := (index site.Params .) -}}
+{{- $dataConfig := (collections.Index site.Data .) -}}
+{{- $paramsConfig := (collections.Index site.Params .) -}}

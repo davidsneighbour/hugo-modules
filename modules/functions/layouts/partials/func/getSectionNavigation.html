@@ -3,20 +3,20 @@
 
 {{- if reflect.IsMap . -}}
   {{- $section = .section -}}
-  {{- $withSummary = .summary | default false -}}
+  {{- $withSummary = .summary | compare.Default false -}}
 {{- else -}}
   {{- $section = . -}}
 {{- end -}}
 
 <ul>
   {{- range $index, $item := (site.GetPage $section).Pages.ByWeight -}}
-    {{ if eq 0 $index}}
+    {{ if compare.Eq 0 $index}}
       {{ $sectionHref := (site.GetPage $section).Permalink -}}
       <li><a href="{{- $sectionHref -}}">Overview</a></li>
     {{- end -}}
     <li>
       <a href="{{- $item.Permalink -}}">{{- $item.Title }}</a>
-      {{- if eq true $withSummary -}}
+      {{- if compare.Eq true $withSummary -}}
         {{- with $item.Summary }}
           &mdash;
           {{ . | transform.Markdownify -}}

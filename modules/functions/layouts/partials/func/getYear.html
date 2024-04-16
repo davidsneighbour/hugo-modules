@@ -3,5 +3,5 @@
 @since 1.0.0
 
 */ -}}
-{{- $year := dateFormat "2006" now -}}
-{{- return (int $year) -}}
+{{- $year := time.Format "2006" time.Now -}}
+{{- return (cast.ToInt $year) -}}

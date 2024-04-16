@@ -1,5 +1,5 @@
 {{ $cloud := false }}
-{{ with index site.Taxonomies  . }}
+{{ with collections.Index site.Taxonomies  . }}
     {{ $cloud = . }}
 {{ end }}
 {{ return $cloud }}

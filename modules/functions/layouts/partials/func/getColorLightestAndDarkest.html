@@ -6,12 +6,12 @@
 {{- $lightest_lum   := 0 -}}
 
 {{- range . -}}
-  {{- $luminance := partial "func/getColorLuminance.html" . -}}
-  {{- if lt $luminance $darkest_lum -}}
+  {{- $luminance := partials.Include "func/getColorLuminance.html" . -}}
+  {{- if compare.Lt $luminance $darkest_lum -}}
     {{- $darkest_color = . -}}
     {{- $darkest_lum = $luminance -}}
   {{- end -}}
-  {{- if gt $luminance $lightest_lum -}}
+  {{- if compare.Gt $luminance $lightest_lum -}}
     {{- $lightest_color = . -}}
     {{- $lightest_lum = $luminance -}}
   {{- end -}}
