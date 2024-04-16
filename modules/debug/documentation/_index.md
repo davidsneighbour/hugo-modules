@@ -28,7 +28,7 @@ Debug everything in Hugo! This module for GoHugo adds debugging partials for eve
 ## Notes
 
 * This is a GoHugo module to use while you are developing your theme or website. It slows down the build process. Knowledge about variables in our template and NOT speed is our main priority. It is advised to add the module only the development configuration or check if the layout is processed by the development server to minimise its impact.
-* This module is based on the work in [kaushalmodi/hugo-debugprint](https://github.com/kaushalmodi/hugo-debugprint).
+* This module is inspired by [kaushalmodi/hugo-debugprint](https://github.com/kaushalmodi/hugo-debugprint).
 
 ## Usage
 

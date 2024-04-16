@@ -1,5 +1,6 @@
 ---
 title: Debugging and Logging to CLI
+linkTitle: CLI Debugging
 date: 2023-11-16T15:46:21+07:00
 resources:
 - src: header-card.png

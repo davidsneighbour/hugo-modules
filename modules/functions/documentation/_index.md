@@ -1,6 +1,6 @@
 ---
 title: Functions
-linkTitle: hugo-functions
+linkTitle: functions
 description: ""
 summary: ""
 date: 2022-08-16T20:28:30+07:00
@@ -18,6 +18,10 @@ config:
   band: gohugo
 aliases:
 - /components/hugo-functions/
+cascade:
+  params:
+    config:
+      overviewLabel: "All functions"
 ---
 
 This documentation is work in progress. Please check back later.
