@@ -13,10 +13,10 @@ check_required_tools curl sed git
 load_env_vars .env
 
 # Build assets in static folder and add to commit if it exists
-if [ -d "static" ]; then
-  npm run build
-  git add static
-fi
+# if [ -d "static" ]; then
+#   npm run build
+#   git add static
+# fi
 
 # Update Hugo modules and add changes to repository
 git add package*

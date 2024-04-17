@@ -1,13 +1,13 @@
-import * as path from 'path';
-import { Compilation, Configuration } from 'webpack';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// reminder: __dirname is not available in ESM
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 class FileListPlugin {
-  apply(compiler: any) {
-    compiler.hooks.emit.tapAsync('FileListPlugin', (compilation: any, callback: () => void) => {
-      let a: {
-        files: string[];
-        [key: string]: any;
-      } = { files: [] as string[] };
+  apply(compiler) {
+    compiler.hooks.emit.tapAsync('FileListPlugin', (compilation, callback) => {
+      let a = { files: [] };
 
       for (let filename in compilation.assets) {
         a.files.push(filename);
@@ -31,7 +31,7 @@ class FileListPlugin {
   }
 }
 
-const config: Configuration = {
+const config = {
   target: 'web',
   entry: {
     main: path.join(__dirname, 'assets', 'main.js'),

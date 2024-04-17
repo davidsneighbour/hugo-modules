@@ -25,7 +25,7 @@
     "typescript": "^5.4.4"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.ts",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "clean": "run-p clean:*",
     "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
     "clean:npm": "rimraf node_modules package-lock.json",
