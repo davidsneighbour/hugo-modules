@@ -10,7 +10,7 @@
   "homepage": "https://github.com/davidsneighbour/hugo-modules#readme",
   "dependencies": {
     "@davidsneighbour/markdownlint-config": "^2024.3.5",
-    "@davidsneighbour/prettier-config": "^2024.3.5",
+    "@davidsneighbour/prettier-config": "^2024.3.6",
     "@davidsneighbour/remark-config": "^2024.3.5",
     "@davidsneighbour/tools": "^2024.3.5",
     "workbox-cacheable-response": "7.0.0",
