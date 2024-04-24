@@ -14,7 +14,7 @@
     "@davidsneighbour/remark-config": "^2024.3.5",
     "@davidsneighbour/tools": "^2024.3.5",
     "workbox-cacheable-response": "7.0.0",
-    "workbox-core": "7.0.0",
+    "workbox-core": "7.1.0",
     "workbox-expiration": "7.0.0",
     "workbox-precaching": "7.0.0",
     "workbox-routing": "7.0.0",
