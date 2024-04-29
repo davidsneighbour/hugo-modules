@@ -9,17 +9,17 @@
   "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules#readme",
   "dependencies": {
-    "@davidsneighbour/markdownlint-config": "^2024.3.5",
-    "@davidsneighbour/prettier-config": "^2024.3.5",
-    "@davidsneighbour/remark-config": "^2024.3.5",
-    "@davidsneighbour/tools": "^2024.3.5",
-    "workbox-cacheable-response": "7.0.0",
-    "workbox-core": "7.0.0",
-    "workbox-expiration": "7.0.0",
-    "workbox-precaching": "7.0.0",
-    "workbox-routing": "7.0.0",
-    "workbox-strategies": "7.0.0",
-    "workbox-webpack-plugin": "7.0.0"
+    "@davidsneighbour/markdownlint-config": "^2024.3.11",
+    "@davidsneighbour/prettier-config": "^2024.3.11",
+    "@davidsneighbour/remark-config": "^2024.3.11",
+    "@davidsneighbour/tools": "^2024.3.11",
+    "workbox-cacheable-response": "7.1.0",
+    "workbox-core": "7.1.0",
+    "workbox-expiration": "7.1.0",
+    "workbox-precaching": "7.1.0",
+    "workbox-routing": "7.1.0",
+    "workbox-strategies": "7.1.0",
+    "workbox-webpack-plugin": "7.1.0"
   },
   "scripts": {
     "build": "node bin/release/system/update.mjs && ./bin/components",

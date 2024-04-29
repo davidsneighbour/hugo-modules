@@ -14,8 +14,8 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/aesop",
   "dependencies": {
-    "@davidsneighbour/release-config": "^2024.3.5",
-    "@davidsneighbour/tools": "^2024.3.5"
+    "@davidsneighbour/release-config": "^2024.3.11",
+    "@davidsneighbour/tools": "^2024.3.11"
   },
   "scripts": {
     "clean": "run-p clean:*",
