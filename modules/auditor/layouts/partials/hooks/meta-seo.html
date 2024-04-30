@@ -1,5 +1,8 @@
 {{- if hugo.IsServer -}}
   {{- $page := page -}}
+  {{- if page.IsHome -}}
+    {{- $page = .context -}}
+  {{- end -}}
   {{- $config := site.Params.dnb.auditor -}}
   <div class="d-flex flex-row gap-2">
     <div class="icon">
