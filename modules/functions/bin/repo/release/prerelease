@@ -5,7 +5,7 @@
 CURPATH="$(pwd -P)"
 
 # shellcheck disable=SC1091
-source "${CURPATH}/bin/release/common"
+source "${CURPATH}/bin/repo/release/common"
 
 set -e
 
