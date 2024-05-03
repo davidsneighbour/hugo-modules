@@ -27,7 +27,7 @@ fetch(RELEASE_GIST_URL)
       try {
         while ((dirent = dir.readSync()) !== null) {
           if (dirent.name !== '.gitignore') {
-            const fileNameFull1 = `modules/${dirent.name}/bin/release/${fileName}`;
+            const fileNameFull1 = `modules/${dirent.name}/bin/repo/release/${fileName}`;
             fs.writeFileSync(fileNameFull1, fileContent);
             console.log(`Updated ${fileNameFull1}`);
           }
