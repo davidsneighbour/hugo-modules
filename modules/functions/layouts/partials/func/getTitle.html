@@ -1,5 +1,6 @@
 {{- $title := "" -}}
-{{- $separator := site.Params.dnb.head.separator | compare.Default "|" -}}
+{{- $config := site.Params.dnb.head -}}
+{{- $separator := $config.separator | compare.Default "|" -}}
 {{- $sitetitle := false -}}
 
 {{- if compare.Ne .Title site.Title -}}
@@ -7,7 +8,7 @@
 {{- end -}}
 
 {{- if .IsHome -}}
-  {{- $title = site.Title -}}
+  {{- $title = $config.hometitle | compare.Default (i18n "dnb.head.hometitle") -}}
 {{- else -}}
   {{- $title = .Title -}}
 {{- end -}}

@@ -1,2 +1,5 @@
 [page-n]
 other = " (Page %d)"
+
+[dnb.head.hometitle]
+other = "Welcome"
