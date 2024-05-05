@@ -1,4 +1,11 @@
 Changelog
+## [1.2024.8](https://github.com/davidsneighbour/hugo-modules/compare/modules/renderhooks/v1.2024.7...modules/renderhooks/v1.2024.8) (2024-05-05)
+
+
+### Configuration
+
+* **fix:** proper path to post release hook ([5c3a969](https://github.com/davidsneighbour/hugo-modules/commit/5c3a969fe7d89e6f050867976b1b6e87b51b7678))
+
 ## [1.2024.7](https://github.com/davidsneighbour/hugo-modules/compare/modules/renderhooks/v1.2024.6...modules/renderhooks/v1.2024.7) (2024-05-05)
 
 
