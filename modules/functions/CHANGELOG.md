@@ -1,4 +1,32 @@
 Changelog
+## [1.2024.12](https://github.com/davidsneighbour/hugo-modules/compare/modules/functions/v1.2024.11...modules/functions/v1.2024.12) (2024-05-05)
+
+
+### Bug Fixes
+
+* proper filename for versioning configuration ([0e43e9c](https://github.com/davidsneighbour/hugo-modules/commit/0e43e9c9574a50add472c7c4b0e6b1aa05e058a8))
+* proper filename for versioning configuration ([99ee8dd](https://github.com/davidsneighbour/hugo-modules/commit/99ee8dd0fb955e6ab3b46b076a6da842fcdbc652))
+* proper name for section title and fix pagination note ([5bfcd17](https://github.com/davidsneighbour/hugo-modules/commit/5bfcd17d28ba55d98d75eff9f3a09892162553e6))
+* use proper page context if rendered on other pages ([4a95a84](https://github.com/davidsneighbour/hugo-modules/commit/4a95a842b847775e9910fa5fb953d55288677cd7)), closes [davidsneighbour/kollitsch.dev#911](https://github.com/davidsneighbour/kollitsch.dev/issues/911)
+
+
+### Chore
+
+* **release:** modules/pictures/v1.2024.1 ([cc12a80](https://github.com/davidsneighbour/hugo-modules/commit/cc12a8017bb5b661076b56eeebe1b4db47e6a4e9))
+* **release:** modules/pictures/v1.2024.2 ([95c2791](https://github.com/davidsneighbour/hugo-modules/commit/95c2791d35cced70330861f5636cd698058d7e02))
+* **release:** modules/renderhooks/v1.2024.7 ([02b4c8e](https://github.com/davidsneighbour/hugo-modules/commit/02b4c8e9ef1fbcaa37dc79b891e29a2b8ea0cd03))
+* **release:** modules/renderhooks/v1.2024.8 ([e6ff364](https://github.com/davidsneighbour/hugo-modules/commit/e6ff364efa526b25e5432928610c1117f1ff3b23))
+* **release:** update repo data files ([0f390f5](https://github.com/davidsneighbour/hugo-modules/commit/0f390f50db3efda35405cf4ed390ad7edbf8d988))
+* **release:** update repo data files ([2ac55bc](https://github.com/davidsneighbour/hugo-modules/commit/2ac55bc1af6ff7be354c12f5ae6f91d4aa84ad11))
+* **release:** update repo data files ([c6db614](https://github.com/davidsneighbour/hugo-modules/commit/c6db614c664b885018133cdad2d78a42a6ce98cc))
+* **release:** update repo data files ([915d4d4](https://github.com/davidsneighbour/hugo-modules/commit/915d4d463d386cfafae841383b5191c085bd14a4))
+
+
+### Configuration
+
+* **fix:** proper path to post release hook ([35e400b](https://github.com/davidsneighbour/hugo-modules/commit/35e400b884bb90f1cbc47765539b0414ca6c0651))
+* **fix:** proper path to post release hook ([5c3a969](https://github.com/davidsneighbour/hugo-modules/commit/5c3a969fe7d89e6f050867976b1b6e87b51b7678))
+
 ## [1.2024.11](https://github.com/davidsneighbour/hugo-modules/compare/modules/functions/v1.2024.7...modules/functions/v1.2024.11) (2024-05-03)
 
 
