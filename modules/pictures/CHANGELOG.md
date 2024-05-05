@@ -1,4 +1,16 @@
 Changelog
+## [1.2024.2](/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2024.1...modules/pictures/v1.2024.2) (2024-05-05)
+
+
+### Bug Fixes
+
+* use proper page context if rendered on other pages ([4a95a84](/davidsneighbour/hugo-modules/commit/4a95a842b847775e9910fa5fb953d55288677cd7)), closes [davidsneighbour/kollitsch.dev#911](/davidsneighbour/kollitsch.dev/issues/911)
+
+
+### Chore
+
+* **release:** update repo data files ([2ac55bc](/davidsneighbour/hugo-modules/commit/2ac55bc1af6ff7be354c12f5ae6f91d4aa84ad11))
+
 ## [1.2024.1](/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2024.0...modules/pictures/v1.2024.1) (2024-05-05)
 
 
