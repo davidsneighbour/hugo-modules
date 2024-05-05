@@ -10,7 +10,11 @@
 {{- if .IsHome -}}
   {{- $title = $config.hometitle | compare.Default (i18n "dnb.head.hometitle") -}}
 {{- else -}}
-  {{- $title = .Title -}}
+  {{- if eq "" .Title -}}
+    {{- $title = printf "%s" .Section | strings.Title -}}
+  {{- else -}}
+    {{- $title = .Title -}}
+  {{- end -}}
 {{- end -}}
 
 {{- if .IsNode -}}
