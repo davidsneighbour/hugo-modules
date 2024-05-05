@@ -17,8 +17,7 @@
   - .Title (string) The image title.
 
 */}}
-
-{{- $context := page -}}
+{{- $context := .PageInner -}}
 {{- $label := .Text -}}
 {{- $src := .Destination -}}
 {{- $isPageBundle := true -}}
@@ -27,7 +26,9 @@
 {{- $default_format := $config.default_format | default "webp" -}}
 
 {{/* retrieve the article image */}}
-{{- $localimage := partials.Include "func/pictures/getImageResource.html" $src $src -}}
+{{- $options := dict "path" $src "page" $context.RelPermalink -}}
+{{- $localimage := partials.Include "func/pictures/getImageResource.html" $options $options -}}
+
 {{- if eq false $localimage -}}
 
   {{- $imageOptions := dict
