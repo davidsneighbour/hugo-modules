@@ -20,8 +20,8 @@
   "scripts": {
     "clean": "run-p clean:*",
     "clean:npm": "rimraf node_modules package-lock.json",
-    "release": "commit-and-tag-version --release-as patch -a -t \"modules/sitemap/v\" --releaseCommitMessageFormat \"chore(release): modules/sitemap/v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/sitemap/v\" --releaseCommitMessageFormat \"chore(release): modules/sitemap/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/sitemap/v\" --releaseCommitMessageFormat \"chore(release): modules/sitemap/v{{currentTag}}\" && ./bin/repo/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/sitemap/v\" --releaseCommitMessageFormat \"chore(release): modules/sitemap/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
   },
   "type": "module"

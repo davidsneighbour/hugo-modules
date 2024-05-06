@@ -34,8 +34,8 @@
     "clean": "run-p clean:*",
     "clean:hugo": "rimraf public resources",
     "clean:npm": "rimraf node_modules package-lock.json",
-    "release": "commit-and-tag-version --release-as patch -a -t \"modules/pwa/v\" --releaseCommitMessageFormat \"chore(release): modules/pwa/v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/pwa/v\" --releaseCommitMessageFormat \"chore(release): modules/pwa/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/pwa/v\" --releaseCommitMessageFormat \"chore(release): modules/pwa/v{{currentTag}}\" && ./bin/repo/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/pwa/v\" --releaseCommitMessageFormat \"chore(release): modules/pwa/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "serve:webpack": "webpack --watch --config webpack.dev.js",
     "update": "npm-check-updates -u && npm install && git add package*"
   },

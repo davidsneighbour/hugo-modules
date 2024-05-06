@@ -30,8 +30,8 @@
     "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
     "clean:npm": "rimraf node_modules package-lock.json",
     "fixpack": "fixpack",
-    "release": "commit-and-tag-version --release-as patch -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/release/postrelease",
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/repo/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
   },
   "type": "module"
