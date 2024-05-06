@@ -1,6 +1,6 @@
 {
   "name": "@davidsneighbour/hugo-errors",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "description": "Error templates for GoHugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
