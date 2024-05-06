@@ -1,4 +1,11 @@
 Changelog
+## [1.2024.1](https://github.com/davidsneighbour/hugo-errors/compare/v0.0.5...v1.2024.1) (2024-05-06)
+
+
+### Chore
+
+* **release:** update repo data files ([a9fce67](https://github.com/davidsneighbour/hugo-errors/commit/a9fce6755beecb0ea074c182f46612cb0b106a5f))
+
 ## [0.0.5](https://github.com/davidsneighbour/hugo-errors/compare/v1.2024.22...v0.0.5) (2024-05-06)
 
 
