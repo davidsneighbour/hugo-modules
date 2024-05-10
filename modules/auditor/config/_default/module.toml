@@ -31,3 +31,13 @@ target = 'assets/css/libs/ct.css'
 [[imports.mounts]]
 source = 'ct.css'
 target = 'static/css/libs/ct.css'
+
+[[imports]]
+disable = false
+ignoreConfig = true
+ignoreImports = true
+path = "github.com/Heydon/REVENGE.CSS"
+
+[[imports.mounts]]
+source = 'revenge.css'
+target = 'assets/css/libs/revenge.css'
