@@ -6,7 +6,7 @@
 {{- $iconname := .icon | default "dash-square-dotted" -}}
 <svg{{ with .width }} width="{{- . -}}"{{ end }}{{ with .height }} height="{{- . -}}"{{ end }}
   version="2.0" class="icon icon-{{- $iconname }} {{ .class -}}">
-  {{- $icons := page.Scratch.Get "icons" -}}
+  {{- $icons := .Scratch.Get "icons" -}}
   {{- if eq (index $icons $iconname) true -}}
   {{- else -}}
     {{- $iconpath := printf $config.path $iconname -}}
@@ -16,7 +16,7 @@
     {{- $replacement := printf "<symbol %s " $replaceId -}}
     {{- $content = replace $content "<svg " $replacement 1 -}}
     {{- $content = replace $content "</svg>" "</symbol>" 1 -}}
-    {{- page.Scratch.SetInMap "icons" $iconname true -}}
+    {{- .Scratch.SetInMap "icons" $iconname true -}}
     {{- $content | safeHTML -}}
   {{- end -}}
   <use href="#{{- $iconname -}}"{{ with .width }} width="{{- . -}}"{{ end }}{{ with .height }} height="{{- . -}}"{{ end }} />
