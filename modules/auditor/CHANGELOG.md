@@ -1,4 +1,27 @@
 Changelog
+## [1.2024.8](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2024.7...modules/auditor/v1.2024.8) (2024-05-12)
+
+
+### Features
+
+* add taglist filtered shortcode ([25b9a0d](https://github.com/davidsneighbour/hugo-modules/commit/25b9a0d5c943005633377589029c165be142e382))
+
+
+### Chore
+
+* **deps:** update dependencies ([75aa99a](https://github.com/davidsneighbour/hugo-modules/commit/75aa99ac8e15f5cfca5be089c4b9c3e3a8ccb423))
+* **deps:** update dependencies ([b8eba90](https://github.com/davidsneighbour/hugo-modules/commit/b8eba902e24bb7f575f8bb5a77cc42e5883b205e))
+* **deps:** update dependencies ([cfe85ae](https://github.com/davidsneighbour/hugo-modules/commit/cfe85ae3c0c16c66f9245a1c3f3a3975457b8e77))
+* **deps:** update dependencies ([db7daba](https://github.com/davidsneighbour/hugo-modules/commit/db7daba4e2b27a5667ad6bf576779134647cde0a))
+* **release:** modules/functions/v1.2024.13 ([e1c81ab](https://github.com/davidsneighbour/hugo-modules/commit/e1c81ab919a7b72ebcfad6f499859c81152c1349))
+* **release:** update repo data files ([88f57bd](https://github.com/davidsneighbour/hugo-modules/commit/88f57bd6bf67ec8a7a105773ee47cf80433fe0b2))
+* **release:** update repo data files ([690e820](https://github.com/davidsneighbour/hugo-modules/commit/690e820f1cd72ed97b9ed58b98986bc70f8c717a))
+
+
+### Build System
+
+* **fix:** update build scripts ([9c986a8](https://github.com/davidsneighbour/hugo-modules/commit/9c986a876916e6ebbac770a7fed59f97fe211fa8))
+
 ## [1.2024.7](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2024.6...modules/auditor/v1.2024.7) (2024-05-10)
 
 
