@@ -10,22 +10,10 @@ source "${CURPATH}/bin/repo/release/common"
 set -e
 
 check_required_tools curl sed git
-load_env_vars .env
+load_env
 
 # Get current version from package.json
 VERSION=$(node -pe 'require("./package.json")["version"]')
-
-# Update version in citation configuration
-CITATION_FILE=CITATION.cff
-if [ -f "$CITATION_FILE" ]; then
-  sed -i "s/^version: .*/version: ${VERSION}/" "$CITATION_FILE"
-  DATE=$(date +%F)
-  sed -i "s/date-released: .*/date-released: ${DATE}/" "$CITATION_FILE"
-  git add "$CITATION_FILE"
-else
-  echo "No CITATION.cff found"
-  exit 1
-fi
 
 # Create a release on GitHub
 GITHUB_REPO=https://github.com/${GITHUB_REPOSLUG}
@@ -38,5 +26,25 @@ git commit -m "chore(release): update repo data files" --signoff --no-verify
 git push origin main --follow-tags
 
 # Open release for editing
-RELEASEURL="$GITHUB_REPO/releases/edit/$TAGNAME"
-xdg-open "${RELEASEURL}" &>/dev/null
+URL="$GITHUB_REPO"/"releases/edit/v""$VERSION"
+response=$(curl -s -o response.json -w "%{http_code}" \
+  -X POST \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: token ${GITHUB_SECRET}" \
+  https://api.github.com/repos/"${GITHUB_REPOSLUG}"/releases \
+  -d "{ \
+      \"tag_name\":\"${TAGNAME}\", \
+      \"name\":\"${TAGNAME}\", \
+      \"body\":${CHANGES}, \
+      \"generate_release_notes\":false \
+  }")
+
+if [[ "$response" -ge 200 && "$response" -lt 300 ]]; then
+  echo "Release created successfully."
+  rm changes.md
+else
+  echo "Failed to create release. Status code: $response"
+  echo "Opening changes file for review."
+  code changes.md
+fi
+xdg-open "${URL}" &>/dev/null
