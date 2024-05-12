@@ -18,6 +18,7 @@ config:
 summary: A responsive and very fast shortcode to add youtube videos to your Hugo website.
 aliases:
 - /components/hugo-youtube/
+- /gohugo/youtube/
 ---
 
 A responsive and very fast shortcode to add youtube videos to your Hugo website.
