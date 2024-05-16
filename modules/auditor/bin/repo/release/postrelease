@@ -1,5 +1,5 @@
 #!/bin/bash
-# v2024.05.03.01
+# v2024.05.12.01
 
 # Get the current path
 CURPATH="$(pwd -P)"
@@ -12,20 +12,17 @@ set -e
 check_required_tools curl sed git
 load_env
 
+# push release to GitHub
+git push origin main --follow-tags
+
 # Get current version from package.json
 VERSION=$(node -pe 'require("./package.json")["version"]')
 
-# Create a release on GitHub
+# create a release on GitHub
 GITHUB_REPO=https://github.com/${GITHUB_REPOSLUG}
 TAGNAME=modules/${TAGSLUG}/v${VERSION}
 
-# Update release file
-git commit -m "chore(release): update repo data files" --signoff --no-verify
-
-# Push release to GitHub
-git push origin main --follow-tags
-
-# Open release for editing
+# open release for editing
 URL="$GITHUB_REPO"/"releases/edit/v""$VERSION"
 response=$(curl -s -o response.json -w "%{http_code}" \
   -X POST \
