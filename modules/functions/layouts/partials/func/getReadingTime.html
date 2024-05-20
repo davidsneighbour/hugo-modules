@@ -3,8 +3,8 @@
 @since 1.0.0
 
 */ -}}
-{{- $wordsPerMinute := cast.ToFloat (site.Data.dnb.functions.readingtime.wordsPerMinute | compare.Default 220.0) -}}
-{{- $minsecs := site.Data.dnb.functions.readingtime.minutesandseconds | compare.Default true -}}
+{{- $wordsPerMinute := cast.ToFloat (site.Params.dnb.functions.readingtime.wordsPerMinute | compare.Default 220.0) -}}
+{{- $minsecs := site.Params.dnb.functions.readingtime.minutesandseconds | compare.Default true -}}
 {{- $words := strings.CountWords .Content -}}
 {{- $readTime := math.Mul (math.Div $words $wordsPerMinute) 60 -}}
 {{- $minutes := 0 -}}

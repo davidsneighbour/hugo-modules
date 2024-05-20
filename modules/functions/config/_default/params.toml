@@ -1,10 +1,11 @@
+[dnb.functions]
 namespace = "dnb"
 loglink = "https://dnbql.netlify.app/log"
 
-[setup]
+[dnb.functions.setup]
 disableNote = false
 
-[readingtime]
+[dnb.functions.readingtime]
 # this must be a float value, not an integer! (no quotation marks and at least
 # ending in .0 to typecast it as float)
 wordsperminute = 220.0

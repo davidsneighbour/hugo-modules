@@ -7,10 +7,6 @@ source = "assets/js/debug.js"
 target = "assets/js/debug.js"
 
 [[mounts]]
-source = "data"
-target = "data"
-
-[[mounts]]
 source = "package.json"
 target = "assets/dnb/functions.json"
 
