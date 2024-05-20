@@ -1,4 +1,53 @@
 Changelog
+## [1.2024.14](https://github.com/davidsneighbour/hugo-modules/compare/modules/functions/v1.2024.13...modules/functions/v1.2024.14) (2024-05-20)
+
+
+### Content
+
+* **fix:** add alias page for old 404 link ([120a4db](https://github.com/davidsneighbour/hugo-modules/commit/120a4db3c54a14440513bf09552b3d97a0c6db00))
+
+
+### Features
+
+* add taglist filtered shortcode ([25b9a0d](https://github.com/davidsneighbour/hugo-modules/commit/25b9a0d5c943005633377589029c165be142e382))
+
+
+### Bug Fixes
+
+* **functions:** move configuration from data to params ([4f01023](https://github.com/davidsneighbour/hugo-modules/commit/4f010231a225c00db580da1a34ef5879b05aab94))
+
+
+### Chore
+
+* **deps:** bump @davidsneighbour/markdownlint-config from 2024.3.11 to 2024.3.12 ([#798](https://github.com/davidsneighbour/hugo-modules/issues/798)) ([1761b47](https://github.com/davidsneighbour/hugo-modules/commit/1761b47d9df4a4a0e766b913f4f83ee3eeae8720)), closes [#1343](https://github.com/davidsneighbour/hugo-modules/issues/1343) [#1342](https://github.com/davidsneighbour/hugo-modules/issues/1342) [#1341](https://github.com/davidsneighbour/hugo-modules/issues/1341) [#1339](https://github.com/davidsneighbour/hugo-modules/issues/1339) [#1337](https://github.com/davidsneighbour/hugo-modules/issues/1337)
+* **deps:** bump @davidsneighbour/prettier-config from 2024.3.11 to 2024.3.12 ([#796](https://github.com/davidsneighbour/hugo-modules/issues/796)) ([dc5aa55](https://github.com/davidsneighbour/hugo-modules/commit/dc5aa55159f11fa038803a50047f9ff81d0e4ae1))
+* **deps:** bump @davidsneighbour/remark-config from 2024.3.11 to 2024.3.12 ([#797](https://github.com/davidsneighbour/hugo-modules/issues/797)) ([1704e17](https://github.com/davidsneighbour/hugo-modules/commit/1704e17d92d67da548a7a99fbcdabf43473eb5e6)), closes [#1343](https://github.com/davidsneighbour/hugo-modules/issues/1343) [#1342](https://github.com/davidsneighbour/hugo-modules/issues/1342) [#1341](https://github.com/davidsneighbour/hugo-modules/issues/1341) [#1339](https://github.com/davidsneighbour/hugo-modules/issues/1339) [#1337](https://github.com/davidsneighbour/hugo-modules/issues/1337)
+* **deps:** bump @davidsneighbour/tools from 2024.3.11 to 2024.3.12 ([#795](https://github.com/davidsneighbour/hugo-modules/issues/795)) ([e75459f](https://github.com/davidsneighbour/hugo-modules/commit/e75459f0e260adf15f696c4fd9c347e8cfc3d6a2))
+* **deps:** update davidsneighbour to v2024.3.12 ([#799](https://github.com/davidsneighbour/hugo-modules/issues/799)) ([0cb365a](https://github.com/davidsneighbour/hugo-modules/commit/0cb365a0ae2dd201bca93581107cfc708fe65226))
+* **deps:** update davidsneighbour to v2024.3.12 ([#800](https://github.com/davidsneighbour/hugo-modules/issues/800)) ([f33e0c3](https://github.com/davidsneighbour/hugo-modules/commit/f33e0c32063d95922c68079f7d6f5389d01378b4))
+* **deps:** update davidsneighbour to v2024.3.12 ([#801](https://github.com/davidsneighbour/hugo-modules/issues/801)) ([46f5f8a](https://github.com/davidsneighbour/hugo-modules/commit/46f5f8a3bd1a02b6dc33568d963919e1d54b9218))
+* **deps:** update davidsneighbour to v2024.3.12 ([#802](https://github.com/davidsneighbour/hugo-modules/issues/802)) ([a26cd04](https://github.com/davidsneighbour/hugo-modules/commit/a26cd049207918d52a9fd38b083d3a2770942f6a))
+* **deps:** update davidsneighbour to v2024.3.12 ([#803](https://github.com/davidsneighbour/hugo-modules/issues/803)) ([1af8491](https://github.com/davidsneighbour/hugo-modules/commit/1af849104c3dc0ea6608a1fdb5175b0c5f383256))
+* **deps:** update davidsneighbour to v2024.3.12 ([#804](https://github.com/davidsneighbour/hugo-modules/issues/804)) ([4175914](https://github.com/davidsneighbour/hugo-modules/commit/41759144f5fc64cc987bc8b64519bb38930d7856))
+* **deps:** update dependencies ([f755c91](https://github.com/davidsneighbour/hugo-modules/commit/f755c91c9b02bc904511ed9613314ff5ac7a447e))
+* **deps:** update dependencies ([c6d7f61](https://github.com/davidsneighbour/hugo-modules/commit/c6d7f61ec84d8c3601b6e90e9879883b2659565d))
+* **deps:** update dependencies ([a0c7b4d](https://github.com/davidsneighbour/hugo-modules/commit/a0c7b4dac9131571105678b7c8b61e06e3adf799))
+* **deps:** update dependencies ([75aa99a](https://github.com/davidsneighbour/hugo-modules/commit/75aa99ac8e15f5cfca5be089c4b9c3e3a8ccb423))
+* **deps:** update dependency @tabler/icons to v3.4.0 ([#794](https://github.com/davidsneighbour/hugo-modules/issues/794)) ([c8a43d1](https://github.com/davidsneighbour/hugo-modules/commit/c8a43d10228956a6cfca20578c90e0ec62ceecb2))
+* **deps:** update dependency @types/node to v20.12.12 ([#793](https://github.com/davidsneighbour/hugo-modules/issues/793)) ([7c07fd7](https://github.com/davidsneighbour/hugo-modules/commit/7c07fd75737cca5baf3a9191a652c54ca3ac8a82))
+* **git:** add release fragments to gitignore ([cb3c057](https://github.com/davidsneighbour/hugo-modules/commit/cb3c057a50c430125876f1dadebc9d4e7232d550))
+* **release:** modules/auditor/v1.2024.8 ([884a0b7](https://github.com/davidsneighbour/hugo-modules/commit/884a0b7fc77032df5619e103681d8f334e9f6b06))
+* **release:** modules/auditor/v1.2024.9 ([d40f6c5](https://github.com/davidsneighbour/hugo-modules/commit/d40f6c526cd551a49bd3f36ab10a709fab659b83))
+* **release:** modules/youtube/v1.2024.2 ([123f216](https://github.com/davidsneighbour/hugo-modules/commit/123f2169eb248bbc51f5f08f527cfcd0e41f32c7))
+* **release:** update repo data files ([e2f905d](https://github.com/davidsneighbour/hugo-modules/commit/e2f905d71b39b4d87dfa2827355818b6bc0ab760))
+* **release:** update repo data files ([88f57bd](https://github.com/davidsneighbour/hugo-modules/commit/88f57bd6bf67ec8a7a105773ee47cf80433fe0b2))
+
+
+### Build System
+
+* **fix:** comment optional env variables out ([82a4e2e](https://github.com/davidsneighbour/hugo-modules/commit/82a4e2e5b77ed206eec65321c04d916a7f7ea9a2))
+* **fix:** update build scripts ([9c986a8](https://github.com/davidsneighbour/hugo-modules/commit/9c986a876916e6ebbac770a7fed59f97fe211fa8))
+
 ## [1.2024.13](https://github.com/davidsneighbour/hugo-modules/compare/modules/functions/v1.2024.12...modules/functions/v1.2024.13) (2024-05-10)
 
 
