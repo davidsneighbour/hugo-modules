@@ -16,7 +16,7 @@
   "dependencies": {
     "@davidsneighbour/configurations": "^2024.1.2",
     "@davidsneighbour/release-config": "^2024.3.12",
-    "@tabler/icons": "^3.4.0"
+    "@tabler/icons": "^3.5.0"
   },
   "scripts": {
     "clean": "run-p clean:*",
