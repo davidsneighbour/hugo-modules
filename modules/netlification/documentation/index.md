@@ -21,21 +21,22 @@ aliases:
 
 This is a Hugo theme component with helpers to host your [GoHugo](https://gohugo.io/) generated static website on [Netlify](https://www.netlify.com/). If you don't use Netlify, you DO NOT need this module.
 
-- [Features](#features)
-- [Installation and setup](#installation-and-setup)
-- [Configuration](#configuration)
-  - [Redirects](#redirects)
-    - [Per post](#per-post)
-    - [Additional Redirects](#additional-redirects)
-    - [Disable internal alias creation in Hugo](#disable-internal-alias-creation-in-hugo)
-  - [Headers](#headers)
-    - [Content Security Policy](#content-security-policy)
-- [Sample Configuration](#sample-configuration)
-- [Updating](#updating)
-- [Extend netlification headers from other modules](#extend-netlification-headers-from-other-modules)
-- [Notes](#notes)
-- [Testing output](#testing-output)
-- [Troubleshooting](#troubleshooting)
+* [Features](#features)
+* [Installation and setup](#installation-and-setup)
+* [Configuration](#configuration)
+  * [Redirects](#redirects)
+    * [Per post](#per-post)
+    * [Additional Redirects](#additional-redirects)
+    * [Disable internal alias creation in Hugo](#disable-internal-alias-creation-in-hugo)
+  * [Headers](#headers)
+    * [Content Security Policy](#content-security-policy)
+* [Sample Configuration](#sample-configuration)
+* [Updating](#updating)
+* [Extend netlification headers from other modules](#extend-netlification-headers-from-other-modules)
+* [Notes](#notes)
+* [Testing output](#testing-output)
+* [Troubleshooting](#troubleshooting)
+  * [Order of rules](#order-of-rules)
 
 # Features
 
@@ -98,9 +99,9 @@ aliases:
 
 ### Additional Redirects
 
-- A redirect for 404 errors to Hugo's 404 page (`/layouts/404.html`) - no action by you required
+* A redirect for 404 errors to Hugo's 404 page (`/layouts/404.html`) - no action by you required
 
-- A redirect for your default netlify.com URL to your live URL via data configuration in `data/dnb/netlification/config.toml`
+* A redirect for your default netlify.com URL to your live URL via data configuration in `data/dnb/netlification/config.toml`
 
   ```toml
   [[redirects]]
@@ -109,7 +110,7 @@ aliases:
 
   The URL will be redirected to your `baseURL`. Right now this feature requires a trailing slash on both, baseURL and netlify parameter
 
-- Add more redirects as required. Each redirect requires a header `[[redirects]]` followed by at least the parameters `from` and `to`:
+* Add more redirects as required. Each redirect requires a header `[[redirects]]` followed by at least the parameters `from` and `to`:
 
   ```toml
   [[redirects]]
@@ -136,7 +137,7 @@ Have a look in [data/dnb/netlification/config.toml](https://github.com/davidsnei
 
 You can check your content security policy using these following services and audits:
 
-- [https://csp-evaluator.withgoogle.com/?csp=https://kollitsch.dev](https://csp-evaluator.withgoogle.com/?csp=https://kollitsch.dev)
+* [https://csp-evaluator.withgoogle.com/?csp=https://kollitsch.dev](https://csp-evaluator.withgoogle.com/?csp=https://kollitsch.dev)
 
 # Sample Configuration
 
@@ -162,12 +163,18 @@ hugo mod get -u
 
 # Notes
 
-- [Netlify's redirects engine](https://docs.netlify.com/routing/redirects/#rule-processing-order) will process the first matching rule it finds, reading from top to bottom. Rules in the `_redirects` file are always processed first, followed by rules in the Netlify configuration file.
+* [Netlify's redirects engine](https://docs.netlify.com/routing/redirects/#rule-processing-order) will process the first matching rule it finds, reading from top to bottom. Rules in the `_redirects` file are always processed first, followed by rules in the Netlify configuration file.
 
 # Testing output
 
-- [Netlify Playground for redirects](https://play.netlify.com/redirects)
+* [Netlify Playground for redirects](https://play.netlify.com/redirects)
 
 # Troubleshooting
 
 On the development server you can load <https://localhost:1313/_headers> and <https://localhost:1313/_redirects> and can inspect the output of this module.
+
+## Order of rules
+
+The `_redirects` file is read before the `netlify.toml` file. Thus, rules in the `_redirects` file will take precedence over any rules in the `netlify.toml` file. Both the `_redirects` file and the `netlify.toml` file are read from top to bottom. Therefore, more specific rules should sit at the top of your file and less specific rules should be at the bottom. As soon as a rule matches a file, no further rules for that file will be processed. Therefore, you should review your redirect files to ensure that there are no redundant or conflicting rules, and that the more specific redirects are above the more general ones in order.
+
+Settings specified in `netlify.toml` override any corresponding settings in the `_headers` file. This means that the `netlify.toml` file takes precedence over the `_headers` file.
