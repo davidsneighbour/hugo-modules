@@ -19,6 +19,7 @@
 {{- $pages = $pages | collections.First $limit -}}
 
 {{ fmt.Printf "<?xml version= \"1.0\" encoding= \"utf-8\" standalone= \"yes\"?>" | safe.HTML }}
+{{ fmt.Printf "<?xml-stylesheet href=\"/dnb/feeds/stylesheet-atom.xslt\" type=\"text/xsl\"?>" | safe.HTML }}
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.LanguageCode }}">
   <title>{{ site.Title }}</title>
   {{- with site.Params.brand.tagline }}
