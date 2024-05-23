@@ -1,18 +1,16 @@
-Changelog
-## [1.2024.2](/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2024.1...modules/pictures/v1.2024.2) (2024-05-05)
+# Changelog
 
+## [1.2024.2](/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2024.1...modules/pictures/v1.2024.2) (2024-05-05)
 
 ### Bug Fixes
 
 * use proper page context if rendered on other pages ([4a95a84](/davidsneighbour/hugo-modules/commit/4a95a842b847775e9910fa5fb953d55288677cd7)), closes [davidsneighbour/kollitsch.dev#911](/davidsneighbour/kollitsch.dev/issues/911)
-
 
 ### Chore
 
 * **release:** update repo data files ([2ac55bc](/davidsneighbour/hugo-modules/commit/2ac55bc1af6ff7be354c12f5ae6f91d4aa84ad11))
 
 ## [1.2024.1](/davidsneighbour/hugo-modules/compare/modules/pictures/v1.2024.0...modules/pictures/v1.2024.1) (2024-05-05)
-
 
 ### Features
 
@@ -37,7 +35,6 @@ Changelog
 * primitive webfeeds protocoll for rss ([9e8724b](/davidsneighbour/hugo-modules/commit/9e8724bb2be5740c6f77bb8f5cd6edae8b45d434))
 * single line comment function ([736db9a](/davidsneighbour/hugo-modules/commit/736db9a7d1736c3f0e0420609393941053ffd667))
 
-
 ### Documentation
 
 * add a note in the template, wip ([356c656](/davidsneighbour/hugo-modules/commit/356c6569cb659b97c090e1392757a14c99b0ebd6))
@@ -57,7 +54,6 @@ Changelog
 * update documentation ([162afd6](/davidsneighbour/hugo-modules/commit/162afd652b4a502936a892707e95be735a7ad0b9))
 * update linktitle setup ([a332382](/davidsneighbour/hugo-modules/commit/a33238213bfe8e8957403688b66ab8932186cc96))
 * update README.md ([601706c](/davidsneighbour/hugo-modules/commit/601706c45002a682cb08ec893f163c81bd3950ea))
-
 
 ### Bug Fixes
 
@@ -134,7 +130,6 @@ Changelog
 * sort position parameters ([7cd895f](/davidsneighbour/hugo-modules/commit/7cd895fd997fde5b455ca1184b4aa128aa7f21b7))
 * update readme header image paths ([81025b6](/davidsneighbour/hugo-modules/commit/81025b6f9d21345d62e1cd2664ff6a64e71b939a))
 
-
 ### Refactors
 
 * gohugo methods ([aadcec4](/davidsneighbour/hugo-modules/commit/aadcec4808012b7fb2c5bfd2850735e06b9c234e))
@@ -142,7 +137,6 @@ Changelog
 * move files around and remove deprecated partials ([7674275](/davidsneighbour/hugo-modules/commit/7674275c6c0011fb88999d55d6371d4db60649ad))
 * remove commented code ([cd9393a](/davidsneighbour/hugo-modules/commit/cd9393a212aee05d5b32971089b7763baba6e827))
 * replace aliases with proper functions ([7b9b62a](/davidsneighbour/hugo-modules/commit/7b9b62a96865b68edcdeb6926417e6d5944e4a11))
-
 
 ### Chore
 
@@ -664,20 +658,17 @@ Changelog
 * update component header images ([c0a711a](/davidsneighbour/hugo-modules/commit/c0a711a54b7dc95a02a241ab954783e3a8617b20))
 * update dependencies and fix release-config ([b1c30da](/davidsneighbour/hugo-modules/commit/b1c30daa887d74ec7358bb6ffd4359c633bd6a91))
 
-
 ### Configuration
 
 * **fix:** proper file ending for version configuration ([8e7db0b](/davidsneighbour/hugo-modules/commit/8e7db0bed6df7bf1a3ee6e86bf1d629f3b1584b6))
 * **fix:** proper path to post release hook ([35e400b](/davidsneighbour/hugo-modules/commit/35e400b884bb90f1cbc47765539b0414ca6c0651))
 * **fix:** proper path to post release hook ([5c3a969](/davidsneighbour/hugo-modules/commit/5c3a969fe7d89e6f050867976b1b6e87b51b7678))
 
-
 ### Build System
 
 * **fix:** proper path to common functions ([f7c305c](/davidsneighbour/hugo-modules/commit/f7c305c72c02ae61b10166c898da3ebb3148e69b))
 * **fix:** update build system throughout modules ([25a9919](/davidsneighbour/hugo-modules/commit/25a9919c96623a3e6dc48d4ccf48762009926b2c))
 * **fix:** update release hooks structure ([5a232c7](/davidsneighbour/hugo-modules/commit/5a232c75c88865b4e6aa055891d82fcde24872d4))
-
 
 ### CI
 

@@ -1,0 +1,80 @@
+{{- /*
+
+## returns the article image for the given context as a resource object or an empty dictionary
+
+- this tag might end up very resource intense when the most common (low number) settings aren't used, so use with caution and cached. cacheid should be article id.
+
+### path of checking (immediate return on any succesful hit, not checked lines are not implemented yet)
+
+1. [x] check for an image `header.(png/jpg/gif/svg)` in the leaf bundle
+
+2. [ ] check for frontmatter `headerimage`
+  - [ ] if it's an URL use that
+  - [ ] looks for the image in `assets/`
+  - [ ] looks for the image in `static/`
+  - [ ] ignores the frontmatter if not found
+
+3. [ ] check for `tags`, then `keywords` frontmatter and
+  - [ ] check if the tag or keyword coming FIFO has a default image associated with it
+
+4. [ ] check for resources that are images
+  - [ ] check for an image that has `params` `mainimage` set to `true` (if multiple items exist then the first one is used)
+  - [x] takes the first image of the resources array
+  - [ ] note: if there is no resources frontmatter it will still use the first image resource found in the page leaf. To stop this add frontmatter `use_resource` with `false`.
+
+5. [ ] check for configuration parameter `[params.dnb.pictures] > default_headerimage` and
+  - [ ] if it's an URL use that
+  - [ ] looks for the image in `assets/`
+  - [ ] looks for the image in `static/`
+
+### Notes:
+- if the file found is in resources or `assets` then it will be preprocessed and return a responsive pictures tag
+- if the file found is in `static` then it will be inserted as is or per configuration (see below)
+
+### TODO:
+- notes about configuration of responsive sizes
+- notes about configuration of default sizes
+
+### Input
+
+the page object to extract the image for.
+
+### Output
+
+dictionary with
+
+- image: information about the image (src, name, description, params)
+- isResource: boolean denoting if the image can be pushed through resize/optimise procedures or is singular static image
+- properties: (properties of a singular static image)
+  - width
+  - height
+  - description
+
+*/ -}}
+
+{{- $context := . -}}
+
+{{- $articleimage := dict -}}
+{{- $resourcesFirstImage := dict -}}
+
+{{- /* 1. check for an image `header.(png/jpg/gif/svg)` in the leafbundle */ -}}
+{{- with $context.Resources.GetMatch "**/header*" -}}
+  {{- $articleimage = . -}}
+{{- end -}}
+{{- /* TODO check if this is actual an image and usable */ -}}
+
+{{- /* 4. check for resources that are images */ -}}
+{{- with $articleimage -}}{{- else -}}
+  {{- $articleimages := $context.Resources.ByType "image" -}}
+  {{- range first 1 $articleimages -}}
+    {{- $articleimage = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with $articleimage -}}{{- else -}}
+  {{- $config := partials.IncludeCached "func/pictures/getConfiguration.html" . -}}
+  {{- $default_image := $config.default_image | default "images/default.png" -}}
+  {{- $articleimage = resources.Get $default_image -}}
+{{- end -}}
+
+{{- return $articleimage -}}

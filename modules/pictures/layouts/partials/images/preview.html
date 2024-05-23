@@ -18,7 +18,7 @@
 {{- $image_sizes2 := partials.IncludeCached "func/pictures/getARImagesizes.html" $arOptions $arOptions -}}
 
 {{/* retrieve the article image */}}
-{{- $articleimage := partials.Include "images/getArticleImage.html" $context -}}
+{{- $articleimage := partials.Include "func/pictures/getArticleImage.html" $context -}}
 
 {{- with $articleimage -}}
   {{ $image := . }}
