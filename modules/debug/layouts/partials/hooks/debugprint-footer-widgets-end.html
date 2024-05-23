@@ -10,7 +10,7 @@
   {{- end -}}
 
   {{- with $data.js.filename -}}
-    <script src="/assets/js/{{- . -}}" async defer></script>
+    <script src="/assets/js/{{- . -}}" async fetchpriority="low" defer></script>
   {{- end -}}
 
 {{- end -}}
