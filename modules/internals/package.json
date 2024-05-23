@@ -4,10 +4,7 @@
   "license": "MIT",
   "description": "Replacing GoHugo's internal templates with better options",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
-  },
+  "repository": "https://github.com/davidsneighbour/hugo-modules",
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-modules/issues"
   },

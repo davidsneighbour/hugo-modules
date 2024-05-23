@@ -5,7 +5,7 @@
   "description": "Error templates for GoHugo",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "homepage": "https://github.com/davidsneighbour/hugo-errors",
-  "repository": "davidsneighbour/hugo-errors",
+  "repository": "https://github.com/davidsneighbour/hugo-modules",
   "bugs": "https://github.com/davidsneighbour/hugo-errors/issues",
   "devDependencies": {
     "@davidsneighbour/release-config": "^2024.3.13",

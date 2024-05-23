@@ -2,10 +2,7 @@
   "name": "publisher",
   "version": "0.0.4",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
-  },
+  "repository": "https://github.com/davidsneighbour/hugo-modules",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-modules/issues"

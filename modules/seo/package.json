@@ -3,10 +3,7 @@
   "description": "This is work in progress. Intention is to combine a bunch of individual modules that work together and optimise various aspects of SEO in a website. Right now, I am pretty sure, you have no use for this module. Once all submodules are feature ready and working fine it might make sense to install this \"collecting\" module instead of each individual module.",
   "version": "0.0.4",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidsneighbour/hugo-modules.git"
-  },
+  "repository": "https://github.com/davidsneighbour/hugo-modules",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-modules/issues"
