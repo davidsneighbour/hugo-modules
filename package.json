@@ -9,10 +9,10 @@
   "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules#readme",
   "dependencies": {
-    "@davidsneighbour/markdownlint-config": "^2024.3.12",
-    "@davidsneighbour/prettier-config": "^2024.3.12",
-    "@davidsneighbour/remark-config": "^2024.3.12",
-    "@davidsneighbour/tools": "^2024.3.12"
+    "@davidsneighbour/markdownlint-config": "^2024.3.13",
+    "@davidsneighbour/prettier-config": "^2024.3.13",
+    "@davidsneighbour/remark-config": "^2024.3.13",
+    "@davidsneighbour/tools": "^2024.3.13"
   },
   "scripts": {
     "build": "node bin/release/system/update.mjs && ./bin/components",

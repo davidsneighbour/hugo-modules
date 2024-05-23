@@ -15,7 +15,7 @@
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/opensearch",
   "dependencies": {
     "@davidsneighbour/configurations": "^2024.1.2",
-    "@davidsneighbour/release-config": "^2024.3.12"
+    "@davidsneighbour/release-config": "^2024.3.13"
   },
   "scripts": {
     "clean": "run-p clean:*",

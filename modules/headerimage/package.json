@@ -14,9 +14,9 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/headerimage",
   "dependencies": {
-    "@davidsneighbour/markdownlint-config": "^2024.3.12",
-    "@davidsneighbour/release-config": "^2024.3.12",
-    "@davidsneighbour/tools": "^2024.3.12"
+    "@davidsneighbour/markdownlint-config": "^2024.3.13",
+    "@davidsneighbour/release-config": "^2024.3.13",
+    "@davidsneighbour/tools": "^2024.3.13"
   },
   "scripts": {
     "clean": "run-p clean:*",
