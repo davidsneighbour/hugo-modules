@@ -11,7 +11,6 @@
         "foxundermoon.shell-format",
         "timonwong.shellcheck",
         "remisa.shellman",
-        "mkhl.shfmt",
-        "ms-vscode.vscode-speech"
+        "mkhl.shfmt"
     ]
 }
