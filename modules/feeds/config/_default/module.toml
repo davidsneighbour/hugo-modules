@@ -11,6 +11,10 @@ source = "layouts"
 target = "layouts"
 
 [[mounts]]
+source = "static"
+target = "static"
+
+[[mounts]]
 source = "package.json"
 target = "assets/dnb/feeds.json"
 
