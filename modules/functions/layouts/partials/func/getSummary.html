@@ -1,0 +1,25 @@
+{{- $context := . -}}
+{{- $summary := $context.Summary -}}
+
+{{- $type := $context.Type | default "blog" -}}
+{{- $artist := dict -}}
+
+{{- if and (eq "" $summary) (eq $type "music") -}}
+
+  {{- $artist = collections.First 1 (where
+        site.Data.dnb.kollitsch.music
+        "slug"
+        $context.Params.video.artist
+  ) -}}
+  {{- $artist = (index $artist 0) -}}
+
+  {{ $summary = printf "%s \"%s\" %s"
+                  (lang.Translate "theme.this_is")
+                  $context.Params.video.title
+                  (lang.Translate "theme.by") }}
+  {{ $summary = printf "%s <a href=\"%s\">%s</a>." $summary  $artist.link $artist.name -}}
+  {{ $summary = printf "%s %s" $summary ($artist.description | transform.Markdownify) }}
+  {{ $summary = $summary | safeHTML }}
+{{- end -}}
+
+{{- return $summary -}}
