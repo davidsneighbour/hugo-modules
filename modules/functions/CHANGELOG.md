@@ -1,4 +1,31 @@
 Changelog
+## [1.2024.16](https://github.com/davidsneighbour/hugo-modules/compare/modules/functions/v1.2024.15...modules/functions/v1.2024.16) (2024-05-24)
+
+
+### Features
+
+* add aspect ratio variable to format the video output ([ee9112d](https://github.com/davidsneighbour/hugo-modules/commit/ee9112dc91474c52dd38f61a55168d2f0aa9e35c))
+* add stylesheets for xml feeds ([4a4a198](https://github.com/davidsneighbour/hugo-modules/commit/4a4a198534bc724c4496f0529cf7ad9db8c95fa6))
+* getSummary function ([31d00e7](https://github.com/davidsneighbour/hugo-modules/commit/31d00e7e25b68080762d892c1dedcd066e8debc4))
+* stylesheet for atom feed ([3fac442](https://github.com/davidsneighbour/hugo-modules/commit/3fac44294dd4c171af0afaa8b9ba982c76336935))
+
+
+### Chore
+
+* **deps:** update dependencies ([43de26b](https://github.com/davidsneighbour/hugo-modules/commit/43de26b8962ec99b551da5f1fb630fc0260696ce))
+* **release:** modules/feeds/v1.2024.8 ([c58ab9b](https://github.com/davidsneighbour/hugo-modules/commit/c58ab9bba22967bcbf444bcb48ebe1bef9e36557))
+* **release:** modules/hooks/v1.2024.10 ([10047a9](https://github.com/davidsneighbour/hugo-modules/commit/10047a9facf298b29aff1fff423a543a6931445e))
+* **release:** modules/youtube/v1.2024.3 ([ef51ad5](https://github.com/davidsneighbour/hugo-modules/commit/ef51ad538623a13547d76f69d88156e1a8764b2a))
+* **release:** update repo data files ([a975149](https://github.com/davidsneighbour/hugo-modules/commit/a975149ae643dccf7589dfa221707180828b9442))
+* **release:** update repo data files ([3e9a61a](https://github.com/davidsneighbour/hugo-modules/commit/3e9a61ac994fda353771ee6891c42a206fc64602))
+* **release:** update repo data files ([1b75cc4](https://github.com/davidsneighbour/hugo-modules/commit/1b75cc4f77fbac1e74a312e8d6336332e364bb8b))
+* **release:** update repo data files ([34d4791](https://github.com/davidsneighbour/hugo-modules/commit/34d4791cef01d9a83cacb303935ebcf4dc70d4ff))
+
+
+### Build System
+
+* **fix:** add build action ([d85d3a4](https://github.com/davidsneighbour/hugo-modules/commit/d85d3a4b2e91ca2c190b6a0d5d4ad82d4461e077))
+
 ## [1.2024.15](https://github.com/davidsneighbour/hugo-modules/compare/modules/functions/v1.2024.14...modules/functions/v1.2024.15) (2024-05-23)
 
 
