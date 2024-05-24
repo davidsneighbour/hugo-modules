@@ -1,26 +1,27 @@
 {
-	"name": "@davidsneighbour/hugo-feeds",
-	"description": "Feeds for GoHugo websites",
-	"version": "1.2024.7",
-	"license": "MIT",
-	"private": true,
+  "name": "@davidsneighbour/hugo-feeds",
+  "description": "Feeds for GoHugo websites",
+  "version": "1.2024.7",
+  "license": "MIT",
+  "private": true,
   "repository": "https://github.com/davidsneighbour/hugo-modules",
-	"author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
-	"bugs": {
-		"url": "https://github.com/davidsneighbour/hugo-modules/issues"
-	},
-	"homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/feeds",
-	"dependencies": {
-		"@davidsneighbour/prettier-config": "^2024.3.13",
-		"@davidsneighbour/release-config": "^2024.3.13",
-		"@davidsneighbour/remark-config": "^2024.3.13"
-	},
-	"scripts": {
-		"clean": "run-p clean:*",
-		"clean:npm": "rimraf node_modules package-lock.json",
-		"release": "commit-and-tag-version --release-as patch -a -t \"modules/feeds/v\" --releaseCommitMessageFormat \"chore(release): modules/feeds/v{{currentTag}}\" && ./bin/repo/release/postrelease",
-		"release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/feeds/v\" --releaseCommitMessageFormat \"chore(release): modules/feeds/v{{currentTag}}\" && ./bin/repo/release/postrelease",
-		"update": "npm-check-updates -u && npm install && git add package*"
-	},
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
+  "bugs": {
+    "url": "https://github.com/davidsneighbour/hugo-modules/issues"
+  },
+  "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/feeds",
+  "dependencies": {
+    "@davidsneighbour/prettier-config": "^2024.3.13",
+    "@davidsneighbour/release-config": "^2024.3.13",
+    "@davidsneighbour/remark-config": "^2024.3.13"
+  },
+  "scripts": {
+    "build": "",
+    "clean": "run-p clean:*",
+    "clean:npm": "rimraf node_modules package-lock.json",
+    "release": "commit-and-tag-version --release-as patch -a -t \"modules/feeds/v\" --releaseCommitMessageFormat \"chore(release): modules/feeds/v{{currentTag}}\" && ./bin/repo/release/postrelease",
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/feeds/v\" --releaseCommitMessageFormat \"chore(release): modules/feeds/v{{currentTag}}\" && ./bin/repo/release/postrelease",
+    "update": "npm-check-updates -u && npm install && git add package*"
+  },
   "type": "module"
 }
