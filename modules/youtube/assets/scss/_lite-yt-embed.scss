@@ -1,3 +1,6 @@
+// Define the aspect ratio variable with !default
+$aspect-ratio: 16 / 9 !default;
+
 lite-youtube {
   background-color: #000;
   position: relative;
@@ -7,16 +10,12 @@ lite-youtube {
   background-size: cover;
   cursor: pointer;
   width: 100%;
-  // max-width: 720px;
 }
 
-/* responsive iframe with a 16:9 aspect ratio
-    thanks https://css-tricks.com/responsive-iframes/
-*/
 lite-youtube::after {
   content: '';
   display: block;
-  padding-bottom: calc(100% / (16 / 9));
+  padding-bottom: calc(100% / #{$aspect-ratio});
 }
 
 lite-youtube>iframe {
