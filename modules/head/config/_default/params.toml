@@ -10,6 +10,7 @@ entrypoint = "scss/style.scss"
 method = "postcss"
 
 [dnb.head.styles.options]
+outputType = "preload"           # one of direct or preload
 outputStyle = "compressed"
 targetPath = "assets/theme.css"
 enableSourceMap = true
