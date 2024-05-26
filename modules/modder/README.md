@@ -1,5 +1,3 @@
-![](../../documentation/modder/header-card.png)
+This Hugo theme component is designed to be used with the [Hugo Pipes](https://gohugo.io/hugo-pipes/) feature. It offers ways to have modules add their own assets or particles to JavaScript and Stylesheet pipelines.
 
-This is a Hugo theme component is designed to be used with the [Hugo Pipes](https://gohugo.io/hugo-pipes/) feature. It offers ways to have modules add their own assets or particles to JavaScript and Stylesheet pipelines.
-
-It is currently in development and is not ready for use, open an issue to find out more or to contribute.
+It's currently in development and while it's ready for use, its documentation might lack. Open an issue to find out more or to contribute.
