@@ -1,4 +1,141 @@
 Changelog
+## [1.2024.6](https://github.com/davidsneighbour/hugo-modules/compare/modules/head/v1.2024.5...modules/head/v1.2024.6) (2024-05-26)
+
+
+### Content
+
+* **fix:** add alias page for old 404 link ([120a4db](https://github.com/davidsneighbour/hugo-modules/commit/120a4db3c54a14440513bf09552b3d97a0c6db00))
+* smaller updates to content ([41031e6](https://github.com/davidsneighbour/hugo-modules/commit/41031e6c268e039517dd120dd192713ca41ac109))
+
+
+### Documentation
+
+* add a note about the order of rules in _redirects and _headers ([6abf7c0](https://github.com/davidsneighbour/hugo-modules/commit/6abf7c0aaf9a76f2394f47e80a50c56c0d23e664))
+* update documentation ([702a7dc](https://github.com/davidsneighbour/hugo-modules/commit/702a7dc34aa8d1867595baef1e34d5811b3d01a5))
+
+
+### Features
+
+* add aspect ratio variable to format the video output ([ee9112d](https://github.com/davidsneighbour/hugo-modules/commit/ee9112dc91474c52dd38f61a55168d2f0aa9e35c))
+* add revenge.css for auditing css issues visually ([bba606b](https://github.com/davidsneighbour/hugo-modules/commit/bba606be47aec0a4c304e854eef2e370f29f126e))
+* add stylesheets for xml feeds ([4a4a198](https://github.com/davidsneighbour/hugo-modules/commit/4a4a198534bc724c4496f0529cf7ad9db8c95fa6))
+* add taglist filtered shortcode ([25b9a0d](https://github.com/davidsneighbour/hugo-modules/commit/25b9a0d5c943005633377589029c165be142e382))
+* getSummary function ([31d00e7](https://github.com/davidsneighbour/hugo-modules/commit/31d00e7e25b68080762d892c1dedcd066e8debc4))
+* load stylesheets via preload or directly ([6c713f3](https://github.com/davidsneighbour/hugo-modules/commit/6c713f337176ad0752251fc0422fa0d39f98dfad))
+* stylesheet for atom feed ([3fac442](https://github.com/davidsneighbour/hugo-modules/commit/3fac44294dd4c171af0afaa8b9ba982c76336935))
+* **wip:** document ways to add plugins to pipelines and offer build method without hugo ([263668e](https://github.com/davidsneighbour/hugo-modules/commit/263668e83ab1acf82d1911f5060b1e8f5adf58e5))
+
+
+### Bug Fixes
+
+* add high fetchpriority to giscus script ([f60e7ab](https://github.com/davidsneighbour/hugo-modules/commit/f60e7ab06d295e6bce1703f1f523c6e36c2fb817))
+* add low fetchpriority to footer debug hook scripts ([71915f3](https://github.com/davidsneighbour/hugo-modules/commit/71915f33f71ee47fcbe113cb49c24561ef812dcf))
+* **functions:** move configuration from data to params ([4f01023](https://github.com/davidsneighbour/hugo-modules/commit/4f010231a225c00db580da1a34ef5879b05aab94))
+* make copy button invisible until clipboard script is initialized ([40611ca](https://github.com/davidsneighbour/hugo-modules/commit/40611ca7b0efd632b0e79b8dc23f5cadd4cda9c5))
+* proper handling of multiple tabs for the copy button ([311f1da](https://github.com/davidsneighbour/hugo-modules/commit/311f1da61b552582499abc3bd371469c4e84981f)), closes [davidsneighbour/kollitsch.dev#849](https://github.com/davidsneighbour/kollitsch.dev/issues/849)
+* remove page method that lead to erroneous icons in pagination ([542935c](https://github.com/davidsneighbour/hugo-modules/commit/542935c058d0b2737460f5920b7b26610b861b4e)), closes [davidsneighbour/kollitsch.dev#905](https://github.com/davidsneighbour/kollitsch.dev/issues/905)
+* remove unused content section ([6a08574](https://github.com/davidsneighbour/hugo-modules/commit/6a08574971ef4d461ec07d81b3330f0e59d81937))
+
+
+### Chore
+
+* **deps:** bump @davidsneighbour/markdownlint-config from 2024.3.11 to 2024.3.12 ([#798](https://github.com/davidsneighbour/hugo-modules/issues/798)) ([1761b47](https://github.com/davidsneighbour/hugo-modules/commit/1761b47d9df4a4a0e766b913f4f83ee3eeae8720)), closes [#1343](https://github.com/davidsneighbour/hugo-modules/issues/1343) [#1342](https://github.com/davidsneighbour/hugo-modules/issues/1342) [#1341](https://github.com/davidsneighbour/hugo-modules/issues/1341) [#1339](https://github.com/davidsneighbour/hugo-modules/issues/1339) [#1337](https://github.com/davidsneighbour/hugo-modules/issues/1337)
+* **deps:** bump @davidsneighbour/prettier-config from 2024.3.11 to 2024.3.12 ([#796](https://github.com/davidsneighbour/hugo-modules/issues/796)) ([dc5aa55](https://github.com/davidsneighbour/hugo-modules/commit/dc5aa55159f11fa038803a50047f9ff81d0e4ae1))
+* **deps:** bump @davidsneighbour/remark-config from 2024.3.11 to 2024.3.12 ([#797](https://github.com/davidsneighbour/hugo-modules/issues/797)) ([1704e17](https://github.com/davidsneighbour/hugo-modules/commit/1704e17d92d67da548a7a99fbcdabf43473eb5e6)), closes [#1343](https://github.com/davidsneighbour/hugo-modules/issues/1343) [#1342](https://github.com/davidsneighbour/hugo-modules/issues/1342) [#1341](https://github.com/davidsneighbour/hugo-modules/issues/1341) [#1339](https://github.com/davidsneighbour/hugo-modules/issues/1339) [#1337](https://github.com/davidsneighbour/hugo-modules/issues/1337)
+* **deps:** bump @davidsneighbour/tools from 2024.3.11 to 2024.3.12 ([#795](https://github.com/davidsneighbour/hugo-modules/issues/795)) ([e75459f](https://github.com/davidsneighbour/hugo-modules/commit/e75459f0e260adf15f696c4fd9c347e8cfc3d6a2))
+* **deps:** update davidsneighbour to v2024.3.12 ([#799](https://github.com/davidsneighbour/hugo-modules/issues/799)) ([0cb365a](https://github.com/davidsneighbour/hugo-modules/commit/0cb365a0ae2dd201bca93581107cfc708fe65226))
+* **deps:** update davidsneighbour to v2024.3.12 ([#800](https://github.com/davidsneighbour/hugo-modules/issues/800)) ([f33e0c3](https://github.com/davidsneighbour/hugo-modules/commit/f33e0c32063d95922c68079f7d6f5389d01378b4))
+* **deps:** update davidsneighbour to v2024.3.12 ([#801](https://github.com/davidsneighbour/hugo-modules/issues/801)) ([46f5f8a](https://github.com/davidsneighbour/hugo-modules/commit/46f5f8a3bd1a02b6dc33568d963919e1d54b9218))
+* **deps:** update davidsneighbour to v2024.3.12 ([#802](https://github.com/davidsneighbour/hugo-modules/issues/802)) ([a26cd04](https://github.com/davidsneighbour/hugo-modules/commit/a26cd049207918d52a9fd38b083d3a2770942f6a))
+* **deps:** update davidsneighbour to v2024.3.12 ([#803](https://github.com/davidsneighbour/hugo-modules/issues/803)) ([1af8491](https://github.com/davidsneighbour/hugo-modules/commit/1af849104c3dc0ea6608a1fdb5175b0c5f383256))
+* **deps:** update davidsneighbour to v2024.3.12 ([#804](https://github.com/davidsneighbour/hugo-modules/issues/804)) ([4175914](https://github.com/davidsneighbour/hugo-modules/commit/41759144f5fc64cc987bc8b64519bb38930d7856))
+* **deps:** update davidsneighbour to v2024.3.13 ([#813](https://github.com/davidsneighbour/hugo-modules/issues/813)) ([4a42be5](https://github.com/davidsneighbour/hugo-modules/commit/4a42be52570612b52263629ab1df4e159b968c05))
+* **deps:** update davidsneighbour to v2024.3.13 ([#814](https://github.com/davidsneighbour/hugo-modules/issues/814)) ([439a4f1](https://github.com/davidsneighbour/hugo-modules/commit/439a4f1a7ed97afc0decc6584a11a803da2ac5c9))
+* **deps:** update davidsneighbour to v2024.3.13 ([#815](https://github.com/davidsneighbour/hugo-modules/issues/815)) ([6773833](https://github.com/davidsneighbour/hugo-modules/commit/6773833b193a51519a5521e719ee13577a9d1255))
+* **deps:** update davidsneighbour to v2024.3.13 ([#816](https://github.com/davidsneighbour/hugo-modules/issues/816)) ([2da3da1](https://github.com/davidsneighbour/hugo-modules/commit/2da3da11999d04055544530b52b29292a349f4e2))
+* **deps:** update davidsneighbour to v2024.3.13 ([#817](https://github.com/davidsneighbour/hugo-modules/issues/817)) ([4632aba](https://github.com/davidsneighbour/hugo-modules/commit/4632abaa3ad68823b0e4cdee23e552ec694dd224))
+* **deps:** update davidsneighbour to v2024.3.13 ([#818](https://github.com/davidsneighbour/hugo-modules/issues/818)) ([a1dd712](https://github.com/davidsneighbour/hugo-modules/commit/a1dd712e408317873cd4a763cf6f63149a72ec2a))
+* **deps:** update dependencies ([b2eaca1](https://github.com/davidsneighbour/hugo-modules/commit/b2eaca12e3f9196f2d13015d710013b4a1dd87c2))
+* **deps:** update dependencies ([2d43029](https://github.com/davidsneighbour/hugo-modules/commit/2d430295b8907375b8ebed7e04fe6fdc09951273))
+* **deps:** update dependencies ([43de26b](https://github.com/davidsneighbour/hugo-modules/commit/43de26b8962ec99b551da5f1fb630fc0260696ce))
+* **deps:** update dependencies ([32580c1](https://github.com/davidsneighbour/hugo-modules/commit/32580c1ba544d33faa74ed00a85270cad1097e3e))
+* **deps:** update dependencies ([b6bc20b](https://github.com/davidsneighbour/hugo-modules/commit/b6bc20b8e83a7a06e8122b42e1b7474d1290dbae))
+* **deps:** update dependencies ([2912f44](https://github.com/davidsneighbour/hugo-modules/commit/2912f44909590c4260a241c98e9ecbf3aa03c958))
+* **deps:** update dependencies ([f755c91](https://github.com/davidsneighbour/hugo-modules/commit/f755c91c9b02bc904511ed9613314ff5ac7a447e))
+* **deps:** update dependencies ([c6d7f61](https://github.com/davidsneighbour/hugo-modules/commit/c6d7f61ec84d8c3601b6e90e9879883b2659565d))
+* **deps:** update dependencies ([a0c7b4d](https://github.com/davidsneighbour/hugo-modules/commit/a0c7b4dac9131571105678b7c8b61e06e3adf799))
+* **deps:** update dependencies ([75aa99a](https://github.com/davidsneighbour/hugo-modules/commit/75aa99ac8e15f5cfca5be089c4b9c3e3a8ccb423))
+* **deps:** update dependencies ([b8eba90](https://github.com/davidsneighbour/hugo-modules/commit/b8eba902e24bb7f575f8bb5a77cc42e5883b205e))
+* **deps:** update dependencies ([cfe85ae](https://github.com/davidsneighbour/hugo-modules/commit/cfe85ae3c0c16c66f9245a1c3f3a3975457b8e77))
+* **deps:** update dependencies ([db7daba](https://github.com/davidsneighbour/hugo-modules/commit/db7daba4e2b27a5667ad6bf576779134647cde0a))
+* **deps:** update dependency @tabler/icons to v3.4.0 ([#794](https://github.com/davidsneighbour/hugo-modules/issues/794)) ([c8a43d1](https://github.com/davidsneighbour/hugo-modules/commit/c8a43d10228956a6cfca20578c90e0ec62ceecb2))
+* **deps:** update dependency @tabler/icons to v3.5.0 ([#808](https://github.com/davidsneighbour/hugo-modules/issues/808)) ([7f50181](https://github.com/davidsneighbour/hugo-modules/commit/7f501816a8fb02b2be535a3f970a429f26cd84a3))
+* **deps:** update dependency @types/node to v20.12.10 ([#788](https://github.com/davidsneighbour/hugo-modules/issues/788)) ([fa2fb0e](https://github.com/davidsneighbour/hugo-modules/commit/fa2fb0eb82a719d0660452e2da6f19c82b2e81a1))
+* **deps:** update dependency @types/node to v20.12.11 ([#790](https://github.com/davidsneighbour/hugo-modules/issues/790)) ([a5ea195](https://github.com/davidsneighbour/hugo-modules/commit/a5ea19512dfb63b6fa30acfc0e5d19a22e9a67a9))
+* **deps:** update dependency @types/node to v20.12.12 ([#793](https://github.com/davidsneighbour/hugo-modules/issues/793)) ([7c07fd7](https://github.com/davidsneighbour/hugo-modules/commit/7c07fd75737cca5baf3a9191a652c54ca3ac8a82))
+* **deps:** update dependency go to v1.22.3 ([#789](https://github.com/davidsneighbour/hugo-modules/issues/789)) ([54bab28](https://github.com/davidsneighbour/hugo-modules/commit/54bab28c2121a2c5bfdd7cf2377811a62c9db060))
+* **fix:** configure release config ([845c8cd](https://github.com/davidsneighbour/hugo-modules/commit/845c8cd68ff169a67f4b972e02582fa1409d3ba8))
+* **fix:** proper repository tag in package.json ([984d21c](https://github.com/davidsneighbour/hugo-modules/commit/984d21c8a90c9f843f9c8d1f32ac95fa75d8323e))
+* **fix:** release configuration ([1589e95](https://github.com/davidsneighbour/hugo-modules/commit/1589e95d471d92812b0b26cbac10a2c8c068bcda))
+* **git:** add release fragments to gitignore ([cb3c057](https://github.com/davidsneighbour/hugo-modules/commit/cb3c057a50c430125876f1dadebc9d4e7232d550))
+* **git:** update structure layout and remove unused files ([afe356e](https://github.com/davidsneighbour/hugo-modules/commit/afe356e7f56affbc154c04c5e07cb7f9d0b141fc))
+* **release:** modules/aesop/v1.2024.1 ([2404008](https://github.com/davidsneighbour/hugo-modules/commit/24040081c8a9abd9199b6b73115e9d174b06c13d))
+* **release:** modules/auditor/v1.2024.10 ([1ba80fd](https://github.com/davidsneighbour/hugo-modules/commit/1ba80fd36efae65f86f654057cf9b6fda5b7d549))
+* **release:** modules/auditor/v1.2024.7 ([e2fae00](https://github.com/davidsneighbour/hugo-modules/commit/e2fae00c4378b19efb655de4f0870d9fe58b961d))
+* **release:** modules/auditor/v1.2024.8 ([884a0b7](https://github.com/davidsneighbour/hugo-modules/commit/884a0b7fc77032df5619e103681d8f334e9f6b06))
+* **release:** modules/auditor/v1.2024.9 ([d40f6c5](https://github.com/davidsneighbour/hugo-modules/commit/d40f6c526cd551a49bd3f36ab10a709fab659b83))
+* **release:** modules/debug/v1.2024.22 ([35e1dc6](https://github.com/davidsneighbour/hugo-modules/commit/35e1dc6d5a03303d1c2a9045cbb66792e753b1d7))
+* **release:** modules/devtools/v1.2024.1 ([9f72bc2](https://github.com/davidsneighbour/hugo-modules/commit/9f72bc242305fcd7d6d9a976fba65e4c0c65b566))
+* **release:** modules/errors/v1.2024.2 ([120f7b4](https://github.com/davidsneighbour/hugo-modules/commit/120f7b4c38353cc20dee3336a99f2574eeca11d5))
+* **release:** modules/feeds/v1.2024.8 ([c58ab9b](https://github.com/davidsneighbour/hugo-modules/commit/c58ab9bba22967bcbf444bcb48ebe1bef9e36557))
+* **release:** modules/functions/v1.2024.13 ([e1c81ab](https://github.com/davidsneighbour/hugo-modules/commit/e1c81ab919a7b72ebcfad6f499859c81152c1349))
+* **release:** modules/functions/v1.2024.14 ([5deb708](https://github.com/davidsneighbour/hugo-modules/commit/5deb7088e6e8ab4d60de92c6660497a20fb2c43e))
+* **release:** modules/functions/v1.2024.15 ([f3f5382](https://github.com/davidsneighbour/hugo-modules/commit/f3f5382f3fb23cc8abe71c8825a80ff3be702818))
+* **release:** modules/functions/v1.2024.16 ([fc0c590](https://github.com/davidsneighbour/hugo-modules/commit/fc0c590c991f8c414eb06ecb7e10236008cdffab))
+* **release:** modules/hooks/v1.2024.10 ([10047a9](https://github.com/davidsneighbour/hugo-modules/commit/10047a9facf298b29aff1fff423a543a6931445e))
+* **release:** modules/icons/v1.2024.8 ([f85bcc2](https://github.com/davidsneighbour/hugo-modules/commit/f85bcc241e89bae4758f51e1e6e3bf3d8fd3afe8))
+* **release:** modules/modder/v1.2024.0 ([416290d](https://github.com/davidsneighbour/hugo-modules/commit/416290d27e9932fe8c4bcbfb08641a6094889de3))
+* **release:** modules/renderhooks/v1.2024.9 ([06f7a4f](https://github.com/davidsneighbour/hugo-modules/commit/06f7a4f76a0d3ebc509f070847b9268e376cf53a))
+* **release:** modules/youtube/v1.2024.2 ([123f216](https://github.com/davidsneighbour/hugo-modules/commit/123f2169eb248bbc51f5f08f527cfcd0e41f32c7))
+* **release:** modules/youtube/v1.2024.3 ([ef51ad5](https://github.com/davidsneighbour/hugo-modules/commit/ef51ad538623a13547d76f69d88156e1a8764b2a))
+* **release:** update repo data files ([2376084](https://github.com/davidsneighbour/hugo-modules/commit/2376084e7e2d18d3cb8a59071a9786508fe0066d))
+* **release:** update repo data files ([a975149](https://github.com/davidsneighbour/hugo-modules/commit/a975149ae643dccf7589dfa221707180828b9442))
+* **release:** update repo data files ([3e9a61a](https://github.com/davidsneighbour/hugo-modules/commit/3e9a61ac994fda353771ee6891c42a206fc64602))
+* **release:** update repo data files ([1b75cc4](https://github.com/davidsneighbour/hugo-modules/commit/1b75cc4f77fbac1e74a312e8d6336332e364bb8b))
+* **release:** update repo data files ([34d4791](https://github.com/davidsneighbour/hugo-modules/commit/34d4791cef01d9a83cacb303935ebcf4dc70d4ff))
+* **release:** update repo data files ([d6d6d5d](https://github.com/davidsneighbour/hugo-modules/commit/d6d6d5d5a61f46fdb9f567a63fd017371fd255e8))
+* **release:** update repo data files ([382655e](https://github.com/davidsneighbour/hugo-modules/commit/382655eb8f2dd51c77bd9e8c1912455f5bc442c6))
+* **release:** update repo data files ([abf6f53](https://github.com/davidsneighbour/hugo-modules/commit/abf6f53aad039d430a2181924a38017d826c7e83))
+* **release:** update repo data files ([2cbbd98](https://github.com/davidsneighbour/hugo-modules/commit/2cbbd984d6674988708630944f6c16474c2a6b44))
+* **release:** update repo data files ([e2f905d](https://github.com/davidsneighbour/hugo-modules/commit/e2f905d71b39b4d87dfa2827355818b6bc0ab760))
+* **release:** update repo data files ([88f57bd](https://github.com/davidsneighbour/hugo-modules/commit/88f57bd6bf67ec8a7a105773ee47cf80433fe0b2))
+* **release:** update repo data files ([690e820](https://github.com/davidsneighbour/hugo-modules/commit/690e820f1cd72ed97b9ed58b98986bc70f8c717a))
+* **release:** update repo data files ([d63e0f8](https://github.com/davidsneighbour/hugo-modules/commit/d63e0f8f520373894f676536c718c6642fc72634))
+* **release:** update repo data files ([74c11fd](https://github.com/davidsneighbour/hugo-modules/commit/74c11fd278c9f9c6a24e66a0fdf9d11be3f83c50))
+* **release:** update repo data files ([c6760f7](https://github.com/davidsneighbour/hugo-modules/commit/c6760f743629954ec26eebcbcaec0a7af254343e))
+* **release:** update repo data files ([a9fce67](https://github.com/davidsneighbour/hugo-modules/commit/a9fce6755beecb0ea074c182f46612cb0b106a5f))
+* **release:** update repo data files ([d25a2c7](https://github.com/davidsneighbour/hugo-modules/commit/d25a2c7203a868789f844b761a0de304ab03b833))
+* **release:** v0.0.5 ([a10c04f](https://github.com/davidsneighbour/hugo-modules/commit/a10c04f2ed06903ab3fa996cbc751d8d619add0b))
+* **release:** v1.2024.1 ([72cbee5](https://github.com/davidsneighbour/hugo-modules/commit/72cbee5936a4ed35e0ac33b58af4419e1e66c3b4))
+* update readme image (add background) ([ba49aef](https://github.com/davidsneighbour/hugo-modules/commit/ba49aef360908f32067cae5923532dc4c8ea1621))
+* update version numbers ([f210f0d](https://github.com/davidsneighbour/hugo-modules/commit/f210f0dcad21d9317a7ab6b006e9c40ffc83b0c2))
+* **vscode:** update workspace configuration ([0b28432](https://github.com/davidsneighbour/hugo-modules/commit/0b284328ab4f1e995221fd40138a16854aad2def))
+
+
+### Configuration
+
+* proper module name in env template ([011a625](https://github.com/davidsneighbour/hugo-modules/commit/011a625400793140eadd573691f643fb37000348))
+
+
+### Build System
+
+* **fix:** add build action ([d85d3a4](https://github.com/davidsneighbour/hugo-modules/commit/d85d3a4b2e91ca2c190b6a0d5d4ad82d4461e077))
+* **fix:** comment optional env variables out ([82a4e2e](https://github.com/davidsneighbour/hugo-modules/commit/82a4e2e5b77ed206eec65321c04d916a7f7ea9a2))
+* **fix:** remove pre-commit configuration ([c2d3432](https://github.com/davidsneighbour/hugo-modules/commit/c2d3432150f2a4a06a4c26785bbaf8b298f2d92b))
+* **fix:** remove unused release hooks ([b763bae](https://github.com/davidsneighbour/hugo-modules/commit/b763bae321b84beec63491b9c0228de1e23575bf))
+* **fix:** update build scripts ([9c986a8](https://github.com/davidsneighbour/hugo-modules/commit/9c986a876916e6ebbac770a7fed59f97fe211fa8))
+* update release hooks ([fb1c465](https://github.com/davidsneighbour/hugo-modules/commit/fb1c4655694f7b0547021cb9910808d19900d235))
+
 ## [1.2024.5](https://github.com/davidsneighbour/hugo-modules/compare/modules/head/v1.2024.4...modules/head/v1.2024.5) (2024-05-05)
 
 
