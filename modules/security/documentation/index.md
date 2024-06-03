@@ -16,7 +16,7 @@ tags:
 config:
   band: gohugo
 aliases:
-- /components/hugo-security/
+- /components/hugo-security
 ---
 
 This module adds a security.txt file to your Hugo website with information about your preferred procedures to notify the developer team of your website about security issues on your website. Read more about [security.txt](https://securitytxt.org/), a proposed standard which allows websites to define security policies.

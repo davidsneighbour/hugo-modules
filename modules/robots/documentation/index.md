@@ -16,7 +16,7 @@ tags:
 config:
   band: gohugo
 aliases:
-- /components/hugo-robots/
+- /components/hugo-robots
 ---
 
 This component for [GoHugo](https://gohugo.io/) adds a customizable robots.txt to your website. This module overrides the internal robots.txt generation of Hugo and lets you configure what robots.txt in your public folder will contain. It also offers a meta-robots tag for your head section.

@@ -29,7 +29,7 @@ keywords:
 config:
   band: gohugo
 aliases:
-- /components/hugo-sitemap/
+- /components/hugo-sitemap
 ---
 
 This is a Hugo theme component with layouts to add a configurable sitemap to your website. Hugo itself has internal templates that add sitemaps, but this component extends this by providing setup options per page and keeping up-to-date with current SEO practices.

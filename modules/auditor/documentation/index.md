@@ -16,7 +16,7 @@ tags:
 config:
   band: gohugo
 aliases:
-- /components/hugo-auditor/
+- /components/hugo-auditor
 ---
 
 This component is a module for the static site generator [GoHugo](https://gohugo.io) and adds auditing tools to your website in development. It's not for use in a live deployment and work in progress.

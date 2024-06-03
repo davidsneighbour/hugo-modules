@@ -16,7 +16,7 @@ tags:
 config:
   band: gohugo
 aliases:
-- /components/hugo-netlification/
+- /components/hugo-netlification
 ---
 
 This is a Hugo theme component with helpers to host your [GoHugo](https://gohugo.io/) generated static website on [Netlify](https://www.netlify.com/). If you don't use Netlify, you DO NOT need this module.

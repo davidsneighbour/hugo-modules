@@ -16,7 +16,7 @@ tags:
 config:
   band: gohugo
 aliases:
-- /components/hugo-pwa/
+- /components/hugo-pwa
 ---
 
 This is a Hugo theme component with helpers to convert your static [GoHugo](https://gohugo.io/) website into a [PWA](https://web.dev/progressive-web-apps/).
