@@ -80,6 +80,7 @@
     {{ end }}
 
     {{- range $pages }}
+      {{/* @TODO site.Author is deprecated */}}
       <item>
         <title>{{- .Title -}}</title>
         <link>{{- .Permalink -}}</link>

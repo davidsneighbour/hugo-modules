@@ -75,6 +75,7 @@
         </author>
       {{- else -}}
         <author>
+          {{/* @TODO site.Author is deprecated */}}
           <name>
             {{- with site.Author.name -}}
               {{- . -}}
