@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-security",
   "description": "Security related features for Hugo.",
-  "version": "1.2023.3",
+  "version": "1.2024.0",
   "license": "MIT",
   "private": true,
   "repository": "https://github.com/davidsneighbour/hugo-modules",
