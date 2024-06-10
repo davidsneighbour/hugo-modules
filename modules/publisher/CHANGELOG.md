@@ -1,4 +1,11 @@
 Changelog
+## [1.2024.0](https://github.com/davidsneighbour/hugo-modules/compare/modules/publisher/v0.2024.0...modules/publisher/v1.2024.0) (2024-06-10)
+
+
+### Chore
+
+* **release:** update repo data files ([c19828f](https://github.com/davidsneighbour/hugo-modules/commit/c19828f6957414bf058b9187398dcaffe699b2fc))
+
 ## [0.2024.0](https://github.com/davidsneighbour/hugo-modules/compare/modules/publisher/v0.0.4...modules/publisher/v0.2024.0) (2024-06-10)
 
 
