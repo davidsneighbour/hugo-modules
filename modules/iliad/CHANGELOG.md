@@ -1,4 +1,16 @@
 Changelog
+## [1.2024.4](https://github.com/davidsneighbour/hugo-modules/compare/modules/iliad/v1.2024.3...modules/iliad/v1.2024.4) (2024-06-10)
+
+
+### Bug Fixes
+
+* proper tagslug name ([9056a08](https://github.com/davidsneighbour/hugo-modules/commit/9056a0841438a8fa4d989e87b470696f1e2b5a14))
+
+
+### Chore
+
+* **release:** update repo data files ([a663820](https://github.com/davidsneighbour/hugo-modules/commit/a663820e06712659399b9ee718bf780c01e03978))
+
 ## [1.2024.3](https://github.com/davidsneighbour/hugo-modules/compare/modules/iliad/v1.2024.2...modules/iliad/v1.2024.3) (2024-06-10)
 
 
