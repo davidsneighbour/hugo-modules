@@ -1,4 +1,11 @@
 Changelog
+## [1.2024.0](https://github.com/davidsneighbour/hugo-modules/compare/modules/schema/v1.2023.8...modules/schema/v1.2024.0) (2024-06-10)
+
+
+### Chore
+
+* **release:** update repo data files ([b4eb8a2](https://github.com/davidsneighbour/hugo-modules/commit/b4eb8a26c2e8ac09dcac4ff6566ad68c2c4a5959))
+
 ## [1.2023.8](https://github.com/davidsneighbour/hugo-modules/compare/modules/schema/v0.0.7...modules/schema/v1.2023.8) (2024-06-10)
 
 
