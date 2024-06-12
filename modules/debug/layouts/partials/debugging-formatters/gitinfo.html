@@ -1,5 +1,7 @@
-{{ $gitInfoVarNames   := (slice "Hash" "AbbreviatedHash" "Subject" "AuthorName" "AuthorEmail" "AuthorDate") }}
-{{ $gitInfoVarSymbols := (slice .value.Hash  .value.AbbreviatedHash  .value.Subject  .value.AuthorName  .value.AuthorEmail  .value.AuthorDate ) }}
+{{ $gitInfoVarNames   := (slice "Hash" "AbbreviatedHash" "Subject" "AuthorName"
+                                "AuthorEmail" "AuthorDate") }}
+{{ $gitInfoVarSymbols := (slice .value.Hash .value.AbbreviatedHash .value.Subject .value.AuthorName
+                                .value.AuthorEmail .value.AuthorDate ) }}
       <div class="table-responsive">
 <table class="debugprint">
   <tr>
