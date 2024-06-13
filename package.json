@@ -11,7 +11,7 @@
   "dependencies": {
     "@davidsneighbour/markdownlint-config": "^2024.3.22",
     "@davidsneighbour/prettier-config": "^2024.3.22",
-    "@davidsneighbour/remark-config": "^2024.3.22",
+    "@davidsneighbour/remark-config": "^2024.3.23",
     "@davidsneighbour/tools": "^2024.3.22"
   },
   "scripts": {
