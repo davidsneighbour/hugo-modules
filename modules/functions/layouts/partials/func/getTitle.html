@@ -8,10 +8,10 @@
 {{- end -}}
 
 {{- if .IsHome -}}
-  {{- $title = $config.hometitle | compare.Default (i18n "dnb.head.hometitle") -}}
+  {{- $title = $config.hometitle | compare.Default (lang.Translate "dnb.head.hometitle") -}}
 {{- else -}}
-  {{- if eq "" .Title -}}
-    {{- $title = printf "%s" .Section | strings.Title -}}
+  {{- if compare.Eq "" .Title -}}
+    {{- $title = fmt.Printf "%s" .Section | strings.Title -}}
   {{- else -}}
     {{- $title = .Title -}}
   {{- end -}}

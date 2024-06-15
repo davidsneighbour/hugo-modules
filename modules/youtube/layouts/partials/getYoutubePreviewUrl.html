@@ -1,7 +1,7 @@
 {{- $config := site.Params.dnb.youtube -}}
 {{- $url := "" -}}
 
-{{- if eq (index $config "thumbnail_source" | default 1) 1 -}}
+{{- if compare.Eq (collections.Index $config "thumbnail_source" | compare.Default 1) 1 -}}
   {{- $url = "https://ytimg.googleusercontent.com/vi/%s/maxresdefault.jpg" -}}
 {{- else -}}
   {{- $url = "https://i.ytimg.com/vi/%s/maxresdefault.jpg" -}}

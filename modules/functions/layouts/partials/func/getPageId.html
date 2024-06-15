@@ -1,6 +1,6 @@
 {{- /*
-  call {{- $uid := partial "getPageId.html" page page -}}
+  call {{- $uid := partials.Include "getPageId.html" page page -}}
   see https://discourse.gohugo.io/t/how-to-create-a-unique-id-for-non-file-based-pages/50081/2
 */ -}}
-{{- $uid := printf "p%s/%s" page.Language.Lang page.Path | crypto.FNV32a -}}
+{{- $uid := fmt.Printf "p%s/%s" page.Language.Lang page.Path | crypto.FNV32a -}}
 {{- return $uid -}}

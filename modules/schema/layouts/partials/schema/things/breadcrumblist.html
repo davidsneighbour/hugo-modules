@@ -6,10 +6,10 @@
   "itemListElement": [
   {{- $counter := 1 }}
   {{- range .Ancestors.Reverse }}
-    {{- partial "schema/things/listItem.html" . -}}
-    {{- $counter = add $counter 1 -}}
+    {{- partials.Include "schema/things/listItem.html" . -}}
+    {{- $counter = math.Add $counter 1 -}}
   {{ end }}
-    {{- partial "schema/things/listItem.html" . -}}
+    {{- partials.Include "schema/things/listItem.html" . -}}
   ]
 }
 </script>

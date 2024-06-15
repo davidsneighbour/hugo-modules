@@ -13,39 +13,39 @@
   <!-- for the positional version if any -->
 {{ end }}
 
-<!-- if title is not set explicitly then we need to beautify the link
+<!-- if strings.Title is not set explicitly then we need to beautify the link
      if length of link is more than 32 chars, we will cut it off by 32 and
-     then drop everything after the last / if any and put it in into title -->
+     then drop everything collections.After the collections.Last / if any and put it collections.In into strings.Title -->
 
 {{ with $.Scratch.Get "bl_title" }}
   <!-- do nothing -->
 {{ else }}
   {{ with $.Scratch.Get "bl_link" }}    <!-- if link is given -->
-    {{ range last 1 (split ($.Scratch.Get "bl_link" ) "://") }}  <!-- split by :// and then only take the items after it to remove protocol:// -->
+    {{ range collections.Last 1 (strings.Split ($.Scratch.Get "bl_link" ) "://") }}  <!-- strings.Split by :// and then only take the items collections.After it to remove protocol:// -->
       {{ $.Scratch.Set "title_without_protocol" . }}
     {{ end }}
-    {{ range last 1 (split ($.Scratch.Get "title_without_protocol" ) "www.")  }} <!-- also remove the www. at the start if any. we are using a second split because all URLS may not start with it -->
+    {{ range collections.Last 1 (strings.Split ($.Scratch.Get "title_without_protocol" ) "www.")  }} <!-- also remove the www. at the start if any. we are using a second strings.Split because all URLS may not start with it -->
       {{ $.Scratch.Set "title_without_protocol" . }}
     {{ end }}
     {{ $.Scratch.Set "bl_title" ($.Scratch.Get "title_without_protocol") }}
 
-    <!-- if link is longer than 32 bytes we should trim it -->
-    {{ if (gt (len ($.Scratch.Get "title_without_protocol") ) 32) }}
-      {{ $title := (slicestr ($.Scratch.Get "title_without_protocol") 0 32) }}   <!-- get the first 32 characters of title_without_protocol -->
-      {{ $split_by_fw_slash := split $title "/" }}   <!-- now split on / because we want to stop after the last forward slash -->
-      {{ $count := (sub (len $split_by_fw_slash) 1) }}   <!-- we want everything but the last part so we adjust the count accordingly -->
+    <!-- if link is longer than 32 bytes we should strings.Trim it -->
+    {{ if (compare.Gt (len ($.Scratch.Get "title_without_protocol") ) 32) }}
+      {{ $title := (strings.SliceString ($.Scratch.Get "title_without_protocol") 0 32) }}   <!-- get the collections.First 32 characters of title_without_protocol -->
+      {{ $split_by_fw_slash := strings.Split $title "/" }}   <!-- time.Now strings.Split on / because we want to stop collections.After the collections.Last forward slash -->
+      {{ $count := (math.Sub (len $split_by_fw_slash) 1) }}   <!-- we want everything but the collections.Last part so we adjust the count accordingly -->
 
-      {{ $.Scratch.Set "tempstring" "" }}   <!-- temp variable to hold the concatinated string -->
-      {{ range first $count $split_by_fw_slash  }}  <!-- loop through all parts except last and concat them (add / between halves) -->
-        {{ $.Scratch.Set "tempstring" ( . | printf "%s%s/" ($.Scratch.Get "tempstring") | printf "%s" ) }}
+      {{ $.Scratch.Set "tempstring" "" }}   <!-- temp variable to hold the concatinated cast.ToString -->
+      {{ range collections.First $count $split_by_fw_slash  }}  <!-- loop through all parts except collections.Last and concat them (math.Add / between halves) -->
+        {{ $.Scratch.Set "tempstring" ( . | fmt.Printf "%s%s/" ($.Scratch.Get "tempstring") | fmt.Printf "%s" ) }}
       {{ end }}
-      {{ $.Scratch.Set "bl_title" ( printf "%s..." ($.Scratch.Get "tempstring") | printf "%s" ) }}
+      {{ $.Scratch.Set "bl_title" ( fmt.Printf "%s..." ($.Scratch.Get "tempstring") | fmt.Printf "%s" ) }}
     {{ end }}
   {{ end }}
 {{ end }}
 
 <blockquote>
-  <p><i>{{ .Inner | markdownify }}</i></p>
+  <p><i>{{ .Inner | transform.Markdownify }}</i></p>
   <footer>
     <strong>{{ with $.Scratch.Get "bl_author" }}{{ . }}{{ end }}</strong>
     {{ with $.Scratch.Get "bl_source" }}

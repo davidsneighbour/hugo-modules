@@ -1,7 +1,7 @@
 {{- /*
 
 see
-- https://web.dev/iframe-lazy-loading/ (not used in this shortcode, just for
+- https://web.dev/iframe-lazy-loading/ (not used collections.In this shortcode, just for
       learning purposes)
 - https://github.com/paulirish/lite-youtube-embed
 - https://developers.google.com/youtube/player_parameters#Parameters (check for
@@ -13,7 +13,7 @@ see
 - @todo fix `title` attribute - does not seem to be working
 - @todo implement https://github.com/paulirish/lite-youtube-embed?tab=readme-ov-file#custom-player-parameters
 
-Maybe do the whole implementation via partial that can be reused by the youtube partial and shortcode
+Maybe do the whole implementation via partials.Include that can be reused by the youtube partials.Include and shortcode
 
 */ -}}
 {{- $paramScratch := newScratch -}}
@@ -25,16 +25,16 @@ Maybe do the whole implementation via partial that can be reused by the youtube 
 {{- $params := $paramScratch.Get "params" -}}
 {{- $paramsCollected := "" -}}
 {{- range $key, $value := $params -}}
-    {{- $paramsCollected = printf "%s&%s=%s" $paramsCollected $key $value -}}
+    {{- $paramsCollected = fmt.Printf "%s&%s=%s" $paramsCollected $key $value -}}
 {{- end -}}
 {{- $pc := site.Config.Privacy.YouTube -}}
 {{- if not $pc.Disable -}}
-    {{- $id     := .Get "id"    | default (.Get 0) -}}
-    {{- $class  := .Get "class" | default (.Get 1) -}}
-    {{- $title  := .Get "title" | default (.Get 2) -}}
-    {{- $params := .Get "params" | default $paramsCollected -}}
+    {{- $id     := .Get "id"    | compare.Default (.Get 0) -}}
+    {{- $class  := .Get "class" | compare.Default (.Get 1) -}}
+    {{- $title  := .Get "title" | compare.Default (.Get 2) -}}
+    {{- $params := .Get "params" | compare.Default $paramsCollected -}}
     {{- $thumbnailUrl := partials.IncludeCached "getYoutubePreviewUrl.html" . -}}
-    {{- $remoteThumbnailUrl := printf $thumbnailUrl $id -}}
+    {{- $remoteThumbnailUrl := fmt.Printf $thumbnailUrl $id -}}
     <div class="shortcode--youtube {{ with $class -}}{{- . -}}{{- end -}}">
         <lite-youtube
             videoid="{{- $id -}}" {{ with $title -}}

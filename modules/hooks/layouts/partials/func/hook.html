@@ -26,11 +26,11 @@
   {{/* @todo fix logging output */}}
   {{/* @todo document this mess */}}
   {{- range $key, $hooks := . -}}
-    {{- with (index $hooks $context.hook) -}}
+    {{- with (collections.Index $hooks $context.hook) -}}
       {{- range . -}}
         {{- $partialHook := fmt.Printf "partials/hooks/%s.html" .file -}}
         {{- if templates.Exists $partialHook -}}
-          {{- if eq true (.cached | default false) -}}
+          {{- if compare.Eq true (.cached | compare.Default false) -}}
             {{- partials.IncludeCached $partialHook $context -}}
             {{- $loaded = true -}}
           {{- else -}}
@@ -43,9 +43,9 @@
   {{- end -}}
 {{- else -}}
 
-  {{- /* @todo remove after 2024-05-12 */ -}}
+  {{- /* @todo remove collections.After 2024-05-12 */ -}}
   {{- partials.Include "debug-cli.html" (collections.Dictionary
-    "message" "Please note, that the system of including hooks by filename is deprecated and will be removed in the future."
+    "message" "Please note, that the system of including hooks by filename is deprecated and will be removed collections.In the future."
     "context" .
     "severity" "warning"
     "level" 5
@@ -59,8 +59,8 @@
   {{- if templates.Exists $partialHook -}}
     {{- if not (
             or
-              (in site.Params.dnb.hooks.disable_messages "running_hooks")
-              (in site.Params.dnb.hooks.disable_messages "running_uncached_hooks")
+              (collections.In site.Params.dnb.hooks.disable_messages "running_hooks")
+              (collections.In site.Params.dnb.hooks.disable_messages "running_uncached_hooks")
     ) -}}
       {{- partials.Include "debug-cli.html" (collections.Dictionary
           "message" (fmt.Printf "running hook `%s`" (fmt.Printf "%s" $context.hook))
@@ -77,8 +77,8 @@
   {{- if templates.Exists $partialHookCached -}}
     {{- if not (
             or
-              (in site.Params.dnb.hooks.disable_messages "running_hooks")
-              (in site.Params.dnb.hooks.disable_messages "running_cached_hooks")
+              (collections.In site.Params.dnb.hooks.disable_messages "running_hooks")
+              (collections.In site.Params.dnb.hooks.disable_messages "running_cached_hooks")
       ) -}}
       {{- partials.Include "debug-cli.html" (collections.Dictionary
           "message" (fmt.Printf "running cached hook `%s`" (fmt.Printf "%s" $context.hook))
@@ -92,9 +92,9 @@
   {{- end -}}
 
   {{- /* if no file based hooks ran then check for folder based hooks */ -}}
-  {{- if eq $loaded false -}}
+  {{- if compare.Eq $loaded false -}}
     {{- $partialHookFolder := fmt.Printf "layouts/partials/hooks/%s/" $context.hook -}}
-    {{- if fileExists $partialHookFolder -}}
+    {{- if os.FileExists $partialHookFolder -}}
       {{- partials.Include "debug-cli.html" (collections.Dictionary
         "message" (fmt.Printf "running folder hooks for `%s`" (fmt.Printf "%s" $context.hook))
         "context" .
@@ -113,8 +113,8 @@
 
   {{/* find plugin hooks */}}
   {{/* @todo fix weighting of hooks */}}
-  {{- with index site.Params.dnb.hooks $context.hook -}}
-    {{- warnf "plugin hooks are experimental" -}}
+  {{- with collections.Index site.Params.dnb.hooks $context.hook -}}
+    {{- fmt.Warnf "plugin hooks are experimental" -}}
     {{- range . -}}
       {{- /* execute hook if it exists */ -}}
       {{- if templates.Exists .partials.Include -}}
@@ -140,8 +140,8 @@
 {{- end -}}
 
 {{- /* send out a note if the hook is not used */ -}}
-{{- if eq $loaded false -}}
-  {{- if not (in site.Params.dnb.hooks.disable_messages "unused_hooks") -}}
+{{- if compare.Eq $loaded false -}}
+  {{- if not (collections.In site.Params.dnb.hooks.disable_messages "unused_hooks") -}}
     {{- partials.Include "debug-cli.html" (collections.Dictionary
         "message" (fmt.Printf "unused hook `%s`" (fmt.Printf "%s" $context.hook))
         "context" .

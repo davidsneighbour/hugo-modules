@@ -1,6 +1,6 @@
 {{ $width := .Attributes.width }}
 {{ $height := .Attributes.height }}
-{{ $class := .Attributes.class | default "" }}
+{{ $class := .Attributes.class | compare.Default "" }}
 <div class="goat svg-container {{ $class }}">
   {{ with diagrams.Goat .Inner }}
     <svg

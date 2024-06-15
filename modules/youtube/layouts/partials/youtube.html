@@ -1,7 +1,7 @@
 {{- /*
 
   see
-  - https://web.dev/iframe-lazy-loading/ (not used in this shortcode, just for
+  - https://web.dev/iframe-lazy-loading/ (not used collections.In this shortcode, just for
   learning purposes)
   - https://github.com/paulirish/lite-youtube-embed
   - https://developers.google.com/youtube/player_parameters#Parameters (check for
@@ -24,23 +24,23 @@
 -}}
 {{- $paramsCollected := "" -}}
 {{- range $key, $value := $params -}}
-  {{- $paramsCollected = printf "%s&%s=%s" $paramsCollected $key $value -}}
+  {{- $paramsCollected = fmt.Printf "%s&%s=%s" $paramsCollected $key $value -}}
 {{- end -}}
 {{- $pc := site.Config.Privacy.YouTube -}}
 {{- if not $pc.Disable -}}
   {{- $id     := .id -}}
-  {{- $class  := .class | default "" -}}
-  {{- $title  := .title | default "" -}}
-  {{- $params := .params | default $paramsCollected -}}
+  {{- $class  := .class | compare.Default "" -}}
+  {{- $title  := .title | compare.Default "" -}}
+  {{- $params := .params | compare.Default $paramsCollected -}}
   {{- $config := site.Params.dnb.youtube -}}
   {{- $thumbnailUrl := "https://i.ytimg.com/vi/%s/maxresdefault.jpg" -}}
-  {{- if eq (index $config "thumbnail_source" | default 1) 2 -}}
+  {{- if compare.Eq (collections.Index $config "thumbnail_source" | compare.Default 1) 2 -}}
     {{- $thumbnailUrl = "https://ytimg.googleusercontent.com/vi/%s/maxresdefault.jpg" -}}
   {{- end -}}
-  {{- $remoteThumbnailUrl := printf $thumbnailUrl $id -}}
+  {{- $remoteThumbnailUrl := fmt.Printf $thumbnailUrl $id -}}
   {{- $remoteThumb := resources.GetRemote $remoteThumbnailUrl -}}
   {{- $remoteThumbnail := $remoteThumb -}}
-  {{- with resources.Copy (printf "assets/img/%s.jpg" $id) $remoteThumb -}}
+  {{- with resources.Copy (fmt.Printf "assets/img/%s.jpg" $id) $remoteThumb -}}
     {{- $remoteThumbnail = . -}}
   {{ end -}}
   <div class="shortcode--youtube {{ with $class -}}{{- . -}}{{- end -}}">

@@ -1,5 +1,5 @@
-{{ $OrderedTaxonomyEntryVarNames   := (slice "Name" "Count" "Term" "WeightedPages") }}
-{{ $OrderedTaxonomyEntryVarSymbols := (slice .value.Name  .value.Count  .value.Term  .value.WeightedPages ) }}
+{{ $OrderedTaxonomyEntryVarNames   := (collections.Slice "Name" "Count" "Term" "WeightedPages") }}
+{{ $OrderedTaxonomyEntryVarSymbols := (collections.Slice .value.Name  .value.Count  .value.Term  .value.WeightedPages ) }}
 
       <div class="table-responsive">
       <table class="debugprint">
@@ -8,9 +8,9 @@
       <th scope="col" class="align-top value">Value</th>
   </tr>
   {{ range $idx, $elem := $OrderedTaxonomyEntryVarNames }}
-    {{ printf `<tr> <td class="align-top key">%s</td> <td class="align-top value">` $elem | safeHTML }}
-    {{ partials.Include "debug-print.html" (index $OrderedTaxonomyEntryVarSymbols $idx) }}
-    {{ printf "</td></tr>" | safeHTML }}
+    {{ fmt.Printf `<tr> <td class="align-top key">%s</td> <td class="align-top value">` $elem | safe.HTML }}
+    {{ partials.Include "debug-print.html" (collections.Index $OrderedTaxonomyEntryVarSymbols $idx) }}
+    {{ fmt.Printf "</td></tr>" | safe.HTML }}
   {{ end }}
 </table>
 </div>

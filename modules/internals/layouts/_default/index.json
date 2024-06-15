@@ -1,28 +1,28 @@
-{{- $index := slice -}}
-{{- $pages := where site.RegularPages "Draft" "==" false -}}
-{{- $pages = where $pages "Type" "in" site.Params.mainSections -}}
+{{- $index := collections.Slice -}}
+{{- $pages := collections.Where site.RegularPages "Draft" "==" false -}}
+{{- $pages = collections.Where $pages "Type" "in" site.Params.mainSections -}}
 {{- range $pages -}}
   {{- $imagePath := "" -}}
   {{- $articleimages := .Resources.ByType "image" -}}
   {{- with $articleimages -}}
-    {{- range first 1 $articleimages -}}
+    {{- range collections.First 1 $articleimages -}}
       {{- $imageSM:= .Fill "460x250" -}}
       {{- $imagePath = $imageSM.Permalink -}}
     {{- end -}}
   {{- else -}}
     {{- with .Params.images -}}
-      {{- range first 1 . -}}
-        {{- if (fileExists (add `assets/` .)) -}}
+      {{- range collections.First 1 . -}}
+        {{- if (os.FileExists (math.Add `assets/` .)) -}}
           {{- $image = resources.Get . -}}
           {{- $imageSM:= $image.Fill "460x250" -}}
           {{- $imagePath = $imageSM.Permalink -}}
         {{- else -}}
-          {{- $imagePath = (. | absURL) -}}
+          {{- $imagePath = (. | urls.AbsURL) -}}
         {{- end -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
-  {{- $index = $index | append (dict
+  {{- $index = $index | collections.Append (dict
         "objectID" .File.UniqueID
         "title" .Title
         "description" .Description
@@ -37,4 +37,4 @@
         "wordcount" .WordCount
   ) -}}
 {{- end -}}
-{{- $index | jsonify -}}
+{{- $index | encoding.Jsonify -}}

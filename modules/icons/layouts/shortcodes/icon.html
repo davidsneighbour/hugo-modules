@@ -1,3 +1,3 @@
-{{- $type := .Get "type" | default "bootstrap" -}}
+{{- $type := .Get "type" | compare.Default "bootstrap" -}}
 {{- $value := .Get "icon" -}}
-{{- partials.IncludeCached (printf "%sicon.html" $type) $value $value -}}
+{{- partials.IncludeCached (fmt.Printf "%sicon.html" $type) $value $value -}}

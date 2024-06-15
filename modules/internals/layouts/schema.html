@@ -5,14 +5,14 @@
 {{- if .IsPage -}}
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
 {{ with .PublishDate }}
-<meta itemprop="datePublished" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>{{ end}}
+<meta itemprop="datePublished" {{ .Format $iso8601 | fmt.Printf "content=%q" | safe.HTMLAttr }}>{{ end}}
 {{ with .Lastmod }}
-<meta itemprop="dateModified" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>{{ end}}
+<meta itemprop="dateModified" {{ .Format $iso8601 | fmt.Printf "content=%q" | safe.HTMLAttr }}>{{ end}}
 <meta itemprop="wordCount" content="{{ .WordCount }}">
 
 {{- with $.Params.images -}}
-{{- range first 6 . -}}
-<meta itemprop="image" content="{{ . | absURL }}">{{ end -}}
+{{- range collections.First 6 . -}}
+<meta itemprop="image" content="{{ . | urls.AbsURL }}">{{ end -}}
 {{- else -}}
 {{- $images := $.Resources.ByType "image" -}}
 {{- $featured := $images.GetMatch "*feature*" -}}
@@ -21,11 +21,11 @@
 <meta itemprop="image" content="{{ $featured.Permalink }}">
 {{- else -}}
 {{- with $.Site.Params.images -}}
-<meta itemprop="image" content="{{ index . 0 | absURL }}">{{ end -}}
+<meta itemprop="image" content="{{ collections.Index . 0 | urls.AbsURL }}">{{ end -}}
 {{- end -}}
 {{- end -}}
 
 <!-- Output all taxonomies as schema.org keywords -->
 <meta itemprop="keywords"
-      content="{{ if .IsPage}}{{ range $index, $tag := .Params.tags }}{{ $tag }},{{ end }}{{ else }}{{ range $plural, $terms := .Site.Taxonomies }}{{ range $term, $val := $terms }}{{ printf "%s," $term }}{{ end }}{{ end }}{{ end }}">
+      content="{{ if .IsPage}}{{ range $index, $tag := .Params.tags }}{{ $tag }},{{ end }}{{ else }}{{ range $plural, $terms := .Site.Taxonomies }}{{ range $term, $val := $terms }}{{ fmt.Printf "%s," $term }}{{ end }}{{ end }}{{ end }}">
 {{- end -}}

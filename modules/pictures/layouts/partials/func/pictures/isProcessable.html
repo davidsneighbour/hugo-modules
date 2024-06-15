@@ -2,14 +2,14 @@
 {{- $isProcessable := "true" -}}
 {{- $isPageBundle := .isPageBundle -}}
 {{- $image := .image -}}
-{{- if and $isPageBundle (eq $image.MediaType.SubType "gif") -}}
-  {{- warnf "GIFs are not supported, yet. Using static file strategy instead: %s" $image.Permalink -}}
-  {{- warnf "see https://dnbhub.xyz/issue-225 for details" -}}
+{{- if and $isPageBundle (compare.Eq $image.MediaType.SubType "gif") -}}
+  {{- fmt.Warnf "GIFs are not supported, yet. Using static file strategy instead: %s" $image.Permalink -}}
+  {{- fmt.Warnf "see https://dnbhub.xyz/issue-225 for details" -}}
   {{- $isProcessable := "false" -}}
 {{- end -}}
-{{- if and $isPageBundle (eq $image.MediaType.SubType "svg") -}}
-  {{- warnf "SVGs are not supported, yet. Using static file strategy instead: %s" $image.Permalink -}}
-  {{- warnf "see https://dnbhub.xyz/issue-225 for details" -}}
+{{- if and $isPageBundle (compare.Eq $image.MediaType.SubType "svg") -}}
+  {{- fmt.Warnf "SVGs are not supported, yet. Using static file strategy instead: %s" $image.Permalink -}}
+  {{- fmt.Warnf "see https://dnbhub.xyz/issue-225 for details" -}}
   {{- $isProcessable := "false" -}}
 {{- end -}}
 {{- return $isProcessable -}}

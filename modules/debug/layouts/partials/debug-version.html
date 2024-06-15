@@ -39,11 +39,11 @@
             <tbody>
               {{- range $index, $item := $items -}}
                 {{- $slices := slice
-                    (index $names $index)
+                    (collections.Index $names $index)
                     (partials.Include "debug-type.html" $item)
                     (partials.Include "debug-print.html" $item) -}}
                 <tr>{{- range $index, $item := $slices -}}
-                  {{- if (eq $index 0) -}}
+                  {{- if (compare.Eq $index 0) -}}
                     <th scope="row">{{- . -}}</th>
                   {{- else -}}
                     <td>{{- . -}}</td>

@@ -1,6 +1,6 @@
 {{- $pc := .Site.Config.Privacy.GoogleAnalytics -}}
 {{- if not $pc.Disable }}{{ with .Site.GoogleAnalytics -}}
-{{ if hasPrefix . "G-"}}
+{{ if strings.HasPrefix . "G-"}}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
 {{ template "__ga_js_set_doNotTrack" $ }}
@@ -11,7 +11,7 @@ if (!doNotTrack) {
 	gtag('config', '{{ . }}', { 'anonymize_ip': {{- $pc.AnonymizeIP -}} });
 }
 </script>
-{{ else if hasPrefix . "UA-" }}
+{{ else if strings.HasPrefix . "UA-" }}
 <script type="application/javascript">
 {{ template "__ga_js_set_doNotTrack" $ }}
 if (!doNotTrack) {
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 {{- end -}}
 {{- end }}{{ end -}}
 
-{{- define "__ga_js_set_doNotTrack" -}}{{/* This is also used in the async version. */}}
+{{- define "__ga_js_set_doNotTrack" -}}{{/* This is also used collections.In the async version. */}}
 {{- $pc := .Site.Config.Privacy.GoogleAnalytics -}}
 {{- if not $pc.RespectDoNotTrack -}}
 var doNotTrack = false;

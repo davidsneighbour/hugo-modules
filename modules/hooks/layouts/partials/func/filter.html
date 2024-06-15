@@ -27,11 +27,11 @@
   {{/* @todo fix logging output */}}
   {{/* @todo document this mess */}}
   {{- range $key, $hooks := . -}}
-    {{- with (index $hooks $context.hook) -}}
+    {{- with (collections.Index $hooks $context.hook) -}}
       {{- range . -}}
         {{- $partialHook := fmt.Printf "partials/hooks/%s.html" .file -}}
         {{- if templates.Exists $partialHook -}}
-          {{- if eq true (.cached | default false) -}}
+          {{- if compare.Eq true (.cached | compare.Default false) -}}
             {{- $output = partials.IncludeCached $partialHook $context -}}
             {{- $loaded = true -}}
           {{- else -}}

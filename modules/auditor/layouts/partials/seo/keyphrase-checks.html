@@ -3,37 +3,37 @@
   {{ $tit = .Params.seotitle }}
 {{ end }}
 
-{{ $kph := (lower .Params.Keyphrase) }}
-{{ $kpl := (countwords $kph) }}
+{{ $kph := (strings.ToLower .Params.Keyphrase) }}
+{{ $kpl := (strings.CountWords $kph) }}
 
   <input class="form-check-input me-1" type="checkbox" value=""
-          {{ if (in (lower $tit) $kph) }}
+          {{ if (collections.In (strings.ToLower $tit) $kph) }}
             checked
           {{ else }}
 
           {{ end}}
          disabled>
   <a href="https://yoa.st/33g" target="_blank">Keyphrase</a>
-  {{ if (in (lower $tit) $kph) }}
-    appears in the title.
+  {{ if (collections.In (strings.ToLower $tit) $kph) }}
+    appears collections.In the title.
   {{ else }}
-    does not appear in the title.
+    does not appear collections.In the title.
   {{ end }}
 
 
-{{ if gt $kpl 0 }}
+{{ if compare.Gt $kpl 0 }}
 
 
 
 
-  <!-- Keyphrase in meta description -->
-  {{ with lower .Description }}
+  <!-- Keyphrase collections.In meta description -->
+  {{ with strings.ToLower .Description }}
     <div class="column is-one-quarter">
       <aside class="media notification has-background-white">
         <figure class="media-left">
 	  <span class="icon fa-lg">
 	    <i class="fa fa-circle
-		      {{ if (in . $kph) }}
+		      {{ if (collections.In . $kph) }}
 		      has-text-success
 		      {{ else }}
 		      has-text-danger
@@ -44,10 +44,10 @@
         <div class="media-content">
           <div class="content">
             <p class="is-size-7"><a href="https://yoa.st/33k" target="_blank">Keyphrase</a>
-              {{ if (in . $kph) }}
-                appears in the description.
+              {{ if (collections.In . $kph) }}
+                appears collections.In the description.
               {{ else }}
-                does not appear in the description.
+                does not appear collections.In the description.
               {{ end }}
             </p>
           </div>
@@ -55,14 +55,14 @@
       </aside>
     </div>
   {{ end }}
-  <!-- Keyphrase in first paragraph -->
-  {{ with lower .Summary }}
+  <!-- Keyphrase collections.In collections.First paragraph -->
+  {{ with strings.ToLower .Summary }}
     <div class="column is-one-quarter">
       <aside class="media notification has-background-white">
         <figure class="media-left">
 	  <span class="icon fa-lg">
 	    <i class="fa fa-circle
-		      {{ if (in . $kph) }}
+		      {{ if (collections.In . $kph) }}
 		      has-text-success
 		      {{ else }}
 		      has-text-danger
@@ -73,10 +73,10 @@
         <div class="media-content">
           <div class="content">
             <p class="is-size-7"><a href="https://yoa.st/33e" target="_blank">Keyphrase</a>
-              {{ if (in . $kph) }}
-                appears in the first paragraph.
+              {{ if (collections.In . $kph) }}
+                appears collections.In the collections.First paragraph.
               {{ else }}
-                does not appear in the first {{ countwords . }} words.
+                does not appear collections.In the collections.First {{ strings.CountWords . }} words.
               {{ end }}
             </p>
           </div>
@@ -84,14 +84,14 @@
       </aside>
     </div>
   {{ end }}
-  <!-- Keyphrase in headings -->
-  {{ $toc := lower .TableOfContents }}
+  <!-- Keyphrase collections.In headings -->
+  {{ $toc := strings.ToLower .TableOfContents }}
   <div class="column is-one-quarter">
     <aside class="media notification has-background-white">
       <figure class="media-left">
 	  <span class="icon fa-lg">
 	    <i class="fa fa-circle
-		      {{ if (in $toc $kph) }}
+		      {{ if (collections.In $toc $kph) }}
 		      has-text-success
 		      {{ else }}
 		      has-text-danger
@@ -102,24 +102,24 @@
       <div class="media-content">
         <div class="content">
           <p class="is-size-7"><a href="https://yoa.st/33m" target="_blank">Keyphrase</a>
-            {{ if (in $toc $kph) }}
-              appears in the headings.
+            {{ if (collections.In $toc $kph) }}
+              appears collections.In the headings.
             {{ else }}
-              does not appear in the headings.
+              does not appear collections.In the headings.
             {{ end }}
           </p>
         </div>
       </div>
     </aside>
   </div>
-  <!-- Keyphrase in slug -->
-  {{ $slug := replaceRE "/|-|_|http:" " " .Permalink}}
+  <!-- Keyphrase collections.In slug -->
+  {{ $slug := strings.ReplaceRE "/|-|_|http:" " " .Permalink}}
   <div class="column is-one-quarter">
     <aside class="media notification has-background-white">
       <figure class="media-left">
 	  <span class="icon fa-lg">
 	    <i class="fa fa-circle
-		      {{ if in $slug $kph }}
+		      {{ if collections.In $slug $kph }}
 		      has-text-success
 		      {{ else }}
 		      has-text-danger
@@ -130,10 +130,10 @@
       <div class="media-content">
         <div class="content">
           <p class="is-size-7"><a href="https://yoa.st/33o" target="_blank">Keyphrase</a>
-            {{ if in $slug $kph }}
-              appears in the slug.
+            {{ if collections.In $slug $kph }}
+              appears collections.In the slug.
             {{ else }}
-              does not appear in the slug.
+              does not appear collections.In the slug.
             {{ end }}
           </p>
         </div>
@@ -143,8 +143,8 @@
   <!-- Unique keyphrase -->
   {{ $nkp := 0 }}
   {{ range .Site.RegularPages }}
-    {{ if eq (lower .Params.keyphrase) $kph }}
-      {{ $nkp = add $nkp 1 }}
+    {{ if compare.Eq (strings.ToLower .Params.keyphrase) $kph }}
+      {{ $nkp = math.Add $nkp 1 }}
     {{ end }}
   {{ end }}
   <div class="column is-one-quarter">
@@ -152,7 +152,7 @@
       <figure class="media-left">
 	  <span class="icon fa-lg">
 	    <i class="fa fa-circle
-		      {{ if gt $nkp 1 }}
+		      {{ if compare.Gt $nkp 1 }}
 		      has-text-danger
 		      {{ else }}
 		      has-text-success
@@ -163,7 +163,7 @@
       <div class="media-content">
         <div class="content">
           <p class="is-size-7"><a href="https://yoa.st/33x" target="_blank">Keyphrase</a>
-            used {{ $nkp }} time{{ if gt $nkp 1 }}s{{ end }}.
+            used {{ $nkp }} time{{ if compare.Gt $nkp 1 }}s{{ end }}.
           </p>
         </div>
       </div>

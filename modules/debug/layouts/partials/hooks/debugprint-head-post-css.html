@@ -5,8 +5,8 @@
   {{- $debugprintstyles := resources.Get $entrypoint -}}
   {{- $debugprintstyles = $debugprintstyles | resources.ToCSS $config.options -}}
   {{- $debugprintstyles = $debugprintstyles | resources.PostCSS -}}
-  {{- $debugprintstyles = $debugprintstyles | minify -}}
-  {{- $debugprintstyles = $debugprintstyles | fingerprint "sha512" -}}
+  {{- $debugprintstyles = $debugprintstyles | resources.Minify -}}
+  {{- $debugprintstyles = $debugprintstyles | resources.Fingerprint "sha512" -}}
   {{- $debugprintstyles = $debugprintstyles | resources.PostProcess -}}
 
   <link rel="stylesheet" media="all" integrity="{{- $debugprintstyles.Data.Integrity -}}"

@@ -1,8 +1,8 @@
-{{- $value := printf "%s" .value | htmlUnescape }}
-{{- $short := substr $value 0 300 -}}
+{{- $value := fmt.Printf "%s" .value | transform.HTMLUnescape }}
+{{- $short := strings.Substr $value 0 300 -}}
 {{- $length := len $value -}}
-{{- if (eq $value $short) -}}
-  <span class="type-string">{{- printf "%s" .value | htmlUnescape -}}</span>
+{{- if (compare.Eq $value $short) -}}
+  <span class="type-string">{{- fmt.Printf "%s" .value | transform.HTMLUnescape -}}</span>
 {{- else -}}
   <strong>Abridged: ({{ $length }} chars): </strong> {{- $short -}} &hellip;<br />
   {{- $id := partials.Include "func/getRandomString.html" . -}}
@@ -13,7 +13,7 @@
   </a>
   <div class="collapse" id="a{{- $id -}}">
     <div class="card card-body">
-      {{- printf "%s" .value | htmlUnescape -}}
+      {{- fmt.Printf "%s" .value | transform.HTMLUnescape -}}
     </div>
   </div>
 {{- end -}}

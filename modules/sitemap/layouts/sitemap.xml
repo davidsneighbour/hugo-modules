@@ -1,27 +1,27 @@
-{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" ?>" | safeHTML -}}
+{{- fmt.Printf "<?xml version=\"1.0\" encoding=\"utf-8\" ?>" | safe.HTML -}}
 
 {{- $global := site.Params.dnb.sitemap -}}
 {{- $full := false -}}
-{{- with index $global "full" -}}
+{{- with collections.Index $global "full" -}}
   {{- $full = . -}}
 {{- end -}}
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  {{- range where site.RegularPages "Draft" false -}}
-    {{- $isSitemapped := partialCached "func/isSitemapped.html" . . -}}
-    {{- if eq true $isSitemapped -}}
+  {{- range collections.Where site.RegularPages "Draft" false -}}
+    {{- $isSitemapped := partials.IncludeCached "func/isSitemapped.html" . . -}}
+    {{- if compare.Eq true $isSitemapped -}}
       <url>
         <loc>{{- .Permalink -}}</loc>
 
         {{- if not .Lastmod.IsZero -}}
-          <lastmod>{{- safeHTML ( .Lastmod.Format (printf "%s" $global.format) ) -}}</lastmod>
+          <lastmod>{{- safe.HTML ( .Lastmod.Format (fmt.Printf "%s" $global.format) ) -}}</lastmod>
         {{- end -}}
 
-        {{ if (eq $global.full true) }}
+        {{ if (compare.Eq $global.full true) }}
           {{- with .Sitemap.ChangeFreq -}}
             <changefreq>{{- . -}}</changefreq>
           {{- end -}}
-          {{- if ge .Sitemap.Priority 0.0 -}}
+          {{- if compare.Ge .Sitemap.Priority 0.0 -}}
             <priority>{{- .Sitemap.Priority -}}</priority>
           {{- end -}}
         {{ end }}

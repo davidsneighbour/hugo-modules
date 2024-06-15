@@ -1,18 +1,18 @@
 {{- $defaultid := partials.Include "func/getRandomString" (dict "limit" "12") -}}
-{{- $galleryid := .Get "id" | default $defaultid -}}
-{{- $gallery := .Get "gallery" | default "gallery" -}}
-{{- $type := .Get "type" | default "bootstrap5" -}}
-{{- $storage := .Get "storage" | default "gallery" -}}
+{{- $galleryid := .Get "id" | compare.Default $defaultid -}}
+{{- $gallery := .Get "gallery" | compare.Default "gallery" -}}
+{{- $type := .Get "type" | compare.Default "bootstrap5" -}}
+{{- $storage := .Get "storage" | compare.Default "gallery" -}}
 
 {{- $images := dict -}}
 
-{{- if eq "gallery" $storage -}}
-{{- $images = $.Page.Resources.Match (printf "%s/*" $gallery) -}}
-{{- else if eq "subgallery" $storage -}}
-{{- $images = $.Page.Resources.Match (printf "gallery/%s/*" $gallery) -}}
-{{- else if eq "static" $storage -}}
+{{- if compare.Eq "gallery" $storage -}}
+{{- $images = $.Page.Resources.Match (fmt.Printf "%s/*" $gallery) -}}
+{{- else if compare.Eq "subgallery" $storage -}}
+{{- $images = $.Page.Resources.Match (fmt.Printf "gallery/%s/*" $gallery) -}}
+{{- else if compare.Eq "static" $storage -}}
 {{- end -}}
 
 {{- $options := (dict "images" $images "galleryid" $galleryid) -}}
-{{- $partialPath := printf "gallery-%s.html" $type -}}
+{{- $partialPath := fmt.Printf "gallery-%s.html" $type -}}
 {{- partials.IncludeCached $partialPath $options $options -}}

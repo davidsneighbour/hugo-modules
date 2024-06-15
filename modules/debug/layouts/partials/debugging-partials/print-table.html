@@ -1,5 +1,5 @@
-{{- $structure := .structure | default slice -}}
-{{- $config := .config | default dict -}}
+{{- $structure := .structure | compare.Default collections.Slice -}}
+{{- $config := .config | compare.Default dict -}}
 
 <div class="table-responsive">
   <table class="debugprint">
@@ -13,10 +13,10 @@
         <th scope="col" class="align-top value">Value</th>
     </tr>
     {{- range $structure -}}
-      {{- $type := printf "%T" .value -}}
+      {{- $type := fmt.Printf "%T" .value -}}
       <tr>
         <th>{{ .slug }}</th>
-        <td>{{ .type | default $type }}</td>
+        <td>{{ .type | compare.Default $type }}</td>
         <td>
           {{- with .value -}}
             {{- partials.Include "debug-print.html" . -}}

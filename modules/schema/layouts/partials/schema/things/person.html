@@ -12,7 +12,7 @@
     "familyName"     site.Params.siteowner.family_name
     "gender"         site.Params.gender
     "nationality"    site.Params.nationality
-    "url"            (site.Params.ownerhomepage | safeHTML)
+    "url"            (site.Params.ownerhomepage | safe.HTML)
 
 -}}
 {{- return $structure -}}

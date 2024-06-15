@@ -2,11 +2,11 @@
 {{ . }}
 {{ end -}}
 {{- $expires := site.Params.dnb.security.txt.expires -}}
-Expires: {{ now.AddDate 0 0 ($expires | int) | dateFormat "2006-01-02T15:04:05Z" }}
+Expires: {{ now.AddDate 0 0 ($expires | cast.ToInt) | time.Format "2006-01-02T15:04:05Z" }}
 {{ with site.Params.dnb.security.txt.contact -}}
 Contact: {{ . }}
 {{ else }}
-{{ warnf "[dnb/security] contact parameter required in params.dnb.security.txt.contact" }}
+{{ fmt.Warnf "[dnb/security] contact parameter required collections.In params.dnb.security.txt.contact" }}
 {{ end -}}
 {{- with site.Params.dnb.security.txt.acknowledgements -}}
 Acknowledgments:{{ . }}

@@ -1,7 +1,7 @@
 {{- $context := .context -}}
 {{- $config := site.Params.dnb.netlification -}}
-{{- if eq true $config.netlify.cms | default false -}}
-  {{- if eq "home" $context.Kind -}}
+{{- if compare.Eq true $config.netlify.cms | compare.Default false -}}
+  {{- if compare.Eq "home" $context.Kind -}}
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {

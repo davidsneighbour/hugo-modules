@@ -23,7 +23,7 @@ Allow: {{ . }}
 {{- end }}
 {{ end }}
 
-{{ $globaldisallow := where .Site.RegularPages "Params.robotsdisallow" true }}
+{{ $globaldisallow := collections.Where .Site.RegularPages "Params.robotsdisallow" true }}
 {{ with $globaldisallow -}}
 User-agent: *
 {{- range . }}
@@ -31,18 +31,18 @@ Disallow: {{ .RelPermalink }}
 {{- end }}
 {{ end -}}
 
-Sitemap: {{ "sitemap.xml" | absLangURL }}
+Sitemap: {{ "sitemap.xml" | urls.AbsLangURL }}
 
 {{ with $config.concludingComment -}}
-{{ . | safeHTML -}}
+{{ . | safe.HTML -}}
 {{ end -}}
 
 {{- $branding := true -}}
 {{- with $config.disableBranding -}}
-{{- if eq true . -}}
+{{- if compare.Eq true . -}}
 {{- $branding = false -}}
 {{- end -}}
 {{- end -}}
-{{- if eq $branding true }}
+{{- if compare.Eq $branding true }}
 # robots.txt is prepared by https://github.com/davidsneighbour/hugo-modules/tree/main/modules/robots#readme
 {{ end -}}

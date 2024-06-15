@@ -12,38 +12,38 @@
                 "context" .
                 "key" "card"
                 "default" "summary_large_image") . -}}
-{{- $cards := slice "summary" "summary_large_image" -}}
-{{- if not (in $cards $card) -}}
+{{- $cards := collections.Slice "summary" "summary_large_image" -}}
+{{- if not (collections.In $cards $card) -}}
 	{{- $card = "summary" -}}
 	{{- /* TODO: notice about this card type not being supported */ -}}
 {{- end -}}
-{{- $dict = $dict | merge ( dict "twitter:card" $card ) -}}
+{{- $dict = $dict | collections.Merge ( dict "twitter:card" $card ) -}}
 
 {{/* twitter:title */}}
-{{- $dict = $dict | merge ( dict "twitter:title" (partials.IncludeCached "func/getTitle.html" page page) ) -}}
-{{- $dict = $dict | merge ( dict "twitter:text:title" (partials.IncludeCached "func/getTitle.html" page page) ) -}}{{/* Title of content (max 70 characters) */}}
+{{- $dict = $dict | collections.Merge ( dict "twitter:title" (partials.IncludeCached "func/getTitle.html" page page) ) -}}
+{{- $dict = $dict | collections.Merge ( dict "twitter:text:title" (partials.IncludeCached "func/getTitle.html" page page) ) -}}{{/* Title of content (max 70 characters) */}}
 
 {{/* twitter:description */}}
-{{- $dict = $dict | merge ( dict "twitter:description" (partials.IncludeCached "func/getDescription.html" . .) ) -}}{{/* Description of content (maximum 200 characters) */}}
+{{- $dict = $dict | collections.Merge ( dict "twitter:description" (partials.IncludeCached "func/getDescription.html" . .) ) -}}{{/* Description of content (maximum 200 characters) */}}
 
 {{/* twitter:profile */}}
-{{- if isset $config "profile" -}}
-	{{- $dict = $dict | merge ( dict "twitter:site" (printf "@%s" $config.profile) ) -}}{{/* max 15 character s */}}
+{{- if collections.IsSet $config "profile" -}}
+	{{- $dict = $dict | collections.Merge ( dict "twitter:site" (fmt.Printf "@%s" $config.profile) ) -}}{{/* max 15 character s */}}
 {{- else -}}
-	{{- warnf "Please define your Twitter setup. You need to add a params/dnb/social/networks.twitter.toml configuration!" . -}}
+	{{- fmt.Warnf "Please define your Twitter setup. You need to math.Add a params/dnb/social/networks.twitter.toml configuration!" . -}}
 {{- end -}}
 
 {{/* twitter:creator */}}
 {{/* @TODO site.Author is deprecated */}}
 {{- with site.Author.twitter -}}
-	{{- $dict = $dict | merge ( dict "twitter:creator" (printf "@%s" .) ) -}}
+	{{- $dict = $dict | collections.Merge ( dict "twitter:creator" (fmt.Printf "@%s" .) ) -}}
 {{- end -}}
 
-{{- range first 1 (.Resources.ByType "image") -}}
+{{- range collections.First 1 (.Resources.ByType "image") -}}
 	{{- $image := .Resize "1200x630" -}}
-	{{- $dict = $dict | merge ( dict "twitter:image" $image.Permalink ) -}}
-	{{- $dict = $dict | merge ( dict "twitter:image:width" $image.Width ) -}}
-	{{- $dict = $dict | merge ( dict "twitter:image:height" $image.Height ) -}}
+	{{- $dict = $dict | collections.Merge ( dict "twitter:image" $image.Permalink ) -}}
+	{{- $dict = $dict | collections.Merge ( dict "twitter:image:width" $image.Width ) -}}
+	{{- $dict = $dict | collections.Merge ( dict "twitter:image:height" $image.Height ) -}}
 
 {{- end -}}
 

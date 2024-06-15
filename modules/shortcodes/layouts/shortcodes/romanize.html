@@ -13,15 +13,15 @@
     "IV" 4
     "I" 1
     -}}
-{{ $numerals = sort $numerals "value" "desc" }}
+{{ $numerals = collections.Sort $numerals "value" "desc" }}
 {{- $number := cast.ToInt (.Get 0) -}}
 {{- $romanOutput := "" -}}
 {{ range $roman, $value := $numerals }}
 
 {{ $roman }} {{ $value}}
 
-  {{ $amount := math.Floor (div $number (int $value) ) }}
-  {{ $number = sub $number (mul $amount (int $value) ) }}
+  {{ $amount := math.Floor (math.Div $number (cast.ToInt $value) ) }}
+  {{ $number = math.Sub $number (math.Mul $amount (cast.ToInt $value) ) }}
   {{ $romanOutput = fmt.Printf "%s%s" $romanOutput (strings.Repeat $amount $roman ) }}
 
 {{ end }}

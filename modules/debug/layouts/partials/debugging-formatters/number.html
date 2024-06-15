@@ -5,7 +5,7 @@
       <table class="debugprint">
   <tr>
     <td>
-      {{ printf "%#v" .value | htmlUnescape }}
+      {{ fmt.Printf "%#v" .value | transform.HTMLUnescape }}
     </td>
   </tr>
 </table>

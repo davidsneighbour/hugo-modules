@@ -1,12 +1,12 @@
 {{- $config := site.Params.dnb.head -}}
-{{- if (in $config.disable "referrer") -}}
+{{- if (collections.In $config.disable "referrer") -}}
   <meta name="referrer" content="no-referrer">
 {{- end -}}
-{{- if (in $config.disable "phone_transcription") -}}
+{{- if (collections.In $config.disable "phone_transcription") -}}
   <meta name="format-detection" content="telephone=no">
 {{- end -}}
 {{- with $config.notranslate -}}
-  {{- if eq . true -}}
+  {{- if compare.Eq . true -}}
     <meta name="google" content="notranslate">
   {{- end -}}
 {{- end -}}

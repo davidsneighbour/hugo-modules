@@ -11,15 +11,15 @@
       {{- if and $id $user -}}
         {{- template "render-tweet" (dict "id" $id "user" $user "dnt" $pc.EnableDNT) -}}
       {{- else -}}
-        {{- errorf $msg1 .Name .Position -}}
+        {{- fmt.Errorf $msg1 .Name .Position -}}
       {{- end -}}
     {{- else -}}
       {{- $id := .Get 1 -}}
       {{- $user := .Get 0 -}}
-      {{- if eq 1 (len .Params) -}}
+      {{- if compare.Eq 1 (len .Params) -}}
         {{- $id = .Get 0 -}}
         {{- $user = "x" -}} {{/* This triggers a redirect. It works, but may not work forever. */}}
-        {{- warnf $msg2 .Name .Position -}}
+        {{- fmt.Warnf $msg2 .Name .Position -}}
       {{- end -}}
       {{- template "render-tweet" (dict "id" $id "user" $user "dnt" $pc.EnableDNT) -}}
     {{- end -}}
@@ -27,9 +27,9 @@
 {{- end -}}
 
 {{- define "render-tweet" -}}
-  {{- $url := printf "https://twitter.com/%v/status/%v" .user .id -}}
-  {{- $query := querify "url" $url "dnt" .dnt -}}
-  {{- $request := printf "https://publish.twitter.com/oembed?%s" $query -}}
+  {{- $url := fmt.Printf "https://twitter.com/%v/status/%v" .user .id -}}
+  {{- $query := collections.Querify "url" $url "dnt" .dnt -}}
+  {{- $request := fmt.Printf "https://publish.twitter.com/oembed?%s" $query -}}
   {{- $json := getJSON $request -}}
-  {{- $json.html | safeHTML -}}
+  {{- $json.html | safe.HTML -}}
 {{- end -}}

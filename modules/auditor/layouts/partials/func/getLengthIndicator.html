@@ -4,14 +4,14 @@
 {{- $maxLength := .maxlength -}}
 {{- $threshold := .threshold -}}
 
-{{- if gt $length $maxLength -}}
-  {{- if gt $length (math.Add $maxLength $threshold) -}}
+{{- if compare.Gt $length $maxLength -}}
+  {{- if compare.Gt $length (math.Add $maxLength $threshold) -}}
     {{- $class = "danger" -}}
   {{- else -}}
     {{- $class = "warning" -}}
   {{- end -}}
-{{- else if lt $length $minLength}}
-  {{- if lt $length (math.Sub $minLength $threshold) -}}
+{{- else if compare.Lt $length $minLength}}
+  {{- if compare.Lt $length (math.Sub $minLength $threshold) -}}
     {{- $class = "danger" -}}
   {{- else -}}
     {{- $class = "warning" -}}

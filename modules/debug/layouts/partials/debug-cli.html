@@ -1,35 +1,35 @@
 {{- $config := site.Params.dnb.debug -}}
 
-{{- if in site.Params.dnb.debug.ignoreErrors .slug -}}
+{{- if collections.In site.Params.dnb.debug.ignoreErrors .slug -}}
   {{- return -}}
 {{- end -}}
 
-{{- if eq ($config.disablenote | default false) false -}}
-  {{- warnf "[%s/debug-0] additional logging by dnb-debug (see %s)" $config.namespace $config.loglink -}}
+{{- if compare.Eq ($config.disablenote | compare.Default false) false -}}
+  {{- fmt.Warnf "[%s/debug-0] additional logging by dnb-debug (see %s)" $config.namespace $config.loglink -}}
 {{- end -}}
-{{- $namespace := $config.namespace | default "dnb" -}}
-{{- $severity := .severity | default "info" -}}
+{{- $namespace := $config.namespace | compare.Default "dnb" -}}
+{{- $severity := .severity | compare.Default "info" -}}
 {{- $level := 0 -}}
 
-{{- if eq $severity "debug" -}}
+{{- if compare.Eq $severity "debug" -}}
   {{- $level = 9 -}}
-{{- else if eq $severity "info" -}}
+{{- else if compare.Eq $severity "info" -}}
   {{- $level = 7 -}}
-{{- else if eq $severity "warn" -}}
+{{- else if compare.Eq $severity "warn" -}}
   {{- $level = 5 -}}
-{{- else if eq $severity "error" -}}
+{{- else if compare.Eq $severity "error" -}}
   {{- $level = 3 -}}
-{{- else if eq $severity "fatal" -}}
+{{- else if compare.Eq $severity "fatal" -}}
   {{- $level = 1 -}}
 {{- end -}}
-{{- if isset . "level" -}}
-  {{- $level = (int .level) -}}
+{{- if collections.IsSet . "level" -}}
+  {{- $level = (cast.ToInt .level) -}}
 {{- end -}}
 
-{{- if le $level (int $config.debuglevel) -}}
-  {{- if le $level 3 -}}
-    {{- errorf (printf "[%s/%s-%v] %s" $namespace $severity $level .message) -}}
+{{- if compare.Le $level (cast.ToInt $config.debuglevel) -}}
+  {{- if compare.Le $level 3 -}}
+    {{- fmt.Errorf (fmt.Printf "[%s/%s-%v] %s" $namespace $severity $level .message) -}}
   {{- else -}}
-    {{- warnf (printf "[%s/%s-%v] %s" $namespace $severity $level .message) -}}
+    {{- fmt.Warnf (fmt.Printf "[%s/%s-%v] %s" $namespace $severity $level .message) -}}
   {{- end -}}
 {{- end -}}

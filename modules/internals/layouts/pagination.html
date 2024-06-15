@@ -1,7 +1,7 @@
-{{- $validFormats := slice "default" "terse" }}
+{{- $validFormats := collections.Slice "default" "terse" }}
 
 {{- $msg1 := "When passing a map to the internal pagination template, one of the elements must be named 'page', and it must be set to the context of the current page." }}
-{{- $msg2 := "The 'format' specified in the map passed to the internal pagination template is invalid. Valid choices are: %s." }}
+{{- $msg2 := "The 'format' specified collections.In the map passed to the internal pagination template is invalid. Valid choices are: %s." }}
 
 {{- $page := . }}
 {{- $format := "default" }}
@@ -10,21 +10,21 @@
   {{- with .page }}
     {{- $page = . }}
   {{- else }}
-    {{- errorf $msg1 }}
+    {{- fmt.Errorf $msg1 }}
   {{- end }}
   {{- with .format }}
-    {{- $format = lower . }}
+    {{- $format = strings.ToLower . }}
   {{- end }}
 {{- end }}
 
-{{- if in $validFormats $format }}
-  {{- if gt $page.Paginator.TotalPages 1 }}
+{{- if collections.In $validFormats $format }}
+  {{- if compare.Gt $page.Paginator.TotalPages 1 }}
     <ul class="pagination pagination-{{ $format }}">
-      {{- partials.Include (printf "partials/inline/pagination/%s" $format) $page }}
+      {{- partials.Include (fmt.Printf "partials/inline/pagination/%s" $format) $page }}
     </ul>
   {{- end }}
 {{- else }}
-  {{- errorf $msg2 (delimit $validFormats ", ") }}
+  {{- fmt.Errorf $msg2 (collections.Delimit $validFormats ", ") }}
 {{- end -}}
 
 {{/* Format: default
@@ -34,7 +34,7 @@
     {{- $currentPageNumber := .PageNumber }}
 
     {{- with .First }}
-      {{- if ne $currentPageNumber .PageNumber }}
+      {{- if compare.Ne $currentPageNumber .PageNumber }}
       <li class="page-item">
         <a href="{{ .URL }}" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
       </li>
@@ -56,20 +56,20 @@
     {{- end }}
 
     {{- $slots := 5 }}
-    {{- $start := math.Max 1 (sub .PageNumber (math.Floor (div $slots 2))) }}
-    {{- $end := math.Min .TotalPages (sub (add $start $slots) 1) }}
-    {{- if lt (add (sub $end $start) 1) $slots }}
-      {{- $start = math.Max 1 (add (sub $end $slots) 1) }}
+    {{- $start := math.Max 1 (math.Sub .PageNumber (math.Floor (math.Div $slots 2))) }}
+    {{- $end := math.Min .TotalPages (math.Sub (math.Add $start $slots) 1) }}
+    {{- if compare.Lt (math.Add (math.Sub $end $start) 1) $slots }}
+      {{- $start = math.Max 1 (math.Add (math.Sub $end $slots) 1) }}
     {{- end }}
 
-    {{- range $k := seq $start $end }}
-      {{- if eq $.Paginator.PageNumber $k }}
+    {{- range $k := collections.Seq $start $end }}
+      {{- if compare.Eq $.Paginator.PageNumber $k }}
       <li class="page-item active">
         <a aria-current="page" aria-label="Page {{ $k }}" class="page-link" role="button">{{ $k }}</a>
       </li>
       {{- else }}
       <li class="page-item">
-        <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}" aria-label="Page {{ $k }}" class="page-link" role="button">{{ $k }}</a>
+        <a href="{{ (collections.Index $.Paginator.Pagers (math.Sub $k 1)).URL }}" aria-label="Page {{ $k }}" class="page-link" role="button">{{ $k }}</a>
       </li>
       {{- end }}
     {{- end }}
@@ -85,7 +85,7 @@
     {{- end }}
 
     {{- with .Last }}
-      {{- if ne $currentPageNumber .PageNumber }}
+      {{- if compare.Ne $currentPageNumber .PageNumber }}
       <li class="page-item">
         <a href="{{ .URL }}" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
@@ -105,7 +105,7 @@
     {{- $currentPageNumber := .PageNumber }}
 
     {{- with .First }}
-      {{- if ne $currentPageNumber .PageNumber }}
+      {{- if compare.Ne $currentPageNumber .PageNumber }}
       <li class="page-item">
         <a href="{{ .URL }}" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
       </li>
@@ -119,20 +119,20 @@
     {{- end }}
 
     {{- $slots := 3 }}
-    {{- $start := math.Max 1 (sub .PageNumber (math.Floor (div $slots 2))) }}
-    {{- $end := math.Min .TotalPages (sub (add $start $slots) 1) }}
-    {{- if lt (add (sub $end $start) 1) $slots }}
-      {{- $start = math.Max 1 (add (sub $end $slots) 1) }}
+    {{- $start := math.Max 1 (math.Sub .PageNumber (math.Floor (math.Div $slots 2))) }}
+    {{- $end := math.Min .TotalPages (math.Sub (math.Add $start $slots) 1) }}
+    {{- if compare.Lt (math.Add (math.Sub $end $start) 1) $slots }}
+      {{- $start = math.Max 1 (math.Add (math.Sub $end $slots) 1) }}
     {{- end }}
 
-    {{- range $k := seq $start $end }}
-      {{- if eq $.Paginator.PageNumber $k }}
+    {{- range $k := collections.Seq $start $end }}
+      {{- if compare.Eq $.Paginator.PageNumber $k }}
       <li class="page-item active">
         <a aria-current="page" aria-label="Page {{ $k }}" class="page-link" role="button">{{ $k }}</a>
       </li>
       {{- else }}
       <li class="page-item">
-        <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}" aria-label="Page {{ $k }}" class="page-link" role="button">{{ $k }}</a>
+        <a href="{{ (collections.Index $.Paginator.Pagers (math.Sub $k 1)).URL }}" aria-label="Page {{ $k }}" class="page-link" role="button">{{ $k }}</a>
       </li>
       {{- end }}
     {{- end }}
@@ -144,7 +144,7 @@
     {{- end }}
 
     {{- with .Last }}
-      {{- if ne $currentPageNumber .PageNumber }}
+      {{- if compare.Ne $currentPageNumber .PageNumber }}
       <li class="page-item">
         <a href="{{ .URL }}" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>

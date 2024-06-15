@@ -1,9 +1,9 @@
 {{/* notify of deprecation */}}
 {{- $deprecatedConf := $.Site.Data.dnb.netlification.config -}}
 {{- with $deprecatedConf -}}
-  {{- partial "debug-cli.html"
+  {{- partials.Include "debug-cli.html"
     (dict
-      "message" "netlification: you are configuring the netlification module via data/dnb/netlification.toml. this is being deprecated. move your config into params.toml. you will need to change the prefix of `[variable]` to `[dnb.netlification.variable]` and add `[dnb.netlification]` before any un-prefixed variable. after that the module will start working out-of-the-box again."
+      "message" "netlification: you are configuring the netlification module via data/dnb/netlification.toml. this is being deprecated. move your config into params.toml. you will need to change the prefix of `[variable]` to `[dnb.netlification.variable]` and math.Add `[dnb.netlification]` before any un-prefixed variable. collections.After that the module will start working out-of-the-box again."
       "context" .
       "severity" "warn"
       "level" 8
@@ -16,11 +16,11 @@
 {{- $day := 86400 -}}
 {{- $month := 2628000 -}}
 {{- $year := 31536000 -}}
-{{- $cacheYears := int $config.cache.duration.years | default 1 -}}
-{{- $cacheMonths := int $config.cache.duration.months | default 0 -}}
-{{- $cacheDays := int $config.cache.duration.days | default 0 -}}
-{{- $cacheSeconds := add (mul $cacheDays $day) (add (mul $cacheMonths $month) (mul $cacheYears $year)) -}}
-{{- $cacheControl := printf $config.defaults.cacheControl $cacheSeconds }}
+{{- $cacheYears := cast.ToInt $config.cache.duration.years | compare.Default 1 -}}
+{{- $cacheMonths := cast.ToInt $config.cache.duration.months | compare.Default 0 -}}
+{{- $cacheDays := cast.ToInt $config.cache.duration.days | compare.Default 0 -}}
+{{- $cacheSeconds := math.Add (math.Mul $cacheDays $day) (math.Add (math.Mul $cacheMonths $month) (math.Mul $cacheYears $year)) -}}
+{{- $cacheControl := fmt.Printf $config.defaults.cacheControl $cacheSeconds }}
 {{- $expiryAge := now.AddDate $cacheYears $cacheMonths $cacheDays -}}
 
 {{/* header rules for root page */}}
@@ -37,23 +37,23 @@
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
-  {{/* note: site.Params does a lot of lower casing ;) */}}
-  {{- $nonrules := slice "upgradeinsecurerequests" "reporturi" "reportonly" -}}
+  {{/* note: site.Params does a lot of strings.ToLower casing ;) */}}
+  {{- $nonrules := collections.Slice "upgradeinsecurerequests" "reporturi" "reportonly" -}}
   {{ with $config.csp -}}
-      {{ if (eq .reportOnly true) -}}
+      {{ if (compare.Eq .reportOnly true) -}}
       Content-Security-Policy-Report-Only: {{ else -}}
       Content-Security-Policy: {{ end -}}
       {{- range $key, $values := $config.csp -}}
-        {{/* {{ warnf "%s %s" $key $values }} */}}
-        {{- if not (in $nonrules $key) -}}
-          {{- with (index $config.csp $key) -}}
-            {{ replace ($key | humanize | lower) " " "-" -}}
+        {{/* {{ fmt.Warnf "%s %s" $key $values }} */}}
+        {{- if not (collections.In $nonrules $key) -}}
+          {{- with (collections.Index $config.csp $key) -}}
+            {{ strings.Replace ($key | inflect.Humanize | strings.ToLower) " " "-" -}}
             {{- range . }} {{ . }}{{ end }};
           {{- end -}}
         {{- end -}}
       {{- end }}
       {{- with $config.csp.upgradeInsecureRequests -}}
-          {{- if (eq $config.csp.upgradeInsecureRequests true) -}}
+          {{- if (compare.Eq $config.csp.upgradeInsecureRequests true) -}}
               upgrade-insecure-requests;
           {{- end -}}
       {{- end -}}
@@ -73,37 +73,37 @@
 
 /*.js
   Content-Type: text/javascript; charset=utf-8
-  Expires: {{ $expiryAge | dateFormat $dateformat }}
+  Expires: {{ $expiryAge | time.Format $dateformat }}
   Cache-Control: {{ $cacheControl }}
   Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.ico
-  Expires: {{ $expiryAge | dateFormat $dateformat }}
+  Expires: {{ $expiryAge | time.Format $dateformat }}
   Cache-Control: {{ $cacheControl }}
   Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.css
-  Expires: {{ $expiryAge | dateFormat $dateformat }}
+  Expires: {{ $expiryAge | time.Format $dateformat }}
   Cache-Control: {{ $cacheControl }}
   Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.jpg
-  Expires: {{ $expiryAge | dateFormat $dateformat }}
+  Expires: {{ $expiryAge | time.Format $dateformat }}
   Cache-Control: {{ $cacheControl }}
   Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.jpeg
-  Expires: {{ $expiryAge | dateFormat $dateformat }}
+  Expires: {{ $expiryAge | time.Format $dateformat }}
   Cache-Control: {{ $cacheControl }}
   Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.png
-  Expires: {{ $expiryAge | dateFormat $dateformat }}
+  Expires: {{ $expiryAge | time.Format $dateformat }}
   Cache-Control: {{ $cacheControl }}
   Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /*.gif
-  Expires: {{ $expiryAge | dateFormat $dateformat }}
+  Expires: {{ $expiryAge | time.Format $dateformat }}
   Cache-Control: {{ $cacheControl }}
   Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
@@ -114,19 +114,19 @@
   Accept-Encoding: {{ $config.defaults.acceptEncoding }}
 
 /assets/*
-  Expires: {{ $expiryAge | dateFormat $dateformat }}
+  Expires: {{ $expiryAge | time.Format $dateformat }}
   Cache-Control: {{ $cacheControl }}
 
 /images/*
-  Expires: {{ $expiryAge | dateFormat $dateformat }}
+  Expires: {{ $expiryAge | time.Format $dateformat }}
   Cache-Control: {{ $cacheControl }}
 
 # headers created via data configuration from other modules
 {{ with site.Data.dnb -}}
   {{- range $index, $item := . -}}
-    {{- if (index $item "netlification") -}}
+    {{- if (collections.Index $item "netlification") -}}
 # from {{ $index }}
-{{ range (index $item "netlification" "headers") }}
+{{ range (collections.Index $item "netlification" "headers") }}
   {{- .for }}
   {{- range $key, $text := .values }}
   {{ $key -}}: {{ $text }}

@@ -5,7 +5,7 @@ Path of checking
 
 - resource named `*header*`
 - resource on a path `**\/header.*`
-- if resources exist then return the first image
+- if resources exist then return the collections.First image
 - placeholder image
 
 */}}
@@ -17,7 +17,7 @@ Path of checking
 
 {{- with $articleimage -}}{{- else -}}
   {{- $config := partials.IncludeCached "func/pictures/getConfiguration.html" . -}}
-  {{- $default_image := $config.default_image | default "images/default.png" -}}
+  {{- $default_image := $config.default_image | compare.Default "images/default.png" -}}
   {{- $articleimage = resources.Get $default_image -}}
 {{- end -}}
 

@@ -1,6 +1,6 @@
-{{ $gitInfoVarNames   := (slice "Hash" "AbbreviatedHash" "Subject" "AuthorName"
+{{ $gitInfoVarNames   := (collections.Slice "Hash" "AbbreviatedHash" "Subject" "AuthorName"
                                 "AuthorEmail" "AuthorDate") }}
-{{ $gitInfoVarSymbols := (slice .value.Hash .value.AbbreviatedHash .value.Subject .value.AuthorName
+{{ $gitInfoVarSymbols := (collections.Slice .value.Hash .value.AbbreviatedHash .value.Subject .value.AuthorName
                                 .value.AuthorEmail .value.AuthorDate ) }}
       <div class="table-responsive">
 <table class="debugprint">
@@ -9,9 +9,9 @@
       <th scope="col" class="align-top value">Value</th>
   </tr>
   {{ range $idx, $elem := $gitInfoVarNames }}
-    {{ printf `<tr> <td class="align-top key">%s</td> <td class="align-top value">` $elem | safeHTML }}
-    {{ partials.Include "debug-print.html" (index $gitInfoVarSymbols $idx) }}
-    {{ printf "</td></tr>" | safeHTML }}
+    {{ fmt.Printf `<tr> <td class="align-top key">%s</td> <td class="align-top value">` $elem | safe.HTML }}
+    {{ partials.Include "debug-print.html" (collections.Index $gitInfoVarSymbols $idx) }}
+    {{ fmt.Printf "</td></tr>" | safe.HTML }}
   {{ end }}
 </table>
 </div>

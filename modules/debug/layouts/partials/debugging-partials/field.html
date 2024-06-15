@@ -2,11 +2,11 @@
   {{ $type := "" }}
   {{ $color := "" }}
   {{ $label := "" }}
-  {{ if eq .fieldtype "variable" }}
+  {{ if compare.Eq .fieldtype "variable" }}
     {{ $type = "V" }}
     {{ $color = "text-bg-warning" }}
     {{ $label = "Variable"}}
-  {{ else if eq .fieldtype "function" }}
+  {{ else if compare.Eq .fieldtype "function" }}
     {{ $type = "F" }}
     {{ $color = "text-bg-primary" }}
     {{ $label = "Function"}}

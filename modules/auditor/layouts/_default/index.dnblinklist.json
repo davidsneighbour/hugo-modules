@@ -1,7 +1,7 @@
-{{- $collection := slice -}}
+{{- $collection := collections.Slice -}}
 {{- range site.Pages -}}
-{{- if ne .Params.audit false -}}
-{{- $collection = $collection | append .Permalink -}}
+{{- if compare.Ne .Params.audit false -}}
+{{- $collection = $collection | collections.Append .Permalink -}}
 {{- end -}}
 {{- end -}}
-{{- dict "links" $collection | jsonify -}}
+{{- dict "links" $collection | encoding.Jsonify -}}

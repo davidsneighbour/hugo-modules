@@ -2,13 +2,13 @@
 {{- $page := . -}}
 {{- $config := site.Params.dnb.head -}}
 {{- partials.Include "func/hook.html" ( dict "hook" "head-init" "context" . ) -}}
-<meta charset="{{- site.Params.dnb.head.charset | default "utf-8" -}}">
-<meta name="viewport" content="{{- site.Params.dnb.head.viewport | default "width=device-width, initial-scale=1" -}}">
+<meta charset="{{- site.Params.dnb.head.charset | compare.Default "utf-8" -}}">
+<meta name="viewport" content="{{- site.Params.dnb.head.viewport | compare.Default "width=device-width, initial-scale=1" -}}">
 {{ partials.Include "head/title.html" . -}}
 {{- partials.Include "func/hook.html" ( dict "hook" "head-start" "context" . ) -}}
 {{- partials.IncludeCached "head/speed-optimisation.html" . -}}
 {{- partials.Include "func/hook.html" ( dict "hook" "head-post-speed-optimisation" "context" . ) -}}
-{{- if and (isset $config "nobase") (eq false $config.nobase) -}}
+{{- if and (collections.IsSet $config "nobase") (compare.Eq false $config.nobase) -}}
   <base href="{{- site.BaseURL -}}">
 {{- end -}}
 {{- partials.Include "head/description.html" . -}}
@@ -25,23 +25,23 @@
 {{- partials.IncludeCached "head/series.html" . . -}}
 {{- partials.Include "func/hook.html" ( dict "hook" "head-post-series" "context" . ) -}}
 {{/* external modules, uncached */}}
-{{- $modules := slice "social" -}}
+{{- $modules := collections.Slice "social" -}}
 {{- range $modules -}}
-  {{- $template := printf "head/%s.html" . -}}
-  {{- if templates.Exists ( printf "partials/%s" $template ) -}}
-    {{- partials.Include "func/hook.html" ( dict "hook" (printf "head-pre-module-%s" .) "context" . ) -}}
+  {{- $template := fmt.Printf "head/%s.html" . -}}
+  {{- if templates.Exists ( fmt.Printf "partials/%s" $template ) -}}
+    {{- partials.Include "func/hook.html" ( dict "hook" (fmt.Printf "head-pre-module-%s" .) "context" . ) -}}
     {{- partials.Include $template $page $page -}}
-    {{- partials.Include "func/hook.html" ( dict "hook" (printf "head-post-module-%s" .) "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( dict "hook" (fmt.Printf "head-post-module-%s" .) "context" . ) -}}
   {{- end -}}
 {{- end -}}
 {{/* external modules, cached */}}
-{{- $modules := slice "opensearch" "pwa" "humans" "feeds" -}}
+{{- $modules := collections.Slice "opensearch" "pwa" "humans" "feeds" -}}
 {{- range $modules -}}
-  {{- $template := printf "head/%s.html" . -}}
-  {{- if templates.Exists ( printf "partials/%s" $template ) -}}
-    {{- partials.Include "func/hook.html" ( dict "hook" (printf "head-pre-module-%s" .) "context" . ) -}}
+  {{- $template := fmt.Printf "head/%s.html" . -}}
+  {{- if templates.Exists ( fmt.Printf "partials/%s" $template ) -}}
+    {{- partials.Include "func/hook.html" ( dict "hook" (fmt.Printf "head-pre-module-%s" .) "context" . ) -}}
     {{- partials.Include $template $page $page -}}
-    {{- partials.Include "func/hook.html" ( dict "hook" (printf "head-post-module-%s" .) "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( dict "hook" (fmt.Printf "head-post-module-%s" .) "context" . ) -}}
   {{- end -}}
 {{- end -}}
 {{- partials.Include "func/printCommentHeader.html" "@davidsneighbour/hugo-head - the rest" -}}

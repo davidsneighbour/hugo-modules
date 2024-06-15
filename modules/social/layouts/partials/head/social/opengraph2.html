@@ -1,13 +1,13 @@
 {{- /*
 TODO:
 - og:audio = a URL to an audio file to accompany this object
-- og:determiner = The word that appears before this object's title in a sentence. An enum of (a, an, the, "", auto). If auto is chosen, the consumer of your data should chose between "a" or "an". Default is "" (blank).
+- og:determiner = The word that appears before this object's strings.Title collections.In a sentence. An enum of (a, an, the, "", auto). If auto is chosen, the consumer of your data should chose between "a" or "an". Default is "" (blank).
 - og:locale:alternate = An array of other locales this page is available in.
 - og:video = A URL to a video file that complements this object */
 -}}
 {{ if $.Params.images }}
-	{{ range first 6 $.Params.images -}}
-		<meta property="og:image" content="{{ . | absURL }}" />
+	{{ range collections.First 6 $.Params.images -}}
+		<meta property="og:image" content="{{ . | urls.AbsURL }}" />
 	{{ end }}
 {{ else -}}
 	{{- $images := $.Resources.ByType "image" -}}
@@ -19,7 +19,7 @@ TODO:
 		<meta property="og:image" content="{{ $featured.Permalink }}" />
 	{{ else -}}
 		{{- with $.Site.Params.images -}}
-			<meta property="og:image" content="{{ index . 0 | absURL }}" />
+			<meta property="og:image" content="{{ collections.Index . 0 | urls.AbsURL }}" />
 		{{ end }}
 	{{ end }}
 {{ end }}
@@ -27,9 +27,9 @@ TODO:
 {{ $siteSeries := .Site.Taxonomies.series }}
 {{ with .Params.series }}
 	{{ range $name := . }}
-		{{ $series := index $siteSeries $name }}
-		{{ range $page := first 6 $series.Pages }}
-			{{ if ne $page.Permalink $permalink }}
+		{{ $series := collections.Index $siteSeries $name }}
+		{{ range $page := collections.First 6 $series.Pages }}
+			{{ if compare.Ne $page.Permalink $permalink }}
 				<meta property="og:see_also" content="{{ $page.Permalink }}" />
 			{{ end }}
 		{{ end }}
@@ -37,16 +37,16 @@ TODO:
 {{ end }}
 
 {{- /* twitter:image */ -}}
-{{- $dict = $dict | merge ( dict "twitter:image" "" ) -}}
-{{/* URL of image to use in the card.
-Images must be less than 5MB in size. JPG, PNG, WEBP and GIF formats are
-supported. Only the first frame of an animated GIF will be used. SVG is not
+{{- $dict = $dict | collections.Merge ( dict "twitter:image" "" ) -}}
+{{/* URL of image to use collections.In the card.
+Images must be less than 5MB collections.In size. JPG, PNG, WEBP and GIF formats are
+supported. Only the collections.First frame of an animated GIF will be used. SVG is not
 supported. */}}
-{{- $dict = $dict | merge ( dict "twitter:image:alt" "" ) -}}
+{{- $dict = $dict | collections.Merge ( dict "twitter:image:alt" "" ) -}}
 
 {{ $resize := "876x438" }}
 {{- with $.Params.images -}}
-	<meta name="twitter:image" content="{{ index . 0 | absURL }}" />
+	<meta name="twitter:image" content="{{ collections.Index . 0 | urls.AbsURL }}" />
 {{ else -}}
 	{{- $images := $.Resources.ByType "image" -}}
 	{{- $featured := $images.GetMatch "*feature*" -}}
@@ -57,7 +57,7 @@ supported. */}}
 		<meta name="twitter:image" content="{{ $featured.Permalink }}" />
 	{{- else -}}
 		{{- with $.Site.Params.images -}}
-			<meta name="twitter:image" content="{{ index . 0 | absURL }}" />
+			<meta name="twitter:image" content="{{ collections.Index . 0 | urls.AbsURL }}" />
 		{{- end -}}
 	{{- end -}}
 {{- end }}

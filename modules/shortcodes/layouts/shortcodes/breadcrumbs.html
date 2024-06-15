@@ -12,12 +12,12 @@
 
     </li>
 
-    {{ $findUrl := slice }}
+    {{ $findUrl := collections.Slice }}
 
-    {{ range $index, $el := (split .URL "/") }}
-    {{ if gt (len . ) 0 }}
+    {{ range $index, $el := (strings.Split .URL "/") }}
+    {{ if compare.Gt (len . ) 0 }}
 
-    {{ $findUrl = uniq ($findUrl | append .) | sort }}
+    {{ $findUrl = collections.Uniq ($findUrl | collections.Append .) | collections.Sort }}
 
     {{ end }}
     {{ end }}
@@ -26,11 +26,11 @@
     {{ range $index, $el := $findUrl }}
 
     <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-      {{ $url = "/" | add . | add $url  }}
+      {{ $url = "/" | math.Add . | math.Add $url  }}
 
       <a href="{{ $url }}" itemprop="item">
         <span itemprop="name"> {{ . }} </span>
-        {{ $index = $index | add 2 }}
+        {{ $index = $index | math.Add 2 }}
         <meta itemprop="position" content="{{ $index }}">
       </a>
     </li>

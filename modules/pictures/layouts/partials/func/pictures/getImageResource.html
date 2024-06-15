@@ -14,7 +14,7 @@ requires two parameters:
 {{- $localimage := false -}}
 {{- with $page.Resources.GetMatch $path -}}
   {{- with .Err -}}
-    {{- warnf "%s" . -}}
+    {{- fmt.Warnf "%s" . -}}
   {{- else -}}
     {{- $localimage = . -}}
   {{- end -}}
@@ -23,7 +23,7 @@ requires two parameters:
 {{- with $localimage -}}{{- else -}}
   {{- with resources.Get $path -}}
     {{- with .Err -}}
-      {{- warnf "%s" . -}}
+      {{- fmt.Warnf "%s" . -}}
     {{- else -}}
       {{- $localimage = . -}}
     {{- end -}}

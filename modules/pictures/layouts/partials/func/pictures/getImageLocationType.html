@@ -1,10 +1,10 @@
 {{- $path := . -}}
 {{- $type := "resource" -}}
 {{- $protocol := strings.Contains $path "://"  -}}
-{{- if eq "true" $protocol -}}
+{{- if compare.Eq "true" $protocol -}}
   {{/* if path starts with http(s), then it's external */}}
   {{- $type := "external" -}}
-{{- else if eq "/" (substr $path 0 1) -}}
+{{- else if compare.Eq "/" (strings.Substr $path 0 1) -}}
   {{/* if path starts with /, then it's inside the static directory */}}
   {{- $type := "static" -}}
 {{- end -}}

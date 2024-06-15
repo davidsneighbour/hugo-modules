@@ -5,10 +5,10 @@
 <link rel="manifest" href="/manifest.webmanifest">
 {{- /* @todo configurable favicon path */ -}}
 {{- $icon := resources.Get $config.favicon -}}
-{{- if ne nil $icon -}}
+{{- if compare.Ne nil $icon -}}
   {{- $sizes := dict
-    "apple-touch-icon" (slice "180x180" "192x192")
-    "icon" (slice "32x32" "16x16") -}}
+    "apple-touch-icon" (collections.Slice "180x180" "192x192")
+    "icon" (collections.Slice "32x32" "16x16") -}}
   {{- range $key, $value := $sizes -}}
     {{- range $value -}}
       {{- $size := . -}}
@@ -26,7 +26,7 @@
 <link rel="mask-icon" href="{{- $maskicon.Permalink -}}" color="{{- $config.theme_color -}}">
 <meta name="theme-color" content="{{- $config.theme_color -}}">
 {{- else -}}
-  {{- warnf "No favicon defined. " -}}
+  {{- fmt.Warnf "No favicon defined. " -}}
 {{- end -}}
 
 {{- /* clearup */ -}}

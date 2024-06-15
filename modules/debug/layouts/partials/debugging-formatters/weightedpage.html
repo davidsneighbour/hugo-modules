@@ -2,6 +2,6 @@
 
       <div class="table-responsive">
       <table class="debugprint">
-  {{ printf "<tr> <td class=\"align-top\">%s</td> <td class=\"align-top\">W:%d</td></tr>" .value.Page.Title .value.Weight | safeHTML }}
+  {{ fmt.Printf "<tr> <td class=\"align-top\">%s</td> <td class=\"align-top\">W:%d</td></tr>" .value.Page.Title .value.Weight | safe.HTML }}
 </table>
 </div>

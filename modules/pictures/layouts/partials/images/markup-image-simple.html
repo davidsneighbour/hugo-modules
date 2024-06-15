@@ -5,7 +5,7 @@
   <picture>
     <img
       src="{{- $image -}}"
-      alt="{{- $title | plainify -}}"
+      alt="{{- $title | transform.Plainify -}}"
       loading="lazy"
       fetchpriority="low"
     />

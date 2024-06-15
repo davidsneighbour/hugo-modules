@@ -3,13 +3,13 @@
     {{- $breakpoints := collections.Slice "xs" "sm" "md" "lg" "xl" "xxl" -}}
     {{- range $index, $value := $breakpoints -}}
       {{- $classes := fmt.Printf "col d-%s-block" $value -}}
-      {{- if eq $index 0 -}}
+      {{- if compare.Eq $index 0 -}}
         {{- $classes = fmt.Printf "d-block %s" $classes -}}
       {{- else -}}
-        {{- $classes = fmt.Printf "d-none %s %s" $classes (fmt.Printf "d-%s-none" (index $breakpoints (sub $index 1))) -}}
+        {{- $classes = fmt.Printf "d-none %s %s" $classes (fmt.Printf "d-%s-none" (collections.Index $breakpoints (math.Sub $index 1))) -}}
       {{- end -}}
-      {{- if lt $index (sub ($breakpoints | len) 1) -}}
-        {{- $classes = fmt.Printf "%s %s" $classes (fmt.Printf "d-%s-none" (index $breakpoints (math.Add $index 1))) -}}
+      {{- if compare.Lt $index (math.Sub ($breakpoints | len) 1) -}}
+        {{- $classes = fmt.Printf "%s %s" $classes (fmt.Printf "d-%s-none" (collections.Index $breakpoints (math.Add $index 1))) -}}
       {{- end -}}
       <div class="{{- $classes -}}">
         <div class="identifier">{{- . -}}</div>

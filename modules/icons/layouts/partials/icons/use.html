@@ -2,22 +2,22 @@
 {{- with .type -}}
   {{- $icontype = . -}}
 {{- end -}}
-{{- $config := index site.Params.dnb.icons $icontype -}}
-{{- $iconname := .icon | default "dash-square-dotted" -}}
+{{- $config := collections.Index site.Params.dnb.icons $icontype -}}
+{{- $iconname := .icon | compare.Default "dash-square-dotted" -}}
 <svg{{ with .width }} width="{{- . -}}"{{ end }}{{ with .height }} height="{{- . -}}"{{ end }}
   version="2.0" class="icon icon-{{- $iconname }} {{ .class -}}">
   {{- $icons := .Scratch.Get "icons" -}}
-  {{- if eq (index $icons $iconname) true -}}
+  {{- if compare.Eq (collections.Index $icons $iconname) true -}}
   {{- else -}}
-    {{- $iconpath := printf $config.path $iconname -}}
+    {{- $iconpath := fmt.Printf $config.path $iconname -}}
     {{- $content := "" -}}
-    {{- $content = os.ReadFile $iconpath | safeHTML -}}
-    {{- $replaceId := printf "id=%q" $iconname | safeHTMLAttr -}}
-    {{- $replacement := printf "<symbol %s " $replaceId -}}
-    {{- $content = replace $content "<svg " $replacement 1 -}}
-    {{- $content = replace $content "</svg>" "</symbol>" 1 -}}
+    {{- $content = os.ReadFile $iconpath | safe.HTML -}}
+    {{- $replaceId := fmt.Printf "id=%q" $iconname | safe.HTMLAttr -}}
+    {{- $replacement := fmt.Printf "<symbol %s " $replaceId -}}
+    {{- $content = strings.Replace $content "<svg " $replacement 1 -}}
+    {{- $content = strings.Replace $content "</svg>" "</symbol>" 1 -}}
     {{- .Scratch.SetInMap "icons" $iconname true -}}
-    {{- $content | safeHTML -}}
+    {{- $content | safe.HTML -}}
   {{- end -}}
   <use href="#{{- $iconname -}}"{{ with .width }} width="{{- . -}}"{{ end }}{{ with .height }} height="{{- . -}}"{{ end }} />
 </svg>

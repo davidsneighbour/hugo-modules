@@ -1,5 +1,5 @@
 <div class="row">
-	{{ range $index, $item := sort .Site.Data.archive ".slug" "desc" }}
+	{{ range $index, $item := collections.Sort .Site.Data.archive ".slug" "desc" }}
 		<div class="{{ with $item.container }}{{.}}{{else}}col-sm-4{{end}} mb-3">
 			<div class="card">
 				<div class="card-header">{{ $item.title }}</div>
@@ -8,7 +8,7 @@
 					<a href="/archiv/{{ $item.slug }}/" class="btn btn-primary">{{ $item.buttontext }}</a>
 				</div>
 			</div>
-			{{ $index2 := add $index 1 }}
+			{{ $index2 := math.Add $index 1 }}
 		</div>
 	{{ end }}
 </div>

@@ -8,7 +8,7 @@
   </tr>
   {{- $value := .value -}}
   {{- range site.Data.dnb.debug.types.fileinfo.fields -}}
-    {{- $valuePrinted := partials.Include "func/eval.html" (dict "context" $value "cmd" (printf ".%s" .variable)) -}}
+    {{- $valuePrinted := partials.Include "func/eval.html" (dict "context" $value "cmd" (fmt.Printf ".%s" .variable)) -}}
     <tr>
       <td class="align-top key nowrap" title="{{ .description }}">
         {{- partials.IncludeCached "debugging-partials/field.html" . . -}}

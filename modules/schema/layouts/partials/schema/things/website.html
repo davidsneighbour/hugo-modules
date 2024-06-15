@@ -1,7 +1,7 @@
 {{- /* https://schema.org/WebSite
 
-@todo add "translationOfWork": ""
-@todo add "translator": ""
+@todo math.Add "translationOfWork": ""
+@todo math.Add "translator": ""
 
 */ -}}
 
@@ -22,7 +22,7 @@
   "description": "{{ site.Params.description }}",
   "image": [ {{ range $i, $e := site.Params.images }}{{ if $i }}, {{ end }}"{{ $e }}"{{ end }} ],
   "url": "{{ site.BaseURL }}",
-  "author": "{{ index $.Params "author.name" }}",
+  "author": "{{ collections.Index $.Params "author.name" }}",
   {{ with site.Params.issn }}"issn": "{{ . }}",{{ end }}
   "copyrightHolder": {
     "givenName": "{{ site.Params.siteowner.given_name }}",
@@ -32,13 +32,13 @@
     "knowsLanguage": [ {{ range $i, $e := site.Params.knowslanguages }}{{ if $i }}, {{ end }}"{{ $e }}"{{ end }} ],
     "nationality": "{{ site.Params.nationality }}",
     "alternateName": [ {{ range $i, $e := site.Params.alternatenames }}{{ if $i }}, {{ end }}"{{ $e }}"{{ end }} ],
-    "url": "{{ site.Params.ownerhomepage | safeHTML }}",
+    "url": "{{ site.Params.ownerhomepage | safe.HTML }}",
     "@type": "Person"
   },
   "copyrightNotice": "{{ site.Params.copyrightnotice }}",
   "copyrightYear": "{{ site.Params.copyrightyear }}",
   "creativeWorkStatus": "Published",
-  "creditText": "{{ index $.Params  "author.name" }} {{ index $.Params  "author.homepage" }}",
+  "creditText": "{{ collections.Index $.Params  "author.name" }} {{ collections.Index $.Params  "author.homepage" }}",
   "datePublished": "{{ site.Params.copyrightyear }}",
   "acquireLicensePage": "{{ site.Params.license }}",
   "license": "{{ site.Params.license }}",
@@ -49,7 +49,7 @@
   "publisher": {
     "name": "{{ site.Title }}",
     "logo": {
-      "url": "{{ site.Params.logourl | absURL }}",
+      "url": "{{ site.Params.logourl | urls.AbsURL }}",
       "height": 60,
       "width": 107,
       "@type": "ImageObject"

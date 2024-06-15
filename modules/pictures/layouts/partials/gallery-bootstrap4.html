@@ -6,14 +6,14 @@
   <ol class="carousel-indicators">
     {{- with $images -}}
       {{- range $index, $element := . -}}
-        <li data-target="#{{ $galleryid }}" data-slide-to="{{ $index }}"{{ if (eq $index 0) }} class="active"{{ end }}></li>
+        <li data-target="#{{ $galleryid }}" data-slide-to="{{ $index }}"{{ if (compare.Eq $index 0) }} class="active"{{ end }}></li>
       {{- end -}}
     {{- end -}}
   </ol>
   <div class="carousel-inner">
     {{- with $images -}}
       {{- range $index, $element := . -}}
-        <div class="carousel-item {{ if (eq $index 0) }}active{{ end }}">
+        <div class="carousel-item {{ if (compare.Eq $index 0) }}active{{ end }}">
           <img class="d-block w-100" src="{{ $element.RelPermalink }}" alt="{{ $element.Title }}"/>
         </div>
       {{- end -}}

@@ -1,14 +1,14 @@
 {{- partials.Include "func/hook.html" ( dict "hook" "head-styles-before" "context" . ) -}}
 {{- $config := site.Params.dnb.head.styles -}}
-{{- if eq "postcss" ($config.method | default "postcss") -}}
-  {{- $entrypoint := $config.entrypoint | default "scss/style.scss" -}}
+{{- if compare.Eq "postcss" ($config.method | compare.Default "postcss") -}}
+  {{- $entrypoint := $config.entrypoint | compare.Default "scss/style.scss" -}}
   {{- $styles := resources.Get $entrypoint -}}
   {{- $styles = $styles | resources.ToCSS $config.options -}}
   {{- $styles = $styles | resources.PostCSS -}}
-  {{- $styles = $styles | minify -}}
-  {{- $styles = $styles | fingerprint "sha512" -}}
+  {{- $styles = $styles | resources.Minify -}}
+  {{- $styles = $styles | resources.Fingerprint "sha512" -}}
   {{- $styles = $styles | resources.PostProcess -}}
-  {{- if eq "preload" ($config.options.outputType | default "direct") -}}
+  {{- if compare.Eq "preload" ($config.options.outputType | compare.Default "direct") -}}
     <link rel="preload" href="{{- $styles.Permalink -}}" as="style"
           media="all" integrity="{{- $styles.Data.Integrity -}}"
           onload="this.onload=null;this.rel='stylesheet'">

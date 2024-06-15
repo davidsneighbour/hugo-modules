@@ -7,7 +7,7 @@
   <tbody>
     {{- range $index, $item := $items -}}
       {{- $slices := slice
-          (index $names $index)
+          (collections.Index $names $index)
           (partials.Include "debug-type.html" $item)
           ($item) -}}
       {{- partials.Include "debugging-partials/struct-row.html" $slices -}}

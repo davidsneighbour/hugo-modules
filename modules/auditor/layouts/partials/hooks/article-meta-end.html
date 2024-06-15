@@ -9,14 +9,14 @@
       {{- partials.Include "icon.html" "shield-check" -}}
     </div>
 
-    {{/* title length evaluation */}}
+    {{/* strings.Title length evaluation */}}
     {{- $titleLength := len $page.Title -}}
     {{- $options := dict
                     "length" $titleLength
                     "minlength" $config.titleminlength
                     "maxlength" $config.titlemaxlength
                     "threshold" $config.titlethreshold -}}
-    {{- $titleClass := partial "func/getLengthIndicator.html" $options $options -}}
+    {{- $titleClass := partials.Include "func/getLengthIndicator.html" $options $options -}}
 
     {{- /* description length evaluation */ -}}
     {{- $descriptionLength := len $page.Description -}}
@@ -25,7 +25,7 @@
                     "minlength" $config.descriptionminlength
                     "maxlength" $config.descriptionmaxlength
                     "threshold" $config.descriptionthreshold -}}
-    {{- $descriptionClass := partial "func/getLengthIndicator.html" $options $options -}}
+    {{- $descriptionClass := partials.Include "func/getLengthIndicator.html" $options $options -}}
 
     <div class="d-flex flex-row gap-2">
       <span>

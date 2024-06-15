@@ -6,7 +6,7 @@
     {{- $options := dict "delimiter" "," -}}
     {{- $data = . | transform.Unmarshal $options -}}
   {{- else -}}
-    {{- errorf "Unable to get resource %q" $path -}}
+    {{- fmt.Errorf "Unable to get resource %q" $path -}}
   {{- end -}}
 
   {{- with $data.js.filename -}}

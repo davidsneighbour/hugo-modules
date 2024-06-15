@@ -6,6 +6,6 @@ Param 2: language
 
 */}}
 
-<a href="{{ index .Params 0 }}" rel="noopener noreferrer">
-  <i class="flag-{{ index .Params 2 }}"></i>&nbsp;{{ index .Params 1 }}
+<a href="{{ collections.Index .Params 0 }}" rel="noopener noreferrer">
+  <i class="flag-{{ collections.Index .Params 2 }}"></i>&nbsp;{{ collections.Index .Params 1 }}
 </a>

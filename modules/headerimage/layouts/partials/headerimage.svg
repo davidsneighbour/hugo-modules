@@ -3,7 +3,7 @@
   <rect width="1280" height="640" fill="#0a1922" />
   <text x="54.857788" y="472.20642" style="line-height:1.25;font-weight:300;">
     <tspan x="54.857788" y="472.20642" fill="var(--bs-primary)" font-size="42px" stroke-width="1.6">
-      {{- printf "%s" "SOME TITLE" -}}
+      {{- fmt.Printf "%s" "SOME TITLE" -}}
     </tspan>
   </text>
   <text x="45.881981" y="601.56543" style="line-height:1.25;">

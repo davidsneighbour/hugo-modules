@@ -2,24 +2,24 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
                        xmlns:moz="http://www.mozilla.org/2006/browser/search/">
 {{- $config := site.Params.dnb.opensearch -}}
-{{- $autoupdate := default true $config.enable_autoupdate -}}
-{{- $title := default (printf "%s" site.Title) $config.title -}}
+{{- $autoupdate := compare.Default true $config.enable_autoupdate -}}
+{{- $title := compare.Default (fmt.Printf "%s" site.Title) $config.title -}}
 {{- $messageslug := "%s: %s (see %s)" -}}
 {{- $slug := "opensearch" -}}
-{{- if gt (len $title) 16 }}
-  {{- partial "debug-cli.html"
+{{- if compare.Gt (len $title) 16 }}
+  {{- partials.Include "debug-cli.html"
     (dict
-      "message" (printf $messageslug $slug (i18n "dnb-opensearch-error-title") $config.hookLink)
+      "message" (fmt.Printf $messageslug $slug (lang.Translate "dnb-opensearch-error-title") $config.hookLink)
       "context" .
       "severity" "debug"
     )
   -}}
 {{- end }}
-{{- $description := default (printf "%s %s" "Search on" site.Title) $config.description }}
-{{- if gt (len $description) 1024 }}
-  {{- partial "debug-cli.html"
+{{- $description := compare.Default (fmt.Printf "%s %s" "Search on" site.Title) $config.description }}
+{{- if compare.Gt (len $description) 1024 }}
+  {{- partials.Include "debug-cli.html"
     (dict
-      "message" (printf $messageslug $slug (i18n "dnb-opensearch-error-description") $config.hookLink)
+      "message" (fmt.Printf $messageslug $slug (lang.Translate "dnb-opensearch-error-description") $config.hookLink)
       "context" .
       "severity" "debug"
     )
@@ -27,12 +27,12 @@
 {{- end }}
 {{- $searchUrl := "" }}
 {{- with $config.query_url }}
-  {{- $searchUrl = printf "%s%s" site.BaseURL . }}
+  {{- $searchUrl = fmt.Printf "%s%s" site.BaseURL . }}
 {{- else }}
-  {{- $searchUrl = printf "%s%s" site.BaseURL "search/?q={searchTerms}" }}
-  {{- partial "debug-cli.html"
+  {{- $searchUrl = fmt.Printf "%s%s" site.BaseURL "search/?q={searchTerms}" }}
+  {{- partials.Include "debug-cli.html"
     (dict
-      "message" (printf $messageslug $slug (i18n "dnb-opensearch-error-url") $config.hookLink)
+      "message" (fmt.Printf $messageslug $slug (lang.Translate "dnb-opensearch-error-url") $config.hookLink)
       "context" .
       "severity" "debug"
     )
@@ -40,12 +40,12 @@
 {{- end }}
 {{- $searchForm := "" }}
 {{- with $config.search_form }}
-  {{- $searchForm = printf "%s%s" site.BaseURL . }}
+  {{- $searchForm = fmt.Printf "%s%s" site.BaseURL . }}
 {{- else }}
-  {{- $searchForm = printf "%s%s" site.BaseURL "search/" }}
-  {{- partial "debug-cli.html"
+  {{- $searchForm = fmt.Printf "%s%s" site.BaseURL "search/" }}
+  {{- partials.Include "debug-cli.html"
     (dict
-      "message" (printf $messageslug $slug (i18n "dnb-opensearch-error-form") $config.hookLink)
+      "message" (fmt.Printf $messageslug $slug (lang.Translate "dnb-opensearch-error-form") $config.hookLink)
       "context" .
       "severity" "debug"
     )
@@ -53,12 +53,12 @@
 {{- end }}
 {{- $image := "" }}
 {{- with $config.image }}
-  {{- $image = printf "%s%s" site.BaseURL . }}
+  {{- $image = fmt.Printf "%s%s" site.BaseURL . }}
 {{- else }}
-  {{- $image = printf "%s%s" site.BaseURL "favicon.png" }}
-  {{- partial "debug-cli.html"
+  {{- $image = fmt.Printf "%s%s" site.BaseURL "favicon.png" }}
+  {{- partials.Include "debug-cli.html"
     (dict
-      "message" (printf $messageslug $slug (i18n "dnb-opensearch-error-icon") $config.hookLink)
+      "message" (fmt.Printf $messageslug $slug (lang.Translate "dnb-opensearch-error-icon") $config.hookLink)
       "context" .
       "severity" "debug"
     )
@@ -69,9 +69,9 @@
 <Url type="text/html" method="get" template="{{- $searchUrl -}}">
 <Image height="32" width="32" type="image/png">{{- $image -}}</Image>
 <moz:SearchForm>{{- $searchForm -}}</moz:SearchForm>
-<OutputEncoding>{{- default "UTF-8" $config.output_encoding -}}</OutputEncoding>
-<InputEncoding>{{-  default "UTF-8" $config.input_encoding -}}</InputEncoding>
+<OutputEncoding>{{- compare.Default "UTF-8" $config.output_encoding -}}</OutputEncoding>
+<InputEncoding>{{-  compare.Default "UTF-8" $config.input_encoding -}}</InputEncoding>
 {{- if $autoupdate -}}
-  <Url type="application/opensearchdescription+xml" rel="self" template="{{ "opensearch.xml" | absLangURL }}" />
+  <Url type="application/opensearchdescription+xml" rel="self" template="{{ "opensearch.xml" | urls.AbsLangURL }}" />
 {{- end -}}
 </OpenSearchDescription>
