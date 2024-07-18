@@ -1,4 +1,72 @@
 Changelog
+## [1.2024.26](https://github.com/davidsneighbour/hugo-modules/compare/modules/debug/v1.2024.25...modules/debug/v1.2024.26) (2024-07-18)
+
+
+### Documentation
+
+* **fix:** update README.md with latest requirements and some typos ([3e7af36](https://github.com/davidsneighbour/hugo-modules/commit/3e7af36a6ef554a14d4b1d24ec5131c5c80bc32e))
+
+
+### Theme
+
+* **feat:** add dynamic viewport size to indicator bar ([7927c81](https://github.com/davidsneighbour/hugo-modules/commit/7927c810fc59175a7dfe74d49d17d9c1561b4e29))
+* **feat:** add new .Body method to GitInfo object ([7669c59](https://github.com/davidsneighbour/hugo-modules/commit/7669c592c5d62ec31d0ee6b13db6b6db95e40b57))
+
+
+### Chore
+
+* **deps:** update davidsneighbour to v2024.3.24 ([#905](https://github.com/davidsneighbour/hugo-modules/issues/905)) ([51a8d64](https://github.com/davidsneighbour/hugo-modules/commit/51a8d64c1e5a054b255bf40c9b283fc7fb9e2629))
+* **deps:** update davidsneighbour to v2024.3.24 ([#906](https://github.com/davidsneighbour/hugo-modules/issues/906)) ([d762f1e](https://github.com/davidsneighbour/hugo-modules/commit/d762f1e7071df69cb3f85a6e39e954d6a41a44a4))
+* **deps:** update davidsneighbour to v2024.3.24 ([#907](https://github.com/davidsneighbour/hugo-modules/issues/907)) ([afa72ca](https://github.com/davidsneighbour/hugo-modules/commit/afa72caf9366bb7edf2f4493f1b05ac759b914e1))
+* **deps:** update davidsneighbour to v2024.3.24 ([#908](https://github.com/davidsneighbour/hugo-modules/issues/908)) ([1d4462b](https://github.com/davidsneighbour/hugo-modules/commit/1d4462b1cb8fdc6c9122fcb997286c642ee920c8))
+* **deps:** update davidsneighbour to v2024.3.24 ([#913](https://github.com/davidsneighbour/hugo-modules/issues/913)) ([9a86314](https://github.com/davidsneighbour/hugo-modules/commit/9a86314c25d5690bb2d88af7d661edacf089442d))
+* **deps:** update davidsneighbour to v2024.3.24 ([#914](https://github.com/davidsneighbour/hugo-modules/issues/914)) ([d1eca45](https://github.com/davidsneighbour/hugo-modules/commit/d1eca45aecda8b8e1cebd8ea58780b16e4b5f736))
+* **deps:** update davidsneighbour to v2024.3.24 ([#915](https://github.com/davidsneighbour/hugo-modules/issues/915)) ([0a5dd3e](https://github.com/davidsneighbour/hugo-modules/commit/0a5dd3e32a20518318f6947a0309f59c9a3cb535))
+* **deps:** update davidsneighbour to v2024.3.24 ([#916](https://github.com/davidsneighbour/hugo-modules/issues/916)) ([bb4d9ce](https://github.com/davidsneighbour/hugo-modules/commit/bb4d9cef83383a99d38a4f510462fff773d56dc9))
+* **deps:** update davidsneighbour to v2024.3.24 ([#917](https://github.com/davidsneighbour/hugo-modules/issues/917)) ([499f52f](https://github.com/davidsneighbour/hugo-modules/commit/499f52f7e270c4ea706895ceb7ab7efdd4a12c72))
+* **deps:** update dependencies ([e68f151](https://github.com/davidsneighbour/hugo-modules/commit/e68f15139ff215180c581141c0a7351226aa1746))
+* **deps:** update dependencies ([2631d48](https://github.com/davidsneighbour/hugo-modules/commit/2631d48a9c15f569b2e9cbb9e5d6060eadbeee2c))
+* **deps:** update dependencies ([306e8c1](https://github.com/davidsneighbour/hugo-modules/commit/306e8c1738eb59aa22cf55cb1198f367326b5ac5))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#918](https://github.com/davidsneighbour/hugo-modules/issues/918)) ([30d1d4d](https://github.com/davidsneighbour/hugo-modules/commit/30d1d4d11ff7a4a8401c433d4957e7fadb734dce))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#919](https://github.com/davidsneighbour/hugo-modules/issues/919)) ([4c300ca](https://github.com/davidsneighbour/hugo-modules/commit/4c300cabb7ca00adb6cc26287deee67adc602457))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#920](https://github.com/davidsneighbour/hugo-modules/issues/920)) ([d605fce](https://github.com/davidsneighbour/hugo-modules/commit/d605fce21d2ffcd0851d23236dc00d02b8f68e82))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#921](https://github.com/davidsneighbour/hugo-modules/issues/921)) ([6ed467c](https://github.com/davidsneighbour/hugo-modules/commit/6ed467c0e3769ae38feaa0038c706de73450ba0d))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#922](https://github.com/davidsneighbour/hugo-modules/issues/922)) ([4450ae7](https://github.com/davidsneighbour/hugo-modules/commit/4450ae783dd245d3ea00e9375c6f0b5fb25042fd))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#923](https://github.com/davidsneighbour/hugo-modules/issues/923)) ([4457844](https://github.com/davidsneighbour/hugo-modules/commit/445784403a89e7a79d874b5449305a0ebea6899a))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#924](https://github.com/davidsneighbour/hugo-modules/issues/924)) ([9b3316e](https://github.com/davidsneighbour/hugo-modules/commit/9b3316e2784a664fe2987902fd66e4d6852b99de))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#925](https://github.com/davidsneighbour/hugo-modules/issues/925)) ([6bf6233](https://github.com/davidsneighbour/hugo-modules/commit/6bf62338f57f9b796eeb7057b1ab32e39d849479))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#926](https://github.com/davidsneighbour/hugo-modules/issues/926)) ([7455899](https://github.com/davidsneighbour/hugo-modules/commit/7455899501234706036bd56d256accf76a663d7c))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#927](https://github.com/davidsneighbour/hugo-modules/issues/927)) ([047ff62](https://github.com/davidsneighbour/hugo-modules/commit/047ff6276c4dbbc1bdee2c396de9101210a6972f))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#928](https://github.com/davidsneighbour/hugo-modules/issues/928)) ([5dffb70](https://github.com/davidsneighbour/hugo-modules/commit/5dffb7046e00fd23523b5b6dcbbddde50aa10345))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#929](https://github.com/davidsneighbour/hugo-modules/issues/929)) ([7725f78](https://github.com/davidsneighbour/hugo-modules/commit/7725f78f2136d09a7cb56d586422bfb857c2065e))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#930](https://github.com/davidsneighbour/hugo-modules/issues/930)) ([0fbfd0c](https://github.com/davidsneighbour/hugo-modules/commit/0fbfd0c57582efb2362fed7f34c18848fdcfef28))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#931](https://github.com/davidsneighbour/hugo-modules/issues/931)) ([4385f5a](https://github.com/davidsneighbour/hugo-modules/commit/4385f5a8a70d6f43eb4e1d7c5782913bd71c2f43))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#932](https://github.com/davidsneighbour/hugo-modules/issues/932)) ([3b87536](https://github.com/davidsneighbour/hugo-modules/commit/3b875364a37017100b5f4dc86f315b94708d07ae))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#933](https://github.com/davidsneighbour/hugo-modules/issues/933)) ([93df395](https://github.com/davidsneighbour/hugo-modules/commit/93df3958dca7b181d43dcd7056ac91210ebdf510))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#934](https://github.com/davidsneighbour/hugo-modules/issues/934)) ([31c524b](https://github.com/davidsneighbour/hugo-modules/commit/31c524b580c91305c237a043e2343dcc175dd1a9))
+* **deps:** update dependency @tabler/icons to v3.10.0 ([#904](https://github.com/davidsneighbour/hugo-modules/issues/904)) ([9b088fd](https://github.com/davidsneighbour/hugo-modules/commit/9b088fdc276a0284a3faaae2b0ee32e81adab014))
+* **deps:** update dependency @tabler/icons to v3.7.0 ([#897](https://github.com/davidsneighbour/hugo-modules/issues/897)) ([be91883](https://github.com/davidsneighbour/hugo-modules/commit/be91883319d7d16a3aa98921babd4d5d0b5db4a6))
+* **deps:** update dependency @tabler/icons to v3.8.0 ([#901](https://github.com/davidsneighbour/hugo-modules/issues/901)) ([d98a77a](https://github.com/davidsneighbour/hugo-modules/commit/d98a77ad5f9817b6d90495ad23ec20276ac070f4))
+* **deps:** update dependency @tabler/icons to v3.9.0 ([#902](https://github.com/davidsneighbour/hugo-modules/issues/902)) ([302980d](https://github.com/davidsneighbour/hugo-modules/commit/302980d44808e69940bd9ee305f284abe28bdd2d))
+* **deps:** update dependency @types/node to v20.14.10 ([#903](https://github.com/davidsneighbour/hugo-modules/issues/903)) ([a1071df](https://github.com/davidsneighbour/hugo-modules/commit/a1071df0f33fd40088c0cb2e8799d143b4e5f5de))
+* **deps:** update dependency @types/node to v20.14.5 ([#891](https://github.com/davidsneighbour/hugo-modules/issues/891)) ([e3745e3](https://github.com/davidsneighbour/hugo-modules/commit/e3745e3eedc269563a69f070e9517b6f98cb79c8))
+* **deps:** update dependency @types/node to v20.14.6 ([#893](https://github.com/davidsneighbour/hugo-modules/issues/893)) ([6632208](https://github.com/davidsneighbour/hugo-modules/commit/6632208c2681dd1bad91661408c38b2cc6bd83c7))
+* **deps:** update dependency @types/node to v20.14.7 ([#895](https://github.com/davidsneighbour/hugo-modules/issues/895)) ([48ea690](https://github.com/davidsneighbour/hugo-modules/commit/48ea6902bc4f26f1a1c0117c062ec3f8d90c0b36))
+* **deps:** update dependency @types/node to v20.14.8 ([#896](https://github.com/davidsneighbour/hugo-modules/issues/896)) ([8658a36](https://github.com/davidsneighbour/hugo-modules/commit/8658a361408f4dcd13227d6d86ce8ef503e2b668))
+* **deps:** update dependency @types/node to v20.14.9 ([#898](https://github.com/davidsneighbour/hugo-modules/issues/898)) ([b09e261](https://github.com/davidsneighbour/hugo-modules/commit/b09e261836e7937807d8c0a5d86c6954fc5e8d37))
+* **deps:** update dependency go to v1.22.5 ([#900](https://github.com/davidsneighbour/hugo-modules/issues/900)) ([90a0fde](https://github.com/davidsneighbour/hugo-modules/commit/90a0fdeaa88b17b2fb1e80eef9a2d8630aeca88d))
+* **deps:** update dependency typescript to v5.5.2 ([#894](https://github.com/davidsneighbour/hugo-modules/issues/894)) ([99a0409](https://github.com/davidsneighbour/hugo-modules/commit/99a04092758970bb934919488e1c527c4994921f))
+* **deps:** update dependency typescript to v5.5.3 ([#899](https://github.com/davidsneighbour/hugo-modules/issues/899)) ([454c1a0](https://github.com/davidsneighbour/hugo-modules/commit/454c1a07a19415004045a13618b581ee68895d35))
+* **release:** modules/auditor/v1.2024.12 ([ce9c22b](https://github.com/davidsneighbour/hugo-modules/commit/ce9c22b1d28924afc8f3c5a537a2029eb93bb03e))
+* **release:** modules/auditor/v1.2024.13 ([f17d67d](https://github.com/davidsneighbour/hugo-modules/commit/f17d67d7442b4106100af8c0cd4c6113bcfcb572))
+* **release:** modules/netlification/v1.2024.5 ([8fa7a66](https://github.com/davidsneighbour/hugo-modules/commit/8fa7a665f9e22212d05731f8df6e218c4230ebfc))
+* **release:** modules/security/v1.2024.1 ([781f2ca](https://github.com/davidsneighbour/hugo-modules/commit/781f2ca3a8cdb72108d25b6c61ed0ec5c2e8a37f))
+* **release:** modules/youtube/v1.2024.5 ([6240130](https://github.com/davidsneighbour/hugo-modules/commit/62401303d078f0ba5e42e2c92cabe5e6601bb182))
+* **release:** update repo data files ([2466538](https://github.com/davidsneighbour/hugo-modules/commit/2466538e923ba5f07bfaa68c79931e841fdf6981))
+* **release:** update repo data files ([86b48f4](https://github.com/davidsneighbour/hugo-modules/commit/86b48f45ab0f62593c743d87cf07cf3f8abd245b))
+* **release:** update repo data files ([cb4d061](https://github.com/davidsneighbour/hugo-modules/commit/cb4d061a3b93a5f39a3eafa5cfc3381a32c25bd2))
+* **release:** update repo data files ([7411d7c](https://github.com/davidsneighbour/hugo-modules/commit/7411d7c68055683af2baa0a36163bd541ad13cd0))
+
 ## [1.2024.25](https://github.com/davidsneighbour/hugo-modules/compare/modules/debug/v1.2024.24...modules/debug/v1.2024.25) (2024-06-15)
 
 
