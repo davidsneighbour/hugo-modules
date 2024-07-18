@@ -1,7 +1,7 @@
 {{ $gitInfoVarNames   := (collections.Slice "Hash" "AbbreviatedHash" "Subject" "AuthorName"
-                                "AuthorEmail" "AuthorDate") }}
+                                "AuthorEmail" "AuthorDate" "CommitDate" "Body") }}
 {{ $gitInfoVarSymbols := (collections.Slice .value.Hash .value.AbbreviatedHash .value.Subject .value.AuthorName
-                                .value.AuthorEmail .value.AuthorDate ) }}
+                                .value.AuthorEmail .value.AuthorDate .value.CommitDate .value.Body ) }}
       <div class="table-responsive">
 <table class="debugprint">
   <tr>
