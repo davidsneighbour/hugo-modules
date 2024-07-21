@@ -1,4 +1,28 @@
 Changelog
+## [1.2024.14](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2024.13...modules/auditor/v1.2024.14) (2024-07-21)
+
+
+### Documentation
+
+* **fix:** update README.md with latest requirements and some typos ([3e7af36](https://github.com/davidsneighbour/hugo-modules/commit/3e7af36a6ef554a14d4b1d24ec5131c5c80bc32e))
+
+
+### Theme
+
+* **feat:** add new .Body method to GitInfo object ([7669c59](https://github.com/davidsneighbour/hugo-modules/commit/7669c592c5d62ec31d0ee6b13db6b6db95e40b57))
+
+
+### Bug Fixes
+
+* **auditor:** make indicator bar fixed and add formatting for small devices ([fbcdebf](https://github.com/davidsneighbour/hugo-modules/commit/fbcdebf15d0778f84eaff2f6288cb139604932ac))
+
+
+### Chore
+
+* **deps:** update dependencies ([e68f151](https://github.com/davidsneighbour/hugo-modules/commit/e68f15139ff215180c581141c0a7351226aa1746))
+* **release:** modules/debug/v1.2024.26 ([203f639](https://github.com/davidsneighbour/hugo-modules/commit/203f639f06c8dc3614e9f08001343c456fca6285))
+* **release:** update repo data files ([a627402](https://github.com/davidsneighbour/hugo-modules/commit/a6274020d4cb5a556ccb0975241709d66448e4a2))
+
 ## [1.2024.13](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2024.12...modules/auditor/v1.2024.13) (2024-07-18)
 
 
