@@ -1,4 +1,47 @@
 Changelog
+## [1.2024.15](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2024.13...modules/auditor/v1.2024.15) (2024-07-21)
+
+
+### Documentation
+
+* **fix:** update README.md with latest requirements and some typos ([3e7af36](https://github.com/davidsneighbour/hugo-modules/commit/3e7af36a6ef554a14d4b1d24ec5131c5c80bc32e))
+
+
+### Theme
+
+* **feat:** add new .Body method to GitInfo object ([7669c59](https://github.com/davidsneighbour/hugo-modules/commit/7669c592c5d62ec31d0ee6b13db6b6db95e40b57))
+
+
+### Bug Fixes
+
+* **auditor:** make indicator bar fixed and add formatting for small devices ([5978efd](https://github.com/davidsneighbour/hugo-modules/commit/5978efdca0df40e9d1ade53ba556c7f32d77f93f))
+
+
+### Chore
+
+* **deps:** Bump ws from 8.17.0 to 8.18.0 in /modules/sitemap ([#939](https://github.com/davidsneighbour/hugo-modules/issues/939)) ([4b9c327](https://github.com/davidsneighbour/hugo-modules/commit/4b9c32776af07d1708efba8324a8911679b4305b)), closes [#2229](https://github.com/davidsneighbour/hugo-modules/issues/2229) [#2231](https://github.com/davidsneighbour/hugo-modules/issues/2231) [websockets/ws#2230](https://github.com/websockets/ws/issues/2230) [#2229](https://github.com/davidsneighbour/hugo-modules/issues/2229) [#2231](https://github.com/davidsneighbour/hugo-modules/issues/2231)
+* **deps:** update dependencies ([e68f151](https://github.com/davidsneighbour/hugo-modules/commit/e68f15139ff215180c581141c0a7351226aa1746))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#935](https://github.com/davidsneighbour/hugo-modules/issues/935)) ([db52ef9](https://github.com/davidsneighbour/hugo-modules/commit/db52ef9446e69af7ada63087817b02d3d618ce4c))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#936](https://github.com/davidsneighbour/hugo-modules/issues/936)) ([34b96c9](https://github.com/davidsneighbour/hugo-modules/commit/34b96c909e9609214fae33547d17b4d748b2eb24))
+* **deps:** update dependency @davidsneighbour/release-config to v2024.3.24 ([#937](https://github.com/davidsneighbour/hugo-modules/issues/937)) ([7f7cf69](https://github.com/davidsneighbour/hugo-modules/commit/7f7cf69c13385aa945cdd6e1e19fb921703c7c19))
+* **deps:** update dependency @tabler/icons to v3.11.0 ([#938](https://github.com/davidsneighbour/hugo-modules/issues/938)) ([5319db9](https://github.com/davidsneighbour/hugo-modules/commit/5319db96716ed9d3aee3226805fa404e8031d948))
+* **release:** modules/auditor/v1.2024.14 ([91c7c61](https://github.com/davidsneighbour/hugo-modules/commit/91c7c618bed1253a0b5053d214445061f029312f))
+* **release:** modules/debug/v1.2024.26 ([203f639](https://github.com/davidsneighbour/hugo-modules/commit/203f639f06c8dc3614e9f08001343c456fca6285))
+* **release:** update repo data files ([a627402](https://github.com/davidsneighbour/hugo-modules/commit/a6274020d4cb5a556ccb0975241709d66448e4a2))
+
+
+### Build System
+
+* **deps:** Bump @davidsneighbour/markdownlint-config from 2024.3.23 to 2024.3.25 ([#942](https://github.com/davidsneighbour/hugo-modules/issues/942)) ([cd2767b](https://github.com/davidsneighbour/hugo-modules/commit/cd2767b40692c2045823c25feeba9faf9a080408)), closes [#1453](https://github.com/davidsneighbour/hugo-modules/issues/1453) [#1452](https://github.com/davidsneighbour/hugo-modules/issues/1452) [#1451](https://github.com/davidsneighbour/hugo-modules/issues/1451) [#1450](https://github.com/davidsneighbour/hugo-modules/issues/1450) [#1447](https://github.com/davidsneighbour/hugo-modules/issues/1447) [#1404](https://github.com/davidsneighbour/hugo-modules/issues/1404)
+* **deps:** Bump @davidsneighbour/prettier-config from 2024.3.23 to 2024.3.24 ([#911](https://github.com/davidsneighbour/hugo-modules/issues/911)) ([30f353a](https://github.com/davidsneighbour/hugo-modules/commit/30f353a7b6e0ab1f15b784c7ee8677a6406e97b2)), closes [#1445](https://github.com/davidsneighbour/hugo-modules/issues/1445) [#1444](https://github.com/davidsneighbour/hugo-modules/issues/1444) [#1443](https://github.com/davidsneighbour/hugo-modules/issues/1443) [#1442](https://github.com/davidsneighbour/hugo-modules/issues/1442) [#1441](https://github.com/davidsneighbour/hugo-modules/issues/1441) [#1440](https://github.com/davidsneighbour/hugo-modules/issues/1440) [#1438](https://github.com/davidsneighbour/hugo-modules/issues/1438) [#1437](https://github.com/davidsneighbour/hugo-modules/issues/1437)
+* **deps:** Bump @davidsneighbour/remark-config from 2024.3.23 to 2024.3.25 ([#943](https://github.com/davidsneighbour/hugo-modules/issues/943)) ([e83f25b](https://github.com/davidsneighbour/hugo-modules/commit/e83f25b4a01c171c6b83cb5736fe9fe5a735c7b3)), closes [#1453](https://github.com/davidsneighbour/hugo-modules/issues/1453) [#1452](https://github.com/davidsneighbour/hugo-modules/issues/1452) [#1451](https://github.com/davidsneighbour/hugo-modules/issues/1451) [#1450](https://github.com/davidsneighbour/hugo-modules/issues/1450) [#1447](https://github.com/davidsneighbour/hugo-modules/issues/1447) [#1404](https://github.com/davidsneighbour/hugo-modules/issues/1404)
+* **deps:** Bump @davidsneighbour/tools from 2024.3.23 to 2024.3.24 ([#912](https://github.com/davidsneighbour/hugo-modules/issues/912)) ([02fbba9](https://github.com/davidsneighbour/hugo-modules/commit/02fbba91cb3c1a22a9a7c98f446541112ccd9013)), closes [#1445](https://github.com/davidsneighbour/hugo-modules/issues/1445) [#1444](https://github.com/davidsneighbour/hugo-modules/issues/1444) [#1443](https://github.com/davidsneighbour/hugo-modules/issues/1443) [#1442](https://github.com/davidsneighbour/hugo-modules/issues/1442) [#1441](https://github.com/davidsneighbour/hugo-modules/issues/1441) [#1440](https://github.com/davidsneighbour/hugo-modules/issues/1440) [#1438](https://github.com/davidsneighbour/hugo-modules/issues/1438) [#1437](https://github.com/davidsneighbour/hugo-modules/issues/1437)
+* **deps:** Bump braces from 3.0.2 to 3.0.3 in /modules/headerimage ([#870](https://github.com/davidsneighbour/hugo-modules/issues/870)) ([1c58abb](https://github.com/davidsneighbour/hugo-modules/commit/1c58abbe82b0995d24d42093601c31fa113e9886)), closes [#40](https://github.com/davidsneighbour/hugo-modules/issues/40) [#37](https://github.com/davidsneighbour/hugo-modules/issues/37) [#27](https://github.com/davidsneighbour/hugo-modules/issues/27)
+* **deps:** Bump ws from 8.16.0 to 8.18.0 in /modules/publisher ([#941](https://github.com/davidsneighbour/hugo-modules/issues/941)) ([df0576e](https://github.com/davidsneighbour/hugo-modules/commit/df0576e9d7f11f69e1d589df3aa4cb7cc4f9850b)), closes [#2229](https://github.com/davidsneighbour/hugo-modules/issues/2229) [#2231](https://github.com/davidsneighbour/hugo-modules/issues/2231) [websockets/ws#2230](https://github.com/websockets/ws/issues/2230) [#2229](https://github.com/davidsneighbour/hugo-modules/issues/2229) [#2231](https://github.com/davidsneighbour/hugo-modules/issues/2231)
+* **deps:** Bump ws from 8.17.0 to 8.17.1 in /modules/security ([#892](https://github.com/davidsneighbour/hugo-modules/issues/892)) ([c0a549f](https://github.com/davidsneighbour/hugo-modules/commit/c0a549fd6bda6cf893994e440de93f8546046946)), closes [#2231](https://github.com/davidsneighbour/hugo-modules/issues/2231) [websockets/ws#2230](https://github.com/websockets/ws/issues/2230) [#2231](https://github.com/davidsneighbour/hugo-modules/issues/2231)
+* **deps:** Bump ws from 8.17.0 to 8.18.0 in /modules/opensearch ([#944](https://github.com/davidsneighbour/hugo-modules/issues/944)) ([86bb113](https://github.com/davidsneighbour/hugo-modules/commit/86bb11352d4162da47af3770d9850d08fe53f48f)), closes [#2229](https://github.com/davidsneighbour/hugo-modules/issues/2229) [#2231](https://github.com/davidsneighbour/hugo-modules/issues/2231) [websockets/ws#2230](https://github.com/websockets/ws/issues/2230) [#2229](https://github.com/davidsneighbour/hugo-modules/issues/2229) [#2231](https://github.com/davidsneighbour/hugo-modules/issues/2231)
+* **deps:** Bump ws from 8.17.0 to 8.18.0 in /modules/robots ([#940](https://github.com/davidsneighbour/hugo-modules/issues/940)) ([9826d29](https://github.com/davidsneighbour/hugo-modules/commit/9826d29b9fed9e0dd388786a8708e3f65133aec2)), closes [#2229](https://github.com/davidsneighbour/hugo-modules/issues/2229) [#2231](https://github.com/davidsneighbour/hugo-modules/issues/2231) [websockets/ws#2230](https://github.com/websockets/ws/issues/2230) [#2229](https://github.com/davidsneighbour/hugo-modules/issues/2229) [#2231](https://github.com/davidsneighbour/hugo-modules/issues/2231)
+
 ## [1.2024.14](https://github.com/davidsneighbour/hugo-modules/compare/modules/auditor/v1.2024.13...modules/auditor/v1.2024.14) (2024-07-21)
 
 
