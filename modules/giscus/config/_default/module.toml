@@ -14,7 +14,10 @@ target = "assets/dnb/giscus.json"
 source = "documentation"
 target = "content/gohugo/giscus"
 
-
 [[mounts]]
 source = "layouts"
 target = "layouts"
+
+[[mounts]]
+source = "static"
+target = "static"
