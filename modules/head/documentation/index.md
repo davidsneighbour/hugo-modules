@@ -178,7 +178,6 @@ placename = ""
 
 `hugo-head` implements template hooks via [`hugo-hooks`](https://github.com/davidsneighbour/hugo-hooks) and provides the following hooks:
 
-{{< b5/div class="table--hooks" >}}
 | Hook | Description |
 | --- | :--- |
 | head-init | hooks in after the opening `head` tag. Do not open this to output anything. Just to initialise any of your plugins. |
@@ -198,7 +197,6 @@ placename = ""
 | head-post-alternates | |
 | head-post-verification | |
 | head-end | hooks in at the end of the `head` right before the closing tag. |
-{{< / b5/div >}}
 
 ## Sites and Projects using `hugo-head`
 
