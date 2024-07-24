@@ -56,9 +56,7 @@ config:
   sitemap: false
 ```
 
-{{< optionstable caption="Page Frontmatter">}}
 | sitemap | boolean | true | include this page in the sitemap |
-{{< /optionstable >}}
 
 Without any configuration the default is true, meaning to include any page into the sitemap.
 
