@@ -1,32 +1,43 @@
 ################################################################################
 # Netlification v{{ site.Data.dnb.netlification.build.version }}
 ################################################################################
+
+################################################################################
+# redirects from content aliases
+################################################################################
 {{/* range through single aliases */}}
 {{- range $p := site.Pages -}}
-  {{- range .Aliases -}}
+  {{ range .Aliases -}}
     {{- partial
           "partials/dnb-netlification/redirection.html" (
           slice "%s %s %d" (. | fmt.Printf "%-40s") $p.RelPermalink (cast.ToInt 301)
     ) -}}
   {{- end -}}
-{{- end -}}
-
+{{- end }}
+################################################################################
+# redirects from configuration in site.Params.dnb.netlification.redirects
+################################################################################
 {{/* range through configured redirects */}}
-{{/* @todo this probably needs some rewriting */}}
-{{- with site.Data.dnb.netlification.config.redirects -}}
-  {{- range . -}}
+{{- with site.Params.dnb.netlification.redirects -}}
+  {{ range . -}}
     {{- if (collections.Index . "netlify") -}}
-      {{- fmt.Printf "%s*" .netlify | fmt.Printf "%-40s" }} {{ fmt.Printf "%s:splat" site.BaseURL | fmt.Printf "%-40s" }} 301!
+      {{- partial
+            "partials/dnb-netlification/redirection.html" (
+            slice "%s %s %d!" (printf "%s%s" .netlify "*") (site.BaseURL | fmt.Printf "%s:splat") (cast.ToInt 301)
+      ) -}}
     {{- else -}}
-      {{- .from | fmt.Printf "%-40s" }} {{ .to | fmt.Printf "%-40s" }}{{ with .status | compare.Default 301 }} {{ cast.ToInt . }}{{ end }}
+      {{- partial
+            "partials/dnb-netlification/redirection.html" (
+            slice "%s %s %d" .from .to (.status | compare.Default 301)
+      ) -}}
     {{- end -}}
   {{- end -}}
-{{- end -}}
-
+{{- end }}
 ################################################################################
-# add a 404 redirect to /404
+# error pages redirections
 ################################################################################
-{{ partial
+{{/* error pages */}}
+{{- partial
       "partials/dnb-netlification/redirection.html" (
       slice "%s %s %d" "/*" "/404" 404
 ) -}}
