@@ -47,9 +47,11 @@
     {{- with site.LanguageCode -}}
       <language>{{- . -}}</language>
     {{- end -}}
-    {{- with site.Author.email -}}
-      <managingEditor>{{.}}</managingEditor>
-      <webMaster>{{.}}</webMaster>
+    {{- with site.Params.Author -}}
+      {{- with .email -}}
+        <managingEditor>{{.}}</managingEditor>
+        <webMaster>{{.}}</webMaster>
+      {{- end -}}
     {{- end -}}
     {{- with site.Copyright -}}
       <copyright>{{- . -}}</copyright>
@@ -87,9 +89,9 @@
         <pubDate>
           {{- .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safe.HTML -}}
         </pubDate>
-        {{- with site.Author.name -}}
+        {{/* {{- with site.Author.name -}}
           <author>{{- . -}}</author>
-        {{- end -}}
+        {{- end -}} */}}
         <guid>{{- .Permalink -}}</guid>
         <description>
           {{- $description := partials.IncludeCached "func/getDescription.html" . . -}}

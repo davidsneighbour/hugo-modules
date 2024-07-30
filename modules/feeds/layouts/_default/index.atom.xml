@@ -75,15 +75,14 @@
         </author>
       {{- else -}}
         <author>
-          {{/* @TODO site.Author is deprecated */}}
           <name>
-            {{- with site.Author.name -}}
+            {{- with site.Params.Author.name -}}
               {{- . -}}
             {{- else -}}
               {{- site.Title -}}
             {{- end -}}
           </name>
-          {{- with site.Author.homepage -}}
+          {{- with site.Params.Author.homepage -}}
             <uri>{{- . -}}</uri>
           {{- end -}}
         </author>
