@@ -34,8 +34,7 @@
 {{- end -}}
 
 {{/* twitter:creator */}}
-{{/* @TODO site.Author is deprecated */}}
-{{- with site.Author.twitter -}}
+{{- with site.Params.Author.twitter -}}
 	{{- $dict = $dict | collections.Merge ( dict "twitter:creator" (fmt.Printf "@%s" .) ) -}}
 {{- end -}}
 
