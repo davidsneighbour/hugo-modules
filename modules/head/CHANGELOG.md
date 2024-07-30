@@ -1,4 +1,28 @@
 Changelog
+## [1.2024.12](https://github.com/davidsneighbour/hugo-modules/compare/modules/head/v1.2024.11...modules/head/v1.2024.12) (2024-07-30)
+
+
+### Documentation
+
+* update documentation ([0c86cff](https://github.com/davidsneighbour/hugo-modules/commit/0c86cfff082d38e8c0516346ef535a51287dcb2a))
+
+
+### Bug Fixes
+
+* move author markup from site to site.Params ([9107dd0](https://github.com/davidsneighbour/hugo-modules/commit/9107dd0e60342ea3d46f6c7f76720314ac59095e))
+* move author markup from site to site.Params ([19dd80d](https://github.com/davidsneighbour/hugo-modules/commit/19dd80d765ee033d05af61e63e113f24c44c7387))
+* move author markup from site to site.Params ([6110be3](https://github.com/davidsneighbour/hugo-modules/commit/6110be3d84497a0f5b0262393ee1ec407b24bd80))
+
+
+### Chore
+
+* **release:** modules/feeds/v1.2024.10 ([faffd40](https://github.com/davidsneighbour/hugo-modules/commit/faffd40d8a41288d53762b13efda8092aaeea85c))
+* **release:** modules/modder/v1.2024.2 ([6879031](https://github.com/davidsneighbour/hugo-modules/commit/6879031507adf608f8d51333d150a2ef3658b9d4))
+* **release:** modules/social/v1.2024.1 ([ba00921](https://github.com/davidsneighbour/hugo-modules/commit/ba0092143022e975857c4d7190448f1175a92f15))
+* **release:** update repo data files ([a1f4ffa](https://github.com/davidsneighbour/hugo-modules/commit/a1f4ffa234f57e22a61fcca0f93f8768fcdff543))
+* **release:** update repo data files ([c7f7ac4](https://github.com/davidsneighbour/hugo-modules/commit/c7f7ac411286f83baccce1d05e02d1f987510d02))
+* **release:** update repo data files ([5c57731](https://github.com/davidsneighbour/hugo-modules/commit/5c57731b9f6ee56d0681c975218590d4f4bb9d65))
+
 ## [1.2024.11](https://github.com/davidsneighbour/hugo-modules/compare/modules/head/v1.2024.10...modules/head/v1.2024.11) (2024-07-30)
 
 
