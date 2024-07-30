@@ -1,4 +1,16 @@
 Changelog
+## [1.2024.7](https://github.com/davidsneighbour/hugo-modules/compare/modules/netlification/v1.2024.6...modules/netlification/v1.2024.7) (2024-07-30)
+
+
+### Bug Fixes
+
+* cleanup output of redirection layout ([3ea7d3e](https://github.com/davidsneighbour/hugo-modules/commit/3ea7d3ea8ce47c383cee500bac2676ac72769dfa))
+
+
+### Chore
+
+* **release:** update repo data files ([dd14e43](https://github.com/davidsneighbour/hugo-modules/commit/dd14e43be6cfd5a94412468a6dee9c7b155f9214))
+
 ## [1.2024.6](https://github.com/davidsneighbour/hugo-modules/compare/modules/netlification/v1.2024.5...modules/netlification/v1.2024.6) (2024-07-30)
 
 
