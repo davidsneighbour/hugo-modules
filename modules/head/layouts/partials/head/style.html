@@ -3,8 +3,8 @@
 {{- if compare.Eq "postcss" ($config.method | compare.Default "postcss") -}}
   {{- $entrypoint := $config.entrypoint | compare.Default "scss/style.scss" -}}
   {{- $styles := resources.Get $entrypoint -}}
-  {{- $styles = $styles | resources.ToCSS $config.options -}}
-  {{- $styles = $styles | resources.PostCSS -}}
+  {{- $styles = $styles | css.Sass $config.options -}}
+  {{- $styles = $styles | css.PostCSS -}}
   {{- $styles = $styles | resources.Minify -}}
   {{- $styles = $styles | resources.Fingerprint "sha512" -}}
   {{- $styles = $styles | resources.PostProcess -}}
