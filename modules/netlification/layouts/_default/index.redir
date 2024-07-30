@@ -4,10 +4,15 @@
 {{/* range through single aliases */}}
 {{- range $p := site.Pages -}}
   {{- range .Aliases -}}
-    {{- . | fmt.Printf "%-40s" }} {{ $p.RelPermalink }} {{ cast.ToInt 301 }}
-  {{ end -}}
-{{- end }}
-{{/* range through config redirects */}}
+    {{- partial
+          "partials/dnb-netlification/redirection.html" (
+          slice "%s %s %d" (. | fmt.Printf "%-40s") $p.RelPermalink (cast.ToInt 301)
+    ) -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* range through configured redirects */}}
+{{/* @todo this probably needs some rewriting */}}
 {{- with site.Data.dnb.netlification.config.redirects -}}
   {{- range . -}}
     {{- if (collections.Index . "netlify") -}}
@@ -17,6 +22,19 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
-{{- /* math.Add a 404 redirect to 404.html */ -}}
-{{ "/*" | fmt.Printf "%-40s" }} {{ "/404" | fmt.Printf "%-40s" }} 404
 
+################################################################################
+# add a 404 redirect to /404
+################################################################################
+{{ partial
+      "partials/dnb-netlification/redirection.html" (
+      slice "%s %s %d" "/*" "/404" 404
+) -}}
+
+{{- /* partial to print redirections */ -}}
+{{ define "partials/dnb-netlification/redirection.html" }}
+  {{- printf (collections.Index . 0)
+        (collections.Index . 1 | fmt.Printf "%-50s")
+        (collections.Index . 2 | fmt.Printf "%-50s")
+        (collections.Index . 3 | cast.ToInt) }}
+{{ end }}

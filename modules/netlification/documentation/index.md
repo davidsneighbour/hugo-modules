@@ -97,6 +97,8 @@ aliases:
   - url3
 ```
 
+Note: Make sure the urls in your aliases have a leading slash or a leading domain with http(s) for proper work.
+
 ### Additional Redirects
 
 * A redirect for 404 errors to Hugo's 404 page (`/layouts/404.html`) - no action by you required
