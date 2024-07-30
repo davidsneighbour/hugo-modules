@@ -47,7 +47,7 @@ will import all plugged in Javascripts that are registered via modules. For this
 
 ```scss
 {{- $sassTemplate := resources.Get "scss/plugins.scss" -}}
-{{- $style := $sassTemplate | resources.ExecuteAsTemplate "plugins.scss" . | resources.ToCSS -}}
+{{- $style := $sassTemplate | resources.ExecuteAsTemplate "plugins.scss" . | css.Sass -}}
 ```
 
 Afterward you can [concatenate it to your own styles](https://gohugo.io/hugo-pipes/bundling/) with `$style` and complete processing.
