@@ -7,6 +7,25 @@ upgradeInsecureRequests = true
 # cloudflare = Cloudflare Pages
 mode = "netlify"
 # extensions = ["youtube", "cloudflare.insights"]
+# ignored header fields
+ignored_headers = [
+  "Accept-Ranges",
+  "Age",
+  "Allow",
+  "Alt-Svc",
+  "Connection",
+  "Content-Encoding",
+  "Content-Length",
+  "Content-Range",
+  "Date",
+  "Location",
+  "Server",
+  "Set-Cookie",
+  "Trailer",
+  "Transfer-Encoding",
+  "Upgrade",
+]
+ignored_headers_info = "https://docs.netlify.com/routing/headers/#limitations"
 
 [dnb.netlification.defaults]
 # default value of "Accept-Encoding: gzip, deflate, br"
@@ -43,7 +62,6 @@ days = 0
 
 # cloudflare specific settings
 [dnb.netlification.cloudflare]
-
 
 [[dnb.hooks.items.netlification.body-end]]
 file = "body-end"

@@ -62,6 +62,25 @@
   {{- range $config.headers }}
   {{ . }}
   {{- end }}
+  {{/* header rules for all pages */}}
+    {{ $ignored_headers := $config.ignored_headers }}
+    {{ $ignored_headers_info := $config.ignored_headers_info }}
+    {{ with site.Params.dnb.netlification.header -}}
+      {{- range $key, $value := . -}}
+        {{- if collections.In $ignored_headers $key -}}
+          {{- partials.Include "debug-cli.html"
+                (dict
+                  "message" (printf "netlification: %s is an ignored header field. %s" $key $ignored_headers_info)
+                  "context" .
+                  "severity" "warn"
+                  "level" 4
+                )
+          -}}
+        {{- else -}}
+          {{ $key }}: {{ $value }}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
 
 /*.html
   Accept-Encoding: {{ $config.defaults.acceptEncoding }}
@@ -134,4 +153,4 @@
 {{- end -}}
     {{- end -}}
   {{- end -}}
-{{- end -}}
+{{- end }}
