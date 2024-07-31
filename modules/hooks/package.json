@@ -11,8 +11,8 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/hooks",
   "dependencies": {
-    "@davidsneighbour/release-config": "^2024.3.23",
-    "@davidsneighbour/tools": "^2024.3.23"
+    "@davidsneighbour/release-config": "^2024.3.25",
+    "@davidsneighbour/tools": "^2024.3.25"
   },
   "scripts": {
     "clean": "run-p clean:*",
