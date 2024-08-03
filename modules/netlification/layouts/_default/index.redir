@@ -49,3 +49,24 @@
         (collections.Index . 2 | fmt.Printf "%-50s")
         (collections.Index . 3 | cast.ToInt) }}
 {{ end }}
+
+
+{{ define "partials/dnb-netlification/redirect_request.html" }}
+
+{{- $from := "" -}}
+{{- $to := "" -}}
+{{- $status := 200 -}}
+{{- $force := false -}}
+{{- $query := dict -}}
+{{- $conditions := dict -}}
+
+{{/* [[redirects]]
+  from = "/old-path"
+  to = "/new-path"
+  status = 301
+  force = false
+  query = {path = ":path"} #  apply this rule for /old-path?path=example
+  conditions = {Language = ["en","es"], Country = ["US"]} */}}
+
+
+{{ end }}

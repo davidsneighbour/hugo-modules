@@ -17,7 +17,7 @@
     "@davidsneighbour/release-config": "^2024.3.25",
     "@davidsneighbour/bootstrap-config": "^2024.3.25",
     "@davidsneighbour/webpack-config": "^2024.3.25",
-    "@types/node": "^22.0.0",
+    "@types/node": "^22.1.0",
     "@types/webpack": "^5.28.5",
     "node-sass": "^9.0.0",
     "sass-loader": "^16.0.0",
