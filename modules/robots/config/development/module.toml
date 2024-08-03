@@ -12,3 +12,7 @@ target = "layouts"
 [[mounts]]
 source = "package.json"
 target = "assets/dnb/robots.json"
+
+[[mounts]]
+source = "documentation"
+target = "content/gohugo/robots"
