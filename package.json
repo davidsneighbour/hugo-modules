@@ -17,9 +17,10 @@
   "scripts": {
     "build": "node bin/release/system/update.mjs && ./bin/components",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.js",
-    "clean": "run-p clean:**",
+    "clean": "run-p clean:hugo clean:node && run-s clean:last",
     "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
-    "clean:node": "rimraf node_modules package-lock.json",
+    "clean:node": "",
+    "clean:last": "rimraf node_modules",
     "serve:webpack": "webpack --watch --config webpack.js",
     "lint:lockfiles": "lockfile-lint --path package-lock.json --type=npm --validate-https --allowed-hosts=npm --empty-hostname=false --validate-package-names --validate-checksum --validate-integrity",
     "update": "npm-check-updates --deep --upgrade --target=minor && git add -A && git commit -m 'chore(deps): update dependencies'",
