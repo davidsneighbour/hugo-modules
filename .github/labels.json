@@ -1,0 +1,209 @@
+[
+  {
+    "name": "prio:1",
+    "color": "B60205"
+  },
+  {
+    "name": "prio:2",
+    "color": "FBCA04"
+  },
+  {
+    "name": "prio:3",
+    "color": "0E8A16"
+  },
+  {
+    "name": "type:bug",
+    "color": "B60205",
+    "description": "Bugfixes in codebase when something is not working."
+  },
+  {
+    "name": "type:enhancement",
+    "color": "1D76DB",
+    "description": "New enhancements and features."
+  },
+  {
+    "name": "type:dependencies",
+    "color": "1D76DB",
+    "description": "Dependencies and upstream updates."
+  },
+  {
+    "name": "type:documentation",
+    "color": "FBCA04",
+    "description": "Improvements or additions to docs."
+  },
+  {
+    "name": "type:refactor",
+    "color": "0E8A16",
+    "description": "Code refactoring."
+  },
+  {
+    "name": "type:data",
+    "description": "Issues pertaining to data or data preparations.",
+    "color": "D93F0B"
+  },
+  {
+    "name": "type:tests",
+    "description": "Issues related to tests.",
+    "color": "006B75"
+  },
+  {
+    "name": "state:question",
+    "description": "Further information requested.",
+    "color": "FEF2C0"
+  },
+  {
+    "name": "state:unconfirmed",
+    "description": "This issue needs to be reproduced.",
+    "color": "F9D0C4"
+  },
+  {
+    "name": "state:confirmed",
+    "description": "This issue is confirmed.",
+    "color": "C2E0C6"
+  },
+  {
+    "name": "state:duplicate",
+    "description": "This is a duplicate of another issue.",
+    "color": "F9D0C4"
+  },
+  {
+    "name": "state:invalid",
+    "description": "This is not an issue.",
+    "color": "C5DEF5"
+  },
+  {
+    "name": "state:keep",
+    "description": "Do not close this issue (neither manual nor automatic).",
+    "color": "520B43"
+  },
+  {
+    "name": "state:wontfix",
+    "description": "This will not be fixed.",
+    "color": "E99695"
+  },
+  {
+    "name": "state:inprogress",
+    "description": "Work is done on this issue. Probably in main branch too.",
+    "color": "E9324A"
+  },
+  {
+    "name": "module:aesop",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:auditor",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:debug",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:devtools",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:errors",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:feeds",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:functions",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:giscus",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:head",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:headerimage",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:hooks",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:icons",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:iliad",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:internals",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:modder",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:netlification",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:opensearch",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:pictures",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:publisher",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:pwa",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:renderhooks",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:robots",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:schema",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:security",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:seo",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:shortcodes",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:sitemap",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:social",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:youtube",
+    "color": "9DF475"
+  },
+  {
+    "name": "module:all",
+    "color": "9DF475"
+  }
+]

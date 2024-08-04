@@ -13,8 +13,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
-            dependencies
-            javascript
             state:confirmed
             state:inprogress
             state:question
