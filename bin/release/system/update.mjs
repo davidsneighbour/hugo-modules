@@ -1,8 +1,8 @@
 // @todo document
 import fetch from 'node-fetch';
 import 'dotenv/config';
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 
 const { RELEASE_GIST } = process.env;
 const RELEASE_GIST_URL = `https://api.github.com/gists/${RELEASE_GIST}`;

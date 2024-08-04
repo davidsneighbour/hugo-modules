@@ -1,42 +1,29 @@
 #!/bin/bash
-# v2024.05.03.01
+# v2024.08.04.01
 
-# Get the current path
+# get the current path
 CURPATH="$(pwd -P)"
+MODULE_NAME=$(basename "$CURPATH")
 
 # shellcheck disable=SC1091
 source "${CURPATH}/bin/repo/release/common"
 
 set -e
 
-check_required_tools curl sed git
-load_env_vars .env
+check_required_tools curl git npm hugo
+load_env_vars "${CURPATH}/../../.env"
 
 # Get current version from package.json
-VERSION=$(node -pe 'require("./package.json")["version"]')
+RELEASE=$(node -pe 'require("./package.json")["version"]')
+TAGNAME="modules/${MODULE_NAME}/v${RELEASE}"
 
-# Update version in citation configuration
-CITATION_FILE=CITATION.cff
-if [ -f "$CITATION_FILE" ]; then
-  sed -i "s/^version: .*/version: ${VERSION}/" "$CITATION_FILE"
-  DATE=$(date +%F)
-  sed -i "s/date-released: .*/date-released: ${DATE}/" "$CITATION_FILE"
-  git add "$CITATION_FILE"
-else
-  echo "No CITATION.cff found"
-  exit 1
-fi
-
-# Create a release on GitHub
+# create a release on GitHub
 GITHUB_REPO=https://github.com/${GITHUB_REPOSLUG}
-TAGNAME=modules/${TAGSLUG}/v${VERSION}
 
-# Update release file
-git commit -m "chore(release): update repo data files" --signoff --no-verify
-
-# Push release to GitHub
+# push release to GitHub
 git push origin main --follow-tags
+git push origin --tags
 
-# Open release for editing
-RELEASEURL="$GITHUB_REPO/releases/edit/$TAGNAME"
-xdg-open "${RELEASEURL}" &>/dev/null
+# open release for editing
+code changes.md
+xdg-open "$GITHUB_REPO/releases/edit/$TAGNAME" &>/dev/null
