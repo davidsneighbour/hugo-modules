@@ -1,7 +1,7 @@
 #!/bin/bash
-# v2024.05.12.01
+# v2024.05.03.01
 
-# get the current path
+# Get the current path
 CURPATH="$(pwd -P)"
 
 # shellcheck disable=SC1091
@@ -9,17 +9,16 @@ source "${CURPATH}/bin/repo/release/common"
 
 set -e
 
-check_required_tools curl sed git npx
-load_env
+check_required_tools curl sed git
+load_env_vars .env
 
-# build assets in static folder and add to commit if it exists
-# @todo this should depend on `npm run build` being configured instead
+# Build assets in static folder and add to commit if it exists
 if [ -d "static" ]; then
   npm run build
   git add static
 fi
 
-# update Hugo modules and add changes to repository
+# Update Hugo modules and add changes to repository
 git add package*
 hugo mod get -u ./...
 hugo mod tidy
@@ -28,18 +27,3 @@ FILE="${CURPATH}/go.sum"
 if [ -f "$FILE" ]; then
   git add "$FILE"
 fi
-
-# update versions
-RELEASE=$(increment_version "patch")
-
-# update version in citation configuration
-FILE=CITATION.cff
-if test -f "$FILE"; then
-  sed -i "s/^version: .*/version: ${RELEASE}/" $FILE
-  DATE=$(date +%F)
-  sed -i "s/date-released: .*/date-released: ${DATE}/" $FILE
-  git add $FILE
-fi
-
-RELEASE_NOTES="$(npx commit-and-tag-version --dry-run | awk 'BEGIN { flag=0 } /^---$/ { if (flag == 0) { flag=1 } else { flag=2 }; next } flag == 1')"
-echo "${RELEASE_NOTES}" >changes.md

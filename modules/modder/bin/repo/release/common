@@ -1,7 +1,7 @@
 #!/bin/bash
-# v2024.05.12.01
+# v2023.11.16.02
 
-# check required tools
+# Function to check required tools
 check_required_tools() {
   local required_tools=("$@")
   for tool in "${required_tools[@]}"; do
@@ -12,119 +12,19 @@ check_required_tools() {
   done
 }
 
-# load environment variables from the ~/.env file and then from the .env file in the current directory.
-# example usage: load_env, load_env --debug, or load_env --help
-load_env() {
-  local home_env="${HOME}/.env"
-  local local_env="./.env"
-  local debug=0
-
-  # process command-line options
-  for arg in "$@"; do
-    case ${arg} in
-    --help)
-      echo "Usage: load_env [--help] [--debug]"
-      echo "Load environment variables from the system-wide and local .env files."
-      echo "--debug: Enable detailed debug output."
-      return 0
-      ;;
-    --debug)
-      debug=1
-      shift # remove --debug from processing
-      ;;
-    *)
-      # unknown options
-      echo "Unknown option: ${arg}"
-      echo "Use --help for usage information."
-      return 1
-      ;;
-    esac
-  done
-
-  # resolve real paths and load environment variables from the system-wide .env file
-  home_env=$(realpath -e "${home_env}" 2>/dev/null)
-  if [[ -f "${home_env}" ]]; then
-    if [[ ${debug} -eq 1 ]]; then echo "Loading environment variables from ${home_env}"; fi
-    set -a # automatically export all variables
-    # shellcheck disable=SC1090
-    if ! source "${home_env}"; then
-      echo "Failed to source ${home_env}"
-      set +a
-      return 1
-    fi
+# Function to load environment variables from a file
+load_env_vars() {
+  local file=$1
+  if [ -f "$file" ]; then
+    echo "Exporting variables from $file"
+    set -a
+    # this routine ranges through a folder of files that we don't explicitly know (@davidsneighbour)
+    # see https://github.com/koalaman/shellcheck/wiki/SC1090
+    # shellcheck source=/dev/null
+    source "$file"
     set +a
-  elif [[ ${debug} -eq 1 ]]; then
-    echo "No system-wide .env file found at ${home_env}"
+  else
+    echo "No $file file found"
+    exit 1
   fi
-
-  # resolve real paths and override with local .env file if it exists
-  local_env=$(realpath -e "${local_env}" 2>/dev/null)
-  if [[ -f "${local_env}" ]]; then
-    if [[ ${debug} -eq 1 ]]; then echo "Overriding with local .env file from ${local_env}"; fi
-    set -a # automatically export all variables
-    # shellcheck disable=SC1090
-    if ! source "${local_env}"; then
-      echo "Failed to source ${local_env}"
-      set +a
-      return 1
-    fi
-    set +a
-  elif [[ ${debug} -eq 1 ]]; then
-    echo "No local .env file found in the current directory"
-  fi
-}
-
-# return the next version increment based on step
-# accepts a "step" parameter (major, minor, or patch) and returns the new version
-increment_version() {
-  local step="$1"
-  local package_json="./package.json"
-
-  # check if package.json exists
-  if [ ! -f "$package_json" ]; then
-    echo "Error: package.json file not found"
-    return 1
-  fi
-
-  # extract base version from package.json
-  local base
-  base=$(node -pe 'require("./package.json")["version"]')
-
-  # Regex for version extraction
-  local RE="^([0-9]+)\.([0-9]+)\.([0-9]+)$"
-  if [[ ! $base =~ $RE ]]; then
-    echo "Error: Current version format invalid"
-    return 1
-  fi
-
-  # Extract version components
-  local MAJOR="${BASH_REMATCH[1]}"
-  local MINOR="${BASH_REMATCH[2]}"
-  local PATCH="${BASH_REMATCH[3]}"
-
-  # Update version components based on step
-  case "$step" in
-  major)
-    ((MAJOR += 1))
-    MINOR=0
-    PATCH=0
-    ;;
-  minor)
-    ((MINOR += 1))
-    PATCH=0
-    ;;
-  patch)
-    ((PATCH += 1))
-    ;;
-  *)
-    echo "Error: Invalid step '$step'. Valid steps are major, minor, or patch."
-    return 1
-    ;;
-  esac
-
-  # Construct the new version
-  RELEASE="$MAJOR.$MINOR.$PATCH"
-
-  # Return the new version
-  echo "$RELEASE"
 }
