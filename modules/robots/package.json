@@ -14,8 +14,6 @@
     "@davidsneighbour/release-config": "2024.3.27"
   },
   "scripts": {
-    "clean": "run-p clean:*",
-    "clean:npm": "rimraf node_modules package-lock.json",
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/robots/v\" --releaseCommitMessageFormat \"chore(release): modules/robots/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/robots/v\" --releaseCommitMessageFormat \"chore(release): modules/robots/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
