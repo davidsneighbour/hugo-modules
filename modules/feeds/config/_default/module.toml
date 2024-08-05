@@ -18,9 +18,6 @@ target = "static"
 source = "package.json"
 target = "assets/dnb/feeds.json"
 
-[[mounts]]
-source = "documentation"
-target = "content/gohugo/feeds"
 
 [[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/functions"

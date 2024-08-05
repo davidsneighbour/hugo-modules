@@ -13,7 +13,3 @@ target = 'assets'
 [[mounts]]
 source = "package.json"
 target = "assets/dnb/modder.json"
-
-[[mounts]]
-source = "documentation"
-target = "content/gohugo/modder"

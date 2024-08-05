@@ -15,10 +15,6 @@ source = "package.json"
 target = "assets/dnb/pwa.json"
 
 [[mounts]]
-source = "documentation"
-target = "content/gohugo/pwa"
-
-[[mounts]]
 source = "layouts"
 target = "layouts"
 

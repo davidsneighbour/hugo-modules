@@ -15,10 +15,6 @@ source = "package.json"
 target = "assets/dnb/social.json"
 
 [[mounts]]
-source = "documentation"
-target = "content/gohugo/social"
-
-[[mounts]]
 source = "layouts"
 target = "layouts"
 

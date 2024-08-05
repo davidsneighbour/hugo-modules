@@ -12,7 +12,3 @@ target = "layouts"
 [[mounts]]
 source = "package.json"
 target = "assets/dnb/schema.json"
-
-[[mounts]]
-source = "documentation"
-target = "content/gohugo/schema"

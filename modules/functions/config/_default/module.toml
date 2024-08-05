@@ -11,10 +11,6 @@ source = "package.json"
 target = "assets/dnb/functions.json"
 
 [[mounts]]
-source = "documentation"
-target = "content/gohugo/functions"
-
-[[mounts]]
 source = "i18n"
 target = "i18n"
 

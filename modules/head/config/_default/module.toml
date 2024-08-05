@@ -11,10 +11,6 @@ source = "package.json"
 target = "assets/dnb/head.json"
 
 [[mounts]]
-source = "documentation"
-target = "content/gohugo/head"
-
-[[mounts]]
 source = "layouts"
 target = "layouts"
 

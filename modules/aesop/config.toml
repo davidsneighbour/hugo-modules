@@ -5,7 +5,3 @@ target = "content/aesop"
 [[mounts]]
 source = "package.json"
 target = "assets/dnb/aesop.json"
-
-[[mounts]]
-source = "documentation"
-target = "content/gohugo/aesop"

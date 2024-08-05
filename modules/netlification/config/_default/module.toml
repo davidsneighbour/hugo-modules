@@ -17,7 +17,3 @@ target = "static"
 [[mounts]]
 source = "package.json"
 target = "assets/dnb/netlification.json"
-
-[[mounts]]
-source = "documentation"
-target = "content/gohugo/netlification"

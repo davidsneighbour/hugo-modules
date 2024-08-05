@@ -11,10 +11,6 @@ source = "package.json"
 target = "assets/dnb/debug.json"
 
 [[mounts]]
-source = "documentation"
-target = "content/gohugo/debug"
-
-[[mounts]]
 source = "assets/scss/_debugprint.scss"
 target = "assets/scss/_debugprint.scss"
 

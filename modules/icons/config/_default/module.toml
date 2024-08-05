@@ -11,10 +11,6 @@ source = "package.json"
 target = "assets/dnb/icons.json"
 
 [[mounts]]
-source = "documentation"
-target = "content/gohugo/icons"
-
-[[mounts]]
 source = "layouts"
 target = "layouts"
 

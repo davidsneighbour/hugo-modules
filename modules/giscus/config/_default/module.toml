@@ -11,10 +11,6 @@ source = "package.json"
 target = "assets/dnb/giscus.json"
 
 [[mounts]]
-source = "documentation"
-target = "content/gohugo/giscus"
-
-[[mounts]]
 source = "layouts"
 target = "layouts"
 

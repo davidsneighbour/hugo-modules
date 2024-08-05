@@ -11,9 +11,5 @@ source = "package.json"
 target = "assets/dnb/internals.json"
 
 [[mounts]]
-source = "documentation"
-target = "content/gohugo/internals"
-
-[[mounts]]
 source = "data"
 target = "data"

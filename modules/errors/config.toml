@@ -12,10 +12,6 @@ target = "content"
 source = "package.json"
 target = "assets/dnb/errors.json"
 
-[[mounts]]
-source = "documentation"
-target = "content/gohugo/errors"
-
 
 [[module.mounts]]
 source = "data"

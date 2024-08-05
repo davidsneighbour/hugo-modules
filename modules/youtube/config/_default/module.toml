@@ -15,10 +15,6 @@ source = "package.json"
 target = "assets/dnb/youtube.json"
 
 [[mounts]]
-source = "documentation"
-target = "content/gohugo/youtube"
-
-[[mounts]]
 source = "assets/js/lite-yt-embed.js"
 target = "assets/js/lite-yt-embed.js"
 

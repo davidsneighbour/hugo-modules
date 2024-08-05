@@ -7,10 +7,6 @@ source = "package.json"
 target = "assets/dnb/headerimage.json"
 
 [[mounts]]
-source = "documentation"
-target = "content/gohugo/headerimage"
-
-[[mounts]]
 source = "i18n"
 target = "i18n"
 

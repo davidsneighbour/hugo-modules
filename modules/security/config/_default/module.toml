@@ -16,12 +16,3 @@ target = "data/"
 [[mounts]]
 source = "package.json"
 target = "assets/dnb/security.json"
-
-[[mounts]]
-source = "documentation"
-target = "content/gohugo/security"
-
-
-# [[mounts]]
-# source = "content/dnb/privacy/"
-# target = "content/dnb/privacy/"

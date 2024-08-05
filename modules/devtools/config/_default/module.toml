@@ -7,10 +7,6 @@ min = "0.120.1"
 source = "package.json"
 target = "assets/dnb/devtools.json"
 
-[[mounts]]
-source = "documentation"
-target = "content/gohugo/devtools"
-
 
 [[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/debug"

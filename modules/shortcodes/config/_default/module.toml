@@ -15,10 +15,6 @@ source = "package.json"
 target = "assets/dnb/shortcodes.json"
 
 [[mounts]]
-source = "documentation"
-target = "content/gohugo/shortcodes"
-
-[[mounts]]
 source = "i18n"
 target = "i18n"
 
