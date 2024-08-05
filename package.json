@@ -12,7 +12,7 @@
     "@davidsneighbour/markdownlint-config": "2024.3.27",
     "@davidsneighbour/prettier-config": "2024.3.27",
     "@davidsneighbour/remark-config": "2024.3.27",
-    "@davidsneighbour/tools": "2024.3.26"
+    "@davidsneighbour/tools": "2024.3.27"
   },
   "scripts": {
     "build": "node bin/release/system/update.mjs && ./bin/components",
