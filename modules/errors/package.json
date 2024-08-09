@@ -8,8 +8,8 @@
   "repository": "https://github.com/davidsneighbour/hugo-modules",
   "bugs": "https://github.com/davidsneighbour/hugo-errors/issues",
   "devDependencies": {
-    "@davidsneighbour/release-config": "^2024.3.26",
-    "@davidsneighbour/tools": "^2024.3.26"
+    "@davidsneighbour/release-config": "^2024.3.27",
+    "@davidsneighbour/tools": "^2024.3.27"
   },
   "scripts": {
     "clean": "run-p clean:*",
