@@ -8,7 +8,7 @@ Add "robotsdisallow: true" to frontmatter of entries to be disallowed.
 
 */ -}}
 {{- $config := site.Params.dnb.robots -}}
-{{- $globaldisallow := collections.Where .Site.RegularPages "Params.options.robots.disallow" true -}}
+{{- $globaldisallow := collections.Where site.Pages "Params.options.robots.disallow" true -}}
 
 {{- with $config.initialComment -}}
 {{ . -}}
