@@ -8,28 +8,35 @@ Add "robotsdisallow: true" to frontmatter of entries to be disallowed.
 
 */ -}}
 {{- $config := site.Params.dnb.robots -}}
+{{- $globaldisallow := collections.Where .Site.RegularPages "Params.options.robots.disallow" true -}}
 
 {{- with $config.initialComment -}}
 {{ . -}}
 {{ end -}}
 
-{{- range $config.useragents }}
-User-agent: {{ .name }}
-{{- range .disallow }}
-Disallow: {{ . }}
-{{- end -}}
-{{- range .allow }}
-Allow: {{ . }}
-{{- end }}
-{{ end }}
+{{- range $index, $item := $config.useragents }}
 
-{{ $globaldisallow := collections.Where .Site.RegularPages "Params.robotsdisallow" true }}
+User-agent: {{ $item.name }}
+
+{{ if eq $item.name "*" }}
 {{ with $globaldisallow -}}
 User-agent: *
 {{- range . }}
 Disallow: {{ .RelPermalink }}
 {{- end }}
 {{ end -}}
+{{ end }}
+
+
+{{- range $item.disallow }}
+Disallow: {{ . }}
+{{- end -}}
+{{- range $item.allow }}
+Allow: {{ . }}
+{{- end }}
+{{ end }}
+
+
 
 Sitemap: {{ "sitemap.xml" | urls.AbsLangURL }}
 
@@ -39,9 +46,9 @@ Sitemap: {{ "sitemap.xml" | urls.AbsLangURL }}
 
 {{- $branding := true -}}
 {{- with $config.disableBranding -}}
-{{- if compare.Eq true . -}}
-{{- $branding = false -}}
-{{- end -}}
+  {{- if compare.Eq true . -}}
+    {{- $branding = false -}}
+  {{- end -}}
 {{- end -}}
 {{- if compare.Eq $branding true }}
 # robots.txt is prepared by https://github.com/davidsneighbour/hugo-modules/tree/main/modules/robots#readme
