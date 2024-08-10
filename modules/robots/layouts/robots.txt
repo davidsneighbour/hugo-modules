@@ -15,19 +15,14 @@ Add "robotsdisallow: true" to frontmatter of entries to be disallowed.
 {{ end -}}
 
 {{- range $index, $item := $config.useragents }}
-
-User-agent: {{ $item.name }}
-
-{{ if eq $item.name "*" }}
+User-agent: {{ $item.name -}}
+{{ if eq $item.name "*" -}}
 {{ with $globaldisallow -}}
-User-agent: *
 {{- range . }}
 Disallow: {{ .RelPermalink }}
 {{- end }}
-{{ end -}}
-{{ end }}
-
-
+{{- end -}}
+{{- end -}}
 {{- range $item.disallow }}
 Disallow: {{ . }}
 {{- end -}}
@@ -35,8 +30,6 @@ Disallow: {{ . }}
 Allow: {{ . }}
 {{- end }}
 {{ end }}
-
-
 
 Sitemap: {{ "sitemap.xml" | urls.AbsLangURL }}
 
