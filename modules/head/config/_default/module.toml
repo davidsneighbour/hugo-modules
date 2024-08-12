@@ -3,10 +3,6 @@ extended = false
 min = "0.84.4"
 
 [[mounts]]
-source = "i18n"
-target = "i18n"
-
-[[mounts]]
 source = "package.json"
 target = "assets/dnb/head.json"
 

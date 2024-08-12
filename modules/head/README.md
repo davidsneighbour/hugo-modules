@@ -1,5 +1,3 @@
-![](../../documentation/head/header-card.png)
-
 # GoHugo Component / Head
 
 This [GoHugo](https://gohugo.io) theme component solves the old question, "What tags belong into the `<head>` tag of my website?" Set it up, configure it, and forget it's there. This component adds a multitude of tags and is extensively configurable.

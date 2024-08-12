@@ -7,13 +7,20 @@ colorschemeOrder = "dark light"
 
 [dnb.head.styles]
 entrypoint = "scss/style.scss"
-method = "postcss"
+method = "postcss"             # external, postcss, tailwind
 
 [dnb.head.styles.options]
-outputType = "preload"           # one of direct or preload
+outputType = "preload"              # one of direct or preload
 outputStyle = "compressed"
 targetPath = "assets/theme.css"
 enableSourceMap = true
 includePaths = ["node_modules/"]
-
 ignoreErrors = ["dnb-sample-error"]
+
+# [dnb.head.verification]
+# google = ""
+# yandex = ""
+# bing = ""
+# alexa = ""
+# pinterest = ""
+# norton = ""
