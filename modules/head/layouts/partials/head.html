@@ -3,7 +3,8 @@
 {{- $config := site.Params.dnb.head -}}
 {{- partials.Include "func/hook.html" ( dict "hook" "head-init" "context" . ) -}}
 <meta charset="{{- site.Params.dnb.head.charset | compare.Default "utf-8" -}}">
-<meta name="viewport" content="{{- site.Params.dnb.head.viewport | compare.Default "width=device-width, initial-scale=1" -}}">
+{{- $viewport := site.Params.dnb.head.viewport | compare.Default "width=device-width, initial-scale=1" -}}
+<meta name="viewport" content="{{- $viewport -}}">
 {{ partials.Include "head/title.html" . -}}
 {{- partials.Include "func/hook.html" ( dict "hook" "head-start" "context" . ) -}}
 {{- partials.IncludeCached "head/speed-optimisation.html" . -}}
