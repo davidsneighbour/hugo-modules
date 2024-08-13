@@ -1,0 +1,5 @@
+dnb.renderhooks.caution = 'Caution'
+dnb.renderhooks.important = 'Important'
+dnb.renderhooks.note = 'Note'
+dnb.renderhooks.tip = 'Tip'
+dnb.renderhooks.warning = 'Warning'
