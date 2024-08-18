@@ -49,3 +49,15 @@ type = "submit"
 name = "shortcodes.form.fieldnames.submit"
 label = "shortcodes.form.submit"
 class = "btn btn-primary"
+
+# see https://pagefind.app/docs/ui/ for available options
+[dnb.shortcodes.pagefind]
+baseUrl = "/"
+element = "#pagefind"
+resetStyles = false
+bundlePath = "/search/"
+debounceTimeoutMs = 500
+pageSize = 9
+highlightParam = "highlight"
+showImages = false
+autofocus = true
