@@ -1,13 +1,17 @@
-{{- /* create context from extended or simple hook */ -}}
 {{- $context := collections.Dictionary -}}
+{{- $config := site.Params.dnb.hooks -}}
+
+{{- /* create context from extended or simple hook */ -}}
 {{- if reflect.IsMap . -}}
   {{- /* extended use case */ -}}
   {{- $context = collections.Merge $context . }}
+  {{- $context = collections.Merge $context (collections.Dictionary "type" "full") }}
 {{- else -}}
   {{- /* simple use case */ -}}
   {{- $context = collections.Merge
                   $context
                   (collections.Dictionary "hook" . "context" collections.Dictionary) -}}
+  {{- $context = collections.Merge $context (collections.Dictionary "type" "simple") }}
 {{- end -}}
 
 {{- /* add hook to collector */ -}}
@@ -18,13 +22,12 @@
 
 {{- /* a quick note */ -}}
 {{- partials.Include "debug-cli.html" (collections.Dictionary
-    "message" (fmt.Printf "dnb-hooks - see %s for details" site.Params.dnb.hooks.hooklink)
+    "message" (fmt.Printf "dnb-hooks - see %s for details" $config.hooklink)
     "context" .
     "severity" "info"
     "level" 9
 ) -}}
 
-{{- $config := site.Params.dnb.hooks -}}
 {{- $loaded := false -}}
 
 {{- with $config.items -}}
@@ -65,8 +68,8 @@
   {{- if templates.Exists $partialHook -}}
     {{- if not (
             or
-              (collections.In site.Params.dnb.hooks.disable_messages "running_hooks")
-              (collections.In site.Params.dnb.hooks.disable_messages "running_uncached_hooks")
+              (collections.In $config.disable_messages "running_hooks")
+              (collections.In $config.disable_messages "running_uncached_hooks")
     ) -}}
       {{- partials.Include "debug-cli.html" (collections.Dictionary
           "message" (fmt.Printf "running hook `%s`" (fmt.Printf "%s" $context.hook))
@@ -83,8 +86,8 @@
   {{- if templates.Exists $partialHookCached -}}
     {{- if not (
             or
-              (collections.In site.Params.dnb.hooks.disable_messages "running_hooks")
-              (collections.In site.Params.dnb.hooks.disable_messages "running_cached_hooks")
+              (collections.In $config.disable_messages "running_hooks")
+              (collections.In $config.disable_messages "running_cached_hooks")
       ) -}}
       {{- partials.Include "debug-cli.html" (collections.Dictionary
           "message" (fmt.Printf "running cached hook `%s`" (fmt.Printf "%s" $context.hook))
@@ -119,7 +122,7 @@
 
   {{/* find plugin hooks */}}
   {{/* @todo fix weighting of hooks */}}
-  {{- with collections.Index site.Params.dnb.hooks $context.hook -}}
+  {{- with collections.Index $config $context.hook -}}
     {{- fmt.Warnf "plugin hooks are experimental" -}}
     {{- range . -}}
       {{- /* execute hook if it exists */ -}}
@@ -147,7 +150,7 @@
 
 {{- /* send out a note if the hook is not used */ -}}
 {{- if compare.Eq $loaded false -}}
-  {{- if not (collections.In site.Params.dnb.hooks.disable_messages "unused_hooks") -}}
+  {{- if not (collections.In $config.disable_messages "unused_hooks") -}}
     {{- partials.Include "debug-cli.html" (collections.Dictionary
         "message" (fmt.Printf "unused hook `%s`" (fmt.Printf "%s" $context.hook))
         "context" .
@@ -156,3 +159,11 @@
     ) -}}
   {{- end -}}
 {{- end -}}
+
+{{- /* @TODO make this dependent on debugging setup */ -}}
+{{- warnf
+      "hooks[%d]: %s processed for %v (%s)"
+      math.Counter
+      $context.hook
+      $context.context
+      $context.type -}}
