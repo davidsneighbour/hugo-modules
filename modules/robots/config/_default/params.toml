@@ -10,13 +10,13 @@ concludingComment = '''
 
 disableBranding = false
 
-[[dnb.robots.useragents]]
-name = "Googlebot"
-disallow = ["/nogooglebot/", "/anotherdirectory/"]
+# [[dnb.robots.useragents]]
+# name = "Googlebot"
+# disallow = ["/nogooglebot/", "/anotherdirectory/"]
 
-[[dnb.robots.useragents]]
-name = "Googlebot2"
-allow = ["/nogooglebot/", "/anotherdirectory/"]
+# [[dnb.robots.useragents]]
+# name = "Googlebot2"
+# allow = ["/nogooglebot/", "/anotherdirectory/"]
 
 [[dnb.robots.useragents]]
 name = "*"
