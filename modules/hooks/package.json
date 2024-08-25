@@ -11,16 +11,15 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/hooks",
   "dependencies": {
-    "@davidsneighbour/release-config": "^2024.3.27",
-    "@davidsneighbour/tools": "^2024.3.27"
+    "@davidsneighbour/release-config": "2024.3.37",
+    "@davidsneighbour/tools": "2024.3.37"
   },
   "scripts": {
     "clean": "run-p clean:*",
     "clean:hugo": "resources public",
     "clean:npm": "rimraf node_modules package-lock.json",
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/hooks/v\" --releaseCommitMessageFormat \"chore(release): modules/hooks/v{{currentTag}}\" && ./bin/repo/release/postrelease",
-    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/hooks/v\" --releaseCommitMessageFormat \"chore(release): modules/hooks/v{{currentTag}}\" && ./bin/repo/release/postrelease",
-    "update": "npm-check-updates -u && npm install && git add package*"
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/hooks/v\" --releaseCommitMessageFormat \"chore(release): modules/hooks/v{{currentTag}}\" && ./bin/repo/release/postrelease"
   },
   "type": "module"
 }
