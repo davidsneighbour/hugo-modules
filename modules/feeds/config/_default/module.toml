@@ -18,7 +18,6 @@ target = "static"
 source = "package.json"
 target = "assets/dnb/feeds.json"
 
-
 [[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/functions"
 
