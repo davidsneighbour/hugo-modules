@@ -96,8 +96,20 @@
       <updated>{{ time.Format "2006-01-02T15:04:05Z" .Lastmod.UTC | safe.HTML }}</updated>
       <published>{{ time.Format "2006-01-02T15:04:05Z" .Date.UTC | safe.HTML }}</published>
       <content type="html">
-        {{- $description := partials.IncludeCached "func/getDescription.html" . . -}}
-        {{- $description | html -}}
+        {{- $image := partials.IncludeCached "func/getArticleImage.html" . . -}}
+        {{- with $image -}}
+          {{- $image := .Resize "1200x webp" -}}
+          {{- with $image }}
+            {{- $image = .Crop "1200x630 webp" -}}
+          {{- end -}}
+          <p>
+            <img src="{{- $image.Permalink -}}" width="{{- $image.Width -}}" height="{{- $image.Height -}}" />
+          </p>
+        {{- end -}}
+        <p>
+          {{- $description := partials.IncludeCached "func/getDescription.html" . . -}}
+          {{- $description | html -}}
+        </p>
       </content>
     </entry>
   {{- end }}
