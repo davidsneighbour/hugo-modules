@@ -12,7 +12,7 @@
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/youtube",
   "dependencies": {
     "@davidsneighbour/configurations": "^2024.1.2",
-    "@davidsneighbour/release-config": "^2024.3.27"
+    "@davidsneighbour/release-config": "^2024.3.38"
   },
   "scripts": {
     "clean": "run-p clean:*",
