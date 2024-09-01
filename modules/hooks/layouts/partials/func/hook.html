@@ -160,10 +160,13 @@
   {{- end -}}
 {{- end -}}
 
-{{- /* @TODO make this dependent on debugging setup */ -}}
-{{- warnf
-      "hooks[%d]: %s processed for %v (%s)"
-      math.Counter
-      $context.hook
-      $context.context
-      $context.type -}}
+
+{{- partials.Include "debug-cli.html" (collections.Dictionary
+  "message" (printf "hooks[%d]: %s processed for %v (%s)"
+              math.Counter
+              $context.hook
+              $context.context
+              $context.type
+            )
+  "level" 9
+) -}}
