@@ -7,7 +7,7 @@
 {{- /* TODO move this into a filter hook */ -}}
 {{- if and (compare.Eq "" $summary) (compare.Eq $type "music") -}}
   {{- $artist = collections.First 1 (where
-        site.Data.dnb.kollitsch.music
+        site.Data.dnb.kollitsch.music.data
         "slug"
         $context.Params.video.artist
   ) -}}
