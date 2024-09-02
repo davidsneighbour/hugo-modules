@@ -1,2 +1,6 @@
 {{- $title := partials.Include "func/getTitle.html" page -}}
+{{- if eq $title "" -}}
+  {{- $title = "TITLE MISSING" -}}
+{{- end -}}
 <title>{{- $title -}}</title>
+{{- partial "debug-cli.html" (dict "severity" "info" "message" (printf "There is not title set up, neither site title nor page title could be found.")) -}}
