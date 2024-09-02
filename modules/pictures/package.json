@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-pictures",
   "description": "Image generation, responsive image formats and optimized loading for GoHugo",
-  "version": "1.2024.4",
+  "version": "1.2024.5",
   "license": "MIT",
   "private": true,
   "repository": "https://github.com/davidsneighbour/hugo-modules",
