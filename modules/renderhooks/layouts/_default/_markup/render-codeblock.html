@@ -10,6 +10,7 @@
 
 {{- $options := .Options -}}
 {{- $attributes := .Attributes -}}
+{{- $showIcons := false -}}
 
 {{- $data := newScratch -}}
 {{- $data.Set "options" dict -}}
@@ -45,8 +46,8 @@
   {{- end -}}
 {{- end -}}
 
-<div class="component--highlight">
-  <ul class="nav nav-tabs flex-row justify-content-start" role="tablist">
+<div class="component component--highlight">
+  <ul class="nav nav-tabs justify-content-start flex-row" role="tablist">
     {{- if compare.Eq $type "single" -}}
       <li class="nav-item" role="presentation">
         <button
@@ -59,6 +60,9 @@
           aria-controls="{{- $slug -}}"
           aria-selected="true"
         >
+          {{- if eq true $showIcons -}}
+            {{ partial "icon.html" (dict "icon" "terminal" "size" "sm") }}&nbsp;
+          {{- end -}}
           {{- .Type -}}
         </button>
       </li>
@@ -75,6 +79,9 @@
             aria-controls="{{- $slug -}}-{{- . -}}"
             aria-selected="true"
           >
+            {{- if eq true $showIcons -}}
+              {{ partial "icon.html" (dict "icon" "terminal" "size" "sm") }}&nbsp;
+            {{- end -}}
             {{- . | strings.ToUpper -}}
           </button>
         </li>
