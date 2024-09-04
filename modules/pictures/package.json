@@ -9,8 +9,8 @@
   "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/pictures",
   "dependencies": {
-    "@davidsneighbour/release-config": "2024.3.40",
-    "@davidsneighbour/tools": "2024.3.40"
+    "@davidsneighbour/release-config": "2024.3.42",
+    "@davidsneighbour/tools": "2024.3.42"
   },
   "scripts": {
     "build": "",
