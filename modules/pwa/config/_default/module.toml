@@ -7,12 +7,12 @@ source = "assets"
 target = "assets"
 
 [[mounts]]
-source = "data"
-target = "data"
-
-[[mounts]]
 source = "package.json"
 target = "assets/dnb/pwa.json"
+
+[[mounts]]
+source = "data"
+target = "data"
 
 [[mounts]]
 source = "layouts"
