@@ -17,6 +17,7 @@ FILE=.env
 if [ -f "$FILE" ]; then
   set -a # export all variables created next
   # shellcheck source=.env
+  # shellcheck disable=SC1091
   source "${FILE}"
   set +a # stop exporting
 fi
@@ -37,5 +38,5 @@ done
 
 hugo mod clean
 
-git add -A
-git commit -m "chore(deps): update dependencies"
+# git add -A
+# git commit -m "chore(deps): update dependencies"
