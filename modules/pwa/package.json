@@ -1,7 +1,7 @@
 {
   "name": "hugo-pwa",
   "description": "PWA for Hugo",
-  "version": "1.2024.8",
+  "version": "1.2024.9",
   "license": "MIT",
   "private": true,
   "repository": "https://github.com/davidsneighbour/hugo-modules",
