@@ -2,9 +2,9 @@
 extended = true
 min = "0.84.4"
 
-# [[mounts]]
-# source = 'assets'
-# target = 'assets'
+[[mounts]]
+source = 'assets'
+target = 'assets'
 
 [[mounts]]
 source = "package.json"
