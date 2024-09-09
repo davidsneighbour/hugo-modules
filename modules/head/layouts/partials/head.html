@@ -6,6 +6,7 @@
 <meta charset="{{- $charset -}}">
 {{- $viewport := site.Params.dnb.head.viewport | compare.Default "width=device-width, initial-scale=1" -}}
 <meta name="viewport" content="{{- $viewport -}}">
+{{- partials.IncludeCached "head/theme.html" . -}}
 {{- partials.Include "head/title.html" . -}}
 {{- partials.Include "func/hook.html" ( dict "hook" "head-start" "context" . ) -}}
 {{- if and (collections.IsSet $config "nobase") (compare.Eq false $config.nobase) -}}
