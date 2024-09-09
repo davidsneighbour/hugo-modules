@@ -6,16 +6,36 @@ separator = " | "
 colorschemeOrder = "dark light"
 
 [dnb.head.styles]
+# external, postcss, tailwind
+method = "postcss"
 entrypoint = "scss/style.scss"
-method = "postcss"             # external, postcss, tailwind
 
-[dnb.head.styles.options]
-outputType = "preload"              # one of direct or preload
+[dnb.head.styles.sassOptions]
+# sass options, see https://gohugo.io/functions/css/sass/#options
 outputStyle = "compressed"
 targetPath = "assets/theme.css"
 enableSourceMap = true
 includePaths = ["node_modules/"]
 ignoreErrors = ["dnb-sample-error"]
+
+[dnb.head.styles.postcssOptions]
+# postcss options, see https://gohugo.io/functions/css/postcss/#options
+# config = ""
+# noMap = false
+# inlineImports = false
+# skipInlineImportsNotFound = false
+# for use without a config file, set the following:
+# https://gohugo.io/functions/css/postcss/#no-configuration-file
+
+[dnb.head.styles.tailwindOptions]
+# tailwind options, see https://gohugo.io/functions/css/tailwindcss/#options
+# minify = false
+# optimize = false
+# inlineImports = false
+# skipInlineImportsNotFound = false
+
+[dnb.head.styles.externalOptions]
+target = "/styles.css"
 
 # [dnb.head.verification]
 # google = ""
