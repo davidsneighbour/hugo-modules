@@ -25,7 +25,7 @@
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "~1.1.0",
     "grunt-max-filesize": "^0.1.1",
-    "grunt-uncss": "~0.9.1",
+    "grunt-uncss": "~0.10.0",
     "jquery": "^3.5.1",
     "jquery-deparam": "^0.5.3",
     "picturefill": "^3.0.3",
