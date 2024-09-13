@@ -4,8 +4,7 @@
 {{- end -}}
 {{- $config := collections.Index site.Params.dnb.icons $icontype -}}
 {{- $iconname := .icon | compare.Default "dash-square-dotted" -}}
-<svg{{ with .width }} width="{{- . -}}"{{ end }}{{ with .height }} height="{{- . -}}"{{ end }}
-  version="2.0" class="icon icon-{{- $iconname }} {{ .class -}}">
+<svg{{ with .width }} width="{{- . -}}"{{ end }}{{ with .height }} height="{{- . -}}"{{ end }} class="icon icon-{{- $iconname }} {{ .class -}}">
   {{- $icons := .Scratch.Get "icons" -}}
   {{- if compare.Eq (collections.Index $icons $iconname) true -}}
   {{- else -}}
