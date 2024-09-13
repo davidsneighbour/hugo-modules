@@ -11,16 +11,16 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/icons",
   "dependencies": {
-    "@davidsneighbour/configurations": "^2024.1.2",
-    "@davidsneighbour/release-config": "^2024.3.45",
-    "@tabler/icons": "^3.16.0"
+    "@davidsneighbour/release-config": "2024.3.45",
+    "@davidsneighbour/tools": "2024.3.45",
+    "@tabler/icons": "3.16.0"
   },
   "scripts": {
-    "clean": "run-p clean:*",
+    "clean": "npm run clean:hugo && npm run clean:npm",
+    "clean:hugo": "rimraf go.sum _vendor",
     "clean:npm": "rimraf node_modules package-lock.json",
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/icons/v\" --releaseCommitMessageFormat \"chore(release): modules/icons/v{{currentTag}}\" && ./bin/repo/release/postrelease",
-    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/icons/v\" --releaseCommitMessageFormat \"chore(release): modules/icons/v{{currentTag}}\" && ./bin/repo/release/postrelease",
-    "update": "npm-check-updates -u && npm install && git add package*"
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/icons/v\" --releaseCommitMessageFormat \"chore(release): modules/icons/v{{currentTag}}\" && ./bin/repo/release/postrelease"
   },
   "type": "module"
 }
