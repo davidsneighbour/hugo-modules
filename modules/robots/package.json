@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/robots",
   "dependencies": {
-    "@davidsneighbour/release-config": "2024.3.45"
+    "@davidsneighbour/release-config": "2024.3.44"
   },
   "scripts": {
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/robots/v\" --releaseCommitMessageFormat \"chore(release): modules/robots/v{{currentTag}}\" && ./bin/repo/release/postrelease",

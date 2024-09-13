@@ -4,8 +4,8 @@
   {{ range . }}
   <sitemap>
     <loc>{{ .SitemapAbsURL }}</loc>
-    {{ if not .Lastmod.IsZero }}
-      <lastmod>{{- safe.HTML ( .Lastmod.Format (fmt.Printf "%s" $global.format) ) -}}</lastmod>
+    {{ if not .LastChange.IsZero }}
+      <lastmod>{{- safe.HTML ( .LastChange.Format (fmt.Printf "%s" $global.format) ) -}}</lastmod>
     {{ end }}
   </sitemap>
   {{ end }}
