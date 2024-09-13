@@ -21,7 +21,7 @@
   },
   "private": true,
   "dependencies": {
-    "@davidsneighbour/release-config": "^2024.3.38"
+    "@davidsneighbour/release-config": "^2024.3.45"
   },
   "type": "module"
 }

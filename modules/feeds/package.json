@@ -13,7 +13,7 @@
   "dependencies": {
     "@davidsneighbour/prettier-config": "2024.3.45",
     "@davidsneighbour/release-config": "2024.3.45",
-    "@davidsneighbour/remark-config": "2024.3.43"
+    "@davidsneighbour/remark-config": "2024.3.45"
   },
   "scripts": {
     "build": "",
