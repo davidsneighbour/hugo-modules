@@ -28,7 +28,7 @@
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-prettier": "^3.4.1",
-    "husky": "^5.2.0",
+    "husky": "^9.0.0",
     "karma": "^6.4.4",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^3.2.0",
