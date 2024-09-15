@@ -22,7 +22,7 @@
     "grunt-cli": "~1.5.0",
     "grunt-contrib-jshint": "^3.0.0",
     "grunt-contrib-qunit": "^10.0.0",
-    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-uglify": "^5.0.0",
     "grunt-contrib-watch": "~1.1.0",
     "grunt-max-filesize": "^0.1.1",
     "grunt-uncss": "~0.10.1",
