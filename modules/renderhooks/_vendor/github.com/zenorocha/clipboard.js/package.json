@@ -37,7 +37,7 @@
     "karma-webpack": "^5.0.0-alpha.5",
     "lint-staged": "^10.5.3",
     "mocha": "^8.2.1",
-    "prettier": "2.2.1",
+    "prettier": "2.8.8",
     "sinon": "^9.2.3",
     "tsd": "^0.7.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
