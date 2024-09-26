@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-schema",
   "description": "Schema markup for GoHugo",
-  "version": "1.2024.0",
+  "version": "1.2024.1",
   "license": "MIT",
   "private": true,
   "repository": "https://github.com/davidsneighbour/hugo-modules",
