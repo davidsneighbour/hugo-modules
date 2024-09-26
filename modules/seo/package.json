@@ -11,7 +11,7 @@
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/seo",
   "dependencies": {
     "@davidsneighbour/configurations": "^2024.1.2",
-    "@davidsneighbour/release-config": "^2024.3.45"
+    "@davidsneighbour/release-config": "^2024.3.46"
   },
   "scripts": {
     "clean": "run-p clean:*",
