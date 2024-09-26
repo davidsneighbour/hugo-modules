@@ -1,1 +1,0 @@
-# github.com/zenorocha/clipboard.js v2.0.11+incompatible
