@@ -1,7 +1,7 @@
 {
   "name": "hugo-auditor",
   "description": "SEO, technical audit and performance checks for Hugo",
-  "version": "1.2024.19",
+  "version": "1.2024.20",
   "license": "MIT",
   "private": true,
   "repository": "https://github.com/davidsneighbour/hugo-modules",
