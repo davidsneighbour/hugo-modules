@@ -5,7 +5,7 @@
 baseName = "rss"
 
 [jsonfeed]
-mediaType = "application/feed+json"
+mediaType = "application/json"
 path = ""
 baseName = "feed"
 rel = "alternate"
