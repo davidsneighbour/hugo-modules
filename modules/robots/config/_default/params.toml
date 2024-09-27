@@ -9,6 +9,7 @@ concludingComment = '''
 '''
 
 disableBranding = false
+blockAIBots = false
 
 # [[dnb.robots.useragents]]
 # name = "Googlebot"

@@ -14,7 +14,15 @@ Add "robotsdisallow: true" to frontmatter of entries to be disallowed.
 {{ . -}}
 {{ end -}}
 
-{{- range $index, $item := $config.useragents }}
+{{ if eq ($config.blockAIBots | default false) true -}}
+{{ $aiBots := partial "func/getAIRobots.html" . . }}
+{{ range $bot, $values := $aiBots -}}
+User-agent: {{ $bot }}
+{{ end -}}
+Disallow: /
+{{ end -}}
+
+{{ range $index, $item := $config.useragents }}
 User-agent: {{ $item.name -}}
 {{ if eq $item.name "*" -}}
 {{ with $globaldisallow -}}
