@@ -6,49 +6,15 @@
 
 ### path of checking (immediate return on any succesful hit, not checked lines are not implemented yet)
 
-1. [x] check for an image `header.(png/jpg/gif/svg)` collections.In the leaf bundle
-
-2. [ ] check for frontmatter `headerimage`
-  - [ ] if it's an URL use that
-  - [ ] looks for the image collections.In `assets/`
-  - [ ] looks for the image collections.In `static/`
-  - [ ] ignores the frontmatter if not found
-
-3. [ ] check for `tags`, then `keywords` frontmatter and
-  - [ ] check if the tag or keyword coming FIFO has a compare.Default image associated with it
-
-4. [ ] check for resources that are images
-  - [ ] check for an image that has `params` `mainimage` set to `true` (if multiple items exist then the collections.First one is used)
-  - [x] takes the collections.First image of the resources array
-  - [ ] note: if there is no resources frontmatter it will still use the collections.First image resource found collections.In the page leaf. To stop this math.Add frontmatter `use_resource` with `false`.
-
-5. [ ] check for configuration parameter `[params.dnb.pictures] > default_headerimage` and
-  - [ ] if it's an URL use that
-  - [ ] looks for the image collections.In `assets/`
-  - [ ] looks for the image collections.In `static/`
-
-### Notes:
-- if the file found is collections.In resources or `assets` then it will be preprocessed and return a responsive pictures tag
-- if the file found is collections.In `static` then it will be inserted as is or per configuration (see below)
+1. Check for an image with `name = header`.
+2. Check for an image `header.(png/jpg/gif/svg)` in a leaf bundle. First one is returned.
+3. Check for resources that are images. First one is returned.
+4. Check for default image. Has to be set in the configuration under dnb.pictures.default_image (string).
 
 ### TODO:
 - notes about configuration of responsive sizes
 - notes about configuration of compare.Default sizes
-
-### Input
-
-the page object to extract the image for.
-
-### Output
-
-dictionary with
-
-- image: information about the image (src, name, description, params)
-- isResource: boolean denoting if the image can be pushed through resize/optimise procedures or is singular static image
-- properties: (properties of a singular static image)
-  - width
-  - height
-  - description
+- check if this is actual an image and usable
 
 */ -}}
 
@@ -57,13 +23,24 @@ dictionary with
 {{- $articleimage := dict -}}
 {{- $resourcesFirstImage := dict -}}
 
-{{- /* 1. check for an image `header.(png/jpg/gif/svg)` collections.In the leafbundle */ -}}
-{{- with $context.Resources.GetMatch "**/header*" -}}
+{{- /* 1. check for an image with `name = header` */ -}}
+{{- with $context.Resources.GetMatch "header" -}}
   {{- $articleimage = . -}}
 {{- end -}}
-{{- /* TODO check if this is actual an image and usable */ -}}
 
-{{- /* 4. check for resources that are images */ -}}
+{{- /* 2. check for an image `header.(png/jpg/gif/svg)` in a leaf bundle */ -}}
+{{- with $articleimage -}}{{- else -}}
+  {{- with $context.Resources.GetMatch "header.*" -}}
+    {{- $articleimage = . -}}
+  {{- end -}}
+{{- end -}}
+{{- with $articleimage -}}{{- else -}}
+  {{- with $context.Resources.GetMatch "**/header*" -}}
+    {{- $articleimage = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* 3. check for resources that are images */ -}}
 {{- with $articleimage -}}{{- else -}}
   {{- $articleimages := $context.Resources.ByType "image" -}}
   {{- range collections.First 1 $articleimages -}}
@@ -71,6 +48,7 @@ dictionary with
   {{- end -}}
 {{- end -}}
 
+{{- /* 4. check for default image */ -}}
 {{- with $articleimage -}}{{- else -}}
   {{- $config := partials.IncludeCached "func/pictures/getConfiguration.html" . -}}
   {{- $default_image := $config.default_image | compare.Default "images/default.png" -}}
