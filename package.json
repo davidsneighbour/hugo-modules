@@ -20,6 +20,7 @@
     "clean": "run-p clean:hugo clean:node && run-s clean:last",
     "clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
     "clean:node": "",
+    "release:all": "for d in ./modules/*/ ; do (cd \"$d\" && npm run release); done",
     "clean:last": "rimraf node_modules",
     "serve:webpack": "webpack --watch --config webpack.js",
     "lint:lockfiles": "lockfile-lint --path package-lock.json --type=npm --validate-https --allowed-hosts=npm --empty-hostname=false --validate-package-names --validate-checksum --validate-integrity",
