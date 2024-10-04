@@ -11,8 +11,8 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/feeds",
   "dependencies": {
-    "@davidsneighbour/prettier-config": "2024.3.46",
-    "@davidsneighbour/release-config": "2024.3.46",
+    "@davidsneighbour/prettier-config": "2024.3.48",
+    "@davidsneighbour/release-config": "2024.3.47",
     "@davidsneighbour/remark-config": "2024.3.46"
   },
   "scripts": {
