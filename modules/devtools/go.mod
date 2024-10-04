@@ -2,7 +2,7 @@ module github.com/davidsneighbour/hugo-modules/modules/devtools
 
 go 1.21
 
-toolchain go1.23.1
+toolchain go1.23.2
 
 require (
 	github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.30 // indirect
