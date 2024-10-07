@@ -22,12 +22,16 @@ target = "assets/js/lite-yt-embed.js"
 source = "assets/scss/_lite-yt-embed.scss"
 target = "assets/scss/_lite-yt-embed.scss"
 
+[[mounts]]
+source = "assets/images/broken.webp"
+target = "assets/images/dnb/youtube/broken.webp"
+
 # see https://github.com/paulirish/lite-youtube-embed for details
 [[imports]]
-path = "github.com/paulirish/lite-youtube-embed"
 disable = false
 ignoreConfig = true
 ignoreImports = false
+path = "github.com/paulirish/lite-youtube-embed"
 
 [[imports.mounts]]
 source = "src/lite-yt-embed.css"
