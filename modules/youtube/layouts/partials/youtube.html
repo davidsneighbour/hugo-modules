@@ -34,15 +34,44 @@
   {{- $params := .params | compare.Default $paramsCollected -}}
   {{- $config := site.Params.dnb.youtube -}}
   {{- $thumbnailUrl := "https://i.ytimg.com/vi/%s/maxresdefault.jpg" -}}
+  {{- $thumbnailLowResUrl := "https://i.ytimg.com/vi/%s/sddefault.jpg" -}}
+
   {{- if compare.Eq (collections.Index $config "thumbnail_source" | compare.Default 1) 2 -}}
     {{- $thumbnailUrl = "https://ytimg.googleusercontent.com/vi/%s/maxresdefault.jpg" -}}
+    {{- $thumbnailLowResUrl = "https://ytimg.googleusercontent.com/vi/%s/sddefault.jpg" -}}
   {{- end -}}
   {{- $remoteThumbnailUrl := fmt.Printf $thumbnailUrl $id -}}
-  {{- $remoteThumb := resources.GetRemote $remoteThumbnailUrl -}}
-  {{- $remoteThumbnail := $remoteThumb -}}
-  {{- with resources.Copy (fmt.Printf "assets/img/%s.jpg" $id) $remoteThumb -}}
-    {{- $remoteThumbnail = . -}}
-  {{ end -}}
+  {{- $remoteThumbnailLowresUrl := fmt.Printf $thumbnailLowResUrl $id -}}
+  {{- $remoteThumbnail := "" -}}
+
+  {{ with resources.GetRemote $remoteThumbnailUrl }}
+    {{ with .Err }}
+      {{ warnf "%s" . }}
+    {{ else }}
+      {{- $remoteThumbnail = . -}}
+      {{- with resources.Copy (fmt.Printf "assets/img/%s.jpg" $id) . -}}
+        {{- $remoteThumbnail = . -}}
+      {{ end -}}
+    {{ end }}
+  {{ else }}
+    {{ with resources.GetRemote $remoteThumbnailLowresUrl }}
+      {{ with .Err }}
+        {{ warnf "%s" . }}
+      {{ else }}
+        {{- $remoteThumbnail = . -}}
+        {{- with resources.Copy (fmt.Printf "assets/img/%s.jpg" $id) . -}}
+          {{- $remoteThumbnail = . -}}
+        {{ end -}}
+      {{ end }}
+    {{ else }}
+      {{- $remoteThumbnail = resources.Get "images/dnb/youtube/broken.webp" -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if eq "" $remoteThumbnail -}}
+    {{- $remoteThumbnail = resources.Get "images/dnb/youtube/broken.webp" -}}
+  {{- end -}}
+
   <div class="shortcode--youtube {{ with $class -}}{{- . -}}{{- end -}}">
     <lite-youtube
       videoid="{{- $id -}}"
