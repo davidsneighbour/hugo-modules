@@ -1,22 +1,25 @@
 [dnb.head]
 charset = "utf-8"
-viewport = "width=device-width, initial-scale=1"
+colorschemeOrder = "dark light"
 nobase = true
 separator = " | "
-colorschemeOrder = "dark light"
+viewport = "width=device-width, initial-scale=1"
+
+[dnb.head.feediverse]
+creator = ''
 
 [dnb.head.styles]
 # external, postcss, tailwind
-method = "postcss"
 entrypoint = "scss/style.scss"
+method = "postcss"
 
 [dnb.head.styles.sassOptions]
 # sass options, see https://gohugo.io/functions/css/sass/#options
+enableSourceMap = true
+ignoreErrors = ["dnb-sample-error"]
+includePaths = ["node_modules/"]
 outputStyle = "compressed"
 targetPath = "assets/theme.css"
-enableSourceMap = true
-includePaths = ["node_modules/"]
-ignoreErrors = ["dnb-sample-error"]
 
 [dnb.head.styles.postcssOptions]
 # postcss options, see https://gohugo.io/functions/css/postcss/#options

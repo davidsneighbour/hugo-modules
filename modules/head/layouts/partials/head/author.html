@@ -9,3 +9,6 @@
     <link rel="me" href="{{- . -}}" type="text/html">
   {{- end -}}
 {{- end -}}
+{{- with site.Params.dnb.head.feediverse -}}
+  <meta name="fediverse:creator" content="{{ .creator }}" />
+{{- end -}}
