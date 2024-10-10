@@ -5,7 +5,7 @@ nobase = true
 separator = " | "
 viewport = "width=device-width, initial-scale=1"
 
-[dnb.head.feediverse]
+[dnb.head.fediverse]
 creator = ''
 
 [dnb.head.styles]
