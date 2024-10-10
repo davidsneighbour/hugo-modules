@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/auditor",
   "dependencies": {
-    "@davidsneighbour/release-config": "^2024.3.46"
+    "@davidsneighbour/release-config": "^2024.4.2"
   },
   "scripts": {
     "clean": "run-p clean:*",
