@@ -11,8 +11,8 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/icons",
   "dependencies": {
-    "@davidsneighbour/release-config": "2024.4.2",
-    "@davidsneighbour/tools": "2024.4.2",
+    "@davidsneighbour/release-config": "2024.4.3",
+    "@davidsneighbour/tools": "2024.4.3",
     "@tabler/icons": "3.19.0"
   },
   "scripts": {
