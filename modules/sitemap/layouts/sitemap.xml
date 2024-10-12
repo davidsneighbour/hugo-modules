@@ -17,6 +17,14 @@
 {{- end -}}
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {{- range $global.pages -}}
+    <url>
+      <loc>{{- .loc -}}</loc>
+      {{- with .priority -}}
+        <priority>{{- . -}}</priority>
+      {{- end -}}
+    </url>
+  {{- end -}}
   {{- range collections.Where $pages "Draft" false -}}
     {{- $isSitemapped := partials.IncludeCached "func/isSitemapped.html" . . -}}
     {{- if compare.Eq true $isSitemapped -}}
