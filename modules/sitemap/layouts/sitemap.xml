@@ -6,8 +6,18 @@
   {{- $full = . -}}
 {{- end -}}
 
+{{- $listpages := "false" -}}
+{{- with collections.Index $global "listpages" -}}
+  {{- $listpages = . -}}
+{{- end -}}
+
+{{- $pages := site.Pages -}}
+{{- if eq $listpages "false" -}}
+  {{- $pages = site.RegularPages -}}
+{{- end -}}
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  {{- range collections.Where site.RegularPages "Draft" false -}}
+  {{- range collections.Where $pages "Draft" false -}}
     {{- $isSitemapped := partials.IncludeCached "func/isSitemapped.html" . . -}}
     {{- if compare.Eq true $isSitemapped -}}
       <url>
