@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-functions",
   "description": "Template functions for Hugo",
-  "version": "1.2024.23",
+  "version": "1.2024.24",
   "license": "MIT",
   "private": true,
   "repository": "https://github.com/davidsneighbour/hugo-modules",
@@ -12,7 +12,7 @@
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/functions",
   "dependencies": {
     "@davidsneighbour/configurations": "^2024.1.2",
-    "@davidsneighbour/release-config": "^2024.4.3"
+    "@davidsneighbour/release-config": "^2024.4.6"
   },
   "scripts": {
     "clean": "run-p clean:*",
