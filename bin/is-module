@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ "$(pwd -P)" == "$(dirname "$0")" ]; then
+  echo "This script cannot be run from the root directory. Change into the module directory and run it again."
+  exit 1
+fi

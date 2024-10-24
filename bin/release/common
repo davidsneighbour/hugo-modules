@@ -1,0 +1,31 @@
+#!/bin/bash
+# v2023.11.16.02
+
+# Function to check required tools
+check_required_tools() {
+  local required_tools=("$@")
+  for tool in "${required_tools[@]}"; do
+    if ! command -v "${tool}" &>/dev/null; then
+      echo "${tool} is required... "
+      exit 1
+    fi
+  done
+}
+
+# Function to load environment variables from a file
+load_env_vars() {
+  local file=$1
+  if [ -f "$file" ]; then
+    echo "Exporting variables from $file"
+    set -a
+    # this routine ranges through a folder of files that we don't explicitly know (@davidsneighbour)
+    # see https://github.com/koalaman/shellcheck/wiki/SC1090
+    # shellcheck source=/dev/null
+    source "$file"
+    set +a
+  else
+    echo "No $file file found"
+    exit 1
+  fi
+}
+
