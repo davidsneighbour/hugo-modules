@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/renderhooks",
   "dependencies": {
-    "@davidsneighbour/release-config": "2024.4.5"
+    "@davidsneighbour/release-config": "2024.4.6"
   },
   "scripts": {
     "clean": "run-p clean:*",
