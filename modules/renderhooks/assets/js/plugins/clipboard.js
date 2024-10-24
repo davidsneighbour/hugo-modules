@@ -1,5 +1,5 @@
 // @ts-ignore - is mounted via gohugo module
-import ClipboardJS from "../libs/clipboard";
+import ClipboardJS from "./lib/clipboard.js";
 
 // initiate clipboard.js on all buttons with class .btn-clipboard
 const clipboard = new ClipboardJS(".btn-clipboard");

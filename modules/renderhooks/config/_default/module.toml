@@ -22,14 +22,18 @@ target = "i18n"
 source = "layouts"
 target = "layouts"
 
-# clipboard.js - handling copy button on code blocks
-# see https://github.com/zenorocha/clipboard.js
-[[imports]]
-path = "github.com/zenorocha/clipboard.js"
-disable = false
-ignoreConfig = true
-ignoreImports = true
+[[mounts]]
+source = '_vendor/github.com/zenorocha/clipboard.js/dist/clipboard.js'
+target = 'assets/js/plugins/lib/clipboard.js'
 
-[[imports.mounts]]
-source = 'dist/clipboard.js'
-target = 'assets/js/libs/clipboard.js'
+# # clipboard.js - handling copy button on code blocks
+# # see https://github.com/zenorocha/clipboard.js
+# [[imports]]
+# path = "github.com/zenorocha/clipboard.js"
+# disable = false
+# ignoreConfig = true
+# ignoreImports = true
+
+# [[imports.mounts]]
+# source = 'dist/clipboard.js'
+# target = 'assets/js/plugins/lib/clipboard.js'
