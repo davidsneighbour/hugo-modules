@@ -69,10 +69,10 @@ if [ -f "$FILE" ]; then
 fi
 
 # add vendor directory if existing
-if [ -d "${CURPATH}/_vendor" ]; then
-  hugo mod vendor
-  git add "${CURPATH}"/_vendor
-fi
+# if [ -d "${CURPATH}/_vendor" ]; then
+#   hugo mod vendor
+#   git add "${CURPATH}"/_vendor
+# fi
 
 # @TODO some form of testing if required by the modules
 
