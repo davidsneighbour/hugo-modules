@@ -1,5 +1,5 @@
 [hugoVersion]
-extended = true
+extended = false
 min = "0.84.0"
 
 [[mounts]]
@@ -32,3 +32,13 @@ ignoreImports = true
 [[imports.mounts]]
 source = "icons"
 target = "assets/icons/bootstrap-icons"
+
+# [[imports]]
+# path = "github.com/FortAwesome/Font-Awesome"
+# disable = false
+# ignoreConfig = true
+# ignoreImports = true
+
+# [[imports.mounts]]
+# source = "svgs/brands"
+# target = "assets/icons/fa-brands"
