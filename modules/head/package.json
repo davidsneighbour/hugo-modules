@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/head",
   "dependencies": {
-    "@davidsneighbour/release-config": "2024.4.6"
+    "@davidsneighbour/release-config": "2024.4.7"
   },
   "scripts": {
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/head/v\" --releaseCommitMessageFormat \"chore(release): modules/head/v{{currentTag}}\" && ./bin/repo/release/postrelease",
