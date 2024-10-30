@@ -13,7 +13,7 @@
   "dependencies": {
     "@davidsneighbour/release-config": "2024.4.7",
     "@davidsneighbour/tools": "2024.4.7",
-    "@tabler/icons": "3.20.0"
+    "@tabler/icons": "3.21.0"
   },
   "scripts": {
     "clean": "npm run clean:hugo && npm run clean:npm",
