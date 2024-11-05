@@ -2,18 +2,16 @@
 
 @example
 
-{{- partials.Include "icon.html" (dict "set" "bootstrap" "icon" "cash") -}}
-{{< icon set="bootstrap" icon="cash" >}}
+{{- partials.Include "icon.html" (dict "type" "bootstrap" "icon" "cash") -}}
+{{< icon type="bootstrap" icon="cash" >}}
 
 */ -}}
-
-{{- $config := site.Params.dnb.icons -}}
 
 {{- $iconname := "" -}}
 {{- $width := 20 -}}
 {{- $height := 20 -}}
 {{- $class := "" -}}
-{{- $type := $config.default -}}
+{{- $type := "bootstrap" -}}
 
 {{- if reflect.IsMap . -}}
   {{- $iconname = .icon -}}
@@ -21,14 +19,13 @@
   {{- with .height -}}{{ $height = . }}{{- end -}}
   {{- with .class -}}{{ $class = . }}{{- end -}}
   {{- with .type -}}{{ $type = . }}{{- end -}}
-  {{- with .set -}}{{ $type = . }}{{- end -}}
 {{- else -}}
   {{- $iconname = . -}}
 {{- end -}}
 
 {{- $options := dict "icon" $iconname "width" $width
                      "height" $height "class" $class
-                     "set" $type -}}
+                     "type" $type -}}
 <span class="icon--{{- $type }} icon--{{- $iconname -}}">
   {{- partials.Include "icons/use.html" $options -}}
 </span>

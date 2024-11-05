@@ -3,12 +3,12 @@ extended = false
 min = "0.84.0"
 
 [[mounts]]
-source = "package.json"
-target = "assets/dnb/icons.json"
-
-[[mounts]]
 source = "data"
 target = "data"
+
+[[mounts]]
+source = "package.json"
+target = "assets/dnb/icons.json"
 
 [[mounts]]
 source = "layouts"
@@ -23,7 +23,6 @@ path = "github.com/davidsneighbour/hugo-modules/modules/hooks"
 [[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/functions"
 
-# Twitter Bootstrap Icons
 [[imports]]
 path = "github.com/twbs/icons"
 disable = false
@@ -32,4 +31,14 @@ ignoreImports = true
 
 [[imports.mounts]]
 source = "icons"
-target = "assets/icons/bootstrap"
+target = "assets/icons/bootstrap-icons"
+
+# [[imports]]
+# path = "github.com/FortAwesome/Font-Awesome"
+# disable = false
+# ignoreConfig = true
+# ignoreImports = true
+
+# [[imports.mounts]]
+# source = "svgs/brands"
+# target = "assets/icons/fa-brands"

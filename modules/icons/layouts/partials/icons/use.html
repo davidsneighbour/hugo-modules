@@ -1,30 +1,22 @@
-{{- $set := "bootstrap" -}}
-{{- with .set -}}
-  {{- $set = . -}}
-{{- end -}}
-
+{{- $icontype := site.Params.dnb.icons.default -}}
 {{- with .type -}}
-  {{- $set = . -}}
-  {{- fmt.Warnf "The 'type' parameter is deprecated and will be removed in a future release. Use 'set' instead." -}}
+  {{- $icontype = . -}}
 {{- end -}}
-
-{{- $config := collections.Index site.Params.dnb.icons $set -}}
-
+{{- $config := collections.Index site.Params.dnb.icons $icontype -}}
 {{- $iconname := .icon | compare.Default "dash-square-dotted" -}}
 <svg{{ with .width }} width="{{- . -}}"{{ end }}{{ with .height }} height="{{- . -}}"{{ end }} class="icon icon-{{- $iconname }} {{ .class -}}">
-  {{- $icons := page.Scratch.Get "icons" -}}
+  {{- $icons := .Scratch.Get "icons" -}}
   {{- if compare.Eq (collections.Index $icons $iconname) true -}}
   {{- else -}}
-    {{- $iconpath := fmt.Printf "icons/%s/%s.svg" $set $iconname -}}
-    {{- with resources.GetMatch $iconpath -}}
-      {{- $replaceId := fmt.Printf "id=%q" $iconname | safe.HTMLAttr -}}
-      {{- $replacement := fmt.Printf "<symbol %s " $replaceId -}}
-      {{- $content := strings.Replace .Content "<svg " $replacement 1 -}}
-      {{- $content = strings.Replace $content "</svg>" "</symbol>" 1 -}}
-      {{- page.Scratch.SetInMap "icons" $iconname true -}}
-      {{- $content | safe.HTML -}}
-    {{- end -}}
+    {{- $iconpath := fmt.Printf $config.path $iconname -}}
+    {{- $content := "" -}}
+    {{- $content = os.ReadFile $iconpath | safe.HTML -}}
+    {{- $replaceId := fmt.Printf "id=%q" $iconname | safe.HTMLAttr -}}
+    {{- $replacement := fmt.Printf "<symbol %s " $replaceId -}}
+    {{- $content = strings.Replace $content "<svg " $replacement 1 -}}
+    {{- $content = strings.Replace $content "</svg>" "</symbol>" 1 -}}
+    {{- .Scratch.SetInMap "icons" $iconname true -}}
+    {{- $content | safe.HTML -}}
   {{- end -}}
   <use href="#{{- $iconname -}}"{{ with .width }} width="{{- . -}}"{{ end }}{{ with .height }} height="{{- . -}}"{{ end }} />
 </svg>
-
