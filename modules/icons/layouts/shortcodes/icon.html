@@ -1,3 +1,19 @@
-{{- $type := .Get "type" | compare.Default "bootstrap" -}}
-{{- $value := .Get "icon" -}}
-{{- partials.IncludeCached (fmt.Printf "%sicon.html" $type) $value $value -}}
+{{- $config := site.Params.dnb.icons -}}
+
+{{- $set := .Get "set" | compare.Default $config.default -}}
+{{- $iconName := .Get "icon" -}}
+
+
+{{- $width := .Get "width" | compare.Default 20 -}}
+{{- $height := .Get "height" | compare.Default 20 -}}
+{{- $class := .Get "class" | compare.Default "" -}}
+
+{{- $options := dict
+                  "icon" $iconName
+                  "width" "64"
+                  "height" "64"
+                  "fill" "currentColor"
+                  "set" $set -}}
+
+{{- /* DO NOT CACHE */ -}}
+{{- partials.Include "icon.html" $options -}}

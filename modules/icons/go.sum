@@ -1,3 +1,7 @@
+github.com/FortAwesome/Font-Awesome v0.0.0-20240716171331-37eff7fa00de h1:JvHOfdSqvArF+7cffH9oWU8oLhn6YFYI60Pms8M/6tI=
+github.com/FortAwesome/Font-Awesome v0.0.0-20240716171331-37eff7fa00de/go.mod h1:IUgezN/MFpCDIlFezw3L8j83oeiIuYoj28Miwr/KUYo=
+github.com/FortAwesome/Font-Awesome v4.7.0+incompatible h1:3trjm7NtX5NXlju1AxSWSzedDMq2hsfH78Qtqrc8EgY=
+github.com/FortAwesome/Font-Awesome v4.7.0+incompatible/go.mod h1:IUgezN/MFpCDIlFezw3L8j83oeiIuYoj28Miwr/KUYo=
 github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.30 h1:2cpx7B/ES2SLsvoa/SCpOoOpWfP6J15zrqTuTR/wiTw=
 github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.30/go.mod h1:32g68TWWjFPbO6lnqGfti86SdggqbPq4D5MgpnOJFC0=
 github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.31 h1:7CEHlnKq37gi+W9ICjh/lDdijkjqqRQmwWuup4tejUg=
@@ -16,5 +20,7 @@ github.com/davidsneighbour/hugo-modules/modules/hooks v1.2024.14 h1:vFo0PmHkTrt1
 github.com/davidsneighbour/hugo-modules/modules/hooks v1.2024.14/go.mod h1:KJfaYDuTYL4mGeO7X7H2aC24cDRs3k+82Vnfz2UeDU0=
 github.com/davidsneighbour/hugo-modules/modules/hooks v1.2024.15 h1:/PZvxFIX8VYwxaWbhmptQrW1guf1gF8XWmuDQd5fFlQ=
 github.com/davidsneighbour/hugo-modules/modules/hooks v1.2024.15/go.mod h1:eKjBQOwUL231ZbnwobiuuNe3h+9CnCgnLjd42reyTTA=
+github.com/tabler/tabler-icons v3.21.0+incompatible h1:FYnn/0Rfo88bsif0aKYecKrUceREuyG5XoB/q3JO1f8=
+github.com/tabler/tabler-icons v3.21.0+incompatible/go.mod h1:Ap75CRdhXxprnUnPlUCRLvJ2pIFNqwxIipj3GfD6XHE=
 github.com/twbs/icons v1.11.3 h1:XhvrQ1XDom9ggBbQx3wQCFGEr8qAQwQP/dAcw8OXMtA=
 github.com/twbs/icons v1.11.3/go.mod h1:GnRlymgVWp5iVJCMa0Me5b6tFyGpVc2bSxPMRGIJmyA=

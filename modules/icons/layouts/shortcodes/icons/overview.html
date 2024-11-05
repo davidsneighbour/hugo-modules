@@ -1,0 +1,113 @@
+{{- $set := .Get "set" -}}
+
+<div class="hugoicons">
+
+  <div class="input-group">
+    <input type="text" id="icon-search" class="form-control" placeholder="Icon name" aria-label="Icon name" aria-describedby="icon-search-label">
+    <span class="input-group-text" id="icon-search-label">Search icons...</span>
+  </div>
+  <div class="form-text mb-3">
+    Click icon to copy it's title for use in your content.
+  </div>
+
+  <div class="icons-grid" id="icons-list">
+    {{- $iconset := fmt.Printf "icons/%s/*.svg" $set -}}
+    {{- range resources.Match $iconset -}}
+      {{- $iconName := .Name | path.BaseName | strings.ToLower -}}
+      {{- $options := dict
+                        "icon" $iconName
+                        "width" "64"
+                        "height" "64"
+                        "fill" "currentColor"
+                        "set" $set -}}
+      <div class="icon-item" data-icon="{{ $iconName }}" title="Click to copy icon name">
+        {{- /* DO NOT CACHE */ -}}
+        {{- partials.Include "icon.html" $options -}}
+        <div class="icon-title">{{ $iconName }}</div>
+      </div>
+    {{- end -}}
+  </div>
+
+</div>
+
+<style>
+  .hugoicons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+
+    .icons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+      gap: 1rem;
+      width: 100%;
+    }
+    .icon-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      text-align: center;
+      padding: 1rem;
+      border: 2px solid transparent;
+      transition: border-color 0.5s ease-in-out;
+    }
+    .icon-title {
+      font-size: 1rem;
+    }
+    .icon-item.copied {
+      border-color: inherit; /* Change to your preferred color */
+      animation: fadeBorder 0.1s ease-in, fadeOutBorder 1s ease-out 0.1s forwards;
+    }
+    @keyframes fadeBorder {
+      from {
+        border-color: transparent;
+      }
+      to {
+        border-color: inherit;
+      }
+    }
+    @keyframes fadeOutBorder {
+      from {
+        border-color: inherit;
+      }
+      to {
+        border-color: transparent;
+      }
+    }
+
+    .icon-item svg {
+      width: 64px;
+      height: 64px;
+    }
+    .icon-title {
+      font-size: 0.8rem;
+    }
+  }
+</style>
+
+<script>
+  // Filter icons based on search input
+  document.getElementById('icon-search').addEventListener('input', (event) => {
+    const input = event.target.value.toLowerCase();
+    document.querySelectorAll('.icon-item').forEach(icon => {
+      const iconName = icon.getAttribute('data-icon');
+      icon.style.display = iconName.includes(input) ? '' : 'none';
+    });
+  });
+
+  // Copy icon name to clipboard on icon click
+  document.querySelectorAll('.icon-item').forEach(icon => {
+    icon.addEventListener('click', () => {
+      const iconName = icon.getAttribute('data-icon');
+      navigator.clipboard.writeText(iconName)
+        .then(() => {
+          icon.classList.add('copied');
+          setTimeout(() => icon.classList.remove('copied'), 1500);
+        })
+        .catch(err => console.error('Error copying text:', err));
+    });
+  });
+</script>
