@@ -1,13 +1,4 @@
 {
-  "files.associations": {
-    "*.html": "gohtml",
-    "*.xml": "gotemplate",
-    "*.json": "gojson",
-    "*.txt": "gotemplate",
-    "*.headers": "gotemplate",
-    "*.redir": "gotemplate",
-    "*.svg": "gotemplate",
-  },
   "editor.linkedEditing": true,
   "html.format.wrapLineLength": 100,
   "workbench.colorCustomizations": {
