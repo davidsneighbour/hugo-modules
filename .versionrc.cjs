@@ -1,11 +1,11 @@
 const defaultStandardVersion = require('@davidsneighbour/release-config');
-const localStandardVersion = {
+module.exports = {
+  ...defaultStandardVersion,
   skip: {
     changelog: true
-  }
+  },
+  types: [
+    { type: "modules", section: "Modules" },
+    ...defaultStandardVersion.types,
+  ],
 };
-const standardVersion = {
-  ...defaultStandardVersion,
-  ...localStandardVersion,
-};
-module.exports = standardVersion;
