@@ -16,9 +16,7 @@
     "@tabler/icons": "3.21.0"
   },
   "scripts": {
-    "clean": "npm run clean:hugo && npm run clean:npm",
-    "clean:hugo": "rimraf go.sum _vendor",
-    "clean:npm": "rimraf node_modules package-lock.json",
+    "clean": "rimraf node_modules package-lock.json",
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/icons/v\" --releaseCommitMessageFormat \"chore(release): modules/icons/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/icons/v\" --releaseCommitMessageFormat \"chore(release): modules/icons/v{{currentTag}}\" && ./bin/repo/release/postrelease"
   },
