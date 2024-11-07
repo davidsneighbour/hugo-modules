@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-functions",
   "description": "Template functions for Hugo",
-  "version": "1.2024.24",
+  "version": "1.2024.25",
   "license": "MIT",
   "private": true,
   "repository": "https://github.com/davidsneighbour/hugo-modules",
@@ -12,11 +12,10 @@
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/functions",
   "dependencies": {
     "@davidsneighbour/configurations": "^2024.1.2",
-    "@davidsneighbour/release-config": "^2024.4.6"
+    "@davidsneighbour/release-config": "^2024.4.7"
   },
   "scripts": {
-    "clean": "run-p clean:*",
-    "clean:npm": "rimraf node_modules package-lock.json",
+    "clean": "rimraf node_modules package-lock.json",
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/functions/v\" --releaseCommitMessageFormat \"chore(release): modules/functions/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/functions/v\" --releaseCommitMessageFormat \"chore(release): modules/functions/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
