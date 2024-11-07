@@ -15,8 +15,7 @@
     "@davidsneighbour/tools": "2024.4.8"
   },
   "scripts": {
-    "clean": "run-p clean:*",
-    "clean:npm": "rimraf node_modules package-lock.json",
+    "clean": "rimraf node_modules package-lock.json",
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/aesop/v\" --releaseCommitMessageFormat \"chore(release): modules/aesop/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/aesop/v\" --releaseCommitMessageFormat \"chore(release): modules/aesop/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"

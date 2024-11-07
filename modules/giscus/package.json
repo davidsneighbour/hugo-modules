@@ -16,9 +16,7 @@
   },
   "scripts": {
     "build": "",
-    "clean": "run-p clean:*",
-    "clean:hugo": "rimraf public resources",
-    "clean:npm": "rimraf node_modules package-lock.json",
+    "clean": "rimraf node_modules package-lock.json",
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/giscus/v\" --releaseCommitMessageFormat \"chore(release): modules/giscus/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/giscus/v\" --releaseCommitMessageFormat \"chore(release): modules/giscus/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "update": "npm-check-updates -u && npm install && git add package*"
