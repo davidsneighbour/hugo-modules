@@ -2,5 +2,5 @@
 default = "bootstrap"
 
 [dnb.icons.bootstrap]
-path = "node_modules/bootstrap-icons/icons/%s.svg"
+path = "icons/bootstrap-icons/%s.svg"
 slug = "bs"

@@ -3,7 +3,7 @@
     <div>
 
       {{- /* name active responsive break point */ -}}
-      {{- partials.IncludeCached "icon.html" "arrows-expand-vertical" "arrows-expand-vertical" -}}
+      {{- partials.Include "icon.html" "arrows-expand-vertical" -}}
       {{- $breakpoints := collections.Slice "xs" "sm" "md" "lg" "xl" "xxl" -}}
       <div>
         {{- range $index, $value := $breakpoints -}}
@@ -23,7 +23,7 @@
       </div>
 
       {{- /* inner window measurements */ -}}
-      {{- partials.IncludeCached "icon.html" "rulers" "rulers" -}}
+      {{- partials.Include "icon.html" "rulers" -}}
       <div class="measurements"></div>
     </div>
   </div>
