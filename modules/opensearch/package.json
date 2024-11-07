@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-opensearch",
   "description": "Opensearch configuration for Hugo",
-  "version": "1.2024.5",
+  "version": "1.2024.6",
   "license": "MIT",
   "private": true,
   "repository": "https://github.com/davidsneighbour/hugo-modules",
