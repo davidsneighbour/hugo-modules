@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-head",
   "description": "@davidsneighbour's answer to the question 'What tags belong into the <head> tag of my website?'",
-  "version": "1.2024.22",
+  "version": "1.2024.23",
   "license": "MIT",
   "private": true,
   "repository": "https://github.com/davidsneighbour/hugo-modules",
