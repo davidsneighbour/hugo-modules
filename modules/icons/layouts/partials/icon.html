@@ -15,10 +15,18 @@
 
 {{- if reflect.IsMap . -}}
   {{- $iconname = .icon -}}
-  {{- with .width -}}{{ $width = . }}{{- end -}}
-  {{- with .height -}}{{ $height = . }}{{- end -}}
-  {{- with .class -}}{{ $class = . }}{{- end -}}
-  {{- with .type -}}{{ $type = . }}{{- end -}}
+  {{- with .width -}}
+    {{- $width = . -}}
+  {{- end -}}
+  {{- with .height -}}
+    {{- $height = . -}}
+  {{- end -}}
+  {{- with .class -}}
+    {{- $class = . -}}
+  {{- end -}}
+  {{- with .type -}}
+    {{- $type = . -}}
+  {{- end -}}
 {{- else -}}
   {{- $iconname = . -}}
 {{- end -}}

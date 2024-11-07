@@ -4,11 +4,3 @@ default = "bootstrap"
 [dnb.icons.bootstrap]
 path = "node_modules/bootstrap-icons/icons/%s.svg"
 slug = "bs"
-
-[dnb.icons.tabler-filled]
-path = "node_modules/tabler-icons/icons/filled/%s.svg"
-slug = "tbf"
-
-[dnb.icons.tabler-outline]
-path = "node_modules/tabler-icons/icons/outline/%s.svg"
-slug = "tbo"
