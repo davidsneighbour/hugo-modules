@@ -1,5 +1,7 @@
 scratch
 .hugo_build.lock
+public
+resources/
 
 **/changes.md
 **/response.json
@@ -381,3 +383,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/node,go,git,hugo,linux,macos,windows,webstorm+all,visualstudiocode
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

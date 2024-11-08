@@ -8,12 +8,6 @@
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules#readme",
-  "dependencies": {
-    "@davidsneighbour/markdownlint-config": "2024.4.7",
-    "@davidsneighbour/prettier-config": "2024.4.7",
-    "@davidsneighbour/remark-config": "2024.4.7",
-    "@davidsneighbour/tools": "2024.4.7"
-  },
   "scripts": {
     "build": "node bin/release/system/update.mjs && ./bin/components",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.js",
@@ -22,7 +16,9 @@
     "lint:lockfiles": "lockfile-lint --path package-lock.json --type=npm --validate-https --allowed-hosts=npm --empty-hostname=false --validate-package-names --validate-checksum --validate-integrity",
     "serve:webpack": "webpack --watch --config webpack.js",
     "update": "npm-check-updates --deep --upgrade --target=minor",
-    "update:major": "npm-check-updates --deep --upgrade --install & node bin/release/system/update.mjs & bin/components && npm install"
+    "update:major": "npm-check-updates --deep --upgrade --install & node bin/release/system/update.mjs & bin/components && npm install",
+    "tests": "playwright test",
+    "tests:generate": "playwright codegen"
   },
   "stylelint": {
     "extends": "@davidsneighbour/stylelint-config"
@@ -30,5 +26,14 @@
   "type": "module",
   "workspaces": [
     "modules/*"
-  ]
+  ],
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@types/node": "^22.9.0",
+    "@davidsneighbour/markdownlint-config": "2024.4.7",
+    "@davidsneighbour/prettier-config": "2024.4.7",
+    "@davidsneighbour/remark-config": "2024.4.7",
+    "@davidsneighbour/tools": "2024.4.7",
+    "dotenv": "^16.4.5"
+  }
 }
