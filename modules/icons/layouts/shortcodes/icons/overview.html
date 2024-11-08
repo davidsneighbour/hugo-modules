@@ -2,7 +2,7 @@
   <input type="text" id="icon-search" placeholder="Search icons...">
   <div class="icons-grid" id="icons-list">
     {{- range resources.Match "icons/bootstrap-icons/*.svg" -}}
-      {{- $iconName := replaceRE "\\.svg$" "" (path.Base .Name) | strings.ToLower -}}
+      {{- $iconName := strings.ReplaceRE "\\.svg$" "" (path.Base .Name) | strings.ToLower -}}
       {{- $options := dict "icon" $iconName "width" "64" "height" "64" "fill" "currentColor" -}}
       <div class="icon-item" data-icon="{{ $iconName }}" title="Click to copy icon name">
         {{- partials.Include "icon.html" $options -}}
