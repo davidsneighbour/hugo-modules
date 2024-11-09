@@ -31,7 +31,7 @@
     "@playwright/test": "^1.48.2",
     "@types/node": "^22.9.0",
     "@davidsneighbour/markdownlint-config": "2024.4.7",
-    "@davidsneighbour/prettier-config": "2024.4.7",
+    "@davidsneighbour/prettier-config": "2024.4.8",
     "@davidsneighbour/remark-config": "2024.4.7",
     "@davidsneighbour/tools": "2024.4.7",
     "dotenv": "^16.4.5"
