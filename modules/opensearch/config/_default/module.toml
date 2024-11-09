@@ -16,4 +16,4 @@ target = "layouts"
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/opensearch.json"
+target = "data/dnb/modder/opensearch.json"

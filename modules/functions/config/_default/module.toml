@@ -8,7 +8,7 @@ target = "assets/js/debug.js"
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/functions.json"
+target = "data/dnb/modder/functions.json"
 
 [[mounts]]
 source = "i18n"

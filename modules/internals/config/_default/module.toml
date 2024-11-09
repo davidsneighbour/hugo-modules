@@ -8,7 +8,7 @@ target = "layouts"
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/internals.json"
+target = "data/dnb/modder/internals.json"
 
 [[mounts]]
 source = "data"

@@ -12,7 +12,7 @@ target = "assets/scss/plugins/_clipboard.scss"
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/renderhooks.json"
+target = "data/dnb/modder/renderhooks.json"
 
 [[mounts]]
 source = "i18n"

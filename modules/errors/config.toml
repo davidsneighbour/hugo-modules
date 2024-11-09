@@ -10,7 +10,7 @@ target = "content"
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/errors.json"
+target = "data/dnb/modder/errors.json"
 
 
 [[module.mounts]]

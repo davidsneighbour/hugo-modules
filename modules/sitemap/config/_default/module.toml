@@ -1,13 +1,10 @@
-################################################################################
-# configuration
-################################################################################
 [hugoVersion]
 extended = false
 min = "0.84.4"
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/sitemap.json"
+target = "data/dnb/modder/sitemap.json"
 
 [[mounts]]
 source = "data"

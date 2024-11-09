@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  {{ range $key, $value := site.Data.dnb.modder }}
+    <tr>
+      <td rowspan="3">{{ $key }}</td>
+      <td>
+        <a href="{{ $value.homepage }}" target="_blank">
+          {{ $value.name }}
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>{{ $value.description }}</td>
+    </tr>
+    <tr>
+      <td>{{ $value.version }}</td>
+    </tr>
+  {{ end }}
+</table>

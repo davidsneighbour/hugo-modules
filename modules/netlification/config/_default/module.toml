@@ -16,4 +16,4 @@ target = "static"
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/netlification.json"
+target = "data/dnb/modder/netlification.json"

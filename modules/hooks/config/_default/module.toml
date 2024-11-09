@@ -12,7 +12,7 @@ target = "layouts"
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/hooks.json"
+target = "data/dnb/modder/hooks.json"
 
 [[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/functions"

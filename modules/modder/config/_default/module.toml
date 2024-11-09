@@ -3,13 +3,13 @@ extended = false
 min = "0.84.4"
 
 [[mounts]]
-source = 'layouts'
-target = 'layouts'
-
-[[mounts]]
 source = 'assets'
 target = 'assets'
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/modder.json"
+target = "data/dnb/modder/modder.json"
+
+[[mounts]]
+source = 'layouts'
+target = 'layouts'

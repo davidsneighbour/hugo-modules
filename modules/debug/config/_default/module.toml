@@ -8,7 +8,7 @@ target = "assets"
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/debug.json"
+target = "data/dnb/modder/debug.json"
 
 [[mounts]]
 source = "assets/scss/_debugprint.scss"

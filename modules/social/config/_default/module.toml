@@ -12,7 +12,7 @@ target = "i18n"
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/social.json"
+target = "data/dnb/modder/social.json"
 
 [[mounts]]
 source = "layouts"

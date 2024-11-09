@@ -15,4 +15,4 @@ target = "data/"
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/security.json"
+target = "data/dnb/modder/security.json"

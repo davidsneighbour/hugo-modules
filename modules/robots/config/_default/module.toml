@@ -1,6 +1,3 @@
-################################################################################
-# configuration
-################################################################################
 [hugoVersion]
 extended = false
 min = "0.84.4"
@@ -11,4 +8,4 @@ target = "layouts"
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/robots.json"
+target = "data/dnb/modder/robots.json"

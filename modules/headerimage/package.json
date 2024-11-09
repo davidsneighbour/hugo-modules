@@ -1,5 +1,5 @@
 {
-  "name": "@davidsneighbour/headerimage",
+  "name": "@davidsneighbour/hugo-headerimage",
   "description": "Create open graph images and header images for all pages.",
   "version": "1.2024.5",
   "license": "MIT",

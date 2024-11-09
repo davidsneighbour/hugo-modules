@@ -8,7 +8,7 @@ target = "assets"
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/pwa.json"
+target = "data/dnb/modder/pwa.json"
 
 [[mounts]]
 source = "data"

@@ -8,4 +8,4 @@ target = 'layouts'
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/publisher.json"
+target = "data/dnb/modder/publisher.json"

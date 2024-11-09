@@ -8,7 +8,7 @@ target = 'assets'
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/auditor.json"
+target = "data/dnb/modder/auditor.json"
 
 [[mounts]]
 source = 'layouts'

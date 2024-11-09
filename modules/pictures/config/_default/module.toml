@@ -12,7 +12,7 @@ target = 'data'
 
 [[mounts]]
 source = "package.json"
-target = "assets/dnb/pictures.json"
+target = "data/dnb/modder/pictures.json"
 
 [[mounts]]
 source = 'layouts'
