@@ -1,7 +1,0 @@
-[[module.mounts]]
-source = "content/posts"
-target = "content/aesop"
-
-[[mounts]]
-source = "package.json"
-target = "assets/dnb/aesop.json"

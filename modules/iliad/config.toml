@@ -1,7 +1,0 @@
-[[module.mounts]]
-source = "content/posts"
-target = "content/posts"
-
-[[mounts]]
-source = "package.json"
-target = "assets/dnb/iliad.json"
