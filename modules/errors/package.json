@@ -9,7 +9,7 @@
   "bugs": "https://github.com/davidsneighbour/hugo-errors/issues",
   "devDependencies": {
     "@davidsneighbour/release-config": "^2024.4.7",
-    "@davidsneighbour/tools": "^2024.4.7"
+    "@davidsneighbour/tools": "^2024.4.8"
   },
   "scripts": {
     "clean": "rimraf node_modules package-lock.json",
