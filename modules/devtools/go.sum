@@ -1,6 +1,0 @@
-github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.32 h1:GBD4McFmA6U6XOenzUkvRIU0gWVoQO92PlHlj8Rlfuk=
-github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.32/go.mod h1:yjFbb12/eQa4sIl+GoETWi94Vhlz1IKSoxhEpZgEWjc=
-github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.24 h1:DIa1aGu+VYK0DmyHThyRtFBBxXmC8vEGpDs3pM+qvRI=
-github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.24/go.mod h1:y7hfQJQUUQNeOtprPVvfLp82KhwsS1ZuxU7/bEE6u1w=
-github.com/davidsneighbour/hugo-modules/modules/hooks v1.2024.15 h1:/PZvxFIX8VYwxaWbhmptQrW1guf1gF8XWmuDQd5fFlQ=
-github.com/davidsneighbour/hugo-modules/modules/hooks v1.2024.15/go.mod h1:eKjBQOwUL231ZbnwobiuuNe3h+9CnCgnLjd42reyTTA=
