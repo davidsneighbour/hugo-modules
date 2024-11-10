@@ -10,5 +10,7 @@
   {{- end -}}
 {{- end -}}
 {{- with site.Params.dnb.head.fediverse -}}
-  <meta name="fediverse:creator" content="{{ .creator }}" />
+  {{- with .creator -}}
+    <meta name="fediverse:creator" content="{{ . }}" />
+  {{- end -}}
 {{- end -}}
