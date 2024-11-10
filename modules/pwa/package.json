@@ -13,7 +13,7 @@
   "dependencies": {
     "@davidsneighbour/browserslist-config": "^2024.4.7",
     "@davidsneighbour/eslint-config": "^2024.4.7",
-    "@davidsneighbour/release-config": "^2024.4.7",
+    "@davidsneighbour/release-config": "^2024.4.8",
     "@davidsneighbour/tools": "^2024.4.7",
     "@davidsneighbour/webpack-config": "^2024.4.7",
     "workbox-cacheable-response": "7.3.0",
