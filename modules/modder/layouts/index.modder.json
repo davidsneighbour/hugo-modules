@@ -31,4 +31,4 @@
 {{- end -}}
 
 {{- $output = dict "js" (dict "imports" $jsImports "calls" $jsCalls) "scss" (dict "imports" $scssImports) -}}
-{{- $output | encoding.Jsonify -}}
+{{- $output | encoding.Jsonify (dict "indent" "  ") -}}
