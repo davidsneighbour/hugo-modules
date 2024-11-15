@@ -6,10 +6,10 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -24,10 +24,10 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -42,10 +42,10 @@ updates:
   - package-ecosystem: "gitsubmodule"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -60,10 +60,10 @@ updates:
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -78,28 +78,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
-    assignees:
-      - "davidsneighbour"
-    reviewers:
-      - "davidsneighbour"
-    target-branch: "main"
-    open-pull-requests-limit: 999
-    pull-request-branch-name:
-      separator: "/"
-    labels:
-      - "type:dependencies"
-
-  - package-ecosystem: "gomod"
-    directory: "/modules/aesop/"
-    schedule:
-      interval: "weekly"
-      day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -114,10 +96,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/auditor/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -132,28 +114,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/debug/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
-    assignees:
-      - "davidsneighbour"
-    reviewers:
-      - "davidsneighbour"
-    target-branch: "main"
-    open-pull-requests-limit: 999
-    pull-request-branch-name:
-      separator: "/"
-    labels:
-      - "type:dependencies"
-
-  - package-ecosystem: "gomod"
-    directory: "/modules/devtools/"
-    schedule:
-      interval: "weekly"
-      day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -168,10 +132,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/errors/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -186,10 +150,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/feeds/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -204,10 +168,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/functions/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -222,10 +186,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/giscus/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -240,10 +204,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/head/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -258,10 +222,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/headerimage/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -276,10 +240,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/hooks/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -294,28 +258,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/icons/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
-    assignees:
-      - "davidsneighbour"
-    reviewers:
-      - "davidsneighbour"
-    target-branch: "main"
-    open-pull-requests-limit: 999
-    pull-request-branch-name:
-      separator: "/"
-    labels:
-      - "type:dependencies"
-
-  - package-ecosystem: "gomod"
-    directory: "/modules/iliad/"
-    schedule:
-      interval: "weekly"
-      day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -330,10 +276,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/internals/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -348,10 +294,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/modder/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -366,10 +312,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/netlification/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -384,10 +330,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/opensearch/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -402,10 +348,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/pictures/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -420,10 +366,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/publisher/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -438,10 +384,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/pwa/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -456,10 +402,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/renderhooks/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -474,10 +420,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/robots/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -492,10 +438,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/schema/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -510,28 +456,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/security/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
-    assignees:
-      - "davidsneighbour"
-    reviewers:
-      - "davidsneighbour"
-    target-branch: "main"
-    open-pull-requests-limit: 999
-    pull-request-branch-name:
-      separator: "/"
-    labels:
-      - "type:dependencies"
-
-  - package-ecosystem: "gomod"
-    directory: "/modules/seo/"
-    schedule:
-      interval: "weekly"
-      day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -546,10 +474,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/shortcodes/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -564,10 +492,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/sitemap/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -582,10 +510,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/social/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
@@ -600,10 +528,10 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/modules/youtube/"
     schedule:
-      interval: "weekly"
+      interval: monthly
       day: "friday"
-      time: "18:00"
-      timezone: "Asia/Bangkok"
+      time: "23:00"
+      timezone: Asia/Bangkok
     assignees:
       - "davidsneighbour"
     reviewers:
