@@ -1,12 +1,5 @@
 {{- /*
 
-  see
-  - https://web.dev/iframe-lazy-loading/ (not used collections.In this shortcode, just for
-  learning purposes)
-  - https://github.com/paulirish/lite-youtube-embed
-  - https://developers.google.com/youtube/player_parameters#Parameters (check for
-  parameters that can be used with the youtube player)
-
 - @todo background image locally instead of URL
 - @todo config param for JS inline or via external file
 - @todo documentation about $pc.Disable
@@ -15,36 +8,20 @@
 
   */
 -}}
-{{- $params := dict
-  "modestbranding" "2"
-  "iv_load_policy" "3"
-  "controls" "0"
-  "rel" "0"
-  "hl" site.Language.Lang
--}}
-{{- $paramsCollected := "" -}}
-{{- range $key, $value := $params -}}
-  {{- $paramsCollected = fmt.Printf "%s&%s=%s" $paramsCollected $key $value -}}
-{{- end -}}
+
 {{- $pc := site.Config.Privacy.YouTube -}}
 {{- if not $pc.Disable -}}
   {{- $id     := .id -}}
+  {{- $jsapi  := .jsapi | compare.Default false -}}
   {{- $class  := .class | compare.Default "" -}}
   {{- $title  := .title | compare.Default "" -}}
-  {{- $params := .params | compare.Default $paramsCollected -}}
+  {{- $playlabel := .playlabel | compare.Default "Play video" -}}
+  {{- $params := .params | compare.Default (partialCached "func/prepareApiParams.html" .) -}}
   {{- $config := site.Params.dnb.youtube -}}
-  {{- $thumbnailUrl := "https://i.ytimg.com/vi/%s/maxresdefault.jpg" -}}
-  {{- $thumbnailLowResUrl := "https://i.ytimg.com/vi/%s/sddefault.jpg" -}}
-
-  {{- if compare.Eq (collections.Index $config "thumbnail_source" | compare.Default 1) 2 -}}
-    {{- $thumbnailUrl = "https://ytimg.googleusercontent.com/vi/%s/maxresdefault.jpg" -}}
-    {{- $thumbnailLowResUrl = "https://ytimg.googleusercontent.com/vi/%s/sddefault.jpg" -}}
-  {{- end -}}
-  {{- $remoteThumbnailUrl := fmt.Printf $thumbnailUrl $id -}}
-  {{- $remoteThumbnailLowresUrl := fmt.Printf $thumbnailLowResUrl $id -}}
   {{- $remoteThumbnail := "" -}}
+  {{- $thumbnailUrl := partials.IncludeCached "func/getYTPreviewUrl.html" $id $id -}}
 
-  {{ with resources.GetRemote $remoteThumbnailUrl }}
+  {{ with resources.GetRemote $thumbnailUrl.maxres }}
     {{ with .Err }}
       {{ warnf "%s" . }}
     {{ else }}
@@ -54,7 +31,7 @@
       {{ end -}}
     {{ end }}
   {{ else }}
-    {{ with resources.GetRemote $remoteThumbnailLowresUrl }}
+    {{ with resources.GetRemote $thumbnailUrl.lowres }}
       {{ with .Err }}
         {{ warnf "%s" . }}
       {{ else }}
@@ -75,14 +52,15 @@
   <div class="shortcode--youtube {{ with $class -}}{{- . -}}{{- end -}}">
     <lite-youtube
       videoid="{{- $id -}}"
+      {{ with $jsapi -}}jsapi{{- end }}
       {{ with $title -}}
-        playlabel="{{- . -}}"
+        title="{{- . -}}"
       {{- end -}}
       params="{{- $params -}}"
       style="background-image: url('{{- $remoteThumbnail.Permalink -}}');"
     >
-      <button type="button" class="lty-playbtn" aria-label="Play video">
-        {{- with $title -}}
+      <button type="button" class="lty-playbtn" aria-label="{{- $playlabel -}}">
+        {{- with $playlabel -}}
           <span class="lyt-visually-hidden">{{- . -}}</span>
         {{- end -}}
       </button>

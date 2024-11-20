@@ -16,34 +16,23 @@ see
 Maybe do the whole implementation via partials.Include that can be reused by the youtube partials.Include and shortcode
 
 */ -}}
-{{- $paramScratch := newScratch -}}
-{{- $paramScratch.SetInMap "params" "modestbranding" 2 -}}
-{{- $paramScratch.SetInMap "params" "iv_load_policy" 3 -}}
-{{- $paramScratch.SetInMap "params" "controls" 0 -}}
-{{- $paramScratch.SetInMap "params" "rel" 0 -}}
-{{- $paramScratch.SetInMap "params" "hl" .Site.Language.Lang -}}
-{{- $params := $paramScratch.Get "params" -}}
-{{- $paramsCollected := "" -}}
-{{- range $key, $value := $params -}}
-    {{- $paramsCollected = fmt.Printf "%s&%s=%s" $paramsCollected $key $value -}}
-{{- end -}}
+
 {{- $pc := site.Config.Privacy.YouTube -}}
 {{- if not $pc.Disable -}}
-    {{- $id     := .Get "id"    | compare.Default (.Get 0) -}}
-    {{- $class  := .Get "class" | compare.Default (.Get 1) -}}
-    {{- $title  := .Get "title" | compare.Default (.Get 2) -}}
-    {{- $params := .Get "params" | compare.Default $paramsCollected -}}
-    {{- $thumbnailUrl := partials.IncludeCached "getYoutubePreviewUrl.html" . -}}
-    {{- $remoteThumbnailUrl := fmt.Printf $thumbnailUrl $id -}}
-    <div class="shortcode--youtube {{ with $class -}}{{- . -}}{{- end -}}">
-        <lite-youtube
-            videoid="{{- $id -}}" {{ with $title -}}
-            playlabel="{{- . -}}"{{- end -}}
-            params="{{- $params -}}"
-            style="background-image: url('{{- $remoteThumbnailUrl -}}');">
-            <button type="button" class="lty-playbtn" aria-label="Play video">
-                {{- with $title -}}<span class="lyt-visually-hidden">{{- . -}}</span>{{- end -}}
-            </button>
-        </lite-youtube>
-    </div>
+  {{- $id     := .Get "id"    | compare.Default (.Get 0) -}}
+  {{- $class  := .Get "class" | compare.Default (.Get 1) -}}
+  {{- $title  := .Get "title" | compare.Default (.Get 2) -}}
+  {{- $params := .Get "params" | compare.Default (partialCached "func/prepareApiParams.html" .) -}}
+  {{- $thumbnailUrl := partials.IncludeCached "func/getYTPreviewUrl.html" $id $id -}}
+  <div class="shortcode--youtube {{ with $class -}}{{- . -}}{{- end -}}">
+    <lite-youtube
+      videoid="{{- $id -}}" {{ with $title -}}
+      playlabel="{{- . -}}" title="{{- . -}}" {{ end -}}
+      params="{{- $params -}}"
+      style="background-image: url('{{- $thumbnailUrl.maxres -}}');">
+      <button type="button" class="lty-playbtn" aria-label="Play video">
+        {{- with $title -}}<span class="lyt-visually-hidden">{{- . -}}</span>{{- end -}}
+      </button>
+    </lite-youtube>
+  </div>
 {{- end -}}

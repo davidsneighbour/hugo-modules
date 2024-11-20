@@ -6,6 +6,12 @@ thumbnail_source = 1
 # disabled = false
 # verbose = true
 
+[dnb.youtube.apiparams]
+# see https://developers.google.com/youtube/player_parameters#Parameters
+iv_load_policy = 3
+controls = 0
+rel = 0
+
 [dnb.youtube.config.plugins.js]
 imports = ["import LiteYTEmbed from './lite-yt-embed';"]        # es6, in flux
 calls = ["customElements.define('lite-youtube', LiteYTEmbed);"]
