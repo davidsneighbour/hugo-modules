@@ -11,9 +11,9 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/headerimage",
   "dependencies": {
-    "@davidsneighbour/markdownlint-config": "^2024.4.7",
-    "@davidsneighbour/release-config": "^2024.4.7",
-    "@davidsneighbour/tools": "^2024.4.7"
+    "@davidsneighbour/markdownlint-config": "^2024.4.8",
+    "@davidsneighbour/release-config": "^2024.4.8",
+    "@davidsneighbour/tools": "^2024.4.8"
   },
   "scripts": {
     "clean": "rimraf node_modules package-lock.json",
