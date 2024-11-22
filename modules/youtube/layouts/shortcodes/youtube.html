@@ -11,7 +11,6 @@ see
 - @todo config param for JS inline or via external file
 - @todo documentation about $pc.Disable
 - @todo fix `title` attribute - does not seem to be working
-- @todo implement https://github.com/paulirish/lite-youtube-embed?tab=readme-ov-file#custom-player-parameters
 
 Maybe do the whole implementation via partials.Include that can be reused by the youtube partials.Include and shortcode
 
@@ -22,16 +21,18 @@ Maybe do the whole implementation via partials.Include that can be reused by the
   {{- $id     := .Get "id"    | compare.Default (.Get 0) -}}
   {{- $class  := .Get "class" | compare.Default (.Get 1) -}}
   {{- $title  := .Get "title" | compare.Default (.Get 2) -}}
-  {{- $params := .Get "params" | compare.Default (partialCached "func/prepareApiParams.html" .) -}}
+  {{- $playlabel := .Get "playlabel" | compare.Default "Play video" -}}
+  {{- $params := .Get "params" | compare.Default (partials.IncludeCached "func/prepareApiParams.html" .) -}}
   {{- $thumbnailUrl := partials.IncludeCached "func/getYTPreviewUrl.html" $id $id -}}
   <div class="shortcode--youtube {{ with $class -}}{{- . -}}{{- end -}}">
     <lite-youtube
-      videoid="{{- $id -}}" {{ with $title -}}
-      playlabel="{{- . -}}" title="{{- . -}}" {{ end -}}
+      videoid="{{- $id -}}" {{ with $playlabel -}}
+      playlabel="{{- . -}}" {{ end -}} {{ with $title -}}
+      title="{{- . -}}" {{ end -}}
       params="{{- $params -}}"
       style="background-image: url('{{- $thumbnailUrl.maxres -}}');">
-      <button type="button" class="lty-playbtn" aria-label="Play video">
-        {{- with $title -}}<span class="lyt-visually-hidden">{{- . -}}</span>{{- end -}}
+      <button type="button" class="lty-playbtn" aria-label="{{- $playlabel -}}">
+        {{- with $playlabel -}}<span class="lyt-visually-hidden">{{- . -}}</span>{{- end -}}
       </button>
     </lite-youtube>
   </div>

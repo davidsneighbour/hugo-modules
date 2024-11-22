@@ -16,7 +16,7 @@
   {{- $class  := .class | compare.Default "" -}}
   {{- $title  := .title | compare.Default "" -}}
   {{- $playlabel := .playlabel | compare.Default "Play video" -}}
-  {{- $params := .params | compare.Default (partialCached "func/prepareApiParams.html" .) -}}
+  {{- $params := .params | compare.Default (partials.IncludeCached "func/prepareApiParams.html" .) -}}
   {{- $config := site.Params.dnb.youtube -}}
   {{- $remoteThumbnail := "" -}}
   {{- $thumbnailUrl := partials.IncludeCached "func/getYTPreviewUrl.html" $id $id -}}
@@ -54,8 +54,8 @@
       videoid="{{- $id -}}"
       {{ with $jsapi -}}jsapi{{- end }}
       {{ with $title -}}
-        title="{{- . -}}"
-      {{- end -}}
+        title="{{- . -}}" {{ end -}}{{- with $playlabel -}}
+        playlabel="{{- . -}}" {{ end -}}
       params="{{- $params -}}"
       style="background-image: url('{{- $remoteThumbnail.Permalink -}}');"
     >
