@@ -3,8 +3,6 @@
 # - 1 for googleusercontent.com (default)
 # - 2 for ytimg.com
 thumbnail_source = 1
-# disabled = false
-# verbose = true
 
 [dnb.youtube.apiparams]
 # see https://developers.google.com/youtube/player_parameters#Parameters

@@ -26,7 +26,6 @@ target = "assets/scss/_lite-yt-embed.scss"
 source = "assets/images/broken.webp"
 target = "assets/images/dnb/youtube/broken.webp"
 
-# see https://github.com/paulirish/lite-youtube-embed for details
 [[imports]]
 disable = false
 ignoreConfig = true
