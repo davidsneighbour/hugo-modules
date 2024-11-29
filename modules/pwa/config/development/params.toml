@@ -1,5 +1,5 @@
 [dnb.pwa]
-dev = false
+dev = true
 favicon = "favicon/favicon.png"
 
 # https://developer.mozilla.org/en-US/docs/Web/Manifest/start_url
