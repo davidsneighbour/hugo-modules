@@ -1,0 +1,3 @@
+[[cachebusters]]
+source = 'layouts/.*'
+target = 'css'

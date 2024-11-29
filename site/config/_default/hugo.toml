@@ -1,0 +1,4 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-US'
+title = 'DNB Hugo Modules'
+disableHugoGeneratorInject = true
