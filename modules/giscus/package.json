@@ -12,7 +12,7 @@
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/giscus",
   "dependencies": {
     "@davidsneighbour/configurations": "^2024.1.2",
-    "@davidsneighbour/release-config": "^2024.4.8"
+    "@davidsneighbour/release-config": "^2024.4.9"
   },
   "scripts": {
     "build": "",

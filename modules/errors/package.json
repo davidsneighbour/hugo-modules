@@ -8,8 +8,8 @@
   "repository": "https://github.com/davidsneighbour/hugo-modules",
   "bugs": "https://github.com/davidsneighbour/hugo-errors/issues",
   "devDependencies": {
-    "@davidsneighbour/release-config": "^2024.4.8",
-    "@davidsneighbour/tools": "^2024.4.8"
+    "@davidsneighbour/release-config": "^2024.4.9",
+    "@davidsneighbour/tools": "^2024.4.9"
   },
   "scripts": {
     "clean": "rimraf node_modules package-lock.json",
