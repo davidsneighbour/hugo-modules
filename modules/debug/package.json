@@ -15,7 +15,7 @@
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/debug",
   "devDependencies": {
     "@davidsneighbour/bootstrap-config": "^2024.4.9",
-    "@davidsneighbour/release-config": "^2024.4.9",
+    "@davidsneighbour/release-config": "^2024.4.10",
     "@davidsneighbour/webpack-config": "^2024.4.9",
     "@types/node": "^22.10.1",
     "@types/webpack": "^5.28.5",

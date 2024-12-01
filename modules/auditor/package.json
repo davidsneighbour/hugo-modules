@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/auditor",
   "dependencies": {
-    "@davidsneighbour/release-config": "^2024.4.9"
+    "@davidsneighbour/release-config": "^2024.4.10"
   },
   "scripts": {
     "clean": "rimraf node_modules package-lock.json",
