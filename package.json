@@ -30,7 +30,7 @@
   "devDependencies": {
     "@playwright/test": "1.49.0",
     "@types/node": "22.10.1",
-    "@davidsneighbour/markdownlint-config": "2024.4.9",
+    "@davidsneighbour/markdownlint-config": "2024.4.10",
     "@davidsneighbour/prettier-config": "2024.4.9",
     "@davidsneighbour/remark-config": "2024.4.9",
     "@davidsneighbour/tools": "2024.4.9",
