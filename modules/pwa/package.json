@@ -14,7 +14,7 @@
     "@davidsneighbour/browserslist-config": "^2024.4.9",
     "@davidsneighbour/eslint-config": "^2024.4.9",
     "@davidsneighbour/release-config": "^2024.4.9",
-    "@davidsneighbour/tools": "^2024.4.9",
+    "@davidsneighbour/tools": "^2024.4.10",
     "@davidsneighbour/webpack-config": "^2024.4.9",
     "workbox-cacheable-response": "7.3.0",
     "workbox-core": "7.3.0",
