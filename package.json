@@ -33,7 +33,7 @@
     "@davidsneighbour/markdownlint-config": "2024.4.11",
     "@davidsneighbour/prettier-config": "2024.4.11",
     "@davidsneighbour/remark-config": "2024.4.11",
-    "@davidsneighbour/tools": "2024.4.11",
+    "@davidsneighbour/tools": "2024.4.12",
     "dotenv": "16.4.5"
   }
 }

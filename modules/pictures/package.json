@@ -10,7 +10,7 @@
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/pictures",
   "dependencies": {
     "@davidsneighbour/release-config": "2024.4.11",
-    "@davidsneighbour/tools": "2024.4.11"
+    "@davidsneighbour/tools": "2024.4.12"
   },
   "scripts": {
     "build": "",
