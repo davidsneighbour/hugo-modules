@@ -14,23 +14,20 @@
   "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/debug",
   "devDependencies": {
-    "@davidsneighbour/bootstrap-config": "^2024.4.11",
-    "@davidsneighbour/release-config": "^2024.4.11",
-    "@davidsneighbour/webpack-config": "^2024.4.11",
-    "@types/node": "^22.10.1",
-    "@types/webpack": "^5.28.5",
-    "sass": "^1.81.0",
-    "sass-loader": "^16.0.3",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.7.2"
+    "@davidsneighbour/bootstrap-config": "2024.4.12",
+    "@davidsneighbour/release-config": "2024.4.12",
+    "@davidsneighbour/webpack-config": "2024.4.12",
+    "@types/node": "22.10.1",
+    "@types/webpack": "5.28.5",
+    "sass": "1.82.0",
+    "sass-loader": "16.0.4",
+    "ts-node": "10.9.2",
+    "typescript": "5.7.2"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "clean": "rimraf node_modules package-lock.json",
-    "fixpack": "fixpack",
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/repo/release/postrelease",
-    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/repo/release/postrelease",
-    "update": "npm-check-updates -u && npm install && git add package*"
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/debug/v\" --releaseCommitMessageFormat \"chore(release): modules/debug/v{{currentTag}}\" && ./bin/repo/release/postrelease"
   },
   "type": "module"
 }

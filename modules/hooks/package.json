@@ -11,11 +11,10 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/hooks",
   "dependencies": {
-    "@davidsneighbour/release-config": "2024.4.11",
-    "@davidsneighbour/tools": "2024.4.11"
+    "@davidsneighbour/release-config": "2024.4.12",
+    "@davidsneighbour/tools": "2024.4.12"
   },
   "scripts": {
-    "clean": "rimraf node_modules package-lock.json",
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/hooks/v\" --releaseCommitMessageFormat \"chore(release): modules/hooks/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/hooks/v\" --releaseCommitMessageFormat \"chore(release): modules/hooks/v{{currentTag}}\" && ./bin/repo/release/postrelease"
   },

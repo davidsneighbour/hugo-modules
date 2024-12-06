@@ -11,15 +11,12 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/social",
   "dependencies": {
-    "@davidsneighbour/configurations": "^2024.1.2",
-    "@davidsneighbour/release-config": "^2024.4.11"
+    "@davidsneighbour/configurations": "2024.1.2",
+    "@davidsneighbour/release-config": "2024.4.12"
   },
   "scripts": {
-    "clean": "rimraf node_modules package-lock.json",
-    "contributors:generate": "all-contributors generate",
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/social/v\" --releaseCommitMessageFormat \"chore(release): modules/social/v{{currentTag}}\" && ./bin/repo/release/postrelease",
-    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/social/v\" --releaseCommitMessageFormat \"chore(release): modules/social/v{{currentTag}}\" && ./bin/repo/release/postrelease",
-    "update": "npm-check-updates -u && npm install && git add package*"
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/social/v\" --releaseCommitMessageFormat \"chore(release): modules/social/v{{currentTag}}\" && ./bin/repo/release/postrelease"
   },
   "type": "module"
 }

@@ -11,12 +11,11 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/icons",
   "dependencies": {
-    "@davidsneighbour/release-config": "2024.4.11",
-    "@davidsneighbour/tools": "2024.4.11",
+    "@davidsneighbour/release-config": "2024.4.12",
+    "@davidsneighbour/tools": "2024.4.12",
     "@tabler/icons": "3.24.0"
   },
   "scripts": {
-    "clean": "rimraf node_modules package-lock.json",
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/icons/v\" --releaseCommitMessageFormat \"chore(release): modules/icons/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/icons/v\" --releaseCommitMessageFormat \"chore(release): modules/icons/v{{currentTag}}\" && ./bin/repo/release/postrelease"
   },

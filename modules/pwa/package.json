@@ -11,11 +11,11 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/pwa",
   "dependencies": {
-    "@davidsneighbour/browserslist-config": "^2024.4.11",
-    "@davidsneighbour/eslint-config": "^2024.4.11",
-    "@davidsneighbour/release-config": "^2024.4.11",
-    "@davidsneighbour/tools": "^2024.4.11",
-    "@davidsneighbour/webpack-config": "^2024.4.11",
+    "@davidsneighbour/browserslist-config": "2024.4.12",
+    "@davidsneighbour/eslint-config": "2024.4.12",
+    "@davidsneighbour/release-config": "2024.4.12",
+    "@davidsneighbour/tools": "2024.4.12",
+    "@davidsneighbour/webpack-config": "2024.4.12",
     "workbox-cacheable-response": "7.3.0",
     "workbox-core": "7.3.0",
     "workbox-expiration": "7.3.0",
@@ -28,11 +28,9 @@
     "build": "npm run build:dev && npm run build:prod",
     "build:dev": "cross-env NODE_ENV=development webpack --config webpack.dev.cjs",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.prod.cjs",
-    "clean": "rimraf node_modules package-lock.json",
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/pwa/v\" --releaseCommitMessageFormat \"chore(release): modules/pwa/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/pwa/v\" --releaseCommitMessageFormat \"chore(release): modules/pwa/v{{currentTag}}\" && ./bin/repo/release/postrelease",
-    "serve:webpack": "webpack --watch --config webpack.dev.js",
-    "update": "npm-check-updates -u && npm install && git add package*"
+    "serve:webpack": "webpack --watch --config webpack.dev.js"
   },
   "main": "webpack.common.js",
   "browserslist": [
