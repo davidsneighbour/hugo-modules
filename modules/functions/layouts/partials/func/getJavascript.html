@@ -40,16 +40,16 @@
   {{ end }}
 {{ end }}
 
-{{/* math.Add webpack script */}}
+{{/* add webpack script */}}
 {{/*{{ $collection = $collection | collections.Append (resources.Get "main.js") }}*/}}
 {{/*{{- partials.Include "debug-cli.html" (dict "message" (fmt.Printf "Loading %s" "main.js") "severity" "debug") -}}*/}}
 {{/*{{ fmt.Warnf "Loading %s" "main.js" }}*/}}
 
-{{/* math.Add global script */}}
+{{/* add global script */}}
 {{ $collection = $collection | collections.Append (resources.Get "js/script.js") }}
 {{- partials.Include "debug-cli.html" (dict "message" (fmt.Printf "Loading %s" "js/script.js") "severity" "debug") -}}
 
-{{/* math.Add local script */}}
+{{/* add local script */}}
 {{- if (collections.IsSet site.Params "dnb") -}}
   {{- with (collections.Index site.Params.dnb "javascript") -}}
     {{- $jsLocal := resources.Get (fmt.Printf "%s/%s" "js" .) -}}
