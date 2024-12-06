@@ -5,6 +5,6 @@ authors:
     given-names: "Patrick"
     orcid: "https://orcid.org/0000-0001-6250-2135"
 title: "Hugo Modules by @davidsneighbour"
-version: 1.2024.23
-date-released: 2024-05-26
+version: 1.2024.0
+date-released: 2024-12-06
 url: "https://github.com/davidsneighbour/hugo-modules"
