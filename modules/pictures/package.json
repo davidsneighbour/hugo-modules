@@ -8,9 +8,8 @@
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/pictures",
-  "dependencies": {
-    "@davidsneighbour/release-config": "2024.4.12",
-    "@davidsneighbour/tools": "2024.4.12"
+  "devDependencies": {
+    "@davidsneighbour/release-config": "2024.4.12"
   },
   "scripts": {
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/pictures/v\" --releaseCommitMessageFormat \"chore(release): modules/pictures/v{{currentTag}}\" && ./bin/repo/release/postrelease",

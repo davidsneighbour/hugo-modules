@@ -8,17 +8,24 @@
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules#readme",
+  "devDependencies": {
+    "@davidsneighbour/markdownlint-config": "2024.4.12",
+    "@davidsneighbour/remark-config": "2024.4.12",
+    "@davidsneighbour/tools": "2024.4.12",
+    "@playwright/test": "1.49.0",
+    "@types/node": "22.10.1",
+    "dotenv": "16.4.7"
+  },
   "scripts": {
     "build": "node bin/release/system/update.mjs && ./bin/components",
-    "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.js",
     "clean": "rimraf node_modules package-lock.json",
     "clean:all": "npm run clean --workspaces && npm run clean",
     "lint:lockfiles": "lockfile-lint --path package-lock.json --type=npm --validate-https --allowed-hosts=npm --empty-hostname=false --validate-package-names --validate-checksum --validate-integrity",
-    "serve:webpack": "webpack --watch --config webpack.js",
+    "tests": "playwright test",
+    "tests:generate": "playwright codegen",
     "update": "npm-check-updates --deep --upgrade --target=minor && npm install",
     "update:major": "npm-check-updates --deep --upgrade && npm install",
-    "tests": "playwright test",
-    "tests:generate": "playwright codegen"
+    "updates": "npm exec --workspaces -- npm-check-updates --upgrade"
   },
   "stylelint": {
     "extends": "@davidsneighbour/stylelint-config"
@@ -26,16 +33,5 @@
   "type": "module",
   "workspaces": [
     "modules/*"
-  ],
-  "scripts": {
-    "updates": "npm exec --workspaces -- npm-check-updates --upgrade"
-  },
-  "devDependencies": {
-    "@playwright/test": "1.49.0",
-    "@types/node": "22.10.1",
-    "@davidsneighbour/markdownlint-config": "2024.4.12",
-    "@davidsneighbour/remark-config": "2024.4.12",
-    "@davidsneighbour/tools": "2024.4.12",
-    "dotenv": "16.4.7"
-  }
+  ]
 }

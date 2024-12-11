@@ -10,8 +10,7 @@
     "url": "https://github.com/davidsneighbour/hugo-modules/issues"
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/functions",
-  "dependencies": {
-    "@davidsneighbour/configurations": "2024.1.2",
+  "devDependencies": {
     "@davidsneighbour/release-config": "2024.4.12"
   },
   "scripts": {

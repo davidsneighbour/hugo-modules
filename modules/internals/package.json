@@ -1,24 +1,21 @@
 {
   "name": "@davidsneighbour/hugo-internals",
+  "description": "Replacing GoHugo's internal templates with better options",
   "version": "1.2024.5",
   "license": "MIT",
-  "description": "Replacing GoHugo's internal templates with better options",
-  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
+  "private": true,
   "repository": "https://github.com/davidsneighbour/hugo-modules",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": {
     "url": "https://github.com/davidsneighbour/hugo-modules/issues"
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/internals",
   "devDependencies": {
-    "@davidsneighbour/configurations": "2024.1.2"
+    "@davidsneighbour/release-config": "2024.4.12"
   },
   "scripts": {
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/internals/v\" --releaseCommitMessageFormat \"chore(release): modules/internals/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/internals/v\" --releaseCommitMessageFormat \"chore(release): modules/internals/v{{currentTag}}\" && ./bin/repo/release/postrelease"
-  },
-  "private": true,
-  "dependencies": {
-    "@davidsneighbour/release-config": "^2024.4.12"
   },
   "type": "module"
 }

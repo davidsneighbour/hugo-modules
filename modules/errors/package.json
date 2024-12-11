@@ -1,20 +1,19 @@
 {
   "name": "@davidsneighbour/hugo-errors",
+  "description": "Error templates for GoHugo",
   "version": "1.2024.7",
   "license": "MIT",
-  "description": "Error templates for GoHugo",
-  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
-  "homepage": "https://github.com/davidsneighbour/hugo-errors",
+  "private": true,
   "repository": "https://github.com/davidsneighbour/hugo-modules",
+  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/hugo-errors/issues",
+  "homepage": "https://github.com/davidsneighbour/hugo-errors",
   "devDependencies": {
-    "@davidsneighbour/release-config": "2024.4.12",
-    "@davidsneighbour/tools": "2024.4.12"
+    "@davidsneighbour/release-config": "2024.4.12"
   },
   "scripts": {
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/errors/v\" --releaseCommitMessageFormat \"chore(release): modules/errors/v{{currentTag}}\" && ./bin/repo/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/errors/v\" --releaseCommitMessageFormat \"chore(release): modules/errors/v{{currentTag}}\" && ./bin/repo/release/postrelease"
   },
-  "private": true,
   "type": "module"
 }
