@@ -1,13 +1,15 @@
 [dnb.netlification]
 upgradeInsecureRequests = true
-# modes available
+# mode - defines output formats
 # netlify = Netlify
-# github = Github Pages
-# gitlab = Gitlab Pages
-# cloudflare = Cloudflare Pages
+# github = Github Pages (tbd)
+# gitlab = Gitlab Pages (tbd)
+# cloudflare = Cloudflare Pages (tbd)
 mode = "netlify"
+# extensions (tbd)
 # extensions = ["youtube", "cloudflare.insights"]
 # ignored header fields
+# @todo move to netlify specific settings
 ignored_headers = [
   "Accept-Ranges",
   "Age",

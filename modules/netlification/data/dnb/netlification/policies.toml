@@ -1,4 +1,8 @@
-[["facebook"]]
+[facebook]
+tags = ["todo", "socialmedia"]
+description = "tbd"
+more = [""]
+[facebook.policies]
 script-src = [
   "https://connect.facebook.net",
   "https://graph.facebook.com",
@@ -12,7 +16,11 @@ font-src = ["data:"]
 connect-src = ["*.facebook.com", "connect.facebook.net"]
 form-action = ["*.facebook.com", "connect.facebook.net"]
 
-[["google.translate"]]
+[google_translate]
+tags = ["todo"]
+description = "tbd"
+more = [""]
+[google_translate.policies]
 script-src = [
   "https://translate.googleapis.com",
   "https://translate.google.com",
@@ -29,7 +37,11 @@ connect-src = [
   "www.gstatic.com",
 ]
 
-[["google.tagmanager"]]
+[google_tagmanager]
+tags = ["todo"]
+description = "tbd"
+more = [""]
+[google_tagmanager.policies]
 script-src = [
   "https://www.googletagmanager.com",
   "https://googletagmanager.com",
@@ -42,7 +54,11 @@ img-src = ["data:", "www.googletagmanager.com"]
 font-src = ["data:"]
 connect-src = ["www.googletagmanager.com"]
 
-[["google.analytics"]]
+[google_analytics]
+tags = ["todo"]
+description = "tbd"
+more = [""]
+[google_analytics.policies]
 script-src = [
   "https://www.google-analytics.com",
   "https://ssl.google-analytics.com",
@@ -65,13 +81,21 @@ connect-src = [
   "about:",
 ]
 
-[["google.fonts"]]
+[google_fonts]
+tags = ["todo"]
+description = "tbd"
+more = [""]
+[google_fonts.policies]
 style-src = ["fonts.googleapis.com"]
 img-src = ["fonts.gstatic.com"]
 font-src = ["fonts.gstatic.com", "fonts.googleapis.com"]
 connect-src = ["fonts.googleapis.com", "fonts.gstatic.com"]
 
-[["google.ads"]]
+[google_ads]
+tags = ["todo"]
+description = "tbd"
+more = [""]
+[google_ads.policies]
 script-src = [
   "'unsafe-eval'",
   "https://*.doubleclick.net",
@@ -109,47 +133,47 @@ media-src = ["dai.google.com"]
 prefetch-src = ["*.googlesyndication.com"]
 worker-src = ["blob:", "www.google.com"]
 
-[["cloudflare.rocket"]]
+[cloudflare_rocket]
+tags = ["todo"]
+description = "tbd"
+more = [""]
+[cloudflare_rocket.policies]
 script-src = ["'self'", "https://ajax.cloudflare.com"]
 
-[["cloudflare.cdnjs"]]
+[cloudflare_cdnjs]
+tags = ["todo"]
+description = "tbd"
+more = [""]
+[cloudflare_cdnjs.policies]
 script-src = ["https://cdnjs.cloudflare.com"]
 style-src = ["cdnjs.cloudflare.com"]
 img-src = ["cdnjs.cloudflare.com"]
 font-src = ["cdnjs.cloudflare.com"]
 connect-src = ["cdnjs.cloudflare.com"]
 
-[["cloudflare.insights"]]
+[cloudflare_insights]
+tags = ["todo"]
+description = "tbd"
+more = [""]
+[cloudflare_insights.policies]
 script-src = ["'self'", "https://static.cloudflareinsights.com"]
 connect-src = ["cloudflareinsights.com"]
 
-# https://developer.grammarly.com/docs/faq#how-do-i-add-grammarly-to-my-content-security-policy-csp
-[["grammarly"]]
-img-src = ["data:", "https://*.grammarly.com"]
-connect-src = [
-  "https://*.grammarly.com",
-  "https://*.grammarly.io",
-  "wss://*.grammarly.com",
-]
-style-src = ["'unsafe-inline'"]
-script-src = ["https://*.grammarly.com"]
-
-[["grammarly.unpkg"]]
-script-src = ["https://unpkg.com"]
-
-[["grammarly.jsdelivr"]]
-script-src = ["https://cdn.jsdelivr.net"]
-
-[["grammarly.autocomplete"]]
-script-src = ["blob:"]
-
-[["gravatar"]]
+[gravatar]
+tags = ["todo"]
+description = "tbd"
+more = [""]
+[gravatar.policies]
 script-src = ["https://secure.gravatar.com"]
 style-src = ["secure.gravatar.com"]
 img-src = ["*.gravatar.com"]
 connect-src = ["*.gravatar.com"]
 
-[["google.maps"]]
+[google_maps]
+tags = ["todo"]
+description = "tbd"
+more = [""]
+[google_maps.policies]
 script-src = ["https://maps.googleapis.com", "https://maps.google.com"]
 style-src = ["'unsafe-inline'"]
 frame-src = ["maps.google.com", "maps.googleapis.com"]
@@ -165,13 +189,21 @@ img-src = [
 font-src = ["data:"]
 connect-src = ["maps.googleapis.com", "maps.google.com"]
 
-[["youtube"]]
+[youtube]
+tags = ["todo", "socialmedia"]
+description = "tbd"
+more = [""]
+[youtube.policies]
 script-src = ["https://www.youtube.com", "https://m.youtube.com"]
 frame-src = ["*.youtube.com", "www.youtube-nocookie.com"]
 child-src = ["www.youtube.com"]
 img-src = ["data:", "*.ytimg.com", "*.youtube.com"]
 
-[["linkedin"]]
+[linkedin]
+tags = ["todo", "socialmedia"]
+description = "tbd"
+more = [""]
+[linkedin.policies]
 script-src = [
   "https://snap.licdn.com",
   "https://static-exp1.licdn.com",
@@ -184,7 +216,11 @@ img-src = ["*.linkedin.com", "*.licdn.com", "p.adsymptotic.com"]
 connect-src = ["*.linkedin.com", "*.licdn.com"]
 media-src = ["media.licdn.com"]
 
-[["twitter"]]
+[twitter]
+tags = ["todo", "socialmedia"]
+description = "tbd"
+more = [""]
+[twitter.policies]
 script-src = [
   "https://platform.twitter.com",
   "https://analytics.twitter.com",
