@@ -7,6 +7,10 @@ source = "package.json"
 target = "data/dnb/modder/head.json"
 
 [[mounts]]
+source = "assets"
+target = "assets"
+
+[[mounts]]
 source = "layouts"
 target = "layouts"
 
