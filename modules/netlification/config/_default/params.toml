@@ -31,6 +31,7 @@ ignored_headers_info = "https://docs.netlify.com/routing/headers/#limitations"
 
 [dnb.netlification.defaults]
 # default value of "Accept-Encoding: gzip, deflate, br"
+# @deprecated, use data-headers instead
 acceptEncoding = "gzip, deflate, br"
 # default value of "Cache-Control: public, max-age={{- $cacheSeconds -}}, immutable"
 cacheControl = "public, max-age=%d, immutable"
@@ -55,6 +56,24 @@ days = 0
 # netlify specific settings
 [dnb.netlification.netlify]
 #cms = true
+ignored_headers = [
+  "Accept-Ranges",
+  "Age",
+  "Allow",
+  "Alt-Svc",
+  "Connection",
+  "Content-Encoding",
+  "Content-Length",
+  "Content-Range",
+  "Date",
+  "Location",
+  "Server",
+  "Set-Cookie",
+  "Trailer",
+  "Transfer-Encoding",
+  "Upgrade",
+]
+ignored_headers_info = "https://docs.netlify.com/routing/headers/#limitations"
 
 # github specific settings
 [dnb.netlification.github]
@@ -68,3 +87,11 @@ days = 0
 [[dnb.hooks.items.netlification.body-end]]
 file = "body-end"
 cached = false
+
+[dnb.netlification.internals]
+banner = '''
+################################################################################
+# |\| [- ~|~ |_ | /= | ( /\ ~|~ | () |\|
+# Netlification v%s - see https://dnbhub.xyz/netlification
+################################################################################
+'''

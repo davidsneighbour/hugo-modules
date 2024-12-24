@@ -49,6 +49,8 @@ upgradeInsecureRequests = true
 # names. iframeSrc instead of iframe-src, scriptSrc instead of script-src etc.
 #
 # The default setting is to accept only local scripts/sources
+#
+# see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 ################################################################################
 default-src = ["'self'"]
 connect-src = ["'self'"]
@@ -66,7 +68,6 @@ style-src = ["'self'"]
 style-src-elem = []
 style-src-attr = []
 worker-src = ["'self'"]
-# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action
 form-action = []
 
 ################################################################################

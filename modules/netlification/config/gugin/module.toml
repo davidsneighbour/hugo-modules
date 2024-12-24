@@ -7,16 +7,16 @@ source = "data"
 target = "data"
 
 [[mounts]]
+source = "package.json"
+target = "data/dnb/modder/netlification.json"
+
+[[mounts]]
 source = "layouts"
 target = "layouts"
 
 [[mounts]]
 source = "static"
 target = "static"
-
-[[mounts]]
-source = "package.json"
-target = "data/dnb/modder/netlification.json"
 
 [[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/debug"

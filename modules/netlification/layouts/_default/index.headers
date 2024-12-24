@@ -1,156 +1,135 @@
-{{/* notify of deprecation */}}
-{{- $deprecatedConf := $.Site.Data.dnb.netlification.config -}}
-{{- with $deprecatedConf -}}
-  {{- partials.Include "debug-cli.html"
-    (dict
-      "message" "netlification: you are configuring the netlification module via data/dnb/netlification.toml. this is being deprecated. move your config into params.toml. you will need to change the prefix of `[variable]` to `[dnb.netlification.variable]` and math.Add `[dnb.netlification]` before any un-prefixed variable. collections.After that the module will start working out-of-the-box again."
-      "context" .
-      "severity" "warn"
-      "level" 8
-    )
-  -}}
-{{- end -}}
-
+{{- /* see https://docs.netlify.com/routing/headers/ */ -}}
 {{- $config := site.Params.dnb.netlification -}}
-{{- $dateformat := "Mon, 02-Jan-2006 15:04:05 GMT-0700" -}}
-{{- $day := 86400 -}}
-{{- $month := 2628000 -}}
-{{- $year := 31536000 -}}
-{{- $cacheYears := cast.ToInt $config.cache.duration.years | compare.Default 1 -}}
-{{- $cacheMonths := cast.ToInt $config.cache.duration.months | compare.Default 0 -}}
-{{- $cacheDays := cast.ToInt $config.cache.duration.days | compare.Default 0 -}}
-{{- $cacheSeconds := math.Add (math.Mul $cacheDays $day) (math.Add (math.Mul $cacheMonths $month) (math.Mul $cacheYears $year)) -}}
-{{- $cacheControl := fmt.Printf $config.defaults.cacheControl $cacheSeconds }}
-{{- $expiryAge := now.AddDate $cacheYears $cacheMonths $cacheDays -}}
+{{- $headers := site.Data.dnb.netlification.headers -}}
+{{- fmt.Printf $config.internals.banner site.Data.dnb.modder.netlification.version -}}
+{{- partials.Include "func/processHeaders.html" $headers -}}
+{{- partials.Include "func/processNetlifyHeaders.html" site.Data.netlification -}}
 
-{{/* header rules for root page */}}
-/
-  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
-  Permissions-Policy: geolocation=(self)
-  Permissions-Policy: camera=()
-  Permissions-Policy: fullscreen=*
-  Permissions-Policy: interest-cohort=()
+{{- define "partials/func/getCSPHeader.html" -}}
 
-{{/* header rules for all pages */}}
-/*
-  X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block
-  Referrer-Policy: no-referrer
-  X-Content-Type-Options: nosniff
-  {{/* note: site.Params does a lot of strings.ToLower casing ;) */}}
+  {{- $config := .csp -}}
+
   {{- $nonrules := collections.Slice "upgradeinsecurerequests" "reporturi" "reportonly" -}}
-  {{ with $config.csp -}}
-      {{ if (compare.Eq .reportOnly true) -}}
-      Content-Security-Policy-Report-Only: {{ else -}}
-      Content-Security-Policy: {{ end -}}
-      {{- range $key, $values := $config.csp -}}
-        {{/* {{ fmt.Warnf "%s %s" $key $values }} */}}
-        {{- if not (collections.In $nonrules $key) -}}
-          {{- with (collections.Index $config.csp $key) -}}
-            {{ strings.Replace ($key | inflect.Humanize | strings.ToLower) " " "-" -}}
-            {{- range . }} {{ . }}{{ end }};
+  {{- $output := "" -}}
+
+  {{- with $config -}}
+
+    {{- $output = "\n  Content-Security-Policy: " -}}
+    {{ if (compare.Eq $config.reportOnly true) -}}
+      {{- $output = "\n  Content-Security-Policy-Report-Only: " -}}
+    {{- end -}}
+
+    {{- range $key, $values := $config -}}
+      {{- if not (collections.In $nonrules $key) -}}
+        {{- with (collections.Index $config $key) -}}
+          {{- $output = printf "%s %s"
+                          $output
+                          (strings.Replace ($key | inflect.Humanize | strings.ToLower) " " "-" ) -}}
+          {{- range . -}}
+            {{- $output = printf "%s %s" $output . -}}
           {{- end -}}
-        {{- end -}}
-      {{- end }}
-      {{- with $config.csp.upgradeInsecureRequests -}}
-          {{- if (compare.Eq $config.csp.upgradeInsecureRequests true) -}}
-              upgrade-insecure-requests;
-          {{- end -}}
-      {{- end -}}
-      {{- with $config.csp.reportUri }} report-uri {{ . }};{{- end -}}
-  {{- end }}
-  {{- range $config.headers }}
-  {{ . }}
-  {{- end }}
-  {{/* header rules for all pages */}}
-    {{ $ignored_headers := $config.ignored_headers }}
-    {{ $ignored_headers_info := $config.ignored_headers_info }}
-    {{ with site.Params.dnb.netlification.header -}}
-      {{- range $key, $value := . -}}
-        {{- if collections.In $ignored_headers $key -}}
-          {{- partials.Include "debug-cli.html"
-                (dict
-                  "message" (printf "netlification: %s is an ignored header field. %s" $key $ignored_headers_info)
-                  "context" .
-                  "severity" "warn"
-                  "level" 4
-                )
-          -}}
-        {{- else -}}
-          {{ $key }}: {{ $value }}
+          {{- $output = printf "%s;" $output -}}
         {{- end -}}
       {{- end -}}
     {{- end -}}
 
-/*.html
-  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
+    {{- with $config.upgradeInsecureRequests -}}
+      {{- if (compare.Eq $config.upgradeInsecureRequests true) -}}
+        {{- $output = printf "%s upgrade-insecure-requests;" $output -}}
+      {{- end -}}
+    {{- end -}}
 
-/*.manifest
-  Content-Type: application/manifest+json; charset=utf-8
-  Cache-Control: {{ $cacheControl }}
-  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
+    {{- with $config.reportUri -}}
+      {{- $output = printf "%s report-uri %s;" $output . -}}
+    {{- end -}}
 
-/*.js
-  Content-Type: text/javascript; charset=utf-8
-  Expires: {{ $expiryAge | time.Format $dateformat }}
-  Cache-Control: {{ $cacheControl }}
-  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
-
-/*.ico
-  Expires: {{ $expiryAge | time.Format $dateformat }}
-  Cache-Control: {{ $cacheControl }}
-  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
-
-/*.css
-  Expires: {{ $expiryAge | time.Format $dateformat }}
-  Cache-Control: {{ $cacheControl }}
-  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
-
-/*.jpg
-  Expires: {{ $expiryAge | time.Format $dateformat }}
-  Cache-Control: {{ $cacheControl }}
-  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
-
-/*.jpeg
-  Expires: {{ $expiryAge | time.Format $dateformat }}
-  Cache-Control: {{ $cacheControl }}
-  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
-
-/*.png
-  Expires: {{ $expiryAge | time.Format $dateformat }}
-  Cache-Control: {{ $cacheControl }}
-  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
-
-/*.gif
-  Expires: {{ $expiryAge | time.Format $dateformat }}
-  Cache-Control: {{ $cacheControl }}
-  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
-
-/*.eot
-  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
-
-/*.ttf
-  Accept-Encoding: {{ $config.defaults.acceptEncoding }}
-
-/assets/*
-  Expires: {{ $expiryAge | time.Format $dateformat }}
-  Cache-Control: {{ $cacheControl }}
-
-/images/*
-  Expires: {{ $expiryAge | time.Format $dateformat }}
-  Cache-Control: {{ $cacheControl }}
-
-# headers created via data configuration from other modules
-{{ with site.Data.dnb -}}
-  {{- range $index, $item := . -}}
-    {{- if (collections.Index $item "netlification") -}}
-# from {{ $index }}
-{{ range (collections.Index $item "netlification" "headers") }}
-  {{- .for }}
-  {{- range $key, $text := .values }}
-  {{ $key -}}: {{ $text }}
   {{- end -}}
+
+  {{ return $output }}
+
 {{- end -}}
+
+{{- define "partials/func/getReplacement.html" -}}
+
+  {{ $value := . }}
+  {{ $value = strings.Replace
+                $value
+                "%default"
+                (partials.IncludeCached "func/getReplacementExpiryAge.html" "default") }}
+  {{ return $value }}
+
+{{- end -}}
+
+{{- define "partials/func/getReplacementExpiryAge.html" -}}
+
+  {{ $duration := . }}
+  {{ $config := site.Params.dnb.netlification }}
+  {{ $value := ""}}
+
+  {{ if collections.In (slice "default") $duration }}
+    {{ $dateformat := "Mon, 02-Jan-2006 15:04:05 GMT-0700" }}
+    {{/* {{ $day := 86400 }}
+    {{ $month := 2628000 }}
+    {{ $year := 31536000 }} */}}
+    {{ $cacheYears := cast.ToInt $config.cache.duration.years | compare.Default 1 }}
+    {{ $cacheMonths := cast.ToInt $config.cache.duration.months | compare.Default 0 }}
+    {{ $cacheDays := cast.ToInt $config.cache.duration.days | compare.Default 0 }}
+    {{/* {{ $cacheSeconds := math.Add (math.Mul $cacheDays $day)
+                                  (math.Add (math.Mul $cacheMonths $month)
+                                            (math.Mul $cacheYears $year)) }}
+    {{ $cacheControl := fmt.Printf $config.defaults.cacheControl $cacheSeconds }} */}}
+    {{ $expiryAge := now.AddDate $cacheYears $cacheMonths $cacheDays }}
+    {{ $value = $expiryAge | time.Format $dateformat }}
+  {{ end }}
+  {{ return $value -}}
+
+{{- end -}}
+
+{{- define "partials/func/processHeaders.html" -}}
+
+  {{- $items := . -}}
+  {{- $config := site.Params.dnb.netlification -}}
+
+  {{- range $items -}}
+    {{- range . -}}
+      {{- fmt.Printf "\n\n%s" .for -}}
+      {{- if eq "/*" .for -}}
+        {{ partials.Include "func/getCSPHeader.html" $config -}}
+      {{- end -}}
+      {{- partials.Include "func/processHeadersInner.html" .values -}}
     {{- end -}}
   {{- end -}}
-{{- end }}
+
+{{- end -}}
+
+{{- define "partials/func/processHeadersInner.html" -}}
+
+  {{- $items := . -}}
+  {{- range $key, $value := $items -}}
+    {{- $value = partials.Include "func/getReplacement.html" $value -}}
+    {{- fmt.Printf "\n  %s: %s" $key ($value | safeHTML) -}}
+  {{- end -}}
+
+{{- end -}}
+
+{{- define "partials/func/processNetlifyHeaders.html" -}}
+
+  {{- fmt.Printf "\n\n%s" "# headers created via data configuration from other modules" -}}
+  {{- $items := . -}}
+  {{- with site.Data.dnb -}}
+    {{- range $index, $item := . -}}
+      {{- if (collections.Index $item "netlification") -}}
+        {{- with $item.netlification.headers -}}
+          {{- fmt.Printf "\n# from %s" $index -}}
+          {{- range . -}}
+            {{- if .for -}}
+              {{- fmt.Printf "\n%s" .for -}}
+              {{- partials.Include "func/processHeadersInner.html" .values -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+{{- end -}}
