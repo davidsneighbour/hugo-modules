@@ -13,3 +13,7 @@ target = "data/dnb/modder/modder.json"
 [[mounts]]
 source = "layouts"
 target = "layouts"
+
+[[mounts]]
+source = "static"
+target = "static"
