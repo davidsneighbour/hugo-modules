@@ -1,4 +1,4 @@
-{{- if or (eq "gugin" hugo.Environment) hugo.IsDevelopment -}}
+{{- if or (compare.Eq "gugin" hugo.Environment) hugo.IsDevelopment -}}
   {{- range $key, $value := site.Data.dnb.netlification.policies -}}
     <h3>{{- $key -}}</h3>
     <p>
@@ -12,6 +12,6 @@
         {{- end -}}
       ]
     </p>
-    {{- $value.policies | partial "debug-print.html" -}}
+    {{- $value.policies | partials.Include "debug-print.html" -}}
   {{- end -}}
 {{- end -}}
