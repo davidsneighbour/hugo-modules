@@ -1,0 +1,82 @@
+#!/bin/bash
+# v2024.09.02.01
+
+# get the current path
+CURPATH="$(pwd -P)"
+MODULE_NAME=$(basename "$CURPATH")
+
+# shellcheck disable=SC1091
+source "${CURPATH}/bin/repo/release/common"
+
+set -e
+
+check_required_tools curl git npm hugo
+load_env_vars "${CURPATH}/../../.env"
+
+# cleanup
+rm -rf public/
+
+# calculate release number
+RE='[^0-9]*\([0-9]*\)[.]\([0-9]*\)[.]\([0-9]*\)\([0-9A-Za-z-]*\)'
+step="$1"
+if [ -z "$1" ]; then
+  step="patch"
+fi
+base=$(node -pe 'require("./package.json")["version"]')
+MAJOR=$(echo $base | sed -e "s#$RE#\1#")
+MINOR=$(echo $base | sed -e "s#$RE#\2#")
+PATCH=$(echo $base | sed -e "s#$RE#\3#")
+case "$step" in
+major)
+  ((MAJOR += 1))
+  ((MINOR = 0))
+  ((PATCH = 0))
+  ;;
+minor)
+  ((MINOR += 1))
+  ((PATCH = 0))
+  ;;
+patch)
+  ((PATCH += 1))
+  ;;
+esac
+RELEASE="$MAJOR.$MINOR.$PATCH"
+TAGNAME="modules/${MODULE_NAME}/v${RELEASE}"
+
+# update version in citation configuration
+FILE=CITATION.cff
+if test -f "$FILE"; then
+  sed -i "s/^version: .*/version: ${RELEASE}/" $FILE
+  DATE=$(date +%F)
+  sed -i "s/date-released: .*/date-released: ${DATE}/" $FILE
+  git add $FILE
+fi
+
+# run build task and add assets if they exist
+npm run build --if-present
+if [ -d "static" ]; then
+  git add static
+fi
+
+# update and cleanup gohugo modules and add changes to repository
+git add package*
+hugo mod get -u ./...
+hugo mod tidy
+git add "${CURPATH}/go.mod"
+FILE="${CURPATH}/go.sum"
+if [ -f "$FILE" ]; then
+  git add "$FILE"
+fi
+
+# add vendor directory if existing
+if [ -d "${CURPATH}/_vendor" ]; then
+  hugo mod vendor
+  git add "${CURPATH}"/_vendor
+fi
+
+# @TODO some form of testing if required by the modules
+
+# create a changelog to use for the final release
+# @TODO update this so that the release notes are generated between tags of the same module
+RELEASE_NOTES="$(npx commit-and-tag-version --dry-run | awk 'BEGIN { flag=0 } /^---$/ { if (flag == 0) { flag=1 } else { flag=2 }; next } flag == 1')"
+echo "${RELEASE_NOTES}" >changes.md
