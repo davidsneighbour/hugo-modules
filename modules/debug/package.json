@@ -16,7 +16,7 @@
   "devDependencies": {
     "@davidsneighbour/bootstrap-config": "2025.0.1",
     "@davidsneighbour/release-config": "2024.4.12",
-    "@davidsneighbour/webpack-config": "2024.4.12",
+    "@davidsneighbour/webpack-config": "2025.0.1",
     "@types/node": "22.13.0",
     "@types/webpack": "5.28.5",
     "sass": "1.83.4",
