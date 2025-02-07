@@ -12,7 +12,7 @@
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/icons",
   "devDependencies": {
     "@davidsneighbour/release-config": "2024.4.12",
-    "@tabler/icons": "3.29.0"
+    "@tabler/icons": "3.30.0"
   },
   "scripts": {
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/icons/v\" --releaseCommitMessageFormat \"chore(release): modules/icons/v{{currentTag}}\" && ./bin/repo/release/postrelease",
