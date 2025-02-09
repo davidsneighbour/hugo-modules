@@ -10,7 +10,7 @@
   "homepage": "https://github.com/davidsneighbour/hugo-modules#readme",
   "devDependencies": {
     "@davidsneighbour/markdownlint-config": "2024.4.12",
-    "@davidsneighbour/remark-config": "2024.4.12",
+    "@davidsneighbour/remark-config": "2025.0.1",
     "@davidsneighbour/tools": "2024.4.12",
     "@playwright/test": "1.49.0",
     "@types/node": "22.10.1",
