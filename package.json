@@ -11,7 +11,7 @@
   "devDependencies": {
     "@davidsneighbour/markdownlint-config": "2024.4.12",
     "@davidsneighbour/remark-config": "2024.4.12",
-    "@davidsneighbour/tools": "2024.4.12",
+    "@davidsneighbour/tools": "2025.0.1",
     "@playwright/test": "1.49.0",
     "@types/node": "22.10.1",
     "dotenv": "16.4.7"
