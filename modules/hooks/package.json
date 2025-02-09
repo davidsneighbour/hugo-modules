@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/hooks",
   "devDependencies": {
-    "@davidsneighbour/release-config": "2024.4.12"
+    "@davidsneighbour/release-config": "2025.0.1"
   },
   "scripts": {
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/hooks/v\" --releaseCommitMessageFormat \"chore(release): modules/hooks/v{{currentTag}}\" && ./bin/repo/release/postrelease",
