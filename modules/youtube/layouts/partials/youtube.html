@@ -21,28 +21,28 @@
   {{- $remoteThumbnail := "" -}}
   {{- $thumbnailUrl := partials.IncludeCached "func/getYTPreviewUrl.html" $id $id -}}
 
-  {{ with resources.GetRemote $thumbnailUrl.maxres }}
+  {{ with try (resources.GetRemote $thumbnailUrl.maxres) }}
     {{ with .Err }}
       {{ warnf "%s" . }}
-    {{ else }}
+    {{ else with .Value }}
       {{- $remoteThumbnail = . -}}
       {{- with resources.Copy (fmt.Printf "assets/img/%s.jpg" $id) . -}}
         {{- $remoteThumbnail = . -}}
       {{ end -}}
-    {{ end }}
-  {{ else }}
-    {{ with resources.GetRemote $thumbnailUrl.lowres }}
-      {{ with .Err }}
-        {{ warnf "%s" . }}
-      {{ else }}
-        {{- $remoteThumbnail = . -}}
-        {{- with resources.Copy (fmt.Printf "assets/img/%s.jpg" $id) . -}}
-          {{- $remoteThumbnail = . -}}
-        {{ end -}}
-      {{ end }}
     {{ else }}
-      {{- $remoteThumbnail = resources.Get "images/dnb/youtube/broken.webp" -}}
-    {{- end -}}
+      {{ with try (resources.GetRemote $thumbnailUrl.lowres) }}
+        {{ with .Err }}
+          {{ warnf "%s" . }}
+        {{ else with .Value }}
+          {{- $remoteThumbnail = . -}}
+          {{- with resources.Copy (fmt.Printf "assets/img/%s.jpg" $id) . -}}
+            {{- $remoteThumbnail = . -}}
+          {{ end -}}
+        {{ else }}
+          {{- $remoteThumbnail = resources.Get "images/dnb/youtube/broken.webp" -}}
+        {{- end -}}
+      {{- end -}}
+    {{ end -}}
   {{- end -}}
 
   {{- if eq "" $remoteThumbnail -}}
