@@ -30,7 +30,6 @@ img:not[longdesc] {
   @extend .bg-dark-subtle;
   @extend .rounded-end;
   @extend .mt-3;
-  @extend .fontsize-1;
 
   @extend .position-fixed;
   @extend .bottom-0;
@@ -81,4 +80,8 @@ img:not[longdesc] {
     height: fit-content;
   }
 
+}
+
+div:empty, p:empty {
+  border: 1px solid red;
 }
