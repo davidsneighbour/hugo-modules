@@ -1,10 +1,6 @@
-![](../../documentation/debug/header-card.png)
+This [module for GoHugo](https://gohugo.io/hugo-modules/) adds debugging partials for many use cases.
 
-# GoHugo Modules / Debug
-
-This module for GoHugo adds debugging partials for many use cases.
-
-Read more about it [in the documentation](https://kollitsch.dev/gohugo/debug).
+Read more about it [in the documentation](https://dnbhub.xyz/debug).
 
 ![](.github/sample.jpg)
 
@@ -20,13 +16,5 @@ To install version for older Hugo versions, run the command with the following v
 
 | Hugo Version | Debug Version | Installation Path |
 | --- | --- | --- |
-| 0.120.0 | v1.2023.19 | `hugo mod get -u github.com/davidsneighbour/hugo-modules/modules/debug@v1.2023.19` |
-| 0.129.0 | v1.2024.26 | `hugo mod get -u github.com/davidsneighbour/hugo-modules/modules/debug@v1.2023.26` |
-
-## Breaking changes
-
-* **v1.2023.26:**
-  * The partial `debugprint.html` has been renamed to `debug-print.html`. Please update your templates.
-  * The partial `debug.html` has been renamed to `debug-cli.html`. Please update your templates.
-  * Both deprecated partials were removed after 2024-03-14.
-  * The capability of the partials remains the same after renaming.
+| [v0.120.0](https://github.com/gohugoio/hugo/releases/tag/v0.120.0) | v1.2023.19 | `hugo mod get -u github.com/davidsneighbour/hugo-modules/modules/debug@v1.2023.19` |
+| [v0.129.0](https://github.com/gohugoio/hugo/releases/tag/v0.129.0) | v1.2024.26 | `hugo mod get -u github.com/davidsneighbour/hugo-modules/modules/debug@v1.2023.26` |
