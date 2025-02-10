@@ -12,4 +12,9 @@
   {{- fmt.Warnf "see https://dnbhub.xyz/issue-225 for details" -}}
   {{- $isProcessable := "false" -}}
 {{- end -}}
+{{- if and $isPageBundle (compare.Eq $image.MediaType.SubType "webp") -}}
+  {{- fmt.Warnf "webps are not supported, yet. Using static file strategy instead: %s" $image.Permalink -}}
+  {{- fmt.Warnf "see https://dnbhub.xyz/issue-225 for details" -}}
+  {{- $isProcessable := "false" -}}
+{{- end -}}
 {{- return $isProcessable -}}

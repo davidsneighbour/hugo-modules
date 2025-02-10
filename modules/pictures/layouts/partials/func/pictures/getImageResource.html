@@ -12,20 +12,24 @@ requires two parameters:
 {{- $path := (fmt.Printf "%s" (.path | safe.URL)) -}}
 {{- $page := site.GetPage (fmt.Printf "%s" (.page | safe.URL)) -}}
 {{- $localimage := false -}}
-{{- with $page.Resources.GetMatch $path -}}
+{{- with try ($page.Resources.GetMatch $path) -}}
   {{- with .Err -}}
     {{- fmt.Warnf "%s" . -}}
-  {{- else -}}
+  {{- else with .Value -}}
     {{- $localimage = . -}}
+  {{ else }}
+    {{ warnf "Unable to get remote resource %q" $path }}
   {{- end -}}
 {{- end -}}
 
 {{- with $localimage -}}{{- else -}}
-  {{- with resources.Get $path -}}
+  {{- with try (resources.Get $path) -}}
     {{- with .Err -}}
       {{- fmt.Warnf "%s" . -}}
-    {{- else -}}
+    {{- else with .Value -}}
       {{- $localimage = . -}}
+    {{ else }}
+      {{ warnf "Unable to get remote resource %q" $path }}
     {{- end -}}
   {{- end -}}
 {{- end -}}
