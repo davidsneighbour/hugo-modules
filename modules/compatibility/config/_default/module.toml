@@ -1,0 +1,7 @@
+[module]
+[module.hugoVersion]
+max = "0.140.2"
+
+[[module.mounts]]
+source = 'layouts'
+target = 'layouts'

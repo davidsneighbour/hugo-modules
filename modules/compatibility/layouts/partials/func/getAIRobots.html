@@ -1,0 +1,16 @@
+{{- $url := "https://raw.githubusercontent.com/ai-robots-txt/ai.robots.txt/refs/heads/main/robots.json" -}}
+
+{{- $data := dict -}}
+{{- with resources.GetRemote $url -}}
+  {{- with .Err -}}
+    {{- errorf "%s" . -}}
+  {{- else -}}
+    {{- $data = . | transform.Unmarshal -}}
+  {{- end -}}
+{{- else -}}
+  {{- errorf "Unable to get remote resource %q" $url -}}
+{{- end -}}
+
+{{/* https://blog.cloudflare.com/declaring-your-aindependence-block-ai-bots-scrapers-and-crawlers-with-a-single-click/ */}}
+
+{{- return $data}}
