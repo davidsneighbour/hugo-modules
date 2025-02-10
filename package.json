@@ -1,5 +1,5 @@
 {
-  "name": "hugo-modules",
+  "name": "@davidsneighbour/hugo-modules",
   "description": "@davidsneighbour's reusable gohugo components.",
   "version": "1.2024.23",
   "license": "MIT",
