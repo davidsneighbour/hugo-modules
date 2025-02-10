@@ -21,6 +21,7 @@
       {{- end -}}
     {{- end -}}
   {{- end -}}
+{{- else if compare.Eq "disabled" $config.method -}}
 {{- else -}}
   <link rel="stylesheet" media="all" href="{{- $config.externalOptions.target -}}">
 {{- end -}}

@@ -15,8 +15,8 @@ method = "postcss"
 
 [dnb.head.styles.sassOptions]
 # sass options, see https://gohugo.io/functions/css/sass/#options
+transpiler = "dartsass"
 enableSourceMap = true
-ignoreErrors = ["dnb-sample-error"]
 includePaths = ["node_modules/"]
 outputStyle = "compressed"
 targetPath = "assets/theme.css"
@@ -36,6 +36,9 @@ targetPath = "assets/theme.css"
 # optimize = false
 # inlineImports = false
 # skipInlineImportsNotFound = false
+targetPath = "twtheme.css"
+enableSourceMap = "false"
+includePaths = ["node_modules/"]
 
 [dnb.head.styles.externalOptions]
 target = "/styles.css"
