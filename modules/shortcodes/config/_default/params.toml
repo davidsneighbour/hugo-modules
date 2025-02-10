@@ -7,7 +7,7 @@ groupstyle = "grid" # single, tabs, grid, fieldsets
 [dnb.forms.contactform.attributes]
 data-netlify = "true"
 netlify-honeypot = "%random%"
-class = "mb-6"
+class = "mb-"
 
 [[dnb.forms.contactform.fields.1]]
 name = "shortcodes.form.fieldnames.name"
