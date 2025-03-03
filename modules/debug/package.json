@@ -22,7 +22,7 @@
     "sass": "1.85.1",
     "sass-loader": "16.0.5",
     "ts-node": "10.9.2",
-    "typescript": "5.7.3"
+    "typescript": "5.8.2"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
