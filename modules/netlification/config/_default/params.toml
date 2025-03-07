@@ -84,10 +84,6 @@ ignored_headers_info = "https://docs.netlify.com/routing/headers/#limitations"
 # cloudflare specific settings
 [dnb.netlification.cloudflare]
 
-[[dnb.hooks.items.netlification.body-end]]
-file = "body-end"
-cached = false
-
 [dnb.netlification.internals]
 banner = '''
 ################################################################################
@@ -95,3 +91,35 @@ banner = '''
 # Netlification v%s - see https://dnbhub.xyz/netlification
 ################################################################################
 '''
+
+[[dnb.netlification.speculationrules.prerender]]
+[[dnb.netlification.speculationrules.prerender.where.and]]
+href_matches = "/*"
+
+[[dnb.netlification.speculationrules.prerender.where.and]]
+[dnb.netlification.speculationrules.prerender.where.and.not]
+href_matches = "/logout"
+
+[[dnb.netlification.speculationrules.prerender.where.and]]
+[dnb.netlification.speculationrules.prerender.where.and.not]
+href_matches = "/*\\?*(^|&)add-to-cart=*"
+
+[[dnb.netlification.speculationrules.prerender.where.and]]
+[dnb.netlification.speculationrules.prerender.where.and.not]
+selector_matches = ".no-prerender"
+
+[[dnb.netlification.speculationrules.prerender.where.and]]
+[dnb.netlification.speculationrules.prerender.where.and.not]
+selector_matches = "[rel~=nofollow]"
+
+[[dnb.netlification.speculationrules.prefetch]]
+urls = [ "/find/", "/" ]
+requires = [ "anonymous-client-ip-when-cross-origin" ]
+referrer_policy = "no-referrer"
+
+[dnb.hooks]
+[dnb.hooks.items]
+[dnb.hooks.items.netlification]
+[[dnb.hooks.items.netlification.body-end]]
+cached = true
+file = 'netlification-body-end'
