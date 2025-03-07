@@ -22,5 +22,7 @@ dataStrict="1"
 # require giscus.json setup
 # https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md
 origins = []
-originsRegex = []
+originsRegex = [
+  "http(s)?://localhost:[0-9]+"
+]
 defaultCommentOrder = "oldest" # "oldest" (oldest to newest) or "newest"
