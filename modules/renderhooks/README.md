@@ -1,9 +1,3 @@
-![](../../documentation/renderhooks/header-card.png)
-
-# David's Neighbour GoHugo Component / Renderhooks
-
-❗this is work in progress, I just uploaded the current state so I can link to it. The original repo can be found within the revisions of (github.com/dnb-org/components] I think.
-
 Customized render hooks for Hugo
 
 ## Installing
