@@ -1,0 +1,9 @@
+{
+  "cache": true,
+  "color": true,
+  "install": "prompt",
+  "interactive": false,
+  "upgrade": true,
+  "root": true,
+  "deep": true
+}
