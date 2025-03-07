@@ -5,5 +5,5 @@
   "interactive": false,
   "upgrade": true,
   "root": true,
-  "deep": true
+  "packageFile": "modules/*/package.json"
 }
