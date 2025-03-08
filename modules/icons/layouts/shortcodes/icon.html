@@ -1,11 +1,11 @@
-{{- /*
+{{/*
 
 @example
 
-{{- partials.Include "icon.html" (dict "type" "bootstrap" "icon" "cash") -}}
-{{< icon type="bootstrap" icon="cash" >}}
+{{< icon icon="cash" type="bootstrap" >}}
+{{< icon icon="cash" type="bootstrap" width="24" height="24" class="text-primary" >}}
 
-*/ -}}
+*/}}
 
 {{- $iconname := .Get "icon" -}}
 {{- $width := .Get "width" | compare.Default 20 -}}
