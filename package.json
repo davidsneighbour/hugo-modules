@@ -14,7 +14,7 @@
     "@davidsneighbour/remark-config": "2025.1.0",
     "@davidsneighbour/tools": "2025.1.0",
     "@playwright/test": "1.51.0",
-    "@types/node": "22.13.9",
+    "@types/node": "22.14.0",
     "dotenv": "16.4.7"
   },
   "scripts": {
