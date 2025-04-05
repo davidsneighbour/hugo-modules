@@ -11,7 +11,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@davidsneighbour/markdownlint-config": "2025.1.1",
-    "@davidsneighbour/remark-config": "2025.1.0",
+    "@davidsneighbour/remark-config": "2025.1.1",
     "@davidsneighbour/tools": "2025.1.1",
     "@playwright/test": "1.51.1",
     "@types/node": "22.14.0",
