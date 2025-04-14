@@ -6,7 +6,7 @@ check_required_tools() {
   local required_tools=("$@")
   for tool in "${required_tools[@]}"; do
     if ! command -v "${tool}" &>/dev/null; then
-      echo "${tool} is required... "
+      echo "${tool} is required but not installed." >&2
       exit 1
     fi
   done
@@ -24,8 +24,7 @@ load_env_vars() {
     source "$file"
     set +a
   else
-    echo "No $file file found"
+    echo "No $file file found" >&2
     exit 1
   fi
 }
-
