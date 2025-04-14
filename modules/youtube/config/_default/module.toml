@@ -13,37 +13,3 @@ target = "assets"
 [[mounts]]
 source = "package.json"
 target = "data/dnb/modder/youtube.json"
-
-[[mounts]]
-source = "assets/js/lite-yt-embed.js"
-target = "assets/js/lite-yt-embed.js"
-
-[[mounts]]
-source = "assets/scss/_lite-yt-embed.scss"
-target = "assets/scss/_lite-yt-embed.scss"
-
-[[mounts]]
-source = "assets/images/broken.webp"
-target = "assets/images/dnb/youtube/broken.webp"
-
-[[imports]]
-disable = false
-ignoreConfig = true
-ignoreImports = false
-path = "github.com/paulirish/lite-youtube-embed"
-
-[[imports.mounts]]
-source = "src/lite-yt-embed.css"
-target = "assets/scss/liteyoutube/_lite-yt-embed.scss"
-
-[[imports.mounts]]
-source = "src/lite-yt-embed.css"
-target = "static/libs/liteyoutube/lite-yt-embed.css"
-
-[[imports.mounts]]
-source = "src/lite-yt-embed.js"
-target = "assets/js/liteyoutube/lite-yt-embed.js"
-
-[[imports.mounts]]
-source = "src/lite-yt-embed.js"
-target = "static/libs/liteyoutube/lite-yt-embed.js"

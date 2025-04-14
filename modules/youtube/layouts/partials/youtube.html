@@ -39,14 +39,14 @@
             {{- $remoteThumbnail = . -}}
           {{ end -}}
         {{ else }}
-          {{- $remoteThumbnail = resources.Get "images/dnb/youtube/broken.webp" -}}
+          {{- $remoteThumbnail = resources.Get "images/broken.webp" -}}
         {{- end -}}
       {{- end -}}
     {{ end -}}
   {{- end -}}
 
   {{- if eq "" $remoteThumbnail -}}
-    {{- $remoteThumbnail = resources.Get "images/dnb/youtube/broken.webp" -}}
+    {{- $remoteThumbnail = resources.Get "images/broken.webp" -}}
   {{- end -}}
 
   <div class="shortcode--youtube {{ with $class -}}{{- . -}}{{- end -}}">
