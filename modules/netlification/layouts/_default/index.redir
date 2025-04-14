@@ -6,10 +6,10 @@
 # redirects from content aliases
 ################################################################################
 {{/* range through single aliases */}}
-{{- range $p := site.Pages -}}
+{{ range $p := site.Pages -}}
   {{ range .Aliases -}}
     {{- partial
-          "partials/dnb-netlification/redirection.html" (
+          "dnb-netlification/redirection.html" (
           slice "%s %s %d" (. | fmt.Printf "%-40s") $p.RelPermalink (cast.ToInt 301)
     ) -}}
   {{- end -}}
@@ -22,12 +22,12 @@
   {{ range . -}}
     {{- if (collections.Index . "netlify") -}}
       {{- partial
-            "partials/dnb-netlification/redirection.html" (
+            "dnb-netlification/redirection.html" (
             slice "%s %s %d!" (printf "%s%s" .netlify "*") (site.BaseURL | fmt.Printf "%s:splat") (cast.ToInt 301)
       ) -}}
     {{- else -}}
       {{- partial
-            "partials/dnb-netlification/redirection.html" (
+            "dnb-netlification/redirection.html" (
             slice "%s %s %d" .from .to (.status | compare.Default 301)
       ) -}}
     {{- end -}}
@@ -38,7 +38,7 @@
 ################################################################################
 {{/* error pages */}}
 {{- partial
-      "partials/dnb-netlification/redirection.html" (
+      "dnb-netlification/redirection.html" (
       slice "%s %s %d" "/*" "/404" 404
 ) -}}
 
