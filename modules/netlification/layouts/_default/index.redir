@@ -50,7 +50,6 @@
         (collections.Index . 3 | cast.ToInt) }}
 {{ end }}
 
-
 {{ define "partials/dnb-netlification/redirect_request.html" }}
 
 {{- $from := "" -}}
@@ -67,6 +66,5 @@
   force = false
   query = {path = ":path"} #  apply this rule for /old-path?path=example
   conditions = {Language = ["en","es"], Country = ["US"]} */}}
-
 
 {{ end }}
