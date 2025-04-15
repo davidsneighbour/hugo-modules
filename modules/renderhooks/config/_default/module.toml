@@ -28,12 +28,12 @@ target = 'assets/js/plugins/lib/clipboard.js'
 
 # # clipboard.js - handling copy button on code blocks
 # # see https://github.com/zenorocha/clipboard.js
-[[imports]]
-disable = false
-ignoreConfig = true
-ignoreImports = true
-path = "github.com/zenorocha/clipboard.js"
+# [[imports]]
+# disable = false
+# ignoreConfig = true
+# ignoreImports = true
+# path = "github.com/zenorocha/clipboard.js"
 
-[[imports.mounts]]
-source = 'dist/clipboard.js'
-target = 'assets/js/plugins/lib/clipboard.js'
+# [[imports.mounts]]
+# source = 'dist/clipboard.js'
+# target = 'assets/js/plugins/lib/clipboard.js'
