@@ -1,5 +1,14 @@
 {{- partials.Include "func/hook.html" ( dict "hook" "head-styles-before" "context" . ) -}}
 {{- $config := site.Params.dnb.head.styles -}}
+
+
+
+{{ $dev := site.Params.dnb.theme.devmode | default false }}
+{{/* {{ $options := dict "targetPath" "style.css" "vars" (dict "devmode" $dev) }}
+{{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options }}
+<link rel="stylesheet" href="{{ $style.Permalink }}"> */}}
+
+
 {{- if compare.Eq "postcss" ($config.method | compare.Default "postcss") -}}
   {{- $entrypoint := $config.entrypoint | compare.Default "scss/style.scss" -}}
   {{- $styles := resources.Get $entrypoint -}}
