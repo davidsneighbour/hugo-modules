@@ -34,16 +34,17 @@
   {{/* @todo fix weighting of hooks */}}
   {{/* @todo fix logging output */}}
   {{/* @todo document this mess */}}
-  {{- range $key, $hooks := . -}}
+  {{ range $key, $hooks := . -}}
     {{- with (collections.Index $hooks $context.hook) -}}
       {{- range . -}}
-        {{- $partialHook := fmt.Printf "partials/hooks/%s.html" .file -}}
+        {{- $partialName := fmt.Printf "hooks/%s.html" .file -}}
+        {{- $partialHook := fmt.Printf "partials/%s" $partialName -}}
         {{- if templates.Exists $partialHook -}}
           {{- if compare.Eq true (.cached | compare.Default false) -}}
-            {{- partials.IncludeCached $partialHook $context -}}
+            {{- partials.IncludeCached $partialName $context -}}
             {{- $loaded = true -}}
           {{- else -}}
-            {{- partials.Include $partialHook $context -}}
+            {{- partials.Include $partialName $context -}}
             {{- $loaded = true -}}
           {{- end -}}
         {{- end -}}
@@ -61,8 +62,10 @@
   ) -}}
 
   {{- /* create hook paths and variables */ -}}
-  {{- $partialHook := fmt.Printf "partials/hooks/%s.html" $context.hook -}}
-  {{- $partialHookCached := fmt.Printf "partials/hooks/%s-cached.html" $context.hook -}}
+  {{- $partialName := fmt.Printf "hooks/%s.html" $context.hook}}
+  {{- $partialHook := fmt.Printf "partials/%s" $partialName -}}
+  {{- $partialNameCached := fmt.Printf "hooks/%s-cached.html" $context.hook}}
+  {{- $partialHookCached := fmt.Printf "partials/%s" $partialNameCached -}}
 
   {{- /* execute hook if it exists */ -}}
   {{- if templates.Exists $partialHook -}}
@@ -78,7 +81,7 @@
           "level" 9
       ) -}}
     {{- end -}}
-    {{- partials.Include $partialHook $context -}}
+    {{- partials.Include $partialName $context -}}
     {{- $loaded = true -}}
   {{- end -}}
 
@@ -96,7 +99,7 @@
           "level" 9
         ) -}}
     {{- end -}}
-    {{- partials.IncludeCached $partialHookCached $context $context.hook -}}
+    {{- partials.IncludeCached $partialNameCached $context $context.hook -}}
     {{- $loaded = true -}}
   {{- end -}}
 
