@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-headerimage",
   "description": "Create open graph images and header images for all pages.",
-  "version": "1.2024.5",
+  "version": "1.2025.0",
   "license": "MIT",
   "private": true,
   "repository": "https://github.com/davidsneighbour/hugo-modules",
