@@ -1,6 +1,7 @@
 [modder]
-mediaType = 'application/json'
 baseName = 'modder'
 isPlainText = true
+mediaType = 'application/json'
+notAlternative = true
 permalinkable = false
 ugly = true
