@@ -13,7 +13,7 @@
     "@davidsneighbour/markdownlint-config": "2025.1.1",
     "@davidsneighbour/remark-config": "2025.1.1",
     "@davidsneighbour/tools": "2025.1.1",
-    "@playwright/test": "1.51.1",
+    "@playwright/test": "1.52.0",
     "@types/node": "22.14.0",
     "dotenv": "16.4.7"
   },
