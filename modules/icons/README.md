@@ -4,4 +4,9 @@
 
 This component for [GoHugo](https://gohugo.io/) adds several icon sets to your website.
 
-Read more about it [in the documentation](https://kollitsch.dev/gohugo/icons/).
+## Documentation 
+
+Read more about it [in the documentation](documentation/index.md). 
+
+> [!WARNING]
+> The documentation is provided as is and was at the point of writing work in progress. Things might have changed.

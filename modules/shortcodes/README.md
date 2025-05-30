@@ -43,3 +43,11 @@ hugo mod get -u
 To override shortcodes just add a file in your own shortcode directory with the name of the shortcode that you want to replace.
 
 [Read more about theme components](https://gohugo.io/themes/theme-components/).
+
+
+## Documentation 
+
+Read more about it [in the documentation](documentation/index.md). 
+
+> [!WARNING]
+> The documentation is provided as is and was at the point of writing work in progress. Things might have changed.

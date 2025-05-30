@@ -122,3 +122,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+
+## Documentation 
+
+Read more about it [in the documentation](documentation/index.md). 
+
+> [!WARNING]
+> The documentation is provided as is and was at the point of writing work in progress. Things might have changed.

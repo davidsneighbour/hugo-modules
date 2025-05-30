@@ -1,7 +1,5 @@
 This [module for GoHugo](https://gohugo.io/hugo-modules/) adds debugging partials for many use cases.
 
-Read more about it [in the documentation](https://dnbhub.xyz/debug).
-
 ![](.github/sample.jpg)
 
 ## Install version based
@@ -18,3 +16,10 @@ To install version for older Hugo versions, run the command with the following v
 | --- | --- | --- |
 | [v0.120.0](https://github.com/gohugoio/hugo/releases/tag/v0.120.0) | v1.2023.19 | `hugo mod get -u github.com/davidsneighbour/hugo-modules/modules/debug@v1.2023.19` |
 | [v0.129.0](https://github.com/gohugoio/hugo/releases/tag/v0.129.0) | v1.2024.26 | `hugo mod get -u github.com/davidsneighbour/hugo-modules/modules/debug@v1.2023.26` |
+
+## Documentation
+
+Read more about it [in the documentation](documentation/index.md). 
+
+> [!WARNING]
+> The documentation is provided as is and was at the point of writing work in progress. Things might have changed.

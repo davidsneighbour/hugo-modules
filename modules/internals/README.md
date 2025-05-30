@@ -4,4 +4,10 @@ This module attempts to replace internal templates used by Hugo with custom ones
 
 This module/repo is as opinionated as those internal Hugo templates ;]——๛
 
-Read more in [the documentation](https://kollitsch.dev/gohugo/internals/).
+## Documentation 
+
+Read more about it [in the documentation](documentation/index.md). 
+
+> [!WARNING]
+> The documentation is provided as is and was at the point of writing work in progress. Things might have changed.
+
