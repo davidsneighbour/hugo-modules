@@ -1,0 +1,6 @@
+baseURL = "http://localhost:1313/"
+title = "Hugo Modules Test Site - Live"
+
+[module]
+[[module.imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/{{MODULE_NAME}}"

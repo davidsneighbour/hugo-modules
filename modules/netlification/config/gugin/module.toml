@@ -17,6 +17,3 @@ target = "layouts"
 [[mounts]]
 source = "static"
 target = "static"
-
-[[imports]]
-path = "github.com/davidsneighbour/hugo-modules/modules/debug"

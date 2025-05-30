@@ -41,5 +41,8 @@
       "@davidsneighbour/config/remark"
     ]
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@davidsneighbour/debuglogger": "^0.1.1"
+  }
 }

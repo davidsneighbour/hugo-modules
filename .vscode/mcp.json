@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "hugo-modules-on-github": {
+      "type": "sse",
+      "url": "https://gitmcp.io/davidsneighbour/hugo-modules"
+    }
+  }
+}

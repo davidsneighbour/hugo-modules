@@ -32,7 +32,7 @@
   {{/* @todo fix weighting of hooks */}}
   {{/* @todo fix logging output */}}
   {{/* @todo document this mess */}}
-  {{- range $key, $hooks := . -}}
+  {{ range $key, $hooks := . -}}
     {{- with (collections.Index $hooks $context.hook) -}}
       {{- range . -}}
         {{- $partialHook := fmt.Printf "partials/hooks/%s.html" .file -}}

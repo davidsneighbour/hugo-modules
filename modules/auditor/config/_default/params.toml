@@ -10,3 +10,6 @@ descriptionThreshold = 10
 
 [[dnb.hooks.items.auditor.article-meta-end]]
 file = "meta-seo"
+
+# [[dnb.hooks.items.auditor.body-end]]
+# file = "post-body-button"

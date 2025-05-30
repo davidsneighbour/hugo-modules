@@ -1,3 +1,68 @@
+/*******************************************************************************
+ * Outlines
+ ******************************************************************************/
+$devmode: true !default;
+
+@if $devmode {
+
+  /* Debug Outlines for All Elements */
+  * {
+    outline: 1px solid #023020;
+    box-sizing: border-box !important;
+  }
+
+  /* Show only innermost hovered element */
+  *:hover:not(:has(:hover)) {
+    outline: 1px solid #ff5500;
+    background-color: rgba(255, 85, 0, 0.05);
+    position: relative;
+    z-index: 9999;
+  }
+
+  /* Reset parent outlines */
+  *:has(:hover) {
+    outline: 1px solid #023020 !important;
+  }
+
+  /* Bootstrap-specific interactive elements */
+  a:hover,
+  button:hover,
+  .nav-link:hover,
+  .dropdown-item:hover,
+  .btn:hover {
+    outline: 2px solid #ff5500 !important;
+  }
+
+  /* Leaf node fallback */
+  *:hover:not(:has(*)) {
+    outline: 2px dashed #ff5500;
+  }
+
+  /* Promote inline elements to box for outline visibility */
+  /* Only promote inline elements that are visible and not aria-hidden */
+  // Safe promotion of inline elements — exclude hidden ones
+  a:not(.d-none):not([hidden]):not([aria-hidden="true"]),
+  span:not(.d-none):not([hidden]):not([aria-hidden="true"]),
+  small:not(.d-none):not([hidden]):not([aria-hidden="true"]),
+  strong:not(.d-none):not([hidden]):not([aria-hidden="true"]),
+  em:not(.d-none):not([hidden]):not([aria-hidden="true"]),
+  label:not(.d-none):not([hidden]):not([aria-hidden="true"]),
+  abbr:not(.d-none):not([hidden]):not([aria-hidden="true"]) {
+    display: inline-block !important;
+  }
+
+  /* Detect and mark overflow-hidden containers */
+  [style*='overflow: hidden'],
+  [class*='overflow-hidden'] {
+    background-color: rgba(255, 0, 0, 0.05) !important;
+    outline: 1px dashed red !important;
+  }
+}
+
+/*******************************************************************************
+ * End of Outlines
+ ******************************************************************************/
+
 img:not([alt]),
 img[alt="Alt Text"],
 img[alt=""]:not([role="none presentation"]):not([role="presentation"]) {
@@ -82,6 +147,7 @@ img:not[longdesc] {
 
 }
 
-div:empty, p:empty {
+div:empty,
+p:empty {
   border: 1px solid red;
 }

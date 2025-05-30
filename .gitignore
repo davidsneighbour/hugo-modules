@@ -260,6 +260,7 @@ dist
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/mcp.json
 !.vscode/*.code-snippets
 
 # Local History for Visual Studio Code
@@ -388,3 +389,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/node,go,git,hugo,linux,macos,windows,webstorm+all,visualstudiocode
+.qodo

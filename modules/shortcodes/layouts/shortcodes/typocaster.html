@@ -48,7 +48,7 @@
   const fontWeightSelect = document.getElementById('font-weight-select');
   const fontSizeSelect = document.getElementById('font-size-select');
 
-  {{/* // Function to dynamically create and insert the Google Font link
+   // Function to dynamically create and insert the Google Font link
   function createFontLink(fontName) {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -60,7 +60,7 @@
   function removeExistingFontLinks() {
     const existingLinks = document.querySelectorAll('link[href*="fonts.googleapis.com"]');
     existingLinks.forEach(link => link.remove());
-  } */}}
+  }
 
   // Function to display characters from the Latin and special characters range
   function displayCharacters() {
@@ -99,8 +99,8 @@
     const selectedFontWeight = fontWeightSelect.value;
     const selectedFontSize = fontSizeSelect.value;
 
-    {{/* removeExistingFontLinks(); // Remove any previous Google Fonts link
-    createFontLink(selectedFont); // Create and append the new font link */}}
+    removeExistingFontLinks(); // Remove any previous Google Fonts link
+    createFontLink(selectedFont); // Create and append the new font link
 
     // Apply the selected font, font weight, and font size in one operation
     typographyInfoContainer.style.cssText = `

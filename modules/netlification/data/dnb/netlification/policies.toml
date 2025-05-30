@@ -1,69 +1,72 @@
 [facebook]
-tags = ["todo", "socialmedia"]
 description = "tbd"
 more = [""]
+tags = ["todo", "socialmedia"]
 [facebook.policies]
+child-src = ["*.facebook.com", "connect.facebook.net"]
+connect-src = ["*.facebook.com", "connect.facebook.net"]
+font-src = ["data:"]
+form-action = ["*.facebook.com", "connect.facebook.net"]
+frame-src = ["*.facebook.com", "connect.facebook.net"]
+img-src = ["data:", "*.facebook.com", "*.facebook.net", "*.fbcdn.net"]
 script-src = [
   "https://connect.facebook.net",
   "https://graph.facebook.com",
   "https://js.facebook.com",
 ]
 style-src = ["'unsafe-inline'"]
-frame-src = ["*.facebook.com", "connect.facebook.net"]
-child-src = ["*.facebook.com", "connect.facebook.net"]
-img-src = ["data:", "*.facebook.com", "*.facebook.net", "*.fbcdn.net"]
-font-src = ["data:"]
-connect-src = ["*.facebook.com", "connect.facebook.net"]
-form-action = ["*.facebook.com", "connect.facebook.net"]
 
 [google_translate]
-tags = ["todo"]
 description = "tbd"
 more = [""]
+tags = ["todo"]
 [google_translate.policies]
-script-src = [
-  "https://translate.googleapis.com",
-  "https://translate.google.com",
-]
-style-src = ["'unsafe-inline'", "translate.googleapis.com"]
-img-src = [
-  "translate.google.com",
-  "translate.googleapis.com",
-  "www.gstatic.com",
-]
 connect-src = [
   "translate.googleapis.com",
   "translate.google.com",
   "www.gstatic.com",
 ]
+img-src = [
+  "translate.google.com",
+  "translate.googleapis.com",
+  "www.gstatic.com",
+]
+script-src = [
+  "https://translate.googleapis.com",
+  "https://translate.google.com",
+]
+style-src = ["'unsafe-inline'", "translate.googleapis.com"]
 
 [google_tagmanager]
-tags = ["todo"]
 description = "tbd"
 more = [""]
+tags = ["todo"]
 [google_tagmanager.policies]
+child-src = ["www.googletagmanager.com"]
+connect-src = ["www.googletagmanager.com"]
+font-src = ["data:"]
+frame-src = ["www.googletagmanager.com"]
+img-src = ["data:", "www.googletagmanager.com"]
 script-src = [
   "https://www.googletagmanager.com",
   "https://googletagmanager.com",
   "https://tagmanager.google.com",
 ]
 style-src = ["www.googletagmanager.com", "tagmanager.google.com"]
-frame-src = ["www.googletagmanager.com"]
-child-src = ["www.googletagmanager.com"]
-img-src = ["data:", "www.googletagmanager.com"]
-font-src = ["data:"]
-connect-src = ["www.googletagmanager.com"]
 
 [google_analytics]
-tags = ["todo"]
 description = "tbd"
 more = [""]
+tags = ["todo"]
 [google_analytics.policies]
-script-src = [
-  "https://www.google-analytics.com",
-  "https://ssl.google-analytics.com",
-  "https://google-analytics.com",
+connect-src = [
+  "www.google-analytics.com",
+  "stats.g.doubleclick.net",
+  "ampcid.google.com",
+  "analytics.google.com",
+  "about:",
 ]
+font-src = ["data:"]
 img-src = [
   "data:",
   "blob:",
@@ -72,30 +75,53 @@ img-src = [
   "www.google.com",
   "analytics.google.com",
 ]
-font-src = ["data:"]
-connect-src = [
-  "www.google-analytics.com",
-  "stats.g.doubleclick.net",
-  "ampcid.google.com",
-  "analytics.google.com",
-  "about:",
+script-src = [
+  "https://www.google-analytics.com",
+  "https://ssl.google-analytics.com",
+  "https://google-analytics.com",
 ]
 
 [google_fonts]
-tags = ["todo"]
 description = "tbd"
 more = [""]
+tags = ["todo"]
 [google_fonts.policies]
-style-src = ["fonts.googleapis.com"]
-img-src = ["fonts.gstatic.com"]
-font-src = ["fonts.gstatic.com", "fonts.googleapis.com"]
 connect-src = ["fonts.googleapis.com", "fonts.gstatic.com"]
+font-src = ["fonts.gstatic.com", "fonts.googleapis.com"]
+img-src = ["fonts.gstatic.com"]
+style-src = ["fonts.googleapis.com"]
 
 [google_ads]
-tags = ["todo"]
 description = "tbd"
 more = [""]
+tags = ["todo"]
 [google_ads.policies]
+child-src = [
+  "blob:",
+  "*.google.com",
+  "*.doubleclick.net",
+  "*.googlesyndication.com",
+]
+connect-src = [
+  "*.doubleclick.net",
+  "*.google.com",
+  "*.googlesyndication.com",
+  "www.googletagservices.com",
+  "about:",
+]
+font-src = ["data:"]
+form-action = ["*.google.com"]
+frame-src = ["*.google.com", "*.doubleclick.net", "*.googlesyndication.com"]
+img-src = [
+  "data:",
+  "*.google.com",
+  "*.doubleclick.net",
+  "*.googlesyndication.com",
+  "www.googleadservices.com",
+]
+media-src = ["dai.google.com"]
+object-src = ["*.googlesyndication.com"]
+prefetch-src = ["*.googlesyndication.com"]
 script-src = [
   "'unsafe-eval'",
   "https://*.doubleclick.net",
@@ -105,77 +131,51 @@ script-src = [
   "https://*.googletagservices.com",
 ]
 style-src = ["'unsafe-inline'", "*.google.com"]
-object-src = ["*.googlesyndication.com"]
-frame-src = ["*.google.com", "*.doubleclick.net", "*.googlesyndication.com"]
-child-src = [
-  "blob:",
-  "*.google.com",
-  "*.doubleclick.net",
-  "*.googlesyndication.com",
-]
-img-src = [
-  "data:",
-  "*.google.com",
-  "*.doubleclick.net",
-  "*.googlesyndication.com",
-  "www.googleadservices.com",
-]
-font-src = ["data:"]
-connect-src = [
-  "*.doubleclick.net",
-  "*.google.com",
-  "*.googlesyndication.com",
-  "www.googletagservices.com",
-  "about:",
-]
-form-action = ["*.google.com"]
-media-src = ["dai.google.com"]
-prefetch-src = ["*.googlesyndication.com"]
 worker-src = ["blob:", "www.google.com"]
 
 [cloudflare_rocket]
-tags = ["todo"]
 description = "tbd"
 more = [""]
+tags = ["todo"]
 [cloudflare_rocket.policies]
 script-src = ["'self'", "https://ajax.cloudflare.com"]
 
 [cloudflare_cdnjs]
-tags = ["todo"]
 description = "tbd"
 more = [""]
+tags = ["todo"]
 [cloudflare_cdnjs.policies]
+connect-src = ["cdnjs.cloudflare.com"]
+font-src = ["cdnjs.cloudflare.com"]
+img-src = ["cdnjs.cloudflare.com"]
 script-src = ["https://cdnjs.cloudflare.com"]
 style-src = ["cdnjs.cloudflare.com"]
-img-src = ["cdnjs.cloudflare.com"]
-font-src = ["cdnjs.cloudflare.com"]
-connect-src = ["cdnjs.cloudflare.com"]
 
 [cloudflare_insights]
-tags = ["todo"]
 description = "tbd"
 more = [""]
+tags = ["todo"]
 [cloudflare_insights.policies]
-script-src = ["'self'", "https://static.cloudflareinsights.com"]
 connect-src = ["cloudflareinsights.com"]
+script-src = ["'self'", "https://static.cloudflareinsights.com"]
 
 [gravatar]
-tags = ["todo"]
 description = "tbd"
 more = [""]
+tags = ["todo"]
 [gravatar.policies]
+connect-src = ["*.gravatar.com"]
+img-src = ["*.gravatar.com"]
 script-src = ["https://secure.gravatar.com"]
 style-src = ["secure.gravatar.com"]
-img-src = ["*.gravatar.com"]
-connect-src = ["*.gravatar.com"]
 
 [google_maps]
-tags = ["todo"]
 description = "tbd"
 more = [""]
+tags = ["todo"]
 [google_maps.policies]
-script-src = ["https://maps.googleapis.com", "https://maps.google.com"]
-style-src = ["'unsafe-inline'"]
+connect-src = ["maps.googleapis.com", "maps.google.com"]
+font-src = ["data:"]
 frame-src = ["maps.google.com", "maps.googleapis.com"]
 img-src = [
   "data:",
@@ -186,24 +186,28 @@ img-src = [
   "www.gstatic.com",
   "*.ggpht.com",
 ]
-font-src = ["data:"]
-connect-src = ["maps.googleapis.com", "maps.google.com"]
+script-src = ["https://maps.googleapis.com", "https://maps.google.com"]
+style-src = ["'unsafe-inline'"]
 
 [youtube]
-tags = ["todo", "socialmedia"]
 description = "tbd"
 more = [""]
+tags = ["todo", "socialmedia"]
 [youtube.policies]
-script-src = ["https://www.youtube.com", "https://m.youtube.com"]
-frame-src = ["*.youtube.com", "www.youtube-nocookie.com"]
 child-src = ["www.youtube.com"]
+frame-src = ["*.youtube.com", "www.youtube-nocookie.com"]
 img-src = ["data:", "*.ytimg.com", "*.youtube.com"]
+script-src = ["https://www.youtube.com", "https://m.youtube.com"]
 
 [linkedin]
-tags = ["todo", "socialmedia"]
 description = "tbd"
 more = [""]
+tags = ["todo", "socialmedia"]
 [linkedin.policies]
+connect-src = ["*.linkedin.com", "*.licdn.com"]
+frame-src = ["www.linkedin.com"]
+img-src = ["*.linkedin.com", "*.licdn.com", "p.adsymptotic.com"]
+media-src = ["media.licdn.com"]
 script-src = [
   "https://snap.licdn.com",
   "https://static-exp1.licdn.com",
@@ -211,16 +215,18 @@ script-src = [
   "https://platform.linkedin.com",
 ]
 style-src = ["'unsafe-inline'", "*.licdn.com"]
-frame-src = ["www.linkedin.com"]
-img-src = ["*.linkedin.com", "*.licdn.com", "p.adsymptotic.com"]
-connect-src = ["*.linkedin.com", "*.licdn.com"]
-media-src = ["media.licdn.com"]
 
 [twitter]
-tags = ["todo", "socialmedia"]
 description = "tbd"
 more = [""]
+tags = ["todo", "socialmedia"]
 [twitter.policies]
+connect-src = ["t.co", "*.twitter.com", "*.twimg.com"]
+font-src = ["data:"]
+form-action = ["*.twitter.com"]
+frame-src = ["*.twitter.com"]
+img-src = ["blob:", "t.co", "*.twitter.com", "*.twimg.com"]
+media-src = ["*.twimg.com"]
 script-src = [
   "https://platform.twitter.com",
   "https://analytics.twitter.com",
@@ -228,9 +234,15 @@ script-src = [
   "https://cdn.syndication.twimg.com",
 ]
 style-src = ["'unsafe-inline'", "ton.twimg.com", "platform.twitter.com"]
-frame-src = ["*.twitter.com"]
-img-src = ["blob:", "t.co", "*.twitter.com", "*.twimg.com"]
-font-src = ["data:"]
-connect-src = ["t.co", "*.twitter.com", "*.twimg.com"]
-form-action = ["*.twitter.com"]
-media-src = ["*.twimg.com"]
+
+[matomo]
+description = "tbd"
+more = [""]
+tags = ["todo", "tracking"]
+[matomo.policies]
+connect-src = "https://matomo.example.com;"
+frame-ancestors = 'self'
+frame-src = 'self'
+img-src = ['self', "https://matomo.example.com"]
+script-src = ['self', "https://matomo.example.com"]
+style-src = 'self'

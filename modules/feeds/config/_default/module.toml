@@ -17,12 +17,3 @@ target = "static"
 [[mounts]]
 source = "package.json"
 target = "data/dnb/modder/feeds.json"
-
-[[imports]]
-path = "github.com/davidsneighbour/hugo-modules/modules/functions"
-
-[[imports]]
-path = "github.com/davidsneighbour/hugo-modules/modules/hooks"
-
-[[imports]]
-path = "github.com/davidsneighbour/hugo-modules/modules/debug"
