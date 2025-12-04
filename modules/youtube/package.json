@@ -11,11 +11,14 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/youtube",
   "devDependencies": {
-    "@davidsneighbour/release-config": "2025.1.1"
+    "@davidsneighbour/release-config": "2025.1.1",
+    "@playwright/test": "^1.47.2"
   },
   "scripts": {
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/youtube/v\" --releaseCommitMessageFormat \"chore(release): modules/youtube/v{{currentTag}}\" && ./bin/repo/release/postrelease",
-    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/youtube/v\" --releaseCommitMessageFormat \"chore(release): modules/youtube/v{{currentTag}}\" && ./bin/repo/release/postrelease"
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"modules/youtube/v\" --releaseCommitMessageFormat \"chore(release): modules/youtube/v{{currentTag}}\" && ./bin/repo/release/postrelease",
+    "test": "playwright test",
+    "test:headed": "playwright test --project=chromium --headed"
   },
   "type": "module"
 }

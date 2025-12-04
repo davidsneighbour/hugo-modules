@@ -72,6 +72,23 @@ and import the styles into your SASS pipeline with
 
 If you have your own templating going on you can use the parameters in `site.params.­dnb.­youtube.­config.­plugins` to add to your pipelines.
 
+## Testing
+
+The `site` directory contains a minimal Hugo project that mounts this module and renders the shortcodes and partial with the test video `dQw4w9WgXcQ`. It is designed to exercise both the CDN-backed `youtube-embed` shortcode and the locally bundled assets used by the default shortcode and partial.
+
+An end-to-end test suite powered by Playwright lives in `tests/youtube.spec.ts`. The tests build the demo site with the bundled Hugo binary (`hugo -s site -d public -b http://localhost:1414/`), serve the generated `public` directory locally, and assert that:
+
+* all `lite-youtube` elements render with the expected attributes
+* clicking the play button injects an iframe using the privacy-friendly `youtube-nocookie.com` host
+* the custom element is registered so partial-based embeds work even when thumbnails are fetched locally
+
+Recommended testing strategy for Hugo shortcodes and partials:
+
+* **Fixture content**: keep representative pages (multiple shortcode invocations plus a partial-driven page) under `site/content/` to exercise positional and named parameters.
+* **Browser coverage**: drive a static server pointed at the built `public` output and use Playwright (or a similar tool) to verify interactive behaviors such as iframe injection and accessibility attributes.
+* **Template safety**: when adding new parameters, extend the demo content and Playwright assertions to cover the new code paths so regressions in shortcode parsing or partials are caught early.
+* **Privacy toggles**: include a test run that sets `[privacy.youtube].disable = true` to ensure the markup disappears when the site is configured to block embeds globally.
+
 ## Disable YouTube videos globally
 
 Setting `disable` to `true` in [GoHugo's privacy setup](https://gohugo.io/about/privacy/#all-privacy-settings) will disable all YouTube videos created by this module globally. `privacyEnhanced` has no effect on this module, because all YouTube videos are already embedded with the privacy-enhanced mode.
