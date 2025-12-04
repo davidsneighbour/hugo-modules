@@ -24,13 +24,14 @@ Maybe do the whole implementation via partials.Include that can be reused by the
   {{- $playlabel := .Get "playlabel" | compare.Default "Play video" -}}
   {{- $params := .Get "params" | compare.Default (partials.IncludeCached "func/prepareApiParams.html" .) -}}
   {{- $thumbnailUrl := partials.IncludeCached "func/getYTPreviewUrl.html" $id $id -}}
+  {{- $preview := .Get "preview" | compare.Default ($thumbnailUrl.maxres) -}}
   <div class="shortcode--youtube {{ with $class -}}{{- . -}}{{- end -}}">
     <lite-youtube
       videoid="{{- $id -}}" {{ with $playlabel -}}
       playlabel="{{- . -}}" {{ end -}} {{ with $title -}}
       title="{{- . -}}" {{ end -}}
       params="{{- $params -}}"
-      style="background-image: url('{{- $thumbnailUrl.maxres -}}');">
+      style="background-image: url('{{- $preview -}}');">
       <button type="button" class="lty-playbtn" aria-label="{{- $playlabel -}}">
         {{- with $playlabel -}}<span class="lyt-visually-hidden">{{- . -}}</span>{{- end -}}
       </button>
@@ -39,8 +40,7 @@ Maybe do the whole implementation via partials.Include that can be reused by the
       {{/* do nothing, already included */}}
     {{ else -}}
       {{/* include the JS only once per page */}}
-      <script src="https://cdn.jsdelivr.net/gh/paulirish/lite-youtube-embed@latest/src/lite-yt-embed.js" async defer>
-      </script>
+      {{ partials.IncludeCached "youtube-embed-js-webcomponent.html" . }}
       {{ page.Store.Set "youtube-embed-js-included" true }}
     {{ end -}}
   </div>
