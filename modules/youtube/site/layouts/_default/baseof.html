@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ block "title" . }}{{ .Title }} · YouTube Module Demo{{ end }}</title>
+    {{ $css := resources.Get "css/lite-yt-embed.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+    {{ $js := resources.Get "js/lite-yt-embed.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $js.RelPermalink }}" defer></script>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        margin: 0 auto;
+        max-width: 960px;
+        padding: 1.5rem;
+        line-height: 1.5;
+      }
+      main > * + * {
+        margin-top: 1.5rem;
+      }
+      .shortcode--youtube {
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+  </body>
+</html>

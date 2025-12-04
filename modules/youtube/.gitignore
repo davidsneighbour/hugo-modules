@@ -1,0 +1,6 @@
+node_modules
+playwright-report
+blob-report
+test-results
+site/public
+site/resources
