@@ -35,13 +35,13 @@ Maybe do the whole implementation via partials.Include that can be reused by the
         {{- with $playlabel -}}<span class="lyt-visually-hidden">{{- . -}}</span>{{- end -}}
       </button>
     </lite-youtube>
-    {{ with page.store.get "youtube-embed-js-included" -}}
+    {{ with page.Store.Get "youtube-embed-js-included" -}}
       {{/* do nothing, already included */}}
     {{ else -}}
       {{/* include the JS only once per page */}}
       <script src="https://cdn.jsdelivr.net/gh/paulirish/lite-youtube-embed@latest/src/lite-yt-embed.js" async defer>
       </script>
-      {{ page.store.Set "youtube-embed-js-included" true }}
+      {{ page.Store.Set "youtube-embed-js-included" true }}
     {{ end -}}
   </div>
 {{- end -}}
