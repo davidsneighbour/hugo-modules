@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/auditor",
   "devDependencies": {
-    "@davidsneighbour/release-config": "2025.2.2"
+    "@davidsneighbour/release-config": "2025.3.8"
   },
   "scripts": {
     "release": "commit-and-tag-version --release-as patch -a -t \"modules/auditor/v\" --releaseCommitMessageFormat \"chore(release): modules/auditor/v{{currentTag}}\" && ./bin/repo/release/postrelease",

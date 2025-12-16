@@ -14,15 +14,15 @@
   "bugs": "https://github.com/davidsneighbour/hugo-modules/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-modules/tree/main/modules/debug",
   "devDependencies": {
-    "@davidsneighbour/bootstrap-config": "2025.2.2",
-    "@davidsneighbour/release-config": "2025.2.2",
-    "@davidsneighbour/webpack-config": "2025.2.2",
-    "@types/node": "22.15.3",
+    "@davidsneighbour/bootstrap-config": "2025.3.5",
+    "@davidsneighbour/release-config": "2025.3.8",
+    "@davidsneighbour/webpack-config": "2025.3.7",
+    "@types/node": "25.0.2",
     "@types/webpack": "5.28.5",
-    "sass": "1.86.3",
-    "sass-loader": "16.0.5",
+    "sass": "1.96.0",
+    "sass-loader": "16.0.6",
     "ts-node": "10.9.2",
-    "typescript": "5.8.2"
+    "typescript": "5.9.3"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
